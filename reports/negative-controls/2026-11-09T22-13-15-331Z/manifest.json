@@ -1,0 +1,42 @@
+{
+  "executedAt": "2026-11-09T22:13:15.331Z",
+  "node": "v24.22.1",
+  "platform": "win32",
+  "coreSha256": "984663679576ce8a0803d21f0ae8c4acf0d11c3f00f165bb39e555ade87b7102",
+  "testsSha256": "0fb1cde10deaa36bf787df085a4759556e0f7f304d2bf6094c5662dbfe4b7cd8",
+  "results": [
+    {
+      "fault": "nth",
+      "exitCode": 1,
+      "testCount": 10,
+      "failedTests": [
+        "exact spike provenance width 1",
+        "exact spike provenance width 768",
+        "exact spike provenance width 1440",
+        "excludes offscreen spike and includes inclusive endpoints/single step",
+        "independent raw-window oracle preserves both extrema and exact provenance on seeded cases",
+        "independent interval oracle checks every bucket and segment first/min/max/last"
+      ],
+      "report": "reports/negative-controls/2026-11-09T22-13-15-331Z/nth.json",
+      "log": "reports/negative-controls/2026-11-09T22-13-15-331Z/nth.txt",
+      "logSha256": "f8b05366b36da8d2728bf8dc14cde4accd5bdbaaabd197be64fc4b5b38a09090"
+    },
+    {
+      "fault": "mean",
+      "exitCode": 1,
+      "testCount": 10,
+      "failedTests": [
+        "exact spike provenance width 1",
+        "exact spike provenance width 320",
+        "exact spike provenance width 768",
+        "exact spike provenance width 1440",
+        "excludes offscreen spike and includes inclusive endpoints/single step",
+        "independent raw-window oracle preserves both extrema and exact provenance on seeded cases",
+        "independent interval oracle checks every bucket and segment first/min/max/last"
+      ],
+      "report": "reports/negative-controls/2026-11-09T22-13-15-331Z/mean.json",
+      "log": "reports/negative-controls/2026-11-09T22-13-15-331Z/mean.txt",
+      "logSha256": "157984b120846daa579a2fb7199e54e9179b5ad2a9ee18335cd7e62a03e57f99"
+    }
+  ]
+}

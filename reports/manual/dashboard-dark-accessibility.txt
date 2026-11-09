@@ -1,0 +1,321 @@
+- link "Skip to content":
+  - /url: "#main-content"
+- complementary "Workspace":
+  - link "Soup home":
+    - /url: /dashboard
+    - text: Soup.
+  - text: Almaty Lab
+  - navigation "Main navigation":
+    - link "Dashboard":
+      - /url: /dashboard
+    - link "Training runs":
+      - /url: /runs
+    - link "Compare":
+      - /url: /compare
+    - link "Data quality":
+      - /url: /data-quality
+  - link "Soup documentation":
+    - /url: https://souplanding-omega.vercel.app/docs/
+  - figure "BUILT IN KAZAKHSTAN"
+- banner:
+  - text: Workspace qwen-kazakh Demo data
+  - button "Switch to light theme"
+- main:
+  - heading "Workspace overview" [level=1]
+  - paragraph: 20 runs ·4 running ·8 need attention ·1,147,457 raw rows
+  - group "Dashboard metric":
+    - button "Loss" [pressed]
+    - button "Learning rate"
+    - button "Gradient norm"
+  - group:
+    - region "Experiment map":
+      - heading "Experiment map" [level=2]
+      - paragraph: 20 runs · 3 metrics
+      - text: 01—20
+      - group "Training experiments by model, method and metric Each sector is a run. Inner, middle and outer bands are Loss, Learning rate and Gradient norm. Tile length encodes finite source-row counts on a logarithmic scale. Colors identify model and method groups; diamonds mark data findings. Arrow keys select a run and metric. Exact counts are available in the table below.":
+        - button "kazakh-sft-002, Loss quality"
+        - button "kazakh-sft-002, Learning rate quality"
+        - button "kazakh-sft-002, Gradient norm quality"
+        - button "kazakh-sft-003, Loss quality"
+        - button "kazakh-sft-003, Learning rate quality"
+        - button "kazakh-sft-003, Gradient norm quality"
+        - button "kazakh-sft-006, Loss quality"
+        - button "kazakh-sft-006, Learning rate quality"
+        - button "kazakh-sft-006, Gradient norm quality"
+        - button "kazakh-sft-008, Loss quality"
+        - button "kazakh-sft-008, Learning rate quality"
+        - button "kazakh-sft-008, Gradient norm quality"
+        - button "kazakh-sft-011, Loss quality"
+        - button "kazakh-sft-011, Learning rate quality"
+        - button "kazakh-sft-011, Gradient norm quality"
+        - button "kazakh-sft-012, Loss quality"
+        - button "kazakh-sft-012, Learning rate quality"
+        - button "kazakh-sft-012, Gradient norm quality"
+        - button "kazakh-sft-014, Loss quality"
+        - button "kazakh-sft-014, Learning rate quality"
+        - button "kazakh-sft-014, Gradient norm quality"
+        - button "kazakh-sft-015, Loss quality"
+        - button "kazakh-sft-015, Learning rate quality"
+        - button "kazakh-sft-015, Gradient norm quality"
+        - button "kazakh-sft-018, Loss quality"
+        - button "kazakh-sft-018, Learning rate quality"
+        - button "kazakh-sft-018, Gradient norm quality"
+        - button "kazakh-sft-020, Loss quality"
+        - button "kazakh-sft-020, Learning rate quality"
+        - button "kazakh-sft-020, Gradient norm quality"
+        - button "kazakh-sft-005, Loss quality" [pressed]
+        - button "kazakh-sft-005, Learning rate quality"
+        - button "kazakh-sft-005, Gradient norm quality"
+        - button "kazakh-sft-009, Loss quality"
+        - button "kazakh-sft-009, Learning rate quality"
+        - button "kazakh-sft-009, Gradient norm quality"
+        - button "kazakh-sft-017, Loss quality"
+        - button "kazakh-sft-017, Learning rate quality"
+        - button "kazakh-sft-017, Gradient norm quality"
+        - button "kazakh-sft-004, Loss quality"
+        - button "kazakh-sft-004, Learning rate quality"
+        - button "kazakh-sft-004, Gradient norm quality"
+        - button "kazakh-sft-007, Loss quality"
+        - button "kazakh-sft-007, Learning rate quality"
+        - button "kazakh-sft-007, Gradient norm quality"
+        - button "kazakh-sft-010, Loss quality"
+        - button "kazakh-sft-010, Learning rate quality"
+        - button "kazakh-sft-010, Gradient norm quality"
+        - button "kazakh-sft-016, Loss quality"
+        - button "kazakh-sft-016, Learning rate quality"
+        - button "kazakh-sft-016, Gradient norm quality"
+        - button "kazakh-sft-019, Loss quality"
+        - button "kazakh-sft-019, Learning rate quality"
+        - button "kazakh-sft-019, Gradient norm quality"
+        - button "kazakh-sft-001, Loss quality"
+        - button "kazakh-sft-001, Learning rate quality"
+        - button "kazakh-sft-001, Gradient norm quality"
+        - button "kazakh-sft-013, Loss quality"
+        - button "kazakh-sft-013, Learning rate quality"
+        - button "kazakh-sft-013, Gradient norm quality"
+      - text: 3B / SFT 3B / DPO 1.5B / SFT 1.5B / DPO Source findings
+      - paragraph: "Tile length: finite rows (log). Inner → outer: Loss / LR / Grad norm."
+      - text: Inspect experiment
+      - combobox "Inspect experiment":
+        - option "kazakh-sft-001"
+        - option "kazakh-sft-002"
+        - option "kazakh-sft-003"
+        - option "kazakh-sft-004"
+        - option "kazakh-sft-005" [selected]
+        - option "kazakh-sft-006"
+        - option "kazakh-sft-007"
+        - option "kazakh-sft-008"
+        - option "kazakh-sft-009"
+        - option "kazakh-sft-010"
+        - option "kazakh-sft-011"
+        - option "kazakh-sft-012"
+        - option "kazakh-sft-013"
+        - option "kazakh-sft-014"
+        - option "kazakh-sft-015"
+        - option "kazakh-sft-016"
+        - option "kazakh-sft-017"
+        - option "kazakh-sft-018"
+        - option "kazakh-sft-019"
+        - option "kazakh-sft-020"
+      - text: Metric
+      - combobox "Metric":
+        - option "Loss" [selected]
+        - option "Learning rate"
+        - option "Gradient norm"
+      - group: Accessible quality table
+  - group:
+    - region "Experiment groups":
+      - heading "Experiment groups" [level=2]
+      - paragraph: qwen-kazakh model → method → run
+      - text: Qwen2.5-3B SFT
+      - button "Select kazakh-sft-002 from Qwen2.5-3B SFT; 002 +9": 002 +9
+      - text: DPO
+      - button "Select kazakh-sft-005 from Qwen2.5-3B DPO; 005 +2" [pressed]: 005 +2
+      - text: Qwen2.5-1.5B SFT
+      - button "Select kazakh-sft-004 from Qwen2.5-1.5B SFT; 004 +4": 004 +4
+      - text: DPO
+      - button "Select kazakh-sft-001 from Qwen2.5-1.5B DPO; 001 +1": 001 +1
+      - paragraph: Each leaf opens a run. +N counts the other runs in that group.
+  - region "kazakh-sft-005":
+    - heading "kazakh-sft-005" [level=2]
+    - text: Running
+    - paragraph: Qwen2.5-3B · DPO
+    - term: Peak loss
+    - definition: "100.000"
+    - term: Raw rows
+    - definition: 1,000,000
+    - term: Peak step
+    - definition: 500,001
+    - term: Metrics
+    - definition: "3"
+    - paragraph: Loss · 0 invalid · 0 conflicts · 0 gaps
+    - link "Open run":
+      - /url: /runs/kazakh-sft-005
+    - link "Compare":
+      - /url: /compare?runs=kazakh-sft-005
+    - link "Inspect issues":
+      - /url: /data-quality?run=kazakh-sft-005&metric=loss
+  - region "Raw loss":
+    - heading "Raw loss" [level=2]
+    - text: Smoothing off
+    - 'figure "Highlight kazakh-sft-005 0.200327 – 100.000 Wheel: zoom · Ctrl+wheel: pinch zoom · Shift+wheel: pan · Drag: select range"':
+      - button "Highlight kazakh-sft-005": kazakh-sft-005
+      - text: 0.200327 – 100.000
+      - paragraph: "Wheel: zoom · Ctrl+wheel: pinch zoom · Shift+wheel: pan · Drag: select range"
+    - link "Inspect peak at source":
+      - /url: /runs/kazakh-sft-005?step=500001&revision=soup-1.0.0%3Aspike%401%3Aseed%3D42%3An%3D1000000%3Acadence%3D1
+  - group:
+    - complementary "Snapshot findings":
+      - heading "Snapshot findings" [level=2]
+      - paragraph: Source observations
+      - link "kazakh-sft-005 Loss peak 100.000 Recorded step 500,001 Inspect source":
+        - /url: /runs/kazakh-sft-005?step=500001&revision=soup-1.0.0%3Aspike%401%3Aseed%3D42%3An%3D1000000%3Acadence%3D1
+        - heading "kazakh-sft-005" [level=3]
+        - paragraph: Loss peak 100.000
+        - text: Recorded step 500,001 Inspect source
+      - link "kazakh-sft-006 NaN observations 2 source findings Inspect source":
+        - /url: /data-quality?run=kazakh-sft-006
+        - heading "kazakh-sft-006" [level=3]
+        - paragraph: NaN observations
+        - text: 2 source findings Inspect source
+      - link "kazakh-sft-007 Infinite metric values 1 source findings Inspect source":
+        - /url: /data-quality?run=kazakh-sft-007
+        - heading "kazakh-sft-007" [level=3]
+        - paragraph: Infinite metric values
+        - text: 1 source findings Inspect source
+      - link "kazakh-sft-009 Missing intervals 11 source findings Inspect source":
+        - /url: /data-quality?run=kazakh-sft-009
+        - heading "kazakh-sft-009" [level=3]
+        - paragraph: Missing intervals
+        - text: 11 source findings Inspect source
+      - link "kazakh-sft-010 Conflicting duplicate steps 10 source findings Inspect source":
+        - /url: /data-quality?run=kazakh-sft-010
+        - heading "kazakh-sft-010" [level=3]
+        - paragraph: Conflicting duplicate steps
+        - text: 10 source findings Inspect source
+      - link "kazakh-sft-011 Out-of-order observations 2 source findings Inspect source":
+        - /url: /data-quality?run=kazakh-sft-011
+        - heading "kazakh-sft-011" [level=3]
+        - paragraph: Out-of-order observations
+        - text: 2 source findings Inspect source
+      - link "View data quality":
+        - /url: /data-quality
+      - group: Source finding totals
+  - group:
+    - region "Run history":
+      - heading "Run history" [level=2]
+      - paragraph: Starts per day · Aug 13, 2026 – Nov 10, 2026 · UTC
+      - text: Demo history
+      - strong: 20 runs
+      - text: across 13 active days
+      - paragraph: Select a day to explore its experiments. Dates are reproducible demo metadata, separate from source update times.
+      - group "Daily run starts. Use arrow keys to move between days and Enter to select.":
+        - text: Daily run starts. Use arrow keys to move between days and Enter to select.
+        - button "Aug 13, 2026 · 0 runs started": "0"
+        - button "Aug 14, 2026 · 0 runs started": "0"
+        - button "Aug 15, 2026 · 0 runs started": "0"
+        - button "Aug 16, 2026 · 0 runs started": "0"
+        - button "Aug 17, 2026 · 0 runs started": "0"
+        - button "Aug 18, 2026 · 0 runs started": "0"
+        - button "Aug 19, 2026 · 1 run started · 1 completed": "1"
+        - button "Aug 20, 2026 · 0 runs started": "0"
+        - button "Aug 21, 2026 · 0 runs started": "0"
+        - button "Aug 22, 2026 · 0 runs started": "0"
+        - button "Aug 23, 2026 · 0 runs started": "0"
+        - button "Aug 24, 2026 · 0 runs started": "0"
+        - button "Aug 25, 2026 · 0 runs started": "0"
+        - button "Aug 26, 2026 · 0 runs started": "0"
+        - button "Aug 27, 2026 · 0 runs started": "0"
+        - button "Aug 28, 2026 · 0 runs started": "0"
+        - button "Aug 29, 2026 · 0 runs started": "0"
+        - button "Aug 30, 2026 · 2 runs started · 1 failed, 1 cancelled": "2"
+        - button "Aug 31, 2026 · 0 runs started": "0"
+        - button "Sep 1, 2026 · 0 runs started": "0"
+        - button "Sep 2, 2026 · 0 runs started": "0"
+        - button "Sep 3, 2026 · 0 runs started": "0"
+        - button "Sep 4, 2026 · 0 runs started": "0"
+        - button "Sep 5, 2026 · 0 runs started": "0"
+        - button "Sep 6, 2026 · 0 runs started": "0"
+        - button "Sep 7, 2026 · 0 runs started": "0"
+        - button "Sep 8, 2026 · 1 run started · 1 completed": "1"
+        - button "Sep 9, 2026 · 0 runs started": "0"
+        - button "Sep 10, 2026 · 0 runs started": "0"
+        - button "Sep 11, 2026 · 0 runs started": "0"
+        - button "Sep 12, 2026 · 0 runs started": "0"
+        - button "Sep 13, 2026 · 0 runs started": "0"
+        - button "Sep 14, 2026 · 0 runs started": "0"
+        - button "Sep 15, 2026 · 1 run started · 1 completed": "1"
+        - button "Sep 16, 2026 · 0 runs started": "0"
+        - button "Sep 17, 2026 · 0 runs started": "0"
+        - button "Sep 18, 2026 · 0 runs started": "0"
+        - button "Sep 19, 2026 · 0 runs started": "0"
+        - button "Sep 20, 2026 · 0 runs started": "0"
+        - button "Sep 21, 2026 · 0 runs started": "0"
+        - button "Sep 22, 2026 · 0 runs started": "0"
+        - button "Sep 23, 2026 · 0 runs started": "0"
+        - button "Sep 24, 2026 · 0 runs started": "0"
+        - button "Sep 25, 2026 · 0 runs started": "0"
+        - button "Sep 26, 2026 · 2 runs started · 2 completed": "2"
+        - button "Sep 27, 2026 · 0 runs started": "0"
+        - button "Sep 28, 2026 · 0 runs started": "0"
+        - button "Sep 29, 2026 · 0 runs started": "0"
+        - button "Sep 30, 2026 · 0 runs started": "0"
+        - button "Oct 1, 2026 · 0 runs started": "0"
+        - button "Oct 2, 2026 · 0 runs started": "0"
+        - button "Oct 3, 2026 · 0 runs started": "0"
+        - button "Oct 4, 2026 · 0 runs started": "0"
+        - button "Oct 5, 2026 · 0 runs started": "0"
+        - button "Oct 6, 2026 · 0 runs started": "0"
+        - button "Oct 7, 2026 · 1 run started · 1 completed": "1"
+        - button "Oct 8, 2026 · 0 runs started": "0"
+        - button "Oct 9, 2026 · 0 runs started": "0"
+        - button "Oct 10, 2026 · 0 runs started": "0"
+        - button "Oct 11, 2026 · 0 runs started": "0"
+        - button "Oct 12, 2026 · 0 runs started": "0"
+        - button "Oct 13, 2026 · 0 runs started": "0"
+        - button "Oct 14, 2026 · 0 runs started": "0"
+        - button "Oct 15, 2026 · 0 runs started": "0"
+        - button "Oct 16, 2026 · 0 runs started": "0"
+        - button "Oct 17, 2026 · 0 runs started": "0"
+        - button "Oct 18, 2026 · 2 runs started · 2 completed": "2"
+        - button "Oct 19, 2026 · 0 runs started": "0"
+        - button "Oct 20, 2026 · 0 runs started": "0"
+        - button "Oct 21, 2026 · 0 runs started": "0"
+        - button "Oct 22, 2026 · 0 runs started": "0"
+        - button "Oct 23, 2026 · 0 runs started": "0"
+        - button "Oct 24, 2026 · 0 runs started": "0"
+        - button "Oct 25, 2026 · 0 runs started": "0"
+        - button "Oct 26, 2026 · 2 runs started · 2 completed": "2"
+        - button "Oct 27, 2026 · 0 runs started": "0"
+        - button "Oct 28, 2026 · 0 runs started": "0"
+        - button "Oct 29, 2026 · 0 runs started": "0"
+        - button "Oct 30, 2026 · 0 runs started": "0"
+        - button "Oct 31, 2026 · 1 run started · 1 cancelled": "1"
+        - button "Nov 1, 2026 · 0 runs started": "0"
+        - button "Nov 2, 2026 · 0 runs started": "0"
+        - button "Nov 3, 2026 · 2 runs started · 1 completed, 1 failed": "2"
+        - button "Nov 4, 2026 · 0 runs started": "0"
+        - button "Nov 5, 2026 · 0 runs started": "0"
+        - button "Nov 6, 2026 · 1 run started · 1 completed": "1"
+        - button "Nov 7, 2026 · 0 runs started": "0"
+        - button "Nov 8, 2026 · 2 runs started · 2 running": "2"
+        - button "Nov 9, 2026 · 2 runs started · 2 running" [pressed]: "2"
+        - button "Nov 10, 2026 · 0 runs started": "0"
+      - text: Inspect history date
+      - textbox "Inspect history date": 2026-11-09
+      - status: Nov 9, 2026 · 2 runs started · 2 running
+      - figure "Color intensity indicates daily run count": Less More
+      - heading "Nov 9, 2026" [level=3]
+      - link "View 2 runs":
+        - /url: /runs?startedOn=2026-11-09
+      - list:
+        - listitem:
+          - link "kazakh-sft-005":
+            - /url: /runs/kazakh-sft-005
+          - text: Running
+          - time: 08:00 UTC
+        - listitem:
+          - link "kazakh-sft-006":
+            - /url: /runs/kazakh-sft-006
+          - text: Running
+          - time: 08:00 UTC

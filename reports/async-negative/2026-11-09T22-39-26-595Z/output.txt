@@ -1,0 +1,99 @@
+
+ RUN  v5.1.0 C:/Users/Ferumm/projects/soupTask
+
+ ❯ src/worker/controller.test.ts (8 tests | 4 failed) 39ms
+   ❯ controlled asynchronous workspace (8)
+     × bounds posts to one running and one latest view; rejects stale success and failure 18ms
+     ✓ protects same-revision A -> B -> A and every success/error identity 2ms
+     × stale hover never overwrites newer inspection and cannot displace a pending view 2ms
+     ✓ ignores replies and errors after disposal even when transport ignores abort 1ms
+     × refuses a busy explicit inspection without silently evicting it, and permits retry 2ms
+     ✓ returns an operation-correlated error and frees its slot if postMessage throws 4ms
+     ✓ refuses an issue query behind an in-flight zoom instead of accepting and later losing it 2ms
+     × resize supersedes zoom and a duplicate reply cannot release a newer slot 5ms
+
+ Test Files  1 failed (1)
+      Tests  4 failed | 4 passed (8)
+   Start at  03:39:27
+   Duration  541ms (transform 50%, tests 24%, import 19%, worker 7%)
+
+JSON report written to C:/Users/Ferumm/projects/soupTask/reports/async-negative/2026-11-09T22-39-26-595Z/results.json
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/worker/controller.test.ts > controlled asynchronous workspace > bounds posts to one running and one latest view; rejects stale success and failure
+AssertionError: expected [ { identity: { …(3) }, …(7) } ] to have a length of +0 but got 1
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ src/worker/controller.test.ts:18:22
+     16|   expect(h.sent).toHaveLength(1); expect(h.client.queuedCount).toBe(2)
+     17|   h.client.receive(h.reply(old, true))
+     18|   expect(h.accepted).toHaveLength(0); expect(h.sent).toHaveLength(2); …
+       |                      ^
+     19|   expect(h.sent[1]).toMatchObject({ range: { min: 100 } })
+     20|   h.client.receive(h.reply(h.sent[1])); expect(h.accepted).toHaveLengt…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  src/worker/controller.test.ts > controlled asynchronous workspace > stale hover never overwrites newer inspection and cannot displace a pending view
+AssertionError: expected [ { identity: { …(3) }, …(6) } ] to have a length of +0 but got 1
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ src/worker/controller.test.ts:33:54
+     31|   const h = harness(); h.client.request({ kind: 'hover', step: 10 }); …
+     32|   h.client.request(view(0)); h.client.request({ kind: 'hover', step: 2…
+     33|   h.client.receive(h.reply(old)); expect(h.accepted).toHaveLength(0)
+       |                                                      ^
+     34|   expect(h.sent[1].kind).toBe('view'); h.client.receive(h.reply(h.sent…
+     35|   h.client.request({ kind: 'hover', step: 30 }); const first = h.sent[…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  src/worker/controller.test.ts > controlled asynchronous workspace > refuses a busy explicit inspection without silently evicting it, and permits retry
+AssertionError: expected [ { identity: { …(3) }, …(6) } ] to have a length of +0 but got 1
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ src/worker/controller.test.ts:47:60
+     45|   const h = harness(); h.client.request({ kind: 'inspect', runId: 'A',…
+     46|   expect(h.client.request({ kind: 'inspect', runId: 'A', query: { sour…
+     47|   h.client.receive(h.reply(h.sent[0])); expect(h.accepted).toHaveLengt…
+       |                                                            ^
+     48|   expect(h.client.request({ kind: 'inspect', runId: 'A', query: { sour…
+     49|   h.client.receive(h.reply(h.sent[1])); expect(h.accepted).toHaveLengt…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  src/worker/controller.test.ts > controlled asynchronous workspace > resize supersedes zoom and a duplicate reply cannot release a newer slot
+AssertionError: expected [ { identity: { …(3) }, …(6) }, …(1) ] to have a length of 1 but got 2
+
+- Expected
++ Received
+
+- 1
++ 2
+
+ ❯ src/worker/controller.test.ts:71:60
+     69|   h.client.request({ ...view(1), width: 320 }); h.client.receive(h.rep…
+     70|   h.client.receive(h.reply(old)); expect(h.client.queuedCount).toBe(1)
+     71|   h.client.receive(h.reply(h.sent[1])); expect(h.accepted).toHaveLengt…
+       |                                                            ^
+     72|  })
+     73| })
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+

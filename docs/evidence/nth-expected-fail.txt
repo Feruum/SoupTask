@@ -1,0 +1,500 @@
+TAP version 13
+# REVIEW WITNESS; sampler=nth; Node v22.16.0; not browser acceptance or performance evidence
+# Subtest: W01 same seed produces equal four-column data
+ok 1 - W01 same seed produces equal four-column data
+  ---
+  duration_ms: 7.206568
+  type: 'test'
+  ...
+# Subtest: W02 1M rows: raw numeric buffers are 32000000 bytes, not total app memory
+ok 2 - W02 1M rows: raw numeric buffers are 32000000 bytes, not total app memory
+  ---
+  duration_ms: 17.987656
+  type: 'test'
+  ...
+# Subtest: W03 exact spike and provenance: width=1
+not ok 3 - W03 exact spike and provenance: width=1
+  ---
+  duration_ms: 112.111476
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:33:37'
+  failureType: 'testCodeFailure'
+  error: |-
+    exact visible minimum
+    + actual - expected
+    
+    + 0.20223881250271233
+    - 0.20100439665828068
+          ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0.20100439665828068
+  actual: 0.20223881250271233
+  operator: 'strictEqual'
+  stack: |-
+    prove (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:20:10)
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:34:38)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W03 exact spike and provenance: width=320
+not ok 4 - W03 exact spike and provenance: width=320
+  ---
+  duration_ms: 86.903853
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:33:37'
+  failureType: 'testCodeFailure'
+  error: |-
+    exact visible minimum
+    + actual - expected
+    
+    + 0.20114666568191594
+    - 0.20100439665828068
+           ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0.20100439665828068
+  actual: 0.20114666568191594
+  operator: 'strictEqual'
+  stack: |-
+    prove (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:20:10)
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:34:38)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W03 exact spike and provenance: width=768
+not ok 5 - W03 exact spike and provenance: width=768
+  ---
+  duration_ms: 91.945124
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:33:37'
+  failureType: 'testCodeFailure'
+  error: |-
+    exact visible minimum
+    + actual - expected
+    
+    + 0.20114303869481012
+    - 0.20100439665828068
+           ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0.20100439665828068
+  actual: 0.20114303869481012
+  operator: 'strictEqual'
+  stack: |-
+    prove (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:20:10)
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:34:38)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W03 exact spike and provenance: width=1440
+not ok 6 - W03 exact spike and provenance: width=1440
+  ---
+  duration_ms: 76.214503
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:33:37'
+  failureType: 'testCodeFailure'
+  error: |-
+    exact visible minimum
+    + actual - expected
+    
+    + 0.20103509581333592
+    - 0.20100439665828068
+            ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0.20100439665828068
+  actual: 0.20103509581333592
+  operator: 'strictEqual'
+  stack: |-
+    prove (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:20:10)
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:34:38)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W04 inclusive window edges and zero-width data query
+not ok 7 - W04 inclusive window edges and zero-width data query
+  ---
+  duration_ms: 13.429903
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:37:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    exact visible minimum
+    + actual - expected
+    
+    + 0.20174373751415509
+    - 0.2016714544655154
+           ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0.2016714544655154
+  actual: 0.20174373751415509
+  operator: 'strictEqual'
+  stack: |-
+    prove (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:20:10)
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:39:32)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W05 windows excluding spike must not inherit its maximum
+not ok 8 - W05 windows excluding spike must not inherit its maximum
+  ---
+  duration_ms: 6.980827
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:42:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    exact visible maximum
+    + actual - expected
+    
+    + 0.2118144136848343
+    - 0.21196541980959777
+           ^
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0.21196541980959777
+  actual: 0.2118144136848343
+  operator: 'strictEqual'
+  stack: |-
+    prove (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:22:10)
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:44:30)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W06 spike exactly on bucket boundary or right viewport edge
+not ok 9 - W06 spike exactly on bucket boundary or right viewport edge
+  ---
+  duration_ms: 0.570691
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:47:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    exact visible maximum
+    
+    1 !== 20
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 20
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    prove (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:22:10)
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:49:78)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W07 NaN on both sides keeps an isolated spike and breaks its segment
+not ok 10 - W07 NaN on both sides keeps an isolated spike and breaks its segment
+  ---
+  duration_ms: 0.531982
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:53:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    exact visible maximum
+    
+    1 !== 20
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 20
+  actual: 1
+  operator: 'strictEqual'
+  stack: |-
+    prove (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:22:10)
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:55:27)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W08 negative trough retained as an exact original point
+not ok 11 - W08 negative trough retained as an exact original point
+  ---
+  duration_ms: 6.540443
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:60:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(run(d,0,100,1).points.some(p=>p.i===51&&p.y===-20))
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:62:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W09 NaN and both infinities are not coerced to finite values
+ok 12 - W09 NaN and both infinities are not coerced to finite values
+  ---
+  duration_ms: 0.311339
+  type: 'test'
+  ...
+# Subtest: W10 known gap breaks line topology even without a NaN row
+not ok 13 - W10 known gap breaks line topology even without a NaN row
+  ---
+  duration_ms: 1.095973
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:69:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(r.points.some(p=>p.i===49))
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:71:10)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W11 empty viewport and all-invalid viewport return no finite samples
+ok 14 - W11 empty viewport and all-invalid viewport return no finite samples
+  ---
+  duration_ms: 0.13315
+  type: 'test'
+  ...
+# Subtest: W12 ordered first/min/max/last without duplicate output indices
+not ok 15 - W12 ordered first/min/max/last without duplicate output indices
+  ---
+  duration_ms: 0.706335
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:78:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        0,
+    +   2,
+    +   4
+    -   1,
+    -   3,
+    -   5
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 0
+    1: 1
+    2: 3
+    3: 5
+  actual:
+    0: 0
+    1: 2
+    2: 4
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:80:32)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W13 >= alone misses a fabricated higher peak; exact provenance rejects it
+ok 16 - W13 >= alone misses a fabricated higher peak; exact provenance rejects it
+  ---
+  duration_ms: 0.777723
+  type: 'test'
+  ...
+# Subtest: W14 range-index witness matches an independent scan on 400 seeded queries
+ok 17 - W14 range-index witness matches an independent scan on 400 seeded queries
+  ---
+  duration_ms: 17.466629
+  type: 'test'
+  ...
+# Subtest: W15 preserve extrema on 100 seeded irregular-X cases
+not ok 18 - W15 preserve extrema on 100 seeded irregular-X cases
+  ---
+  duration_ms: 0.428816
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:98:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    exact visible minimum
+    + actual - expected
+    
+    + 1.0083155098373058
+    - 0.9891787053168052
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 0.9891787053168052
+  actual: 1.0083155098373058
+  operator: 'strictEqual'
+  stack: |-
+    prove (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:20:10)
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:102:57)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W16 per-bucket per-segment first min max last equals exhaustive oracle
+not ok 19 - W16 per-bucket per-segment first min max last equals exhaustive oracle
+  ---
+  duration_ms: 0.515558
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:133:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    exact visible maximum
+    
+    97 !== 99
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 99
+  actual: 97
+  operator: 'strictEqual'
+  stack: |-
+    prove (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:22:10)
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:145:38)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W17 sampling does not mutate raw columns including non-finite values
+ok 20 - W17 sampling does not mutate raw columns including non-finite values
+  ---
+  duration_ms: 0.224389
+  type: 'test'
+  ...
+# Subtest: W18 ties and repeated selection use deterministic original identities
+not ok 21 - W18 ties and repeated selection use deterministic original identities
+  ---
+  duration_ms: 0.513544
+  type: 'test'
+  location: '/mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:161:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+        0,
+    -   1,
+        2,
+    +   4
+    -   5
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 0
+    1: 1
+    2: 2
+    3: 5
+  actual:
+    0: 0
+    1: 2
+    2: 4
+  operator: 'deepStrictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///mnt/data/soup_review_v2_1/evidence/reference-tests.mjs:164:33)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: W19 range index rejects non-integer non-finite and out-of-range bounds
+ok 22 - W19 range index rejects non-integer non-finite and out-of-range bounds
+  ---
+  duration_ms: 0.330528
+  type: 'test'
+  ...
+# Subtest: W20 index handles empty singleton ties and non-finite-only ranges
+ok 23 - W20 index handles empty singleton ties and non-finite-only ranges
+  ---
+  duration_ms: 0.117327
+  type: 'test'
+  ...
+# Subtest: W21 validate mode and viewport before an empty input can hide errors
+ok 24 - W21 validate mode and viewport before an empty input can hide errors
+  ---
+  duration_ms: 0.311169
+  type: 'test'
+  ...
+# Subtest: W22 documented limitation: not every local peak survives a one-bucket overview
+ok 25 - W22 documented limitation: not every local peak survives a one-bucket overview
+  ---
+  duration_ms: 0.185029
+  type: 'test'
+  ...
+1..25
+# tests 25
+# suites 0
+# pass 11
+# fail 14
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 568.650504

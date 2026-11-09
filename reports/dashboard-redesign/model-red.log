@@ -1,0 +1,48 @@
+
+ RUN  v5.1.0 C:/Users/Ferumm/projects/soupTask
+
+ ❯ src/features/dashboard/dashboard-model.test.ts (2 tests | 2 failed) 18ms
+   ❯ source-derived dashboard view (2)
+     × groups each actual run once by model and method, with stable categorical colors 14ms
+     × encodes finite counts monotonically, with explicit empty data and no invented minimum count 2ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/features/dashboard/dashboard-model.test.ts > source-derived dashboard view > groups each actual run once by model and method, with stable categorical colors
+AssertionError: expected [] to have a length of 2 but got +0
+
+- Expected
++ Received
+
+- 2
++ 0
+
+ ❯ src/features/dashboard/dashboard-model.test.ts:14:20
+     12|     ] as RunManifestEntry[]
+     13|     const groups = experimentGroups(rows)
+     14|     expect(groups).toHaveLength(2)
+       |                    ^
+     15|     expect(groups.flatMap(group => group.methods.flatMap(method => met…
+     16|     expect(groups.find(group => group.model === 'Qwen2.5-3B')?.methods…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/features/dashboard/dashboard-model.test.ts > source-derived dashboard view > encodes finite counts monotonically, with explicit empty data and no invented minimum count
+AssertionError: expected 0 to be greater than 0
+ ❯ src/features/dashboard/dashboard-model.test.ts:25:21
+     23|     const rows = counts.map(count => finiteTileRows(count, 1_000_000))
+     24|     expect(rows[0]).toBe(0)
+     25|     expect(rows[1]).toBeGreaterThan(0)
+       |                     ^
+     26|     expect(rows.at(-1)).toBe(10)
+     27|     expect([...rows].sort((a, b) => a - b)).toEqual(rows)
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed (2)
+   Start at  03:02:35
+   Duration  425ms (transform 49%, import 22%, tests 16%, worker 12%)
+
+JSON report written to C:/Users/Ferumm/projects/soupTask/reports/unit-results.json

@@ -1,0 +1,372 @@
+{
+  "stats": {
+    "startTime": "2026-11-09T21:16:14.882Z",
+    "duration": 19123.635000000002,
+    "expected": 7,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "checks": [
+    {
+      "name": "dark-320-runs-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 13,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ],
+            [
+              "th[scope=\"col\"]:nth-child(3)"
+            ],
+            [
+              "th[scope=\"col\"]:nth-child(4)"
+            ],
+            [
+              "th[scope=\"col\"]:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(1) > .numeric:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(1) > .numeric:nth-child(4)"
+            ],
+            [
+              "a[aria-label=\"Open run kazakh-sft-003\"]"
+            ],
+            [
+              "tr:nth-child(2) > .numeric:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(2) > .numeric:nth-child(4)"
+            ],
+            [
+              "a[aria-label=\"Open run kazakh-sft-002\"]"
+            ],
+            [
+              "tr:nth-child(3) > .numeric:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(3) > .numeric:nth-child(4)"
+            ],
+            [
+              "a[aria-label=\"Open run kazakh-sft-001\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dark-320-kazakh-sft-003-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dark-320-compare-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 9,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > thead > tr > th[scope=\"col\"]:nth-child(3)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > thead > tr > th[scope=\"col\"]:nth-child(4)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > tbody > tr:nth-child(1) > td:nth-child(3)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > tbody > tr:nth-child(1) > td:nth-child(4)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > tbody > tr:nth-child(2) > td:nth-child(3)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > tbody > tr:nth-child(2) > td:nth-child(4)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > tbody > tr:nth-child(3) > td:nth-child(3)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > tbody > tr:nth-child(3) > td:nth-child(4)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dark-320-data-quality-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dark-1440-runs-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dark-1440-kazakh-sft-003-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dark-1440-compare-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "dark-1440-data-quality-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "light-320-runs-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 13,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ],
+            [
+              "th[scope=\"col\"]:nth-child(3)"
+            ],
+            [
+              "th[scope=\"col\"]:nth-child(4)"
+            ],
+            [
+              "th[scope=\"col\"]:nth-child(5)"
+            ],
+            [
+              "tr:nth-child(1) > .numeric:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(1) > .numeric:nth-child(4)"
+            ],
+            [
+              "a[aria-label=\"Open run kazakh-sft-003\"]"
+            ],
+            [
+              "tr:nth-child(2) > .numeric:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(2) > .numeric:nth-child(4)"
+            ],
+            [
+              "a[aria-label=\"Open run kazakh-sft-002\"]"
+            ],
+            [
+              "tr:nth-child(3) > .numeric:nth-child(3)"
+            ],
+            [
+              "tr:nth-child(3) > .numeric:nth-child(4)"
+            ],
+            [
+              "a[aria-label=\"Open run kazakh-sft-001\"]"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "light-320-kazakh-sft-003-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "light-320-compare-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 9,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > thead > tr > th[scope=\"col\"]:nth-child(3)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > thead > tr > th[scope=\"col\"]:nth-child(4)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > tbody > tr:nth-child(1) > td:nth-child(3)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > tbody > tr:nth-child(1) > td:nth-child(4)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > tbody > tr:nth-child(2) > td:nth-child(3)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > tbody > tr:nth-child(2) > td:nth-child(4)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > tbody > tr:nth-child(3) > td:nth-child(3)"
+            ],
+            [
+              "section[aria-label=\"Comparison source values\"] > table > tbody > tr:nth-child(3) > td:nth-child(4)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "light-320-data-quality-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "light-1440-runs-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "light-1440-kazakh-sft-003-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "light-1440-compare-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "light-1440-data-quality-axe",
+      "violations": 0,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "nodes": 1,
+          "targets": [
+            [
+              ".active > span:nth-child(3)"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

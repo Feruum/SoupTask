@@ -1,0 +1,213 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/chart-paint.spec.ts",
+      "--grep",
+      "accepted view paints once"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\playwright.config.ts",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4173",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/158.0.8127.18 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/e2e-results.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 2,
+    "webServer": {
+      "command": "npm run preview",
+      "url": "http://127.0.0.1:4173",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "chart-paint.spec.ts",
+      "file": "chart-paint.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "an accepted view paints once, including replacement data at the same numeric range",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2719,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 3\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[32m-   7,\u001b[39m\n\u001b[32m-   7,\u001b[39m\n\u001b[32m-   7,\u001b[39m\n\u001b[31m+   8,\u001b[39m\n\u001b[31m+   8,\u001b[39m\n\u001b[31m+   8,\u001b[39m\n\u001b[2m  ]\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 3\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[32m-   7,\u001b[39m\n\u001b[32m-   7,\u001b[39m\n\u001b[32m-   7,\u001b[39m\n\u001b[31m+   8,\u001b[39m\n\u001b[31m+   8,\u001b[39m\n\u001b[31m+   8,\u001b[39m\n\u001b[2m  ]\u001b[22m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\chart-paint.spec.ts:48:51",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\chart-paint.spec.ts",
+                      "column": 51,
+                      "line": 48
+                    },
+                    "snippet": " \u001b[90m 46 |\u001b[39m     \u001b[36mawait\u001b[39m expect(grid)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-view-ready'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\n \u001b[90m 47 |\u001b[39m     \u001b[36mawait\u001b[39m frames(page)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m     expect(\u001b[36mawait\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m.\u001b[39mall(charts\u001b[33m.\u001b[39mmap(paints)))\u001b[33m.\u001b[39mtoEqual(before\u001b[33m.\u001b[39mmap(count \u001b[33m=>\u001b[39m count \u001b[33m+\u001b[39m \u001b[35m1\u001b[39m))\n \u001b[90m    |\u001b[39m                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m     \u001b[36mawait\u001b[39m expect(plot)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-range-min'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'500000'\u001b[39m)\n \u001b[90m 50 |\u001b[39m     \u001b[36mawait\u001b[39m expect(plot)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-range-max'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'500002'\u001b[39m)\n \u001b[90m 51 |\u001b[39m     \u001b[36mawait\u001b[39m assertSpikePainted(page)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\chart-paint.spec.ts",
+                        "column": 51,
+                        "line": 48
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 3\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[2m  Array [\u001b[22m\n\u001b[32m-   7,\u001b[39m\n\u001b[32m-   7,\u001b[39m\n\u001b[32m-   7,\u001b[39m\n\u001b[31m+   8,\u001b[39m\n\u001b[31m+   8,\u001b[39m\n\u001b[31m+   8,\u001b[39m\n\u001b[2m  ]\u001b[22m\n\n  46 |     await expect(grid).toHaveAttribute('data-view-ready', 'true')\n  47 |     await frames(page)\n> 48 |     expect(await Promise.all(charts.map(paints))).toEqual(before.map(count => count + 1))\n     |                                                   ^\n  49 |     await expect(plot).toHaveAttribute('data-range-min', '500000')\n  50 |     await expect(plot).toHaveAttribute('data-range-max', '500002')\n  51 |     await assertSpikePainted(page)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\chart-paint.spec.ts:48:51"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-09T23:09:02.359Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\test-results\\chart-paint-an-accepted-vi-a0d2d-a-at-the-same-numeric-range-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\test-results\\chart-paint-an-accepted-vi-a0d2d-a-at-the-same-numeric-range-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\test-results\\chart-paint-an-accepted-vi-a0d2d-a-at-the-same-numeric-range-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\chart-paint.spec.ts",
+                    "column": 51,
+                    "line": 48
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "b7e1ae17b16d6ca7bfd7-f3f0b34d8e0ca3c75036",
+          "file": "chart-paint.spec.ts",
+          "line": 33,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-09T23:08:59.344Z",
+    "duration": 7278.604,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

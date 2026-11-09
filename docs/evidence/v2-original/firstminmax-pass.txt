@@ -1,0 +1,119 @@
+TAP version 13
+# REVIEW WITNESS; sampler=firstminmax; Node v22.16.0; not browser acceptance or performance evidence
+# Subtest: W01 same seed produces equal four-column data
+ok 1 - W01 same seed produces equal four-column data
+  ---
+  duration_ms: 5.907058
+  type: 'test'
+  ...
+# Subtest: W02 1M rows: raw numeric buffers are 32000000 bytes, not total app memory
+ok 2 - W02 1M rows: raw numeric buffers are 32000000 bytes, not total app memory
+  ---
+  duration_ms: 0.175102
+  type: 'test'
+  ...
+# Subtest: W03 exact spike and provenance: width=1
+ok 3 - W03 exact spike and provenance: width=1
+  ---
+  duration_ms: 103.985965
+  type: 'test'
+  ...
+# Subtest: W03 exact spike and provenance: width=320
+ok 4 - W03 exact spike and provenance: width=320
+  ---
+  duration_ms: 115.265181
+  type: 'test'
+  ...
+# Subtest: W03 exact spike and provenance: width=768
+ok 5 - W03 exact spike and provenance: width=768
+  ---
+  duration_ms: 116.212151
+  type: 'test'
+  ...
+# Subtest: W03 exact spike and provenance: width=1440
+ok 6 - W03 exact spike and provenance: width=1440
+  ---
+  duration_ms: 79.409628
+  type: 'test'
+  ...
+# Subtest: W04 inclusive window edges and zero-width data query
+ok 7 - W04 inclusive window edges and zero-width data query
+  ---
+  duration_ms: 14.194459
+  type: 'test'
+  ...
+# Subtest: W05 windows excluding spike must not inherit its maximum
+ok 8 - W05 windows excluding spike must not inherit its maximum
+  ---
+  duration_ms: 2.847162
+  type: 'test'
+  ...
+# Subtest: W06 spike exactly on bucket boundary or right viewport edge
+ok 9 - W06 spike exactly on bucket boundary or right viewport edge
+  ---
+  duration_ms: 0.562174
+  type: 'test'
+  ...
+# Subtest: W07 NaN on both sides keeps an isolated spike and breaks its segment
+ok 10 - W07 NaN on both sides keeps an isolated spike and breaks its segment
+  ---
+  duration_ms: 0.76632
+  type: 'test'
+  ...
+# Subtest: W08 negative trough retained as an exact original point
+ok 11 - W08 negative trough retained as an exact original point
+  ---
+  duration_ms: 0.220882
+  type: 'test'
+  ...
+# Subtest: W09 NaN and both infinities are not coerced to finite values
+ok 12 - W09 NaN and both infinities are not coerced to finite values
+  ---
+  duration_ms: 0.170486
+  type: 'test'
+  ...
+# Subtest: W10 known gap breaks line topology even without a NaN row
+ok 13 - W10 known gap breaks line topology even without a NaN row
+  ---
+  duration_ms: 0.17999
+  type: 'test'
+  ...
+# Subtest: W11 empty viewport and all-invalid viewport return no finite samples
+ok 14 - W11 empty viewport and all-invalid viewport return no finite samples
+  ---
+  duration_ms: 0.095583
+  type: 'test'
+  ...
+# Subtest: W12 ordered first/min/max/last without duplicate output indices
+ok 15 - W12 ordered first/min/max/last without duplicate output indices
+  ---
+  duration_ms: 0.178188
+  type: 'test'
+  ...
+# Subtest: W13 >= alone misses a fabricated higher peak; exact provenance rejects it
+ok 16 - W13 >= alone misses a fabricated higher peak; exact provenance rejects it
+  ---
+  duration_ms: 0.080181
+  type: 'test'
+  ...
+# Subtest: W14 range-index witness matches an independent scan on 400 seeded queries
+ok 17 - W14 range-index witness matches an independent scan on 400 seeded queries
+  ---
+  duration_ms: 16.639187
+  type: 'test'
+  ...
+# Subtest: W15 preserve extrema on 100 seeded irregular-X cases
+ok 18 - W15 preserve extrema on 100 seeded irregular-X cases
+  ---
+  duration_ms: 12.310582
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 582.742632

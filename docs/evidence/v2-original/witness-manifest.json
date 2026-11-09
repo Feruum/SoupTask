@@ -1,0 +1,40 @@
+{
+  "scope": "Standalone Node algorithm witness, not Soup UI, Vitest/E2E, or performance results",
+  "executedAt": "2026-11-09T19:35:53.606Z",
+  "node": "v22.16.0",
+  "platform": "linux",
+  "arch": "x64",
+  "sources": {
+    "reference-sampler.mjs": "2bf95249b89be9ec40540f1af23608ac8f01d75db836514c5de616b1e73b71f1",
+    "reference-tests.mjs": "d1d55e8db0f7cf06b5e23b4b49aca1b333945250503bd4652766e9fe5589eed3"
+  },
+  "results": [
+    {
+      "sampler": "firstminmax",
+      "exitCode": 0,
+      "expectedExit": 0,
+      "tests": 18,
+      "pass": 18,
+      "fail": 0,
+      "log": "firstminmax-pass.txt"
+    },
+    {
+      "sampler": "nth",
+      "exitCode": 1,
+      "expectedExit": 1,
+      "tests": 18,
+      "pass": 6,
+      "fail": 12,
+      "log": "nth-expected-fail.txt"
+    },
+    {
+      "sampler": "mean",
+      "exitCode": 1,
+      "expectedExit": 1,
+      "tests": 18,
+      "pass": 7,
+      "fail": 11,
+      "log": "mean-expected-fail.txt"
+    }
+  ]
+}

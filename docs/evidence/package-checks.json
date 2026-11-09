@@ -1,0 +1,75 @@
+{
+  "version": "2.1",
+  "checkedAtUtc": "2026-11-09T20:06:57.316875+00:00",
+  "scope": "Package links, named citations, bilingual numeric heading structure, witness hash/log integrity and preserved original evidence; not browser or semantic translation certification.",
+  "inputZipSha256": "2056fa55a809d72751fafb83243d86ffc3168ed0da479696c324ead2490b31a2",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5508,
+      "sha256": "4c2226cc2e490b755efe211749be6fadb1428d1b2bec779ba60e74d30613a257"
+    },
+    {
+      "path": "en/architecture.md",
+      "bytes": 44700,
+      "sha256": "d5f81551b67f0f0130f4612f9d063d5caee8443a4aa5e1b5f048ea6c8410a4f1"
+    },
+    {
+      "path": "en/research.md",
+      "bytes": 24561,
+      "sha256": "86b4146f53ade258056e49beea3e082a8a111e2b9c4b97c678c2eb3d7dba04a4"
+    },
+    {
+      "path": "en/review.md",
+      "bytes": 17096,
+      "sha256": "8e273e391116180df7fec51848fcc0dbff90a3e628250b9f893fb6b8d9d4904e"
+    },
+    {
+      "path": "ru/architecture.md",
+      "bytes": 64380,
+      "sha256": "a46b1724c9deae7a0349e40c8d346ea32dfff14333647a9e23f6da5b200054b8"
+    },
+    {
+      "path": "ru/research.md",
+      "bytes": 35802,
+      "sha256": "5b6b170632b43fc405fb546b078a5d8280bcda8431fb982dab252851d5ea8a30"
+    },
+    {
+      "path": "ru/review.md",
+      "bytes": 25892,
+      "sha256": "227bab1188aaa1615ef570b128a36b55ce302173f4bdda2bf4a80a0979a51728"
+    }
+  ],
+  "witnessResults": [
+    {
+      "sampler": "firstminmax",
+      "tests": 25,
+      "pass": 25,
+      "fail": 0,
+      "accepted": true
+    },
+    {
+      "sampler": "nth",
+      "tests": 25,
+      "pass": 11,
+      "fail": 14,
+      "accepted": true
+    },
+    {
+      "sampler": "mean",
+      "tests": 25,
+      "pass": 12,
+      "fail": 13,
+      "accepted": true
+    },
+    {
+      "sampler": "v2-original-regression",
+      "tests": 25,
+      "pass": 23,
+      "fail": 2,
+      "accepted": true
+    }
+  ],
+  "issues": [],
+  "passed": true
+}

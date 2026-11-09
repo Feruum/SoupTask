@@ -1,0 +1,2261 @@
+[
+  {
+    "id": "kazakh-sft-001",
+    "name": "kazakh-sft-001",
+    "model": "Qwen2.5-1.5B",
+    "method": "DPO",
+    "scenario": "clean",
+    "seed": 1000,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Running",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:clean@1:seed=1000:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.26984068770986375,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.23887047660191402,
+        "max": 3.4318077962752436,
+        "minStep": 8185,
+        "maxStep": 0,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.26984068770986375,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.1603452333342284,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.14000449141953142,
+        "max": 0.2399620271380991,
+        "minStep": 4709,
+        "maxStep": 6567,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.1603452333342284,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-002",
+    "name": "kazakh-sft-002",
+    "model": "Qwen2.5-3B",
+    "method": "SFT",
+    "scenario": "slow",
+    "seed": 1001,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Completed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:slow@1:seed=1001:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.4842090952571282,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.454091348999457,
+        "max": 3.4171612316741213,
+        "minStep": 8129,
+        "maxStep": 2,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.4842090952571282,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.2103260578447953,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.14002425021957607,
+        "max": 0.23998583151027564,
+        "minStep": 6660,
+        "maxStep": 6059,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.2103260578447953,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-003",
+    "name": "kazakh-sft-003",
+    "model": "Qwen2.5-3B",
+    "method": "SFT",
+    "scenario": "noisy",
+    "seed": 1002,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Completed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:noisy@1:seed=1002:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.29728247825149773,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.24324226301188825,
+        "max": 3.879189039156133,
+        "minStep": 8007,
+        "maxStep": 2,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.29728247825149773,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.21783009479753673,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.1400089701032266,
+        "max": 0.2399989510746673,
+        "minStep": 4052,
+        "maxStep": 7486,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.21783009479753673,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-004",
+    "name": "kazakh-sft-004",
+    "model": "Qwen2.5-1.5B",
+    "method": "SFT",
+    "scenario": "divergence",
+    "seed": 1003,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Failed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:divergence@1:seed=1003:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 6.314064022782259,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.3150154903443923,
+        "max": 6.389731328046023,
+        "minStep": 12,
+        "maxStep": 8180,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 6.314064022782259,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.17505685841664673,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.14003582176286727,
+        "max": 0.23999623813200743,
+        "minStep": 4549,
+        "maxStep": 4986,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.17505685841664673,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-005",
+    "name": "kazakh-sft-005",
+    "model": "Qwen2.5-3B",
+    "method": "DPO",
+    "scenario": "spike",
+    "seed": 42,
+    "rowCount": 1000000,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Running",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:spike@1:seed=42:n=1000000:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.20157267567786044,
+        "latestStep": 999999,
+        "latestStatus": "finite",
+        "min": 0.2003269340887048,
+        "max": 100,
+        "minStep": 989070,
+        "maxStep": 500001,
+        "finiteCount": 1000000,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 999999,
+          "step": 999999,
+          "value": 0.20157267567786044,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 999999,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018333318333318336,
+        "minStep": 0,
+        "maxStep": 83334,
+        "finiteCount": 1000000,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 999999,
+          "step": 999999,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.14930070532485845,
+        "latestStep": 999999,
+        "latestStatus": "finite",
+        "min": 0.1400001134350896,
+        "max": 0.23999996128026396,
+        "minStep": 945702,
+        "maxStep": 29989,
+        "finiteCount": 1000000,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 999999,
+          "step": 999999,
+          "value": 0.14930070532485845,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 999999
+    }
+  },
+  {
+    "id": "kazakh-sft-006",
+    "name": "kazakh-sft-006",
+    "model": "Qwen2.5-3B",
+    "method": "SFT",
+    "scenario": "missing",
+    "seed": 1005,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Running",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:missing@1:seed=1005:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": null,
+        "latestStep": 8191,
+        "latestStatus": "invalid",
+        "min": 0.2387951464464082,
+        "max": 3.416735710203648,
+        "minStep": 8157,
+        "maxStep": 0,
+        "finiteCount": 8190,
+        "invalidCount": 2,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8190,
+          "step": 8190,
+          "value": 0.26526429761351683,
+          "segment": 1
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.19183304687961938,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.14000469107180835,
+        "max": 0.23999194147530944,
+        "minStep": 693,
+        "maxStep": 7925,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.19183304687961938,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 2,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 2,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 2
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-007",
+    "name": "kazakh-sft-007",
+    "model": "Qwen2.5-1.5B",
+    "method": "SFT",
+    "scenario": "pos-inf",
+    "seed": 1006,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Completed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:pos-inf@1:seed=1006:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.25666334136482655,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.2387991581566519,
+        "max": 3.4141022987850014,
+        "minStep": 8150,
+        "maxStep": 0,
+        "finiteCount": 8191,
+        "invalidCount": 1,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.25666334136482655,
+          "segment": 1
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.2357468413282186,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.1400223481329158,
+        "max": 0.23995056160259992,
+        "minStep": 3788,
+        "maxStep": 1052,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.2357468413282186,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 1,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 1,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 1
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-008",
+    "name": "kazakh-sft-008",
+    "model": "Qwen2.5-3B",
+    "method": "SFT",
+    "scenario": "neg-inf",
+    "seed": 1007,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Completed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:neg-inf@1:seed=1007:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.2718951099375295,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.23915495686256177,
+        "max": 3.4348418452963236,
+        "minStep": 8113,
+        "maxStep": 0,
+        "finiteCount": 8191,
+        "invalidCount": 1,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.2718951099375295,
+          "segment": 1
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.18309621704742313,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.1400017581973225,
+        "max": 0.2399978308565915,
+        "minStep": 6414,
+        "maxStep": 1485,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.18309621704742313,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 1,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 1,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 1
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-009",
+    "name": "kazakh-sft-009",
+    "model": "Qwen2.5-3B",
+    "method": "DPO",
+    "scenario": "duplicates",
+    "seed": 1008,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Completed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:duplicates@1:seed=1008:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.25602608365100205,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.23875579391805876,
+        "max": 3.4308006250206384,
+        "minStep": 8177,
+        "maxStep": 0,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.25602608365100205,
+          "segment": 1
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 1
+        }
+      },
+      "grad_norm": {
+        "latest": 0.2347466624202207,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.14000720713287593,
+        "max": 0.23998810242395852,
+        "minStep": 419,
+        "maxStep": 5884,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.2347466624202207,
+          "segment": 1
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 10,
+      "duplicateGroups": 1,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 1,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 1,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 1,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 1,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-010",
+    "name": "kazakh-sft-010",
+    "model": "Qwen2.5-1.5B",
+    "method": "SFT",
+    "scenario": "conflicts",
+    "seed": 1009,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Running",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:conflicts@1:seed=1009:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": null,
+        "latestStep": 8190,
+        "latestStatus": "conflict",
+        "min": 0.23926986462248356,
+        "max": 12,
+        "minStep": 8107,
+        "maxStep": 100,
+        "finiteCount": 8191,
+        "invalidCount": 1,
+        "conflictCount": 2,
+        "lastFinite": {
+          "sourceIndex": 8189,
+          "step": 8189,
+          "value": 0.24418828525433392,
+          "segment": 2
+        }
+      },
+      "lr": {
+        "latest": null,
+        "latestStep": 8190,
+        "latestStatus": "conflict",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 2,
+        "lastFinite": {
+          "sourceIndex": 8189,
+          "step": 8189,
+          "value": 4.883408619216212e-9,
+          "segment": 2
+        }
+      },
+      "grad_norm": {
+        "latest": null,
+        "latestStep": 8190,
+        "latestStatus": "conflict",
+        "min": 0.14000441980082542,
+        "max": 0.2399939890112728,
+        "minStep": 2608,
+        "maxStep": 5855,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 2,
+        "lastFinite": {
+          "sourceIndex": 8189,
+          "step": 8189,
+          "value": 0.17589627207256855,
+          "segment": 2
+        }
+      }
+    },
+    "quality": {
+      "nan": 1,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 2,
+      "duplicateGroups": 2,
+      "conflictGroups": 6,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 1,
+      "metrics": {
+        "loss": {
+          "nan": 1,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 2,
+          "gaps": 1,
+          "invalidCount": 1
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 2,
+          "gaps": 1,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 2,
+          "gaps": 1,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8190
+    }
+  },
+  {
+    "id": "kazakh-sft-011",
+    "name": "kazakh-sft-011",
+    "model": "Qwen2.5-3B",
+    "method": "SFT",
+    "scenario": "unsorted",
+    "seed": 1010,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Completed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:unsorted@1:seed=1010:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.24613652256410895,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.23874567615652534,
+        "max": 3.4173017566464843,
+        "minStep": 8189,
+        "maxStep": 0,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.24613652256410895,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.19252752536907794,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.14001370545942338,
+        "max": 0.23999300823546948,
+        "minStep": 3158,
+        "maxStep": 6204,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.19252752536907794,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 2,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-012",
+    "name": "kazakh-sft-012",
+    "model": "Qwen2.5-3B",
+    "method": "SFT",
+    "scenario": "gaps",
+    "seed": 1011,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Completed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:gaps@1:seed=1011:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.2638402199381995,
+        "latestStep": 8291,
+        "latestStatus": "finite",
+        "min": 0.2391932492272304,
+        "max": 3.4396651230473076,
+        "minStep": 8283,
+        "maxStep": 0,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8291,
+          "value": 0.2638402199381995,
+          "segment": 1
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8291,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8291,
+          "value": 0,
+          "segment": 1
+        }
+      },
+      "grad_norm": {
+        "latest": 0.1846769852889702,
+        "latestStep": 8291,
+        "latestStatus": "finite",
+        "min": 0.14000365120358765,
+        "max": 0.2399872190644965,
+        "minStep": 1883,
+        "maxStep": 6013,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8291,
+          "value": 0.1846769852889702,
+          "segment": 1
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 1,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 1,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 1,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 1,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8291
+    }
+  },
+  {
+    "id": "kazakh-sft-013",
+    "name": "kazakh-sft-013",
+    "model": "Qwen2.5-1.5B",
+    "method": "DPO",
+    "scenario": "zero",
+    "seed": 1012,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Completed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:zero@1:seed=1012:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 3.41187808521092,
+        "minStep": 4096,
+        "maxStep": 0,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.21412940850481393,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.14000329108443113,
+        "max": 0.23999583850149067,
+        "minStep": 6013,
+        "maxStep": 8184,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.21412940850481393,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-014",
+    "name": "kazakh-sft-014",
+    "model": "Qwen2.5-3B",
+    "method": "SFT",
+    "scenario": "plateau",
+    "seed": 1013,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Completed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:plateau@1:seed=1013:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.8003844196978026,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.8000046645151452,
+        "max": 0.809999836368952,
+        "minStep": 5387,
+        "maxStep": 4470,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.8003844196978026,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.20660862280987205,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.14001632007770243,
+        "max": 0.23999330430291593,
+        "minStep": 3601,
+        "maxStep": 3425,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.20660862280987205,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-015",
+    "name": "kazakh-sft-015",
+    "model": "Qwen2.5-3B",
+    "method": "SFT",
+    "scenario": "small-lr",
+    "seed": 1014,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Completed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:small-lr@1:seed=1014:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.26184158437978805,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.23870351794394729,
+        "max": 3.4062969095259907,
+        "minStep": 8187,
+        "maxStep": 0,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.26184158437978805,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 1.8332315956537668e-9,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.22717609387822452,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.14000802874565127,
+        "max": 0.23999379843939098,
+        "minStep": 4040,
+        "maxStep": 4129,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.22717609387822452,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-016",
+    "name": "kazakh-sft-016",
+    "model": "Qwen2.5-1.5B",
+    "method": "SFT",
+    "scenario": "grad-spike",
+    "seed": 1015,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Completed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:grad-spike@1:seed=1015:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.24687243223283767,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.23894369814144165,
+        "max": 3.4100307030696424,
+        "minStep": 8136,
+        "maxStep": 0,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.24687243223283767,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.1459710395988077,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.14001383915077897,
+        "max": 9,
+        "minStep": 163,
+        "maxStep": 4096,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.1459710395988077,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-017",
+    "name": "kazakh-sft-017",
+    "model": "Qwen2.5-3B",
+    "method": "DPO",
+    "scenario": "mixed",
+    "seed": 1016,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Failed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:mixed@1:seed=1016:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.26255314054992374,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.23893230295105738,
+        "max": 8,
+        "minStep": 8163,
+        "maxStep": 40,
+        "finiteCount": 8191,
+        "invalidCount": 1,
+        "conflictCount": 1,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.26255314054992374,
+          "segment": 3
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8191,
+        "invalidCount": 1,
+        "conflictCount": 1,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 3
+        }
+      },
+      "grad_norm": {
+        "latest": 0.16485126573592426,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.14000732864718884,
+        "max": 0.23999765432439746,
+        "minStep": 1687,
+        "maxStep": 4832,
+        "finiteCount": 8191,
+        "invalidCount": 1,
+        "conflictCount": 1,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.16485126573592426,
+          "segment": 3
+        }
+      }
+    },
+    "quality": {
+      "nan": 1,
+      "posInf": 1,
+      "negInf": 1,
+      "duplicateRows": 1,
+      "duplicateGroups": 1,
+      "conflictGroups": 3,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 1,
+      "metrics": {
+        "loss": {
+          "nan": 1,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 1,
+          "gaps": 1,
+          "invalidCount": 1
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 1,
+          "negInf": 0,
+          "conflicts": 1,
+          "gaps": 1,
+          "invalidCount": 1
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 1,
+          "conflicts": 1,
+          "gaps": 1,
+          "invalidCount": 1
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  },
+  {
+    "id": "kazakh-sft-018",
+    "name": "kazakh-sft-018",
+    "model": "Qwen2.5-3B",
+    "method": "SFT",
+    "scenario": "sparse",
+    "seed": 1017,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Cancelled",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "revision": "soup-1.0.0:sparse@1:seed=1017:n=8192:cadence=unspecified",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.25733106847014603,
+        "latestStep": 139247,
+        "latestStatus": "finite",
+        "min": 0.23938251367881075,
+        "max": 3.4089134632144127,
+        "minStep": 137445,
+        "maxStep": 0,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 139247,
+          "value": 0.25733106847014603,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 139247,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 11611,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 139247,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.21941154441796246,
+        "latestStep": 139247,
+        "latestStatus": "finite",
+        "min": 0.14000096715521068,
+        "max": 0.23999980148859323,
+        "minStep": 113441,
+        "maxStep": 107355,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 139247,
+          "value": 0.21941154441796246,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 139247
+    }
+  },
+  {
+    "id": "kazakh-sft-019",
+    "name": "kazakh-sft-019",
+    "model": "Qwen2.5-1.5B",
+    "method": "SFT",
+    "scenario": "singleton",
+    "seed": 1018,
+    "rowCount": 1,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Completed",
+    "sourceUpdatedAt": "2026-11-09T12:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:singleton@1:seed=1018:n=1:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 3.42850882941857,
+        "latestStep": 0,
+        "latestStatus": "finite",
+        "min": 3.42850882941857,
+        "max": 3.42850882941857,
+        "minStep": 0,
+        "maxStep": 0,
+        "finiteCount": 1,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 0,
+          "step": 0,
+          "value": 3.42850882941857,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 0,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0,
+        "minStep": 0,
+        "maxStep": 0,
+        "finiteCount": 1,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 0,
+          "step": 0,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.22538150475360455,
+        "latestStep": 0,
+        "latestStatus": "finite",
+        "min": 0.22538150475360455,
+        "max": 0.22538150475360455,
+        "minStep": 0,
+        "maxStep": 0,
+        "finiteCount": 1,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 0,
+          "step": 0,
+          "value": 0.22538150475360455,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 0
+    }
+  },
+  {
+    "id": "kazakh-sft-020",
+    "name": "kazakh-sft-020",
+    "model": "Qwen2.5-3B",
+    "method": "SFT",
+    "scenario": "stale",
+    "seed": 1019,
+    "rowCount": 8192,
+    "generatorVersion": "soup-1.0.0",
+    "scenarioVersion": "1",
+    "status": "Cancelled",
+    "sourceUpdatedAt": "2026-11-03T00:00:00Z",
+    "expectedCadence": 1,
+    "revision": "soup-1.0.0:stale@1:seed=1019:n=8192:cadence=1",
+    "normalizerVersion": "normalize-1.0.0",
+    "summaries": {
+      "loss": {
+        "latest": 0.2627440083036232,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.2391468013162731,
+        "max": 3.4023150652647023,
+        "minStep": 8084,
+        "maxStep": 0,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.2627440083036232,
+          "segment": 0
+        }
+      },
+      "lr": {
+        "latest": 0,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0,
+        "max": 0.000018332315956537667,
+        "minStep": 0,
+        "maxStep": 683,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0,
+          "segment": 0
+        }
+      },
+      "grad_norm": {
+        "latest": 0.2014602519432083,
+        "latestStep": 8191,
+        "latestStatus": "finite",
+        "min": 0.14000070470850917,
+        "max": 0.23999497954268012,
+        "minStep": 3786,
+        "maxStep": 2132,
+        "finiteCount": 8192,
+        "invalidCount": 0,
+        "conflictCount": 0,
+        "lastFinite": {
+          "sourceIndex": 8191,
+          "step": 8191,
+          "value": 0.2014602519432083,
+          "segment": 0
+        }
+      }
+    },
+    "quality": {
+      "nan": 0,
+      "posInf": 0,
+      "negInf": 0,
+      "duplicateRows": 0,
+      "duplicateGroups": 0,
+      "conflictGroups": 0,
+      "invalidX": 0,
+      "outOfOrder": 0,
+      "gaps": 0,
+      "metrics": {
+        "loss": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "lr": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        },
+        "grad_norm": {
+          "nan": 0,
+          "posInf": 0,
+          "negInf": 0,
+          "conflicts": 0,
+          "gaps": 0,
+          "invalidCount": 0
+        }
+      }
+    },
+    "domain": {
+      "min": 0,
+      "max": 8191
+    }
+  }
+]

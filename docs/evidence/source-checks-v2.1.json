@@ -1,0 +1,62 @@
+{
+  "version": "2.1",
+  "checked_date_local": "2026-11-10",
+  "method": "Selective reread of official pages through the web tool; no vendor application benchmark.",
+  "inherited_audit": "source-audit.json retains v2 statuses and dates. Other references were not all re-opened in v2.1.",
+  "entries": [
+    {
+      "id": "S01",
+      "url": "https://docs.neptune.ai/smoothing",
+      "status": "read_in_v2.1",
+      "finding": "Retrieved versioned Neptune documentation describes mean/min-max aggregation and interpolated empty ranges; this is a documentation reference, not a current service recommendation."
+    },
+    {
+      "id": "S06",
+      "url": "https://www.comet.com/docs/v2/guides/experiment-management/total-fidelity/",
+      "status": "read_in_v2.1",
+      "finding": "Complete compressed CSV assets and sampled built-in charts are explicitly distinguished."
+    },
+    {
+      "id": "S27",
+      "url": "https://github.com/leeoniya/uPlot/blob/master/docs/README.md",
+      "status": "read_in_v2.1",
+      "finding": "Aligned X is unique/ascending; Y may contain null; arrays are documented with length >=2; numeric step uses time:false."
+    },
+    {
+      "id": "S28",
+      "url": "https://raw.githubusercontent.com/leeoniya/uPlot/master/dist/uPlot.d.ts",
+      "status": "read_in_v2.1",
+      "finding": "Public types expose canvas-coordinate gaps, points/filter controls, data updates and range APIs; master is not a pinned package version."
+    },
+    {
+      "id": "S29",
+      "url": "https://raw.githubusercontent.com/apache/echarts/master/src/chart/line/LineSeries.ts",
+      "status": "read_in_v2.1",
+      "finding": "The inspected line-series default has progressive:0 with a disabling comment; this does not cover every ECharts series."
+    },
+    {
+      "id": "S30",
+      "url": "https://playwright.dev/docs/accessibility-testing",
+      "status": "read_in_v2.1",
+      "finding": "Official axe integration and explicit limits of automated accessibility testing remain documented."
+    },
+    {
+      "id": "S34",
+      "url": "https://developer.chrome.com/docs/devtools/memory-problems",
+      "status": "read_in_v2.1",
+      "finding": "Task Manager OS memory footprint and JavaScript heap are separate measures."
+    },
+    {
+      "id": "S35",
+      "url": "https://playwright.dev/docs/api/class-browser#browser-start-tracing",
+      "status": "read_in_v2.1",
+      "finding": "browser.startTracing/stopTracing creates a Chromium trace readable in DevTools, distinct from Playwright tracing."
+    },
+    {
+      "id": "S45",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth",
+      "status": "read_in_v2.1",
+      "finding": "Worker event loops and draining microtasks before another task support the scheduling distinction; our backpressure design is an inference, not a vendor implementation claim."
+    }
+  ]
+}

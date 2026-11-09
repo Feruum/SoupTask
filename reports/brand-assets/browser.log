@@ -1,0 +1,20 @@
+[WebServer] npm notice run soup-training-monitor@0.1.0 preview
+[WebServer] npm notice run vite preview --host 127.0.0.1
+[WebServer] (node:37440) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] npm notice run soup-training-monitor@0.1.0 preview
+[WebServer] npm notice run vite preview --host 127.0.0.1 --port 4186
+[WebServer] (node:34408) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 2 workers
+
+(node:25220) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:21000) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 1 [chromium] › e2e\brand-assets.spec.ts:4:3 › dark: generated art fits empty search, run recipe and clean findings (3.9s)
+  ok 2 [chromium] › e2e\brand-assets.spec.ts:4:3 › light: generated art fits empty search, run recipe and clean findings (4.2s)
+  ok 3 [chromium] › e2e\brand-assets.spec.ts:37:1 › loading animates only steam and respects reduced motion (1.1s)
+
+  3 passed (11.0s)

@@ -1,0 +1,38 @@
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_53XUfL2qTJchqC68eLvrBXupL7Wm",
+    "url": "https://soup-training-monitor-o4pcu8pm8-ferumms-projects.vercel.app",
+    "productionUrl": "https://soup-training-monitor.vercel.app",
+    "inspectorUrl": "https://vercel.com/ferumms-projects/soup-training-monitor/53XUfL2qTJchqC68eLvrBXupL7Wm",
+    "readyState": "READY",
+    "target": "production",
+    "environment": "production",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_53XUfL2qTJchqC68eLvrBXupL7Wm",
+    "buildMachine": {
+      "cores": 2,
+      "memory": 8192,
+      "machine": "basic",
+      "selectionType": "fixed",
+      "selectionSource": "plan-default"
+    },
+    "deploymentProtection": [
+      "vercel_authentication"
+    ]
+  },
+  "message": "Deployment soup-training-monitor-o4pcu8pm8-ferumms-projects.vercel.app ready. Production URL: https://soup-training-monitor.vercel.app",
+  "next": [
+    {
+      "command": "vercel curl https://soup-training-monitor.vercel.app",
+      "when": "Verify deployment, including when Deployment Protection is enabled"
+    },
+    {
+      "command": "vercel inspect soup-training-monitor-o4pcu8pm8-ferumms-projects.vercel.app --non-interactive --scope ferumms-projects",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod --non-interactive --scope ferumms-projects",
+      "when": "Promote to production"
+    }
+  ]
+}
