@@ -26,13 +26,7 @@ export function inspectHoverVisibility(root:HTMLElement):HoverVisibility{
  const nodes=rows.length?rows.flatMap(row=>row?[...row.querySelectorAll<HTMLElement>('[data-source-step],[data-source-metric],[data-source-missing]')]:[]):[...root.querySelectorAll<HTMLElement>('[data-source-fact]:not([hidden])')].filter(node=>!node.closest('[hidden]'))
  const cells=nodes.map(node=>{
   const range=document.createRange();range.selectNodeContents(node)
-  const box=range.getBoundingClientRect(),cell=node.getBoundingClientRect(),ancestor=clip(node.parentElement??root)
-  // Text must fit its own cell as well as the shared ancestor clipping bounds.
-  // This conservative client-box cap also covers own overflow/paint clipping,
-  // without reading the same static table-cell CSS properties for every value.
-  const left=cell.left+node.clientLeft,top=cell.top+node.clientTop
-  const bounds={left:Math.max(ancestor.left,left),top:Math.max(ancestor.top,top),right:Math.min(ancestor.right,left+node.clientWidth),bottom:Math.min(ancestor.bottom,top+node.clientHeight)}
-  const rect={left:box.left,top:box.top,right:box.right,bottom:box.bottom}
+  const box=range.getBoundingClientRect(),bounds=clip(node),rect={left:box.left,top:box.top,right:box.right,bottom:box.bottom}
   let reason:string|null=visible(node)?null:'hidden'
   if(!reason&&(!box.width||!box.height||!node.textContent?.trim()))reason='empty'
   if(!reason&&(box.left<bounds.left||box.right>bounds.right||box.top<bounds.top||box.bottom>bounds.bottom))reason='clipped-or-offscreen'
