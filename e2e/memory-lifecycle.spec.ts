@@ -53,3 +53,15 @@ test('leaving during a chart drag removes the native document mouseup listener',
   expect(await mouseups(),'retired uPlot must not remain rooted through document mouseup').toBe(before)
  }finally{await page.mouse.up();await cdp.detach()}
 })
+
+test('small decorative UI artwork does not decode a full-size source bitmap',async({page})=>{
+ await page.goto('/runs/kazakh-sft-001')
+ await page.getByRole('button',{name:'Run information',exact:true}).click()
+ const image=page.locator('.recipe-heading [data-soup-art] img')
+ await expect(image).toBeVisible()
+ const src=await image.evaluate(node=>(node as HTMLImageElement).currentSrc||(node as HTMLImageElement).src)
+ const response=await page.request.get(src),bytes=await response.body()
+ expect(bytes.subarray(0,8).toString('hex')).toBe('89504e470d0a1a0a')
+ expect(bytes.readUInt32BE(16),'DPR1 artwork is at most128 CSS pixels; avoid1254px decode surfaces').toBeLessThanOrEqual(128)
+ expect(bytes.readUInt32BE(20)).toBeLessThanOrEqual(128)
+})
