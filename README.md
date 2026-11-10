@@ -185,6 +185,8 @@ The app uses static SPA routing on Vercel. There is no backend, database, authen
 
 The author designed the architecture and data pipeline, made key engineering decisions and reviewed the code. AI helped write and fix code, develop tests, run automated checks and measurements, and research implementation options. Original-source oracles and saved failures document the checks applied to generated work. Generated artwork is identified in the asset provenance.
 
+[Git dates and measured-source history](docs/git-history.md) distinguish the author's reported 19:00 evening-session start and requested 20:00 first-commit date from unchanged actual measurement timestamps.
+
 </details>
 
 <p align="center">

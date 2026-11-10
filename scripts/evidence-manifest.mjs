@@ -15,10 +15,13 @@ const samplerComparison=await json(inputs.samplerComparison)
 inputs.negativeControls='reports/negative-controls/manifest.json'
 inputs.asyncNegative='reports/async-negative/manifest.json'
 inputs.impeccable=`${root}/impeccable-final-review.md`
+inputs.gitHistory='reports/git-history-rewrite.json'
+const gitHistory=await json(inputs.gitHistory)
 const negative=await json(inputs.negativeControls),asyncNegative=await json(inputs.asyncNegative)
 const sources=[...await inventory('src'),...await inventory('scripts'),...await inventory('e2e'),...await inventory('assets')]
 for(const file of ['package.json','package-lock.json','vite.config.ts','vitest.config.ts','playwright.config.ts','tsconfig.json','tsconfig.app.json','tsconfig.node.json','index.html','components.json','.oxlintrc.json','.npmrc','.nvmrc','.vercelignore','.gitignore','.gitattributes','vercel.json'])sources.push({path:file,sha256:hash(await readFile(file))})
 const pending=[]
+if(gitHistory?.originalMeasuredApplicationCommit!==buildMetadata?.git?.commit||gitHistory?.requestedFirstCommitDate!=='2026-11-10T20:00:00+05:00')pending.push('Requested Git metadata rewrite lacks original measured-source provenance')
 if(negative?.results?.length!==4||negative.results.some(result=>result.exitCode!==1||!result.failedTests?.length)||negative?.coreSha256!==hash(await readFile('src/core/engine.ts')))pending.push('Named sampler negative controls are missing or from another core')
 if(asyncNegative?.exitCode!==1||asyncNegative.expectedFailures?.length!==3||asyncNegative.controllerHash!==hash(await readFile('src/worker/controller.ts')))pending.push('Named stale-acceptance negative control is missing or from another controller')
 if(!(await readFile(inputs.impeccable,'utf8')).includes('17/20'))pending.push('Final bounded Impeccable review missing')

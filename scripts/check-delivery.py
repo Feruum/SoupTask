@@ -18,6 +18,10 @@ with zipfile.ZipFile(archive) as bundle:
     assert evidence['deployment']['verified'] is True
     assert evidence['deployment']['remoteBuildVerification']['verified'] is True
     assert evidence['contrastReview']['dispositions']['verified-text'] == 528
+    history = json.loads(bundle.read('reports/git-history-rewrite.json'))
+    assert history['requestedFirstCommitDate'] == '2026-11-10T20:00:00+05:00'
+    assert history['authorReportedEveningSessionStart'] == '2026-11-10T19:00:00+05:00'
+    assert history['originalMeasuredApplicationCommit'] == evidence['sourceCommit']
     note_bytes = bundle.read('output/pdf/soup-submission-note.pdf')
     assert note_bytes == (root / 'output/pdf/soup-submission-note.pdf').read_bytes()
     assert len(PdfReader(BytesIO(note_bytes)).pages) == 2
@@ -33,7 +37,7 @@ with zipfile.ZipFile(archive) as bundle:
     assert hashlib.sha256(gzip.decompress(memory_bytes)).hexdigest() == memory_trace['rawSha256']
     commit = bundle.comment.decode().strip()
 links = []
-for document in ['README.md', 'docs/engineering-notes.md', 'docs/data-contract.md', 'docs/implementation-status.md', 'docs/performance-results.md', 'docs/performance-research-2026-11-10.md', 'docs/accessibility-review.md', 'docs/acceptance-matrix.md', 'docs/submission-note.md']:
+for document in ['README.md', 'docs/git-history.md', 'docs/engineering-notes.md', 'docs/data-contract.md', 'docs/implementation-status.md', 'docs/performance-results.md', 'docs/performance-research-2026-11-10.md', 'docs/accessibility-review.md', 'docs/acceptance-matrix.md', 'docs/submission-note.md']:
     for target in re.findall(r'\[[^\]]*\]\(([^)]+)\)', (root/document).read_text(encoding='utf-8')):
         if target.startswith(('https://', 'http://', '#')): continue
         assert (root/document).parent.joinpath(target.split('#')[0]).exists(), f'Missing local link: {document} -> {target}'

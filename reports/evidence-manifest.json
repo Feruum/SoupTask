@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T18:09:57.336Z",
+  "generatedAt": "2026-11-10T18:15:13.382Z",
   "environment": {
     "node": "v24.22.1",
     "platform": "win32",
@@ -25,7 +25,8 @@
     "checks": "reports/perf-targets-2026-11-10/final-checks.json",
     "negativeControls": "reports/negative-controls/manifest.json",
     "asyncNegative": "reports/async-negative/manifest.json",
-    "impeccable": "reports/perf-targets-2026-11-10/impeccable-final-review.md"
+    "impeccable": "reports/perf-targets-2026-11-10/impeccable-final-review.md",
+    "gitHistory": "reports/git-history-rewrite.json"
   },
   "verdict": "SHIP",
   "pending": [],
@@ -3285,7 +3286,7 @@
     },
     {
       "path": "scripts/check-delivery.py",
-      "sha256": "31b092a05dae468fc4e3dcbc34beb9bc69e90519b5772daee6406bb886a145cd"
+      "sha256": "fd75fc0d5c2411c8ba6b8b04bb85d32a743b004e0bcf96d1bff33cde83cd45cc"
     },
     {
       "path": "scripts/check-manifest.mjs",
@@ -3313,7 +3314,7 @@
     },
     {
       "path": "scripts/evidence-manifest.mjs",
-      "sha256": "bd828221388b19e31b68ee928aca418d310ca762f244dca8e359ec1db0b9e742"
+      "sha256": "abf592e3b05cfc929ef601c0e440a4dd31818d63ab1397c8134351199417ff90"
     },
     {
       "path": "scripts/hover-floor.mjs",
@@ -3736,7 +3737,7 @@
       "sha256": "7e77d4d0bad628eaa8f56184eb6dfe3696edcf08c1b68a232c824535876ee8ff"
     }
   ],
-  "sourceTreeHash": "87946634124862384a39d52440a5e111e563f72cb461f2f47b59805d9e44acf4",
+  "sourceTreeHash": "553afee2055c26ea4ec68c197d2977b87161799d4ca596b124bd49e05f22c966",
   "artifacts": [
     {
       "path": "reports/a11y-summary.json",
@@ -5725,6 +5726,10 @@
     {
       "path": "reports/full-unit.log",
       "sha256": "e216974d959c42d1093dab697cd442610479623ba378d5af683909f0c5d60f22"
+    },
+    {
+      "path": "reports/git-history-rewrite.json",
+      "sha256": "ebf3e6b097421564ce73279d99188b7c74a71a236ddf249079d0b66da06d6b02"
     },
     {
       "path": "reports/guarded-final-browser/artifacts/.playwright-artifacts-0/06894263cbc27da15fb8c90ea07fad06.png",
@@ -33076,7 +33081,7 @@
     },
     {
       "path": "reports/review-release/staged-audit.json",
-      "sha256": "ef49d26aee1b972e1eb6fccbd2b2b7fc8738b990d35a320eec4a4dab4454410f"
+      "sha256": "e4841c2a8326c5088afb36178025782a4d2464f93531fbc96deed11c0c9f18ef"
     },
     {
       "path": "reports/review-release/vercel-deploy.log",
