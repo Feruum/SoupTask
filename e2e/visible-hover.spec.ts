@@ -94,7 +94,7 @@ test('native crosshair hides on leave without removing its layout geometry',asyn
  }
 })
 
-test('source DOM writes wait for the next frame and commit before both paint checks',async({page})=>{
+test('source DOM writes coalesce after pointer handlers and commit before both paint checks',async({page})=>{
  await page.setViewportSize({width:1440,height:900});await page.goto('/runs/kazakh-sft-005')
  await expect(page.locator('.metric-grid')).toHaveAttribute('data-view-ready','true')
  const plot=page.getByTestId('loss-chart').locator('.u-over');await plot.scrollIntoViewIfNeeded();const box=await plot.boundingBox();expect(box).not.toBeNull()
@@ -102,14 +102,14 @@ test('source DOM writes wait for the next frame and commit before both paint che
  const step=page.locator('[data-source-step]').first();await expect(step).not.toBeEmpty()
  const previous=await step.textContent(),sequence=await page.evaluate(()=>window.__soupEvidence?.acceptedHoverSeq??0),pin=page.getByTestId('cursor-readout-loss').getByRole('button',{name:/^Pin row /}).first(),pinName=await pin.getAttribute('aria-label')
  await page.evaluate(()=>{
-  const originalRequest=requestAnimationFrame,originalCancel=cancelAnimationFrame,queued=new Map<number,FrameRequestCallback>();let id=100000
-  window.requestAnimationFrame=callback=>{queued.set(++id,callback);return id};window.cancelAnimationFrame=token=>{queued.delete(token)}
-  Object.assign(window,{__releaseSourceFrames:()=>{window.requestAnimationFrame=originalRequest;window.cancelAnimationFrame=originalCancel;for(const callback of queued.values())originalRequest(callback);queued.clear()}})
+  const original=queueMicrotask,queued:VoidFunction[]=[]
+  window.queueMicrotask=callback=>{queued.push(callback)}
+  Object.assign(window,{__releaseSourceFrames:()=>{window.queueMicrotask=original;for(const callback of queued)original(callback);queued.length=0}})
  })
  try{
   await page.mouse.move(box!.x+box!.width*.6,box!.y+box!.height*.5)
   await page.waitForFunction(previous=>(window.__soupEvidence?.acceptedHoverSeq??0)>previous,sequence,{polling:20})
-  expect(await step.textContent(),'accepted cursor data should not dirty layout before native pointer-entry reads').toBe(previous)
+  expect(await step.textContent(),'accepted cursor data should not dirty layout inside the pointer handler').toBe(previous)
   // A click must pin the row actually labelled in the DOM, even while newer data waits.
   await pin.evaluate(button=>(button as HTMLButtonElement).click())
  }finally{await page.evaluate(()=>(window as unknown as Window&{__releaseSourceFrames:()=>void}).__releaseSourceFrames())}

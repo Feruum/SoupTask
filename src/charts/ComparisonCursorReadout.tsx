@@ -60,7 +60,7 @@ export const ComparisonCursorReadout=memo(function ComparisonCursorReadout({work
   })
   const note=element('p',styles.sharedNote,'Scroll for more rows and metrics. Groups show the first 2 observations.')
   root.replaceChildren(title,viewport,note)
-  let cancelPaint:(()=>void)|undefined,flushRaf=0
+  let cancelPaint:(()=>void)|undefined,flushScheduled=false,disposed=false
   const update=()=>{
    cancelPaint?.();cancelPaint=undefined
    const current=accepted.current,cursor=cursorForView(store.getSnapshot(),current.view),active=cursor.hoverStep!==null
@@ -86,13 +86,12 @@ export const ComparisonCursorReadout=memo(function ComparisonCursorReadout({work
    toggle(root,'chart-hover-value',active);attribute(root,'data-hover-seq',active?String(cursor.hoverSeq):null)
    cancelPaint=recordHoverPaint(current.view?.viewSeq??0,cursor.hoverSeq,cursor.hoverStep)
   }
-  const enqueue=()=>{if(!flushRaf)flushRaf=requestAnimationFrame(()=>{flushRaf=0;update()})}
-  // Register the DOM-write callback before the first paint-check callback. Native
-  // pointer-entry geometry reads finish before these writes; both existing RAF
-  // checks still observe committed, current source values.
+  const enqueue=()=>{if(!flushScheduled){flushScheduled=true;queueMicrotask(()=>{flushScheduled=false;if(!disposed)update()})}}
+  // Coalesce writes at the event's microtask checkpoint without waiting for a
+  // paint frame. Both existing RAF checks still observe committed source values.
   const unarm=store.beforePublish(next=>{enqueue();const view=accepted.current.view,visible=cursorForView(next,view);beginHoverPaint(view?.viewSeq??0,visible.hoverSeq,visible.hoverStep)})
   refresh.current=update;update();const unsubscribe=store.subscribe(enqueue)
-  return()=>{if(refresh.current===update)refresh.current=null;unarm();unsubscribe();cancelAnimationFrame(flushRaf);cancelPaint?.();root.replaceChildren()}
+  return()=>{disposed=true;if(refresh.current===update)refresh.current=null;unarm();unsubscribe();cancelPaint?.();root.replaceChildren()}
  },[store,identity,comparison,slots,colorTokens,onPin,navigate])
  return <section className={`${styles.rail} ${styles.sharedRail}`} aria-label={comparison?'Compared source values':'Original source values'} data-testid={comparison?'comparison-cursor-readout':'cursor-readout-loss'} data-reserved="true" data-members={ids.length}><div className={styles.content} ref={host}/></section>
 })
