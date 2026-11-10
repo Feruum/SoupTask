@@ -68,10 +68,8 @@
 .calm-chart .metric-grid { display:block; }
 .calm-chart .chart-panel { margin:0;background:none;border:0;border-radius:0; }
 .calm-chart .chart-panel > .panel-heading,.calm-chart .interactive-legend { display:none; }
-.calm-chart .chart-panel figure { position:relative;padding:0; }
-.calm-chart [data-reserved="true"] { position:absolute;z-index:4;top:32px;right:16px;width:min(360px,calc(100% - 32px));margin:0;background:var(--surface-raised);border-color:var(--border-strong);pointer-events:none; }
-.calm-chart [data-reserved="true"] :is(button,a) { pointer-events:auto; }
-.calm-chart [data-reserved="true"]:not(:has(.chart-hover-value)) { visibility:hidden;pointer-events:none; }
+.calm-chart .chart-panel figure { padding:0; }
+.calm-chart figcaption { display:flex;flex-direction:column;padding-inline:0; }
 .calm-chart [data-testid="spike-explanation"] { display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;max-width:none;font-size:12px; }
 .calm-chart [data-testid="spike-explanation"] > p { flex:1;min-width:240px;margin:0; }
 .calm-chart [data-testid="spike-explanation"] a { display:none; }
@@ -197,7 +195,6 @@
   .calm-settings-panel { width:100%; }
   .calm-settings .range-toolbar form { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .calm-touch-help { display:block;color:var(--text-secondary);font-size:12px;margin:8px 0; }
-  .calm-chart [data-reserved="true"] { top:16px;right:8px;width:min(340px,calc(100% - 16px)); }
   .calm-chart [data-testid="spike-explanation"] > p { min-width:0;flex-basis:100%; }
   .calm-chart-caption { font-size:12px;margin-top:4px; }
   .calm-source-quality { gap:4px 12px;padding-block:8px; }

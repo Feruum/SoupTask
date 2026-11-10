@@ -48,6 +48,9 @@ for (const route of ['/dashboard', '/runs']) test(`${route} keeps source actions
   const plot = page.getByTestId('loss-chart');
   await expect(plot).toHaveAttribute('data-view-ready', 'true');
   const next = page.locator(route === '/dashboard' ? '.calm-source-quality' : '.preview-facts');
+  const readout = page.getByTestId('cursor-readout-loss');
+  if (route === '/dashboard') await readout.scrollIntoViewIfNeeded();
+  const readoutBefore = route === '/dashboard' ? await readout.boundingBox() : null;
   const before = await documentTop(next);
   await pointAtCenter(page, plot);
   const after = await documentTop(next);
@@ -60,14 +63,37 @@ for (const route of ['/dashboard', '/runs']) test(`${route} keeps source actions
     contentType: 'application/json'
   });
   expect.soft(after).toBeCloseTo(before, 0);
+  await expect(plot).toHaveAttribute('data-cursor-point-count', /[1-9]/);
   if (route === '/dashboard') {
-    const value = page.locator('.calm-chart .chart-hover-value [title^="Exact source value"]:visible').first();
+    const value = readout.locator('.chart-hover-value [title^="Exact source value"]:visible').first();
     await expect(value).toContainText(/step .+ · Loss /);
     await expect(value).toBeInViewport({ ratio: 0.95 });
+    const bounds = (await readout.boundingBox())!;
+    const plotBounds = (await plot.boundingBox())!;
+    expect(bounds.y).toBeGreaterThanOrEqual(plotBounds.y + plotBounds.height);
+    expect(bounds.height).toBe(readoutBefore!.height);
+    await readout.getByRole('button', { name: /^Pin row \d+$/ }).first().click();
+    await expect(page.getByRole('region', { name: 'Pinned source row' })).toBeVisible();
   }
   else await expect(page.locator('.preview-charts .chart-hover-value')).toHaveCount(0);
-  await expect(plot).toHaveAttribute('data-cursor-point-count', /[1-9]/);
   if (route === '/runs') await expect(page.locator('.preview-charts')).toContainText('inspect original values and adjust range');
+});
+test.describe('phone dashboard readout', () => {
+  test.use({ viewport: { width: 320, height: 800 }, isMobile: true, hasTouch: true });
+  test('a chart tap shows the learning rate below the plot', async ({ page }) => {
+    await page.goto('/dashboard');
+    await page.getByRole('button', { name: 'Learning rate', exact: true }).tap();
+    const plot = page.getByTestId('lr-chart');
+    const readout = page.getByTestId('cursor-readout-lr');
+    await expect(plot).toHaveAttribute('data-view-ready', 'true');
+    await readout.scrollIntoViewIfNeeded();
+    await plot.locator('.u-over').tap();
+    const value = readout.locator('[title^="Exact source value"]:visible').first();
+    await expect(value).toContainText(/step .+ · Learning rate /);
+    await expect(value).toBeInViewport({ ratio: 0.95 });
+    expect((await readout.boundingBox())!.y).toBeGreaterThanOrEqual((await plot.boundingBox())!.y + (await plot.boundingBox())!.height);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(320);
+  });
 });
 test('Compare source values can be hidden and restored without removing runs', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });

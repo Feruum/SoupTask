@@ -78,7 +78,7 @@ export const SourceCursorReadout=memo(function SourceCursorReadout({workspace,id
      if(changed||distance!==nodes.distance){nodes.distance=distance;text(nodes.facts,`${nodes.prefix} · Δstep ${formatStep(distance)}`)}
     })
     hidden(member.placeholder,source.length>0)
-    text(member.placeholder,active?'No recorded value at this cursor location.':'Point at a chart to inspect its original source values. Pin a row to keep it for inspection.')
+    text(member.placeholder,active?'No recorded value at this cursor location.':'Point at or tap the chart to see the recorded step and value.')
     hidden(member.group,source.length<=2)
     if(source.length>2){
      text(member.count,`${source.length} returned observations. Showing first 2 returned observations; scroll within this readout for source actions.`)

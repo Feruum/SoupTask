@@ -72,6 +72,11 @@
   .rail > .content { height: calc(28px + var(--source-wide-rows) * 130px + (var(--source-wide-rows) - 1) * 12px); }
 }
 
-:global(.calm-chart) .rail > .content { contain: layout style paint; height: auto; }
-:global(.calm-chart) .observations { contain: layout style paint; content-visibility: visible; height: auto; max-height: 144px; }
-:global(.calm-chart) .observation { align-items: center; padding-bottom: 0; }
+:global(.calm-chart) .rail { order: -1; margin: 0; padding: 0 12px; }
+:global(.calm-chart) .rail > .content,
+:global(.calm-chart) .observations { height: 64px; }
+:global(.calm-chart) .grid { grid-template-columns: minmax(0, 1fr); }
+:global(.calm-chart) .title,
+:global(.calm-chart) .run { display: none; }
+:global(.calm-chart) .observation { min-height: 64px; align-items: center; padding-bottom: 0; }
+:global(.calm-chart) .placeholder { align-content: center; min-height: 64px; margin: 0; }

@@ -131,7 +131,7 @@ export function DashboardPage() {
           </div>
           <WorkspaceStatus workspace={workspace} />
           <div className="calm-chart"><Charts workspace={workspace} ids={[run.id]} theme={theme} only={selectedMetric} /></div>
-          <p className="calm-touch-help">Tap the chart for recorded values. Open Chart settings to adjust the range; swipe vertically to scroll.</p>
+          <p className="calm-touch-help">Use Chart settings to adjust the range. Swipe vertically to scroll.</p>
           <div className="calm-chart-caption"><span>{points === undefined ? 'Loading original measurements' : `${formatStep(points)} render points · Source values unchanged`}</span><Link to={runSourceLink(run, selectedMetric)}>Inspect peak at source <ArrowUpRight size={13} aria-hidden="true" /></Link></div>
           <details className="calm-step-inspection"><summary>Inspect recorded step</summary><form onSubmit={event => {
             event.preventDefault()
