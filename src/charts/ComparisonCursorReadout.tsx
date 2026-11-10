@@ -35,11 +35,11 @@ export const ComparisonCursorReadout=memo(function ComparisonCursorReadout({work
    const runLabel=()=>{const cell=element('th'),label=element('div',`${styles.sharedRun} tooltip-series`),dot=element('i','tooltip-dot');cell.scope='row';dot.style.background=`var(${colorTokens[slots[id]??index]})`;label.append(dot,element('strong',undefined,id));cell.append(label);return cell}
    const rows=Array.from({length:2},(_,rowIndex)=>{
     const row=element('tr'),step=element('td'),values=METRICS.map(metric=>{const cell=element('td');cell.dataset.sourceMetric=metric;return cell}),distance=element('td'),source=element('td'),pin=element('button','text-link','Pin row')
-    distance.dataset.sourceDistance='true';pin.type='button';pin.onclick=()=>{const current=accepted.current,cursor=cursorForView(store.getSnapshot(),current.view),raw=cursor.hover[id]?.[rowIndex],run=current.runs[id]?.run;if(raw&&run)onPin({id,revision:run.revision,row:raw})}
+    step.dataset.sourceStep='true';distance.dataset.sourceDistance='true';pin.type='button';pin.onclick=()=>{const current=accepted.current,cursor=cursorForView(store.getSnapshot(),current.view),raw=cursor.hover[id]?.[rowIndex],run=current.runs[id]?.run;if(raw&&run)onPin({id,revision:run.revision,row:raw})}
     source.append(pin);row.append(runLabel(),step,...values,distance,source);body.append(row)
     return {row,step,values,distance,pin,key:'',delta:NaN}
    })
-   const empty=element('tr'),placeholder=element('td',styles.placeholder);placeholder.colSpan=6;empty.append(runLabel(),placeholder)
+   const empty=element('tr'),placeholder=element('td',styles.placeholder);placeholder.dataset.sourceMissing='true';placeholder.colSpan=6;empty.append(runLabel(),placeholder)
    const group=element('tr'),groupCell=element('td'),count=element('span'),link=element('a','text-link','Inspect full source group');groupCell.colSpan=7
    link.onclick=event=>{if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;event.preventDefault();navigate(link.getAttribute('href')??`/runs/${id}`)}
    groupCell.append(count,document.createTextNode(' '),link);group.append(groupCell);body.append(empty,group);table.append(body)
@@ -60,7 +60,7 @@ export const ComparisonCursorReadout=memo(function ComparisonCursorReadout({work
      const row=rows[index];hidden(nodes.row,!row);if(!row)return
      const key=`${member.id}:${current.runs[member.id].run.revision}:${row.sourceIndex}`,changed=nodes.key!==key,delta=Math.abs(row.step-cursor.hoverStep!)
      if(changed){
-      nodes.key=key;text(nodes.step,formatStep(row.step));text(nodes.pin,`Pin #${row.sourceIndex}`);attribute(nodes.pin,'aria-label',`Pin row ${row.sourceIndex}`)
+      nodes.key=key;attribute(nodes.row,'data-source-identity',key);text(nodes.step,formatStep(row.step));text(nodes.pin,`Pin #${row.sourceIndex}`);attribute(nodes.pin,'aria-label',`Pin row ${row.sourceIndex}`)
       METRICS.forEach((metric,index)=>{text(nodes.values[index],formatValue(row[metric],metric==='lr'));attribute(nodes.values[index],'title',`Exact source value ${exact(row[metric])}`)})
      }
      if(changed||delta!==nodes.delta){nodes.delta=delta;text(nodes.distance,formatStep(delta))}

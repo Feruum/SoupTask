@@ -75,6 +75,37 @@ async function applyCase(page,entry){
  if(!Number.isFinite(timing.requestToDraw))throw Error('Missing accepted-view draw timing')
  return {case:entry.label,range:{min:entry.min,max:entry.max},beforeRange,requestToDraw:timing.requestToDraw,viewSeq:timing.viewSeq,actionUpperBound:performance.now()-start}
 }
+async function measuredHover(page,x,y){
+ const before=await page.evaluate(()=>({hover:window.__soupEvidence.acceptedHoverSeq,pointer:window.__soupBenchmarkPointer?.serial??0})),hoverStart=performance.now()
+ await page.mouse.move(x,y)
+ await page.waitForFunction(previous=>(window.__soupEvidence?.acceptedHoverSeq??0)>previous,before.hover,{timeout:30000})
+ await page.waitForFunction(previousPointer=>{
+  const last=performance.getEntriesByName('soup:hover-frame').at(-1),input=window.__soupBenchmarkPointer,timing=window.__soupEvidence?.hoverTiming
+  return input?.serial>previousPointer&&timing?.requestStartedAt>=input.timeStamp&&last?.detail.hoverSeq===window.__soupEvidence?.acceptedHoverSeq&&last?.detail.viewSeq===window.__soupEvidence?.viewSeq&&last?.detail.workspaceEpoch===window.__soupEvidence?.workspaceEpoch
+ },before.pointer,{timeout:30000})
+ const accepted=await page.evaluate(()=>{
+  const frame=performance.getEntriesByName('soup:hover-frame').at(-1),commit=performance.getEntriesByName('soup:hover-dom-commit').at(-1),timing=window.__soupEvidence.hoverTiming,pointer=window.__soupBenchmarkPointer
+  const cells=[...document.querySelectorAll('.chart-hover-value tbody')].flatMap(body=>{
+   const row=body.querySelector('tr:not([hidden])');if(!row)return[]
+   return [...row.querySelectorAll('[data-source-step],[data-source-metric],[data-source-missing]')].map(node=>{
+    const range=document.createRange();range.selectNodeContents(node);const rect=range.getBoundingClientRect()
+    let left=0,top=0,right=innerWidth,bottom=innerHeight
+    for(let parent=node.parentElement;parent;parent=parent.parentElement){
+     const css=getComputedStyle(parent),box=parent.getBoundingClientRect(),paint=/paint|strict|content/.test(css.contain)
+     if(paint||/auto|hidden|scroll|clip/.test(css.overflowX)){left=Math.max(left,box.left+parent.clientLeft);right=Math.min(right,box.left+parent.clientLeft+parent.clientWidth)}
+     if(paint||/auto|hidden|scroll|clip/.test(css.overflowY)){top=Math.max(top,box.top+parent.clientTop);bottom=Math.min(bottom,box.top+parent.clientTop+parent.clientHeight)}
+     if(css.position==='fixed')break
+    }
+    const hit=document.elementFromPoint((rect.left+rect.right)/2,(rect.top+rect.bottom)/2)
+    return{text:node.textContent,metric:node.dataset.sourceMetric??null,identity:row.dataset.sourceIdentity??null,rect:rect.toJSON(),clip:{left,top,right,bottom},visible:rect.width>0&&rect.height>0&&rect.left>=left&&rect.right<=right&&rect.top>=top&&rect.bottom<=bottom&&!!hit&&node.contains(hit)}
+   })
+  })
+  return{duration:performance.getEntriesByName('soup:hover').at(-1)?.duration,hoverSeq:window.__soupEvidence.acceptedHoverSeq,requestToFrame:frame?.detail.requestToFrameMs,inputToFrame:frame?.startTime-pointer.timeStamp,pointer,requestToCommit:commit?.startTime-timing.requestStartedAt,frame:frame?{...frame.toJSON(),detail:frame.detail}:null,commit:commit?{...commit.toJSON(),detail:commit.detail}:null,cells,tooltips:[...document.querySelectorAll('.chart-hover-value')].map(node=>({text:node.textContent,sequence:node.dataset.hoverSeq,rect:node.getBoundingClientRect().toJSON()}))}
+ })
+ if(!Number.isFinite(accepted.duration))throw Error('Missing accepted hover measure')
+ if(!Number.isFinite(accepted.requestToFrame)||accepted.frame.detail.hoverSeq!==accepted.hoverSeq||!accepted.frame.detail.visibility?.every(result=>result.visible)||!accepted.cells.length||accepted.cells.some(cell=>!cell.visible)||accepted.tooltips.some(t=>Number(t.sequence)!==accepted.hoverSeq))throw Error('Hover must match current actual source cells inside the viewport, clipping bounds and sampled occlusion checks')
+ return{...accepted,actionUpperBound:performance.now()-hoverStart}
+}
 async function interactions(page,plotTestId,mode){
  const zoom=[],hover=[],hoverFrame=[],hoverInputFrame=[],hoverCommit=[],actionUpperBounds=[],labeled=[]
  await page.evaluate(()=>{
@@ -94,35 +125,30 @@ async function interactions(page,plotTestId,mode){
   const plot=page.locator(`[data-testid="${plotTestId}"] .u-over`)
   await plot.scrollIntoViewIfNeeded()
   const box=await plot.boundingBox();if(!box)throw Error('Missing chart interaction surface')
-  const before=await page.evaluate(()=>({hover:window.__soupEvidence.acceptedHoverSeq,pointer:window.__soupBenchmarkPointer?.serial??0})),previousHover=before.hover,hoverStart=performance.now()
   const fraction=.18+(i%25)*.025
-  await page.mouse.move(box.x+box.width*fraction,box.y+box.height/2)
-  await page.waitForFunction(previous=>(window.__soupEvidence?.acceptedHoverSeq??0)>previous,previousHover,{timeout:30000})
-  await page.waitForFunction(previousPointer=>{
-   const last=performance.getEntriesByName('soup:hover-frame').at(-1)
-   const input=window.__soupBenchmarkPointer,timing=window.__soupEvidence?.hoverTiming
-   return input?.serial>previousPointer&&timing?.requestStartedAt>=input.timeStamp&&last?.detail.hoverSeq===window.__soupEvidence?.acceptedHoverSeq&&last?.detail.viewSeq===window.__soupEvidence?.viewSeq&&last?.detail.workspaceEpoch===window.__soupEvidence?.workspaceEpoch
-  },before.pointer,{timeout:30000})
-  const accepted=await page.evaluate(()=>{
-   const frame=performance.getEntriesByName('soup:hover-frame').at(-1),commit=performance.getEntriesByName('soup:hover-dom-commit').at(-1)
-   const timing=window.__soupEvidence.hoverTiming
-   const pointer=window.__soupBenchmarkPointer
-   return {duration:performance.getEntriesByName('soup:hover').at(-1)?.duration,hoverSeq:window.__soupEvidence.acceptedHoverSeq,requestToFrame:frame?.detail.requestToFrameMs,inputToFrame:frame?.startTime-pointer.timeStamp,pointer,requestToCommit:commit?.startTime-timing.requestStartedAt,frame:frame?{...frame.toJSON(),detail:frame.detail}:null,commit:commit?{...commit.toJSON(),detail:commit.detail}:null,tooltips:[...document.querySelectorAll('.chart-hover-value')].map(node=>({text:node.textContent,sequence:node.dataset.hoverSeq,rect:node.getBoundingClientRect().toJSON()}))}
-  })
-  if(!Number.isFinite(accepted.duration))throw Error('Missing accepted hover measure')
-  if(!Number.isFinite(accepted.requestToFrame)||accepted.frame.detail.hoverSeq!==accepted.hoverSeq||!accepted.tooltips.length||accepted.tooltips.some(t=>Number(t.sequence)!==accepted.hoverSeq||t.rect.width<=0||t.rect.height<=0))throw Error('Hover timing does not match visible committed source tooltips')
-  if(i===2||i===sequence.length-1)await page.screenshot({path:`${out}/${mode}-${plotTestId}-${i}-hover-frame.png`,fullPage:true})
+  const accepted=await measuredHover(page,box.x+box.width*fraction,box.y+box.height/2)
+  if(i===2||i===sequence.length-1)await page.screenshot({path:`${out}/${mode}-${plotTestId}-${i}-hover-frame.png`})
   if(!entry.warmup){
    zoom.push(zoomResult.requestToDraw);hover.push(accepted.duration)
    hoverFrame.push(accepted.requestToFrame);hoverCommit.push(accepted.requestToCommit)
    hoverInputFrame.push(accepted.inputToFrame)
-   actionUpperBounds.push({case:entry.label,action:'zoom',duration:zoomResult.actionUpperBound},{case:entry.label,action:'hover',duration:performance.now()-hoverStart})
+   actionUpperBounds.push({case:entry.label,action:'zoom',duration:zoomResult.actionUpperBound},{case:entry.label,action:'hover',duration:accepted.actionUpperBound})
    labeled.push({...zoomResult,hoverAccepted:accepted.duration,hoverFrame:accepted.requestToFrame,hoverInputFrame:accepted.inputToFrame,hoverCommit:accepted.requestToCommit,frameEvidence:accepted,acceptedHoverSeq:accepted.hoverSeq,pointerFraction:fraction})
   }
  }
- return {zoom,hover,hoverFrame,hoverInputFrame,hoverCommit,actionUpperBounds,interactions:labeled,warmup:{count:2,ranges:['spike','excluded-spike']}}
+ // A separate series, not a replacement for range-form -> chart entry above.
+ await applyCase(page,{label:'continuous-source-domain',min:0,max:8191})
+ const surface=page.locator(`[data-testid="${plotTestId}"] .u-over`)
+ await surface.scrollIntoViewIfNeeded();const bounds=await surface.boundingBox();if(!bounds)throw Error('Missing continuous-movement surface')
+ const continuous=[]
+ for(let index=0;index<32;index++){
+  const value=await measuredHover(page,bounds.x+bounds.width*(.12+index*.023),bounds.y+bounds.height/2)
+  if(index>=2)continuous.push(value)
+ }
+ return {zoom,hover,hoverFrame,hoverInputFrame,hoverCommit,actionUpperBounds,interactions:labeled,continuous,warmup:{count:2,ranges:['spike','excluded-spike'],continuous:2}}
 }
 function caseSummary(records){return Object.fromEntries(cases.map(entry=>{const selected=records.filter(record=>record.case===entry.label);return [entry.label,{zoom:stats(selected.map(record=>record.requestToDraw)),hover:stats(selected.map(record=>record.hoverAccepted)),hoverFrame:stats(selected.map(record=>record.hoverFrame)),hoverInputFrame:stats(selected.map(record=>record.hoverInputFrame)),hoverCommit:stats(selected.map(record=>record.hoverCommit))}]}))}
+function continuousSummary(records=[]){return{count:records.length,hoverInputFrame:stats(records.map(record=>record.inputToFrame)),hoverFrame:stats(records.map(record=>record.requestToFrame)),hoverCommit:stats(records.map(record=>record.requestToCommit))}}
 for(const mode of modes){
  const directory=`tmp/performance-${path.basename(out).replace(/[^a-zA-Z0-9_-]/g,'-')}-${mode}`
  const beforeBuildSource=await sourceHash()
@@ -193,7 +219,7 @@ for(const mode of modes){
 }
 const summary=Object.fromEntries(modes.map(mode=>{
  const selected=samples.filter(sample=>sample.mode===mode),zoom=selected.flatMap(sample=>sample.zoom),hover=selected.flatMap(sample=>sample.hover),comparison=comparisons.find(sample=>sample.mode===mode)
- return [mode,{cold:stats(selected.map(sample=>sample.first)),zoom:stats(zoom),hover:stats(hover),hoverFrame:stats(selected.flatMap(sample=>sample.hoverFrame)),hoverInputFrame:stats(selected.flatMap(sample=>sample.hoverInputFrame)),hoverCommit:stats(selected.flatMap(sample=>sample.hoverCommit)),byRange:caseSummary(selected.flatMap(sample=>sample.interactions)),compare:comparison?{activationUpperBound:comparison.activationUpperBound,activationRequestToDraw:comparison.activationRequestToDraw,zoom:stats(comparison.zoom),hover:stats(comparison.hover),hoverFrame:stats(comparison.hoverFrame),hoverInputFrame:stats(comparison.hoverInputFrame),hoverCommit:stats(comparison.hoverCommit),byRange:caseSummary(comparison.interactions)}:null}]
+ return [mode,{cold:stats(selected.map(sample=>sample.first)),zoom:stats(zoom),hover:stats(hover),hoverFrame:stats(selected.flatMap(sample=>sample.hoverFrame)),hoverInputFrame:stats(selected.flatMap(sample=>sample.hoverInputFrame)),hoverCommit:stats(selected.flatMap(sample=>sample.hoverCommit)),continuous:continuousSummary(selected.flatMap(sample=>sample.continuous??[])),byRange:caseSummary(selected.flatMap(sample=>sample.interactions)),compare:comparison?{activationUpperBound:comparison.activationUpperBound,activationRequestToDraw:comparison.activationRequestToDraw,zoom:stats(comparison.zoom),hover:stats(comparison.hover),hoverFrame:stats(comparison.hoverFrame),hoverInputFrame:stats(comparison.hoverInputFrame),hoverCommit:stats(comparison.hoverCommit),continuous:continuousSummary(comparison.continuous),byRange:caseSummary(comparison.interactions)}:null}]
 }))
 const sourceUnchanged=startingSourceHash===await sourceHash()&&builds.every(build=>build.sourceHashBefore===startingSourceHash&&build.sourceHashAfter===startingSourceHash)&&harnessHash===createHash('sha256').update(await readFile('scripts/performance.mjs')).digest('hex')
 await writeFile(`${out}/results.json`,JSON.stringify({sourceHash:startingSourceHash,sourceUnchanged,builds,environment:{traceMode,node:process.version,browser:browserVersion,os:os.platform(),release:os.release(),cpu:os.cpus()[0]?.model,lockHash:createHash('sha256').update(await readFile('package-lock.json')).digest('hex'),viewport:'1440x900',dpr:1,cpuRate:4,cpuScope:'Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.',timing:'Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.',interactionProtocol:'Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.',coldDefinition:'Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.',tabMemory:'Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint',gc:'No forced GC'},summary,samples,comparisons,memory},null,2))

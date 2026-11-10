@@ -214,7 +214,7 @@ export function Charts({
     });
   }, [view, identity, only, compact, slots]);
   if (!view) return null;
-  return <div className={compact ? 'preview-charts' : 'metric-grid'} data-view-ready={workspace.state.kind === 'ready'}>{items.map(({
+  return <div className={compact ? 'preview-charts' : sharedSource ? 'metric-grid source-dock-layout' : 'metric-grid'} data-view-ready={workspace.state.kind === 'ready'}>{items.map(({
       metric,
       values,
       series,

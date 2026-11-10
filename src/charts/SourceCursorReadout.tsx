@@ -37,7 +37,7 @@ export const SourceCursorReadout=memo(function SourceCursorReadout({workspace,id
    const observations=element('section',styles.observations);observations.setAttribute('aria-label',`Original observations for ${id}`)
    const placeholder=element('p',styles.placeholder),rows=Array.from({length:2},(_,index)=>{
     const box=element('div',styles.observation),facts=element('div',styles.facts),pin=element('button','text-link','Pin row')
-    pin.type='button';pin.onclick=()=>{
+    facts.dataset.sourceFact='true';pin.type='button';pin.onclick=()=>{
      const cursor=cursorForView(store.getSnapshot(),accepted.current.view),row=cursor.hover[id]?.[index],run=accepted.current.runs[id]?.run
      if(row&&run)onPin({id,revision:run.revision,row})
     }

@@ -65,3 +65,15 @@ test('small decorative UI artwork does not decode a full-size source bitmap',asy
  expect(bytes.readUInt32BE(16),'DPR1 artwork is at most128 CSS pixels; avoid1254px decode surfaces').toBeLessThanOrEqual(128)
  expect(bytes.readUInt32BE(20)).toBeLessThanOrEqual(128)
 })
+
+test('activating source observations does not change inherited font or paint containment geometry',async({page})=>{
+ await page.goto('/compare?runs=kazakh-sft-005,kazakh-sft-001,kazakh-sft-002,kazakh-sft-006')
+ await page.waitForFunction(()=>window.__soupEvidence?.hoverCacheTargets&&window.__soupEvidence.members.length===4&&document.querySelectorAll('.plot-host[data-view-ready="true"]').length===3)
+ const content=page.getByTestId('comparison-cursor-readout').locator(':scope > div')
+ const appearance=()=>content.evaluate(element=>{const css=getComputedStyle(element);return{numeric:css.fontVariantNumeric,radius:css.borderRadius,padding:css.padding,margin:css.margin,fontSize:css.fontSize}})
+ const before=await appearance(),over=page.getByTestId('comparison-loss').locator('.u-over')
+ await over.scrollIntoViewIfNeeded();const rect=await over.boundingBox();expect(rect).not.toBeNull()
+ await page.mouse.move(rect!.x+rect!.width*.45,rect!.y+rect!.height*.5)
+ await expect(content).toHaveAttribute('data-hover-seq',/\d+/)
+ expect(await appearance(),'source-state marker must not change inherited numeric font or paint clip').toEqual(before)
+})

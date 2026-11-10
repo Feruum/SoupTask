@@ -1,5 +1,6 @@
 import {performanceMark} from '@/app/performance'
 import {useLayoutEffect} from 'react'
+import {inspectHoverVisibility} from './hover-visibility'
 type Frame={key:string;epoch:number;viewSeq:number;hoverSeq:number;step:number;committed:boolean;first:number;second:number;cancel:()=>void}
 let pending:Frame|null=null,lastAcknowledged=''
 function arm(viewSeq:number,hoverSeq:number,hoverStep:number|null):Frame|undefined {
@@ -18,8 +19,9 @@ function arm(viewSeq:number,hoverSeq:number,hoverStep:number|null):Frame|undefin
    const current=window.__soupEvidence
    if(current?.workspaceEpoch!==frame.epoch||current.viewSeq!==viewSeq||current.acceptedHoverSeq!==hoverSeq){frame.cancel();return}
    const tooltips=[...document.querySelectorAll<HTMLElement>(`.chart-hover-value[data-hover-seq="${hoverSeq}"]`)]
-   if(!tooltips.length||tooltips.some(node=>!node.getClientRects().length||getComputedStyle(node).visibility==='hidden')){frame.cancel();return}
-   performanceMark('soup:hover-frame',{detail:{workspaceEpoch:frame.epoch,viewSeq,hoverSeq,step:hoverStep,requestToAcceptedMs:timing.acceptedAt-timing.requestStartedAt,requestToFrameMs:performance.now()-timing.requestStartedAt,tooltipCount:tooltips.length}})
+   const visibility=tooltips.map(inspectHoverVisibility)
+   if(!tooltips.length||visibility.some(result=>!result.visible)){performanceMark('soup:hover-not-visible',{detail:{workspaceEpoch:frame.epoch,viewSeq,hoverSeq,visibility}});frame.cancel();return}
+   performanceMark('soup:hover-frame',{detail:{workspaceEpoch:frame.epoch,viewSeq,hoverSeq,step:hoverStep,requestToAcceptedMs:timing.acceptedAt-timing.requestStartedAt,requestToFrameMs:performance.now()-timing.requestStartedAt,tooltipCount:tooltips.length,visibility}})
    lastAcknowledged=key;frame.cancel()
   })
  })

@@ -1,6 +1,10 @@
 import { expect, test, type Locator, type Page } from '@playwright/test';
 async function documentTop(locator: Locator) {
-  return locator.evaluate(element => element.getBoundingClientRect().top + scrollY);
+  return locator.evaluate(element => {
+    let top=element.getBoundingClientRect().top+scrollY;
+    for(let parent=element.parentElement;parent;parent=parent.parentElement)if(parent!==document.documentElement&&parent!==document.body)top+=parent.scrollTop;
+    return top;
+  });
 }
 async function pointAtCenter(page: Page, plot: Locator) {
   await plot.locator('.u-over').scrollIntoViewIfNeeded();

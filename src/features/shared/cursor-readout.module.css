@@ -15,7 +15,7 @@
 .rail[data-members="2"] { --source-rows: 2; }
 .rail[data-members="3"] { --source-rows: 3; --source-wide-rows: 2; }
 .rail[data-members="4"] { --source-rows: 4; --source-wide-rows: 2; }
-.rail > .content { contain: strict; height: calc(28px + var(--source-rows) * 130px + (var(--source-rows) - 1) * 12px); margin: 0; padding: 0; border: 0; background: none; }
+.rail > .content { contain: strict; height: calc(28px + var(--source-rows) * 130px + (var(--source-rows) - 1) * 12px); margin: 0; padding: 0; border: 0; border-radius: 0; background: none; font-variant-numeric: tabular-nums; }
 .title { min-height: 20px; margin: 0 0 8px; line-height: 20px; }
 .grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
 .grid > .slot { display: block; min-width: 0; margin: 0; }
@@ -52,6 +52,16 @@
 .sharedTable .placeholder { white-space: normal; }
 .sharedTable button { min-width: 92px; width: 92px; }
 .caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+/* Keep the same readout geometry before and after pointer entry. Narrow screens
+   retain the in-flow, keyboard-scrollable table instead of covering the plot. */
+@media (min-width: 1100px) and (min-height: 700px) {
+  .sharedRail { position: fixed; z-index: 8; left: 240px; right: 24px; bottom: 12px; margin: 0; }
+  :global(body):has(.sharedRail) :global(.app-shell > div) { height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+  :global(body):has(.sharedRail) :global(.page-content) { flex: 1; min-height: 0; width: 100%; overflow: auto; margin-bottom: 400px; }
+  :global(body):has(.sharedRail[data-members="1"]) :global(.page-content) { margin-bottom: 220px; }
+  :global(body):has(.sharedRail[data-members="2"]) :global(.page-content) { margin-bottom: 280px; }
+  :global(body):has(.sharedRail[data-members="3"]) :global(.page-content) { margin-bottom: 340px; }
+}
 @container (min-width: 540px) {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .rail > .content { height: calc(28px + var(--source-wide-rows) * 130px + (var(--source-wide-rows) - 1) * 12px); }
