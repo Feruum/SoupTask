@@ -1,0 +1,62 @@
+{
+  "scope": "Lighthouse desktop preset, its own simulation settings; separate from CPU4 before/after benchmark",
+  "sourceHash": "68b68de6f774bf3624dffc7257711bbd6655d3dc7875f7fbdfb195959a8ae5aa",
+  "buildHash": "5a3fe0fd9d66886ff8d35a2141aaeb31c28a7f153c2fcc4142d80971b9ae735a",
+  "results": [
+    {
+      "name": "dashboard",
+      "url": "http://127.0.0.1:4183/dashboard",
+      "fetchTime": "2026-11-10T13:29:10.418Z",
+      "categories": {
+        "performance": 0.94,
+        "accessibility": 1,
+        "best-practices": 1
+      },
+      "runtimeError": null
+    },
+    {
+      "name": "runs",
+      "url": "http://127.0.0.1:4183/runs",
+      "fetchTime": "2026-11-10T13:29:25.046Z",
+      "categories": {
+        "performance": 0.97,
+        "accessibility": 1,
+        "best-practices": 1
+      },
+      "runtimeError": null
+    },
+    {
+      "name": "run-detail",
+      "url": "http://127.0.0.1:4183/runs/kazakh-sft-005",
+      "fetchTime": "2026-11-10T13:29:39.751Z",
+      "categories": {
+        "performance": 0.97,
+        "accessibility": 1,
+        "best-practices": 1
+      },
+      "runtimeError": null
+    },
+    {
+      "name": "compare",
+      "url": "http://127.0.0.1:4183/compare?runs=kazakh-sft-005,kazakh-sft-006",
+      "fetchTime": "2026-11-10T13:29:55.031Z",
+      "categories": {
+        "performance": 0.95,
+        "accessibility": 1,
+        "best-practices": 1
+      },
+      "runtimeError": null
+    },
+    {
+      "name": "quality",
+      "url": "http://127.0.0.1:4183/data-quality",
+      "fetchTime": "2026-11-10T13:30:09.661Z",
+      "categories": {
+        "performance": 0.98,
+        "accessibility": 1,
+        "best-practices": 1
+      },
+      "runtimeError": null
+    }
+  ]
+}

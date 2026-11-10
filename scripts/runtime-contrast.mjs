@@ -1,9 +1,10 @@
 import assert from 'node:assert/strict'
 import { chromium } from '@playwright/test'
 import { spawn } from 'node:child_process'
-import { mkdir, writeFile } from 'node:fs/promises'
+import { mkdir, writeFile, readFile } from 'node:fs/promises'
 import { assertSpikePainted } from './canvas-controls.mjs'
 const directory=process.env.RUNTIME_REVIEW_OUT??'reports/manual'
+const metadata=JSON.parse(await readFile('reports/build-metadata.json','utf8'))
 await mkdir(directory,{recursive:true})
 const server=spawn(process.execPath,['scripts/serve-build.mjs','dist','4187'],{stdio:'pipe'})
 await new Promise((resolve,reject)=>{server.stdout.once('data',resolve);server.once('error',reject)})
@@ -68,5 +69,5 @@ try{
  while(liveWorkers.size&&Date.now()<deadline)await new Promise(resolve=>setTimeout(resolve,20))
  assert.equal(liveWorkers.size,0,'Closing the workspace context must release every observed Worker')
  lifecycle.push({contextClosed:true,liveWorkers:liveWorkers.size})
-}finally{await browser.close();server.kill();await writeFile(`${directory}/runtime-contrast.json`,JSON.stringify({scope:'Assistant-run production runtime checks: real opaque Canvas pixels, computed SVG fill/surface, accessibility-tree inspection and 20 unthrottled SPA lifecycle transitions. Not human NVDA/VoiceOver certification or a memory budget benchmark. Inactive dimmed series are outside this unfocused-series contrast sample.',results,lifecycle},null,2))}
+}finally{await browser.close();server.kill();await writeFile(`${directory}/runtime-contrast.json`,JSON.stringify({sourceCommit:metadata.git?.commit,sourceHash:metadata.sourceHash,buildHash:metadata.buildHash,scope:'Assistant-run production runtime checks: real opaque Canvas pixels, computed SVG fill/surface, accessibility-tree inspection and 20 unthrottled SPA lifecycle transitions. Not human NVDA/VoiceOver certification or a memory budget benchmark. Inactive dimmed series are outside this unfocused-series contrast sample.',results,lifecycle},null,2))}
 console.log('Both themes: actual Canvas series >=3:1; Dashboard SVG text >=4.5:1.')

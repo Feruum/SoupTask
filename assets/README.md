@@ -21,3 +21,7 @@ Three standalone assets were generated with the built-in imagegen tool, using `k
 All three are unmodified 1254×1254 RGBA PNGs. Each has transparent corners and an alpha range of 0–255, checked using Pillow. No background was composited into the files. The full generation prompts and built-in mode are recorded in `soup-illustrations.prompts.json`.
 
 `SoupArt.tsx` displays them as decorative images with empty alt text; the neighboring real headings retain the meaning of each state. Only the piala's steam region moves during loading, using two CSS-clipped render layers of the same original image. Reduced motion shows a static image. Charts, metric values and data handling are unchanged by this integration.
+
+## README artwork
+
+`readme/soup-cover.png` is a new wide pixel-art cover generated with built-in imagegen for the repository README. It brings the sorpa bowl, ladle, recipe and Kazakh ornament together on a warm near-black background. It is brand artwork, not a generated application screenshot. The original logo is retained separately. The full prompt and unmodified real release screenshots are documented in [readme/README.md](readme/README.md).

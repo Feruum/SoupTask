@@ -1,0 +1,195 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs",
+      "e2e/range-feedback.spec.ts"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/range-feedback-before-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\range-feedback-before-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/range-feedback-before.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "range-feedback.spec.ts",
+      "file": "range-feedback.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "precision range controls answer hover immediately without ongoing color or shadow transitions",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2618,
+                  "error": {
+                    "message": "Error: hover feedback must not keep painting after the pointer reaches a chart\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"background-color\",\u001b[39m\n\u001b[31m+   \"box-shadow\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: hover feedback must not keep painting after the pointer reaches a chart\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"background-color\",\u001b[39m\n\u001b[31m+   \"box-shadow\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\range-feedback.spec.ts:9:100",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\range-feedback.spec.ts",
+                      "column": 100,
+                      "line": 9
+                    },
+                    "snippet": " \u001b[90m  7 |\u001b[39m  \u001b[36mawait\u001b[39m button\u001b[33m.\u001b[39mhover()\n \u001b[90m  8 |\u001b[39m  \u001b[36mconst\u001b[39m running\u001b[33m=\u001b[39m()\u001b[33m=>\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'.range-toolbar'\u001b[39m)\u001b[33m.\u001b[39mevaluate(element\u001b[33m=>\u001b[39melement\u001b[33m.\u001b[39mgetAnimations({subtree\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mfilter(animation\u001b[33m=>\u001b[39manimation\u001b[33m.\u001b[39mplayState\u001b[33m===\u001b[39m\u001b[32m'running'\u001b[39m)\u001b[33m.\u001b[39mmap(animation\u001b[33m=>\u001b[39manimation \u001b[36minstanceof\u001b[39m \u001b[33mCSSTransition\u001b[39m\u001b[33m?\u001b[39manimation\u001b[33m.\u001b[39mtransitionProperty\u001b[33m:\u001b[39m\u001b[32m'other animation'\u001b[39m))\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m  expect(\u001b[36mawait\u001b[39m running()\u001b[33m,\u001b[39m\u001b[32m'hover feedback must not keep painting after the pointer reaches a chart'\u001b[39m)\u001b[33m.\u001b[39mtoEqual([])\n \u001b[90m    |\u001b[39m                                                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-testid=\"comparison-loss\"] .u-over'\u001b[39m)\u001b[33m.\u001b[39mhover({position\u001b[33m:\u001b[39m{x\u001b[33m:\u001b[39m\u001b[35m100\u001b[39m\u001b[33m,\u001b[39my\u001b[33m:\u001b[39m\u001b[35m20\u001b[39m}})\n \u001b[90m 11 |\u001b[39m  expect(\u001b[36mawait\u001b[39m running()\u001b[33m,\u001b[39m\u001b[32m'leaving a numeric control must not start return transitions'\u001b[39m)\u001b[33m.\u001b[39mtoEqual([])\n \u001b[90m 12 |\u001b[39m })"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\range-feedback.spec.ts",
+                        "column": 100,
+                        "line": 9
+                      },
+                      "message": "Error: hover feedback must not keep painting after the pointer reaches a chart\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 4\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"background-color\",\u001b[39m\n\u001b[31m+   \"box-shadow\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n   7 |  await button.hover()\n   8 |  const running=()=>page.locator('.range-toolbar').evaluate(element=>element.getAnimations({subtree:true}).filter(animation=>animation.playState==='running').map(animation=>animation instanceof CSSTransition?animation.transitionProperty:'other animation'))\n>  9 |  expect(await running(),'hover feedback must not keep painting after the pointer reaches a chart').toEqual([])\n     |                                                                                                    ^\n  10 |  await page.locator('[data-testid=\"comparison-loss\"] .u-over').hover({position:{x:100,y:20}})\n  11 |  expect(await running(),'leaving a numeric control must not start return transitions').toEqual([])\n  12 | })\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\range-feedback.spec.ts:9:100"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:46:56.604Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\range-feedback-before-artifacts\\range-feedback-precision-r-91996-color-or-shadow-transitions\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\range-feedback-before-artifacts\\range-feedback-precision-r-91996-color-or-shadow-transitions\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\range-feedback-before-artifacts\\range-feedback-precision-r-91996-color-or-shadow-transitions\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\range-feedback.spec.ts",
+                    "column": 100,
+                    "line": 9
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5fce6b92ab19efd76332-5088ea47f113457389ed",
+          "file": "range-feedback.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T11:46:54.869Z",
+    "duration": 5660.741,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

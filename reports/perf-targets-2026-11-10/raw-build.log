@@ -1,0 +1,30 @@
+npm notice run soup-training-monitor@0.1.0 build
+npm notice run tsc -b && vite build
+src/charts/MetricPlot.tsx(385,70): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(event: Pick<PointerEvent, 'clientX' | 'clientY'> & Partial<Pick<PointerEvent, 'pointerType' | 'offsetX' | 'offsetY' | 'target'>>) => void' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
+      Type '(event: Pick<PointerEvent, 'clientX' | 'clientY'> & Partial<Pick<PointerEvent, 'pointerType' | 'offsetX' | 'offsetY' | 'target'>>) => void' is not assignable to type 'EventListener'.
+        Types of parameters 'event' and 'evt' are incompatible.
+          Type 'Event' is not assignable to type 'Pick<PointerEvent, "clientX" | "clientY"> & Partial<Pick<PointerEvent, "offsetX" | "offsetY" | "pointerType" | "target">>'.
+            Type 'Event' is missing the following properties from type 'Pick<PointerEvent, "clientX" | "clientY">': clientX, clientY
+src/charts/MetricPlot.tsx(393,75): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(event: Pick<PointerEvent, 'clientX' | 'clientY'> & Partial<Pick<PointerEvent, 'pointerType' | 'offsetX' | 'offsetY' | 'target'>>) => void' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
+      Type '(event: Pick<PointerEvent, 'clientX' | 'clientY'> & Partial<Pick<PointerEvent, 'pointerType' | 'offsetX' | 'offsetY' | 'target'>>) => void' is not assignable to type 'EventListener'.
+        Types of parameters 'event' and 'evt' are incompatible.
+          Type 'Event' is not assignable to type 'Pick<PointerEvent, "clientX" | "clientY"> & Partial<Pick<PointerEvent, "offsetX" | "offsetY" | "pointerType" | "target">>'.
+            Type 'Event' is missing the following properties from type 'Pick<PointerEvent, "clientX" | "clientY">': clientX, clientY
+src/charts/MetricPlot.tsx(385,70): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(event: Pick<PointerEvent, 'clientX' | 'clientY'> & Partial<Pick<PointerEvent, 'pointerType' | 'offsetX' | 'offsetY' | 'target'>>) => void' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
+      Type '(event: Pick<PointerEvent, 'clientX' | 'clientY'> & Partial<Pick<PointerEvent, 'pointerType' | 'offsetX' | 'offsetY' | 'target'>>) => void' is not assignable to type 'EventListener'.
+        Types of parameters 'event' and 'evt' are incompatible.
+          Type 'Event' is not assignable to type 'Pick<PointerEvent, "clientX" | "clientY"> & Partial<Pick<PointerEvent, "offsetX" | "offsetY" | "pointerType" | "target">>'.
+            Type 'Event' is missing the following properties from type 'Pick<PointerEvent, "clientX" | "clientY">': clientX, clientY
+src/charts/MetricPlot.tsx(393,75): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Argument of type '(event: Pick<PointerEvent, 'clientX' | 'clientY'> & Partial<Pick<PointerEvent, 'pointerType' | 'offsetX' | 'offsetY' | 'target'>>) => void' is not assignable to parameter of type 'EventListenerOrEventListenerObject'.
+      Type '(event: Pick<PointerEvent, 'clientX' | 'clientY'> & Partial<Pick<PointerEvent, 'pointerType' | 'offsetX' | 'offsetY' | 'target'>>) => void' is not assignable to type 'EventListener'.
+        Types of parameters 'event' and 'evt' are incompatible.
+          Type 'Event' is not assignable to type 'Pick<PointerEvent, "clientX" | "clientY"> & Partial<Pick<PointerEvent, "offsetX" | "offsetY" | "pointerType" | "target">>'.
+            Type 'Event' is missing the following properties from type 'Pick<PointerEvent, "clientX" | "clientY">': clientX, clientY

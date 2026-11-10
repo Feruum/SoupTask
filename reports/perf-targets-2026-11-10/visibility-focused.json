@@ -1,0 +1,324 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs",
+      "e2e/readout-keyboard.spec.ts",
+      "e2e/hover-layout.spec.ts",
+      "e2e/cursor-entry.spec.ts",
+      "e2e/cached-hover.spec.ts"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/visibility-focused-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\visibility-focused-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/visibility-focused.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "cached-hover.spec.ts",
+      "file": "cached-hover.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a warmed display-pixel cursor uses exact Worker-prepared rows without another round trip",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2652,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:12:33.211Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dbeff0185fdcf015c293-80144d7b762a89309c2f",
+          "file": "cached-hover.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cursor-entry.spec.ts",
+      "file": "cursor-entry.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "entering and leaving a chart keeps the chart React tree out of cursor work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1632,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:12:36.041Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4d7ebb3315801731adc-85d9cc8f528973ebeda1",
+          "file": "cursor-entry.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "zoom keeps readout source nodes and their focus identity while replacing their accepted view",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1912,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:12:37.690Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4d7ebb3315801731adc-c87db048fe974aa561ce",
+          "file": "cursor-entry.spec.ts",
+          "line": 16,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "hover-layout.spec.ts",
+      "file": "hover-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "settled source hover confines layout to readouts instead of relaying it through the document",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1759,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:12:39.631Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "settled-hover-layout.json",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJhcmdzIjogewogICAgICAiYmVnaW5EYXRhIjogewogICAgICAgICJkaXJ0eU9iamVjdHMiOiA5LAogICAgICAgICJmcmFtZSI6ICJERDFGMzkxNUMyRjU3RTQ4MjYzOTkxOTI3NEFBNjU0OCIsCiAgICAgICAgInBhcnRpYWxMYXlvdXQiOiB0cnVlLAogICAgICAgICJ0b3RhbE9iamVjdHMiOiA4NwogICAgICB9LAogICAgICAiZW5kRGF0YSI6IHsKICAgICAgICAibGF5b3V0Um9vdHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJkZXB0aCI6IDE4LAogICAgICAgICAgICAibm9kZUlkIjogMTUsCiAgICAgICAgICAgICJub2RlTmFtZSI6ICJTRUNUSU9OIGNsYXNzPSdfb2JzZXJ2YXRpb25zX2ZwZXdkXzIzJyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAyNzE5LjI4MTI1LAogICAgICAgICAgICAgICAgODc4LAogICAgICAgICAgICAgICAgMjcxOS4yODEyNSwKICAgICAgICAgICAgICAgIDg3OCwKICAgICAgICAgICAgICAgIDI4MjMuMjgxMjUsCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAyODIzLjI4MTI1CiAgICAgICAgICAgICAgXQogICAgICAgICAgICBdCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiZGVwdGgiOiAxOCwKICAgICAgICAgICAgIm5vZGVJZCI6IDE2LAogICAgICAgICAgICAibm9kZU5hbWUiOiAiU0VDVElPTiBjbGFzcz0nX29ic2VydmF0aW9uc19mcGV3ZF8yMyciLAogICAgICAgICAgICAicXVhZHMiOiBbCiAgICAgICAgICAgICAgWwogICAgICAgICAgICAgICAgNTU4LAogICAgICAgICAgICAgICAgMTkxMS43ODEyNSwKICAgICAgICAgICAgICAgIDg3OCwKICAgICAgICAgICAgICAgIDE5MTEuNzgxMjUsCiAgICAgICAgICAgICAgICA4NzgsCiAgICAgICAgICAgICAgICAyMDE1Ljc4MTI1LAogICAgICAgICAgICAgICAgNTU4LAogICAgICAgICAgICAgICAgMjAxNS43ODEyNQogICAgICAgICAgICAgIF0KICAgICAgICAgICAgXQogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgImRlcHRoIjogMTgsCiAgICAgICAgICAgICJub2RlSWQiOiAxNywKICAgICAgICAgICAgIm5vZGVOYW1lIjogIlNFQ1RJT04gY2xhc3M9J19vYnNlcnZhdGlvbnNfZnBld2RfMjMnIiwKICAgICAgICAgICAgInF1YWRzIjogWwogICAgICAgICAgICAgIFsKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDExMDQuMjgxMjUsCiAgICAgICAgICAgICAgICA4NzgsCiAgICAgICAgICAgICAgICAxMTA0LjI4MTI1LAogICAgICAgICAgICAgICAgODc4LAogICAgICAgICAgICAgICAgMTIwOC4yODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDEyMDguMjgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJkZXB0aCI6IDE1LAogICAgICAgICAgICAibm9kZUlkIjogMTgsCiAgICAgICAgICAgICJub2RlTmFtZSI6ICJESVYgY2xhc3M9J19jb250ZW50X2ZwZXdkXzE4IGNoYXJ0LWhvdmVyLXZhbHVlJyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAyNjU3LjI4MTI1LAogICAgICAgICAgICAgICAgMTIxMCwKICAgICAgICAgICAgICAgIDI2NTcuMjgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMjk1Ny4yODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDI5NTcuMjgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJkZXB0aCI6IDE1LAogICAgICAgICAgICAibm9kZUlkIjogMTksCiAgICAgICAgICAgICJub2RlTmFtZSI6ICJESVYgY2xhc3M9J19jb250ZW50X2ZwZXdkXzE4IGNoYXJ0LWhvdmVyLXZhbHVlJyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAxODQ5Ljc4MTI1LAogICAgICAgICAgICAgICAgMTIxMCwKICAgICAgICAgICAgICAgIDE4NDkuNzgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMjE0OS43ODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDIxNDkuNzgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJkZXB0aCI6IDE1LAogICAgICAgICAgICAibm9kZUlkIjogMjAsCiAgICAgICAgICAgICJub2RlTmFtZSI6ICJESVYgY2xhc3M9J19jb250ZW50X2ZwZXdkXzE4IGNoYXJ0LWhvdmVyLXZhbHVlJyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAxMDQyLjI4MTI1LAogICAgICAgICAgICAgICAgMTIxMCwKICAgICAgICAgICAgICAgIDEwNDIuMjgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMTM0Mi4yODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDEzNDIuMjgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIH0sCiAgICAiY2F0IjogImRldnRvb2xzLnRpbWVsaW5lIiwKICAgICJkdXIiOiA0NjgsCiAgICAibmFtZSI6ICJMYXlvdXQiLAogICAgInBoIjogIlgiLAogICAgInBpZCI6IDEyNDY0LAogICAgInRkdXIiOiA0MjcsCiAgICAidGlkIjogMjM1ODQsCiAgICAidHMiOiAxMTg5NzA1MDA1NCwKICAgICJ0dHMiOiA2Mzg2MDYKICB9LAogIHsKICAgICJhcmdzIjogewogICAgICAiYmVnaW5EYXRhIjogewogICAgICAgICJkaXJ0eU9iamVjdHMiOiA3LAogICAgICAgICJmcmFtZSI6ICJERDFGMzkxNUMyRjU3RTQ4MjYzOTkxOTI3NEFBNjU0OCIsCiAgICAgICAgInBhcnRpYWxMYXlvdXQiOiB0cnVlLAogICAgICAgICJ0b3RhbE9iamVjdHMiOiAzNAogICAgICB9LAogICAgICAiZW5kRGF0YSI6IHsKICAgICAgICAibGF5b3V0Um9vdHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJkZXB0aCI6IDE1LAogICAgICAgICAgICAibm9kZUlkIjogMjAsCiAgICAgICAgICAgICJub2RlTmFtZSI6ICJESVYgY2xhc3M9J19jb250ZW50X2ZwZXdkXzE4IGNoYXJ0LWhvdmVyLXZhbHVlJyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAxMDQyLjI4MTI1LAogICAgICAgICAgICAgICAgMTIxMCwKICAgICAgICAgICAgICAgIDEwNDIuMjgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMTM0Mi4yODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDEzNDIuMjgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIH0sCiAgICAiY2F0IjogImRldnRvb2xzLnRpbWVsaW5lIiwKICAgICJkdXIiOiAyMDksCiAgICAibmFtZSI6ICJMYXlvdXQiLAogICAgInBoIjogIlgiLAogICAgInBpZCI6IDEyNDY0LAogICAgInRkdXIiOiAyMDIsCiAgICAidGlkIjogMjM1ODQsCiAgICAidHMiOiAxMTg5NzA1NzY0NywKICAgICJ0dHMiOiA2NDU4MzEKICB9LAogIHsKICAgICJhcmdzIjogewogICAgICAiYmVnaW5EYXRhIjogewogICAgICAgICJkaXJ0eU9iamVjdHMiOiA3LAogICAgICAgICJmcmFtZSI6ICJERDFGMzkxNUMyRjU3RTQ4MjYzOTkxOTI3NEFBNjU0OCIsCiAgICAgICAgInBhcnRpYWxMYXlvdXQiOiB0cnVlLAogICAgICAgICJ0b3RhbE9iamVjdHMiOiAzNAogICAgICB9LAogICAgICAiZW5kRGF0YSI6IHsKICAgICAgICAibGF5b3V0Um9vdHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJkZXB0aCI6IDE1LAogICAgICAgICAgICAibm9kZUlkIjogMTksCiAgICAgICAgICAgICJub2RlTmFtZSI6ICJESVYgY2xhc3M9J19jb250ZW50X2ZwZXdkXzE4IGNoYXJ0LWhvdmVyLXZhbHVlJyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAxODQ5Ljc4MTI1LAogICAgICAgICAgICAgICAgMTIxMCwKICAgICAgICAgICAgICAgIDE4NDkuNzgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMjE0OS43ODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDIxNDkuNzgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIH0sCiAgICAiY2F0IjogImRldnRvb2xzLnRpbWVsaW5lIiwKICAgICJkdXIiOiAxNTMsCiAgICAibmFtZSI6ICJMYXlvdXQiLAogICAgInBoIjogIlgiLAogICAgInBpZCI6IDEyNDY0LAogICAgInRkdXIiOiAxNTMsCiAgICAidGlkIjogMjM1ODQsCiAgICAidHMiOiAxMTg5NzA1ODM5NCwKICAgICJ0dHMiOiA2NDY1NjUKICB9LAogIHsKICAgICJhcmdzIjogewogICAgICAiYmVnaW5EYXRhIjogewogICAgICAgICJkaXJ0eU9iamVjdHMiOiA3LAogICAgICAgICJmcmFtZSI6ICJERDFGMzkxNUMyRjU3RTQ4MjYzOTkxOTI3NEFBNjU0OCIsCiAgICAgICAgInBhcnRpYWxMYXlvdXQiOiB0cnVlLAogICAgICAgICJ0b3RhbE9iamVjdHMiOiAzNAogICAgICB9LAogICAgICAiZW5kRGF0YSI6IHsKICAgICAgICAibGF5b3V0Um9vdHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJkZXB0aCI6IDE1LAogICAgICAgICAgICAibm9kZUlkIjogMTgsCiAgICAgICAgICAgICJub2RlTmFtZSI6ICJESVYgY2xhc3M9J19jb250ZW50X2ZwZXdkXzE4IGNoYXJ0LWhvdmVyLXZhbHVlJyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAyNjU3LjI4MTI1LAogICAgICAgICAgICAgICAgMTIxMCwKICAgICAgICAgICAgICAgIDI2NTcuMjgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMjk1Ny4yODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDI5NTcuMjgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIH0sCiAgICAiY2F0IjogImRldnRvb2xzLnRpbWVsaW5lIiwKICAgICJkdXIiOiAxMjcsCiAgICAibmFtZSI6ICJMYXlvdXQiLAogICAgInBoIjogIlgiLAogICAgInBpZCI6IDEyNDY0LAogICAgInRkdXIiOiAxMjYsCiAgICAidGlkIjogMjM1ODQsCiAgICAidHMiOiAxMTg5NzA1OTA1MCwKICAgICJ0dHMiOiA2NDcyMTYKICB9Cl0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-48ecde7e2cac0b00d0d5",
+          "file": "hover-layout.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "readout-keyboard.spec.ts",
+      "file": "readout-keyboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "keyboard traversal reaches exact source actions across offscreen readout boundaries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2616,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:12:41.423Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d77008288cb50673c321-14a3d475e2094e0b8641",
+          "file": "readout-keyboard.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T11:12:31.466Z",
+    "duration": 13727.796999999999,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

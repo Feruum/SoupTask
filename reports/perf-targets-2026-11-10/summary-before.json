@@ -1,0 +1,197 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/cursor-dom.spec.ts",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs",
+      "--grep",
+      "zoom does not"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/tmp/reports/perf-targets-2026-11-10/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\reports\\perf-targets-2026-11-10\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/summary-before.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "cursor-dom.spec.ts",
+      "file": "cursor-dom.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "zoom does not recompute immutable whole-run comparison summaries",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2749,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m5\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m5\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-dom.spec.ts:33:104",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-dom.spec.ts",
+                      "column": 104,
+                      "line": 33
+                    },
+                    "snippet": " \u001b[90m 31 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Apply range'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m 32 |\u001b[39m  \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'comparison-loss'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-range-min'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'100'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m  expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mperformance\u001b[33m.\u001b[39mgetEntriesByName(\u001b[32m'soup:compare-summaries-render'\u001b[39m)\u001b[33m.\u001b[39mlength))\u001b[33m.\u001b[39mtoBe(before)\n \u001b[90m    |\u001b[39m                                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m })\n \u001b[90m 35 |\u001b[39m\n \u001b[90m 36 |\u001b[39m test(\u001b[32m'source cursor updates keep React out of the settled observation hot path'\u001b[39m\u001b[33m,\u001b[39m\u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-dom.spec.ts",
+                        "column": 104,
+                        "line": 33
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m3\u001b[39m\nReceived: \u001b[31m5\u001b[39m\n\n  31 |  await page.getByRole('button',{name:'Apply range',exact:true}).click()\n  32 |  await expect(page.getByTestId('comparison-loss')).toHaveAttribute('data-range-min','100')\n> 33 |  expect(await page.evaluate(()=>performance.getEntriesByName('soup:compare-summaries-render').length)).toBe(before)\n     |                                                                                                        ^\n  34 | })\n  35 |\n  36 | test('source cursor updates keep React out of the settled observation hot path',async({page})=>{\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-dom.spec.ts:33:104"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T08:22:45.911Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\reports\\perf-targets-2026-11-10\\artifacts\\cursor-dom-zoom-does-not-r-5abc4-le-run-comparison-summaries\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\reports\\perf-targets-2026-11-10\\artifacts\\cursor-dom-zoom-does-not-r-5abc4-le-run-comparison-summaries\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\reports\\perf-targets-2026-11-10\\artifacts\\cursor-dom-zoom-does-not-r-5abc4-le-run-comparison-summaries\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-dom.spec.ts",
+                    "column": 104,
+                    "line": 33
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-0eca5a019caf67e0a6a6",
+          "file": "cursor-dom.spec.ts",
+          "line": 25,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T08:22:43.809Z",
+    "duration": 6219.888,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

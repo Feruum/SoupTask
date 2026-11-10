@@ -1,37 +1,33 @@
 # Soup Training Monitor
 
-Full frontend delivery - 10 November 2026. [Production](https://soup-training-monitor.vercel.app) and [source repository](https://github.com/Feruum/SoupTask). Five screens: Dashboard, Training runs, Run details, Compare and Data quality. Sources are explicitly demonstration snapshots. Existing Soup landing deployment is separate.
+Frontend delivery — 10 November 2026. [Production](https://soup-training-monitor.vercel.app) · [Repository](https://github.com/Feruum/SoupTask). Five screens: Dashboard, Training runs, Run details, Compare and Data quality. All data is labelled demonstration snapshots. The separate Soup landing deployment is unchanged.
 
-## Product and source truth
+## Product and truthful charts
 
-Dashboard opens a focused run monitor; Experiment map and Groups remain local views. Circle sectors select a run and metric. Charts support wheel/pinch zoom, Shift-wheel pan, drag selection and keyboard ranges. Compare emphasizes series consistently and queries original rows by numeric step. Source/quality links retain revision and sourceIndex. Fixed source readouts avoid sudden page movement; empty findings distinguish clean snapshots from filter misses.
+Twenty deterministic scenarios include NaN/Infinity, duplicate conflicts, unsorted steps, cadence gaps, zero, tiny values and a singleton. R05 has 1,000,000 rows and one unique Loss maximum: sourceIndex 500001, step 500001, value 100. Four raw Float64 columns remain Worker-owned. Independent per-metric reduction preserves exact source coordinates and visible finite extrema. Conflicts and known gaps break the authoritative line; source members remain inspectable. No smoothing or interpolation is represented as a measurement.
 
-Twenty deterministic scenarios cover nonfinite values, duplicates, ordering, cadence gaps, zeros, tiny values and a singleton. R05 has 1,000,000 rows and one injected unique Loss maximum: sourceIndex 500001, step 500001, value 100. Four raw Float64 columns remain Worker-owned. Rendering preserves original coordinates and visible extrema; conflicts and known gaps break the authoritative line. No smoothing, interpolation or scientific stop recommendation is fabricated.
+Dashboard includes a focused monitor and interactive run/metric map with text alternatives. Charts support wheel/pinch zoom, Shift-wheel pan, drag and keyboard range controls. Details and Compare share one stable source table with all three raw metrics, actual steps, distance and source-qualified Pin. Whole-run facts remain independent of the viewport; NaN never becomes zero. No scientific training-stop recommendation is fabricated.
 
-## Verification
+## Verification and evidence
 
-Build and lint pass; 99 unit tests and 94 Chromium acceptance tests pass, no skipped/flaky browser tests. Independent raw oracles, controlled async races, current-view cursor guards, real Canvas spike/gap pixels, keyboard, gestures, responsive layouts, DPR 2, locale/timezone and cleanup are exercised. Six fault classes must fail named assertions; raw failures remain available. Four Impeccable findings and later layout/clarity regressions are corrected with red/green evidence.
+Source commit 41ae67f48be6364f719ba38ad71d694c8ae484fe; source/build hashes are in reports/build-metadata.json. Build, lint, 106 unit tests (27 files), 113 Chromium acceptance tests and regeneration of all 20 manifest entries pass. No skipped/flaky browser cases or retries. Raw oracles, controlled stale-response races, locale/timezone, keyboard, synthesized touch, responsive layouts, DPR2, actual Canvas spike/gap pixels and cleanup are covered. Six injected fault classes fail named assertions; failed results remain archived.
 
-Thirty axe audits: zero violations, 516 incomplete contrast occurrences retained. Actual Canvas contrast is at least 7.89:1 dark /4.94:1 light; SVG text 8.41:1 /6.15:1. Separate Lighthouse desktop: performance 97-98; accessibility and best practices 100. This is not human screen-reader certification.
+Thirty axe audits report zero violations. All 528 fresh contrast incomplete occurrences have individual screenshot/pixel dispositions (minimum 5.096:1); the original 516 are also retained. Actual Canvas/SVG contrast is checked in both themes. Separate Lighthouse Performance is 94–98, Accessibility/Best Practices 100. This is assistant-run evidence, not human screen-reader certification. Tests cannot prove every oscillation, every browser or scientific logger validity.
 
 <!-- pagebreak -->
 
-## Measured performance and verdict
+## Performance and verdict
 
-Windows 11, Ryzen 7 8845HS, Chromium 158,1440x900,DPR 1. Five cold contexts and 30 interactions per detail/Compare; nearest-rank p95. Main CPU rate 4; Worker throttling explicitly unsupported. Latest indexed cold 3089.5 ms, detail zoom 197.1 ms, Compare zoom 241.0 ms. Pointer-input-to-source-frame p95 improved 120.7 to88.7 ms in detail and 209.5 to115.1 ms in Compare. Cold load regressed from 2750.1 ms. All samples, intermediate runs and immutable before/after runtime sources are retained.
+Windows 11, Ryzen 7 8845HS, Chromium158, 1440×900, DPR1. Main renderer CPU×4; Worker throttling unsupported. Each run uses five cold contexts and 30 detail plus 30 four-run Compare range/hover pairs, nearest-rank p95, no forced GC. Two same-source full Chrome recordings pass all expanded targets. Worst p95: cold 2531.9ms; detail/Compare zoom 114.8/131.4ms; detail/Compare hover 40.6/48.6ms. Matched previous-source full-trace baseline: 2493.6ms cold, 149.6/214.7ms zoom, 88.5/107.5ms hover. Cold confirmation is slightly slower, within budget. Separate no-trace results are not pooled.
 
-Hover ends at a committed-source two-RAF rendering opportunity, not merely Worker receipt or physical monitor presentation. Before/after revisions differ; shared-machine activity limits causal inference. Formatter caching and isolated chart subscriptions remove repeated constructors and feature-page rerenders without weakening source identity.
+Hover retains the original browser pointer timestamp through current source DOM and two RAF callbacks: a rendering opportunity, not physical monitor presentation. Exact bounded source caches, unchanged-row suppression, shared readouts and offscreen overlay deferral reduce work. Native crosshair/drag remains. Traces, raw samples, failed experiments and before/after source identities are retained. Shared-machine sequential measurements limit causal inference.
 
-**DON'T SHIP against expanded latency targets.** Detail zoom meets 200 ms; cold 3000 ms, Compare zoom 200 ms and both hover 50 ms targets remain missed. The original PDF has no numeric ceiling. First profile remaining input/commit/frame delay and Compare drawing; retain the same endpoint and correctness tests.
+**SHIP for the implemented demonstration frontend**, conditional on the generated evidence manifest having no pending checks and exact published-byte verification. The original PDF has no numeric ceilings; the expanded latency targets now pass. Longer-session retained-memory analysis is the first next improvement, not an unverified claim of leak freedom.
 
-## Memory and surprises
+## What surprised me and still concerns me
 
-Latest 1M headless Windows PID-associated renderer/Worker footprint: 143.7 MiB private committed, 242.3 MiB working set. Earlier scan 147.2/246.0 MiB; one sample each, no memory-saving claim. Raw 32,000,000 bytes; indexed typed-buffer ledger 76,696,612 bytes INCLUDING raw, not additive to OS footprint. Shared browser/GPU memory remains separately scoped; working sets can share pages. CDP dump GUID validation failed and is labelled accordingly. Earlier headed 20-switch samples are separate, not latest-build memory or leak-freedom proof.
+Raw lookup was already fast; duplicated DOM updates and frame work dominated hover. A genuine MutationObserver test caught repeated unchanged-row writes, and report HTML unexpectedly changed Tailwind output until source scanning was bounded. Native renderer/Worker footprint at 1M is 145.9MiB private committed /245.6MiB working set, growing to 319.5/588.7MiB after 20 transitions. Raw columns are 32,000,000 bytes; indexed owned buffers 76,696,612 bytes including raw. These scopes are not additive. Shared GPU/browser memory is separate. Settled lifecycle checks observe one Worker/three charts and zero Workers after close; memory growth remains a concern requiring retained-object analysis.
 
-Twenty final SPA transitions settle to one Worker/three charts, then zero Workers on close. Retiring Workers persist briefly. Profiling exposed repeated Intl constructors; tests also caught old-view cursor publication and abrupt readout layout shifts. Genuine failures and corrections are preserved.
+## AI assistance and handoff
 
-## AI disclosure and reproduction
-
-AI assisted architecture, implementation, independent test oracles, fault injection, browser automation, profiling and documentation. Proposals were revised against raw identities and Canvas pixels. Humans supplied requirements, visual feedback, Vercel authentication and project choice; another agent completed Dashboard. No human NVDA/VoiceOver or scientific-model review is claimed. Original changed-deadline/live-discussion cancellation email was not found.
-
-README, docs/performance-results.md and reports/evidence-manifest.json provide commands, hashes, scope and limitations. Lossless trace archives restore via scripts/trace-archives.mjs --unpack. Five production routes, reloads, actual Worker/assets and exact spike/source pass smoke checks. Submission email is drafted locally and awaits explicit send authorization.
+AI assisted architecture, code, independent oracles, fault injection, browser automation, primary-source research and profiling. Suggestions were accepted or revised against original identities, actual Canvas pixels and red/green tests; unsuccessful optimizations remain visible. Humans supplied requirements, visual feedback and deployment access; another agent completed Dashboard. Human NVDA/VoiceOver review and changed-deadline/live-discussion cancellation were not verified. README, docs/performance-results.md and reports/evidence-manifest.json provide reproduction and scope. The user chose to send the local submission email personally.

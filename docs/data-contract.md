@@ -147,3 +147,11 @@ Node test durations are not those measurements. Core tests
 do not prove Canvas paint, assistive-technology access, all browser behavior,
 scientific validity of logged measurements, or practical 5M performance. Those
 limits must remain visible in the submission's evidence and verdict.
+
+## Exact interaction cache and prepared alignment
+
+After an accepted view, the Worker prepares exact source results for physical display-pixel cursor targets, capped at8192 targets and16384 deduplicated source rows for the active workspace. Entries preserve runId/revision/sourceIndex, original numeric step, all three raw metrics, nonfinite identity and duplicate-group references. Only an idle controller with the same workspace epoch, member revisions and view sequence can use the cache; misses retain the original guarded Worker query. It is not a global raw cache. Inspector remains able to request arbitrary sourceIndex/step. Critical markers retain exact original coordinates; pixel targeting does not fabricate observations.
+
+Each run/metric is reduced independently before Worker alignment. Compact aligned Float64 X/Y and slot flags distinguish finite source values, null genuine breaks and undefined foreign positions. Main-thread validation is linear in bounded render payloads and checks provenance including signed zero. Raw and index buffers are never transferred. Render/cache counts and transferred buffer bytes are independently recorded in memory checkpoints.
+
+The shared detail/Compare source table exposes all metrics, actual step, numeric distance and source-qualified actions. Stable leaf-node updates skip unchanged source keys/attributes. Native cursor movement does not become interpolated data. Two-frame acknowledgement requires current accepted identity and committed source DOM. Exact source cache, current-view guards, prepared alignment and unchanged-row MutationObserver regressions are covered by the final106 unit/113 browser outputs under reports/perf-targets-2026-11-10.

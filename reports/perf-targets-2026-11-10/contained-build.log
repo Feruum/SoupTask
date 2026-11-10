@@ -1,0 +1,6 @@
+npm notice run soup-training-monitor@0.1.0 build
+npm notice run tsc -b && vite build
+e2e/hover-layout.spec.ts(5,109): error TS18048: 'window.__soupEvidence.hoverCacheTargets' is possibly 'undefined'.
+e2e/hover-layout.spec.ts(12,56): error TS2741: Property 'name' is missing in type '{ [key: string]: string; }' but required in type '{ name: string; args?: { beginData?: { partialLayout?: boolean | undefined; dirtyObjects?: number | undefined; } | undefined; } | undefined; }'.
+e2e/hover-layout.spec.ts(14,39): error TS18048: 'window.__soupEvidence' is possibly 'undefined'.
+e2e/hover-layout.spec.ts(16,96): error TS2339: Property 'detail' does not exist on type 'PerformanceEntry'.

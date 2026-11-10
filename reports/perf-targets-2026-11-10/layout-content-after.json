@@ -1,0 +1,349 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs",
+      "e2e/hover-layout.spec.ts",
+      "e2e/cursor-dom.spec.ts",
+      "e2e/cached-hover.spec.ts"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/layout-content-after-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\layout-content-after-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/layout-content-after.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "cached-hover.spec.ts",
+      "file": "cached-hover.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a warmed display-pixel cursor uses exact Worker-prepared rows without another round trip",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2616,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T10:43:03.294Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "dbeff0185fdcf015c293-80144d7b762a89309c2f",
+          "file": "cached-hover.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cursor-dom.spec.ts",
+      "file": "cursor-dom.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "moving source markers does not invalidate unrelated overlay pixels",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2005,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T10:43:06.099Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-a934faa523336d894797",
+          "file": "cursor-dom.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "moving the numeric cursor updates persistent source rows without replacing observation DOM",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2388,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T10:43:08.120Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-76eecc58855c23fcd1db",
+          "file": "cursor-dom.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "zoom does not recompute immutable whole-run comparison summaries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2116,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T10:43:10.526Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-0eca5a019caf67e0a6a6",
+          "file": "cursor-dom.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "source cursor updates keep React out of the settled observation hot path",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1713,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T10:43:12.662Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-0d9292ce17864b3c4858",
+          "file": "cursor-dom.spec.ts",
+          "line": 60,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "hover-layout.spec.ts",
+      "file": "hover-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "settled source hover confines layout to readouts instead of relaying it through the document",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1673,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T10:43:14.448Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "settled-hover-layout.json",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJhcmdzIjogewogICAgICAiYmVnaW5EYXRhIjogewogICAgICAgICJkaXJ0eU9iamVjdHMiOiA4MSwKICAgICAgICAiZnJhbWUiOiAiMkQ0NEI0MTVFNzQ4N0ZGMDdBMzMzOUVCNDIzOUNGOUMiLAogICAgICAgICJwYXJ0aWFsTGF5b3V0IjogdHJ1ZSwKICAgICAgICAidG90YWxPYmplY3RzIjogMTcxCiAgICAgIH0sCiAgICAgICJlbmREYXRhIjogewogICAgICAgICJsYXlvdXRSb290cyI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImRlcHRoIjogMTgsCiAgICAgICAgICAgICJub2RlSWQiOiAxNSwKICAgICAgICAgICAgIm5vZGVOYW1lIjogIlNFQ1RJT04gY2xhc3M9J19vYnNlcnZhdGlvbnNfMXJhM3pfMjMnIiwKICAgICAgICAgICAgInF1YWRzIjogWwogICAgICAgICAgICAgIFsKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDE5MTEuNzgxMjUsCiAgICAgICAgICAgICAgICA4NzgsCiAgICAgICAgICAgICAgICAxOTExLjc4MTI1LAogICAgICAgICAgICAgICAgODc4LAogICAgICAgICAgICAgICAgMjAxNS43ODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDIwMTUuNzgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJkZXB0aCI6IDE4LAogICAgICAgICAgICAibm9kZUlkIjogMTYsCiAgICAgICAgICAgICJub2RlTmFtZSI6ICJTRUNUSU9OIGNsYXNzPSdfb2JzZXJ2YXRpb25zXzFyYTN6XzIzJyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAyNzE5LjI4MTI1LAogICAgICAgICAgICAgICAgODc4LAogICAgICAgICAgICAgICAgMjcxOS4yODEyNSwKICAgICAgICAgICAgICAgIDg3OCwKICAgICAgICAgICAgICAgIDI4MjMuMjgxMjUsCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAyODIzLjI4MTI1CiAgICAgICAgICAgICAgXQogICAgICAgICAgICBdCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICAiZGVwdGgiOiAxOCwKICAgICAgICAgICAgIm5vZGVJZCI6IDE3LAogICAgICAgICAgICAibm9kZU5hbWUiOiAiU0VDVElPTiBjbGFzcz0nX29ic2VydmF0aW9uc18xcmEzel8yMyciLAogICAgICAgICAgICAicXVhZHMiOiBbCiAgICAgICAgICAgICAgWwogICAgICAgICAgICAgICAgNTU4LAogICAgICAgICAgICAgICAgMTEwNC4yODEyNSwKICAgICAgICAgICAgICAgIDg3OCwKICAgICAgICAgICAgICAgIDExMDQuMjgxMjUsCiAgICAgICAgICAgICAgICA4NzgsCiAgICAgICAgICAgICAgICAxMjA4LjI4MTI1LAogICAgICAgICAgICAgICAgNTU4LAogICAgICAgICAgICAgICAgMTIwOC4yODEyNQogICAgICAgICAgICAgIF0KICAgICAgICAgICAgXQogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgImRlcHRoIjogMTUsCiAgICAgICAgICAgICJub2RlSWQiOiAxOCwKICAgICAgICAgICAgIm5vZGVOYW1lIjogIkRJViBjbGFzcz0nX2NvbnRlbnRfMXJhM3pfMTggY2hhcnQtaG92ZXItdmFsdWUnIiwKICAgICAgICAgICAgInF1YWRzIjogWwogICAgICAgICAgICAgIFsKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDI2NTcuMjgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMjY1Ny4yODEyNSwKICAgICAgICAgICAgICAgIDEyMTAsCiAgICAgICAgICAgICAgICAyOTU3LjI4MTI1LAogICAgICAgICAgICAgICAgNTU4LAogICAgICAgICAgICAgICAgMjk1Ny4yODEyNQogICAgICAgICAgICAgIF0KICAgICAgICAgICAgXQogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgImRlcHRoIjogMTUsCiAgICAgICAgICAgICJub2RlSWQiOiAxOSwKICAgICAgICAgICAgIm5vZGVOYW1lIjogIkRJViBjbGFzcz0nX2NvbnRlbnRfMXJhM3pfMTggY2hhcnQtaG92ZXItdmFsdWUnIiwKICAgICAgICAgICAgInF1YWRzIjogWwogICAgICAgICAgICAgIFsKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDE4NDkuNzgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMTg0OS43ODEyNSwKICAgICAgICAgICAgICAgIDEyMTAsCiAgICAgICAgICAgICAgICAyMTQ5Ljc4MTI1LAogICAgICAgICAgICAgICAgNTU4LAogICAgICAgICAgICAgICAgMjE0OS43ODEyNQogICAgICAgICAgICAgIF0KICAgICAgICAgICAgXQogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgImRlcHRoIjogMTUsCiAgICAgICAgICAgICJub2RlSWQiOiAyMCwKICAgICAgICAgICAgIm5vZGVOYW1lIjogIkRJViBjbGFzcz0nX2NvbnRlbnRfMXJhM3pfMTggY2hhcnQtaG92ZXItdmFsdWUnIiwKICAgICAgICAgICAgInF1YWRzIjogWwogICAgICAgICAgICAgIFsKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDEwNDIuMjgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMTA0Mi4yODEyNSwKICAgICAgICAgICAgICAgIDEyMTAsCiAgICAgICAgICAgICAgICAxMzQyLjI4MTI1LAogICAgICAgICAgICAgICAgNTU4LAogICAgICAgICAgICAgICAgMTM0Mi4yODEyNQogICAgICAgICAgICAgIF0KICAgICAgICAgICAgXQogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfQogICAgfSwKICAgICJjYXQiOiAiZGV2dG9vbHMudGltZWxpbmUiLAogICAgImR1ciI6IDc1OCwKICAgICJuYW1lIjogIkxheW91dCIsCiAgICAicGgiOiAiWCIsCiAgICAicGlkIjogMTM0MTYsCiAgICAidGR1ciI6IDc1OCwKICAgICJ0aWQiOiAyNjcwOCwKICAgICJ0cyI6IDEwMTMxNzg0Mjc4LAogICAgInR0cyI6IDU4NDc4MwogIH0KXQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-48ecde7e2cac0b00d0d5",
+          "file": "hover-layout.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T10:43:01.655Z",
+    "duration": 16468.509,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

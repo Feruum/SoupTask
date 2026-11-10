@@ -15,7 +15,7 @@ Here is the Training Monitor implementation:
 
 The five screens use twenty reproducible demonstration snapshots, including the million-row run with exact source spike. The repository preserves automated outputs, genuine failing fault controls, Chrome traces, before/after measurements, scoped renderer/Worker memory and AI disclosure.
 
-Final checks: 99 unit and 94 Chromium tests pass; five production routes pass direct-load/reload checks. The note explicitly records unmet engineering latency targets and the resulting DON'T SHIP verdict against those expanded targets. Human screen-reader certification and the changed-deadline/live-discussion cancellation were not verified.
+Final checks: 106 unit and 113 Chromium tests pass; five production routes pass direct-load/reload checks. Two full Chrome-recorded runs meet the expanded latency targets, including hover below50ms; the note explicitly records scope and memory growth after20 transitions. Human screen-reader certification and the changed-deadline/live-discussion cancellation were not verified.
 
 Please see README and docs/acceptance-matrix.md for the requirement-to-evidence map.
 

@@ -1,27 +1,27 @@
 
  RUN  v5.1.0 C:/Users/Ferumm/projects/soupTask
 
- ❯ src/core/topology.test.ts (2 tests | 1 failed) 19ms
-   × isolated spike keeps both NaN breaks and distinct source segments 15ms
-   ✓ known cadence gap remains disconnected without a fabricated null row 2ms
- ❯ src/core/engine.test.ts (10 tests | 5 failed) 299ms
-   × exact spike provenance width 1 50ms
-   × exact spike provenance width 320 50ms
-   × exact spike provenance width 768 47ms
-   × exact spike provenance width 1440 36ms
+ ❯ src/core/topology.test.ts (2 tests | 1 failed) 16ms
+   × isolated spike keeps both NaN breaks and distinct source segments 13ms
+   ✓ known cadence gap remains disconnected without a fabricated null row 1ms
+ ❯ src/core/engine.test.ts (10 tests | 5 failed) 288ms
+   × exact spike provenance width 1 40ms
+   × exact spike provenance width 320 35ms
+   × exact spike provenance width 768 38ms
+   × exact spike provenance width 1440 38ms
    ✓ excludes offscreen spike and includes inclusive endpoints/single step 1ms
-   × independent raw-window oracle preserves both extrema and exact provenance on seeded cases 2ms
-   ✓ discloses dense disconnected mode while retaining exact finite extrema 73ms
-   ✓ independent interval oracle checks every bucket and segment first/min/max/last 12ms
+   × independent raw-window oracle preserves both extrema and exact provenance on seeded cases 3ms
+   ✓ discloses dense disconnected mode while retaining exact finite extrema 92ms
+   ✓ independent interval oracle checks every bucket and segment first/min/max/last 14ms
    ✓ duplicate-group inspection exposes total and every page without unbounded objects 3ms
-   ✓ final pending segment cannot exceed the topology cap after its last flush 23ms
+   ✓ final pending segment cannot exceed the topology cap after its last flush 22ms
 
  Test Files  2 failed (2)
       Tests  6 failed | 6 passed (12)
-   Start at  12:22:29
-   Duration  1.01s (import 53%, tests 41%, transform 3%, worker 3%)
+   Start at  18:13:20
+   Duration  892ms (import 51%, tests 42%, transform 5%, worker 2%)
 
-JSON report written to C:/Users/Ferumm/projects/soupTask/reports/negative-controls/2026-11-10T07-22-24-889Z/fabricated.json
+JSON report written to C:/Users/Ferumm/projects/soupTask/reports/negative-controls/2026-11-10T13-13-16-942Z/fabricated.json
 
 ⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
 

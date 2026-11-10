@@ -1,47 +1,139 @@
-# Soup Training Monitor
+<p align="center">
+  <img src="assets/soup-logo.svg" width="48" height="48" alt="Soup logo" />
+</p>
 
-Five-screen experiment monitor using React, TypeScript, Vite, React Router, Arc UI Free and uPlot. Twenty seeded demonstration snapshots; no live training or automatic stop recommendations.
+<h1 align="center">Soup Training Monitor</h1>
 
-[Open the production application](https://soup-training-monitor.vercel.app). Build/lint, 99 unit tests and 94 Chromium tests pass. [Submission note](output/pdf/soup-submission-note.pdf), [acceptance status](docs/implementation-status.md) and [measured performance](docs/performance-results.md) describe completed process-footprint evidence and the remaining missed engineering targets.
+<p align="center">
+  Training experiments, original measurements, and a little Kazakh warmth.
+</p>
 
-## Run
+<p align="center">
+  <a href="https://soup-training-monitor.vercel.app"><img src="assets/readme/soup-icons/soup-open.png" width="24" height="24" alt="" /> Live demo</a> ·
+  <a href="#quick-start"><img src="assets/readme/soup-icons/soup-start.png" width="24" height="24" alt="" /> Quick start</a> ·
+  <a href="#the-interface"><img src="assets/readme/soup-icons/soup-monitor.png" width="24" height="24" alt="" /> Screenshots</a> ·
+  <a href="docs/engineering-notes.md"><img src="assets/readme/soup-icons/soup-recipe.png" width="24" height="24" alt="" /> Engineering notes</a>
+</p>
 
-Node 24.22.1+ within 24.x, npm 11+:
+![Soup pixel-art cover: a sorpa bowl, copper ladle and recipe with Kazakh ornament](assets/readme/soup-cover.png)
 
-```sh
+A frontend experiment monitor for exploring **20 seeded training snapshots**, comparing runs, and tracing chart values back to their original source. Dark and light themes, keyboard alternatives, and a phone layout are included.
+
+**Demo data only.** Recorded statuses do not represent live training. The app does not execute or automatically stop a run.
+
+## <img src="assets/readme/soup-icons/soup-monitor.png" width="32" height="32" alt="" /> The interface
+
+One selected experiment. One primary metric. Source evidence within reach.
+
+<picture>
+  <source media="(prefers-color-scheme: light)" srcset="assets/readme/monitor-light.png" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/monitor-dark.png" />
+  <img src="assets/readme/monitor-dark.png" alt="Soup Monitor with a run navigator, four source summaries and a genuine Loss chart showing its recorded spike" width="1440" />
+</picture>
+
+[View dark theme](assets/readme/monitor-dark.png) · [View light theme](assets/readme/monitor-light.png)
+
+These are screenshots of the running application from the recorded release checks. The illustrated cover is separate brand artwork.
+
+<details>
+<summary><img src="assets/readme/soup-icons/soup-phone.png" width="24" height="24" alt="" /> Phone layout</summary>
+
+The run chooser folds away, facts reflow into pairs, and persistent navigation remains within reach. Numeric controls provide an alternative to chart gestures.
+
+<p align="center">
+  <img src="assets/readme/monitor-mobile.png" alt="The real Soup Monitor at 320px, with a collapsed run chooser, complete numeric facts and a touch-friendly chart" width="280" />
+</p>
+
+</details>
+
+<details>
+<summary>Training runs, comparison, and data quality</summary>
+
+### Training runs
+
+Search, filter and sort snapshots; preview a run or select two to four for comparison.
+
+![Training runs with status, source quality and selection controls](assets/readme/training-runs.png)
+
+### Compare
+
+Inspect runs on their original step coordinates, with one shared original-source table and whole-run facts.
+
+![Two training runs compared using genuine metric charts](assets/readme/compare.png)
+
+### Data quality
+
+Inspect invalid observations, conflicting duplicates, ordering and missing intervals without silently converting them into valid measurements.
+
+![Data quality matrix and source issue ledger](assets/readme/data-quality.png)
+
+</details>
+
+## A small recipe for trustworthy charts
+
+| <img src="assets/soup-piala.png" width="150" alt="Pixel-art sorpa bowl with Kazakh ornament" /> | <img src="assets/soup-recipe.png" width="150" alt="Pixel-art recipe sheet" /> | <img src="assets/soup-ladle.png" width="150" alt="Pixel-art copper ladle" /> |
+| :---: | :---: | :---: |
+| **Keep the source** | **Know the recipe** | **Inspect the detail** |
+| Immutable measurements stay in a Web Worker. | Seeded fixtures make scenarios reproducible. | Chart readouts lead to exact source observations. |
+
+The same illustration family appears in the app's loading, empty-search, run-information and clean-findings states. The original Soup logo and restrained pixel ornament connect the interface to its Kazakh visual identity. [Asset provenance and prompts](assets/README.md).
+
+- **A visible peak:** the million-row fixture contains one unique Loss maximum, value **100** at step **500,001**. The chart retains its original coordinate.
+- **Explicit uncertainty:** NaN, Infinity, conflicts and gaps remain visible as data-quality facts. They never become invented zeros.
+- **Direct source inspection:** enter a recorded step with the keyboard, inspect an original observation, or open a revision-bound source link.
+- **Calmer exploration:** Monitor is the default; Experiment map and Groups are separate views. Run and metric selection survive Back and refresh.
+- **Purposeful interaction:** modest control transitions respect reduced motion. Metric values and graphs do not receive decorative interpolation.
+
+## <img src="assets/readme/soup-icons/soup-start.png" width="32" height="32" alt="" /> Quick start
+
+Use **Node 24.22.1 or newer within 24.x** and **npm 11+**. Keep the committed `package-lock.json`.
+
+```bash
 npm ci
 npm run dev
 ```
 
-Open http://127.0.0.1:5173/dashboard. Production preview: `npm run build`, then `npm run preview` at http://127.0.0.1:4173. Vite fails on occupied ports.
+Open [localhost:5173/dashboard](http://127.0.0.1:5173/dashboard).
 
-## Screens
+To build and preview:
 
-- `/dashboard`: Monitor opens a searchable run navigator and one genuine metric chart. Run and metric selection survive Back and refresh through query parameters. Search results expand in place; recorded-step inspection works with the keyboard. Experiment map and Groups are separate views (`?view=map` / `?view=groups`); the map retains arrow-key operation and an accessible quality table. Demo provenance is visible on desktop and mobile.
-- `/runs`: search, independent status/quality filters, numeric sorting, preview and selection of two to four comparison runs.
-- `/runs/:runId`: three independent metric panels, shared numeric range, quality, exact source inspection and provenance.
-- `/compare?runs=kazakh-sft-005,kazakh-sft-006`: raw-step comparison, per-run source cursor, whole-run facts and interactive legends.
-- `/data-quality`: workspace matrix, filters and a selected-run Worker issue ledger.
+```bash
+npm run build
+npm run preview
+```
 
-Wheel/pinch zooms around the pointer; Shift+wheel pans; drag selects a range. Range fields, buttons and Reset are keyboard alternatives. Legend buttons highlight series without removing source data. Theme selection persists and reduced motion is respected.
+The production preview uses [localhost:4173](http://127.0.0.1:4173). Vite fails when the configured port is occupied.
 
-## Data truth
+## <img src="assets/readme/soup-icons/soup-layers.png" width="32" height="32" alt="" /> Explore the workspace
 
-Four immutable Float64 columns stay inside one active module Worker. Compare retains at most four selected datasets. Overview pages load a compact manifest rather than generating every dataset.
+| Screen | Route | What you can do |
+| --- | --- | --- |
+| Monitor | `/dashboard` | Search runs, choose a metric, adjust the range, inspect source values and open history. |
+| Experiment map | `/dashboard?view=map` | Select a run and metric through the map, arrow keys or native selectors; inspect the accessible quality table. |
+| Groups | `/dashboard?view=groups` | Explore model/method groups and return to the selected run's monitor. |
+| Training runs | `/runs` | Search, filter, sort, preview and select comparison runs. |
+| Run detail | `/runs/:runId` | Inspect all three metrics, quality, original source rows and run information. |
+| Compare | `/compare?runs=kazakh-sft-005,kazakh-sft-006` | Compare two to four snapshots on their raw step coordinates. |
+| Data quality | `/data-quality` | Review the workspace matrix and a filtered source issue ledger. |
 
-R05 (`kazakh-sft-005`) has 1,000,000 rows and exactly one injected unique Loss maximum: **sourceIndex 500001, step 500001, value 100**. Four raw columns occupy 32,000,000 bytes; indexes, payloads, heaps and browser memory are additional.
+Wheel or pinch zooms; Shift+wheel pans; dragging selects a range. Numeric range fields and Reset are keyboard alternatives. On phones, tap to inspect and swipe vertically to scroll. Legends highlight series without deleting source data.
 
-Fixtures cover nonfinite values, duplicate conflicts, source ordering, known gaps, zeros, sparse input, a singleton and old snapshots. Execution status and data quality are independent. Latest invalid/conflicting measurements remain explicit.
+## <img src="assets/readme/soup-icons/soup-code.png" width="32" height="32" alt="" /> Built with
 
-Selection retains first/min/max/last per bucket and valid segment, with original coordinates. NaN/Infinity never become zero. Conflicts break the authoritative line and retain finite extrema as markers. Dense topology uses an explicitly disconnected overview with source drill-down. Extrema and the unique spike are preserved; every local oscillation is not promised.
+| Layer | Choice |
+| --- | --- |
+| <img src="assets/readme/soup-icons/soup-code.png" width="28" height="28" alt="" /> App | React 19, TypeScript, Vite, React Router SPA |
+| <img src="assets/readme/soup-icons/soup-palette.png" width="28" height="28" alt="" /> Interface | Arc UI Free, Lucide, shared CSS theme and Tailwind tooling |
+| <img src="assets/readme/soup-icons/soup-chart.png" width="28" height="28" alt="" /> Charts | uPlot with an owned React lifecycle adapter |
+| <img src="assets/readme/soup-icons/soup-data.png" width="28" height="28" alt="" /> Data | Module Web Worker, immutable source columns, exact range pipeline |
+| <img src="assets/readme/soup-icons/soup-motion.png" width="28" height="28" alt="" /> Motion | Motion and CSS, respecting reduced motion |
+| <img src="assets/readme/soup-icons/soup-check.png" width="28" height="28" alt="" /> Verification | Vitest, Playwright, axe, source oracles and Canvas pixel checks |
 
-The default exact index uses 256-group blocks and 16-group boundary summaries. Metrics with invalid/conflicting/gapped topology use the unchanged stream scanner. Scan and stream remain available as correct benchmark variants. Index build time and memory are included in evidence.
+Raw arrays stay in the Worker. The chart receives a reduced view with original coordinates and provenance. Whole-run summaries come from source data, rather than the reduced chart array. Smoothing and log scale are absent. [Read the data contract](docs/data-contract.md).
 
-Compare aligns only reduced views: `undefined` means a foreign alignment position, while null/explicit connectivity marks real breaks. Hover queries source data, not interpolated values. Smoothing and log scale are absent. See [data contract](docs/data-contract.md).
+## <img src="assets/readme/soup-icons/soup-check.png" width="32" height="32" alt="" /> Verification
 
-## Checks
-
-```sh
+```bash
 npm run lint
 npm test
 npm run data:check
@@ -52,26 +144,51 @@ npm run test:e2e
 node scripts/canvas-controls.mjs
 ```
 
-Playwright starts its own production preview; leave port 4173 free. This Codex Windows sandbox cannot see the external browser cache; actual browser evidence uses approved unsandboxed commands with bundled Node 24.22.1. A normal terminal does not need the ignored local npm bootstrap.
+Playwright starts its own production preview. Keep port **4173** free. Vitest reads unit tests under `src/`; Playwright reads browser tests under `e2e/`.
 
-Coverage includes independent provenance/extrema/segment oracles, viewport boundaries, normalization, real Canvas spike/gap pixels, bounded ownership, controlled races, locale/timezone, gestures, keyboard, themes, axe, contrast, DPR and lifecycle. Incorrect samplers and suppressed drawing must fail named assertions; crashes do not count as successful negative controls.
+The latest recorded release checks on **10 November 2026** contain **106 passing unit tests** and **113 passing Chromium tests**, with no skipped or flaky cases in that browser run. These are archived results, not a claim that tests were rerun while editing this README.
 
-Current output: `reports/hover-final-guarded-unit.json`, `reports/release-final-browser/results.json`, `reports/negative-controls/`, `reports/async-negative/`, `reports/canvas-review-final/`. Historical failures and scaffold reports remain archived. [Evidence manifest](reports/evidence-manifest.json) records hashes, execution scope and outstanding requirements.
+| Evidence | Record |
+| --- | --- |
+| Unit results | [106 passing tests](reports/perf-targets-2026-11-10/final-unit.json) |
+| Release browser results | [113 passing tests](reports/perf-targets-2026-11-10/final-browser/results.json) |
+| Evidence index | [Manifest, scope and hashes](reports/evidence-manifest.json) |
+| Deployment | [Direct-route and source verification](reports/deployment.json) |
+| Accessibility | [Review notes](docs/accessibility-review.md) |
+| Design review | [Final Impeccable review](reports/perf-targets-2026-11-10/impeccable-final-review.md) |
 
-## Performance and delivery
+Checks include source identity, the actual painted spike and gap, controlled races, gestures, keyboard access, responsive layouts, themes and axe. Passing tests do not certify scientific logger truth, every browser, every local oscillation or a real training-stop decision.
 
-Set `PERF_OUT` to a fresh directory; `npm run perf` compares correct scan/stream/indexed variants with five cold loads and thirty detail/Compare range-hover pairs. Earlier stable three-mode results are under `reports/performance-hover-frame-final/`; latest guarded indexed results under `reports/hover-guarded-performance/`. Different revisions are labelled separately. Hover includes browser pointer input through committed source DOM and a two-RAF frame opportunity, not physical display presentation. Workers rejected throttling; CPU4 applies to the main renderer only. Detail/Compare hover p95 improved from 120.7/209.5 to 88.7/115.1 ms; the 50 ms engineering target remains missed. Cold p95 3089.5 ms, detail zoom 197.1 ms, Compare zoom 241 ms. All intermediate samples and regressions remain available.
+<details>
+<summary><img src="assets/readme/soup-icons/soup-chart.png" width="24" height="24" alt="" /> Performance results and honest limits</summary>
 
-`node scripts/tab-memory.mjs` separately captures Windows renderer/Worker process footprint using PID markers and OS counters. Latest 1M headless sample: 143.7 MiB private committed, 242.3 MiB working set. One sample is not a repeatable memory-saving result. Raw buffers/typed ledger/JS heap/shared browser-GPU memory are distinct scopes, not additive totals. Current paired snapshots are under `reports/tab-memory-headless-pair/`; earlier headed lifecycle results remain separate. Exact before/after runtime inputs are archived under `reports/measurement-sources/`.
+The million-row fixture contains four Float64 source columns totaling **32,000,000 bytes**. Indexes, payloads, heaps and browser process memory are additional scopes.
 
-Large raw traces remain locally; Git/source archives store lossless gzip siblings. Run `node scripts/trace-archives.mjs --unpack` to verify/restore original JSON traces from `reports/trace-archives.json`.
+Two same-source full Chrome trace runs meet all targets. Worst detail/Compare hover p95 is **40.6 / 48.6 ms**; cold is **2531.9 ms** and detail/Compare zoom is **114.8 / 131.4 ms**. Samples are not pooled; the no-trace regime is separate. CPU4 applies to the main renderer; Workers rejected throttling. Hover evidence includes pointer input through committed source DOM and a frame opportunity, not physical display presentation.
 
-Lighthouse runs separately: temporarily install the official CLI with `npm exec --package=lighthouse`, set `LIGHTHOUSE_CLI` to its `cli/index.js`, choose `LIGHTHOUSE_OUT`, then `npm run audit:lighthouse`. Final HTML/JSON reports are under `reports/lighthouse-release-final/`. Its desktop settings differ from the CPU4 comparison; scores do not establish complete accessibility conformance. Full axe incomplete findings and real pixel/SVG checks are under `reports/review-release/a11y-summary.json` and `reports/runtime-review-final/`.
+The latest headless million-row process sample recorded **145.9 MiB private committed** and **245.6 MiB working set**, growing to **319.5 / 588.7 MiB** after 20 transitions. This is an explicit longer-session concern; no memory-saving or leak-freedom claim is made. Raw buffers, JS heap and process memory must not be added together as one total.
 
-[Source repository](https://github.com/Feruum/SoupTask). The user chose a NEW Vercel project, `soup-training-monitor`; existing `souplanding` is separate. `vercel.json` supplies static SPA routing without returning HTML for missing assets. Actual publication URL and direct-route smoke results are recorded in `reports/deployment.json`.
+[Measurements and methodology](docs/performance-results.md) · [Full engineering notes](docs/engineering-notes.md) · [Acceptance status](docs/implementation-status.md)
 
-The submission note must use actual results and distinguish assistant-run verification from human review. Tests cannot certify scientific logger truth, all browsers/viewports, every oscillation or a real training-stop decision. GPU telemetry, real-time logs, artifacts, import/export, authentication and training execution are not fabricated.
+</details>
 
-AI assisted architecture, implementation, tests, browser automation, profiling and documentation. Suggestions were checked against source identities and independent oracles. Saved failures describe accepted corrections; prospective or human checks are never presented as completed assistant evidence. Original foundation documentation is preserved in [scaffold README](docs/scaffold-readme.md).
+<details>
+<summary><img src="assets/readme/soup-icons/soup-recipe.png" width="24" height="24" alt="" /> Architecture, delivery and further reading</summary>
 
-For exact publication of a locally tested build, run `node scripts/prepare-vercel-output.mjs`, then `vercel deploy --prebuilt --prod` for the already-linked project. `node scripts/verify-deployment-build.mjs` checks served HTML/JS/CSS/Worker bytes against build metadata. Deployment is a separate authorized action.
+- [Architecture v2.1](docs/architecture.md), [research](docs/research.md) and [review](docs/review.md) preserve the original decisions and historical witness evidence.
+- [Engineering notes](docs/engineering-notes.md) retain the detailed data pipeline, benchmark commands, memory methodology, trace restoration, Lighthouse setup and deployment workflow previously in the main README.
+- [Submission note](output/pdf/soup-submission-note.pdf) records executed evidence, measured limits and AI assistance.
+- [Scaffold README](docs/scaffold-readme.md) preserves the initial foundation documentation.
+- [README image sources](assets/readme/README.md) identify real application captures and the generated cover.
+
+The app uses static SPA routing on Vercel. There is no backend, database, authentication or training execution. GPU telemetry, live logs, artifacts, import/export and automatic stopping are not implemented.
+
+AI assisted design, implementation and verification. Original-source oracles and saved failures document the checks applied to generated work.
+
+</details>
+
+<p align="center">
+  <img src="assets/kazakh-ornament.png" width="170" alt="Kazakh ram-horn pixel ornament" />
+  <br />
+  <sub>BUILT IN KAZAKHSTAN</sub>
+</p>

@@ -1,0 +1,746 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs",
+      "e2e/cursor-visibility.spec.ts",
+      "e2e/cursor-dom.spec.ts",
+      "e2e/hover-paint.spec.ts",
+      "e2e/hover-layout.spec.ts"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/offscreen-cursor-after-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\offscreen-cursor-after-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/offscreen-cursor-after.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "cursor-dom.spec.ts",
+      "file": "cursor-dom.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "moving source markers does not invalidate unrelated overlay pixels",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2355,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:06.503Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-a934faa523336d894797",
+          "file": "cursor-dom.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "moving the numeric cursor updates persistent source rows without replacing observation DOM",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2338,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:09.026Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-76eecc58855c23fcd1db",
+          "file": "cursor-dom.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "zoom does not recompute immutable whole-run comparison summaries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1985,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:11.385Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-0eca5a019caf67e0a6a6",
+          "file": "cursor-dom.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "source cursor updates keep React out of the settled observation hot path",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1678,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:13.385Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-0d9292ce17864b3c4858",
+          "file": "cursor-dom.spec.ts",
+          "line": 60,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cursor-visibility.spec.ts",
+      "file": "cursor-visibility.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "offscreen cursor canvases defer work and paint the latest exact source when revealed",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7236,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('comparison-lr')\nExpected: \u001b[32m\"4\"\u001b[39m\nReceived: \u001b[31m\"0\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('comparison-lr') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('comparison-lr')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"plot-host\" data-drawn=\"true\" aria-hidden=\"true\" data-plot-top=\"16\" data-focused-run=\"\" data-draw-count=\"5\" data-plot-left=\"66\" data-range-min=\"100\" data-range-max=\"200\" data-plot-width=\"318\" data-view-ready=\"true\" data-plot-height=\"179\" data-testid=\"comparison-lr\" data-cursor-point-count=\"0\" data-cursor-deferred=\"true\" data-y-min=\"-4.314429072536417e-7\" data-y-max=\"0.0000061724447958549116\">…</div>\u001b[22m\n\u001b[2m    13 × unexpected value \"0\"\u001b[22m\n\u001b[2m       - locator resolved to <div class=\"plot-host\" data-drawn=\"true\" aria-hidden=\"true\" data-plot-top=\"16\" data-focused-run=\"\" data-draw-count=\"5\" data-plot-left=\"66\" data-range-min=\"100\" data-range-max=\"200\" data-plot-width=\"318\" data-view-ready=\"true\" data-plot-height=\"179\" data-testid=\"comparison-lr\" data-cursor-point-count=\"0\" data-cursor-deferred=\"false\" data-y-min=\"-4.314429072536417e-7\" data-y-max=\"0.0000061724447958549116\">…</div>\u001b[22m\n\u001b[2m    - unexpected value \"0\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('comparison-lr')\nExpected: \u001b[32m\"4\"\u001b[39m\nReceived: \u001b[31m\"0\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('comparison-lr') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('comparison-lr')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"plot-host\" data-drawn=\"true\" aria-hidden=\"true\" data-plot-top=\"16\" data-focused-run=\"\" data-draw-count=\"5\" data-plot-left=\"66\" data-range-min=\"100\" data-range-max=\"200\" data-plot-width=\"318\" data-view-ready=\"true\" data-plot-height=\"179\" data-testid=\"comparison-lr\" data-cursor-point-count=\"0\" data-cursor-deferred=\"true\" data-y-min=\"-4.314429072536417e-7\" data-y-max=\"0.0000061724447958549116\">…</div>\u001b[22m\n\u001b[2m    13 × unexpected value \"0\"\u001b[22m\n\u001b[2m       - locator resolved to <div class=\"plot-host\" data-drawn=\"true\" aria-hidden=\"true\" data-plot-top=\"16\" data-focused-run=\"\" data-draw-count=\"5\" data-plot-left=\"66\" data-range-min=\"100\" data-range-max=\"200\" data-plot-width=\"318\" data-view-ready=\"true\" data-plot-height=\"179\" data-testid=\"comparison-lr\" data-cursor-point-count=\"0\" data-cursor-deferred=\"false\" data-y-min=\"-4.314429072536417e-7\" data-y-max=\"0.0000061724447958549116\">…</div>\u001b[22m\n\u001b[2m    - unexpected value \"0\"\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-visibility.spec.ts:29:50",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-visibility.spec.ts",
+                      "column": 50,
+                      "line": 29
+                    },
+                    "snippet": " \u001b[90m 27 |\u001b[39m  expect([\u001b[33m...\u001b[39m\u001b[36mnew\u001b[39m \u001b[33mSet\u001b[39m(plots)]\u001b[33m,\u001b[39m\u001b[32m'only the visible canvas should process source marker paths'\u001b[39m)\u001b[33m.\u001b[39mtoEqual([\u001b[32m'comparison-loss'\u001b[39m])\n \u001b[90m 28 |\u001b[39m  \u001b[36mawait\u001b[39m lr\u001b[33m.\u001b[39mscrollIntoViewIfNeeded()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 29 |\u001b[39m  \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'comparison-lr'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-cursor-point-count'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'4'\u001b[39m)\n \u001b[90m    |\u001b[39m                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 30 |\u001b[39m  \u001b[36mconst\u001b[39m source\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-testid=\"comparison-cursor-readout\"] tbody'\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-source-metric=\"lr\"]'\u001b[39m)\u001b[33m.\u001b[39mfirst()\n \u001b[90m 31 |\u001b[39m  \u001b[36mconst\u001b[39m value\u001b[33m=\u001b[39m\u001b[33mNumber\u001b[39m((\u001b[36mawait\u001b[39m source\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'title'\u001b[39m))\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mreplace(\u001b[32m'Exact source value '\u001b[39m\u001b[33m,\u001b[39m\u001b[32m''\u001b[39m))\n \u001b[90m 32 |\u001b[39m  \u001b[36mconst\u001b[39m ink\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'comparison-lr'\u001b[39m)\u001b[33m.\u001b[39mevaluate((element\u001b[33m,\u001b[39mvalue)\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-visibility.spec.ts",
+                        "column": 50,
+                        "line": 29
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('comparison-lr')\nExpected: \u001b[32m\"4\"\u001b[39m\nReceived: \u001b[31m\"0\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('comparison-lr') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('comparison-lr')\u001b[22m\n\u001b[2m    - locator resolved to <div class=\"plot-host\" data-drawn=\"true\" aria-hidden=\"true\" data-plot-top=\"16\" data-focused-run=\"\" data-draw-count=\"5\" data-plot-left=\"66\" data-range-min=\"100\" data-range-max=\"200\" data-plot-width=\"318\" data-view-ready=\"true\" data-plot-height=\"179\" data-testid=\"comparison-lr\" data-cursor-point-count=\"0\" data-cursor-deferred=\"true\" data-y-min=\"-4.314429072536417e-7\" data-y-max=\"0.0000061724447958549116\">…</div>\u001b[22m\n\u001b[2m    13 × unexpected value \"0\"\u001b[22m\n\u001b[2m       - locator resolved to <div class=\"plot-host\" data-drawn=\"true\" aria-hidden=\"true\" data-plot-top=\"16\" data-focused-run=\"\" data-draw-count=\"5\" data-plot-left=\"66\" data-range-min=\"100\" data-range-max=\"200\" data-plot-width=\"318\" data-view-ready=\"true\" data-plot-height=\"179\" data-testid=\"comparison-lr\" data-cursor-point-count=\"0\" data-cursor-deferred=\"false\" data-y-min=\"-4.314429072536417e-7\" data-y-max=\"0.0000061724447958549116\">…</div>\u001b[22m\n\u001b[2m    - unexpected value \"0\"\u001b[22m\n\n\n  27 |  expect([...new Set(plots)],'only the visible canvas should process source marker paths').toEqual(['comparison-loss'])\n  28 |  await lr.scrollIntoViewIfNeeded()\n> 29 |  await expect(page.getByTestId('comparison-lr')).toHaveAttribute('data-cursor-point-count','4')\n     |                                                  ^\n  30 |  const source=page.locator('[data-testid=\"comparison-cursor-readout\"] tbody').first().locator('[data-source-metric=\"lr\"]').first()\n  31 |  const value=Number((await source.getAttribute('title'))!.replace('Exact source value ',''))\n  32 |  const ink=await page.getByTestId('comparison-lr').evaluate((element,value)=>{\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-visibility.spec.ts:29:50"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:15.104Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\offscreen-cursor-after-artifacts\\cursor-visibility-offscree-fca6f--exact-source-when-revealed\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\offscreen-cursor-after-artifacts\\cursor-visibility-offscree-fca6f--exact-source-when-revealed\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\offscreen-cursor-after-artifacts\\cursor-visibility-offscree-fca6f--exact-source-when-revealed\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-visibility.spec.ts",
+                    "column": 50,
+                    "line": 29
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e6d397be696e7119d1bc-f33ba2f82390abe0c694",
+          "file": "cursor-visibility.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "hover-layout.spec.ts",
+      "file": "hover-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "/dashboard keeps source actions in place while the cursor updates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1802,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:25.070Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "preview-layout",
+                      "contentType": "application/json",
+                      "body": "eyJyb3V0ZSI6Ii9kYXNoYm9hcmQiLCJiZWZvcmUiOjEwMDQuMjY1NjI1LCJhZnRlciI6MTAwNC4yNjU2MjV9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-fb81f6456f3c4d300960",
+          "file": "hover-layout.spec.ts",
+          "line": 36,
+          "column": 46
+        },
+        {
+          "title": "/runs keeps source actions in place while the cursor updates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1636,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:27.064Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "preview-layout",
+                      "contentType": "application/json",
+                      "body": "eyJyb3V0ZSI6Ii9ydW5zIiwiYmVmb3JlIjozMDc2LjI4MTI1LCJhZnRlciI6MzA3Ni4yODEyNX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-1885cf057833d661b67d",
+          "file": "hover-layout.spec.ts",
+          "line": 36,
+          "column": 46
+        },
+        {
+          "title": "full run preserves the following metric position at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1762,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:28.717Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJjb21wYXJpc29uIjpmYWxzZSwiYmVmb3JlIjoxOTg4LjQ2ODc1LCJhZnRlciI6MTk4OC40Njg3NX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-6516323f78b49bbf938b",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 74
+        },
+        {
+          "title": "four-run duplicate comparison preserves the following metric position at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2297,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:30.495Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJjb21wYXJpc29uIjp0cnVlLCJiZWZvcmUiOjIwNzEuMTg3NSwiYWZ0ZXIiOjIwNzEuMTg3NX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-9cad50f2f0e1c16853b5",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 74
+        },
+        {
+          "title": "full run preserves the following metric position at 1440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1766,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:32.810Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MTQ0MCwiY29tcGFyaXNvbiI6ZmFsc2UsImJlZm9yZSI6MTU4OC4yODEyNSwiYWZ0ZXIiOjE1ODguMjgxMjV9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-85f657ff09d7d04980a1",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 74
+        },
+        {
+          "title": "four-run duplicate comparison preserves the following metric position at 1440px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2279,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:34.588Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MTQ0MCwiY29tcGFyaXNvbiI6dHJ1ZSwiYmVmb3JlIjoxNDcwLjI4MTI1LCJhZnRlciI6MTQ3MC4yODEyNX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-56b4bfcd49488ac745c7",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 74
+        },
+        {
+          "title": "the visible recorded spike explains the linear axis and zoom keeps its exact source",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2111,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:36.877Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-c5ff75e321b02cc0783f",
+          "file": "hover-layout.spec.ts",
+          "line": 110,
+          "column": 1
+        },
+        {
+          "title": "recorded nonfinite measurements explain their snapshot counts and gap semantics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3184,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:39.003Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-ee90bbb54b9e2a61f2b2",
+          "file": "hover-layout.spec.ts",
+          "line": 131,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "hover-paint.spec.ts",
+      "file": "hover-paint.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "accepted hover reaches a rendered frame with original observations: /runs/kazakh-sft-005",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7574,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:42.222Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "accepted-hover-timing",
+                      "contentType": "application/json",
+                      "body": "ewogICJmcmFtZSI6IHsKICAgICJuYW1lIjogInNvdXA6aG92ZXItZnJhbWUiLAogICAgImVudHJ5VHlwZSI6ICJtYXJrIiwKICAgICJzdGFydFRpbWUiOiA1MjgyLjE5OTk5OTk5OTI1NSwKICAgICJkdXJhdGlvbiI6IDAsCiAgICAibmF2aWdhdGlvbklkIjogOTg3NCwKICAgICJkZXRhaWwiOiB7CiAgICAgICJ3b3Jrc3BhY2VFcG9jaCI6IDEsCiAgICAgICJ2aWV3U2VxIjogNCwKICAgICAgImhvdmVyU2VxIjogNSwKICAgICAgInN0ZXAiOiA0OTk5OTkuNSwKICAgICAgInJlcXVlc3RUb0FjY2VwdGVkTXMiOiAxLAogICAgICAicmVxdWVzdFRvRnJhbWVNcyI6IDExNi44OTk5OTk5OTg1MDk4OCwKICAgICAgInRvb2x0aXBDb3VudCI6IDMKICAgIH0KICB9LAogICJjb21taXQiOiB7CiAgICAibmFtZSI6ICJzb3VwOmhvdmVyLWRvbS1jb21taXQiLAogICAgImVudHJ5VHlwZSI6ICJtYXJrIiwKICAgICJzdGFydFRpbWUiOiA1MTcyLjMwMDAwMDAwMDc0NSwKICAgICJkdXJhdGlvbiI6IDAsCiAgICAibmF2aWdhdGlvbklkIjogOTg3NCwKICAgICJkZXRhaWwiOiB7CiAgICAgICJ3b3Jrc3BhY2VFcG9jaCI6IDEsCiAgICAgICJ2aWV3U2VxIjogNCwKICAgICAgImhvdmVyU2VxIjogNSwKICAgICAgInN0ZXAiOiA0OTk5OTkuNQogICAgfQogIH0sCiAgImFjY2VwdGVkIjogNQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "37d2ab1e4f1056a08c51-ecd02bc0fd242bc4906d",
+          "file": "hover-paint.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "accepted hover reaches a rendered frame with original observations: /compare?runs=kazakh-sft-005,kazakh-sft-001",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6616,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T12:18:49.810Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "accepted-hover-timing",
+                      "contentType": "application/json",
+                      "body": "ewogICJmcmFtZSI6IHsKICAgICJuYW1lIjogInNvdXA6aG92ZXItZnJhbWUiLAogICAgImVudHJ5VHlwZSI6ICJtYXJrIiwKICAgICJzdGFydFRpbWUiOiA0NjA4LjkwMDAwMDAwMDM3MjUsCiAgICAiZHVyYXRpb24iOiAwLAogICAgIm5hdmlnYXRpb25JZCI6IDI3MSwKICAgICJkZXRhaWwiOiB7CiAgICAgICJ3b3Jrc3BhY2VFcG9jaCI6IDEsCiAgICAgICJ2aWV3U2VxIjogNCwKICAgICAgImhvdmVyU2VxIjogNSwKICAgICAgInN0ZXAiOiA0OTk5OTkuNSwKICAgICAgInJlcXVlc3RUb0FjY2VwdGVkTXMiOiAxLjA5OTk5OTk5OTYyNzQ3MSwKICAgICAgInJlcXVlc3RUb0ZyYW1lTXMiOiA5My40MDAwMDAwMDAzNzI1MywKICAgICAgInRvb2x0aXBDb3VudCI6IDEKICAgIH0KICB9LAogICJjb21taXQiOiB7CiAgICAibmFtZSI6ICJzb3VwOmhvdmVyLWRvbS1jb21taXQiLAogICAgImVudHJ5VHlwZSI6ICJtYXJrIiwKICAgICJzdGFydFRpbWUiOiA0NTIyLjQwMDAwMDAwMDM3MjUsCiAgICAiZHVyYXRpb24iOiAwLAogICAgIm5hdmlnYXRpb25JZCI6IDI3MSwKICAgICJkZXRhaWwiOiB7CiAgICAgICJ3b3Jrc3BhY2VFcG9jaCI6IDEsCiAgICAgICJ2aWV3U2VxIjogNCwKICAgICAgImhvdmVyU2VxIjogNSwKICAgICAgInN0ZXAiOiA0OTk5OTkuNQogICAgfQogIH0sCiAgImFjY2VwdGVkIjogNQp9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "37d2ab1e4f1056a08c51-cad742b425cc2c91d5e0",
+          "file": "hover-paint.spec.ts",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T12:18:04.694Z",
+    "duration": 53926.021,
+    "expected": 14,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs",
+      "e2e/shared-readout-geometry.spec.ts"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/table-geometry-before-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\table-geometry-before-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/table-geometry-before.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "shared-readout-geometry.spec.ts",
+      "file": "shared-readout-geometry.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "source table columns stay fixed when placeholder rows become measured values",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2839,
+                  "error": {
+                    "message": "Error: column widths must not reflow on source updates\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.5\u001b[39m\nReceived:   \u001b[31m30.03125\u001b[39m",
+                    "stack": "Error: column widths must not reflow on source updates\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.5\u001b[39m\nReceived:   \u001b[31m30.03125\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\shared-readout-geometry.spec.ts:16:110",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\shared-readout-geometry.spec.ts",
+                      "column": 110,
+                      "line": 16
+                    },
+                    "snippet": " \u001b[90m 14 |\u001b[39m  expect(before)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m7\u001b[39m)\n \u001b[90m 15 |\u001b[39m  \u001b[36mfor\u001b[39m(\u001b[36mlet\u001b[39m index\u001b[33m=\u001b[39m\u001b[35m0\u001b[39m\u001b[33m;\u001b[39mindex\u001b[33m<\u001b[39m\u001b[33mbefore\u001b[39m\u001b[33m.\u001b[39mlength\u001b[33m;\u001b[39mindex\u001b[33m++\u001b[39m){\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 16 |\u001b[39m   expect(\u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mabs(before[index]\u001b[33m.\u001b[39mwidth\u001b[33m-\u001b[39mafter[index]\u001b[33m.\u001b[39mwidth)\u001b[33m,\u001b[39m\u001b[32m'column widths must not reflow on source updates'\u001b[39m)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m.5\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 17 |\u001b[39m   expect(\u001b[33mMath\u001b[39m\u001b[33m.\u001b[39mabs(before[index]\u001b[33m.\u001b[39mx\u001b[33m-\u001b[39mafter[index]\u001b[33m.\u001b[39mx)\u001b[33m,\u001b[39m\u001b[32m'columns must not jump horizontally'\u001b[39m)\u001b[33m.\u001b[39mtoBeLessThan(\u001b[35m.5\u001b[39m)\n \u001b[90m 18 |\u001b[39m  }\n \u001b[90m 19 |\u001b[39m })"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\shared-readout-geometry.spec.ts",
+                        "column": 110,
+                        "line": 16
+                      },
+                      "message": "Error: column widths must not reflow on source updates\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.5\u001b[39m\nReceived:   \u001b[31m30.03125\u001b[39m\n\n  14 |  expect(before).toHaveLength(7)\n  15 |  for(let index=0;index<before.length;index++){\n> 16 |   expect(Math.abs(before[index].width-after[index].width),'column widths must not reflow on source updates').toBeLessThan(.5)\n     |                                                                                                              ^\n  17 |   expect(Math.abs(before[index].x-after[index].x),'columns must not jump horizontally').toBeLessThan(.5)\n  18 |  }\n  19 | })\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\shared-readout-geometry.spec.ts:16:110"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:38:31.384Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\table-geometry-before-artifacts\\shared-readout-geometry-so-beb85-rows-become-measured-values\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\table-geometry-before-artifacts\\shared-readout-geometry-so-beb85-rows-become-measured-values\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\table-geometry-before-artifacts\\shared-readout-geometry-so-beb85-rows-become-measured-values\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\shared-readout-geometry.spec.ts",
+                    "column": 110,
+                    "line": 16
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "563b20019b67ad40ce5c-27700538564dc339fdc7",
+          "file": "shared-readout-geometry.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T11:38:29.600Z",
+    "duration": 6083.864,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

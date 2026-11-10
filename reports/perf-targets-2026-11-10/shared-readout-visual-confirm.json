@@ -1,0 +1,315 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs",
+      "e2e/shared-readout.spec.ts",
+      "e2e/cursor-invariance.spec.ts",
+      "e2e/hover-layout.spec.ts"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/shared-readout-visual-confirm-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\shared-readout-visual-confirm-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/shared-readout-visual-confirm.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "cursor-invariance.spec.ts",
+      "file": "cursor-invariance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "moving over the same original row changes distance without rewriting source identity or empty slots",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2641,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:32:47.599Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "14c78d49399d1b0d5977-a598355c9bcbaf0b2c74",
+          "file": "cursor-invariance.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "hover-layout.spec.ts",
+      "file": "hover-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "settled source hover confines layout to readouts instead of relaying it through the document",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1720,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:32:50.422Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "settled-hover-layout.json",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJhcmdzIjogewogICAgICAiYmVnaW5EYXRhIjogewogICAgICAgICJkaXJ0eU9iamVjdHMiOiAzLAogICAgICAgICJmcmFtZSI6ICI1MDZEODkyRERDOUEyMzg4QUNBNzlCMjA1NjRDRjUzMiIsCiAgICAgICAgInBhcnRpYWxMYXlvdXQiOiB0cnVlLAogICAgICAgICJ0b3RhbE9iamVjdHMiOiA3CiAgICAgIH0sCiAgICAgICJlbmREYXRhIjogewogICAgICAgICJsYXlvdXRSb290cyI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImRlcHRoIjogMTYsCiAgICAgICAgICAgICJub2RlSWQiOiAxNSwKICAgICAgICAgICAgIm5vZGVOYW1lIjogIkRJViBjbGFzcz0nX3NoYXJlZFZpZXdwb3J0X210dm5rXzQ2JyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAxMDc4LjI4MTI1LAogICAgICAgICAgICAgICAgMTIxMCwKICAgICAgICAgICAgICAgIDEwNzguMjgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMTM2Mi4yODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDEzNjIuMjgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJkZXB0aCI6IDE1LAogICAgICAgICAgICAibm9kZUlkIjogMTYsCiAgICAgICAgICAgICJub2RlTmFtZSI6ICJESVYgY2xhc3M9J19jb250ZW50X210dm5rXzE4IGNoYXJ0LWhvdmVyLXZhbHVlJyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAxMDQyLjI4MTI1LAogICAgICAgICAgICAgICAgMTIxMCwKICAgICAgICAgICAgICAgIDEwNDIuMjgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMTM5OC4yODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDEzOTguMjgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIH0sCiAgICAiY2F0IjogImRldnRvb2xzLnRpbWVsaW5lIiwKICAgICJkdXIiOiAzMTcsCiAgICAibmFtZSI6ICJMYXlvdXQiLAogICAgInBoIjogIlgiLAogICAgInBpZCI6IDI3MTYwLAogICAgInRkdXIiOiAzMTcsCiAgICAidGlkIjogODU3NiwKICAgICJ0cyI6IDEzMTA3ODI5NzIzLAogICAgInR0cyI6IDU4NTI5NQogIH0sCiAgewogICAgImFyZ3MiOiB7CiAgICAgICJiZWdpbkRhdGEiOiB7CiAgICAgICAgImRpcnR5T2JqZWN0cyI6IDE5LAogICAgICAgICJmcmFtZSI6ICI1MDZEODkyRERDOUEyMzg4QUNBNzlCMjA1NjRDRjUzMiIsCiAgICAgICAgInBhcnRpYWxMYXlvdXQiOiB0cnVlLAogICAgICAgICJ0b3RhbE9iamVjdHMiOiA3NgogICAgICB9LAogICAgICAiZW5kRGF0YSI6IHsKICAgICAgICAibGF5b3V0Um9vdHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJkZXB0aCI6IDE1LAogICAgICAgICAgICAibm9kZUlkIjogMTYsCiAgICAgICAgICAgICJub2RlTmFtZSI6ICJESVYgY2xhc3M9J19jb250ZW50X210dm5rXzE4IGNoYXJ0LWhvdmVyLXZhbHVlJyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAxMDQyLjI4MTI1LAogICAgICAgICAgICAgICAgMTIxMCwKICAgICAgICAgICAgICAgIDEwNDIuMjgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMTM5OC4yODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDEzOTguMjgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIH0sCiAgICAiY2F0IjogImRldnRvb2xzLnRpbWVsaW5lIiwKICAgICJkdXIiOiA1NDAsCiAgICAibmFtZSI6ICJMYXlvdXQiLAogICAgInBoIjogIlgiLAogICAgInBpZCI6IDI3MTYwLAogICAgInRkdXIiOiA1NDAsCiAgICAidGlkIjogODU3NiwKICAgICJ0cyI6IDEzMTA3ODM2NDg1LAogICAgInR0cyI6IDU5MTc3OQogIH0KXQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-48ecde7e2cac0b00d0d5",
+          "file": "hover-layout.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "shared-readout.spec.ts",
+      "file": "shared-readout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Compare has one shared original-row table with every metric and exact Pin provenance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2381,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:32:52.175Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d9a4badc11214fe4aef0-4f9e3dea9b3b85968a41",
+          "file": "shared-readout.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "shared readout preserves NaN, duplicate provenance and contained scrolling: dark 1440",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1825,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:32:54.572Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d9a4badc11214fe4aef0-972bcca93e0966af9742",
+          "file": "shared-readout.spec.ts",
+          "line": 34,
+          "column": 67
+        },
+        {
+          "title": "shared readout preserves NaN, duplicate provenance and contained scrolling: light 320",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1774,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:32:56.421Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d9a4badc11214fe4aef0-242cdc247f9eaccc083e",
+          "file": "shared-readout.spec.ts",
+          "line": 34,
+          "column": 67
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T11:32:45.883Z",
+    "duration": 13440.360999999999,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

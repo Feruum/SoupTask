@@ -1,0 +1,701 @@
+{
+  "entries": [
+    {
+      "id": "0:0",
+      "auditIndex": 0,
+      "test": "dark 320px five-screen axe and responsive acceptance",
+      "url": "http://127.0.0.1:4176/dashboard",
+      "theme": "dark",
+      "viewport": {
+        "width": 320,
+        "height": 1000
+      },
+      "selector": ".active > span:nth-child(3)",
+      "original": {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "7.9pt (10.5px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [],
+            "impact": "serious",
+            "message": "Element's background color could not be determined because it is overlapped by another element"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<span>Dashboard</span>",
+        "target": [
+          ".active > span:nth-child(3)"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+      },
+      "observations": [
+        {
+          "text": "Dashboard",
+          "color": [
+            231,
+            162,
+            132,
+            255
+          ],
+          "opacity": 1,
+          "hidden": false,
+          "threshold": 4.5,
+          "fontSize": 10.5,
+          "fontWeight": "400",
+          "rect": {
+            "x": 19.546875,
+            "y": 971.4375,
+            "width": 52.90625,
+            "height": 13,
+            "top": 971.4375,
+            "right": 72.453125,
+            "bottom": 984.4375,
+            "left": 19.546875
+          },
+          "clip": {
+            "x": 20,
+            "y": 972,
+            "width": 52,
+            "height": 12
+          },
+          "status": "verified-pass",
+          "original": "reports/perf-targets-2026-11-10/contrast-pilot/pixels/0-0-0-original.png",
+          "background": "reports/perf-targets-2026-11-10/contrast-pilot/pixels/0-0-0-background.png",
+          "worstContrast": 7.076436931418423,
+          "worstBackground": [
+            56,
+            33,
+            24
+          ],
+          "backgroundColorCount": 1
+        }
+      ],
+      "geometry": {
+        "html": "<span>Dashboard</span>",
+        "runs": [
+          {
+            "text": "Dashboard",
+            "color": [
+              231,
+              162,
+              132,
+              255
+            ],
+            "opacity": 1,
+            "hidden": false,
+            "threshold": 4.5,
+            "fontSize": 10.5,
+            "fontWeight": "400",
+            "rect": {
+              "x": 19.546875,
+              "y": 971.4375,
+              "width": 52.90625,
+              "height": 13,
+              "top": 971.4375,
+              "right": 72.453125,
+              "bottom": 984.4375,
+              "left": 19.546875
+            },
+            "clip": {
+              "x": 20,
+              "y": 972,
+              "width": 52,
+              "height": 12
+            }
+          }
+        ]
+      },
+      "disposition": "verified-text"
+    },
+    {
+      "id": "1:0",
+      "auditIndex": 1,
+      "test": "dark 320px five-screen axe and responsive acceptance",
+      "url": "http://127.0.0.1:4176/runs",
+      "theme": "dark",
+      "viewport": {
+        "width": 320,
+        "height": 1000
+      },
+      "selector": ".active > span:nth-child(3)",
+      "original": {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "7.9pt (10.5px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [],
+            "impact": "serious",
+            "message": "Element's background color could not be determined because it is overlapped by another element"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<span>Training runs</span>",
+        "target": [
+          ".active > span:nth-child(3)"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+      },
+      "observations": [
+        {
+          "text": "Training runs",
+          "color": [
+            231,
+            162,
+            132,
+            255
+          ],
+          "opacity": 1,
+          "hidden": false,
+          "threshold": 4.5,
+          "fontSize": 10.5,
+          "fontWeight": "400",
+          "rect": {
+            "x": 90.484375,
+            "y": 971.4375,
+            "width": 63.015625,
+            "height": 13,
+            "top": 971.4375,
+            "right": 153.5,
+            "bottom": 984.4375,
+            "left": 90.484375
+          },
+          "clip": {
+            "x": 91,
+            "y": 972,
+            "width": 62,
+            "height": 12
+          },
+          "status": "verified-pass",
+          "original": "reports/perf-targets-2026-11-10/contrast-pilot/pixels/1-0-0-original.png",
+          "background": "reports/perf-targets-2026-11-10/contrast-pilot/pixels/1-0-0-background.png",
+          "worstContrast": 7.076436931418423,
+          "worstBackground": [
+            56,
+            33,
+            24
+          ],
+          "backgroundColorCount": 1
+        }
+      ],
+      "geometry": {
+        "html": "<span>Training runs</span>",
+        "runs": [
+          {
+            "text": "Training runs",
+            "color": [
+              231,
+              162,
+              132,
+              255
+            ],
+            "opacity": 1,
+            "hidden": false,
+            "threshold": 4.5,
+            "fontSize": 10.5,
+            "fontWeight": "400",
+            "rect": {
+              "x": 90.484375,
+              "y": 971.4375,
+              "width": 63.015625,
+              "height": 13,
+              "top": 971.4375,
+              "right": 153.5,
+              "bottom": 984.4375,
+              "left": 90.484375
+            },
+            "clip": {
+              "x": 91,
+              "y": 972,
+              "width": 62,
+              "height": 12
+            }
+          }
+        ]
+      },
+      "disposition": "verified-text"
+    },
+    {
+      "id": "2:0",
+      "auditIndex": 2,
+      "test": "dark 320px five-screen axe and responsive acceptance",
+      "url": "http://127.0.0.1:4176/runs/kazakh-sft-005",
+      "theme": "dark",
+      "viewport": {
+        "width": 320,
+        "height": 1000
+      },
+      "selector": ".active > span:nth-child(3)",
+      "original": {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "7.9pt (10.5px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [],
+            "impact": "serious",
+            "message": "Element's background color could not be determined because it is overlapped by another element"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<span>Training runs</span>",
+        "target": [
+          ".active > span:nth-child(3)"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+      },
+      "observations": [
+        {
+          "text": "Training runs",
+          "color": [
+            231,
+            162,
+            132,
+            255
+          ],
+          "opacity": 1,
+          "hidden": false,
+          "threshold": 4.5,
+          "fontSize": 10.5,
+          "fontWeight": "400",
+          "rect": {
+            "x": 90.484375,
+            "y": 971.4375,
+            "width": 63.015625,
+            "height": 13,
+            "top": 971.4375,
+            "right": 153.5,
+            "bottom": 984.4375,
+            "left": 90.484375
+          },
+          "clip": {
+            "x": 91,
+            "y": 972,
+            "width": 62,
+            "height": 12
+          },
+          "status": "verified-pass",
+          "original": "reports/perf-targets-2026-11-10/contrast-pilot/pixels/2-0-0-original.png",
+          "background": "reports/perf-targets-2026-11-10/contrast-pilot/pixels/2-0-0-background.png",
+          "worstContrast": 7.076436931418423,
+          "worstBackground": [
+            56,
+            33,
+            24
+          ],
+          "backgroundColorCount": 1
+        }
+      ],
+      "geometry": {
+        "html": "<span>Training runs</span>",
+        "runs": [
+          {
+            "text": "Training runs",
+            "color": [
+              231,
+              162,
+              132,
+              255
+            ],
+            "opacity": 1,
+            "hidden": false,
+            "threshold": 4.5,
+            "fontSize": 10.5,
+            "fontWeight": "400",
+            "rect": {
+              "x": 90.484375,
+              "y": 971.4375,
+              "width": 63.015625,
+              "height": 13,
+              "top": 971.4375,
+              "right": 153.5,
+              "bottom": 984.4375,
+              "left": 90.484375
+            },
+            "clip": {
+              "x": 91,
+              "y": 972,
+              "width": 62,
+              "height": 12
+            }
+          }
+        ]
+      },
+      "disposition": "verified-text"
+    },
+    {
+      "id": "3:0",
+      "auditIndex": 3,
+      "test": "dark 320px five-screen axe and responsive acceptance",
+      "url": "http://127.0.0.1:4176/compare?runs=kazakh-sft-005,kazakh-sft-006",
+      "theme": "dark",
+      "viewport": {
+        "width": 320,
+        "height": 1000
+      },
+      "selector": ".active > span:nth-child(3)",
+      "original": {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "7.9pt (10.5px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [],
+            "impact": "serious",
+            "message": "Element's background color could not be determined because it is overlapped by another element"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<span>Compare</span>",
+        "target": [
+          ".active > span:nth-child(3)"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+      },
+      "observations": [
+        {
+          "text": "Compare",
+          "color": [
+            231,
+            162,
+            132,
+            255
+          ],
+          "opacity": 1,
+          "hidden": false,
+          "threshold": 4.5,
+          "fontSize": 10.5,
+          "fontWeight": "400",
+          "rect": {
+            "x": 175.734375,
+            "y": 971.4375,
+            "width": 44.515625,
+            "height": 13,
+            "top": 971.4375,
+            "right": 220.25,
+            "bottom": 984.4375,
+            "left": 175.734375
+          },
+          "clip": {
+            "x": 176,
+            "y": 972,
+            "width": 44,
+            "height": 12
+          },
+          "status": "verified-pass",
+          "original": "reports/perf-targets-2026-11-10/contrast-pilot/pixels/3-0-0-original.png",
+          "background": "reports/perf-targets-2026-11-10/contrast-pilot/pixels/3-0-0-background.png",
+          "worstContrast": 7.076436931418423,
+          "worstBackground": [
+            56,
+            33,
+            24
+          ],
+          "backgroundColorCount": 1
+        }
+      ],
+      "geometry": {
+        "html": "<span>Compare</span>",
+        "runs": [
+          {
+            "text": "Compare",
+            "color": [
+              231,
+              162,
+              132,
+              255
+            ],
+            "opacity": 1,
+            "hidden": false,
+            "threshold": 4.5,
+            "fontSize": 10.5,
+            "fontWeight": "400",
+            "rect": {
+              "x": 175.734375,
+              "y": 971.4375,
+              "width": 44.515625,
+              "height": 13,
+              "top": 971.4375,
+              "right": 220.25,
+              "bottom": 984.4375,
+              "left": 175.734375
+            },
+            "clip": {
+              "x": 176,
+              "y": 972,
+              "width": 44,
+              "height": 12
+            }
+          }
+        ]
+      },
+      "disposition": "verified-text"
+    },
+    {
+      "id": "4:0",
+      "auditIndex": 4,
+      "test": "dark 320px five-screen axe and responsive acceptance",
+      "url": "http://127.0.0.1:4176/data-quality",
+      "theme": "dark",
+      "viewport": {
+        "width": 320,
+        "height": 1000
+      },
+      "selector": ".active > span:nth-child(3)",
+      "original": {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "7.9pt (10.5px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [],
+            "impact": "serious",
+            "message": "Element's background color could not be determined because it is overlapped by another element"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<span>Data quality</span>",
+        "target": [
+          ".active > span:nth-child(3)"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+      },
+      "observations": [
+        {
+          "text": "Data quality",
+          "color": [
+            231,
+            162,
+            132,
+            255
+          ],
+          "opacity": 1,
+          "hidden": false,
+          "threshold": 4.5,
+          "fontSize": 10.5,
+          "fontWeight": "400",
+          "rect": {
+            "x": 245.34375,
+            "y": 971.4375,
+            "width": 57.296875,
+            "height": 13,
+            "top": 971.4375,
+            "right": 302.640625,
+            "bottom": 984.4375,
+            "left": 245.34375
+          },
+          "clip": {
+            "x": 246,
+            "y": 972,
+            "width": 56,
+            "height": 12
+          },
+          "status": "verified-pass",
+          "original": "reports/perf-targets-2026-11-10/contrast-pilot/pixels/4-0-0-original.png",
+          "background": "reports/perf-targets-2026-11-10/contrast-pilot/pixels/4-0-0-background.png",
+          "worstContrast": 7.076436931418423,
+          "worstBackground": [
+            56,
+            33,
+            24
+          ],
+          "backgroundColorCount": 1
+        }
+      ],
+      "geometry": {
+        "html": "<span>Data quality</span>",
+        "runs": [
+          {
+            "text": "Data quality",
+            "color": [
+              231,
+              162,
+              132,
+              255
+            ],
+            "opacity": 1,
+            "hidden": false,
+            "threshold": 4.5,
+            "fontSize": 10.5,
+            "fontWeight": "400",
+            "rect": {
+              "x": 245.34375,
+              "y": 971.4375,
+              "width": 57.296875,
+              "height": 13,
+              "top": 971.4375,
+              "right": 302.640625,
+              "bottom": 984.4375,
+              "left": 245.34375
+            },
+            "clip": {
+              "x": 246,
+              "y": 972,
+              "width": 56,
+              "height": 12
+            }
+          }
+        ]
+      },
+      "disposition": "verified-text"
+    },
+    {
+      "id": "5:0",
+      "auditIndex": 5,
+      "test": "dark 768px five-screen axe and responsive acceptance",
+      "url": "http://127.0.0.1:4176/dashboard",
+      "theme": "dark",
+      "viewport": {
+        "width": 768,
+        "height": 1000
+      },
+      "selector": ".active > span:nth-child(3)",
+      "original": {
+        "any": [
+          {
+            "id": "color-contrast",
+            "data": {
+              "contrastRatio": 0,
+              "fontSize": "10.5pt (14px)",
+              "fontWeight": "normal",
+              "messageKey": "bgOverlap",
+              "expectedContrastRatio": "4.5:1"
+            },
+            "relatedNodes": [],
+            "impact": "serious",
+            "message": "Element's background color could not be determined because it is overlapped by another element"
+          }
+        ],
+        "all": [],
+        "none": [],
+        "impact": "serious",
+        "html": "<span>Dashboard</span>",
+        "target": [
+          ".active > span:nth-child(3)"
+        ],
+        "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it is overlapped by another element"
+      },
+      "observations": [
+        {
+          "text": "Dashboard",
+          "color": [
+            231,
+            162,
+            132,
+            255
+          ],
+          "opacity": 1,
+          "hidden": false,
+          "threshold": 4.5,
+          "fontSize": 14,
+          "fontWeight": "400",
+          "rect": {
+            "x": 58,
+            "y": 179,
+            "width": 70.953125,
+            "height": 17,
+            "top": 179,
+            "right": 128.953125,
+            "bottom": 196,
+            "left": 58
+          },
+          "clip": {
+            "x": 58,
+            "y": 179,
+            "width": 70,
+            "height": 17
+          },
+          "status": "verified-pass",
+          "original": "reports/perf-targets-2026-11-10/contrast-pilot/pixels/5-0-0-original.png",
+          "background": "reports/perf-targets-2026-11-10/contrast-pilot/pixels/5-0-0-background.png",
+          "worstContrast": 7.076436931418423,
+          "worstBackground": [
+            56,
+            33,
+            24
+          ],
+          "backgroundColorCount": 1
+        }
+      ],
+      "geometry": {
+        "html": "<span>Dashboard</span>",
+        "runs": [
+          {
+            "text": "Dashboard",
+            "color": [
+              231,
+              162,
+              132,
+              255
+            ],
+            "opacity": 1,
+            "hidden": false,
+            "threshold": 4.5,
+            "fontSize": 14,
+            "fontWeight": "400",
+            "rect": {
+              "x": 58,
+              "y": 179,
+              "width": 70.953125,
+              "height": 17,
+              "top": 179,
+              "right": 128.953125,
+              "bottom": 196,
+              "left": 58
+            },
+            "clip": {
+              "x": 58,
+              "y": 179,
+              "width": 70,
+              "height": 17
+            }
+          }
+        ]
+      },
+      "disposition": "verified-text"
+    }
+  ],
+  "summary": {
+    "occurrences": 6,
+    "dispositions": {
+      "verified-text": 6
+    },
+    "scope": "Exact per-occurrence static replay with original and text-masked screenshots; computed foreground/ancestor opacity and worst actual background pixel contrast. Hidden/clipped cases retained with geometry. Not universal WCAG or human review certification."
+  }
+}

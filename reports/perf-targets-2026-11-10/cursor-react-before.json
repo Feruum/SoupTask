@@ -1,0 +1,197 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/cursor-dom.spec.ts",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs",
+      "--grep",
+      "keep React"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/tmp/reports/perf-targets-2026-11-10/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\reports\\perf-targets-2026-11-10\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/cursor-react-before.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "cursor-dom.spec.ts",
+      "file": "cursor-dom.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "source cursor updates keep React out of the settled observation hot path",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2866,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m15\u001b[39m\nReceived: \u001b[31m24\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m15\u001b[39m\nReceived: \u001b[31m24\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-dom.spec.ts:39:101",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-dom.spec.ts",
+                      "column": 101,
+                      "line": 39
+                    },
+                    "snippet": " \u001b[90m 37 |\u001b[39m  \u001b[36mconst\u001b[39m before\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mperformance\u001b[33m.\u001b[39mgetEntriesByName(\u001b[32m'soup:source-readout-render'\u001b[39m)\u001b[33m.\u001b[39mlength)\n \u001b[90m 38 |\u001b[39m  \u001b[36mfor\u001b[39m(\u001b[36mconst\u001b[39m fraction \u001b[36mof\u001b[39m [\u001b[35m.3\u001b[39m\u001b[33m,\u001b[39m\u001b[35m.4\u001b[39m\u001b[33m,\u001b[39m\u001b[35m.6\u001b[39m])\u001b[36mawait\u001b[39m move(fraction)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m  expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mperformance\u001b[33m.\u001b[39mgetEntriesByName(\u001b[32m'soup:source-readout-render'\u001b[39m)\u001b[33m.\u001b[39mlength))\u001b[33m.\u001b[39mtoBe(before)\n \u001b[90m    |\u001b[39m                                                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 40 |\u001b[39m })\n \u001b[90m 41 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-dom.spec.ts",
+                        "column": 101,
+                        "line": 39
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m15\u001b[39m\nReceived: \u001b[31m24\u001b[39m\n\n  37 |  const before=await page.evaluate(()=>performance.getEntriesByName('soup:source-readout-render').length)\n  38 |  for(const fraction of [.3,.4,.6])await move(fraction)\n> 39 |  expect(await page.evaluate(()=>performance.getEntriesByName('soup:source-readout-render').length)).toBe(before)\n     |                                                                                                     ^\n  40 | })\n  41 |\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-dom.spec.ts:39:101"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T08:18:17.050Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\reports\\perf-targets-2026-11-10\\artifacts\\cursor-dom-source-cursor-u-f503b-ettled-observation-hot-path\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\reports\\perf-targets-2026-11-10\\artifacts\\cursor-dom-source-cursor-u-f503b-ettled-observation-hot-path\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\reports\\perf-targets-2026-11-10\\artifacts\\cursor-dom-source-cursor-u-f503b-ettled-observation-hot-path\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-dom.spec.ts",
+                    "column": 101,
+                    "line": 39
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-0d9292ce17864b3c4858",
+          "file": "cursor-dom.spec.ts",
+          "line": 25,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T08:18:13.880Z",
+    "duration": 7309.627,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,3212 @@
+[
+  {
+    "mode": "indexed",
+    "members": [
+      "kazakh-sft-005",
+      "kazakh-sft-001",
+      "kazakh-sft-002",
+      "kazakh-sft-006"
+    ],
+    "activationUpperBound": 2167.165300000008,
+    "activationRequestToDraw": 937.8000000007451,
+    "zoom": [
+      147.5,
+      122.90000000037253,
+      125.19999999925494,
+      122,
+      119.5,
+      135.59999999962747,
+      124.20000000111759,
+      103.40000000037253,
+      119.70000000111759,
+      118.60000000149012,
+      142,
+      118.59999999962747,
+      138.69999999925494,
+      138.5,
+      120.29999999888241,
+      148.19999999925494,
+      148,
+      138.40000000037253,
+      176.7000000011176,
+      121.59999999962747,
+      115.59999999962747,
+      113.5,
+      130.39999999850988,
+      157.10000000149012,
+      122.60000000149012,
+      128,
+      117.59999999962747,
+      99.60000000149012,
+      120.29999999888241,
+      116.5
+    ],
+    "hover": [
+      0.40000000037252903,
+      0.40000000037252903,
+      0,
+      0,
+      0.19999999925494194,
+      0.5,
+      0.19999999925494194,
+      0,
+      0.2000000011175871,
+      0,
+      0.19999999925494194,
+      0.3999999985098839,
+      0.40000000037252903,
+      0.30000000074505806,
+      0.19999999925494194,
+      0.09999999962747097,
+      0.2000000011175871,
+      0.09999999962747097,
+      0,
+      0,
+      0.30000000074505806,
+      0,
+      0.19999999925494194,
+      0.19999999925494194,
+      0.19999999925494194,
+      0.30000000074505806,
+      0,
+      0.19999999925494194,
+      0,
+      0.19999999925494194
+    ],
+    "hoverFrame": [
+      52,
+      36.80000000074506,
+      48.30000000074506,
+      39.59999999962747,
+      32,
+      37.59999999962747,
+      35.90000000037253,
+      39.40000000037253,
+      37.90000000037253,
+      45.59999999962747,
+      37.90000000037253,
+      42.899999998509884,
+      42.80000000074506,
+      35.30000000074506,
+      32,
+      44.30000000074506,
+      33.5,
+      41.09999999962747,
+      41,
+      41,
+      38.09999999962747,
+      34.5,
+      36.40000000037253,
+      35.19999999925494,
+      40.5,
+      39.40000000037253,
+      42.80000000074506,
+      34.899999998509884,
+      39.70000000111759,
+      44.09999999962747
+    ],
+    "hoverInputFrame": [
+      54.40000000037253,
+      38.70000000111759,
+      50.30000000074506,
+      42.69999999925494,
+      33.09999999962747,
+      39.09999999962747,
+      39.19999999925494,
+      41.59999999962747,
+      39.5,
+      47.90000000037253,
+      39.600000001490116,
+      45,
+      44.70000000111759,
+      37.59999999962747,
+      33.90000000037253,
+      46.5,
+      34.70000000111759,
+      42.70000000111759,
+      42.90000000037253,
+      43.70000000111759,
+      42.09999999962747,
+      35.09999999962747,
+      38.40000000037253,
+      36.59999999962747,
+      42.5,
+      42.40000000037253,
+      44.40000000037253,
+      38.5,
+      42.30000000074506,
+      45.5
+    ],
+    "hoverCommit": [
+      2.5,
+      3.5,
+      2.100000001490116,
+      2.900000000372529,
+      0.900000000372529,
+      2.899999998509884,
+      1.300000000745058,
+      3.300000000745058,
+      2.700000001117587,
+      0.19999999925494194,
+      2,
+      3.299999998882413,
+      2.099999999627471,
+      3,
+      0.900000000372529,
+      1.699999999254942,
+      1,
+      2.5,
+      4,
+      1,
+      1.900000000372529,
+      0.599999999627471,
+      2.300000000745058,
+      2.900000000372529,
+      1.599999999627471,
+      2.699999999254942,
+      2,
+      3.599999999627471,
+      2.400000000372529,
+      1
+    ],
+    "actionUpperBounds": [
+      {
+        "case": "overview",
+        "action": "zoom",
+        "duration": 489.32249999999476
+      },
+      {
+        "case": "overview",
+        "action": "hover",
+        "duration": 903.1334999999963
+      },
+      {
+        "case": "spike",
+        "action": "zoom",
+        "duration": 564.6953000000067
+      },
+      {
+        "case": "spike",
+        "action": "hover",
+        "duration": 81.7957000000024
+      },
+      {
+        "case": "reset",
+        "action": "zoom",
+        "duration": 432.6450999999943
+      },
+      {
+        "case": "reset",
+        "action": "hover",
+        "duration": 85.42760000000999
+      },
+      {
+        "case": "excluded-spike",
+        "action": "zoom",
+        "duration": 631.4137999999948
+      },
+      {
+        "case": "excluded-spike",
+        "action": "hover",
+        "duration": 57.90600000000268
+      },
+      {
+        "case": "single-step",
+        "action": "zoom",
+        "duration": 593.1390000000101
+      },
+      {
+        "case": "single-step",
+        "action": "hover",
+        "duration": 93.44500000000698
+      },
+      {
+        "case": "overview",
+        "action": "zoom",
+        "duration": 446.699099999998
+      },
+      {
+        "case": "overview",
+        "action": "hover",
+        "duration": 98.53109999999288
+      },
+      {
+        "case": "spike",
+        "action": "zoom",
+        "duration": 608.6367000000027
+      },
+      {
+        "case": "spike",
+        "action": "hover",
+        "duration": 106.80079999999725
+      },
+      {
+        "case": "reset",
+        "action": "zoom",
+        "duration": 454.48649999999907
+      },
+      {
+        "case": "reset",
+        "action": "hover",
+        "duration": 106.60559999999532
+      },
+      {
+        "case": "excluded-spike",
+        "action": "zoom",
+        "duration": 592.3539999999921
+      },
+      {
+        "case": "excluded-spike",
+        "action": "hover",
+        "duration": 100.97470000000612
+      },
+      {
+        "case": "single-step",
+        "action": "zoom",
+        "duration": 627.4193999999989
+      },
+      {
+        "case": "single-step",
+        "action": "hover",
+        "duration": 62.04420000000391
+      },
+      {
+        "case": "overview",
+        "action": "zoom",
+        "duration": 467.8874999999971
+      },
+      {
+        "case": "overview",
+        "action": "hover",
+        "duration": 78.78579999999783
+      },
+      {
+        "case": "spike",
+        "action": "zoom",
+        "duration": 619.7139000000025
+      },
+      {
+        "case": "spike",
+        "action": "hover",
+        "duration": 63.30999999999767
+      },
+      {
+        "case": "reset",
+        "action": "zoom",
+        "duration": 439.0427999999956
+      },
+      {
+        "case": "reset",
+        "action": "hover",
+        "duration": 94.07039999999688
+      },
+      {
+        "case": "excluded-spike",
+        "action": "zoom",
+        "duration": 626.4260000000068
+      },
+      {
+        "case": "excluded-spike",
+        "action": "hover",
+        "duration": 97.89410000000498
+      },
+      {
+        "case": "single-step",
+        "action": "zoom",
+        "duration": 618.7112999999954
+      },
+      {
+        "case": "single-step",
+        "action": "hover",
+        "duration": 81.15089999999327
+      },
+      {
+        "case": "overview",
+        "action": "zoom",
+        "duration": 436.64800000000105
+      },
+      {
+        "case": "overview",
+        "action": "hover",
+        "duration": 104.00239999999758
+      },
+      {
+        "case": "spike",
+        "action": "zoom",
+        "duration": 593.1798000000126
+      },
+      {
+        "case": "spike",
+        "action": "hover",
+        "duration": 94.65670000000682
+      },
+      {
+        "case": "reset",
+        "action": "zoom",
+        "duration": 447.02780000001076
+      },
+      {
+        "case": "reset",
+        "action": "hover",
+        "duration": 126.37380000000121
+      },
+      {
+        "case": "excluded-spike",
+        "action": "zoom",
+        "duration": 670.9112999999925
+      },
+      {
+        "case": "excluded-spike",
+        "action": "hover",
+        "duration": 107.32009999999718
+      },
+      {
+        "case": "single-step",
+        "action": "zoom",
+        "duration": 610.4673000000039
+      },
+      {
+        "case": "single-step",
+        "action": "hover",
+        "duration": 79.32580000000598
+      },
+      {
+        "case": "overview",
+        "action": "zoom",
+        "duration": 436.9112999999925
+      },
+      {
+        "case": "overview",
+        "action": "hover",
+        "duration": 106.64809999999125
+      },
+      {
+        "case": "spike",
+        "action": "zoom",
+        "duration": 584.7243000000017
+      },
+      {
+        "case": "spike",
+        "action": "hover",
+        "duration": 59.98430000001099
+      },
+      {
+        "case": "reset",
+        "action": "zoom",
+        "duration": 439.9177999999956
+      },
+      {
+        "case": "reset",
+        "action": "hover",
+        "duration": 67.22360000001208
+      },
+      {
+        "case": "excluded-spike",
+        "action": "zoom",
+        "duration": 685.688599999994
+      },
+      {
+        "case": "excluded-spike",
+        "action": "hover",
+        "duration": 50.57770000000892
+      },
+      {
+        "case": "single-step",
+        "action": "zoom",
+        "duration": 609.5243000000046
+      },
+      {
+        "case": "single-step",
+        "action": "hover",
+        "duration": 108.05879999999888
+      },
+      {
+        "case": "overview",
+        "action": "zoom",
+        "duration": 473.73309999999765
+      },
+      {
+        "case": "overview",
+        "action": "hover",
+        "duration": 93.39049999999406
+      },
+      {
+        "case": "spike",
+        "action": "zoom",
+        "duration": 613.039300000004
+      },
+      {
+        "case": "spike",
+        "action": "hover",
+        "duration": 113.51149999999325
+      },
+      {
+        "case": "reset",
+        "action": "zoom",
+        "duration": 458.19839999999385
+      },
+      {
+        "case": "reset",
+        "action": "hover",
+        "duration": 100.29520000000775
+      },
+      {
+        "case": "excluded-spike",
+        "action": "zoom",
+        "duration": 654.5460999999923
+      },
+      {
+        "case": "excluded-spike",
+        "action": "hover",
+        "duration": 105.58049999999639
+      },
+      {
+        "case": "single-step",
+        "action": "zoom",
+        "duration": 595.2713999999978
+      },
+      {
+        "case": "single-step",
+        "action": "hover",
+        "duration": 785.6097999999911
+      }
+    ],
+    "interactions": [
+      {
+        "case": "overview",
+        "range": {
+          "min": 0,
+          "max": 999999
+        },
+        "beforeRange": {
+          "min": 100,
+          "max": 200
+        },
+        "requestToDraw": 147.5,
+        "viewSeq": 7,
+        "actionUpperBound": 489.32249999999476,
+        "hoverAccepted": 0.40000000037252903,
+        "hoverFrame": 52,
+        "hoverInputFrame": 54.40000000037253,
+        "hoverCommit": 2.5,
+        "frameEvidence": {
+          "duration": 0.40000000037252903,
+          "hoverSeq": 10,
+          "requestToFrame": 52,
+          "inputToFrame": 54.40000000037253,
+          "pointer": {
+            "serial": 35,
+            "timeStamp": 70495.89999999851,
+            "observedAt": 70526.89999999851,
+            "plot": "comparison-loss",
+            "x": 780.5599975585938,
+            "y": 682.28125
+          },
+          "requestToCommit": 2.5,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 70550.29999999888,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 7,
+              "hoverSeq": 10,
+              "step": 230569.7176165803,
+              "requestToAcceptedMs": 0.40000000037252903,
+              "requestToFrameMs": 52,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 70500.79999999888,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 7,
+              "hoverSeq": 10,
+              "step": 230569.7176165803
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 230,569.717617 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005230,5700.2362691.53886E-50.2005860.282383Pin #230570kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011201.6597973.46454E-60.1808970.466321Pin #120kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021202.9704033.46454E-60.1664060.466321Pin #120kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061201.6871723.46454E-60.1420790.466321Pin #120kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "10",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 10,
+        "pointerFraction": 0.22999999999999998
+      },
+      {
+        "case": "spike",
+        "range": {
+          "min": 499990,
+          "max": 500010
+        },
+        "beforeRange": {
+          "min": 0,
+          "max": 999999
+        },
+        "requestToDraw": 122.90000000037253,
+        "viewSeq": 8,
+        "actionUpperBound": 564.6953000000067,
+        "hoverAccepted": 0.40000000037252903,
+        "hoverFrame": 36.80000000074506,
+        "hoverInputFrame": 38.70000000111759,
+        "hoverCommit": 3.5,
+        "frameEvidence": {
+          "duration": 0.40000000037252903,
+          "hoverSeq": 12,
+          "requestToFrame": 36.80000000074506,
+          "inputToFrame": 38.70000000111759,
+          "pointer": {
+            "serial": 36,
+            "timeStamp": 72137.39999999851,
+            "observedAt": 72154.39999999851,
+            "plot": "comparison-loss",
+            "x": 799.8599853515625,
+            "y": 682.28125
+          },
+          "requestToCommit": 3.5,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 72176.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 8,
+              "hoverSeq": 12,
+              "step": 499995.103626943,
+              "requestToAcceptedMs": 0.40000000037252903,
+              "requestToFrameMs": 36.80000000074506,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 72142.79999999888,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 8,
+              "hoverSeq": 12,
+              "step": 499995.103626943
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 499,995.103627 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005499,9950.2334511.00001E-50.1845830.103627Pin #499995kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011201.6597973.46454E-60.1808970.466321Pin #120kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021202.9704033.46454E-60.1664060.466321Pin #120kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061201.6871723.46454E-60.1420790.466321Pin #120kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "12",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 12,
+        "pointerFraction": 0.255
+      },
+      {
+        "case": "reset",
+        "range": {
+          "min": 0,
+          "max": 999999
+        },
+        "beforeRange": {
+          "min": 499990,
+          "max": 500010
+        },
+        "requestToDraw": 125.19999999925494,
+        "viewSeq": 9,
+        "actionUpperBound": 432.6450999999943,
+        "hoverAccepted": 0,
+        "hoverFrame": 48.30000000074506,
+        "hoverInputFrame": 50.30000000074506,
+        "hoverCommit": 2.100000001490116,
+        "frameEvidence": {
+          "duration": 0,
+          "hoverSeq": 14,
+          "requestToFrame": 48.30000000074506,
+          "inputToFrame": 50.30000000074506,
+          "pointer": {
+            "serial": 37,
+            "timeStamp": 72782.39999999851,
+            "observedAt": 72811.79999999888,
+            "plot": "comparison-loss",
+            "x": 819.1599731445312,
+            "y": 682.28125
+          },
+          "requestToCommit": 2.100000001490116,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 72832.69999999925,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 9,
+              "hoverSeq": 14,
+              "step": 279792.4663212435,
+              "requestToAcceptedMs": 0,
+              "requestToFrameMs": 48.30000000074506,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 72786.5,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 9,
+              "hoverSeq": 14,
+              "step": 279792.4663212435
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 279,792.466321 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005279,7920.2247071.44042E-50.2275140.466321Pin #279792kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011201.6597973.46454E-60.1808970.466321Pin #120kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021202.9704033.46454E-60.1664060.466321Pin #120kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061201.6871723.46454E-60.1420790.466321Pin #120kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "14",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 14,
+        "pointerFraction": 0.28
+      },
+      {
+        "case": "excluded-spike",
+        "range": {
+          "min": 100,
+          "max": 200
+        },
+        "beforeRange": {
+          "min": 0,
+          "max": 999999
+        },
+        "requestToDraw": 122,
+        "viewSeq": 10,
+        "actionUpperBound": 631.4137999999948,
+        "hoverAccepted": 0,
+        "hoverFrame": 39.59999999962747,
+        "hoverInputFrame": 42.69999999925494,
+        "hoverCommit": 2.900000000372529,
+        "frameEvidence": {
+          "duration": 0,
+          "hoverSeq": 16,
+          "requestToFrame": 39.59999999962747,
+          "inputToFrame": 42.69999999925494,
+          "pointer": {
+            "serial": 38,
+            "timeStamp": 73657,
+            "observedAt": 73678.69999999925,
+            "plot": "comparison-loss",
+            "x": 838.4600219726562,
+            "y": 682.28125
+          },
+          "requestToCommit": 2.900000000372529,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 73699.69999999925,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 10,
+              "hoverSeq": 16,
+              "step": 130.44041450777203,
+              "requestToAcceptedMs": 0,
+              "requestToFrameMs": 39.59999999962747,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 73663,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 10,
+              "hoverSeq": 16,
+              "step": 130.44041450777203
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 130.440415 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-0051301.5935743.1196E-80.1770610.440415Pin #130kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011301.6172553.7486E-60.153520.440415Pin #130kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021302.9053123.7486E-60.1898530.440415Pin #130kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061301.6010883.7486E-60.2137570.440415Pin #130kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "16",
+              "rect": {
+                "x": 558,
+                "y": 1056.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1056.28125,
+                "right": 1370,
+                "bottom": 1412.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 16,
+        "pointerFraction": 0.305
+      },
+      {
+        "case": "single-step",
+        "range": {
+          "min": 500001,
+          "max": 500001
+        },
+        "beforeRange": {
+          "min": 100,
+          "max": 200
+        },
+        "requestToDraw": 119.5,
+        "viewSeq": 11,
+        "actionUpperBound": 593.1390000000101,
+        "hoverAccepted": 0.19999999925494194,
+        "hoverFrame": 32,
+        "hoverInputFrame": 33.09999999962747,
+        "hoverCommit": 0.900000000372529,
+        "frameEvidence": {
+          "duration": 0.19999999925494194,
+          "hoverSeq": 18,
+          "requestToFrame": 32,
+          "inputToFrame": 33.09999999962747,
+          "pointer": {
+            "serial": 39,
+            "timeStamp": 74476,
+            "observedAt": 74485.79999999888,
+            "plot": "comparison-loss",
+            "x": 857.760009765625,
+            "y": 682.28125
+          },
+          "requestToCommit": 0.900000000372529,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 74509.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 11,
+              "hoverSeq": 18,
+              "step": 499831.3105414508,
+              "requestToAcceptedMs": 0.19999999925494194,
+              "requestToFrameMs": 32,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 74478,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 11,
+              "hoverSeq": 18,
+              "step": 499831.3105414508
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 499,831.310541 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-0051301.5935743.1196E-80.1770610.440415Pin #130kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011301.6172553.7486E-60.153520.440415Pin #130kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021302.9053123.7486E-60.1898530.440415Pin #130kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061301.6010883.7486E-60.2137570.440415Pin #130kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "18",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 18,
+        "pointerFraction": 0.33
+      },
+      {
+        "case": "overview",
+        "range": {
+          "min": 0,
+          "max": 999999
+        },
+        "beforeRange": {
+          "min": 500001,
+          "max": 500001
+        },
+        "requestToDraw": 135.59999999962747,
+        "viewSeq": 12,
+        "actionUpperBound": 446.699099999998,
+        "hoverAccepted": 0.5,
+        "hoverFrame": 37.59999999962747,
+        "hoverInputFrame": 39.09999999962747,
+        "hoverCommit": 2.899999998509884,
+        "frameEvidence": {
+          "duration": 0.5,
+          "hoverSeq": 20,
+          "requestToFrame": 37.59999999962747,
+          "inputToFrame": 39.09999999962747,
+          "pointer": {
+            "serial": 40,
+            "timeStamp": 75136.5,
+            "observedAt": 75153,
+            "plot": "comparison-loss",
+            "x": 877.0599975585938,
+            "y": 682.28125
+          },
+          "requestToCommit": 2.899999998509884,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 75175.59999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 12,
+              "hoverSeq": 20,
+              "step": 354921.9248704663,
+              "requestToAcceptedMs": 0.5,
+              "requestToFrameMs": 37.59999999962747,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 75140.89999999851,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 12,
+              "hoverSeq": 20,
+              "step": 354921.9248704663
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 354,921.92487 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005354,9220.2371171.29016E-50.2080160.07513Pin #354922kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011301.6172553.7486E-60.153520.440415Pin #130kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021302.9053123.7486E-60.1898530.440415Pin #130kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061301.6010883.7486E-60.2137570.440415Pin #130kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "20",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 20,
+        "pointerFraction": 0.355
+      },
+      {
+        "case": "spike",
+        "range": {
+          "min": 499990,
+          "max": 500010
+        },
+        "beforeRange": {
+          "min": 0,
+          "max": 999999
+        },
+        "requestToDraw": 124.20000000111759,
+        "viewSeq": 13,
+        "actionUpperBound": 608.6367000000027,
+        "hoverAccepted": 0.19999999925494194,
+        "hoverFrame": 35.90000000037253,
+        "hoverInputFrame": 39.19999999925494,
+        "hoverCommit": 1.300000000745058,
+        "frameEvidence": {
+          "duration": 0.19999999925494194,
+          "hoverSeq": 22,
+          "requestToFrame": 35.90000000037253,
+          "inputToFrame": 39.19999999925494,
+          "pointer": {
+            "serial": 41,
+            "timeStamp": 76039.09999999963,
+            "observedAt": 76052.5,
+            "plot": "comparison-loss",
+            "x": 896.3599853515625,
+            "y": 682.28125
+          },
+          "requestToCommit": 1.300000000745058,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 76078.29999999888,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 13,
+              "hoverSeq": 22,
+              "step": 499997.5906735751,
+              "requestToAcceptedMs": 0.19999999925494194,
+              "requestToFrameMs": 35.90000000037253,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 76043.5,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 13,
+              "hoverSeq": 22,
+              "step": 499997.5906735751
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 499,997.590674 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005354,9220.2371171.29016E-50.2080160.07513Pin #354922kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011301.6172553.7486E-60.153520.440415Pin #130kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021302.9053123.7486E-60.1898530.440415Pin #130kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061301.6010883.7486E-60.2137570.440415Pin #130kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "22",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 22,
+        "pointerFraction": 0.38
+      },
+      {
+        "case": "reset",
+        "range": {
+          "min": 0,
+          "max": 999999
+        },
+        "beforeRange": {
+          "min": 499990,
+          "max": 500010
+        },
+        "requestToDraw": 103.40000000037253,
+        "viewSeq": 14,
+        "actionUpperBound": 454.48649999999907,
+        "hoverAccepted": 0,
+        "hoverFrame": 39.40000000037253,
+        "hoverInputFrame": 41.59999999962747,
+        "hoverCommit": 3.300000000745058,
+        "frameEvidence": {
+          "duration": 0,
+          "hoverSeq": 24,
+          "requestToFrame": 39.40000000037253,
+          "inputToFrame": 41.59999999962747,
+          "pointer": {
+            "serial": 42,
+            "timeStamp": 76788.19999999925,
+            "observedAt": 76804.69999999925,
+            "plot": "comparison-loss",
+            "x": 915.6599731445312,
+            "y": 682.28125
+          },
+          "requestToCommit": 3.300000000745058,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 76829.79999999888,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 14,
+              "hoverSeq": 24,
+              "step": 405440.0090673575,
+              "requestToAcceptedMs": 0,
+              "requestToFrameMs": 39.40000000037253,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 76793.5,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 14,
+              "hoverSeq": 24,
+              "step": 405440.0090673575
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 405,440.009067 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005405,4400.2069321.18912E-50.2289780.009067Pin #405440kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011301.6172553.7486E-60.153520.440415Pin #130kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021302.9053123.7486E-60.1898530.440415Pin #130kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061301.6010883.7486E-60.2137570.440415Pin #130kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "24",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 24,
+        "pointerFraction": 0.405
+      },
+      {
+        "case": "excluded-spike",
+        "range": {
+          "min": 100,
+          "max": 200
+        },
+        "beforeRange": {
+          "min": 0,
+          "max": 999999
+        },
+        "requestToDraw": 119.70000000111759,
+        "viewSeq": 15,
+        "actionUpperBound": 592.3539999999921,
+        "hoverAccepted": 0.2000000011175871,
+        "hoverFrame": 37.90000000037253,
+        "hoverInputFrame": 39.5,
+        "hoverCommit": 2.700000001117587,
+        "frameEvidence": {
+          "duration": 0.2000000011175871,
+          "hoverSeq": 26,
+          "requestToFrame": 37.90000000037253,
+          "inputToFrame": 39.5,
+          "pointer": {
+            "serial": 43,
+            "timeStamp": 77674.79999999888,
+            "observedAt": 77690.39999999851,
+            "plot": "comparison-loss",
+            "x": 934.9600219726562,
+            "y": 682.28125
+          },
+          "requestToCommit": 2.700000001117587,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 77714.29999999888,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 15,
+              "hoverSeq": 26,
+              "step": 143.00518134715026,
+              "requestToAcceptedMs": 0.2000000011175871,
+              "requestToFrameMs": 37.90000000037253,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 77679.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 15,
+              "hoverSeq": 26,
+              "step": 143.00518134715026
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 143.005181 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-0051431.5501963.43151E-80.1936670.005181Pin #143kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011431.539134.11682E-60.2011090.005181Pin #143kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021432.882994.11682E-60.1698780.005181Pin #143kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061431.5313644.11682E-60.1910610.005181Pin #143kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "26",
+              "rect": {
+                "x": 558,
+                "y": 1056.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1056.28125,
+                "right": 1370,
+                "bottom": 1412.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 26,
+        "pointerFraction": 0.43
+      },
+      {
+        "case": "single-step",
+        "range": {
+          "min": 500001,
+          "max": 500001
+        },
+        "beforeRange": {
+          "min": 100,
+          "max": 200
+        },
+        "requestToDraw": 118.60000000149012,
+        "viewSeq": 16,
+        "actionUpperBound": 627.4193999999989,
+        "hoverAccepted": 0,
+        "hoverFrame": 45.59999999962747,
+        "hoverInputFrame": 47.90000000037253,
+        "hoverCommit": 0.19999999925494194,
+        "frameEvidence": {
+          "duration": 0,
+          "hoverSeq": 28,
+          "requestToFrame": 45.59999999962747,
+          "inputToFrame": 47.90000000037253,
+          "pointer": {
+            "serial": 44,
+            "timeStamp": 78572.19999999925,
+            "observedAt": 78592.59999999963,
+            "plot": "comparison-loss",
+            "x": 954.260009765625,
+            "y": 682.28125
+          },
+          "requestToCommit": 0.19999999925494194,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 78620.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 16,
+              "hoverSeq": 28,
+              "step": 499955.66312176164,
+              "requestToAcceptedMs": 0,
+              "requestToFrameMs": 45.59999999962747,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 78574.69999999925,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 16,
+              "hoverSeq": 28,
+              "step": 499955.66312176164
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 499,955.663122 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-0051431.5501963.43151E-80.1936670.005181Pin #143kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011431.539134.11682E-60.2011090.005181Pin #143kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021432.882994.11682E-60.1698780.005181Pin #143kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061431.5313644.11682E-60.1910610.005181Pin #143kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "28",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 28,
+        "pointerFraction": 0.455
+      },
+      {
+        "case": "overview",
+        "range": {
+          "min": 0,
+          "max": 999999
+        },
+        "beforeRange": {
+          "min": 500001,
+          "max": 500001
+        },
+        "requestToDraw": 142,
+        "viewSeq": 17,
+        "actionUpperBound": 467.8874999999971,
+        "hoverAccepted": 0.19999999925494194,
+        "hoverFrame": 37.90000000037253,
+        "hoverInputFrame": 39.600000001490116,
+        "hoverCommit": 2,
+        "frameEvidence": {
+          "duration": 0.19999999925494194,
+          "hoverSeq": 30,
+          "requestToFrame": 37.90000000037253,
+          "inputToFrame": 39.600000001490116,
+          "pointer": {
+            "serial": 45,
+            "timeStamp": 79252.89999999851,
+            "observedAt": 79267.79999999888,
+            "plot": "comparison-loss",
+            "x": 973.5599975585938,
+            "y": 682.28125
+          },
+          "requestToCommit": 2,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 79292.5,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 17,
+              "hoverSeq": 30,
+              "step": 480569.4676165803,
+              "requestToAcceptedMs": 0.19999999925494194,
+              "requestToFrameMs": 37.90000000037253,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 79256.59999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 17,
+              "hoverSeq": 30,
+              "step": 480569.4676165803
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 480,569.467617 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005480,5690.2306241.03886E-50.1853880.467617Pin #480569kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011431.539134.11682E-60.2011090.005181Pin #143kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021432.882994.11682E-60.1698780.005181Pin #143kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061431.5313644.11682E-60.1910610.005181Pin #143kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "30",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 30,
+        "pointerFraction": 0.48000000000000004
+      },
+      {
+        "case": "spike",
+        "range": {
+          "min": 499990,
+          "max": 500010
+        },
+        "beforeRange": {
+          "min": 0,
+          "max": 999999
+        },
+        "requestToDraw": 118.59999999962747,
+        "viewSeq": 18,
+        "actionUpperBound": 619.7139000000025,
+        "hoverAccepted": 0.3999999985098839,
+        "hoverFrame": 42.899999998509884,
+        "hoverInputFrame": 45,
+        "hoverCommit": 3.299999998882413,
+        "frameEvidence": {
+          "duration": 0.3999999985098839,
+          "hoverSeq": 32,
+          "requestToFrame": 42.899999998509884,
+          "inputToFrame": 45,
+          "pointer": {
+            "serial": 46,
+            "timeStamp": 80104.39999999851,
+            "observedAt": 80126,
+            "plot": "comparison-loss",
+            "x": 992.8599853515625,
+            "y": 682.28125
+          },
+          "requestToCommit": 3.299999998882413,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 80149.39999999851,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 18,
+              "hoverSeq": 32,
+              "step": 500000.103626943,
+              "requestToAcceptedMs": 0.3999999985098839,
+              "requestToFrameMs": 42.899999998509884,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 80109.79999999888,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 18,
+              "hoverSeq": 32,
+              "step": 500000.103626943
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 500,000.103627 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005500,0000.2372589.99999E-60.2077720.103627Pin #500000kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011431.539134.11682E-60.2011090.005181Pin #143kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021432.882994.11682E-60.1698780.005181Pin #143kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061431.5313644.11682E-60.1910610.005181Pin #143kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "32",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 32,
+        "pointerFraction": 0.505
+      },
+      {
+        "case": "reset",
+        "range": {
+          "min": 0,
+          "max": 999999
+        },
+        "beforeRange": {
+          "min": 499990,
+          "max": 500010
+        },
+        "requestToDraw": 138.69999999925494,
+        "viewSeq": 19,
+        "actionUpperBound": 439.0427999999956,
+        "hoverAccepted": 0.40000000037252903,
+        "hoverFrame": 42.80000000074506,
+        "hoverInputFrame": 44.70000000111759,
+        "hoverCommit": 2.099999999627471,
+        "frameEvidence": {
+          "duration": 0.40000000037252903,
+          "hoverSeq": 34,
+          "requestToFrame": 42.80000000074506,
+          "inputToFrame": 44.70000000111759,
+          "pointer": {
+            "serial": 47,
+            "timeStamp": 80742.39999999851,
+            "observedAt": 80759.59999999963,
+            "plot": "comparison-loss",
+            "x": 1012.1599731445312,
+            "y": 682.28125
+          },
+          "requestToCommit": 2.099999999627471,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 80787.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 19,
+              "hoverSeq": 34,
+              "step": 529792.2163212436,
+              "requestToAcceptedMs": 0.40000000037252903,
+              "requestToFrameMs": 42.80000000074506,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 80746.39999999851,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 19,
+              "hoverSeq": 34,
+              "step": 529792.2163212436
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 529,792.216321 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005529,7920.2128419.40415E-60.1764350.216321Pin #529792kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011431.539134.11682E-60.2011090.005181Pin #143kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021432.882994.11682E-60.1698780.005181Pin #143kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061431.5313644.11682E-60.1910610.005181Pin #143kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "34",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 34,
+        "pointerFraction": 0.53
+      },
+      {
+        "case": "excluded-spike",
+        "range": {
+          "min": 100,
+          "max": 200
+        },
+        "beforeRange": {
+          "min": 0,
+          "max": 999999
+        },
+        "requestToDraw": 138.5,
+        "viewSeq": 20,
+        "actionUpperBound": 626.4260000000068,
+        "hoverAccepted": 0.30000000074505806,
+        "hoverFrame": 35.30000000074506,
+        "hoverInputFrame": 37.59999999962747,
+        "hoverCommit": 3,
+        "frameEvidence": {
+          "duration": 0.30000000074505806,
+          "hoverSeq": 36,
+          "requestToFrame": 35.30000000074506,
+          "inputToFrame": 37.59999999962747,
+          "pointer": {
+            "serial": 48,
+            "timeStamp": 81604,
+            "observedAt": 81623.79999999888,
+            "plot": "comparison-loss",
+            "x": 1031.4599609375,
+            "y": 682.28125
+          },
+          "requestToCommit": 3,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 81641.59999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 20,
+              "hoverSeq": 36,
+              "step": 155.440414507772,
+              "requestToAcceptedMs": 0.30000000074505806,
+              "requestToFrameMs": 35.30000000074506,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 81609.19999999925,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 20,
+              "hoverSeq": 36,
+              "step": 155.440414507772
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 155.440415 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-0051551.4816193.71943E-80.2264680.440415Pin #155kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011551.4902844.45563E-60.2001850.440415Pin #155kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021552.8563144.45563E-60.1658710.440415Pin #155kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061551.465014.45563E-60.1461220.440415Pin #155kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "36",
+              "rect": {
+                "x": 558,
+                "y": 1056.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1056.28125,
+                "right": 1370,
+                "bottom": 1412.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 36,
+        "pointerFraction": 0.5549999999999999
+      },
+      {
+        "case": "single-step",
+        "range": {
+          "min": 500001,
+          "max": 500001
+        },
+        "beforeRange": {
+          "min": 100,
+          "max": 200
+        },
+        "requestToDraw": 120.29999999888241,
+        "viewSeq": 21,
+        "actionUpperBound": 618.7112999999954,
+        "hoverAccepted": 0.19999999925494194,
+        "hoverFrame": 32,
+        "hoverInputFrame": 33.90000000037253,
+        "hoverCommit": 0.900000000372529,
+        "frameEvidence": {
+          "duration": 0.19999999925494194,
+          "hoverSeq": 38,
+          "requestToFrame": 32,
+          "inputToFrame": 33.90000000037253,
+          "pointer": {
+            "serial": 49,
+            "timeStamp": 82504.29999999888,
+            "observedAt": 82513.5,
+            "plot": "comparison-loss",
+            "x": 1050.760009765625,
+            "y": 682.28125
+          },
+          "requestToCommit": 0.900000000372529,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 82538.19999999925,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 21,
+              "hoverSeq": 38,
+              "step": 500081.31104145077,
+              "requestToAcceptedMs": 0.19999999925494194,
+              "requestToFrameMs": 32,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 82507.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 21,
+              "hoverSeq": 38,
+              "step": 500081.31104145077
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 500,081.311041 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-0051551.4816193.71943E-80.2264680.440415Pin #155kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011551.4902844.45563E-60.2001850.440415Pin #155kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021552.8563144.45563E-60.1658710.440415Pin #155kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061551.465014.45563E-60.1461220.440415Pin #155kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "38",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 38,
+        "pointerFraction": 0.5800000000000001
+      },
+      {
+        "case": "overview",
+        "range": {
+          "min": 0,
+          "max": 999999
+        },
+        "beforeRange": {
+          "min": 500001,
+          "max": 500001
+        },
+        "requestToDraw": 148.19999999925494,
+        "viewSeq": 22,
+        "actionUpperBound": 436.64800000000105,
+        "hoverAccepted": 0.09999999962747097,
+        "hoverFrame": 44.30000000074506,
+        "hoverInputFrame": 46.5,
+        "hoverCommit": 1.699999999254942,
+        "frameEvidence": {
+          "duration": 0.09999999962747097,
+          "hoverSeq": 40,
+          "requestToFrame": 44.30000000074506,
+          "inputToFrame": 46.5,
+          "pointer": {
+            "serial": 50,
+            "timeStamp": 83151.5,
+            "observedAt": 83171.59999999963,
+            "plot": "comparison-loss",
+            "x": 1070.06005859375,
+            "y": 682.28125
+          },
+          "requestToCommit": 1.699999999254942,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 83198,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 22,
+              "hoverSeq": 40,
+              "step": 604921.6748704663,
+              "requestToAcceptedMs": 0.09999999962747097,
+              "requestToFrameMs": 44.30000000074506,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 83155.39999999851,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 22,
+              "hoverSeq": 40,
+              "step": 604921.6748704663
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 604,921.67487 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005604,9220.2381237.90155E-60.1632760.32513Pin #604922kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011551.4902844.45563E-60.2001850.440415Pin #155kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021552.8563144.45563E-60.1658710.440415Pin #155kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061551.465014.45563E-60.1461220.440415Pin #155kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "40",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 40,
+        "pointerFraction": 0.605
+      },
+      {
+        "case": "spike",
+        "range": {
+          "min": 499990,
+          "max": 500010
+        },
+        "beforeRange": {
+          "min": 0,
+          "max": 999999
+        },
+        "requestToDraw": 148,
+        "viewSeq": 23,
+        "actionUpperBound": 593.1798000000126,
+        "hoverAccepted": 0.2000000011175871,
+        "hoverFrame": 33.5,
+        "hoverInputFrame": 34.70000000111759,
+        "hoverCommit": 1,
+        "frameEvidence": {
+          "duration": 0.2000000011175871,
+          "hoverSeq": 42,
+          "requestToFrame": 33.5,
+          "inputToFrame": 34.70000000111759,
+          "pointer": {
+            "serial": 51,
+            "timeStamp": 84062.39999999851,
+            "observedAt": 84075,
+            "plot": "comparison-loss",
+            "x": 1089.3599853515625,
+            "y": 682.28125
+          },
+          "requestToCommit": 1,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 84097.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 23,
+              "hoverSeq": 42,
+              "step": 500002.5906735751,
+              "requestToAcceptedMs": 0.2000000011175871,
+              "requestToFrameMs": 33.5,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 84064.39999999851,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 23,
+              "hoverSeq": 42,
+              "step": 500002.5906735751
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 500,002.590674 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005604,9220.2381237.90155E-60.1632760.32513Pin #604922kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011551.4902844.45563E-60.2001850.440415Pin #155kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021552.8563144.45563E-60.1658710.440415Pin #155kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061551.465014.45563E-60.1461220.440415Pin #155kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "42",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 42,
+        "pointerFraction": 0.63
+      },
+      {
+        "case": "reset",
+        "range": {
+          "min": 0,
+          "max": 999999
+        },
+        "beforeRange": {
+          "min": 499990,
+          "max": 500010
+        },
+        "requestToDraw": 138.40000000037253,
+        "viewSeq": 24,
+        "actionUpperBound": 447.02780000001076,
+        "hoverAccepted": 0.09999999962747097,
+        "hoverFrame": 41.09999999962747,
+        "hoverInputFrame": 42.70000000111759,
+        "hoverCommit": 2.5,
+        "frameEvidence": {
+          "duration": 0.09999999962747097,
+          "hoverSeq": 44,
+          "requestToFrame": 41.09999999962747,
+          "inputToFrame": 42.70000000111759,
+          "pointer": {
+            "serial": 52,
+            "timeStamp": 84719.39999999851,
+            "observedAt": 84735.09999999963,
+            "plot": "comparison-loss",
+            "x": 1108.6600341796875,
+            "y": 682.28125
+          },
+          "requestToCommit": 2.5,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 84762.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 24,
+              "hoverSeq": 44,
+              "step": 655439.7590673575,
+              "requestToAcceptedMs": 0.09999999962747097,
+              "requestToFrameMs": 41.09999999962747,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 84723.5,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 24,
+              "hoverSeq": 44,
+              "step": 655439.7590673575
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 655,439.759067 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005655,4400.2277956.89119E-60.142670.240933Pin #655440kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011551.4902844.45563E-60.2001850.440415Pin #155kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021552.8563144.45563E-60.1658710.440415Pin #155kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061551.465014.45563E-60.1461220.440415Pin #155kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "44",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 44,
+        "pointerFraction": 0.655
+      },
+      {
+        "case": "excluded-spike",
+        "range": {
+          "min": 100,
+          "max": 200
+        },
+        "beforeRange": {
+          "min": 0,
+          "max": 999999
+        },
+        "requestToDraw": 176.7000000011176,
+        "viewSeq": 25,
+        "actionUpperBound": 670.9112999999925,
+        "hoverAccepted": 0,
+        "hoverFrame": 41,
+        "hoverInputFrame": 42.90000000037253,
+        "hoverCommit": 4,
+        "frameEvidence": {
+          "duration": 0,
+          "hoverSeq": 46,
+          "requestToFrame": 41,
+          "inputToFrame": 42.90000000037253,
+          "pointer": {
+            "serial": 53,
+            "timeStamp": 85670.19999999925,
+            "observedAt": 85687.29999999888,
+            "plot": "comparison-loss",
+            "x": 1127.9599609375,
+            "y": 682.28125
+          },
+          "requestToCommit": 4,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 85713.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 25,
+              "hoverSeq": 46,
+              "step": 168.00518134715026,
+              "requestToAcceptedMs": 0,
+              "requestToFrameMs": 41,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 85676.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 25,
+              "hoverSeq": 46,
+              "step": 168.00518134715026
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 168.005181 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-0051681.4128834.03133E-80.1472510.005181Pin #168kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011681.4119514.82151E-60.1545580.005181Pin #168kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021682.7967584.82151E-60.1816150.005181Pin #168kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061681.4097784.82151E-60.1605580.005181Pin #168kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "46",
+              "rect": {
+                "x": 558,
+                "y": 1056.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1056.28125,
+                "right": 1370,
+                "bottom": 1412.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 46,
+        "pointerFraction": 0.6799999999999999
+      },
+      {
+        "case": "single-step",
+        "range": {
+          "min": 500001,
+          "max": 500001
+        },
+        "beforeRange": {
+          "min": 100,
+          "max": 200
+        },
+        "requestToDraw": 121.59999999962747,
+        "viewSeq": 26,
+        "actionUpperBound": 610.4673000000039,
+        "hoverAccepted": 0,
+        "hoverFrame": 41,
+        "hoverInputFrame": 43.70000000111759,
+        "hoverCommit": 1,
+        "frameEvidence": {
+          "duration": 0,
+          "hoverSeq": 48,
+          "requestToFrame": 41,
+          "inputToFrame": 43.70000000111759,
+          "pointer": {
+            "serial": 54,
+            "timeStamp": 86574.29999999888,
+            "observedAt": 86588.29999999888,
+            "plot": "comparison-loss",
+            "x": 1147.260009765625,
+            "y": 682.28125
+          },
+          "requestToCommit": 1,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 86618,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 26,
+              "hoverSeq": 48,
+              "step": 500205.66362176166,
+              "requestToAcceptedMs": 0,
+              "requestToFrameMs": 41,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 86578,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 26,
+              "hoverSeq": 48,
+              "step": 500205.66362176166
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 500,205.663622 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-0051681.4128834.03133E-80.1472510.005181Pin #168kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011681.4119514.82151E-60.1545580.005181Pin #168kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021682.7967584.82151E-60.1816150.005181Pin #168kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061681.4097784.82151E-60.1605580.005181Pin #168kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "48",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 48,
+        "pointerFraction": 0.7050000000000001
+      },
+      {
+        "case": "overview",
+        "range": {
+          "min": 0,
+          "max": 999999
+        },
+        "beforeRange": {
+          "min": 500001,
+          "max": 500001
+        },
+        "requestToDraw": 115.59999999962747,
+        "viewSeq": 27,
+        "actionUpperBound": 436.9112999999925,
+        "hoverAccepted": 0.30000000074505806,
+        "hoverFrame": 38.09999999962747,
+        "hoverInputFrame": 42.09999999962747,
+        "hoverCommit": 1.900000000372529,
+        "frameEvidence": {
+          "duration": 0.30000000074505806,
+          "hoverSeq": 50,
+          "requestToFrame": 38.09999999962747,
+          "inputToFrame": 42.09999999962747,
+          "pointer": {
+            "serial": 55,
+            "timeStamp": 87222.29999999888,
+            "observedAt": 87245.39999999851,
+            "plot": "comparison-loss",
+            "x": 1166.56005859375,
+            "y": 682.28125
+          },
+          "requestToCommit": 1.900000000372529,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 87264.39999999851,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 27,
+              "hoverSeq": 50,
+              "step": 730569.2176165803,
+              "requestToAcceptedMs": 0.30000000074505806,
+              "requestToFrameMs": 38.09999999962747,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 87228.19999999925,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 27,
+              "hoverSeq": 50,
+              "step": 730569.2176165803
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 730,569.217617 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005730,5690.2265695.38861E-60.1796660.217617Pin #730569kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011681.4119514.82151E-60.1545580.005181Pin #168kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021682.7967584.82151E-60.1816150.005181Pin #168kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061681.4097784.82151E-60.1605580.005181Pin #168kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "50",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 50,
+        "pointerFraction": 0.73
+      },
+      {
+        "case": "spike",
+        "range": {
+          "min": 499990,
+          "max": 500010
+        },
+        "beforeRange": {
+          "min": 0,
+          "max": 999999
+        },
+        "requestToDraw": 113.5,
+        "viewSeq": 28,
+        "actionUpperBound": 584.7243000000017,
+        "hoverAccepted": 0,
+        "hoverFrame": 34.5,
+        "hoverInputFrame": 35.09999999962747,
+        "hoverCommit": 0.599999999627471,
+        "frameEvidence": {
+          "duration": 0,
+          "hoverSeq": 52,
+          "requestToFrame": 34.5,
+          "inputToFrame": 35.09999999962747,
+          "pointer": {
+            "serial": 56,
+            "timeStamp": 88106.5,
+            "observedAt": 88120,
+            "plot": "comparison-loss",
+            "x": 1185.8599853515625,
+            "y": 682.28125
+          },
+          "requestToCommit": 0.599999999627471,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 88141.59999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 28,
+              "hoverSeq": 52,
+              "step": 500005.103626943,
+              "requestToAcceptedMs": 0,
+              "requestToFrameMs": 34.5,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 88107.69999999925,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 28,
+              "hoverSeq": 52,
+              "step": 500005.103626943
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 500,005.103627 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005500,0050.2343639.99989E-60.1410340.103627Pin #500005kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011681.4119514.82151E-60.1545580.005181Pin #168kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021682.7967584.82151E-60.1816150.005181Pin #168kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061681.4097784.82151E-60.1605580.005181Pin #168kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "52",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 52,
+        "pointerFraction": 0.7550000000000001
+      },
+      {
+        "case": "reset",
+        "range": {
+          "min": 0,
+          "max": 999999
+        },
+        "beforeRange": {
+          "min": 499990,
+          "max": 500010
+        },
+        "requestToDraw": 130.39999999850988,
+        "viewSeq": 29,
+        "actionUpperBound": 439.9177999999956,
+        "hoverAccepted": 0.19999999925494194,
+        "hoverFrame": 36.40000000037253,
+        "hoverInputFrame": 38.40000000037253,
+        "hoverCommit": 2.300000000745058,
+        "frameEvidence": {
+          "duration": 0.19999999925494194,
+          "hoverSeq": 54,
+          "requestToFrame": 36.40000000037253,
+          "inputToFrame": 38.40000000037253,
+          "pointer": {
+            "serial": 57,
+            "timeStamp": 88750.69999999925,
+            "observedAt": 88767.69999999925,
+            "plot": "comparison-loss",
+            "x": 1205.1600341796875,
+            "y": 682.28125
+          },
+          "requestToCommit": 2.300000000745058,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 88789.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 29,
+              "hoverSeq": 54,
+              "step": 779791.9663212436,
+              "requestToAcceptedMs": 0.19999999925494194,
+              "requestToFrameMs": 36.40000000037253,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 88755,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 29,
+              "hoverSeq": 54,
+              "step": 779791.9663212436
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 779,791.966321 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005779,7920.236194.40414E-60.1950450.033679Pin #779792kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011681.4119514.82151E-60.1545580.005181Pin #168kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021682.7967584.82151E-60.1816150.005181Pin #168kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061681.4097784.82151E-60.1605580.005181Pin #168kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "54",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 54,
+        "pointerFraction": 0.78
+      },
+      {
+        "case": "excluded-spike",
+        "range": {
+          "min": 100,
+          "max": 200
+        },
+        "beforeRange": {
+          "min": 0,
+          "max": 999999
+        },
+        "requestToDraw": 157.10000000149012,
+        "viewSeq": 30,
+        "actionUpperBound": 685.688599999994,
+        "hoverAccepted": 0.19999999925494194,
+        "hoverFrame": 35.19999999925494,
+        "hoverInputFrame": 36.59999999962747,
+        "hoverCommit": 2.900000000372529,
+        "frameEvidence": {
+          "duration": 0.19999999925494194,
+          "hoverSeq": 56,
+          "requestToFrame": 35.19999999925494,
+          "inputToFrame": 36.59999999962747,
+          "pointer": {
+            "serial": 58,
+            "timeStamp": 89684.29999999888,
+            "observedAt": 89700.59999999963,
+            "plot": "comparison-loss",
+            "x": 741.9600219726562,
+            "y": 682.28125
+          },
+          "requestToCommit": 2.900000000372529,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 89720.89999999851,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 30,
+              "hoverSeq": 56,
+              "step": 118.00518134715026,
+              "requestToAcceptedMs": 0.19999999925494194,
+              "requestToFrameMs": 35.19999999925494,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 89688.59999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 30,
+              "hoverSeq": 56,
+              "step": 118.00518134715026
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 118.005181 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-0051181.6886022.83167E-80.1843540.005181Pin #118kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011181.6784863.40765E-60.2240550.005181Pin #118kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021182.9759863.40765E-60.1533430.005181Pin #118kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061181.7036883.40765E-60.1830740.005181Pin #118kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "56",
+              "rect": {
+                "x": 558,
+                "y": 1056.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1056.28125,
+                "right": 1370,
+                "bottom": 1412.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 56,
+        "pointerFraction": 0.18
+      },
+      {
+        "case": "single-step",
+        "range": {
+          "min": 500001,
+          "max": 500001
+        },
+        "beforeRange": {
+          "min": 100,
+          "max": 200
+        },
+        "requestToDraw": 122.60000000149012,
+        "viewSeq": 31,
+        "actionUpperBound": 609.5243000000046,
+        "hoverAccepted": 0.19999999925494194,
+        "hoverFrame": 40.5,
+        "hoverInputFrame": 42.5,
+        "hoverCommit": 1.599999999627471,
+        "frameEvidence": {
+          "duration": 0.19999999925494194,
+          "hoverSeq": 58,
+          "requestToFrame": 40.5,
+          "inputToFrame": 42.5,
+          "pointer": {
+            "serial": 59,
+            "timeStamp": 90520.19999999925,
+            "observedAt": 90540.09999999963,
+            "plot": "comparison-loss",
+            "x": 761.260009765625,
+            "y": 682.28125
+          },
+          "requestToCommit": 1.599999999627471,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 90562.69999999925,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 31,
+              "hoverSeq": 58,
+              "step": 499705.6626217617,
+              "requestToAcceptedMs": 0.19999999925494194,
+              "requestToFrameMs": 40.5,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 90523.79999999888,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 31,
+              "hoverSeq": 58,
+              "step": 499705.6626217617
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 499,705.662622 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-0051181.6886022.83167E-80.1843540.005181Pin #118kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011181.6784863.40765E-60.2240550.005181Pin #118kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021182.9759863.40765E-60.1533430.005181Pin #118kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061181.7036883.40765E-60.1830740.005181Pin #118kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "58",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 58,
+        "pointerFraction": 0.205
+      },
+      {
+        "case": "overview",
+        "range": {
+          "min": 0,
+          "max": 999999
+        },
+        "beforeRange": {
+          "min": 500001,
+          "max": 500001
+        },
+        "requestToDraw": 128,
+        "viewSeq": 32,
+        "actionUpperBound": 473.73309999999765,
+        "hoverAccepted": 0.30000000074505806,
+        "hoverFrame": 39.40000000037253,
+        "hoverInputFrame": 42.40000000037253,
+        "hoverCommit": 2.699999999254942,
+        "frameEvidence": {
+          "duration": 0.30000000074505806,
+          "hoverSeq": 60,
+          "requestToFrame": 39.40000000037253,
+          "inputToFrame": 42.40000000037253,
+          "pointer": {
+            "serial": 60,
+            "timeStamp": 91271.69999999925,
+            "observedAt": 91288.59999999963,
+            "plot": "comparison-loss",
+            "x": 780.5599975585938,
+            "y": 682.28125
+          },
+          "requestToCommit": 2.699999999254942,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 91314.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 32,
+              "hoverSeq": 60,
+              "step": 230569.7176165803,
+              "requestToAcceptedMs": 0.30000000074505806,
+              "requestToFrameMs": 39.40000000037253,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 91277.39999999851,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 32,
+              "hoverSeq": 60,
+              "step": 230569.7176165803
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 230,569.717617 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005230,5700.2362691.53886E-50.2005860.282383Pin #230570kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011181.6784863.40765E-60.2240550.005181Pin #118kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021182.9759863.40765E-60.1533430.005181Pin #118kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061181.7036883.40765E-60.1830740.005181Pin #118kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "60",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 60,
+        "pointerFraction": 0.22999999999999998
+      },
+      {
+        "case": "spike",
+        "range": {
+          "min": 499990,
+          "max": 500010
+        },
+        "beforeRange": {
+          "min": 0,
+          "max": 999999
+        },
+        "requestToDraw": 117.59999999962747,
+        "viewSeq": 33,
+        "actionUpperBound": 613.039300000004,
+        "hoverAccepted": 0,
+        "hoverFrame": 42.80000000074506,
+        "hoverInputFrame": 44.40000000037253,
+        "hoverCommit": 2,
+        "frameEvidence": {
+          "duration": 0,
+          "hoverSeq": 62,
+          "requestToFrame": 42.80000000074506,
+          "inputToFrame": 44.40000000037253,
+          "pointer": {
+            "serial": 61,
+            "timeStamp": 92153.69999999925,
+            "observedAt": 92171.19999999925,
+            "plot": "comparison-loss",
+            "x": 799.8599853515625,
+            "y": 682.28125
+          },
+          "requestToCommit": 2,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 92198.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 33,
+              "hoverSeq": 62,
+              "step": 499995.103626943,
+              "requestToAcceptedMs": 0,
+              "requestToFrameMs": 42.80000000074506,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 92157.29999999888,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 33,
+              "hoverSeq": 62,
+              "step": 499995.103626943
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 499,995.103627 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005499,9950.2334511.00001E-50.1845830.103627Pin #499995kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011181.6784863.40765E-60.2240550.005181Pin #118kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021182.9759863.40765E-60.1533430.005181Pin #118kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061181.7036883.40765E-60.1830740.005181Pin #118kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "62",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 62,
+        "pointerFraction": 0.255
+      },
+      {
+        "case": "reset",
+        "range": {
+          "min": 0,
+          "max": 999999
+        },
+        "beforeRange": {
+          "min": 499990,
+          "max": 500010
+        },
+        "requestToDraw": 99.60000000149012,
+        "viewSeq": 34,
+        "actionUpperBound": 458.19839999999385,
+        "hoverAccepted": 0.19999999925494194,
+        "hoverFrame": 34.899999998509884,
+        "hoverInputFrame": 38.5,
+        "hoverCommit": 3.599999999627471,
+        "frameEvidence": {
+          "duration": 0.19999999925494194,
+          "hoverSeq": 64,
+          "requestToFrame": 34.899999998509884,
+          "inputToFrame": 38.5,
+          "pointer": {
+            "serial": 62,
+            "timeStamp": 92920.89999999851,
+            "observedAt": 92939.59999999963,
+            "plot": "comparison-loss",
+            "x": 819.1599731445312,
+            "y": 682.28125
+          },
+          "requestToCommit": 3.599999999627471,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 92959.39999999851,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 34,
+              "hoverSeq": 64,
+              "step": 279792.4663212435,
+              "requestToAcceptedMs": 0.19999999925494194,
+              "requestToFrameMs": 34.899999998509884,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 92928.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 34,
+              "hoverSeq": 64,
+              "step": 279792.4663212435
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 279,792.466321 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-005279,7920.2247071.44042E-50.2275140.466321Pin #279792kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011181.6784863.40765E-60.2240550.005181Pin #118kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021182.9759863.40765E-60.1533430.005181Pin #118kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061181.7036883.40765E-60.1830740.005181Pin #118kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "64",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 64,
+        "pointerFraction": 0.28
+      },
+      {
+        "case": "excluded-spike",
+        "range": {
+          "min": 100,
+          "max": 200
+        },
+        "beforeRange": {
+          "min": 0,
+          "max": 999999
+        },
+        "requestToDraw": 120.29999999888241,
+        "viewSeq": 35,
+        "actionUpperBound": 654.5460999999923,
+        "hoverAccepted": 0,
+        "hoverFrame": 39.70000000111759,
+        "hoverInputFrame": 42.30000000074506,
+        "hoverCommit": 2.400000000372529,
+        "frameEvidence": {
+          "duration": 0,
+          "hoverSeq": 66,
+          "requestToFrame": 39.70000000111759,
+          "inputToFrame": 42.30000000074506,
+          "pointer": {
+            "serial": 63,
+            "timeStamp": 93872.79999999888,
+            "observedAt": 93888.79999999888,
+            "plot": "comparison-loss",
+            "x": 838.4600219726562,
+            "y": 682.28125
+          },
+          "requestToCommit": 2.400000000372529,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 93915.09999999963,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 35,
+              "hoverSeq": 66,
+              "step": 130.44041450777203,
+              "requestToAcceptedMs": 0,
+              "requestToFrameMs": 39.70000000111759,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 93877.79999999888,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 35,
+              "hoverSeq": 66,
+              "step": 130.44041450777203
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 130.440415 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-0051301.5935743.1196E-80.1770610.440415Pin #130kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011301.6172553.7486E-60.153520.440415Pin #130kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021302.9053123.7486E-60.1898530.440415Pin #130kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061301.6010883.7486E-60.2137570.440415Pin #130kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "66",
+              "rect": {
+                "x": 558,
+                "y": 1056.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1056.28125,
+                "right": 1370,
+                "bottom": 1412.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 66,
+        "pointerFraction": 0.305
+      },
+      {
+        "case": "single-step",
+        "range": {
+          "min": 500001,
+          "max": 500001
+        },
+        "beforeRange": {
+          "min": 100,
+          "max": 200
+        },
+        "requestToDraw": 116.5,
+        "viewSeq": 36,
+        "actionUpperBound": 595.2713999999978,
+        "hoverAccepted": 0.19999999925494194,
+        "hoverFrame": 44.09999999962747,
+        "hoverInputFrame": 45.5,
+        "hoverCommit": 1,
+        "frameEvidence": {
+          "duration": 0.19999999925494194,
+          "hoverSeq": 68,
+          "requestToFrame": 44.09999999962747,
+          "inputToFrame": 45.5,
+          "pointer": {
+            "serial": 64,
+            "timeStamp": 94753.29999999888,
+            "observedAt": 94771.69999999925,
+            "plot": "comparison-loss",
+            "x": 857.760009765625,
+            "y": 682.28125
+          },
+          "requestToCommit": 1,
+          "frame": {
+            "name": "soup:hover-frame",
+            "entryType": "mark",
+            "startTime": 94798.79999999888,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 36,
+              "hoverSeq": 68,
+              "step": 499831.3105414508,
+              "requestToAcceptedMs": 0.19999999925494194,
+              "requestToFrameMs": 44.09999999962747,
+              "tooltipCount": 1
+            }
+          },
+          "commit": {
+            "name": "soup:hover-dom-commit",
+            "entryType": "mark",
+            "startTime": 94755.69999999925,
+            "duration": 0,
+            "navigationId": 7704,
+            "detail": {
+              "workspaceEpoch": 45,
+              "viewSeq": 36,
+              "hoverSeq": 68,
+              "step": 499831.3105414508
+            }
+          },
+          "tooltips": [
+            {
+              "text": "Cursor step 499,831.310541 · All metricsOriginal observations at cursor stepRunRecorded stepLossLearning rateGradient normΔstepSourcekazakh-sft-0051301.5935743.1196E-80.1770610.440415Pin #130kazakh-sft-005Pin rowkazakh-sft-005No recorded value at this cursor location. Inspect full source groupkazakh-sft-0011301.6172553.7486E-60.153520.440415Pin #130kazakh-sft-001Pin rowkazakh-sft-001No recorded value at this cursor location. Inspect full source groupkazakh-sft-0021302.9053123.7486E-60.1898530.440415Pin #130kazakh-sft-002Pin rowkazakh-sft-002No recorded value at this cursor location. Inspect full source groupkazakh-sft-0061301.6010883.7486E-60.2137570.440415Pin #130kazakh-sft-006Pin rowkazakh-sft-006No recorded value at this cursor location. Inspect full source groupScroll for more rows and metrics. Groups show the first 2 observations.",
+              "sequence": "68",
+              "rect": {
+                "x": 558,
+                "y": 1144.28125,
+                "width": 812,
+                "height": 356,
+                "top": 1144.28125,
+                "right": 1370,
+                "bottom": 1500.28125,
+                "left": 558
+              }
+            }
+          ]
+        },
+        "acceptedHoverSeq": 68,
+        "pointerFraction": 0.33
+      }
+    ],
+    "warmup": {
+      "count": 2,
+      "ranges": [
+        "spike",
+        "excluded-spike"
+      ]
+    },
+    "evidence": {
+      "workspaceEpoch": 45,
+      "members": [
+        "kazakh-sft-005",
+        "kazakh-sft-001",
+        "kazakh-sft-002",
+        "kazakh-sft-006"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32786432,
+      "allocationBytes": 78576688,
+      "viewSeq": 36,
+      "acceptedHoverSeq": 68,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 25.700000001117587,
+          "normalizationMs": 223.09999999962747,
+          "indexBuildMs": 203.59999999962747,
+          "indexBufferBytes": 1696608
+        },
+        "kazakh-sft-001": {
+          "generationMs": 2.899999998509884,
+          "normalizationMs": 10,
+          "indexBuildMs": 2.5,
+          "indexBufferBytes": 13824
+        },
+        "kazakh-sft-002": {
+          "generationMs": 3,
+          "normalizationMs": 4.5,
+          "indexBuildMs": 3,
+          "indexBufferBytes": 13824
+        },
+        "kazakh-sft-006": {
+          "generationMs": 2.599999999627471,
+          "normalizationMs": 9,
+          "indexBuildMs": 1.599999999627471,
+          "indexBufferBytes": 9216
+        }
+      },
+      "renderBufferBytes": 492,
+      "hoverCacheTargets": 1089,
+      "hoverCacheRows": 1,
+      "hoverTiming": {
+        "hoverSeq": 68,
+        "viewSeq": 36,
+        "requestStartedAt": 94754.69999999925,
+        "acceptedAt": 94754.89999999851
+      },
+      "hoverCacheHits": 32
+    },
+    "heap": {
+      "usedSize": 15235712,
+      "totalSize": 73539584,
+      "embedderHeapUsedSize": 10208064,
+      "backingStorageSize": 804760
+    },
+    "workers": [
+      {
+        "type": "worker",
+        "targetId": "057569D472C8D0C0441320408D9E83A6",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "F69AC00D863B61DAD9CDC8F8B00B4CAF",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "51DF0F7705B953139A2EFD486C41CBA0",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "E93CE7A26193FE448C49F6E73DBB993B",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "201A1E49944B2690A66B2D7F7580907A",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "8786553191B969B7661D9DE9CCD9542D",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "A5E6D369E6F82139ACDE22EA4ED00B1B",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "BF1DE57D490CF96046D9B4BBF93A3A2F",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "392508673DDFB82575670DE9885AB1FB",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "CC0623597F1B371E1A523B648B96F413",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "EADE6ACC1542820A55BCA3A9C36EE62F",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "E3C654FA470B1CEA5AAC3E47B6531D99",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "FB8EFD476C39821A4FB9C203911C2A66",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "F1FD8A854FA5B47F69704AE06938B98E",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "865AEF7752730DF96BC1B507DDBEE29C",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "B88E27DFE57871896EB334ED25B853F9",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "E5947A32471A41EB43A8EF5DA6258D6E",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "F3FA82714B0940E01C23786D505CE2FA",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "F62BB9517CF45B97E94E31069C9BAC92",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "83B18284CC380B2496C86B2113968D51",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "B7B5531F74FD3E0E5F0EE4C14EE53181",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "DF6A8A3CD72F32816F41514C2B4AAC85",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "4CF1691FAE578357FD03A71B3AB125AB",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "5CB9F1D59A2CBA0341942F200FDC6F24",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "A4A59BABA641EE9FE647CBD6E243ED87",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "BD3D520533817F188AAE39AF0583A717",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "FE3F508423049B1D41B180EB5671CB7C",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "E8D8277A60EACDCB0C0A0D341C3B2075",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "6B285882B46A44E358434328B7C0C808",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "142D48B954FFEA982A7D0951CC6ACA71",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "151E1EAC79A5123B83AAD8A3CB6C8AB6",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "ABDAFF11F82D243DE0D2F596F9681D7A",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "63478C792C9C3945DAB3729BD1BB288B",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "2B7B352DCF14C56746B898A8BCBD99AC",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "7958B60BEFFAD285B2F0D433052F7B1B",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "3EB02D79C4FDA71BF330A26BBF6E86A1",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "C8B8B42AB6875472FF0453E26B471C4B",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "D20B587D0DD64717653B4C9B63199ABD",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "98E7F7A3BA22CFDAF9C1B481E8E6F359",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "FF3743C396DED32B48BBBB575C0E8F28",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "DAB849322E6AC9356B3619D78DF970C6",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "2E796C28E0210FCD8C74CA59EFBC56F3",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "09694E2524A0673BA53ED6C46B44FB1C",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "9F5FF2F428731188DCE3EA5A8761FDD4",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      },
+      {
+        "type": "worker",
+        "targetId": "05CFE7C08430BE47541CFB049C3F0EE5",
+        "throttling": "unsupported",
+        "error": "Operation is only supported for pages, not workers"
+      }
+    ]
+  }
+]

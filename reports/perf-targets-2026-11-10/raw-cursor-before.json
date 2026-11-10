@@ -1,0 +1,195 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs",
+      "e2e/raw-cursor.spec.ts"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/raw-cursor-before-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\raw-cursor-before-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/raw-cursor-before.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "raw-cursor.spec.ts",
+      "file": "raw-cursor.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "early raw pointer input resolves exact observations before a coalesced pointermove arrives",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6694,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\raw-cursor.spec.ts:12:84",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\raw-cursor.spec.ts",
+                      "column": 84,
+                      "line": 12
+                    },
+                    "snippet": " \u001b[90m 10 |\u001b[39m   element\u001b[33m.\u001b[39mdispatchEvent(\u001b[36mnew\u001b[39m \u001b[33mPointerEvent\u001b[39m(\u001b[32m'pointerrawupdate'\u001b[39m\u001b[33m,\u001b[39m{bubbles\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39mpointerType\u001b[33m:\u001b[39m\u001b[32m'mouse'\u001b[39m\u001b[33m,\u001b[39mclientX\u001b[33m:\u001b[39mbox\u001b[33m.\u001b[39mx\u001b[33m+\u001b[39mbox\u001b[33m.\u001b[39mwidth\u001b[33m*\u001b[39m\u001b[35m.36\u001b[39m\u001b[33m,\u001b[39mclientY\u001b[33m:\u001b[39mbox\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mbox\u001b[33m.\u001b[39mheight\u001b[33m*\u001b[39m\u001b[35m.5\u001b[39m}))\n \u001b[90m 11 |\u001b[39m  })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m  \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(()\u001b[33m=>\u001b[39mpage\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mwindow\u001b[33m.\u001b[39m__soupEvidence\u001b[33m!\u001b[39m\u001b[33m.\u001b[39macceptedHoverSeq))\u001b[33m.\u001b[39mtoBeGreaterThan(before)\n \u001b[90m    |\u001b[39m                                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m  \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-testid=\"cursor-readout-loss\"]'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Pin row'\u001b[39m)\n \u001b[90m 14 |\u001b[39m  \u001b[36mconst\u001b[39m accepted\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39mwindow\u001b[33m.\u001b[39m__soupEvidence\u001b[33m!\u001b[39m\u001b[33m.\u001b[39macceptedHoverSeq)\n \u001b[90m 15 |\u001b[39m  \u001b[36mawait\u001b[39m surface\u001b[33m.\u001b[39mevaluate(element\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\raw-cursor.spec.ts",
+                        "column": 84,
+                        "line": 12
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  10 |   element.dispatchEvent(new PointerEvent('pointerrawupdate',{bubbles:true,pointerType:'mouse',clientX:box.x+box.width*.36,clientY:box.y+box.height*.5}))\n  11 |  })\n> 12 |  await expect.poll(()=>page.evaluate(()=>window.__soupEvidence!.acceptedHoverSeq)).toBeGreaterThan(before)\n     |                                                                                    ^\n  13 |  await expect(page.locator('[data-testid=\"cursor-readout-loss\"]')).toContainText('Pin row')\n  14 |  const accepted=await page.evaluate(()=>window.__soupEvidence!.acceptedHoverSeq)\n  15 |  await surface.evaluate(element=>{\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\raw-cursor.spec.ts:12:84"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T10:46:39.355Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\raw-cursor-before-artifacts\\raw-cursor-early-raw-point-535e5-alesced-pointermove-arrives\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\raw-cursor-before-artifacts\\raw-cursor-early-raw-point-535e5-alesced-pointermove-arrives\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\raw-cursor-before-artifacts\\raw-cursor-early-raw-point-535e5-alesced-pointermove-arrives\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\raw-cursor.spec.ts",
+                    "column": 84,
+                    "line": 12
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "ccb10a49e1f785b08d67-72e732ad142420907c71",
+          "file": "raw-cursor.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T10:46:37.626Z",
+    "duration": 9877.401,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
