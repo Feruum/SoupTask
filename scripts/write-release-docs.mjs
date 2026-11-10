@@ -9,8 +9,6 @@ const n=value=>Number(value).toFixed(1),mb=value=>n(value/1048576),source=meta.g
 const limits=latency.targets,occurrences=contrast.summary.occurrences
 const names={cold:'Cold meaningful render',detailZoom:'Detail zoom',detailHover:'Detail hover on entry',compareZoom:'Compare zoom',compareHover:'Compare hover on entry',detailContinuous:'Detail continuous hover',compareContinuous:'Compare continuous hover'}
 const measured=Object.entries(limits).map(([name,value])=>`| ${names[name]} | ${n(value.actualMs)} | ${value.limitMs} | ${value.actualMs<=value.limitMs?'Pass':'Miss'} |`).join('\n')
-const memoryRows=memory.checkpoints.filter(sample=>['1M-settled','1M-after-20-SPA-switches','Compare-1M-plus-three'].includes(sample.label))
-const [initialMemory,switchedMemory,compareMemory]=memoryRows
 const memoryAll=memory.checkpoints.map(sample=>`| ${sample.label} | ${mb(sample.tabOwnedPrivateCommittedBytes)} | ${mb(sample.tabOwnedWorkingSetBytes)} |`).join('\n')
 const perfScores=lighthouse.results.map(result=>Math.round(result.categories.performance*100))
 const verdict=latency.misses.length?`Expanded limits remain unmet for ${latency.misses.map(name=>names[name].toLowerCase()).join(', ')}. Stable sub-50ms hover is not established. The demo is delivered with these measured limits; no100/100 grade is asserted.`:'The recorded expanded latency budgets pass in both final full-trace runs; this is not a universal latency guarantee or external100/100 grade.'
@@ -101,41 +99,7 @@ Frozen source: \`${source}\`. All links below are executed evidence; older exper
 
 ${verdict} The original PDF has no numeric latency ceiling. Exact published bytes/routes are checked separately; the author sends the local email draft personally. A100/100 grade, scientific validity of logger input and universal browser/accessibility correctness are not asserted.
 `)
-const note=`# Soup Training Monitor
-
-Frontend delivery —11 November2026. [Production](https://soup-training-monitor.vercel.app) · [Repository](https://github.com/Feruum/SoupTask). Five screens: Dashboard, Training runs, Run details, Compare and Data quality. All data is demonstration snapshots; no live training or automatic stop recommendation is fabricated.
-
-## Product and truthful data
-
-Twenty deterministic scenarios cover nonfinite values, duplicates/conflicts, unsorted steps, known gaps, zero, tiny metrics and a singleton. R05 has1,000,000 rows and exactly one Loss maximum: sourceIndex500001, step500001, value100. Four immutable Float64 columns stay Worker-owned. Sampling preserves original provenance and visible extrema; conflicts/known gaps break authoritative lines. Source inspection retains original rows and revision. No smoothing or interpolation is presented as a measurement.
-
-The interface includes searchable/filterable runs, URL-based two–four-run comparison, an interactive metric-quality map with text alternatives, range gestures/keyboard controls and an issue ledger. The shared source table shows actual step, all metrics, distance and source-qualified Pin. On wide screens it stays in a dedicated visible area above which charts scroll. Explicit layout ownership replaces global body:has, text nodes are reused and microtasks coalesce writes.
-
-## Verification
-
-Frozen snapshot ${source}. Build/lint, ${unit.numPassedTests} unit tests, ${browser.stats.expected} Chromium tests and all20 regenerated manifest entries pass; no skipped/flaky cases or retries in the accepted run. Independent raw oracles, named fault controls, actual Canvas spike/gap pixels, controlled races, locale/timezone, keyboard, touch synthesis, both themes and DPR2 are covered. Earlier genuine failures remain archived.
-
-${axe.audits} axe audits have zero violations. All${occurrences} fresh contrast incomplete occurrences have pixel dispositions; original516 are retained separately. Lighthouse Performance${Math.min(...perfScores)}–${Math.max(...perfScores)}, Accessibility/Best Practices100. These are automated observations, not human screen-reader or universal WCAG certification.
-
-<!-- pagebreak -->
-
-## Performance and limits
-
-Windows11/Ryzen7/Chromium158, 1440×900, DPR1, CPU×4 main renderer; Worker throttling unsupported. Two final full Chrome recordings each use five cold contexts, 30 detail and30 Compare entry interactions, with separate30-sample continuous movement per workspace. Nearest-rank p95, no pooling/forced GC. Worst p95: cold${n(limits.cold.actualMs)}ms; detail/Compare zoom${n(limits.detailZoom.actualMs)}/${n(limits.compareZoom.actualMs)}ms; detail/Compare hover${n(limits.detailHover.actualMs)}/${n(limits.compareHover.actualMs)}ms. No-trace results are separate.
-
-Current source DOM precedes BOTH RAF checks. Actual step/metric text must fit viewport/clipping bounds and pass cell-center occlusion sampling. Earlier offscreen-readout timing did not establish visible values and is not used as final visible-hover proof. Two RAFs establish a rendering opportunity, not physical monitor presentation. ${verdict}
-
-## Memory findings
-
-A real uPlot document-mouseup listener leak on interrupted drag was fixed. Canvas buffers are released at unmount, timing entries and Intl caches are bounded, and decorative images use appropriately sized derivatives. The surprising failures were a retained document listener and an offscreen readout that looked fast in timing alone. Final B/T/F snapshots after20/60 rounds found no newly accumulating detached candidates; this is not zero total detached objects.
-
-Natural Windows renderer/Worker private committed / working set: ${mb(initialMemory.tabOwnedPrivateCommittedBytes)}/${mb(initialMemory.tabOwnedWorkingSetBytes)} MiB initially, ${mb(switchedMemory.tabOwnedPrivateCommittedBytes)}/${mb(switchedMemory.tabOwnedWorkingSetBytes)} after20 switches, and ${mb(compareMemory.tabOwnedPrivateCommittedBytes)}/${mb(compareMemory.tabOwnedWorkingSetBytes)} in Compare. Native MemoryInfra, raw32MB, indexed buffers76.7MB including raw, and JS heap are separate scopes. Do not add them to process counters. Remaining memory growth is a concern; universal leak freedom is not claimed.
-
-## AI assistance and handoff
-
-${disclosure} The changed-deadline/live-discussion cancellation was not verified. README, performance-results, the evidence manifest and the archived failures provide reproduction and scope.
-`
-await writeFile('docs/submission-note.md',note)
+// The submission note is edited by the author and rendered separately.
 await writeFile('docs/submission-email.md',`# Local submission draft —not sent
 
 To: team@trysoup.dev
@@ -221,5 +185,5 @@ let investigation=await readFile('docs/memory-investigation.md','utf8')
 investigation=investigation.replace('Application source for final memory acceptance: `cd01873a47796a8a396631b67419e01d6ca7db7e`; source/build hashes are in [build metadata](../reports/build-metadata.json).',`Earlier memory-fix phase source: \`cd01873a47796a8a396631b67419e01d6ca7db7e\`; its identities remain in [that phase's checks](../reports/memory-investigation-2026-11-10/final-checks.json). The final release is revalidated on \`${source}\`: [retainer chains](${link('final-roundtrip/retainer-analysis.json')}), [native attribution](${link('final-roundtrip/native-attribution.json')}) and [natural process counters](${link('final-memory/results.json')}). These phases are not conflated.`)
 await writeFile('docs/memory-investigation.md',investigation)
 const tidy=text=>text.replace(/\b(All|all|After|after|The|the|both|under|with|over|in|of|for|sourceIndex|step|value|snapshot|scanned|Only|original|fresh|and|final|than|includes|no|has|cold|zoom|hover|Performance|Practices|raw|buffers|separate|recording)(?=\d)/g,'$1 ').replace(/(\d)(?=(?:unit|Chromium|browser|runs|bytes|rows|px|ms|MiB|MB|axe|workload|occurrences|Performance)\b)/g,'$1 ').replace(/\b(November|Windows|Chromium|Ryzen|DPR)(?=\d)/g,'$1 ').replace(/\bCPU×/g,'CPU ×').replace(/—(?=\d)/g,'— ')
-for(const file of ['README.md','docs/performance-results.md','docs/implementation-status.md','docs/accessibility-review.md','docs/acceptance-matrix.md','docs/submission-note.md','docs/submission-email.md','docs/engineering-notes.md',`${root}/impeccable-final-review.md`])await writeFile(file,tidy(await readFile(file,'utf8')))
-console.log(JSON.stringify({source,unit:unit.numPassedTests,browser:browser.stats.expected,contrast:occurrences,latencyMisses:latency.misses,retainerCases:retained.results.length,memoryRows:memoryRows.length}))
+for(const file of ['README.md','docs/performance-results.md','docs/implementation-status.md','docs/accessibility-review.md','docs/acceptance-matrix.md','docs/submission-email.md','docs/engineering-notes.md',`${root}/impeccable-final-review.md`])await writeFile(file,tidy(await readFile(file,'utf8')))
+console.log(JSON.stringify({source,unit:unit.numPassedTests,browser:browser.stats.expected,contrast:occurrences,latencyMisses:latency.misses,retainerCases:retained.results.length}))
