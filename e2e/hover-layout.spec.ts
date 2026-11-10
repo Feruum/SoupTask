@@ -11,7 +11,7 @@ async function pointAtCenter(page: Page, plot: Locator) {
       acceptedHoverSeq: number;
     };
   }).__soupEvidence?.acceptedHoverSeq ?? 0);
-  await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+  await page.mouse.move(box.x + box.width / 2 - 1, box.y + box.height / 2);
   await expect.poll(() => page.evaluate(() => (window as Window & {
     __soupEvidence?: {
       acceptedHoverSeq: number;
@@ -87,17 +87,14 @@ for (const width of [390, 1440]) for (const comparison of [false, true]) test(`$
     contentType: 'application/json'
   });
   expect(after).toBeCloseTo(before, 0);
-  await expect(page.getByTestId('cursor-readout-loss')).toHaveAttribute('data-reserved', 'true');
+  await expect(page.getByTestId(comparison ? 'comparison-cursor-readout' : 'cursor-readout-loss')).toHaveAttribute('data-reserved', 'true');
   if (comparison) {
-    await expect(page.locator('.metric-loss .tooltip-series')).toHaveCount(4);
-    await expect(page.locator('.metric-loss .tooltip-series').filter({
-      hasText: 'kazakh-sft-009'
-    })).toContainText('Showing first 2 returned observations');
-    await expect(page.locator('.metric-loss .tooltip-series').filter({
-      hasText: 'kazakh-sft-009'
-    }).getByRole('link', {
-      name: 'Inspect full source group',
-      exact: true
+    const source = page.getByTestId('comparison-cursor-readout');
+    await expect(source.locator('tbody')).toHaveCount(4);
+    const group = source.locator('tbody[aria-label="Original observations for kazakh-sft-009"]');
+    await expect(group).toContainText('11 returned observations');
+    await expect(group.getByRole('link', {
+      name: 'Inspect full source group', exact: true
     })).toHaveAttribute('href', /step=99&revision=/);
   } else {
     const pin = page.locator('.metric-loss').getByRole('button', {

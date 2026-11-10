@@ -1,25 +1,37 @@
-import { useLayoutEffect } from 'react'
-
-/** Measures a committed source tooltip through a frame opportunity, never worker readiness alone. */
-export function useHoverPaint(selectionKey: string, viewSeq: number, hoverSeq: number, hoverStep: number | null) {
-  useLayoutEffect(() => {
-    const evidence = window.__soupEvidence
-    const timing = evidence?.hoverTiming
-    if (!evidence || !timing || hoverStep === null || !hoverSeq || timing.hoverSeq !== hoverSeq || timing.viewSeq !== viewSeq) return
-    const epoch = evidence.workspaceEpoch
-    const detail = { workspaceEpoch: epoch, viewSeq, hoverSeq, step: hoverStep }
-    performance.mark('soup:hover-dom-commit', { detail })
-    let secondFrame = 0
-    const firstFrame = requestAnimationFrame(() => {
-      secondFrame = requestAnimationFrame(() => {
-        const current = window.__soupEvidence
-        if (current?.workspaceEpoch !== epoch || current.viewSeq !== viewSeq || current.acceptedHoverSeq !== hoverSeq) return
-        const tooltips = [...document.querySelectorAll<HTMLElement>(`.chart-hover-value[data-hover-seq="${hoverSeq}"]`)]
-        if (!tooltips.length || tooltips.some(node => !node.getClientRects().length || getComputedStyle(node).visibility === 'hidden')) return
-        const requestToFrameMs = performance.now() - timing.requestStartedAt
-        performance.mark('soup:hover-frame', { detail: { ...detail, requestToAcceptedMs: timing.acceptedAt - timing.requestStartedAt, requestToFrameMs, tooltipCount: tooltips.length } })
-      })
-    })
-    return () => { cancelAnimationFrame(firstFrame); cancelAnimationFrame(secondFrame) }
-  }, [selectionKey, viewSeq, hoverSeq, hoverStep])
+import {useLayoutEffect} from 'react'
+type Frame={key:string;epoch:number;viewSeq:number;hoverSeq:number;step:number;committed:boolean;first:number;second:number;cancel:()=>void}
+let pending:Frame|null=null,lastAcknowledged=''
+function arm(viewSeq:number,hoverSeq:number,hoverStep:number|null):Frame|undefined {
+ const evidence=window.__soupEvidence,timing=evidence?.hoverTiming
+ if(!evidence||!timing||hoverStep===null||!hoverSeq||timing.hoverSeq!==hoverSeq||timing.viewSeq!==viewSeq)return
+ const key=`${evidence.workspaceEpoch}:${viewSeq}:${hoverSeq}`
+ if(key===lastAcknowledged)return
+ if(pending?.key===key)return pending
+ pending?.cancel()
+ const frame:Frame={key,epoch:evidence.workspaceEpoch,viewSeq,hoverSeq,step:hoverStep,committed:false,first:0,second:0,cancel:()=>{cancelAnimationFrame(frame.first);cancelAnimationFrame(frame.second);if(pending===frame)pending=null}}
+ pending=frame
+ frame.first=requestAnimationFrame(()=>{
+  // Scheduling is early; the endpoint still requires DOM commit before BOTH frame callbacks.
+  if(!frame.committed){frame.cancel();return}
+  frame.second=requestAnimationFrame(()=>{
+   const current=window.__soupEvidence
+   if(current?.workspaceEpoch!==frame.epoch||current.viewSeq!==viewSeq||current.acceptedHoverSeq!==hoverSeq){frame.cancel();return}
+   const tooltips=[...document.querySelectorAll<HTMLElement>(`.chart-hover-value[data-hover-seq="${hoverSeq}"]`)]
+   if(!tooltips.length||tooltips.some(node=>!node.getClientRects().length||getComputedStyle(node).visibility==='hidden')){frame.cancel();return}
+   performance.mark('soup:hover-frame',{detail:{workspaceEpoch:frame.epoch,viewSeq,hoverSeq,step:hoverStep,requestToAcceptedMs:timing.acceptedAt-timing.requestStartedAt,requestToFrameMs:performance.now()-timing.requestStartedAt,tooltipCount:tooltips.length}})
+   lastAcknowledged=key;frame.cancel()
+  })
+ })
+ return frame
+}
+/** Queue the frame before synchronous leaf writes, without acknowledging an uncommitted DOM. */
+export function beginHoverPaint(viewSeq:number,hoverSeq:number,hoverStep:number|null){arm(viewSeq,hoverSeq,hoverStep)}
+export function recordHoverPaint(viewSeq:number,hoverSeq:number,hoverStep:number|null){
+ const frame=arm(viewSeq,hoverSeq,hoverStep);if(!frame)return
+ frame.committed=true
+ performance.mark('soup:hover-dom-commit',{detail:{workspaceEpoch:frame.epoch,viewSeq,hoverSeq,step:hoverStep}})
+ return frame.cancel
+}
+export function useHoverPaint(selectionKey:string,viewSeq:number,hoverSeq:number,hoverStep:number|null){
+ useLayoutEffect(()=>recordHoverPaint(viewSeq,hoverSeq,hoverStep),[selectionKey,viewSeq,hoverSeq,hoverStep])
 }

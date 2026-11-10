@@ -46,6 +46,16 @@ test('a pointer on previous axes is not queued as a hover for a pending new view
 
 test('a source hover request is dispatched without waiting for an available animation frame', async ({ page }) => {
   await page.addInitScript(() => {
+    // Exercise the uncached fallback explicitly. Prepared cache failure must release its bounded slot.
+    const NativeWorker=Worker
+    window.Worker=class extends NativeWorker {
+      constructor(url:string|URL,options?:WorkerOptions){
+        super(url,options)
+        let handler:((this:Worker,event:MessageEvent)=>unknown)|null=null
+        Object.defineProperty(this,'onmessage',{get:()=>handler,set:next=>{handler=next},configurable:true})
+        this.addEventListener('message',event=>handler?.call(this,event.data.kind==='hover-prepared'?new MessageEvent('message',{data:{...event.data,kind:'error',operation:'prepare-hover',message:'Cache disabled by fallback regression'}}):event))
+      }
+    }
     const tracked = window as Window & { __hoverPosts?: number }
     tracked.__hoverPosts = 0
     const original = Worker.prototype.postMessage

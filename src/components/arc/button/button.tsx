@@ -14,6 +14,8 @@ export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement
   variant?: ButtonVariant;
   size?: ButtonSize;
   loading?: boolean;
+  /** Keep high-frequency numeric controls stationary during chart interactions. */
+  pressMotion?: boolean;
 }
 
 /** Icon buttons press a little deeper, wide buttons a little less, so every size reads as the same push. */
@@ -78,7 +80,7 @@ function LabelPhase({ children, icon, reduced, ref }: { children: ReactNode; ico
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { className, variant = "primary", size = "md", loading = false, disabled, children, onClick, ...props },
+  { className, variant = "primary", size = "md", loading = false, pressMotion = true, disabled, children, onClick, ...props },
   ref,
 ) {
   const reduceMotion = useReducedMotion() ?? false;
@@ -106,7 +108,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
       aria-busy={loading || undefined}
       custom={buttonRef}
       variants={pressVariants}
-      whileTap={reduceMotion || anchorsLayer || inert ? undefined : "pressed"}
+      whileTap={reduceMotion || !pressMotion || anchorsLayer || inert ? undefined : "pressed"}
       transition={motionTokens.spring.snappy}
       {...props}
       // Loading keeps the button focusable (a disabled button would drop keyboard focus mid-action) and swallows presses instead.
