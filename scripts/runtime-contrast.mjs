@@ -3,7 +3,7 @@ import { chromium } from '@playwright/test'
 import { spawn } from 'node:child_process'
 import { mkdir, writeFile } from 'node:fs/promises'
 import { assertSpikePainted } from './canvas-controls.mjs'
-const directory='reports/manual'
+const directory=process.env.RUNTIME_REVIEW_OUT??'reports/manual'
 await mkdir(directory,{recursive:true})
 const server=spawn(process.execPath,['scripts/serve-build.mjs','dist','4187'],{stdio:'pipe'})
 await new Promise((resolve,reject)=>{server.stdout.once('data',resolve);server.once('error',reject)})
@@ -15,11 +15,12 @@ try{
   const context=await browser.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'})
   await context.addInitScript(value=>localStorage.setItem('soup-theme',value),theme)
   const page=await context.newPage()
-  await page.goto('http://127.0.0.1:4187/dashboard')
+  await page.goto('http://127.0.0.1:4187/dashboard?view=map')
   await page.getByRole('heading',{name:'Experiment map',exact:true}).waitFor()
   const svg=await page.locator('.experiment-map').evaluate(element=>{
    const rgb=color=>color.match(/[\d.]+/g).slice(0,3).map(Number)
-   return {background:rgb(getComputedStyle(element.closest('.dashboard-instrument-grid')).backgroundColor),labels:[...element.querySelectorAll('text')].map(text=>({text:text.textContent,fill:rgb(getComputedStyle(text).fill)}))}
+   let surface=element;while(surface&&getComputedStyle(surface).backgroundColor==='rgba(0, 0, 0, 0)')surface=surface.parentElement
+   return {background:rgb(getComputedStyle(surface).backgroundColor),labels:[...element.querySelectorAll('text')].map(text=>({text:text.textContent,fill:rgb(getComputedStyle(text).fill)}))}
   })
   const svgContrasts=svg.labels.map(label=>({...label,contrast:ratio(label.fill,svg.background)}))
   assert.ok(svgContrasts.every(label=>label.contrast>=4.5),'Dashboard SVG text must reach 4.5:1 against its actual surface')

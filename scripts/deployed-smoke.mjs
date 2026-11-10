@@ -4,7 +4,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { assertSpikePainted } from './canvas-controls.mjs'
 const base=process.argv[2]
 if(!base||new URL(base).protocol!=='https:')throw new Error('Supply the actual HTTPS URL returned by Vercel deploy')
-const directory='reports/deployed-smoke';await mkdir(directory,{recursive:true})
+const directory=process.env.DEPLOY_SMOKE_OUT??'reports/deployed-smoke';await mkdir(directory,{recursive:true})
 const metadata=JSON.parse(await readFile('reports/build-metadata.json','utf8'))
 const browser=await chromium.launch(),context=await browser.newContext({viewport:{width:1440,height:900},locale:'en-US',timezoneId:'Asia/Qyzylorda'})
 const page=await context.newPage(),errors=[],assets=[],routes=[]
@@ -12,13 +12,14 @@ page.on('pageerror',error=>errors.push(error.message))
 page.on('response',response=>{if(new URL(response.url()).pathname.startsWith('/assets/'))assets.push({url:response.url(),status:response.status(),contentType:response.headers()['content-type']??''})})
 let verified=false,spike=null,missingAsset=null
 try{
- for(const [name,route,heading] of [['dashboard','/dashboard','Workspace overview'],['runs','/runs','Training runs'],['detail','/runs/kazakh-sft-005','kazakh-sft-005'],['compare','/compare?runs=kazakh-sft-005,kazakh-sft-006','Compare runs'],['quality','/data-quality','Data quality']]){
+ for(const [name,route,heading] of [['dashboard','/dashboard','Training overview'],['runs','/runs','Training runs'],['detail','/runs/kazakh-sft-005','kazakh-sft-005'],['compare','/compare?runs=kazakh-sft-005,kazakh-sft-006','Compare runs'],['quality','/data-quality','Data quality']]){
   const response=await page.goto(new URL(route,base).href)
   assert.equal(response.status(),200,`Direct route ${route} must load`)
   await expect(page.locator('h1')).toHaveText(heading,{timeout:60000})
   if(name==='detail'||name==='compare')await page.waitForFunction(()=>document.querySelectorAll('.plot-host[data-view-ready="true"]').length===3,undefined,{timeout:60000})
   const reload=await page.reload();assert.equal(reload.status(),200)
   await expect(page.locator('h1')).toHaveText(heading,{timeout:60000})
+  if(name==='dashboard')await page.waitForFunction(()=>document.querySelectorAll('.plot-host[data-view-ready="true"]').length===1,undefined,{timeout:60000})
   if(name==='detail'){
    spike=await assertSpikePainted(page)
    await page.getByRole('button',{name:'Source',exact:true}).click()

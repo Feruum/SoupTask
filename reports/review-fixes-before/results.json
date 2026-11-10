@@ -1,0 +1,565 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=tmp/review-fixes-playwright.config.mjs"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\review-fixes-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/review-fixes-before/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "review-fixes.spec.ts"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "review-fixes.spec.ts",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4175",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4175",
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "url": "http://127.0.0.1:4175",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "review-fixes.spec.ts",
+      "file": "review-fixes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "an accepted source lookup with zero matches announces its recorded step and recovery",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8427,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('inspection-status')\nExpected substring: \u001b[32m\"No observation at recorded step 1,000,001\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('inspection-status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('inspection-status')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('inspection-status')\nExpected substring: \u001b[32m\"No observation at recorded step 1,000,001\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('inspection-status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('inspection-status')\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:10:24",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                      "column": 24,
+                      "line": 10
+                    },
+                    "snippet": " \u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Inspect step'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\n \u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m status \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'inspection-status'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m expect(status)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'No observation at recorded step 1,000,001'\u001b[39m)\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Source step'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mfill(\u001b[32m'500001'\u001b[39m)\n \u001b[90m 12 |\u001b[39m   \u001b[36mawait\u001b[39m expect(status)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'No observation at recorded step 1,000,001'\u001b[39m)\n \u001b[90m 13 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Browse source rows'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                        "column": 24,
+                        "line": 10
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('inspection-status')\nExpected substring: \u001b[32m\"No observation at recorded step 1,000,001\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('inspection-status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('inspection-status')\u001b[22m\n\n\n   8 |   await page.getByRole('button', { name: 'Inspect step', exact: true }).click()\n   9 |   const status = page.getByTestId('inspection-status')\n> 10 |   await expect(status).toContainText('No observation at recorded step 1,000,001')\n     |                        ^\n  11 |   await page.getByLabel('Source step', { exact: true }).fill('500001')\n  12 |   await expect(status).toContainText('No observation at recorded step 1,000,001')\n  13 |   await page.getByRole('button', { name: 'Browse source rows', exact: true }).click()\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:10:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:20:00.764Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-an-accepted-s-3cdc3--recorded-step-and-recovery\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-an-accepted-s-3cdc3--recorded-step-and-recovery\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-an-accepted-s-3cdc3--recorded-step-and-recovery\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                    "column": 24,
+                    "line": 10
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-9674d021582a6dd1e1c5",
+          "file": "review-fixes.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "stacked preview at 1024px brings its selected run into view and focuses its heading",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6198,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\u001b[22m\n\u001b[2m    14 × locator resolved to <h2 tabindex=\"-1\">kazakh-sft-002</h2>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\u001b[22m\n\u001b[2m    14 × locator resolved to <h2 tabindex=\"-1\">kazakh-sft-002</h2>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:25:25",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                      "column": 25,
+                      "line": 25
+                    },
+                    "snippet": " \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Preview kazakh-sft-002'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\n \u001b[90m 24 |\u001b[39m   \u001b[36mconst\u001b[39m heading \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.run-preview'\u001b[39m)\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'kazakh-sft-002'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m expect(heading)\u001b[33m.\u001b[39mtoBeFocused()\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m   \u001b[36mconst\u001b[39m box \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m heading\u001b[33m.\u001b[39mboundingBox()\n \u001b[90m 27 |\u001b[39m   expect(box)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeNull()\n \u001b[90m 28 |\u001b[39m   expect(box\u001b[33m!\u001b[39m\u001b[33m.\u001b[39my)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                        "column": 25,
+                        "line": 25
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\u001b[22m\n\u001b[2m    14 × locator resolved to <h2 tabindex=\"-1\">kazakh-sft-002</h2>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  23 |   await page.getByRole('button', { name: 'Preview kazakh-sft-002', exact: true }).click()\n  24 |   const heading = page.locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\n> 25 |   await expect(heading).toBeFocused()\n     |                         ^\n  26 |   const box = await heading.boundingBox()\n  27 |   expect(box).not.toBeNull()\n  28 |   expect(box!.y).toBeGreaterThanOrEqual(0)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:25:25"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:20:11.440Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-stacked-previ-e57bc-iew-and-focuses-its-heading\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-stacked-previ-e57bc-iew-and-focuses-its-heading\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-stacked-previ-e57bc-iew-and-focuses-its-heading\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                    "column": 25,
+                    "line": 25
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-50b622120db95ea7f252",
+          "file": "review-fixes.spec.ts",
+          "line": 20,
+          "column": 41
+        },
+        {
+          "title": "stacked preview at 1280px brings its selected run into view and focuses its heading",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6225,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\u001b[22m\n\u001b[2m    13 × locator resolved to <h2 tabindex=\"-1\">kazakh-sft-002</h2>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\u001b[22m\n\u001b[2m    13 × locator resolved to <h2 tabindex=\"-1\">kazakh-sft-002</h2>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:25:25",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                      "column": 25,
+                      "line": 25
+                    },
+                    "snippet": " \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Preview kazakh-sft-002'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\n \u001b[90m 24 |\u001b[39m   \u001b[36mconst\u001b[39m heading \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.run-preview'\u001b[39m)\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'kazakh-sft-002'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m expect(heading)\u001b[33m.\u001b[39mtoBeFocused()\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m   \u001b[36mconst\u001b[39m box \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m heading\u001b[33m.\u001b[39mboundingBox()\n \u001b[90m 27 |\u001b[39m   expect(box)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeNull()\n \u001b[90m 28 |\u001b[39m   expect(box\u001b[33m!\u001b[39m\u001b[33m.\u001b[39my)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                        "column": 25,
+                        "line": 25
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\u001b[22m\n\u001b[2m    13 × locator resolved to <h2 tabindex=\"-1\">kazakh-sft-002</h2>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  23 |   await page.getByRole('button', { name: 'Preview kazakh-sft-002', exact: true }).click()\n  24 |   const heading = page.locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\n> 25 |   await expect(heading).toBeFocused()\n     |                         ^\n  26 |   const box = await heading.boundingBox()\n  27 |   expect(box).not.toBeNull()\n  28 |   expect(box!.y).toBeGreaterThanOrEqual(0)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:25:25"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:20:19.488Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-stacked-previ-e4787-iew-and-focuses-its-heading\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-stacked-previ-e4787-iew-and-focuses-its-heading\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-stacked-previ-e4787-iew-and-focuses-its-heading\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                    "column": 25,
+                    "line": 25
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-b76c2e3b20b699c32849",
+          "file": "review-fixes.spec.ts",
+          "line": 20,
+          "column": 41
+        },
+        {
+          "title": "stacked preview at 1400px brings its selected run into view and focuses its heading",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6202,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\u001b[22m\n\u001b[2m    13 × locator resolved to <h2 tabindex=\"-1\">kazakh-sft-002</h2>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\u001b[22m\n\u001b[2m    13 × locator resolved to <h2 tabindex=\"-1\">kazakh-sft-002</h2>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:25:25",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                      "column": 25,
+                      "line": 25
+                    },
+                    "snippet": " \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Preview kazakh-sft-002'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\n \u001b[90m 24 |\u001b[39m   \u001b[36mconst\u001b[39m heading \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.run-preview'\u001b[39m)\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'kazakh-sft-002'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m expect(heading)\u001b[33m.\u001b[39mtoBeFocused()\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 26 |\u001b[39m   \u001b[36mconst\u001b[39m box \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m heading\u001b[33m.\u001b[39mboundingBox()\n \u001b[90m 27 |\u001b[39m   expect(box)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeNull()\n \u001b[90m 28 |\u001b[39m   expect(box\u001b[33m!\u001b[39m\u001b[33m.\u001b[39my)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(\u001b[35m0\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                        "column": 25,
+                        "line": 25
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeFocused\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\nExpected: focused\nReceived: inactive\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toBeFocused\" locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\u001b[22m\n\u001b[2m    13 × locator resolved to <h2 tabindex=\"-1\">kazakh-sft-002</h2>\u001b[22m\n\u001b[2m       - unexpected value \"inactive\"\u001b[22m\n\n\n  23 |   await page.getByRole('button', { name: 'Preview kazakh-sft-002', exact: true }).click()\n  24 |   const heading = page.locator('.run-preview').getByRole('heading', { name: 'kazakh-sft-002', exact: true })\n> 25 |   await expect(heading).toBeFocused()\n     |                         ^\n  26 |   const box = await heading.boundingBox()\n  27 |   expect(box).not.toBeNull()\n  28 |   expect(box!.y).toBeGreaterThanOrEqual(0)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:25:25"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:20:27.627Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-stacked-previ-51654-iew-and-focuses-its-heading\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-stacked-previ-51654-iew-and-focuses-its-heading\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-stacked-previ-51654-iew-and-focuses-its-heading\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                    "column": 25,
+                    "line": 25
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-73fc57fa3d80acadc353",
+          "file": "review-fixes.spec.ts",
+          "line": 20,
+          "column": 41
+        },
+        {
+          "title": "compact preview help links to real range controls on both preview hosts",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6770,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.preview-charts')\nExpected substring: not \u001b[32m\"Use Adjust chart range to zoom\"\u001b[39m\nReceived string: \u001b[31m\"LossRecorded step · Linear scale · Original values982 displayedkazakh-sft-0050.200327 – 100.000Wheel: zoom · Ctrl+wheel: pinch zoom · Shift+wheel: pan · Drag: select rangeTap the chart for recorded values. \u001b[7mUse Adjust chart range to zoom\u001b[27m; swipe vertically to scroll.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toContainText\" locator('.preview-charts') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.preview-charts')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"preview-charts\" data-view-ready=\"true\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"LossRecorded step · Linear scale · Original values982 displayedkazakh-sft-0050.200327 – 100.000Wheel: zoom · Ctrl+wheel: pinch zoom · Shift+wheel: pan · Drag: select rangeTap the chart for recorded values. Use Adjust chart range to zoom; swipe vertically to scroll.\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.preview-charts')\nExpected substring: not \u001b[32m\"Use Adjust chart range to zoom\"\u001b[39m\nReceived string: \u001b[31m\"LossRecorded step · Linear scale · Original values982 displayedkazakh-sft-0050.200327 – 100.000Wheel: zoom · Ctrl+wheel: pinch zoom · Shift+wheel: pan · Drag: select rangeTap the chart for recorded values. \u001b[7mUse Adjust chart range to zoom\u001b[27m; swipe vertically to scroll.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toContainText\" locator('.preview-charts') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.preview-charts')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"preview-charts\" data-view-ready=\"true\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"LossRecorded step · Linear scale · Original values982 displayedkazakh-sft-0050.200327 – 100.000Wheel: zoom · Ctrl+wheel: pinch zoom · Shift+wheel: pan · Drag: select rangeTap the chart for recorded values. Use Adjust chart range to zoom; swipe vertically to scroll.\"\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:39:31",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                      "column": 31,
+                      "line": 39
+                    },
+                    "snippet": " \u001b[90m 37 |\u001b[39m     \u001b[36mconst\u001b[39m preview \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.preview-charts'\u001b[39m)\n \u001b[90m 38 |\u001b[39m     \u001b[36mawait\u001b[39m expect(preview)\u001b[33m.\u001b[39mtoBeVisible()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 39 |\u001b[39m     \u001b[36mawait\u001b[39m expect(preview)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Use Adjust chart range to zoom'\u001b[39m)\n \u001b[90m    |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 40 |\u001b[39m     \u001b[36mawait\u001b[39m preview\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Open run and adjust range'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\n \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/\\/runs\\/kazakh-sft-\\d{3}$/\u001b[39m)\n \u001b[90m 42 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Adjust chart range'\u001b[39m\u001b[33m,\u001b[39m { exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                        "column": 31,
+                        "line": 39
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).not.\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.preview-charts')\nExpected substring: not \u001b[32m\"Use Adjust chart range to zoom\"\u001b[39m\nReceived string: \u001b[31m\"LossRecorded step · Linear scale · Original values982 displayedkazakh-sft-0050.200327 – 100.000Wheel: zoom · Ctrl+wheel: pinch zoom · Shift+wheel: pan · Drag: select rangeTap the chart for recorded values. \u001b[7mUse Adjust chart range to zoom\u001b[27m; swipe vertically to scroll.\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"not toContainText\" locator('.preview-charts') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.preview-charts')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"preview-charts\" data-view-ready=\"true\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"LossRecorded step · Linear scale · Original values982 displayedkazakh-sft-0050.200327 – 100.000Wheel: zoom · Ctrl+wheel: pinch zoom · Shift+wheel: pan · Drag: select rangeTap the chart for recorded values. Use Adjust chart range to zoom; swipe vertically to scroll.\"\u001b[22m\n\n\n  37 |     const preview = page.locator('.preview-charts')\n  38 |     await expect(preview).toBeVisible()\n> 39 |     await expect(preview).not.toContainText('Use Adjust chart range to zoom')\n     |                               ^\n  40 |     await preview.getByRole('link', { name: 'Open run and adjust range', exact: true }).click()\n  41 |     await expect(page).toHaveURL(/\\/runs\\/kazakh-sft-\\d{3}$/)\n  42 |     await expect(page.getByText('Adjust chart range', { exact: true })).toBeVisible()\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:39:31"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:20:35.694Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-compact-previ-37fe6-trols-on-both-preview-hosts\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-compact-previ-37fe6-trols-on-both-preview-hosts\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-compact-previ-37fe6-trols-on-both-preview-hosts\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                    "column": 31,
+                    "line": 39
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-68b9f0446c6c97086630",
+          "file": "review-fixes.spec.ts",
+          "line": 32,
+          "column": 1
+        },
+        {
+          "title": "quality filters and findings use readable names while URL query values stay stable",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5543,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('combobox', { name: 'Issue type', exact: true }).getByRole('option', { name: '+Infinity', exact: true })\nExpected: \u001b[32m\"posInf\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('combobox', { name: 'Issue type', exact: true }).getByRole('option', { name: '+Infinity', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('combobox', { name: 'Issue type', exact: true }).getByRole('option', { name: '+Infinity', exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('combobox', { name: 'Issue type', exact: true }).getByRole('option', { name: '+Infinity', exact: true })\nExpected: \u001b[32m\"posInf\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('combobox', { name: 'Issue type', exact: true }).getByRole('option', { name: '+Infinity', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('combobox', { name: 'Issue type', exact: true }).getByRole('option', { name: '+Infinity', exact: true })\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:49:80",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                      "column": 80,
+                      "line": 49
+                    },
+                    "snippet": " \u001b[90m 47 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/data-quality?run=kazakh-sft-007&kind=posInf'\u001b[39m)\n \u001b[90m 48 |\u001b[39m   \u001b[36mconst\u001b[39m filter \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'combobox'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Issue type'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m   \u001b[36mawait\u001b[39m expect(filter\u001b[33m.\u001b[39mgetByRole(\u001b[32m'option'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'+Infinity'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'value'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'posInf'\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   \u001b[36mawait\u001b[39m expect(filter\u001b[33m.\u001b[39mgetByRole(\u001b[32m'option'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Invalid step coordinates'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'value'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'invalidX'\u001b[39m)\n \u001b[90m 51 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.issue-ledger-table'\u001b[39m)\u001b[33m.\u001b[39mgetByRole(\u001b[32m'rowheader'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'+Infinity'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 52 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.issue-strip'\u001b[39m)\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m)\u001b[33m.\u001b[39mfirst())\u001b[33m.\u001b[39mtoHaveAccessibleName(\u001b[35m/\\+Infinity at step/\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                        "column": 80,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('combobox', { name: 'Issue type', exact: true }).getByRole('option', { name: '+Infinity', exact: true })\nExpected: \u001b[32m\"posInf\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByRole('combobox', { name: 'Issue type', exact: true }).getByRole('option', { name: '+Infinity', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('combobox', { name: 'Issue type', exact: true }).getByRole('option', { name: '+Infinity', exact: true })\u001b[22m\n\n\n  47 |   await page.goto('/data-quality?run=kazakh-sft-007&kind=posInf')\n  48 |   const filter = page.getByRole('combobox', { name: 'Issue type', exact: true })\n> 49 |   await expect(filter.getByRole('option', { name: '+Infinity', exact: true })).toHaveAttribute('value', 'posInf')\n     |                                                                                ^\n  50 |   await expect(filter.getByRole('option', { name: 'Invalid step coordinates', exact: true })).toHaveAttribute('value', 'invalidX')\n  51 |   await expect(page.locator('.issue-ledger-table').getByRole('rowheader', { name: '+Infinity', exact: true })).toBeVisible()\n  52 |   await expect(page.locator('.issue-strip').getByRole('link').first()).toHaveAccessibleName(/\\+Infinity at step/)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:49:80"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:20:44.272Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-quality-filte-1fede-RL-query-values-stay-stable\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-quality-filte-1fede-RL-query-values-stay-stable\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-before\\artifacts\\review-fixes-quality-filte-1fede-RL-query-values-stay-stable\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                    "column": 80,
+                    "line": 49
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-a7ad8d6dc04fbfc3e358",
+          "file": "review-fixes.spec.ts",
+          "line": 46,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T04:19:58.932Z",
+    "duration": 52476.805,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

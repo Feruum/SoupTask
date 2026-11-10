@@ -1,0 +1,52 @@
+vite v8.3.7 building client environment for production...
+transforming...
+✓ 2555 modules transformed.
+rendering chunks...
+computing gzip size...
+tmp/performance-hover-guarded-performance-indexed/index.html                                              0.71 kB │ gzip:   0.41 kB
+tmp/performance-hover-guarded-performance-indexed/assets/soup-logo-CIN0SPTk.svg                           0.88 kB │ gzip:   0.41 kB
+tmp/performance-hover-guarded-performance-indexed/assets/geist-cyrillic-ext-wght-normal-DjL33-gN.woff2    7.42 kB
+tmp/performance-hover-guarded-performance-indexed/assets/geist-vietnamese-wght-normal-6IgcOCM7.woff2      8.00 kB
+tmp/performance-hover-guarded-performance-indexed/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2     10.25 kB
+tmp/performance-hover-guarded-performance-indexed/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2      11.23 kB
+tmp/performance-hover-guarded-performance-indexed/assets/geist-cyrillic-wght-normal-BEAKL7Jp.woff2       15.08 kB
+tmp/performance-hover-guarded-performance-indexed/assets/geist-latin-ext-wght-normal-DC-KSUi6.woff2      16.51 kB
+tmp/performance-hover-guarded-performance-indexed/assets/training.worker-CPr3EncJ.js                     17.73 kB
+tmp/performance-hover-guarded-performance-indexed/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2       18.74 kB
+tmp/performance-hover-guarded-performance-indexed/assets/inter-greek-wght-normal-CkhJZR-_.woff2          18.99 kB
+tmp/performance-hover-guarded-performance-indexed/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2   25.96 kB
+tmp/performance-hover-guarded-performance-indexed/assets/geist-latin-wght-normal-BgDaEnEv.woff2          29.40 kB
+tmp/performance-hover-guarded-performance-indexed/assets/inter-latin-wght-normal-Dx4kXJAl.woff2          48.25 kB
+tmp/performance-hover-guarded-performance-indexed/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2      85.06 kB
+tmp/performance-hover-guarded-performance-indexed/assets/kazakh-ornament-IYqB2HFl.png                   272.40 kB
+tmp/performance-hover-guarded-performance-indexed/assets/soup-ladle-C2XrMcxW.png                        307.13 kB
+tmp/performance-hover-guarded-performance-indexed/assets/soup-piala-DviEV0ms.png                        646.48 kB
+tmp/performance-hover-guarded-performance-indexed/assets/soup-recipe-Bogp1y9r.png                       843.08 kB
+tmp/performance-hover-guarded-performance-indexed/assets/ComparePage-BdiPKaWd.css                         0.85 kB │ gzip:   0.37 kB
+tmp/performance-hover-guarded-performance-indexed/assets/search-field-BDviUeeU.css                        1.90 kB │ gzip:   0.62 kB
+tmp/performance-hover-guarded-performance-indexed/assets/IssueTypeSummary-CTXyF6D_.css                    2.22 kB │ gzip:   0.76 kB
+tmp/performance-hover-guarded-performance-indexed/assets/Workspace-TPykg1XH.css                           3.61 kB │ gzip:   1.20 kB
+tmp/performance-hover-guarded-performance-indexed/assets/DashboardPage-JshtU6fw.css                      16.58 kB │ gzip:   3.57 kB
+tmp/performance-hover-guarded-performance-indexed/assets/index-1s5Gs4hY.css                             108.25 kB │ gzip:  21.06 kB
+tmp/performance-hover-guarded-performance-indexed/assets/run-history-Bw0CmxtH.js                          1.31 kB │ gzip:   0.78 kB
+tmp/performance-hover-guarded-performance-indexed/assets/search-field-DWF4UYEW.js                         1.88 kB │ gzip:   0.90 kB
+tmp/performance-hover-guarded-performance-indexed/assets/IssueTypeSummary-CNov_Ew1.js                     2.68 kB │ gzip:   1.06 kB
+tmp/performance-hover-guarded-performance-indexed/assets/ComparePage-csEBOqUM.js                          7.37 kB │ gzip:   2.60 kB
+tmp/performance-hover-guarded-performance-indexed/assets/RunPage-DKFOlYDZ.js                              9.02 kB │ gzip:   3.05 kB
+tmp/performance-hover-guarded-performance-indexed/assets/QualityPage-wmfyCHaH.js                          9.35 kB │ gzip:   3.04 kB
+tmp/performance-hover-guarded-performance-indexed/assets/RunsPage-CNTk2Ha0.js                             9.98 kB │ gzip:   3.23 kB
+tmp/performance-hover-guarded-performance-indexed/assets/DashboardPage-CPDDaCtS.js                       26.45 kB │ gzip:   8.14 kB
+tmp/performance-hover-guarded-performance-indexed/assets/Workspace-DQBzhteZ.js                           95.92 kB │ gzip:  37.11 kB
+tmp/performance-hover-guarded-performance-indexed/assets/index-C4-rRDSp.js                              471.58 kB │ gzip: 147.30 kB
+
+✓ built in 4.96s
+[33m[PLUGIN_TIMINGS] [0mJavaScript callbacks ran for 4.7s of this 4.9s build (95%).
+The slowest callbacks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):
+  - plugin vite:worker-import-meta-url transform (86%, 4.2s, 1 call)
+Additional callback time came from the callbacks below and from callbacks under 1s.
+3 callbacks are listed without a time. Their calls overlapped, so the time inside one call includes work from other calls. To find their cost, profile the build with `node --cpu-prof`:
+  - plugin vite:asset load (5 calls)
+  - plugin vite:css transform (14 calls)
+  - plugin @tailwindcss/vite:generate:build transform (14 calls)
+See https://rolldown.rs/reference/InputOptions.checks#bundlertimings for more details.
+

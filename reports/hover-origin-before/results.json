@@ -1,0 +1,194 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "tmp/hover-scheduling-playwright.config.mjs",
+      "--grep",
+      "previous axes"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\hover-scheduling-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/hover-origin-before/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "hover-scheduling.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-origin-before\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "hover-scheduling.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4198",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-origin-before\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4198 --strictPort",
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "url": "http://127.0.0.1:4198",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "hover-scheduling.spec.ts",
+      "file": "hover-scheduling.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a pointer on previous axes is not queued as a hover for a pending new view",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 3094,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-scheduling.spec.ts:43:61",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-scheduling.spec.ts",
+                      "column": 61,
+                      "line": 43
+                    },
+                    "snippet": " \u001b[90m 41 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m (window \u001b[36mas\u001b[39m \u001b[33mWindow\u001b[39m \u001b[33m&\u001b[39m { __hoverSteps\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m number[] })\u001b[33m.\u001b[39m__hoverSteps\u001b[33m?.\u001b[39mlength \u001b[33m??\u001b[39m \u001b[35m0\u001b[39m))\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\n \u001b[90m 42 |\u001b[39m     \u001b[36mconst\u001b[39m steps \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m (window \u001b[36mas\u001b[39m \u001b[33mWindow\u001b[39m \u001b[33m&\u001b[39m { __hoverSteps\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m number[] })\u001b[33m.\u001b[39m__hoverSteps \u001b[33m??\u001b[39m [])\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 43 |\u001b[39m     expect(steps\u001b[33m.\u001b[39mevery(step \u001b[33m=>\u001b[39m step \u001b[33m>=\u001b[39m \u001b[35m100\u001b[39m \u001b[33m&&\u001b[39m step \u001b[33m<=\u001b[39m \u001b[35m200\u001b[39m))\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 44 |\u001b[39m   } \u001b[36mfinally\u001b[39m { \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m (window \u001b[36mas\u001b[39m \u001b[33mWindow\u001b[39m \u001b[33m&\u001b[39m { __releaseView\u001b[33m?\u001b[39m\u001b[33m:\u001b[39m () \u001b[33m=>\u001b[39m \u001b[36mvoid\u001b[39m })\u001b[33m.\u001b[39m__releaseView\u001b[33m?.\u001b[39m()) }\n \u001b[90m 45 |\u001b[39m })\n \u001b[90m 46 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-scheduling.spec.ts",
+                        "column": 61,
+                        "line": 43
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  41 |     await expect.poll(() => page.evaluate(() => (window as Window & { __hoverSteps?: number[] }).__hoverSteps?.length ?? 0)).toBeGreaterThan(0)\n  42 |     const steps = await page.evaluate(() => (window as Window & { __hoverSteps?: number[] }).__hoverSteps ?? [])\n> 43 |     expect(steps.every(step => step >= 100 && step <= 200)).toBe(true)\n     |                                                             ^\n  44 |   } finally { await page.evaluate(() => (window as Window & { __releaseView?: () => void }).__releaseView?.()) }\n  45 | })\n  46 |\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-scheduling.spec.ts:43:61"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T06:51:37.286Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-origin-before\\artifacts\\hover-scheduling-a-pointer-77fcc-over-for-a-pending-new-view\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-origin-before\\artifacts\\hover-scheduling-a-pointer-77fcc-over-for-a-pending-new-view\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-origin-before\\artifacts\\hover-scheduling-a-pointer-77fcc-over-for-a-pending-new-view\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-scheduling.spec.ts",
+                    "column": 61,
+                    "line": 43
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5a622d92f0d29b8313e4-b50d20d31c160c69039d",
+          "file": "hover-scheduling.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T06:51:35.322Z",
+    "duration": 6755.117,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

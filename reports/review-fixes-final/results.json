@@ -1,0 +1,417 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=tmp/review-fixes-final-playwright.config.mjs"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\review-fixes-final-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/review-fixes-final/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "review-fixes.spec.ts",
+          "hover-paint.spec.ts"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-final\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "review-fixes.spec.ts",
+          "hover-paint.spec.ts"
+        ],
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4175",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-final\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4175",
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "url": "http://127.0.0.1:4175",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "hover-paint.spec.ts",
+      "file": "hover-paint.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "accepted hover reaches a rendered frame with original observations: /runs/kazakh-sft-005",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5782,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:28:42.620Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "accepted-hover-timing",
+                      "contentType": "application/json",
+                      "body": "ewogICJmcmFtZSI6IHsKICAgICJuYW1lIjogInNvdXA6aG92ZXItZnJhbWUiLAogICAgImVudHJ5VHlwZSI6ICJtYXJrIiwKICAgICJzdGFydFRpbWUiOiA0MTYxLjc5OTk5OTk5NzAyLAogICAgImR1cmF0aW9uIjogMCwKICAgICJuYXZpZ2F0aW9uSWQiOiA4NDYsCiAgICAiZGV0YWlsIjogewogICAgICAid29ya3NwYWNlRXBvY2giOiAxLAogICAgICAidmlld1NlcSI6IDQsCiAgICAgICJob3ZlclNlcSI6IDUsCiAgICAgICJzdGVwIjogNDk5OTk5LjUsCiAgICAgICJyZXF1ZXN0VG9BY2NlcHRlZE1zIjogMjMuMzAwMDAwMDA0NDcwMzUsCiAgICAgICJyZXF1ZXN0VG9GcmFtZU1zIjogMTkyLjUsCiAgICAgICJ0b29sdGlwQ291bnQiOiAzCiAgICB9CiAgfSwKICAiY29tbWl0IjogewogICAgIm5hbWUiOiAic291cDpob3Zlci1kb20tY29tbWl0IiwKICAgICJlbnRyeVR5cGUiOiAibWFyayIsCiAgICAic3RhcnRUaW1lIjogNDAzNy42OTk5OTk5OTU1Mjk3LAogICAgImR1cmF0aW9uIjogMCwKICAgICJuYXZpZ2F0aW9uSWQiOiA4NDYsCiAgICAiZGV0YWlsIjogewogICAgICAid29ya3NwYWNlRXBvY2giOiAxLAogICAgICAidmlld1NlcSI6IDQsCiAgICAgICJob3ZlclNlcSI6IDUsCiAgICAgICJzdGVwIjogNDk5OTk5LjUKICAgIH0KICB9LAogICJhY2NlcHRlZCI6IDUKfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "37d2ab1e4f1056a08c51-ecd02bc0fd242bc4906d",
+          "file": "hover-paint.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "accepted hover reaches a rendered frame with original observations: /compare?runs=kazakh-sft-005,kazakh-sft-001",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6044,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:28:48.570Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "accepted-hover-timing",
+                      "contentType": "application/json",
+                      "body": "ewogICJmcmFtZSI6IHsKICAgICJuYW1lIjogInNvdXA6aG92ZXItZnJhbWUiLAogICAgImVudHJ5VHlwZSI6ICJtYXJrIiwKICAgICJzdGFydFRpbWUiOiA0MzY5LAogICAgImR1cmF0aW9uIjogMCwKICAgICJuYXZpZ2F0aW9uSWQiOiA1MzIxLAogICAgImRldGFpbCI6IHsKICAgICAgIndvcmtzcGFjZUVwb2NoIjogMSwKICAgICAgInZpZXdTZXEiOiA0LAogICAgICAiaG92ZXJTZXEiOiA1LAogICAgICAic3RlcCI6IDQ5OTk5OS41LAogICAgICAicmVxdWVzdFRvQWNjZXB0ZWRNcyI6IDQ0LjE5OTk5OTk5NTUyOTY1LAogICAgICAicmVxdWVzdFRvRnJhbWVNcyI6IDI3NCwKICAgICAgInRvb2x0aXBDb3VudCI6IDMKICAgIH0KICB9LAogICJjb21taXQiOiB7CiAgICAibmFtZSI6ICJzb3VwOmhvdmVyLWRvbS1jb21taXQiLAogICAgImVudHJ5VHlwZSI6ICJtYXJrIiwKICAgICJzdGFydFRpbWUiOiA0MjE2Ljg5OTk5OTk5ODUxLAogICAgImR1cmF0aW9uIjogMCwKICAgICJuYXZpZ2F0aW9uSWQiOiA1MzIxLAogICAgImRldGFpbCI6IHsKICAgICAgIndvcmtzcGFjZUVwb2NoIjogMSwKICAgICAgInZpZXdTZXEiOiA0LAogICAgICAiaG92ZXJTZXEiOiA1LAogICAgICAic3RlcCI6IDQ5OTk5OS41CiAgICB9CiAgfSwKICAiYWNjZXB0ZWQiOiA1Cn0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "37d2ab1e4f1056a08c51-cad742b425cc2c91d5e0",
+          "file": "hover-paint.spec.ts",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "review-fixes.spec.ts",
+      "file": "review-fixes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "an accepted source lookup with zero matches announces its recorded step and recovery",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1822,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:28:54.653Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-9674d021582a6dd1e1c5",
+          "file": "review-fixes.spec.ts",
+          "line": 2,
+          "column": 1
+        },
+        {
+          "title": "stacked preview at 1024px brings its selected run into view and focuses its heading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1089,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:28:56.492Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-50b622120db95ea7f252",
+          "file": "review-fixes.spec.ts",
+          "line": 33,
+          "column": 41
+        },
+        {
+          "title": "stacked preview at 1280px brings its selected run into view and focuses its heading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1057,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:28:57.602Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-b76c2e3b20b699c32849",
+          "file": "review-fixes.spec.ts",
+          "line": 33,
+          "column": 41
+        },
+        {
+          "title": "stacked preview at 1400px brings its selected run into view and focuses its heading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1070,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:28:58.672Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-73fc57fa3d80acadc353",
+          "file": "review-fixes.spec.ts",
+          "line": 33,
+          "column": 41
+        },
+        {
+          "title": "compact preview help links to real range controls on both preview hosts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3647,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:28:59.758Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-68b9f0446c6c97086630",
+          "file": "review-fixes.spec.ts",
+          "line": 55,
+          "column": 1
+        },
+        {
+          "title": "quality filters and findings use readable names while URL query values stay stable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 946,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:29:03.421Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-a7ad8d6dc04fbfc3e358",
+          "file": "review-fixes.spec.ts",
+          "line": 81,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T04:28:40.515Z",
+    "duration": 26142.489999999998,
+    "expected": 8,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

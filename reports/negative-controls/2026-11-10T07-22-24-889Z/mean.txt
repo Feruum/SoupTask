@@ -1,0 +1,112 @@
+
+ RUN  v5.1.0 C:/Users/Ferumm/projects/soupTask
+
+ ✓ src/core/topology.test.ts (2 tests) 9ms
+ ❯ src/core/engine.test.ts (10 tests | 7 failed) 435ms
+   × exact spike provenance width 1 97ms
+   × exact spike provenance width 320 94ms
+   × exact spike provenance width 768 65ms
+   × exact spike provenance width 1440 59ms
+   × excludes offscreen spike and includes inclusive endpoints/single step 1ms
+   × independent raw-window oracle preserves both extrema and exact provenance on seeded cases 3ms
+   ✓ discloses dense disconnected mode while retaining exact finite extrema 81ms
+   × independent interval oracle checks every bucket and segment first/min/max/last 5ms
+   ✓ duplicate-group inspection exposes total and every page without unbounded objects 3ms
+   ✓ final pending segment cannot exceed the topology cap after its last flush 24ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  7 failed | 5 passed (12)
+   Start at  12:22:27
+   Duration  1.18s (tests 49%, import 44%, transform 4%, worker 3%)
+
+JSON report written to C:/Users/Ferumm/projects/soupTask/reports/negative-controls/2026-11-10T07-22-24-889Z/mean.json
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/core/engine.test.ts > exact spike provenance width 1
+ FAIL  src/core/engine.test.ts > exact spike provenance width 320
+ FAIL  src/core/engine.test.ts > exact spike provenance width 768
+ FAIL  src/core/engine.test.ts > exact spike provenance width 1440
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/core/engine.test.ts:9:96
+      7| for (const width of [1, 320, 768, 1440]) it(`exact spike provenance wi…
+      8|   const v = sampleView(n, 'loss', 0, 999999, width);
+      9|   expect(v.points.some(p => p.sourceIndex === 500001 && p.step === 500…
+       |                                                                                                ^
+     10|   expect(v.max).toBe(100);
+     11| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/7]⎯
+
+ FAIL  src/core/engine.test.ts > excludes offscreen spike and includes inclusive endpoints/single step
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/core/engine.test.ts:14:162
+     12| it('excludes offscreen spike and includes inclusive endpoints/single s…
+     13|   for (const [a, b] of [[499990, 500000], [500002, 500010]]) expect(sa…
+     14|   for (const [a, b] of [[500001, 500001], [500000, 500001], [500001, 5…
+       |                                                                                                                                                                  ^
+     15| });
+     16| it('independent raw-window oracle preserves both extrema and exact pro…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/7]⎯
+
+ FAIL  src/core/engine.test.ts > independent raw-window oracle preserves both extrema and exact provenance on seeded cases
+AssertionError: expected 1.4123247671099275 to be -20 // Object.is equality
+
+- Expected
++ Received
+
+- -20
++ 1.4123247671099275
+
+ ❯ src/core/engine.test.ts:42:19
+     40|     }
+     41|     const v = sampleView(n, 'loss', a, b, width);
+     42|     expect(v.min).toBe(low);
+       |                   ^
+     43|     expect(v.max).toBe(high);
+     44|     for (const p of [...v.points, ...v.conflicts]) {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/7]⎯
+
+ FAIL  src/core/engine.test.ts > independent interval oracle checks every bucket and segment first/min/max/last
+AssertionError: expected [ 3, 24, 50, 51 ] to deeply equal [ 3, 22, 24, 48, 50, 51, 77, 98 ]
+
+- Expected
++ Received
+
+  [
+    3,
+-   22,
+    24,
+-   48,
+    50,
+    51,
+-   77,
+-   98,
+  ]
+
+ ❯ src/core/engine.test.ts:104:20
+    102|     checkSegment();
+    103|     const actual = sampleView(n, 'loss', a, b, width).points.map(p => …
+    104|     expect(actual).toEqual([...expected].sort((x, y) => raw.step[x] - …
+       |                    ^
+    105|   }
+    106| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/7]⎯
+

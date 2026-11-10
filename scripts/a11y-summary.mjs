@@ -1,5 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises'
-const report = JSON.parse(await readFile('reports/e2e-full.json', 'utf8'))
+const input = process.env.A11Y_INPUT ?? 'reports/e2e-full.json'
+const output = process.env.A11Y_OUTPUT ?? 'reports/a11y-summary.json'
+const report = JSON.parse(await readFile(input, 'utf8'))
 const audits = []
 function walk(suites) {
   for (const suite of suites ?? []) {
@@ -15,5 +17,5 @@ function walk(suites) {
 walk(report.suites)
 const incompleteCounts = {}
 for (const audit of audits) for (const finding of audit.incomplete ?? []) incompleteCounts[finding.id] = (incompleteCounts[finding.id] ?? 0) + finding.nodes.length
-await writeFile('reports/a11y-summary.json', JSON.stringify({ scope: 'Full axe reports, including incomplete findings, decoded from the final production acceptance. Keyboard, Canvas and native screen-reader review are distinct.', audits: audits.length, violations: audits.reduce((sum, audit) => sum + audit.violations.length, 0), incompleteCounts, results: audits }, null, 2))
+await writeFile(output, JSON.stringify({ input, scope: 'Full axe reports, including incomplete findings, decoded from the specified production acceptance. Keyboard, Canvas and native screen-reader review are distinct.', audits: audits.length, violations: audits.reduce((sum, audit) => sum + audit.violations.length, 0), incompleteCounts, results: audits }, null, 2))
 console.log(JSON.stringify({ audits: audits.length, violations: audits.reduce((sum, audit) => sum + audit.violations.length, 0), incompleteCounts }))

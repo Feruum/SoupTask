@@ -10,7 +10,7 @@ await new Promise((resolve,reject)=>{server.stdout.once('data',resolve);server.o
 const results=[]
 try{
  for(const [name,route] of [['dashboard','/dashboard'],['runs','/runs'],['run-detail','/runs/kazakh-sft-005'],['compare','/compare?runs=kazakh-sft-005,kazakh-sft-006'],['quality','/data-quality']]){
-  const result=spawnSync(process.execPath,[cli,`http://127.0.0.1:4183${route}`,'--preset=desktop','--only-categories=performance,accessibility,best-practices','--output=html','--output=json',`--output-path=${directory}/${name}`,'--save-assets',`--chrome-path=${chromium.executablePath()}`,'--chrome-flags=--headless --no-sandbox','--quiet'],{encoding:'utf8',timeout:180000,maxBuffer:10*1024*1024})
+  const result=spawnSync(process.execPath,[cli,`http://127.0.0.1:4183${route}`,'--preset=desktop','--only-categories=performance,accessibility,best-practices','--output=html','--output=json',`--output-path=${directory}/${name}`,'--save-assets','--chrome-flags=--headless --no-sandbox','--quiet'],{env:{...process.env,CHROME_PATH:chromium.executablePath()},encoding:'utf8',timeout:180000,maxBuffer:10*1024*1024})
   await writeFile(`${directory}/${name}.log`,result.stdout+result.stderr)
   if(result.status!==0)throw Error(`Lighthouse ${name} failed: ${result.stderr}`)
   const report=JSON.parse(await readFile(`${directory}/${name}.report.json`,'utf8'))

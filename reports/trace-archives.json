@@ -1,7 +1,55 @@
 {
-  "generatedAt": "2026-11-09T23:31:36.364Z",
+  "generatedAt": "2026-11-10T07:27:32.894Z",
   "scope": "Lossless gzip copies. Raw files remain locally; Git/source archives store gzip siblings. node scripts/trace-archives.mjs --unpack verifies/restores originals.",
   "entries": [
+    {
+      "raw": "reports/hover-final-performance/indexed-chrome-trace.json",
+      "archive": "reports/hover-final-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 81276201,
+      "archiveBytes": 13178849,
+      "rawSha256": "19a24962e3c6bb2b7b428ba266370b16b85e3c51b03a237b3b0625f86e77ff24",
+      "archiveSha256": "f85180d11d140223b95854b13dfc799e8fd6b463d34c8eed58813c6ada436de3"
+    },
+    {
+      "raw": "reports/hover-final-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/hover-final-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 83689700,
+      "archiveBytes": 13728284,
+      "rawSha256": "fc1a5ca3b6cbb89cec17b0b7dbfe1344ff1ae983b8b0e4216970bd1bf7ec8d7b",
+      "archiveSha256": "ee24dd6645d5116a30e7d49d3cd713bae4fde59d5472f2a56376175a8e19f451"
+    },
+    {
+      "raw": "reports/hover-guarded-performance/indexed-chrome-trace.json",
+      "archive": "reports/hover-guarded-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 80551639,
+      "archiveBytes": 13099635,
+      "rawSha256": "ac52a019543a42d3e5f1ebac7168a0f3979c573d3701f727d1c9cf8bc918b49f",
+      "archiveSha256": "8170db87ea8bbfe27b704978d1f26b71b7e77b7f2e5097075f885350f2f06e89"
+    },
+    {
+      "raw": "reports/hover-guarded-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/hover-guarded-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 84153951,
+      "archiveBytes": 13650444,
+      "rawSha256": "0891d6292767a6e4c87fb84cf9731351488076415dddb88cef602169de4567aa",
+      "archiveSha256": "e4988601e5f7dcedca65770726892d26b9b8c8d98f24940067dd203dc0d259f7"
+    },
+    {
+      "raw": "reports/hover-optimized-performance/indexed-chrome-trace.json",
+      "archive": "reports/hover-optimized-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 82658185,
+      "archiveBytes": 13309172,
+      "rawSha256": "69859442036480e4eb22014e96d2e6f2ea3490a18b6d9dd3f1ad09c2c67a0140",
+      "archiveSha256": "593fac51075c55572841bfea88f5effacc69676d9efe6fdaf1d4aecf194ce8c1"
+    },
+    {
+      "raw": "reports/hover-optimized-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/hover-optimized-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 84228487,
+      "archiveBytes": 13750280,
+      "rawSha256": "8853c5d3881e05666e648a74f1d090ff61b1768b363f7a4fc766c33ee737bfd6",
+      "archiveSha256": "e498e50517d7bab3dc5cfef7b6fc09a692d97dd15a2fd160fe056d34e5a131d0"
+    },
     {
       "raw": "reports/lighthouse/compare-0.trace.json",
       "archive": "reports/lighthouse/compare-0.trace.json.gz",
@@ -83,6 +131,46 @@
       "archiveSha256": "c93141de1e04c48b8cce6fec850da928dd943dee3d9564dae6dda17e9f4f037b"
     },
     {
+      "raw": "reports/lighthouse-release-final/compare-0.trace.json",
+      "archive": "reports/lighthouse-release-final/compare-0.trace.json.gz",
+      "rawBytes": 5342704,
+      "archiveBytes": 1052047,
+      "rawSha256": "aacf7906f651a666aff180a069b68e513d1f779b74ee14cae2a83bf0c618b32e",
+      "archiveSha256": "ed645a107a6d456fdb85c1500ee2a5ca7c4a574fa3f78463bb077beff3f3117d"
+    },
+    {
+      "raw": "reports/lighthouse-release-final/dashboard-0.trace.json",
+      "archive": "reports/lighthouse-release-final/dashboard-0.trace.json.gz",
+      "rawBytes": 5206254,
+      "archiveBytes": 1088789,
+      "rawSha256": "d369e2688c87c15210bd8addc294e12bfd4ad497634d46e8f8b867bde439eab8",
+      "archiveSha256": "c2a5bef836b19a5833b3fe01f9b471b954321f3d93b96969ea5aaa586b97d522"
+    },
+    {
+      "raw": "reports/lighthouse-release-final/quality-0.trace.json",
+      "archive": "reports/lighthouse-release-final/quality-0.trace.json.gz",
+      "rawBytes": 2768026,
+      "archiveBytes": 478978,
+      "rawSha256": "ea124394ff132ee486a90270929502c9a22b1b5a21b813e5def233fe802f0834",
+      "archiveSha256": "8ee8a1fe109081af31f29630aba38bb90979079b4866ad4e96a6b1a8bfe55c70"
+    },
+    {
+      "raw": "reports/lighthouse-release-final/run-detail-0.trace.json",
+      "archive": "reports/lighthouse-release-final/run-detail-0.trace.json.gz",
+      "rawBytes": 5055703,
+      "archiveBytes": 892217,
+      "rawSha256": "137458e89646061b8b861b852c74fc7105bcfde7b8832fed8e4a9294fde077d9",
+      "archiveSha256": "7d7faa62d8cf440e3b40f80a9e7d844dfafb63c238628e8fb296444c85ebc305"
+    },
+    {
+      "raw": "reports/lighthouse-release-final/runs-0.trace.json",
+      "archive": "reports/lighthouse-release-final/runs-0.trace.json.gz",
+      "rawBytes": 4126722,
+      "archiveBytes": 626920,
+      "rawSha256": "e37930416b7b7fb8d047f9f61e10447e389f7263fb9dab601fb0406720cafc03",
+      "archiveSha256": "478bd40094c081f79fb378d4d4aa881b51b412e810e41a2d80b8a1c5b9fdb8eb"
+    },
+    {
       "raw": "reports/performance/scan-chrome-trace.json",
       "archive": "reports/performance/scan-chrome-trace.json.gz",
       "rawBytes": 80948005,
@@ -153,6 +241,54 @@
       "archiveBytes": 13538123,
       "rawSha256": "194f2efa253ac271af3bd784d6a38007c212158c912ee6d7a3fab72e46f48b71",
       "archiveSha256": "db2130c3e8cfd0cb5f6c4dfa66dde2f80c1dfc0bf449f1470246d97a3e1c549a"
+    },
+    {
+      "raw": "reports/performance-hover-frame-final/indexed-chrome-trace.json",
+      "archive": "reports/performance-hover-frame-final/indexed-chrome-trace.json.gz",
+      "rawBytes": 79744006,
+      "archiveBytes": 13097200,
+      "rawSha256": "f0583f3b7b89cf79cf24ad7810326b03328b5c2eee9085876e3f835149ea594e",
+      "archiveSha256": "ed26df59fcd0aee880b739ff8b8b3fafa240bc86cb3ce6c412ef7573c557426d"
+    },
+    {
+      "raw": "reports/performance-hover-frame-final/indexed-compare-chrome-trace.json",
+      "archive": "reports/performance-hover-frame-final/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 83194920,
+      "archiveBytes": 13546345,
+      "rawSha256": "fa0b5086e0c9c51c8bdff917b2ed09ecd5963d602a6c76db60639453a274c52e",
+      "archiveSha256": "2f9366528d43990e25d3c0acbfa9c096479ac5a0bb25f25c1aea572d127963b0"
+    },
+    {
+      "raw": "reports/performance-hover-frame-final/scan-chrome-trace.json",
+      "archive": "reports/performance-hover-frame-final/scan-chrome-trace.json.gz",
+      "rawBytes": 85388716,
+      "archiveBytes": 13493160,
+      "rawSha256": "131c8fbd13872eec6dd24905b379b0c348c5092ba35249a54d993bf02ad29188",
+      "archiveSha256": "edb228072b60d153ca465c95a00ba1f4fe135503859a786d3f2e16164e601022"
+    },
+    {
+      "raw": "reports/performance-hover-frame-final/scan-compare-chrome-trace.json",
+      "archive": "reports/performance-hover-frame-final/scan-compare-chrome-trace.json.gz",
+      "rawBytes": 88032060,
+      "archiveBytes": 13906520,
+      "rawSha256": "1c320b5634367db37a1c58e02a677a9ef53fd2b9febf3c1f65217bce2566bed4",
+      "archiveSha256": "d5a5fe7ea5682ae7ece6eadc39178381d626239c8461f79152ae078250eed356"
+    },
+    {
+      "raw": "reports/performance-hover-frame-final/stream-chrome-trace.json",
+      "archive": "reports/performance-hover-frame-final/stream-chrome-trace.json.gz",
+      "rawBytes": 83214811,
+      "archiveBytes": 13376826,
+      "rawSha256": "266e7f29ce58eb45eb678a81a9d732c949a5b4142a6e3ebb4c868e1f516fc2d2",
+      "archiveSha256": "2bae5247830b954b16020143b58463e37be29db6a5aae4591fe4a7e1d05cae89"
+    },
+    {
+      "raw": "reports/performance-hover-frame-final/stream-compare-chrome-trace.json",
+      "archive": "reports/performance-hover-frame-final/stream-compare-chrome-trace.json.gz",
+      "rawBytes": 84343051,
+      "archiveBytes": 13764490,
+      "rawSha256": "d1c829cfe6bf55bfb8fffd152fcba166f67a46ff9ff8d4ac8e9a537c50f5020f",
+      "archiveSha256": "dc2d868fde4847e3323fc5684cf8a52622d690d29b51d26ec678a807821fb0bc"
     },
     {
       "raw": "reports/performance-initial/scan-chrome-trace.json",

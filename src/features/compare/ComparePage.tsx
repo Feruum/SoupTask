@@ -19,6 +19,7 @@ function parseSelection(value: string) {
   return [...new Set(value.split(',').filter(Boolean))];
 }
 export function ComparePage() {
+  useLayoutEffect(() => { performance.mark('soup:compare-page-commit'); });
   const RUN_MANIFEST = useCatalog();
   const [params, setParams] = useSearchParams(),
     {
@@ -67,5 +68,5 @@ export function ComparePage() {
                         summary = run.summaries[summaryMetric],
                         quality = run.quality.metrics[summaryMetric];
                       return <tr key={id} data-testid={`summary-row-${id}`}><th scope="row"><Link to={`/runs/${id}`}>{id}</Link></th><td data-testid={`summary-${id}-latest`}><strong>{summary.latestStatus === 'finite' ? formatValue(summary.latest, summaryMetric === 'lr') : summary.latestStatus === 'invalid' ? 'Invalid latest measurement' : summary.latestStatus === 'conflict' ? 'Conflicting latest measurements' : 'No measurements'}</strong><small className="exact-value">{summary.latestStep === null ? 'No recorded step' : `step ${formatStep(summary.latestStep)}`}</small>{summary.latestStatus !== 'finite' && summary.lastFinite && <p className={summaryStyles.previous}>Earlier finite: {formatValue(summary.lastFinite.value, summaryMetric === 'lr')} at step {formatStep(summary.lastFinite.step)}<small className="exact-value">source index {summary.lastFinite.sourceIndex}</small></p>}</td><td data-testid={`summary-${id}-min`}><strong>{formatValue(summary.min, summaryMetric === 'lr')}</strong><small className="exact-value">{summaryStep(summary, 'min')}</small></td><td data-testid={`summary-${id}-max`}><strong>{formatValue(summary.max, summaryMetric === 'lr')}</strong><small className="exact-value">{summaryStep(summary, 'max')}</small></td><td>{formatStep(run.rowCount)} raw rows<small className="exact-value">{formatStep(summary.finiteCount)} finite {NAMES[summaryMetric]} observations</small></td><td><Link to={`/data-quality?run=${id}&metric=${summaryMetric}`}>{quality.invalidCount} invalid observations</Link><small className="exact-value">{quality.conflicts} conflicting groups · {quality.gaps} known gaps</small></td></tr>;
-                    })}</tbody></table></div></section></ResponsiveDisclosure><section className="source-panel comparison-source"><div className="panel-heading"><h2>Cursor source values</h2><p>Nearest recorded step shown separately for each run.</p></div>{Object.entries(workspace.state.hover).map(([id, rows]) => <div className="hover-row" key={id}><strong>{id}</strong>{rows.length ? rows.map(r => <span key={r.sourceIndex}>step {formatStep(r.step)} · loss {formatValue(r.loss)} · source {r.sourceIndex}</span>) : <span>No recorded value at this cursor location.</span>}</div>)}</section></>}</div></div></>;
+                    })}</tbody></table></div></section></ResponsiveDisclosure></>}</div></div></>;
 }

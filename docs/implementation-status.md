@@ -1,30 +1,19 @@
-# Full application implementation
+# Acceptance status - 10 November 2026
 
-The implemented scope is Dashboard, Training runs, run details, Compare and Data quality. The user's later additions are included: selecting run/metric sectors, wheel/pinch/pan/drag, comparison-series emphasis and pinned exact source rows.
+All five screens and twenty seeded scenarios are implemented. The final Dashboard supplied by the other agent is included in94/94 passing Chromium acceptance tests. It opens a focused monitor and retains the interactive experiment map and groups as local views. Sector selection, wheel/pinch/pan/drag, accessible ranges, source-qualified findings and comparison emphasis are implemented.
 
-## Verified implementation
+Final unit suite:99/99 in23 files. Lint and production build pass; all 20 manifest records regenerate from raw. Browser suite:94 passed, zero skipped/unexpected/flaky. [Evidence manifest](../reports/evidence-manifest.json) identifies current source/build and primary artifacts; historical logs are not substituted for current tests.
 
-- Twenty deterministic scenarios, including R05's unique original spike `(sourceIndex=500001, step=500001, value=100)` among one million rows.
-- Worker-owned raw, at most four datasets, bounded render/source payloads, exact normalization, source inspection and controlled identity/queue guards.
-- Correct scan and stream scanners; conditional exact 256-group index with 16-group boundary summaries and unchanged topology fallback. Index cost is measured, not hidden.
-- All five screens, independent execution/quality filters, numerical sorting, URL comparison selection, actual-step cursors, summaries for all three metrics, issue tables/strips and provenance links.
-- Light/dark themes, touch/mobile controls, keyboard alternatives, locale/timezone behavior, source timestamps and explicit demonstration status.
-- Production build and lint pass. Final unit suite: **95 passed**, 21 files. Final Chromium suite: **49 passed**, no skipped/unexpected/flaky tests. Source and raw results are retained.
-- Genuine negative controls detect every-N, mean-as-source, fabricated peak, bridged gaps, stale acceptance and suppressed Canvas drawing. Duplicate-paint and range-draft regressions retain actual red/green evidence.
-- Comparable production scan/stream/indexed measurements include five cold loads per variant, thirty zoom/hover pairs per detail and Compare, Chrome traces and twenty SPA switches. [Measured results and limits](performance-results.md).
+The four Impeccable issues are fixed: accepted-query Inspector empty/error states, intermediate-width preview focus, truthful zoom instructions and readable issue names. Quality distinguishes clean snapshots, filtered misses and empty pages. Stale timestamps do not imply corrupt rows. Coordinate readouts no longer abruptly shift content: six recorded displacement checks are zero. R05 explains that finite Loss 100 at step 500001 compresses smaller values on a linear axis; NaN/Infinity notes separately explain true breaks.
 
-## Final release evidence
+Hover now retains accepted-view identity, bounds formatter caching and avoids owner-page rerenders. Late responses and old-axis input cannot publish against another view. Detail pointer-to-frame p95 improved 120.7 to88.7 ms; Compare 209.5 to115.1 ms. The<=50 ms target remains unmet. Cold 3089.5 ms, detail zoom 197.1 ms, Compare zoom 241 ms. Worker CPU 4 is unsupported. See [definitions, samples and limitations](performance-results.md).
 
-The actual current status of Lighthouse, real Canvas contrast/lifecycle checks, production publication and source hashes is recorded in [evidence-manifest.json](../reports/evidence-manifest.json). The final application smoke and actual URL are in [deployment.json](../reports/deployment.json). A claimed result requires its completed artifact; historical scaffold/witness reports do not substitute for these checks.
+Memory evidence is recorded with Windows renderer/Worker counters associated by trace PID markers: latest 1M private committed 143.7 MiB, working set 242.3 MiB. Native process allocations are included; JS heap, typed-buffer ledgers and shared browser/GPU processes remain separate scopes. There is no Task Manager screenshot; the PDF does not mandate that particular UI. Failed attempts are preserved.
 
-The user selected the new Vercel project `ferumms-projects/soup-training-monitor`; the existing `souplanding` project is separate and was not redeployed.
+Thirty axe audits: zero violations,516 incomplete contrast occurrences retained. Actual Canvas/SVG colors, keyboard, responsive, DPR 2, formatting and 20 settled Worker/chart transitions are checked. [Accessibility record](accessibility-review.md) separates assistant-run evidence from unrecorded human NVDA/VoiceOver review.
 
-## Outstanding limitations
+The selected repository is https://github.com/Feruum/SoupTask and publication target is the separate soup-training-monitor Vercel project. [Production smoke](../reports/deployment.json) verifies five direct/reloaded routes, Worker/assets, missing-asset 404 and exact Canvas/source spike. Existing souplanding is separate.
 
-Cold and zoom engineering targets were missed in the recorded main-renderer CPU4 protocol. Worker throttling was explicitly unsupported. Hover acceptance timing is not full pixel-paint timing. Main heap and the typed-buffer ledger are not total tab memory.
+**DON'T SHIP against expanded latency targets.** Functional checks pass and evidence is available; missed targets remain explicit. First profile remaining input-to-frame delay and Compare draw cost. No100/100 grade, universal error-freedom, model validity or human accessibility certification is asserted.
 
-Native Chrome Task Manager evidence could not be captured because the window binding API failed. A human readout is pending. There is no recorded human NVDA/VoiceOver certification, and automated axe/Lighthouse scores are not represented as complete accessibility certification.
-
-The original invitation email and changed deadline were not found; historical statements about cancellation/deadline remain unconfirmed. No deadline was inferred from the current time.
-
-No smoothing, log scale, wall-time alignment, export, backend, login, training control or fabricated GPU telemetry has been added. Final verdict and first fix are stated in the two-page submission note and evidence manifest.
+The original invitation/changed-deadline email was not found. Cancellation of the PDF's live discussion and exact deadline remain unconfirmed. Submission email requires explicit user authorization; a local draft accompanies the deliverables. No live telemetry, training control, smoothing, log scale or fabricated GPU metrics were added.

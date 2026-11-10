@@ -1,0 +1,6 @@
+{
+  "exitCode": 1,
+  "stage": "Windows process-counter sampling",
+  "error": "Get-Process: Cannot find a process with the process identifier 39460.",
+  "disposition": "No completed results were emitted. The CDP process inventory and OS counters are sequential; an inventoried process no longer existed at the OS read. Retry records omitted process IDs while still requiring the page and every marked Worker owner PID to have real counters. This failed attempt is retained, not counted as a measurement."
+}

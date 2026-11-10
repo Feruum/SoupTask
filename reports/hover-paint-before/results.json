@@ -1,0 +1,269 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=tmp/hover-paint-playwright.config.mjs"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\hover-paint-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/hover-paint-before/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "hover-paint.spec.ts"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-paint-before\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "hover-paint.spec.ts",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4175",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-paint-before\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4175",
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "url": "http://127.0.0.1:4175",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "hover-paint.spec.ts",
+      "file": "hover-paint.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "accepted hover reaches a rendered frame with original observations: /runs/kazakh-sft-005",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9149,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts:20:107",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts",
+                      "column": 107,
+                      "line": 20
+                    },
+                    "snippet": " \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m expect(tooltip)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'kazakh-sft-005'\u001b[39m)\n \u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(tooltip)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'step'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m performance\u001b[33m.\u001b[39mgetEntriesByName(\u001b[32m'soup:hover-frame'\u001b[39m)\u001b[33m.\u001b[39mlength))\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m sample \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m 22 |\u001b[39m       \u001b[36mconst\u001b[39m frame \u001b[33m=\u001b[39m performance\u001b[33m.\u001b[39mgetEntriesByName(\u001b[32m'soup:hover-frame'\u001b[39m)\u001b[33m.\u001b[39mat(\u001b[33m-\u001b[39m\u001b[35m1\u001b[39m) \u001b[36mas\u001b[39m \u001b[33mPerformanceMark\u001b[39m\n \u001b[90m 23 |\u001b[39m       \u001b[36mconst\u001b[39m commit \u001b[33m=\u001b[39m performance\u001b[33m.\u001b[39mgetEntriesByName(\u001b[32m'soup:hover-dom-commit'\u001b[39m)\u001b[33m.\u001b[39mat(\u001b[33m-\u001b[39m\u001b[35m1\u001b[39m) \u001b[36mas\u001b[39m \u001b[33mPerformanceMark\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts",
+                        "column": 107,
+                        "line": 20
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  18 |     await expect(tooltip).toContainText('kazakh-sft-005')\n  19 |     await expect(tooltip).toContainText('step')\n> 20 |     await expect.poll(() => page.evaluate(() => performance.getEntriesByName('soup:hover-frame').length)).toBeGreaterThan(0)\n     |                                                                                                           ^\n  21 |     const sample = await page.evaluate(() => {\n  22 |       const frame = performance.getEntriesByName('soup:hover-frame').at(-1) as PerformanceMark\n  23 |       const commit = performance.getEntriesByName('soup:hover-dom-commit').at(-1) as PerformanceMark\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts:20:107"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:21:26.083Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-paint-before\\artifacts\\hover-paint-accepted-hover-4cce2-vations-runs-kazakh-sft-005\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-paint-before\\artifacts\\hover-paint-accepted-hover-4cce2-vations-runs-kazakh-sft-005\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-paint-before\\artifacts\\hover-paint-accepted-hover-4cce2-vations-runs-kazakh-sft-005\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts",
+                    "column": 107,
+                    "line": 20
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "37d2ab1e4f1056a08c51-ecd02bc0fd242bc4906d",
+          "file": "hover-paint.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "accepted hover reaches a rendered frame with original observations: /compare?runs=kazakh-sft-005,kazakh-sft-001",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 9614,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts:20:107",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts",
+                      "column": 107,
+                      "line": 20
+                    },
+                    "snippet": " \u001b[90m 18 |\u001b[39m     \u001b[36mawait\u001b[39m expect(tooltip)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'kazakh-sft-005'\u001b[39m)\n \u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m expect(tooltip)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'step'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(() \u001b[33m=>\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m performance\u001b[33m.\u001b[39mgetEntriesByName(\u001b[32m'soup:hover-frame'\u001b[39m)\u001b[33m.\u001b[39mlength))\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 21 |\u001b[39m     \u001b[36mconst\u001b[39m sample \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(() \u001b[33m=>\u001b[39m {\n \u001b[90m 22 |\u001b[39m       \u001b[36mconst\u001b[39m frame \u001b[33m=\u001b[39m performance\u001b[33m.\u001b[39mgetEntriesByName(\u001b[32m'soup:hover-frame'\u001b[39m)\u001b[33m.\u001b[39mat(\u001b[33m-\u001b[39m\u001b[35m1\u001b[39m) \u001b[36mas\u001b[39m \u001b[33mPerformanceMark\u001b[39m\n \u001b[90m 23 |\u001b[39m       \u001b[36mconst\u001b[39m commit \u001b[33m=\u001b[39m performance\u001b[33m.\u001b[39mgetEntriesByName(\u001b[32m'soup:hover-dom-commit'\u001b[39m)\u001b[33m.\u001b[39mat(\u001b[33m-\u001b[39m\u001b[35m1\u001b[39m) \u001b[36mas\u001b[39m \u001b[33mPerformanceMark\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts",
+                        "column": 107,
+                        "line": 20
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  18 |     await expect(tooltip).toContainText('kazakh-sft-005')\n  19 |     await expect(tooltip).toContainText('step')\n> 20 |     await expect.poll(() => page.evaluate(() => performance.getEntriesByName('soup:hover-frame').length)).toBeGreaterThan(0)\n     |                                                                                                           ^\n  21 |     const sample = await page.evaluate(() => {\n  22 |       const frame = performance.getEntriesByName('soup:hover-frame').at(-1) as PerformanceMark\n  23 |       const commit = performance.getEntriesByName('soup:hover-dom-commit').at(-1) as PerformanceMark\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts:20:107"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:21:37.071Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-paint-before\\artifacts\\hover-paint-accepted-hover-fca95-zakh-sft-005-kazakh-sft-001\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-paint-before\\artifacts\\hover-paint-accepted-hover-fca95-zakh-sft-005-kazakh-sft-001\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-paint-before\\artifacts\\hover-paint-accepted-hover-fca95-zakh-sft-005-kazakh-sft-001\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts",
+                    "column": 107,
+                    "line": 20
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "37d2ab1e4f1056a08c51-cad742b425cc2c91d5e0",
+          "file": "hover-paint.spec.ts",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T04:21:24.244Z",
+    "duration": 24027.092,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

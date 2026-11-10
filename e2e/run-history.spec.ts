@@ -2,6 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test('history exposes exact daily starts and supports keyboard selection', async ({ page }) => {
   await page.goto('/dashboard');
+  await page.getByText('Run details and history', { exact: true }).click();
   const history = page.getByRole('region', { name: 'Run history', exact: true });
   await expect(history.locator('[data-history-date]')).toHaveCount(90);
   const day = history.locator('[data-history-date="2026-11-09"]');

@@ -1,0 +1,517 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=tmp/review-fixes-green-playwright.config.mjs"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\review-fixes-green-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/review-fixes-after/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "review-fixes.spec.ts",
+          "hover-paint.spec.ts"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-after\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "review-fixes.spec.ts",
+          "hover-paint.spec.ts"
+        ],
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4175",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-after\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4175",
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "url": "http://127.0.0.1:4175",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "hover-paint.spec.ts",
+      "file": "hover-paint.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "accepted hover reaches a rendered frame with original observations: /runs/kazakh-sft-005",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5083,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'hoverSeq')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'hoverSeq')\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts:27:32",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts",
+                      "column": 32,
+                      "line": 27
+                    },
+                    "snippet": " \u001b[90m 25 |\u001b[39m       \u001b[36mreturn\u001b[39m { frame\u001b[33m:\u001b[39m frame\u001b[33m.\u001b[39mtoJSON()\u001b[33m,\u001b[39m commit\u001b[33m:\u001b[39m commit\u001b[33m.\u001b[39mtoJSON()\u001b[33m,\u001b[39m accepted\u001b[33m:\u001b[39m evidence\u001b[33m?.\u001b[39macceptedHoverSeq }\n \u001b[90m 26 |\u001b[39m     })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m     expect(sample\u001b[33m.\u001b[39mframe\u001b[33m.\u001b[39mdetail\u001b[33m.\u001b[39mhoverSeq)\u001b[33m.\u001b[39mtoBe(sample\u001b[33m.\u001b[39maccepted)\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m     expect(sample\u001b[33m.\u001b[39mcommit\u001b[33m.\u001b[39mdetail\u001b[33m.\u001b[39mhoverSeq)\u001b[33m.\u001b[39mtoBe(sample\u001b[33m.\u001b[39maccepted)\n \u001b[90m 29 |\u001b[39m     expect(sample\u001b[33m.\u001b[39mframe\u001b[33m.\u001b[39mstartTime)\u001b[33m.\u001b[39mtoBeGreaterThan(sample\u001b[33m.\u001b[39mcommit\u001b[33m.\u001b[39mstartTime)\n \u001b[90m 30 |\u001b[39m     expect(sample\u001b[33m.\u001b[39mframe\u001b[33m.\u001b[39mdetail\u001b[33m.\u001b[39mrequestToFrameMs)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(sample\u001b[33m.\u001b[39mframe\u001b[33m.\u001b[39mdetail\u001b[33m.\u001b[39mrequestToAcceptedMs)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts",
+                        "column": 32,
+                        "line": 27
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'hoverSeq')\n\n  25 |       return { frame: frame.toJSON(), commit: commit.toJSON(), accepted: evidence?.acceptedHoverSeq }\n  26 |     })\n> 27 |     expect(sample.frame.detail.hoverSeq).toBe(sample.accepted)\n     |                                ^\n  28 |     expect(sample.commit.detail.hoverSeq).toBe(sample.accepted)\n  29 |     expect(sample.frame.startTime).toBeGreaterThan(sample.commit.startTime)\n  30 |     expect(sample.frame.detail.requestToFrameMs).toBeGreaterThanOrEqual(sample.frame.detail.requestToAcceptedMs)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts:27:32"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:26:45.582Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-after\\artifacts\\hover-paint-accepted-hover-4cce2-vations-runs-kazakh-sft-005\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-after\\artifacts\\hover-paint-accepted-hover-4cce2-vations-runs-kazakh-sft-005\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-after\\artifacts\\hover-paint-accepted-hover-4cce2-vations-runs-kazakh-sft-005\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts",
+                    "column": 32,
+                    "line": 27
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "37d2ab1e4f1056a08c51-ecd02bc0fd242bc4906d",
+          "file": "hover-paint.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "accepted hover reaches a rendered frame with original observations: /compare?runs=kazakh-sft-005,kazakh-sft-001",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5669,
+                  "error": {
+                    "message": "TypeError: Cannot read properties of undefined (reading 'hoverSeq')",
+                    "stack": "TypeError: Cannot read properties of undefined (reading 'hoverSeq')\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts:27:32",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts",
+                      "column": 32,
+                      "line": 27
+                    },
+                    "snippet": " \u001b[90m 25 |\u001b[39m       \u001b[36mreturn\u001b[39m { frame\u001b[33m:\u001b[39m frame\u001b[33m.\u001b[39mtoJSON()\u001b[33m,\u001b[39m commit\u001b[33m:\u001b[39m commit\u001b[33m.\u001b[39mtoJSON()\u001b[33m,\u001b[39m accepted\u001b[33m:\u001b[39m evidence\u001b[33m?.\u001b[39macceptedHoverSeq }\n \u001b[90m 26 |\u001b[39m     })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m     expect(sample\u001b[33m.\u001b[39mframe\u001b[33m.\u001b[39mdetail\u001b[33m.\u001b[39mhoverSeq)\u001b[33m.\u001b[39mtoBe(sample\u001b[33m.\u001b[39maccepted)\n \u001b[90m    |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m     expect(sample\u001b[33m.\u001b[39mcommit\u001b[33m.\u001b[39mdetail\u001b[33m.\u001b[39mhoverSeq)\u001b[33m.\u001b[39mtoBe(sample\u001b[33m.\u001b[39maccepted)\n \u001b[90m 29 |\u001b[39m     expect(sample\u001b[33m.\u001b[39mframe\u001b[33m.\u001b[39mstartTime)\u001b[33m.\u001b[39mtoBeGreaterThan(sample\u001b[33m.\u001b[39mcommit\u001b[33m.\u001b[39mstartTime)\n \u001b[90m 30 |\u001b[39m     expect(sample\u001b[33m.\u001b[39mframe\u001b[33m.\u001b[39mdetail\u001b[33m.\u001b[39mrequestToFrameMs)\u001b[33m.\u001b[39mtoBeGreaterThanOrEqual(sample\u001b[33m.\u001b[39mframe\u001b[33m.\u001b[39mdetail\u001b[33m.\u001b[39mrequestToAcceptedMs)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts",
+                        "column": 32,
+                        "line": 27
+                      },
+                      "message": "TypeError: Cannot read properties of undefined (reading 'hoverSeq')\n\n  25 |       return { frame: frame.toJSON(), commit: commit.toJSON(), accepted: evidence?.acceptedHoverSeq }\n  26 |     })\n> 27 |     expect(sample.frame.detail.hoverSeq).toBe(sample.accepted)\n     |                                ^\n  28 |     expect(sample.commit.detail.hoverSeq).toBe(sample.accepted)\n  29 |     expect(sample.frame.startTime).toBeGreaterThan(sample.commit.startTime)\n  30 |     expect(sample.frame.detail.requestToFrameMs).toBeGreaterThanOrEqual(sample.frame.detail.requestToAcceptedMs)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts:27:32"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:26:52.388Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-after\\artifacts\\hover-paint-accepted-hover-fca95-zakh-sft-005-kazakh-sft-001\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-after\\artifacts\\hover-paint-accepted-hover-fca95-zakh-sft-005-kazakh-sft-001\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-after\\artifacts\\hover-paint-accepted-hover-fca95-zakh-sft-005-kazakh-sft-001\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-paint.spec.ts",
+                    "column": 32,
+                    "line": 27
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "37d2ab1e4f1056a08c51-cad742b425cc2c91d5e0",
+          "file": "hover-paint.spec.ts",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    },
+    {
+      "title": "review-fixes.spec.ts",
+      "file": "review-fixes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "an accepted source lookup with zero matches announces its recorded step and recovery",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 45612,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 45000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 45000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 45000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                        "column": 6,
+                        "line": 27
+                      },
+                      "message": "Error: locator.click: Test timeout of 45000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Browse source rows', exact: true })\u001b[22m\n\n\n  25 |     name: 'Browse source rows',\n  26 |     exact: true\n> 27 |   }).click();\n     |      ^\n  28 |   await expect(page.locator('.source-details')).toHaveAttribute('open', '');\n  29 |   await page.getByRole('button', {\n  30 |     name: 'Inspect step',\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:27:6"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:26:59.927Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-after\\artifacts\\review-fixes-an-accepted-s-3cdc3--recorded-step-and-recovery\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-after\\artifacts\\review-fixes-an-accepted-s-3cdc3--recorded-step-and-recovery\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-fixes-after\\artifacts\\review-fixes-an-accepted-s-3cdc3--recorded-step-and-recovery\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-9674d021582a6dd1e1c5",
+          "file": "review-fixes.spec.ts",
+          "line": 2,
+          "column": 1
+        },
+        {
+          "title": "stacked preview at 1024px brings its selected run into view and focuses its heading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1228,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:27:48.646Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-50b622120db95ea7f252",
+          "file": "review-fixes.spec.ts",
+          "line": 36,
+          "column": 41
+        },
+        {
+          "title": "stacked preview at 1280px brings its selected run into view and focuses its heading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1086,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:27:50.059Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-b76c2e3b20b699c32849",
+          "file": "review-fixes.spec.ts",
+          "line": 36,
+          "column": 41
+        },
+        {
+          "title": "stacked preview at 1400px brings its selected run into view and focuses its heading",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1084,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:27:51.166Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-73fc57fa3d80acadc353",
+          "file": "review-fixes.spec.ts",
+          "line": 36,
+          "column": 41
+        },
+        {
+          "title": "compact preview help links to real range controls on both preview hosts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4062,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:27:52.269Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-68b9f0446c6c97086630",
+          "file": "review-fixes.spec.ts",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "quality filters and findings use readable names while URL query values stay stable",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 950,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:27:56.357Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-a7ad8d6dc04fbfc3e358",
+          "file": "review-fixes.spec.ts",
+          "line": 84,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T04:26:43.649Z",
+    "duration": 74971.697,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 3,
+    "flaky": 0
+  }
+}
