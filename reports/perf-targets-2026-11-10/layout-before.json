@@ -1,0 +1,200 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs",
+      "e2e/hover-layout.spec.ts"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/layout-before-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\layout-before-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/layout-before.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "hover-layout.spec.ts",
+      "file": "hover-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "settled source hover confines layout to readouts instead of relaying it through the document",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2731,
+                  "error": {
+                    "message": "Error: cursor changes must not invalidate document-wide layout\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 42\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"args\": Object {\u001b[39m\n\u001b[31m+       \"beginData\": Object {\u001b[39m\n\u001b[31m+         \"dirtyObjects\": 55,\u001b[39m\n\u001b[31m+         \"frame\": \"DA1E2770CDBBD134253B32120EA96A51\",\u001b[39m\n\u001b[31m+         \"partialLayout\": false,\u001b[39m\n\u001b[31m+         \"totalObjects\": 930,\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       \"endData\": Object {\u001b[39m\n\u001b[31m+         \"layoutRoots\": Array [\u001b[39m\n\u001b[31m+           Object {\u001b[39m\n\u001b[31m+             \"depth\": 1,\u001b[39m\n\u001b[31m+             \"nodeId\": 3,\u001b[39m\n\u001b[31m+             \"nodeName\": \"#document\",\u001b[39m\n\u001b[31m+             \"quads\": Array [\u001b[39m\n\u001b[31m+               Array [\u001b[39m\n\u001b[31m+                 0,\u001b[39m\n\u001b[31m+                 0,\u001b[39m\n\u001b[31m+                 1280,\u001b[39m\n\u001b[31m+                 0,\u001b[39m\n\u001b[31m+                 1280,\u001b[39m\n\u001b[31m+                 720,\u001b[39m\n\u001b[31m+                 0,\u001b[39m\n\u001b[31m+                 720,\u001b[39m\n\u001b[31m+               ],\u001b[39m\n\u001b[31m+             ],\u001b[39m\n\u001b[31m+           },\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+     },\u001b[39m\n\u001b[31m+     \"cat\": \"devtools.timeline\",\u001b[39m\n\u001b[31m+     \"dur\": 1033,\u001b[39m\n\u001b[31m+     \"name\": \"Layout\",\u001b[39m\n\u001b[31m+     \"ph\": \"X\",\u001b[39m\n\u001b[31m+     \"pid\": 18304,\u001b[39m\n\u001b[31m+     \"tdur\": 1034,\u001b[39m\n\u001b[31m+     \"tid\": 15004,\u001b[39m\n\u001b[31m+     \"ts\": 10026812001,\u001b[39m\n\u001b[31m+     \"tts\": 606784,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: cursor changes must not invalidate document-wide layout\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 42\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"args\": Object {\u001b[39m\n\u001b[31m+       \"beginData\": Object {\u001b[39m\n\u001b[31m+         \"dirtyObjects\": 55,\u001b[39m\n\u001b[31m+         \"frame\": \"DA1E2770CDBBD134253B32120EA96A51\",\u001b[39m\n\u001b[31m+         \"partialLayout\": false,\u001b[39m\n\u001b[31m+         \"totalObjects\": 930,\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       \"endData\": Object {\u001b[39m\n\u001b[31m+         \"layoutRoots\": Array [\u001b[39m\n\u001b[31m+           Object {\u001b[39m\n\u001b[31m+             \"depth\": 1,\u001b[39m\n\u001b[31m+             \"nodeId\": 3,\u001b[39m\n\u001b[31m+             \"nodeName\": \"#document\",\u001b[39m\n\u001b[31m+             \"quads\": Array [\u001b[39m\n\u001b[31m+               Array [\u001b[39m\n\u001b[31m+                 0,\u001b[39m\n\u001b[31m+                 0,\u001b[39m\n\u001b[31m+                 1280,\u001b[39m\n\u001b[31m+                 0,\u001b[39m\n\u001b[31m+                 1280,\u001b[39m\n\u001b[31m+                 720,\u001b[39m\n\u001b[31m+                 0,\u001b[39m\n\u001b[31m+                 720,\u001b[39m\n\u001b[31m+               ],\u001b[39m\n\u001b[31m+             ],\u001b[39m\n\u001b[31m+           },\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+     },\u001b[39m\n\u001b[31m+     \"cat\": \"devtools.timeline\",\u001b[39m\n\u001b[31m+     \"dur\": 1033,\u001b[39m\n\u001b[31m+     \"name\": \"Layout\",\u001b[39m\n\u001b[31m+     \"ph\": \"X\",\u001b[39m\n\u001b[31m+     \"pid\": 18304,\u001b[39m\n\u001b[31m+     \"tdur\": 1034,\u001b[39m\n\u001b[31m+     \"tid\": 15004,\u001b[39m\n\u001b[31m+     \"ts\": 10026812001,\u001b[39m\n\u001b[31m+     \"tts\": 606784,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:22:136",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 136,
+                      "line": 22
+                    },
+                    "snippet": " \u001b[90m 20 |\u001b[39m  \u001b[36mawait\u001b[39m test\u001b[33m.\u001b[39minfo()\u001b[33m.\u001b[39mattach(\u001b[32m'settled-hover-layout.json'\u001b[39m\u001b[33m,\u001b[39m{body\u001b[33m:\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(layouts\u001b[33m,\u001b[39m\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m\u001b[35m2\u001b[39m)\u001b[33m,\u001b[39mcontentType\u001b[33m:\u001b[39m\u001b[32m'application/json'\u001b[39m})\n \u001b[90m 21 |\u001b[39m  expect(layouts\u001b[33m.\u001b[39mlength\u001b[33m,\u001b[39m\u001b[32m'the source text actually caused a layout'\u001b[39m)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m  expect(layouts\u001b[33m.\u001b[39mfilter(event\u001b[33m=>\u001b[39mevent\u001b[33m.\u001b[39margs\u001b[33m?.\u001b[39mbeginData\u001b[33m?.\u001b[39mpartialLayout\u001b[33m===\u001b[39m\u001b[36mfalse\u001b[39m)\u001b[33m,\u001b[39m\u001b[32m'cursor changes must not invalidate document-wide layout'\u001b[39m)\u001b[33m.\u001b[39mtoEqual([])\n \u001b[90m    |\u001b[39m                                                                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m })\n \u001b[90m 24 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 136,
+                        "line": 22
+                      },
+                      "message": "Error: cursor changes must not invalidate document-wide layout\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 42\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   Object {\u001b[39m\n\u001b[31m+     \"args\": Object {\u001b[39m\n\u001b[31m+       \"beginData\": Object {\u001b[39m\n\u001b[31m+         \"dirtyObjects\": 55,\u001b[39m\n\u001b[31m+         \"frame\": \"DA1E2770CDBBD134253B32120EA96A51\",\u001b[39m\n\u001b[31m+         \"partialLayout\": false,\u001b[39m\n\u001b[31m+         \"totalObjects\": 930,\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+       \"endData\": Object {\u001b[39m\n\u001b[31m+         \"layoutRoots\": Array [\u001b[39m\n\u001b[31m+           Object {\u001b[39m\n\u001b[31m+             \"depth\": 1,\u001b[39m\n\u001b[31m+             \"nodeId\": 3,\u001b[39m\n\u001b[31m+             \"nodeName\": \"#document\",\u001b[39m\n\u001b[31m+             \"quads\": Array [\u001b[39m\n\u001b[31m+               Array [\u001b[39m\n\u001b[31m+                 0,\u001b[39m\n\u001b[31m+                 0,\u001b[39m\n\u001b[31m+                 1280,\u001b[39m\n\u001b[31m+                 0,\u001b[39m\n\u001b[31m+                 1280,\u001b[39m\n\u001b[31m+                 720,\u001b[39m\n\u001b[31m+                 0,\u001b[39m\n\u001b[31m+                 720,\u001b[39m\n\u001b[31m+               ],\u001b[39m\n\u001b[31m+             ],\u001b[39m\n\u001b[31m+           },\u001b[39m\n\u001b[31m+         ],\u001b[39m\n\u001b[31m+       },\u001b[39m\n\u001b[31m+     },\u001b[39m\n\u001b[31m+     \"cat\": \"devtools.timeline\",\u001b[39m\n\u001b[31m+     \"dur\": 1033,\u001b[39m\n\u001b[31m+     \"name\": \"Layout\",\u001b[39m\n\u001b[31m+     \"ph\": \"X\",\u001b[39m\n\u001b[31m+     \"pid\": 18304,\u001b[39m\n\u001b[31m+     \"tdur\": 1034,\u001b[39m\n\u001b[31m+     \"tid\": 15004,\u001b[39m\n\u001b[31m+     \"ts\": 10026812001,\u001b[39m\n\u001b[31m+     \"tts\": 606784,\u001b[39m\n\u001b[31m+   },\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  20 |  await test.info().attach('settled-hover-layout.json',{body:JSON.stringify(layouts,null,2),contentType:'application/json'})\n  21 |  expect(layouts.length,'the source text actually caused a layout').toBeGreaterThan(0)\n> 22 |  expect(layouts.filter(event=>event.args?.beginData?.partialLayout===false),'cursor changes must not invalidate document-wide layout').toEqual([])\n     |                                                                                                                                        ^\n  23 | })\n  24 |\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:22:136"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T10:41:28.562Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "settled-hover-layout.json",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJhcmdzIjogewogICAgICAiYmVnaW5EYXRhIjogewogICAgICAgICJkaXJ0eU9iamVjdHMiOiA1NSwKICAgICAgICAiZnJhbWUiOiAiREExRTI3NzBDREJCRDEzNDI1M0IzMjEyMEVBOTZBNTEiLAogICAgICAgICJwYXJ0aWFsTGF5b3V0IjogZmFsc2UsCiAgICAgICAgInRvdGFsT2JqZWN0cyI6IDkzMAogICAgICB9LAogICAgICAiZW5kRGF0YSI6IHsKICAgICAgICAibGF5b3V0Um9vdHMiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJkZXB0aCI6IDEsCiAgICAgICAgICAgICJub2RlSWQiOiAzLAogICAgICAgICAgICAibm9kZU5hbWUiOiAiI2RvY3VtZW50IiwKICAgICAgICAgICAgInF1YWRzIjogWwogICAgICAgICAgICAgIFsKICAgICAgICAgICAgICAgIDAsCiAgICAgICAgICAgICAgICAwLAogICAgICAgICAgICAgICAgMTI4MCwKICAgICAgICAgICAgICAgIDAsCiAgICAgICAgICAgICAgICAxMjgwLAogICAgICAgICAgICAgICAgNzIwLAogICAgICAgICAgICAgICAgMCwKICAgICAgICAgICAgICAgIDcyMAogICAgICAgICAgICAgIF0KICAgICAgICAgICAgXQogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfQogICAgfSwKICAgICJjYXQiOiAiZGV2dG9vbHMudGltZWxpbmUiLAogICAgImR1ciI6IDEwMzMsCiAgICAibmFtZSI6ICJMYXlvdXQiLAogICAgInBoIjogIlgiLAogICAgInBpZCI6IDE4MzA0LAogICAgInRkdXIiOiAxMDM0LAogICAgInRpZCI6IDE1MDA0LAogICAgInRzIjogMTAwMjY4MTIwMDEsCiAgICAidHRzIjogNjA2Nzg0CiAgfQpd"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\layout-before-artifacts\\hover-layout-settled-sourc-4b820-ing-it-through-the-document\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\layout-before-artifacts\\hover-layout-settled-sourc-4b820-ing-it-through-the-document\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\layout-before-artifacts\\hover-layout-settled-sourc-4b820-ing-it-through-the-document\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 136,
+                    "line": 22
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-48ecde7e2cac0b00d0d5",
+          "file": "hover-layout.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T10:41:26.684Z",
+    "duration": 5835.39,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

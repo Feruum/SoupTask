@@ -1,0 +1,54 @@
+npm notice run soup-training-monitor@0.1.0 build
+npm notice run tsc -b && vite build
+vite v8.3.7 building client environment for production...
+transforming...
+✓ 2555 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                              0.71 kB │ gzip:   0.41 kB
+dist/assets/soup-logo-CIN0SPTk.svg                           0.88 kB │ gzip:   0.41 kB
+dist/assets/geist-cyrillic-ext-wght-normal-DjL33-gN.woff2    7.42 kB
+dist/assets/geist-vietnamese-wght-normal-6IgcOCM7.woff2      8.00 kB
+dist/assets/inter-vietnamese-wght-normal-CBcvBZtf.woff2     10.25 kB
+dist/assets/inter-greek-ext-wght-normal-DlzME5K_.woff2      11.23 kB
+dist/assets/geist-cyrillic-wght-normal-BEAKL7Jp.woff2       15.08 kB
+dist/assets/geist-latin-ext-wght-normal-DC-KSUi6.woff2      16.51 kB
+dist/assets/training.worker-CPr3EncJ.js                     17.73 kB
+dist/assets/inter-cyrillic-wght-normal-DqGufNeO.woff2       18.74 kB
+dist/assets/inter-greek-wght-normal-CkhJZR-_.woff2          18.99 kB
+dist/assets/inter-cyrillic-ext-wght-normal-BOeWTOD4.woff2   25.96 kB
+dist/assets/geist-latin-wght-normal-BgDaEnEv.woff2          29.40 kB
+dist/assets/inter-latin-wght-normal-Dx4kXJAl.woff2          48.25 kB
+dist/assets/inter-latin-ext-wght-normal-DO1Apj_S.woff2      85.06 kB
+dist/assets/kazakh-ornament-IYqB2HFl.png                   272.40 kB
+dist/assets/soup-ladle-C2XrMcxW.png                        307.13 kB
+dist/assets/soup-piala-DviEV0ms.png                        646.48 kB
+dist/assets/soup-recipe-Bogp1y9r.png                       843.08 kB
+dist/assets/ComparePage-BdiPKaWd.css                         0.85 kB │ gzip:   0.37 kB
+dist/assets/search-field-BDviUeeU.css                        1.90 kB │ gzip:   0.62 kB
+dist/assets/IssueTypeSummary-CTXyF6D_.css                    2.22 kB │ gzip:   0.76 kB
+dist/assets/Workspace-TPykg1XH.css                           3.61 kB │ gzip:   1.20 kB
+dist/assets/DashboardPage-JshtU6fw.css                      16.58 kB │ gzip:   3.57 kB
+dist/assets/index-IuaU2s3W.css                              76.12 kB │ gzip:  15.49 kB
+dist/assets/run-history-e-Lpw_fJ.js                          1.31 kB │ gzip:   0.78 kB
+dist/assets/search-field-Cl7HQ0WF.js                         1.88 kB │ gzip:   0.90 kB
+dist/assets/IssueTypeSummary-DTndF3ES.js                     2.68 kB │ gzip:   1.06 kB
+dist/assets/ComparePage-Cq8KbOZP.js                          7.37 kB │ gzip:   2.60 kB
+dist/assets/RunPage-Cu6gX7Fx.js                              9.02 kB │ gzip:   3.05 kB
+dist/assets/QualityPage-CYDy0MgX.js                          9.35 kB │ gzip:   3.05 kB
+dist/assets/RunsPage-D6l6FMPd.js                             9.98 kB │ gzip:   3.23 kB
+dist/assets/DashboardPage-CNZqmwhQ.js                       26.45 kB │ gzip:   8.14 kB
+dist/assets/Workspace-DYDxUkD6.js                           96.35 kB │ gzip:  37.29 kB
+dist/assets/index-DfNDCx7x.js                              471.58 kB │ gzip: 147.31 kB
+
+✓ built in 3.91s
+[PLUGIN_TIMINGS] JavaScript callbacks ran for 3.6s of this 3.9s build (92%).
+The slowest callbacks, timed inside each callback (the wait before a callback starts is excluded, the time it awaits is included):
+  - plugin vite:worker-import-meta-url transform (87%, 3.4s, 1 call)
+Additional callback time came from the callbacks below and from callbacks under 1s.
+3 callbacks are listed without a time. Their calls overlapped, so the time inside one call includes work from other calls. To find their cost, profile the build with `node --cpu-prof`:
+  - plugin vite:css transform (14 calls)
+  - plugin vite:asset load (5 calls)
+  - plugin @tailwindcss/vite:generate:build transform (14 calls)
+See https://rolldown.rs/reference/InputOptions.checks#bundlertimings for more details.
+

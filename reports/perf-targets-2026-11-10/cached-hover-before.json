@@ -1,0 +1,195 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/cached-hover.spec.ts",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/tmp/reports/perf-targets-2026-11-10/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\reports\\perf-targets-2026-11-10\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/cached-hover-before.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "cached-hover.spec.ts",
+      "file": "cached-hover.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a warmed display-pixel cursor uses exact Worker-prepared rows without another round trip",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5567,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 3000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 3000ms exceeded while waiting on the predicate\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cached-hover.spec.ts:14:146",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cached-hover.spec.ts",
+                      "column": 146,
+                      "line": 14
+                    },
+                    "snippet": " \u001b[90m 12 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/runs/kazakh-sft-005'\u001b[39m)\n \u001b[90m 13 |\u001b[39m  \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.metric-grid'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-view-ready'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'true'\u001b[39m\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m\u001b[35m60000\u001b[39m})\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m  \u001b[36mawait\u001b[39m expect\u001b[33m.\u001b[39mpoll(()\u001b[33m=>\u001b[39mpage\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39m(window\u001b[33m.\u001b[39m__soupEvidence \u001b[36mas\u001b[39m {hoverCacheTargets\u001b[33m?\u001b[39m\u001b[33m:\u001b[39mnumber}\u001b[33m|\u001b[39mundefined)\u001b[33m?.\u001b[39mhoverCacheTargets\u001b[33m??\u001b[39m\u001b[35m0\u001b[39m)\u001b[33m,\u001b[39m{timeout\u001b[33m:\u001b[39m\u001b[35m3000\u001b[39m})\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m  \u001b[36mconst\u001b[39m surface\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'[data-testid=\"loss-chart\"] .u-over'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m surface\u001b[33m.\u001b[39mscrollIntoViewIfNeeded()\n \u001b[90m 16 |\u001b[39m  \u001b[36mconst\u001b[39m box\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m surface\u001b[33m.\u001b[39mboundingBox()\u001b[33m;\u001b[39m\u001b[36mif\u001b[39m(\u001b[33m!\u001b[39mbox)\u001b[36mthrow\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'Missing plot'\u001b[39m)\n \u001b[90m 17 |\u001b[39m  \u001b[36mconst\u001b[39m before\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39m(window \u001b[36mas\u001b[39m \u001b[33mWindow\u001b[39m\u001b[33m&\u001b[39m{__hoverPosts\u001b[33m?\u001b[39m\u001b[33m:\u001b[39mnumber})\u001b[33m.\u001b[39m__hoverPosts)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cached-hover.spec.ts",
+                        "column": 146,
+                        "line": 14
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 3000ms exceeded while waiting on the predicate\n\n  12 |  await page.goto('/runs/kazakh-sft-005')\n  13 |  await expect(page.locator('.metric-grid')).toHaveAttribute('data-view-ready','true',{timeout:60000})\n> 14 |  await expect.poll(()=>page.evaluate(()=>(window.__soupEvidence as {hoverCacheTargets?:number}|undefined)?.hoverCacheTargets??0),{timeout:3000}).toBeGreaterThan(0)\n     |                                                                                                                                                  ^\n  15 |  const surface=page.locator('[data-testid=\"loss-chart\"] .u-over');await surface.scrollIntoViewIfNeeded()\n  16 |  const box=await surface.boundingBox();if(!box)throw Error('Missing plot')\n  17 |  const before=await page.evaluate(()=>(window as Window&{__hoverPosts?:number}).__hoverPosts)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cached-hover.spec.ts:14:146"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T09:18:08.982Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\reports\\perf-targets-2026-11-10\\artifacts\\cached-hover-a-warmed-disp-2eec5--without-another-round-trip\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\reports\\perf-targets-2026-11-10\\artifacts\\cached-hover-a-warmed-disp-2eec5--without-another-round-trip\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\reports\\perf-targets-2026-11-10\\artifacts\\cached-hover-a-warmed-disp-2eec5--without-another-round-trip\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cached-hover.spec.ts",
+                    "column": 146,
+                    "line": 14
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "dbeff0185fdcf015c293-80144d7b762a89309c2f",
+          "file": "cached-hover.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T09:18:07.069Z",
+    "duration": 9093.505000000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

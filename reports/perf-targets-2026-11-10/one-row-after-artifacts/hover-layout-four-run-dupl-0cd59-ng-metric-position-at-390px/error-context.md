@@ -1,0 +1,245 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: hover-layout.spec.ts >> four-run duplicate comparison preserves the following metric position at 390px
+- Location: e2e\hover-layout.spec.ts:64:74
+
+# Error details
+
+```
+Test timeout of 60000ms exceeded.
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - link "Skip to content" [ref=e4] [cursor=pointer]:
+    - /url: "#main-content"
+  - complementary "Workspace" [ref=e5]:
+    - navigation "Main navigation" [ref=e6]:
+      - link "Dashboard" [ref=e7] [cursor=pointer]:
+        - /url: /dashboard
+      - link "Training runs" [ref=e14] [cursor=pointer]:
+        - /url: /runs
+      - link "Compare" [ref=e18] [cursor=pointer]:
+        - /url: /compare
+      - link "Data quality" [ref=e22] [cursor=pointer]:
+        - /url: /data-quality
+  - generic [ref=e26]:
+    - banner [ref=e27]:
+      - generic [ref=e28]:
+        - generic [ref=e29]: Workspace
+        - generic [aria-hidden] [ref=e30]: /
+        - generic [ref=e31]: qwen-kazakh
+      - generic [ref=e32]:
+        - link "Docs" [ref=e33] [cursor=pointer]:
+          - /url: https://souplanding-omega.vercel.app/docs/
+        - button "Switch to light theme" [ref=e37] [cursor=pointer]
+    - main [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]:
+          - heading "Compare runs" [level=1] [ref=e52]
+          - paragraph [ref=e53]: 4 runs selected · Aligned by original recorded step
+        - generic [ref=e54]: Demo snapshot · Smoothing off
+      - region "Comparison selection" [ref=e55]:
+        - paragraph [ref=e56]: Selected experiments
+        - list [ref=e57]:
+          - listitem [ref=e58]:
+            - button "Remove kazakh-sft-005 from comparison" [ref=e59] [cursor=pointer]: kazakh-sft-005
+          - listitem [ref=e63]:
+            - button "Remove kazakh-sft-009 from comparison" [ref=e64] [cursor=pointer]: kazakh-sft-009
+          - listitem [ref=e68]:
+            - button "Remove kazakh-sft-010 from comparison" [ref=e69] [cursor=pointer]: kazakh-sft-010
+          - listitem [ref=e73]:
+            - button "Remove kazakh-sft-001 from comparison" [ref=e74] [cursor=pointer]: kazakh-sft-001
+      - generic [ref=e78]:
+        - complementary [ref=e79]:
+          - group [ref=e80]:
+            - generic "Edit comparison runs 4/4 selected" [ref=e81] [cursor=pointer]:
+              - generic [ref=e82]:
+                - strong [ref=e83]: Edit comparison runs
+                - generic [ref=e84]: 4/4 selected
+        - generic [ref=e87]:
+          - navigation "Visible metrics" [ref=e88]:
+            - button "All metrics" [pressed] [ref=e89] [cursor=pointer]
+            - button "Loss" [ref=e90] [cursor=pointer]
+            - button "Learning rate" [ref=e91] [cursor=pointer]
+            - button "Gradient norm" [ref=e92] [cursor=pointer]
+          - group [ref=e93]:
+            - generic "Adjust chart range Step 98 – 100" [ref=e94] [cursor=pointer]:
+              - generic [ref=e95]:
+                - strong [ref=e96]: Adjust chart range
+                - generic [ref=e97]: Step 98 – 100
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - generic [ref=e103]:
+                  - generic [ref=e104]: From step
+                  - spinbutton "From step" [ref=e105]: "98"
+                - generic [ref=e106]:
+                  - generic [ref=e107]: To step
+                  - spinbutton "To step" [ref=e108]: "100"
+                - button "Apply range" [active] [ref=e109] [cursor=pointer]
+              - generic [ref=e113]:
+                - button "Zoom in" [ref=e114] [cursor=pointer]
+                - button "Zoom out" [ref=e118] [cursor=pointer]
+                - button "Reset view" [ref=e122] [cursor=pointer]
+              - paragraph [ref=e126]: Step 98 to 100
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - generic [ref=e129]:
+                - generic [ref=e130]:
+                  - heading "Loss" [level=2] [ref=e131]
+                  - paragraph [ref=e132]: Recorded step · Linear scale · Original values
+                - generic [ref=e133]: 12 displayed
+              - figure "Highlight kazakh-sft-005 1.832639 – 1.838472 Highlight kazakh-sft-009 1.812318 – 1.851895 Highlight kazakh-sft-010 1.818151 – 12.000 Highlight kazakh-sft-001 1.81543 – 1.835924 Tap the chart for recorded values. Use Adjust chart range to zoom; swipe vertically to scroll. kazakh-sft-010 · This snapshot contains 1 NaN observation; recorded invalid values create gaps, never zero. Inspect data quality . Compared source values" [ref=e134]:
+                - generic [ref=e144]:
+                  - generic [ref=e145]:
+                    - generic [ref=e146]:
+                      - button "Highlight kazakh-sft-005" [ref=e147] [cursor=pointer]: kazakh-sft-005
+                      - generic [ref=e149]: 1.832639 – 1.838472
+                    - generic [ref=e150]:
+                      - button "Highlight kazakh-sft-009" [ref=e151] [cursor=pointer]: kazakh-sft-009
+                      - generic [ref=e153]: 1.812318 – 1.851895
+                    - generic [ref=e154]:
+                      - button "Highlight kazakh-sft-010" [ref=e155] [cursor=pointer]: kazakh-sft-010
+                      - generic [ref=e157]: 1.818151 – 12.000
+                    - generic [ref=e158]:
+                      - button "Highlight kazakh-sft-001" [ref=e159] [cursor=pointer]: kazakh-sft-001
+                      - generic [ref=e161]: 1.81543 – 1.835924
+                  - paragraph [ref=e162]: Tap the chart for recorded values. Use Adjust chart range to zoom; swipe vertically to scroll.
+                  - paragraph [ref=e164]:
+                    - text: kazakh-sft-010 · This snapshot contains 1 NaN observation; recorded invalid values create gaps, never zero.
+                    - link "Inspect data quality" [ref=e165] [cursor=pointer]:
+                      - /url: /data-quality?run=kazakh-sft-010&metric=loss
+                    - text: .
+                  - region "Compared source values" [ref=e166]:
+                    - generic [ref=e167]:
+                      - paragraph [ref=e168]: Cursor step 98.992481 · All metrics
+                      - region "Compared source table" [ref=e169]:
+                        - table "Original observations at cursor step" [ref=e170]:
+                          - caption [ref=e171]: Original observations at cursor step
+                          - rowgroup [ref=e172]:
+                            - row [ref=e173]:
+                              - columnheader "Run" [ref=e174]
+                              - columnheader "Recorded step" [ref=e175]
+                              - columnheader "Loss" [ref=e176]
+                              - columnheader "Learning rate" [ref=e177]
+                              - columnheader "Gradient norm" [ref=e178]
+                              - columnheader "Δstep" [ref=e179]
+                              - columnheader "Source" [ref=e180]
+                          - rowgroup "Original observations for kazakh-sft-005" [ref=e181]:
+                            - row [ref=e182]:
+                              - rowheader "kazakh-sft-005" [ref=e183]:
+                                - strong [ref=e186]: kazakh-sft-005
+                              - cell "99" [ref=e187]
+                              - cell "1.838472" [ref=e188]
+                              - cell "2.37577E-8" [ref=e189]
+                              - cell "0.239146" [ref=e190]
+                              - cell "0.007519" [ref=e191]
+                              - cell [ref=e192]:
+                                - button "Pin row 99" [ref=e193] [cursor=pointer]: "Pin #99"
+                          - rowgroup "Original observations for kazakh-sft-009" [ref=e194]:
+                            - row [ref=e195]:
+                              - rowheader "kazakh-sft-009" [ref=e196]:
+                                - strong [ref=e199]: kazakh-sft-009
+                              - cell "99" [ref=e200]
+                              - cell "1.812318" [ref=e201]
+                              - cell "2.86569E-6" [ref=e202]
+                              - cell "0.213264" [ref=e203]
+                              - cell "0.007519" [ref=e204]
+                              - cell [ref=e205]:
+                                - button "Pin row 99" [ref=e206] [cursor=pointer]: "Pin #99"
+                            - row [ref=e207]:
+                              - rowheader "kazakh-sft-009" [ref=e208]:
+                                - strong [ref=e211]: kazakh-sft-009
+                              - cell "99" [ref=e212]
+                              - cell "1.812318" [ref=e213]
+                              - cell "2.86569E-6" [ref=e214]
+                              - cell "0.213264" [ref=e215]
+                              - cell "0.007519" [ref=e216]
+                              - cell [ref=e217]:
+                                - button "Pin row 100" [ref=e218] [cursor=pointer]: "Pin #100"
+                            - row [ref=e219]:
+                              - cell [ref=e220]:
+                                - text: 11 returned observations. First 2 shown.
+                                - link "Inspect full source group" [ref=e221] [cursor=pointer]:
+                                  - /url: /runs/kazakh-sft-009?step=99&revision=soup-1.0.0%3Aduplicates%401%3Aseed%3D1008%3An%3D8192%3Acadence%3D1
+                          - rowgroup "Original observations for kazakh-sft-010" [ref=e222]:
+                            - row [ref=e223]:
+                              - rowheader "kazakh-sft-010" [ref=e224]:
+                                - strong [ref=e227]: kazakh-sft-010
+                              - cell "99" [ref=e228]
+                              - cell "1.843662" [ref=e229]
+                              - cell "2.86569E-6" [ref=e230]
+                              - cell "0.200999" [ref=e231]
+                              - cell "0.007519" [ref=e232]
+                              - cell [ref=e233]:
+                                - button "Pin row 99" [ref=e234] [cursor=pointer]: "Pin #99"
+                          - rowgroup "Original observations for kazakh-sft-001" [ref=e235]:
+                            - row [ref=e236]:
+                              - rowheader "kazakh-sft-001" [ref=e237]:
+                                - strong [ref=e240]: kazakh-sft-001
+                              - cell "99" [ref=e241]
+                              - cell "1.81543" [ref=e242]
+                              - cell "2.86569E-6" [ref=e243]
+                              - cell "0.148749" [ref=e244]
+                              - cell "0.007519" [ref=e245]
+                              - cell [ref=e246]:
+                                - button "Pin row 99" [ref=e247] [cursor=pointer]: "Pin #99"
+                      - paragraph [ref=e248]: Scroll for more rows and metrics. Groups show the first 2 observations.
+            - generic [ref=e249]:
+              - generic [ref=e250]:
+                - generic [ref=e251]:
+                  - heading "Learning rate" [level=2] [ref=e252]
+                  - paragraph [ref=e253]: Recorded step · Linear scale · Original values
+                - generic [ref=e254]: 12 displayed
+              - figure "Highlight kazakh-sft-005 2.35177E-8 – 2.39976E-8 Highlight kazakh-sft-009 2.83709E-6 – 2.86569E-6 Highlight kazakh-sft-010 2.83709E-6 – 2.92286E-6 Highlight kazakh-sft-001 2.83709E-6 – 2.89427E-6 Tap the chart for recorded values. Use Adjust chart range to zoom; swipe vertically to scroll." [ref=e255]:
+                - generic [ref=e265]:
+                  - generic [ref=e266]:
+                    - generic [ref=e267]:
+                      - button "Highlight kazakh-sft-005" [ref=e268] [cursor=pointer]: kazakh-sft-005
+                      - generic [ref=e270]: 2.35177E-8 – 2.39976E-8
+                    - generic [ref=e271]:
+                      - button "Highlight kazakh-sft-009" [ref=e272] [cursor=pointer]: kazakh-sft-009
+                      - generic [ref=e274]: 2.83709E-6 – 2.86569E-6
+                    - generic [ref=e275]:
+                      - button "Highlight kazakh-sft-010" [ref=e276] [cursor=pointer]: kazakh-sft-010
+                      - generic [ref=e278]: 2.83709E-6 – 2.92286E-6
+                    - generic [ref=e279]:
+                      - button "Highlight kazakh-sft-001" [ref=e280] [cursor=pointer]: kazakh-sft-001
+                      - generic [ref=e282]: 2.83709E-6 – 2.89427E-6
+                  - paragraph [ref=e283]: Tap the chart for recorded values. Use Adjust chart range to zoom; swipe vertically to scroll.
+            - generic [ref=e284]:
+              - generic [ref=e285]:
+                - generic [ref=e286]:
+                  - heading "Gradient norm" [level=2] [ref=e287]
+                  - paragraph [ref=e288]: Recorded step · Linear scale · Original values
+                - generic [ref=e289]: 12 displayed
+              - figure "Highlight kazakh-sft-005 0.203161 – 0.239146 Highlight kazakh-sft-009 0.213264 – 0.237536 Highlight kazakh-sft-010 0.190018 – 0.233712 Highlight kazakh-sft-001 0.141555 – 0.21611 Tap the chart for recorded values. Use Adjust chart range to zoom; swipe vertically to scroll." [ref=e290]:
+                - generic [ref=e300]:
+                  - generic [ref=e301]:
+                    - generic [ref=e302]:
+                      - button "Highlight kazakh-sft-005" [ref=e303] [cursor=pointer]: kazakh-sft-005
+                      - generic [ref=e305]: 0.203161 – 0.239146
+                    - generic [ref=e306]:
+                      - button "Highlight kazakh-sft-009" [ref=e307] [cursor=pointer]: kazakh-sft-009
+                      - generic [ref=e309]: 0.213264 – 0.237536
+                    - generic [ref=e310]:
+                      - button "Highlight kazakh-sft-010" [ref=e311] [cursor=pointer]: kazakh-sft-010
+                      - generic [ref=e313]: 0.190018 – 0.233712
+                    - generic [ref=e314]:
+                      - button "Highlight kazakh-sft-001" [ref=e315] [cursor=pointer]: kazakh-sft-001
+                      - generic [ref=e317]: 0.141555 – 0.21611
+                  - paragraph [ref=e318]: Tap the chart for recorded values. Use Adjust chart range to zoom; swipe vertically to scroll.
+          - group [ref=e319]:
+            - strong [ref=e322] [cursor=pointer]: Whole-run summaries
+            - option "Loss" [selected]
+            - option "Learning rate"
+            - option "Gradient norm"
+```

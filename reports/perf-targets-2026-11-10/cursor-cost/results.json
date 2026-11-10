@@ -1,0 +1,295 @@
+{
+  "scope": "Diagnostic cost isolation, not acceptance: settled four-run Compare, main CPU4, Worker unthrottled, 30 moves after2 warmups. Muted mode intentionally suppresses native hover crosshair only and is NOT a shippable implementation; drag handlers still run. Does not change the app source or production benchmark.",
+  "browser": "158.0.8127.18",
+  "results": [
+    {
+      "mode": "native",
+      "samples": [
+        {
+          "inputToFrame": 41.399999998509884,
+          "requestToFrame": 40
+        },
+        {
+          "inputToFrame": 38.09999999962747,
+          "requestToFrame": 36.59999999962747
+        },
+        {
+          "inputToFrame": 24.90000000037253,
+          "requestToFrame": 23.40000000037253
+        },
+        {
+          "inputToFrame": 24.90000000037253,
+          "requestToFrame": 23.699999999254942
+        },
+        {
+          "inputToFrame": 41.90000000037253,
+          "requestToFrame": 40.90000000037253
+        },
+        {
+          "inputToFrame": 31.5,
+          "requestToFrame": 30.09999999962747
+        },
+        {
+          "inputToFrame": 40.5,
+          "requestToFrame": 39.20000000111759
+        },
+        {
+          "inputToFrame": 26.899999998509884,
+          "requestToFrame": 26.59999999962747
+        },
+        {
+          "inputToFrame": 38,
+          "requestToFrame": 36.59999999962747
+        },
+        {
+          "inputToFrame": 38.80000000074506,
+          "requestToFrame": 37.40000000037253
+        },
+        {
+          "inputToFrame": 24.699999999254942,
+          "requestToFrame": 23.40000000037253
+        },
+        {
+          "inputToFrame": 42.600000001490116,
+          "requestToFrame": 41.30000000074506
+        },
+        {
+          "inputToFrame": 38.69999999925494,
+          "requestToFrame": 37.59999999962747
+        },
+        {
+          "inputToFrame": 28.299999998882413,
+          "requestToFrame": 27.09999999962747
+        },
+        {
+          "inputToFrame": 43.09999999962747,
+          "requestToFrame": 34.30000000074506
+        },
+        {
+          "inputToFrame": 42.40000000037253,
+          "requestToFrame": 41.09999999962747
+        },
+        {
+          "inputToFrame": 30.300000000745058,
+          "requestToFrame": 28.90000000037253
+        },
+        {
+          "inputToFrame": 21.300000000745058,
+          "requestToFrame": 20.09999999962747
+        },
+        {
+          "inputToFrame": 23.300000000745058,
+          "requestToFrame": 22.200000001117587
+        },
+        {
+          "inputToFrame": 24.40000000037253,
+          "requestToFrame": 23.5
+        },
+        {
+          "inputToFrame": 22.199999999254942,
+          "requestToFrame": 20.5
+        },
+        {
+          "inputToFrame": 24,
+          "requestToFrame": 22.800000000745058
+        },
+        {
+          "inputToFrame": 25.100000001490116,
+          "requestToFrame": 24
+        },
+        {
+          "inputToFrame": 35.79999999888241,
+          "requestToFrame": 34.09999999962747
+        },
+        {
+          "inputToFrame": 22.299999998882413,
+          "requestToFrame": 21.59999999962747
+        },
+        {
+          "inputToFrame": 29.09999999962747,
+          "requestToFrame": 28.199999999254942
+        },
+        {
+          "inputToFrame": 25.899999998509884,
+          "requestToFrame": 25.09999999962747
+        },
+        {
+          "inputToFrame": 35.19999999925494,
+          "requestToFrame": 33.90000000037253
+        },
+        {
+          "inputToFrame": 30.800000000745058,
+          "requestToFrame": 29.5
+        },
+        {
+          "inputToFrame": 31.5,
+          "requestToFrame": 30.300000000745058
+        }
+      ],
+      "nativeHandlerMs": [
+        2.299999998882413,
+        0.599999999627471,
+        0.6000000014901161,
+        0.5,
+        0.40000000037252903,
+        0.3999999985098839,
+        0.2000000011175871,
+        0,
+        0.599999999627471,
+        0.30000000074505806,
+        0.2999999988824129,
+        0.09999999962747097,
+        0.30000000074505806,
+        1.099999999627471,
+        0.2999999988824129,
+        0.2000000011175871,
+        0.2999999988824129,
+        0.19999999925494194,
+        0.30000000074505806,
+        0.2000000011175871,
+        0.2000000011175871,
+        0.30000000074505806,
+        0.2000000011175871,
+        0.3999999985098839,
+        0.40000000037252903,
+        0.2000000011175871,
+        0.30000000074505806,
+        0.5,
+        0.19999999925494194,
+        0.09999999962747097,
+        0.19999999925494194,
+        0.5
+      ],
+      "nativeHandlerP95": 1.099999999627471,
+      "inputToFrameP95": 42.600000001490116
+    },
+    {
+      "mode": "muted",
+      "samples": [
+        {
+          "inputToFrame": 43,
+          "requestToFrame": 39.5
+        },
+        {
+          "inputToFrame": 40.29999999888241,
+          "requestToFrame": 39
+        },
+        {
+          "inputToFrame": 41.5,
+          "requestToFrame": 40.09999999962747
+        },
+        {
+          "inputToFrame": 25.799999998882413,
+          "requestToFrame": 23.699999999254942
+        },
+        {
+          "inputToFrame": 28.09999999962747,
+          "requestToFrame": 27.399999998509884
+        },
+        {
+          "inputToFrame": 31.09999999962747,
+          "requestToFrame": 29.700000001117587
+        },
+        {
+          "inputToFrame": 26.90000000037253,
+          "requestToFrame": 25.799999998882413
+        },
+        {
+          "inputToFrame": 23.199999999254942,
+          "requestToFrame": 22.199999999254942
+        },
+        {
+          "inputToFrame": 23.799999998882413,
+          "requestToFrame": 23.199999999254942
+        },
+        {
+          "inputToFrame": 26.800000000745058,
+          "requestToFrame": 25.800000000745058
+        },
+        {
+          "inputToFrame": 26.799999998882413,
+          "requestToFrame": 25.90000000037253
+        },
+        {
+          "inputToFrame": 25.59999999962747,
+          "requestToFrame": 24.799999998882413
+        },
+        {
+          "inputToFrame": 29.5,
+          "requestToFrame": 28.199999999254942
+        },
+        {
+          "inputToFrame": 32.19999999925494,
+          "requestToFrame": 31.09999999962747
+        },
+        {
+          "inputToFrame": 42.899999998509884,
+          "requestToFrame": 41.69999999925494
+        },
+        {
+          "inputToFrame": 33.20000000111759,
+          "requestToFrame": 32.09999999962747
+        },
+        {
+          "inputToFrame": 34,
+          "requestToFrame": 32.69999999925494
+        },
+        {
+          "inputToFrame": 27.699999999254942,
+          "requestToFrame": 26.09999999962747
+        },
+        {
+          "inputToFrame": 32.09999999962747,
+          "requestToFrame": 30.90000000037253
+        },
+        {
+          "inputToFrame": 28.800000000745058,
+          "requestToFrame": 27.40000000037253
+        },
+        {
+          "inputToFrame": 34.80000000074506,
+          "requestToFrame": 33.70000000111759
+        },
+        {
+          "inputToFrame": 26.40000000037253,
+          "requestToFrame": 24.90000000037253
+        },
+        {
+          "inputToFrame": 38.899999998509884,
+          "requestToFrame": 37.79999999888241
+        },
+        {
+          "inputToFrame": 36.90000000037253,
+          "requestToFrame": 35.59999999962747
+        },
+        {
+          "inputToFrame": 24.40000000037253,
+          "requestToFrame": 22.59999999962747
+        },
+        {
+          "inputToFrame": 29.09999999962747,
+          "requestToFrame": 28.200000001117587
+        },
+        {
+          "inputToFrame": 32.19999999925494,
+          "requestToFrame": 30.800000000745058
+        },
+        {
+          "inputToFrame": 23.5,
+          "requestToFrame": 22.300000000745058
+        },
+        {
+          "inputToFrame": 34.80000000074506,
+          "requestToFrame": 33.69999999925494
+        },
+        {
+          "inputToFrame": 25.09999999962747,
+          "requestToFrame": 24
+        }
+      ],
+      "nativeHandlerMs": [],
+      "nativeHandlerP95": null,
+      "inputToFrameP95": 42.899999998509884
+    }
+  ]
+}

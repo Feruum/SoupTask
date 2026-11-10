@@ -1,0 +1,80 @@
+
+ RUN  v5.1.0 C:/Users/Ferumm/projects/soupTask
+
+ ❯ src/worker/controller.test.ts (8 tests | 3 failed) 21ms
+   ❯ controlled asynchronous workspace (8)
+     × bounds posts to one running and one latest view; rejects stale success and failure 12ms
+     ✓ protects same-revision A -> B -> A and every success/error identity 1ms
+     × stale hover never overwrites newer inspection and cannot displace a pending view 1ms
+     ✓ ignores replies and errors after disposal even when transport ignores abort 1ms
+     ✓ refuses a busy explicit inspection without silently evicting it, and permits retry 1ms
+     ✓ returns an operation-correlated error and frees its slot if postMessage throws 2ms
+     ✓ refuses an issue query behind an in-flight zoom instead of accepting and later losing it 1ms
+     × resize supersedes zoom and a duplicate reply cannot release a newer slot 1ms
+
+ Test Files  1 failed (1)
+      Tests  3 failed | 5 passed (8)
+   Start at  18:13:24
+   Duration  358ms (import 31%, tests 28%, transform 22%, worker 19%)
+
+JSON report written to C:/Users/Ferumm/projects/soupTask/reports/async-negative/2026-11-10T13-13-23-470Z/results.json
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 3 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/worker/controller.test.ts > controlled asynchronous workspace > bounds posts to one running and one latest view; rejects stale success and failure
+AssertionError: expected [ { identity: { …(3) }, …(7) } ] to have a length of +0 but got 1
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ src/worker/controller.test.ts:18:22
+     16|   expect(h.sent).toHaveLength(1); expect(h.client.queuedCount).toBe(2)
+     17|   h.client.receive(h.reply(old, true))
+     18|   expect(h.accepted).toHaveLength(0); expect(h.sent).toHaveLength(2); …
+       |                      ^
+     19|   expect(h.sent[1]).toMatchObject({ range: { min: 100 } })
+     20|   h.client.receive(h.reply(h.sent[1])); expect(h.accepted).toHaveLengt…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/3]⎯
+
+ FAIL  src/worker/controller.test.ts > controlled asynchronous workspace > stale hover never overwrites newer inspection and cannot displace a pending view
+AssertionError: expected [ { identity: { …(3) }, …(6) } ] to have a length of +0 but got 1
+
+- Expected
++ Received
+
+- 0
++ 1
+
+ ❯ src/worker/controller.test.ts:33:54
+     31|   const h = harness(); h.client.request({ kind: 'hover', step: 10 }); …
+     32|   h.client.request(view(0)); h.client.request({ kind: 'hover', step: 2…
+     33|   h.client.receive(h.reply(old)); expect(h.accepted).toHaveLength(0)
+       |                                                      ^
+     34|   expect(h.sent[1].kind).toBe('view'); h.client.receive(h.reply(h.sent…
+     35|   h.client.request({ kind: 'hover', step: 30 }); const first = h.sent[…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/3]⎯
+
+ FAIL  src/worker/controller.test.ts > controlled asynchronous workspace > resize supersedes zoom and a duplicate reply cannot release a newer slot
+AssertionError: expected [ { identity: { …(3) }, …(6) }, …(1) ] to have a length of 1 but got 2
+
+- Expected
++ Received
+
+- 1
++ 2
+
+ ❯ src/worker/controller.test.ts:71:60
+     69|   h.client.request({ ...view(1), width: 320 }); h.client.receive(h.rep…
+     70|   h.client.receive(h.reply(old)); expect(h.client.queuedCount).toBe(1)
+     71|   h.client.receive(h.reply(h.sent[1])); expect(h.accepted).toHaveLengt…
+       |                                                            ^
+     72|  })
+     73| })
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/3]⎯
+

@@ -1,0 +1,2880 @@
+{
+  "generatedAt": "2026-11-10T13:49:58.305925+00:00",
+  "dateLocal": "2026-11-10",
+  "timezone": "Asia/Qyzylorda",
+  "scope": "Research compilation from existing evidence and primary sources; no new application test, performance run, deployment or Git mutation. Historical and final outputs remain distinct.",
+  "buildMetadata": {
+    "git": {
+      "commit": "41ae67f48be6364f719ba38ad71d694c8ae484fe",
+      "trackedApplicationChanges": []
+    },
+    "sourceHash": "68b68de6f774bf3624dffc7257711bbd6655d3dc7875f7fbdfb195959a8ae5aa",
+    "buildHash": "5a3fe0fd9d66886ff8d35a2141aaeb31c28a7f153c2fcc4142d80971b9ae735a",
+    "versions": {
+      "@fontsource-variable/geist": "5.3.0",
+      "@fontsource-variable/inter": "5.3.0",
+      "lucide-react": "1.70.0",
+      "motion": "14.11.1",
+      "react": "19.3.1",
+      "react-dom": "19.3.1",
+      "react-router-dom": "7.18.5",
+      "uplot": "1.6.32",
+      "@axe-core/playwright": "4.14.0",
+      "@playwright/test": "1.65.0",
+      "@tailwindcss/vite": "4.3.5",
+      "@types/node": "24.19.2",
+      "@types/react": "19.3.0",
+      "@types/react-dom": "19.3.0",
+      "@vitejs/plugin-react": "6.3.0",
+      "oxlint": "1.93.0",
+      "tailwindcss": "4.3.5",
+      "typescript": "7.0.2",
+      "vite": "8.3.7",
+      "vitest": "5.1.0"
+    }
+  },
+  "comparison": {
+    "verified": true,
+    "generatedAt": "2026-11-10T13:29:01.635Z",
+    "baselineGitCommit": "9206963ddca22dae4ee0086bf820edffd525a848",
+    "baselineScope": "Clean isolated build of the previous committed source using the same installed dependencies and current harness, rather than pretending it is the historical deployed asset build.",
+    "inputs": {
+      "before": "reports/perf-targets-2026-11-10/before-trace-performance/results.json",
+      "after": "reports/perf-targets-2026-11-10/one-row-performance/results.json",
+      "confirmation": "reports/perf-targets-2026-11-10/final-trace-performance/results.json",
+      "withoutRecording": "reports/perf-targets-2026-11-10/final-latency-performance/results.json"
+    },
+    "harnessHash": "90ffa71af0da6073fbbba66f94c97af113ed1f85a89b4e3e523d8bcc99cad7bd",
+    "sourceHashes": {
+      "before": "696ec0442bd87a23d41b15b627c04baee6ad5c310ee1fc4a288ac069e08dd39d",
+      "after": "6505f89edb981ae63759ba1b564cba5422c6c6ec081f04f4b56f7adf613e9d38",
+      "confirmation": "6505f89edb981ae63759ba1b564cba5422c6c6ec081f04f4b56f7adf613e9d38",
+      "withoutRecording": "6505f89edb981ae63759ba1b564cba5422c6c6ec081f04f4b56f7adf613e9d38"
+    },
+    "environment": {
+      "traceMode": "full",
+      "node": "v24.22.1",
+      "browser": "158.0.8127.18",
+      "os": "win32",
+      "release": "10.0.26200",
+      "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+      "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+      "viewport": "1440x900",
+      "dpr": 1,
+      "cpuRate": 4,
+      "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+      "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+      "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+      "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+      "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+      "gc": "No forced GC"
+    },
+    "values": {
+      "before": {
+        "cold": 2493.6176000000005,
+        "zoom": 149.60000000149012,
+        "hover": 88.5,
+        "compareZoom": 214.69999999925494,
+        "compareHover": 107.5
+      },
+      "after": {
+        "cold": 2279.8653000000004,
+        "zoom": 106.80000000074506,
+        "hover": 40.600000001490116,
+        "compareZoom": 123.19999999925494,
+        "compareHover": 48.600000001490116
+      },
+      "confirmation": {
+        "cold": 2531.9053000000004,
+        "zoom": 114.79999999701977,
+        "hover": 35.5,
+        "compareZoom": 131.40000000223517,
+        "compareHover": 40
+      },
+      "withoutRecording": {
+        "cold": 2518.8519,
+        "zoom": 113.30000000074506,
+        "hover": 37,
+        "compareZoom": 107.60000000149012,
+        "compareHover": 40.69999999925494
+      }
+    },
+    "targets": {
+      "cold": {
+        "limitMs": 3000,
+        "actualMs": 2531.9053000000004,
+        "scope": "Worst of two separately reported nearest-rank p95 results; samples are not pooled"
+      },
+      "zoom": {
+        "limitMs": 200,
+        "actualMs": 114.79999999701977,
+        "scope": "Worst of two separately reported nearest-rank p95 results; samples are not pooled"
+      },
+      "hover": {
+        "limitMs": 50,
+        "actualMs": 40.600000001490116,
+        "scope": "Worst of two separately reported nearest-rank p95 results; samples are not pooled"
+      },
+      "compareZoom": {
+        "limitMs": 200,
+        "actualMs": 131.40000000223517,
+        "scope": "Worst of two separately reported nearest-rank p95 results; samples are not pooled"
+      },
+      "compareHover": {
+        "limitMs": 50,
+        "actualMs": 48.600000001490116,
+        "scope": "Worst of two separately reported nearest-rank p95 results; samples are not pooled"
+      }
+    },
+    "engineeringTargetMisses": [],
+    "scope": "Full Chrome recording including frame screenshots: CPU4 main renderer, Worker throttling unsupported. Same5 cold contexts and30 range/hover pairs per workspace, original pointer timestamp and committed source DOM before two RAF callbacks. Targets use the worse of two full-recording p95 results; samples are never pooled. A separate no-recording result uses exactly the same application source. Sequential shared-machine runs are not a randomized causal study."
+  },
+  "unit": {
+    "success": true,
+    "numTotalTests": 106,
+    "numPassedTests": 106,
+    "numFailedTests": 0
+  },
+  "browser": {
+    "stats": {
+      "startTime": "2026-11-10T13:05:48.275Z",
+      "duration": 169702.947,
+      "expected": 113,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "metadata": {
+      "sourceCommit": "41ae67f48be6364f719ba38ad71d694c8ae484fe",
+      "sourceHash": "68b68de6f774bf3624dffc7257711bbd6655d3dc7875f7fbdfb195959a8ae5aa",
+      "buildHash": "5a3fe0fd9d66886ff8d35a2141aaeb31c28a7f153c2fcc4142d80971b9ae735a",
+      "actualWorkers": 2
+    }
+  },
+  "axe": {
+    "audits": 30,
+    "violations": 0,
+    "incompleteCounts": {
+      "color-contrast": 528
+    }
+  },
+  "contrast": {
+    "original": {
+      "occurrences": 516,
+      "dispositions": {
+        "verified-text": 516
+      },
+      "scope": "Exact per-occurrence static replay with original and text-masked screenshots; computed foreground/ancestor opacity and worst actual background pixel contrast. Hidden/clipped cases retained with geometry. Not universal WCAG or human review certification."
+    },
+    "final": {
+      "occurrences": 528,
+      "dispositions": {
+        "verified-text": 528
+      },
+      "scope": "Exact per-occurrence static replay with original and text-masked screenshots; computed foreground/ancestor opacity and worst actual background pixel contrast. Hidden/clipped cases retained with geometry. Not universal WCAG or human review certification."
+    },
+    "minimumVerifiedContrast": 5.096469184131656
+  },
+  "memory": {
+    "scope": "Windows OS process counters from the page renderer and every live dedicated Worker, each associated with a PID by its own User Timing marker in the same Chrome trace. Tab-owned private committed bytes/working set deduplicate those verified PIDs, including native allocations, not JS heap alone. SystemInfo-reported browser-process subtotals include shared browser/GPU/utility processes, are not exhaustive browser totals, and are not assigned wholly to the tab. Working-set sums may double-count shared pages. A process counter is not universal total tab/GPU memory, and is not a Chrome Task Manager screenshot. One isolated browser with one page, no personal profile; headed/headless configuration is recorded explicitly. Retiring isolates/shared infrastructure are reflected in the separately labelled process-subtotal scope. User Timing markers, Windows counters and the dump are sequential, not atomic; counter intervals and marker timestamps are retained.",
+    "environment": {
+      "node": "v24.22.1",
+      "browser": "158.0.8127.18",
+      "os": "win32",
+      "release": "10.0.26200",
+      "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+      "viewport": "1440x900",
+      "dpr": 1,
+      "headed": false,
+      "initialOnly": false,
+      "cpuThrottling": "none: separate memory experiment",
+      "gc": "No forced GC; deterministic:false memory dumps",
+      "buildRoot": "dist",
+      "sampler": "indexed",
+      "buildIndexSha256": "4e97a25fe881a1dc5e76f41fc11d95e4b475e5ee623e72b4f50b946829aa4d6d"
+    },
+    "checkpoints": [
+      {
+        "label": "1M-settled",
+        "privateMiB": 145.87109375,
+        "workingSetMiB": 245.6328125,
+        "rendererPid": 9048,
+        "workerPids": [
+          9048
+        ],
+        "rawBytes": 32000000
+      },
+      {
+        "label": "1M-after-20-SPA-switches",
+        "privateMiB": 319.47265625,
+        "workingSetMiB": 588.7265625,
+        "rendererPid": 9048,
+        "workerPids": [
+          9048
+        ],
+        "rawBytes": 32000000
+      },
+      {
+        "label": "Compare-1M-plus-three",
+        "privateMiB": 295.7578125,
+        "workingSetMiB": 448.28515625,
+        "rendererPid": 9048,
+        "workerPids": [
+          9048
+        ],
+        "rawBytes": 32786432
+      }
+    ]
+  },
+  "runtimeLifecycle": [
+    {
+      "transition": 1,
+      "runId": "kazakh-sft-001",
+      "observedBeforeSettlement": 2,
+      "settleMs": 258,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 2,
+        "members": [
+          "kazakh-sft-001"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 262144,
+        "allocationBytes": 628228,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-001": {
+            "generationMs": 2.399999998509884,
+            "normalizationMs": 8.199999999254942,
+            "indexBuildMs": 3.600000001490116,
+            "indexBufferBytes": 13824
+          }
+        },
+        "renderBufferBytes": 303457,
+        "hoverCacheTargets": 1501,
+        "hoverCacheRows": 1440
+      }
+    },
+    {
+      "transition": 2,
+      "runId": "kazakh-sft-005",
+      "observedBeforeSettlement": 1,
+      "settleMs": 8,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 4,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 1,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 24.299999997019768,
+            "normalizationMs": 235,
+            "indexBuildMs": 186.60000000149012,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 391902,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    },
+    {
+      "transition": 3,
+      "runId": "kazakh-sft-001",
+      "observedBeforeSettlement": 2,
+      "settleMs": 281,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 6,
+        "members": [
+          "kazakh-sft-001"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 262144,
+        "allocationBytes": 628228,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-001": {
+            "generationMs": 2.300000000745058,
+            "normalizationMs": 8.399999998509884,
+            "indexBuildMs": 4.099999997764826,
+            "indexBufferBytes": 13824
+          }
+        },
+        "renderBufferBytes": 303457,
+        "hoverCacheTargets": 1501,
+        "hoverCacheRows": 1440
+      }
+    },
+    {
+      "transition": 4,
+      "runId": "kazakh-sft-005",
+      "observedBeforeSettlement": 1,
+      "settleMs": 7,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 8,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 1,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 25.900000002235174,
+            "normalizationMs": 234.89999999850988,
+            "indexBuildMs": 202.39999999850988,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 391902,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    },
+    {
+      "transition": 5,
+      "runId": "kazakh-sft-001",
+      "observedBeforeSettlement": 2,
+      "settleMs": 284,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 10,
+        "members": [
+          "kazakh-sft-001"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 262144,
+        "allocationBytes": 628228,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-001": {
+            "generationMs": 2,
+            "normalizationMs": 8.100000001490116,
+            "indexBuildMs": 3.800000000745058,
+            "indexBufferBytes": 13824
+          }
+        },
+        "renderBufferBytes": 303457,
+        "hoverCacheTargets": 1501,
+        "hoverCacheRows": 1440
+      }
+    },
+    {
+      "transition": 6,
+      "runId": "kazakh-sft-005",
+      "observedBeforeSettlement": 1,
+      "settleMs": 7,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 12,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 1,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 20.899999998509884,
+            "normalizationMs": 230.20000000298023,
+            "indexBuildMs": 196,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 391902,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    },
+    {
+      "transition": 7,
+      "runId": "kazakh-sft-001",
+      "observedBeforeSettlement": 2,
+      "settleMs": 290,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 14,
+        "members": [
+          "kazakh-sft-001"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 262144,
+        "allocationBytes": 628228,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-001": {
+            "generationMs": 1.7999999970197678,
+            "normalizationMs": 9.100000001490116,
+            "indexBuildMs": 3.899999998509884,
+            "indexBufferBytes": 13824
+          }
+        },
+        "renderBufferBytes": 303457,
+        "hoverCacheTargets": 1501,
+        "hoverCacheRows": 1440
+      }
+    },
+    {
+      "transition": 8,
+      "runId": "kazakh-sft-005",
+      "observedBeforeSettlement": 1,
+      "settleMs": 7,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 16,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 1,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 25.199999999254942,
+            "normalizationMs": 225.59999999776483,
+            "indexBuildMs": 192.19999999925494,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 391902,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    },
+    {
+      "transition": 9,
+      "runId": "kazakh-sft-001",
+      "observedBeforeSettlement": 2,
+      "settleMs": 282,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 18,
+        "members": [
+          "kazakh-sft-001"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 262144,
+        "allocationBytes": 628228,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-001": {
+            "generationMs": 2.100000001490116,
+            "normalizationMs": 10,
+            "indexBuildMs": 3.899999998509884,
+            "indexBufferBytes": 13824
+          }
+        },
+        "renderBufferBytes": 303457,
+        "hoverCacheTargets": 1501,
+        "hoverCacheRows": 1440
+      }
+    },
+    {
+      "transition": 10,
+      "runId": "kazakh-sft-005",
+      "observedBeforeSettlement": 1,
+      "settleMs": 7,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 20,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 1,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 20.899999998509884,
+            "normalizationMs": 237.80000000074506,
+            "indexBuildMs": 179.90000000223517,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 391902,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    },
+    {
+      "transition": 11,
+      "runId": "kazakh-sft-001",
+      "observedBeforeSettlement": 2,
+      "settleMs": 232,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 22,
+        "members": [
+          "kazakh-sft-001"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 262144,
+        "allocationBytes": 628228,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-001": {
+            "generationMs": 2.199999999254942,
+            "normalizationMs": 9.199999999254942,
+            "indexBuildMs": 4,
+            "indexBufferBytes": 13824
+          }
+        },
+        "renderBufferBytes": 303457,
+        "hoverCacheTargets": 1501,
+        "hoverCacheRows": 1440
+      }
+    },
+    {
+      "transition": 12,
+      "runId": "kazakh-sft-005",
+      "observedBeforeSettlement": 1,
+      "settleMs": 8,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 24,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 1,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 22.199999999254942,
+            "normalizationMs": 214.10000000149012,
+            "indexBuildMs": 181.80000000074506,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 391902,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    },
+    {
+      "transition": 13,
+      "runId": "kazakh-sft-001",
+      "observedBeforeSettlement": 2,
+      "settleMs": 290,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 26,
+        "members": [
+          "kazakh-sft-001"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 262144,
+        "allocationBytes": 628228,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-001": {
+            "generationMs": 2.2000000029802322,
+            "normalizationMs": 10,
+            "indexBuildMs": 2.800000000745058,
+            "indexBufferBytes": 13824
+          }
+        },
+        "renderBufferBytes": 303457,
+        "hoverCacheTargets": 1501,
+        "hoverCacheRows": 1440
+      }
+    },
+    {
+      "transition": 14,
+      "runId": "kazakh-sft-005",
+      "observedBeforeSettlement": 1,
+      "settleMs": 7,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 28,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 1,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 24.099999997764826,
+            "normalizationMs": 223.20000000298023,
+            "indexBuildMs": 183.39999999850988,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 391902,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    },
+    {
+      "transition": 15,
+      "runId": "kazakh-sft-001",
+      "observedBeforeSettlement": 2,
+      "settleMs": 260,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 30,
+        "members": [
+          "kazakh-sft-001"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 262144,
+        "allocationBytes": 628228,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-001": {
+            "generationMs": 2.099999997764826,
+            "normalizationMs": 10.300000000745058,
+            "indexBuildMs": 4.200000002980232,
+            "indexBufferBytes": 13824
+          }
+        },
+        "renderBufferBytes": 303457,
+        "hoverCacheTargets": 1501,
+        "hoverCacheRows": 1440
+      }
+    },
+    {
+      "transition": 16,
+      "runId": "kazakh-sft-005",
+      "observedBeforeSettlement": 1,
+      "settleMs": 7,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 32,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 1,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 23.400000002235174,
+            "normalizationMs": 224.69999999925494,
+            "indexBuildMs": 176.69999999925494,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 391902,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    },
+    {
+      "transition": 17,
+      "runId": "kazakh-sft-001",
+      "observedBeforeSettlement": 2,
+      "settleMs": 300,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 34,
+        "members": [
+          "kazakh-sft-001"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 262144,
+        "allocationBytes": 628228,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-001": {
+            "generationMs": 1.8999999985098839,
+            "normalizationMs": 7.700000002980232,
+            "indexBuildMs": 4.300000000745058,
+            "indexBufferBytes": 13824
+          }
+        },
+        "renderBufferBytes": 303457,
+        "hoverCacheTargets": 1501,
+        "hoverCacheRows": 1440
+      }
+    },
+    {
+      "transition": 18,
+      "runId": "kazakh-sft-005",
+      "observedBeforeSettlement": 1,
+      "settleMs": 8,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 36,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 1,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 23.100000001490116,
+            "normalizationMs": 218.89999999850988,
+            "indexBuildMs": 206.69999999925494,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 391902,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    },
+    {
+      "transition": 19,
+      "runId": "kazakh-sft-001",
+      "observedBeforeSettlement": 2,
+      "settleMs": 289,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 38,
+        "members": [
+          "kazakh-sft-001"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 262144,
+        "allocationBytes": 628228,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-001": {
+            "generationMs": 2,
+            "normalizationMs": 8.600000001490116,
+            "indexBuildMs": 3.800000000745058,
+            "indexBufferBytes": 13824
+          }
+        },
+        "renderBufferBytes": 303457,
+        "hoverCacheTargets": 1501,
+        "hoverCacheRows": 1440
+      }
+    },
+    {
+      "transition": 20,
+      "runId": "kazakh-sft-005",
+      "observedBeforeSettlement": 1,
+      "settleMs": 6,
+      "liveWorkers": 1,
+      "charts": 3,
+      "workspace": {
+        "workspaceEpoch": 40,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 1,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 23.599999997764826,
+            "normalizationMs": 224.40000000223517,
+            "indexBuildMs": 197.39999999850988,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 391902,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    },
+    {
+      "contextClosed": true,
+      "liveWorkers": 0
+    }
+  ],
+  "canvas": {
+    "scope": "Same actual source-coordinate Canvas pixel assertion on correct and suppressed-drawing production builds. Raw subprocess output retained.",
+    "results": [
+      {
+        "mode": "normal",
+        "exitCode": 0,
+        "signal": null,
+        "expectedExit": 0,
+        "accepted": true,
+        "report": "reports/perf-targets-2026-11-10/final-canvas/normal.json"
+      },
+      {
+        "mode": "suppress",
+        "exitCode": 1,
+        "signal": null,
+        "expectedExit": 1,
+        "accepted": true,
+        "report": "reports/perf-targets-2026-11-10/final-canvas/suppress.json"
+      }
+    ]
+  },
+  "lighthouse": {
+    "scope": "Lighthouse desktop preset, its own simulation settings; separate from CPU4 before/after benchmark",
+    "sourceHash": "68b68de6f774bf3624dffc7257711bbd6655d3dc7875f7fbdfb195959a8ae5aa",
+    "buildHash": "5a3fe0fd9d66886ff8d35a2141aaeb31c28a7f153c2fcc4142d80971b9ae735a",
+    "results": [
+      {
+        "name": "dashboard",
+        "url": "http://127.0.0.1:4183/dashboard",
+        "fetchTime": "2026-11-10T13:29:10.418Z",
+        "categories": {
+          "performance": 0.94,
+          "accessibility": 1,
+          "best-practices": 1
+        },
+        "runtimeError": null
+      },
+      {
+        "name": "runs",
+        "url": "http://127.0.0.1:4183/runs",
+        "fetchTime": "2026-11-10T13:29:25.046Z",
+        "categories": {
+          "performance": 0.97,
+          "accessibility": 1,
+          "best-practices": 1
+        },
+        "runtimeError": null
+      },
+      {
+        "name": "run-detail",
+        "url": "http://127.0.0.1:4183/runs/kazakh-sft-005",
+        "fetchTime": "2026-11-10T13:29:39.751Z",
+        "categories": {
+          "performance": 0.97,
+          "accessibility": 1,
+          "best-practices": 1
+        },
+        "runtimeError": null
+      },
+      {
+        "name": "compare",
+        "url": "http://127.0.0.1:4183/compare?runs=kazakh-sft-005,kazakh-sft-006",
+        "fetchTime": "2026-11-10T13:29:55.031Z",
+        "categories": {
+          "performance": 0.95,
+          "accessibility": 1,
+          "best-practices": 1
+        },
+        "runtimeError": null
+      },
+      {
+        "name": "quality",
+        "url": "http://127.0.0.1:4183/data-quality",
+        "fetchTime": "2026-11-10T13:30:09.661Z",
+        "categories": {
+          "performance": 0.98,
+          "accessibility": 1,
+          "best-practices": 1
+        },
+        "runtimeError": null
+      }
+    ]
+  },
+  "performanceHistory": [
+    {
+      "name": "before-latency-performance",
+      "path": "reports/perf-targets-2026-11-10/before-latency-performance/results.json",
+      "sourceHash": "696ec0442bd87a23d41b15b627c04baee6ad5c310ee1fc4a288ac069e08dd39d",
+      "sourceUnchanged": true,
+      "traceMode": "off",
+      "values": {
+        "cold": 2960.0832,
+        "zoom": 181.90000000037253,
+        "hover": 86.59999999962747,
+        "compareZoom": 230.19999999925494,
+        "compareHover": 115.59999999962747
+      },
+      "environment": {
+        "traceMode": "off",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "before-trace-performance",
+      "path": "reports/perf-targets-2026-11-10/before-trace-performance/results.json",
+      "sourceHash": "696ec0442bd87a23d41b15b627c04baee6ad5c310ee1fc4a288ac069e08dd39d",
+      "sourceUnchanged": true,
+      "traceMode": "full",
+      "values": {
+        "cold": 2493.6176000000005,
+        "zoom": 149.60000000149012,
+        "hover": 88.5,
+        "compareZoom": 214.69999999925494,
+        "compareHover": 107.5
+      },
+      "environment": {
+        "traceMode": "full",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "cached-aligned-performance",
+      "path": "reports/perf-targets-2026-11-10/cached-aligned-performance/results.json",
+      "sourceHash": "4daa664e718f2dee358625c9227a734877c22bd4b6bf960bc3d2723919b224dc",
+      "sourceUnchanged": true,
+      "traceMode": "full (historical default)",
+      "values": {
+        "cold": 3039.7992000000004,
+        "zoom": 211.1000000005588,
+        "hover": 64.90000000037253,
+        "compareZoom": 202.70000000018626,
+        "compareHover": 71.29999999981374
+      },
+      "environment": {
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "confirmation-latency-performance",
+      "path": "reports/perf-targets-2026-11-10/confirmation-latency-performance/results.json",
+      "sourceHash": "aebdebed1880ecd7a94f817b755c86417c3ae2e1698a77532435d4537b4b5a52",
+      "sourceUnchanged": true,
+      "traceMode": "off",
+      "values": {
+        "cold": 2829.6809000000003,
+        "zoom": 150.5,
+        "hover": 42.399999998509884,
+        "compareZoom": 129.69999999925494,
+        "compareHover": 41.19999999925494
+      },
+      "environment": {
+        "traceMode": "off",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "contained-performance",
+      "path": "reports/perf-targets-2026-11-10/contained-performance/results.json",
+      "sourceHash": "a82b35610c63ff8146dfe84d3134c5d86f021dbdbcf45af60b682ee4dd05e76a",
+      "sourceUnchanged": true,
+      "traceMode": "full (historical default)",
+      "values": {
+        "cold": 2774.2992000000086,
+        "zoom": 204.80000000074506,
+        "hover": 69.30000000074506,
+        "compareZoom": 249.69999999925494,
+        "compareHover": 90.09999999962747
+      },
+      "environment": {
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "dirty-performance",
+      "path": "reports/perf-targets-2026-11-10/dirty-performance/results.json",
+      "sourceHash": "56013404d92bd8bd29091c1002e16de06baece45302255c6e57a67b3f03618c5",
+      "sourceUnchanged": true,
+      "traceMode": "full (historical default)",
+      "values": {
+        "cold": 3067.9725,
+        "zoom": 240.29999999981374,
+        "hover": 104.10000000009313,
+        "compareZoom": 334.79999999981374,
+        "compareHover": 151.40000000037253
+      },
+      "environment": {
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "final-latency-performance",
+      "path": "reports/perf-targets-2026-11-10/final-latency-performance/results.json",
+      "sourceHash": "6505f89edb981ae63759ba1b564cba5422c6c6ec081f04f4b56f7adf613e9d38",
+      "sourceUnchanged": true,
+      "traceMode": "off",
+      "values": {
+        "cold": 2518.8519,
+        "zoom": 113.30000000074506,
+        "hover": 37,
+        "compareZoom": 107.60000000149012,
+        "compareHover": 40.69999999925494
+      },
+      "environment": {
+        "traceMode": "off",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "final-trace-performance",
+      "path": "reports/perf-targets-2026-11-10/final-trace-performance/results.json",
+      "sourceHash": "6505f89edb981ae63759ba1b564cba5422c6c6ec081f04f4b56f7adf613e9d38",
+      "sourceUnchanged": true,
+      "traceMode": "full",
+      "values": {
+        "cold": 2531.9053000000004,
+        "zoom": 114.79999999701977,
+        "hover": 35.5,
+        "compareZoom": 131.40000000223517,
+        "compareHover": 40
+      },
+      "environment": {
+        "traceMode": "full",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "fixed-columns-latency-performance",
+      "path": "reports/perf-targets-2026-11-10/fixed-columns-latency-performance/results.json",
+      "sourceHash": "1126652bdfc93f3222668adcfa117ee8fc9290b2682c6b2dee4a35d3d6273a7a",
+      "sourceUnchanged": true,
+      "traceMode": "off",
+      "values": {
+        "cold": 2884.1153000000004,
+        "zoom": 149.7999999988824,
+        "hover": 52.20000000111759,
+        "compareZoom": 177.7000000011176,
+        "compareHover": 52.90000000037253
+      },
+      "environment": {
+        "traceMode": "off",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "immediate-latency-performance",
+      "path": "reports/perf-targets-2026-11-10/immediate-latency-performance/results.json",
+      "sourceHash": "aebdebed1880ecd7a94f817b755c86417c3ae2e1698a77532435d4537b4b5a52",
+      "sourceUnchanged": true,
+      "traceMode": "off",
+      "values": {
+        "cold": 2830.9364000000005,
+        "zoom": 142.59999999962747,
+        "hover": 49.80000000074506,
+        "compareZoom": 146,
+        "compareHover": 45.5
+      },
+      "environment": {
+        "traceMode": "off",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "immediate-performance",
+      "path": "reports/perf-targets-2026-11-10/immediate-performance/results.json",
+      "sourceHash": "aebdebed1880ecd7a94f817b755c86417c3ae2e1698a77532435d4537b4b5a52",
+      "sourceUnchanged": true,
+      "traceMode": "full",
+      "values": {
+        "cold": 2501.9732000000004,
+        "zoom": 138.69999999925494,
+        "hover": 52.40000000037253,
+        "compareZoom": 152.5,
+        "compareHover": 55.69999999925494
+      },
+      "environment": {
+        "traceMode": "full",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "imperative-performance",
+      "path": "reports/perf-targets-2026-11-10/imperative-performance/results.json",
+      "sourceHash": "69da9c67ad08c8842dea79b46c8cbc0924ec54cb51ff9e11c58915028cfaa9ac",
+      "sourceUnchanged": true,
+      "traceMode": "full (historical default)",
+      "values": {
+        "cold": 2816.9801000000007,
+        "zoom": 161.79999999981374,
+        "hover": 76.5999999998603,
+        "compareZoom": 279.30000000004657,
+        "compareHover": 134.0999999998603
+      },
+      "environment": {
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "isolation-performance",
+      "path": "reports/perf-targets-2026-11-10/isolation-performance/results.json",
+      "sourceHash": "fb3b1f4c8474328f08a674448d344b7f604975b61dc42d325a92e1321533bf62",
+      "sourceUnchanged": true,
+      "traceMode": "full (historical default)",
+      "values": {
+        "cold": 3109.105800000005,
+        "zoom": 211,
+        "hover": 95.20000000018626,
+        "compareZoom": 303.69999999995343,
+        "compareHover": 149.60000000009313
+      },
+      "environment": {
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "latency-performance",
+      "path": "reports/perf-targets-2026-11-10/latency-performance/results.json",
+      "sourceHash": "e9de7b4648b91e5c309b131ea0dc67d56905e709a2d3df0d9c51c43085ce1413",
+      "sourceUnchanged": true,
+      "traceMode": "off",
+      "values": {
+        "cold": 2854.7272,
+        "zoom": 168.40000000037253,
+        "hover": 50,
+        "compareZoom": 190.09999999962747,
+        "compareHover": 63.19999999925494
+      },
+      "environment": {
+        "traceMode": "off",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "layers-performance",
+      "path": "reports/perf-targets-2026-11-10/layers-performance/results.json",
+      "sourceHash": "d69f0db2bf295a495521e671f7acc791120004abef99e0ce382603bacc62fa98",
+      "sourceUnchanged": true,
+      "traceMode": "full (historical default)",
+      "values": {
+        "cold": 2598.5072999999975,
+        "zoom": 180.5,
+        "hover": 85.3000000002794,
+        "compareZoom": 270.39999999990687,
+        "compareHover": 125.79999999981374
+      },
+      "environment": {
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "one-row-performance",
+      "path": "reports/perf-targets-2026-11-10/one-row-performance/results.json",
+      "sourceHash": "6505f89edb981ae63759ba1b564cba5422c6c6ec081f04f4b56f7adf613e9d38",
+      "sourceUnchanged": true,
+      "traceMode": "full",
+      "values": {
+        "cold": 2279.8653000000004,
+        "zoom": 106.80000000074506,
+        "hover": 40.600000001490116,
+        "compareZoom": 123.19999999925494,
+        "compareHover": 48.600000001490116
+      },
+      "environment": {
+        "traceMode": "full",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "persistent-performance",
+      "path": "reports/perf-targets-2026-11-10/persistent-performance/results.json",
+      "sourceHash": "35347b452515b78c7c37e014668f6ad92ccd83254a31e35341b9b4d58950dae2",
+      "sourceUnchanged": true,
+      "traceMode": "full (historical default)",
+      "values": {
+        "cold": 3320.529800000004,
+        "zoom": 188.60000000149012,
+        "hover": 66.39999999850988,
+        "compareZoom": 240.09999999962747,
+        "compareHover": 97.59999999962747
+      },
+      "environment": {
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "prearmed-performance",
+      "path": "reports/perf-targets-2026-11-10/prearmed-performance/results.json",
+      "sourceHash": "bb2efc54d629831d189f6efaeeb1cf12c8ee451d1af2c7d4c3b50af7a27fb423",
+      "sourceUnchanged": true,
+      "traceMode": "full (historical default)",
+      "values": {
+        "cold": 2419.5539,
+        "zoom": 185.2000000011176,
+        "hover": 58.90000000037253,
+        "compareZoom": 194.80000000074506,
+        "compareHover": 80.80000000074506
+      },
+      "environment": {
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "raw-input-performance",
+      "path": "reports/perf-targets-2026-11-10/raw-input-performance/results.json",
+      "sourceHash": "668bd53bd35c428b8f4d4efbd390b0d11e40f6d55e5e6df352e33be71000705a",
+      "sourceUnchanged": true,
+      "traceMode": "full (historical default)",
+      "values": {
+        "cold": 2650.619399999996,
+        "zoom": 173.5,
+        "hover": 56.29999999888241,
+        "compareZoom": 256,
+        "compareHover": 86.89999999850988
+      },
+      "environment": {
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "shared-latency-performance",
+      "path": "reports/perf-targets-2026-11-10/shared-latency-performance/results.json",
+      "sourceHash": "83697ba4975363402d951da680d1a308d4885e93796b2ba5f1929fcd19901528",
+      "sourceUnchanged": true,
+      "traceMode": "off",
+      "values": {
+        "cold": 2845.2603000000004,
+        "zoom": 167.40000000037253,
+        "hover": 48.19999999925494,
+        "compareZoom": 157.10000000149012,
+        "compareHover": 50.30000000074506
+      },
+      "environment": {
+        "traceMode": "off",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "stationary-latency-performance",
+      "path": "reports/perf-targets-2026-11-10/stationary-latency-performance/results.json",
+      "sourceHash": "03c06d82f25b9d2e8234f8aaac480428cbd772e3acc74d10a0eb48df3f7ad223",
+      "sourceUnchanged": true,
+      "traceMode": "off",
+      "values": {
+        "cold": 2836.2648000000045,
+        "zoom": 143.7999999988824,
+        "hover": 47.90000000037253,
+        "compareZoom": 175.2000000011176,
+        "compareHover": 63.100000001490116
+      },
+      "environment": {
+        "traceMode": "off",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "unchanged-latency-performance",
+      "path": "reports/perf-targets-2026-11-10/unchanged-latency-performance/results.json",
+      "sourceHash": "a209958c02c75f990eabe83d1eba97f8db88c56bbde728c5cb3bd7fdc57d3ad5",
+      "sourceUnchanged": true,
+      "traceMode": "off",
+      "values": {
+        "cold": 2912.8208,
+        "zoom": 174.59999999962747,
+        "hover": 59.30000000074506,
+        "compareZoom": 167.39999999850988,
+        "compareHover": 53.5
+      },
+      "environment": {
+        "traceMode": "off",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "visible-cursor-performance",
+      "path": "reports/perf-targets-2026-11-10/visible-cursor-performance/results.json",
+      "sourceHash": "d65d8aaeb3cbb730825f6b8c5d6c1cf6f911bd22ad82fed069bb564bdbe9b1d4",
+      "sourceUnchanged": true,
+      "traceMode": "full",
+      "values": {
+        "cold": 3044.789100000001,
+        "zoom": 159.69999999925494,
+        "hover": 65,
+        "compareZoom": 163,
+        "compareHover": 59.100000001490116
+      },
+      "environment": {
+        "traceMode": "full",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    },
+    {
+      "name": "visible-latency-performance",
+      "path": "reports/perf-targets-2026-11-10/visible-latency-performance/results.json",
+      "sourceHash": "95d3a0acd7fc08e7997676f97efa272fdecddfd19ee4f3ac749eec831803c90e",
+      "sourceUnchanged": true,
+      "traceMode": "off",
+      "values": {
+        "cold": 2823.7925999999998,
+        "zoom": 155.5,
+        "hover": 45.59999999962747,
+        "compareZoom": 182.30000000074506,
+        "compareHover": 59.20000000111759
+      },
+      "environment": {
+        "traceMode": "off",
+        "node": "v24.22.1",
+        "browser": "158.0.8127.18",
+        "os": "win32",
+        "release": "10.0.26200",
+        "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+        "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+        "viewport": "1440x900",
+        "dpr": 1,
+        "cpuRate": 4,
+        "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+        "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+        "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+        "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+        "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+        "gc": "No forced GC"
+      }
+    }
+  ],
+  "originalReferences": [
+    {
+      "id": "S01",
+      "title": "Neptune — Smoothing and rendering/downsampling",
+      "url": "https://docs.neptune.ai/smoothing",
+      "originalAudit": {
+        "id": "S01",
+        "title": "Neptune — Smoothing and rendering/downsampling",
+        "original_url": "https://docs.neptune.ai/smoothing",
+        "status": "confirmed",
+        "note_en": "Mean and min/max rendering, finer detail on zoom; empty-range interpolation is also documented.",
+        "note_ru": "Подтверждено агрегирование mean + min/max и детализация при zoom; в источнике также есть интерполяция пустых интервалов.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://docs.neptune.ai/smoothing"
+      },
+      "selectiveV21Check": {
+        "id": "S01",
+        "url": "https://docs.neptune.ai/smoothing",
+        "status": "read_in_v2.1",
+        "finding": "Retrieved versioned Neptune documentation describes mean/min-max aggregation and interpolated empty ranges; this is a documentation reference, not a current service recommendation."
+      },
+      "status": "confirmed",
+      "note": "Подтверждено агрегирование mean + min/max и детализация при zoom; в источнике также есть интерполяция пустых интервалов."
+    },
+    {
+      "id": "S02",
+      "title": "Neptune — Min/Max error bands",
+      "url": "https://docs.neptune.ai/error_bands",
+      "originalAudit": {
+        "id": "S02",
+        "title": "Neptune — Min/Max error bands",
+        "original_url": "https://docs.neptune.ai/error_bands",
+        "status": "confirmed",
+        "note_en": "Min/max bands are observed ranges; do not relabel as confidence intervals.",
+        "note_ru": "Min/max-полоса показывает наблюдаемый диапазон; это не доверительный интервал.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://docs.neptune.ai/error_bands"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "Min/max-полоса показывает наблюдаемый диапазон; это не доверительный интервал."
+    },
+    {
+      "id": "S03",
+      "title": "W&B Server releases (Full Fidelity Band/Line and bug fixes)",
+      "url": "https://github.com/wandb/server/releases",
+      "originalAudit": {
+        "id": "S03",
+        "title": "W&B Server releases (Full Fidelity Band/Line and bug fixes)",
+        "original_url": "https://github.com/wandb/server/releases",
+        "status": "partial",
+        "note_en": "The release listing and indexed excerpts were inconsistent. The exact 0.84 / August 2026 claim is removed; no claim that this release does not exist.",
+        "note_ru": "Страница релизов и поисковые фрагменты расходились. Точная связка 0.84 / август 2026 убрана; отсутствие релиза не утверждается.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://github.com/wandb/server/releases"
+      },
+      "selectiveV21Check": null,
+      "status": "partial",
+      "note": "Страница релизов и поисковые фрагменты расходились. Точная связка 0.84 / август 2026 убрана; отсутствие релиза не утверждается."
+    },
+    {
+      "id": "S04",
+      "title": "W&B Models full-fidelity feature",
+      "url": "https://site.wandb.ai/models/",
+      "originalAudit": {
+        "id": "S04",
+        "title": "W&B Models full-fidelity feature",
+        "original_url": "https://site.wandb.ai/models/",
+        "status": "vendor_claim",
+        "note_en": "Full-fidelity spike visibility is a vendor claim; no internal sampling algorithm is inferred.",
+        "note_ru": "Видимость spikes в Full Fidelity — заявление производителя, не независимая проверка и не описание внутреннего алгоритма.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://site.wandb.ai/models/"
+      },
+      "selectiveV21Check": null,
+      "status": "vendor_claim",
+      "note": "Видимость spikes в Full Fidelity — заявление производителя, не независимая проверка и не описание внутреннего алгоритма."
+    },
+    {
+      "id": "S05",
+      "title": "W&B — Missing chart datapoints issue and full-fidelity response",
+      "url": "https://github.com/wandb/wandb/issues/4177",
+      "originalAudit": {
+        "id": "S05",
+        "title": "W&B — Missing chart datapoints issue and full-fidelity response",
+        "original_url": "https://github.com/wandb/wandb/issues/4177",
+        "status": "historical",
+        "note_en": "A historical issue and maintainer follow-up; not proof of a current bug in every version.",
+        "note_ru": "Исторический issue и ответ сопровождающего, не доказательство текущего бага всех версий.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://github.com/wandb/wandb/issues/4177"
+      },
+      "selectiveV21Check": null,
+      "status": "historical",
+      "note": "Исторический issue и ответ сопровождающего, не доказательство текущего бага всех версий."
+    },
+    {
+      "id": "S06",
+      "title": "Comet — Total fidelity metrics",
+      "url": "https://www.comet.com/docs/v2/guides/experiment-management/total-fidelity/",
+      "originalAudit": {
+        "id": "S06",
+        "title": "Comet — Total fidelity metrics",
+        "original_url": "https://www.comet.com/docs/v2/guides/experiment-management/total-fidelity/",
+        "status": "confirmed",
+        "note_en": "Full-history compressed CSV and sampled built-in charts are distinct representations.",
+        "note_ru": "Полная история в сжатом CSV и sampled-данные встроенных графиков — разные представления.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://www.comet.com/docs/v2/guides/experiment-management/total-fidelity/"
+      },
+      "selectiveV21Check": {
+        "id": "S06",
+        "url": "https://www.comet.com/docs/v2/guides/experiment-management/total-fidelity/",
+        "status": "read_in_v2.1",
+        "finding": "Complete compressed CSV assets and sampled built-in charts are explicitly distinguished."
+      },
+      "status": "confirmed",
+      "note": "Полная история в сжатом CSV и sampled-данные встроенных графиков — разные представления."
+    },
+    {
+      "id": "S07",
+      "title": "Comet — Limits and performance",
+      "url": "https://www.comet.com/docs/v2/guides/experiment-management/limits-and-performance/",
+      "originalAudit": {
+        "id": "S07",
+        "title": "Comet — Limits and performance",
+        "original_url": "https://www.comet.com/docs/v2/guides/experiment-management/limits-and-performance/",
+        "status": "confirmed",
+        "note_en": "The retrieved documentation states 15,000 values per metric per experiment before downsampling. Scope to that documentation, not all configurations forever.",
+        "note_ru": "В открытой документации указан порог 15 000 значений на метрику эксперимента до downsampling; это не вечный лимит всех конфигураций.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://www.comet.com/docs/v2/guides/experiment-management/limits-and-performance/"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "В открытой документации указан порог 15 000 значений на метрику эксперимента до downsampling; это не вечный лимит всех конфигураций."
+    },
+    {
+      "id": "S08",
+      "title": "Comet — Metrics logging and reservoir sampling",
+      "url": "https://www.comet.com/docs/v2/guides/experiment-management/log-data/metrics-and-parameters/",
+      "originalAudit": {
+        "id": "S08",
+        "title": "Comet — Metrics logging and reservoir sampling",
+        "original_url": "https://www.comet.com/docs/v2/guides/experiment-management/log-data/metrics-and-parameters/",
+        "status": "confirmed",
+        "note_en": "Reservoir sampling is documented; on-premises settings can be adjusted.",
+        "note_ru": "Описаны reservoir sampling и возможность настройки в on-premises установках.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://www.comet.com/docs/v2/guides/experiment-management/log-data/metrics-and-parameters/"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "Описаны reservoir sampling и возможность настройки в on-premises установках."
+    },
+    {
+      "id": "S09",
+      "title": "TensorBoard — HTTP API and reservoir sampling",
+      "url": "https://github.com/tensorflow/tensorboard/blob/master/tensorboard/http_api.md",
+      "originalAudit": {
+        "id": "S09",
+        "title": "TensorBoard — HTTP API and reservoir sampling",
+        "original_url": "https://github.com/tensorflow/tensorboard/blob/master/tensorboard/http_api.md",
+        "status": "confirmed",
+        "note_en": "The HTTP API says values may be reservoir-sampled and the latest is retained. Do not generalize to every current TensorBoard renderer.",
+        "note_ru": "HTTP API допускает reservoir sampling и сохраняет последнее значение. Это не утверждение обо всех современных рендерах TensorBoard.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://github.com/tensorflow/tensorboard/blob/master/tensorboard/http_api.md"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "HTTP API допускает reservoir sampling и сохраняет последнее значение. Это не утверждение обо всех современных рендерах TensorBoard."
+    },
+    {
+      "id": "S10",
+      "title": "ClearML — Scalar charts, data zoom and Show Originals",
+      "url": "https://github.com/clearml/clearml-docs/blob/main/docs/webapp/webapp_exp_track_visual.md",
+      "originalAudit": {
+        "id": "S10",
+        "title": "ClearML — Scalar charts, data zoom and Show Originals",
+        "original_url": "https://www.clear.ml/docs/latest/docs/webapp/webapp_exp_track_visual/",
+        "status": "official_replacement",
+        "note_en": "The site fetch was blocked; the official documentation repository was read instead. Smoothing / Show Originals / axis semantics confirmed.",
+        "note_ru": "Сайт не удалось прочитать; использован официальный репозиторий документации. Подтверждены smoothing / Show Originals / семантика X.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://github.com/clearml/clearml-docs/blob/main/docs/webapp/webapp_exp_track_visual.md"
+      },
+      "selectiveV21Check": null,
+      "status": "official_replacement",
+      "note": "Сайт не удалось прочитать; использован официальный репозиторий документации. Подтверждены smoothing / Show Originals / семантика X."
+    },
+    {
+      "id": "S11",
+      "title": "Grafana — Query options and Max data points",
+      "url": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/query-transform-data/",
+      "originalAudit": {
+        "id": "S11",
+        "title": "Grafana — Query options and Max data points",
+        "original_url": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/query-transform-data/",
+        "status": "confirmed",
+        "note_en": "Max-data-points depends on panel width; aggregation is data-source dependent.",
+        "note_ru": "Max data points связан с шириной панели; конкретная агрегация зависит от источника данных.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/query-transform-data/"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "Max data points связан с шириной панели; конкретная агрегация зависит от источника данных."
+    },
+    {
+      "id": "S12",
+      "title": "Grafana — Time-series null/gap/axis behavior",
+      "url": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/visualizations/time-series/",
+      "originalAudit": {
+        "id": "S12",
+        "title": "Grafana — Time-series null/gap/axis behavior",
+        "original_url": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/visualizations/time-series/",
+        "status": "confirmed",
+        "note_en": "Null-connection and axis settings are documented. They are choices, not guarantees of truthful defaults.",
+        "note_ru": "Описаны настройки null-разрывов и осей. Наличие настройки не гарантирует корректный default.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/visualizations/time-series/"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "Описаны настройки null-разрывов и осей. Наличие настройки не гарантирует корректный default."
+    },
+    {
+      "id": "S13",
+      "title": "Datadog — Rollup aggregators",
+      "url": "https://raw.githubusercontent.com/DataDog/documentation/master/content/en/dashboards/functions/rollup.md",
+      "originalAudit": {
+        "id": "S13",
+        "title": "Datadog — Rollup aggregators",
+        "original_url": "https://docs.datadoghq.com/dashboards/functions/rollup/",
+        "status": "official_replacement",
+        "note_en": "The site response format could not be read; official source Markdown confirms avg/min/max rollups.",
+        "note_ru": "Ответ сайта не прочитался; официальный Markdown подтверждает avg/min/max rollup.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://raw.githubusercontent.com/DataDog/documentation/master/content/en/dashboards/functions/rollup.md"
+      },
+      "selectiveV21Check": null,
+      "status": "official_replacement",
+      "note": "Ответ сайта не прочитался; официальный Markdown подтверждает avg/min/max rollup."
+    },
+    {
+      "id": "S14",
+      "title": "Datadog — Metric monitors and max thresholds",
+      "url": "https://docs.datadoghq.com/monitors/types/metric/",
+      "originalAudit": {
+        "id": "S14",
+        "title": "Datadog — Metric monitors and max thresholds",
+        "original_url": "https://docs.datadoghq.com/monitors/types/metric/",
+        "status": "unverified",
+        "note_en": "The metric-monitor page could not be read in this pass. The specific monitor-trigger statement is not retained as verified.",
+        "note_ru": "Страница metric monitor в этом проходе не прочитана. Точное утверждение о срабатывании monitor не включено как подтверждённое.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://docs.datadoghq.com/monitors/types/metric/"
+      },
+      "selectiveV21Check": null,
+      "status": "unverified",
+      "note": "Страница metric monitor в этом проходе не прочитана. Точное утверждение о срабатывании monitor не включено как подтверждённое."
+    },
+    {
+      "id": "S15",
+      "title": "Highcharts Stock — Data grouping",
+      "url": "https://www.highcharts.com/docs/stock/data-grouping",
+      "originalAudit": {
+        "id": "S15",
+        "title": "Highcharts Stock — Data grouping",
+        "original_url": "https://www.highcharts.com/docs/stock/data-grouping",
+        "status": "confirmed",
+        "note_en": "Pixel-width data grouping and configurable approximation are documented.",
+        "note_ru": "Подтверждены группировка по ширине и настраиваемая аппроксимация.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://www.highcharts.com/docs/stock/data-grouping"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "Подтверждены группировка по ширине и настраиваемая аппроксимация."
+    },
+    {
+      "id": "S16",
+      "title": "Highcharts — Grouping approximation options",
+      "url": "https://api.highcharts.com/highstock/series.line.dataGrouping.approximation",
+      "originalAudit": {
+        "id": "S16",
+        "title": "Highcharts — Grouping approximation options",
+        "original_url": "https://api.highcharts.com/highstock/series.spline.dataGrouping.approximation",
+        "status": "official_replacement",
+        "note_en": "The original spline page failed; the official equivalent line-series approximation page was read.",
+        "note_ru": "Исходная spline-страница не прочиталась; открыта официальная страница approximation для line-series.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://api.highcharts.com/highstock/series.line.dataGrouping.approximation"
+      },
+      "selectiveV21Check": null,
+      "status": "official_replacement",
+      "note": "Исходная spline-страница не прочиталась; открыта официальная страница approximation для line-series."
+    },
+    {
+      "id": "S17",
+      "title": "Aim — Metrics Explorer",
+      "url": "https://aimstack.readthedocs.io/en/latest/ui/pages/explorers.html",
+      "originalAudit": {
+        "id": "S17",
+        "title": "Aim — Metrics Explorer",
+        "original_url": "https://aimstack.readthedocs.io/en/latest/ui/pages/explorers.html",
+        "status": "confirmed",
+        "note_en": "Explorer comparison / aggregation / outlier settings confirmed; no proof of a particular spike-preserving renderer.",
+        "note_ru": "Подтверждены сравнение, агрегация и настройки выбросов; сохранение spike конкретным renderer не доказано.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://aimstack.readthedocs.io/en/latest/ui/pages/explorers.html"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "Подтверждены сравнение, агрегация и настройки выбросов; сохранение spike конкретным renderer не доказано."
+    },
+    {
+      "id": "S18",
+      "title": "MLflow — Tracking",
+      "url": "https://mlflow.org/docs/latest/ml/tracking/",
+      "originalAudit": {
+        "id": "S18",
+        "title": "MLflow — Tracking",
+        "original_url": "https://mlflow.org/docs/latest/ml/tracking/",
+        "status": "confirmed",
+        "note_en": "Tracking provenance is documented; no isolated-spike rendering guarantee established.",
+        "note_ru": "Подтверждено происхождение экспериментов; гарантия отрисовки одиночного spike не установлена.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://mlflow.org/docs/latest/ml/tracking/"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "Подтверждено происхождение экспериментов; гарантия отрисовки одиночного spike не установлена."
+    },
+    {
+      "id": "S19",
+      "title": "AWS SageMaker — Stop training jobs early",
+      "url": "https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-early-stopping.html",
+      "originalAudit": {
+        "id": "S19",
+        "title": "AWS SageMaker — Stop training jobs early",
+        "original_url": "https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-early-stopping.html",
+        "status": "confirmed",
+        "note_en": "Early stopping concerns tuning trials and a defined objective, not an arbitrary single loss spike.",
+        "note_ru": "Early stopping относится к tuning trials и заданной objective, а не к любому одиночному скачку loss.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-early-stopping.html"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "Early stopping относится к tuning trials и заданной objective, а не к любому одиночному скачку loss."
+    },
+    {
+      "id": "S20",
+      "title": "AWS SageMaker — Tuning completion criteria",
+      "url": "https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-progress.html",
+      "originalAudit": {
+        "id": "S20",
+        "title": "AWS SageMaker — Tuning completion criteria",
+        "original_url": "https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-progress.html",
+        "status": "confirmed",
+        "note_en": "Tuning completion criteria are documented; they are outside the frontend implementation scope.",
+        "note_ru": "Критерии завершения tuning подтверждены, но находятся вне scope frontend.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-progress.html"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "Критерии завершения tuning подтверждены, но находятся вне scope frontend."
+    },
+    {
+      "id": "S21",
+      "title": "Ray Tune — ASHA and early stopping",
+      "url": "https://docs.ray.io/en/latest/tune/getting-started.html",
+      "originalAudit": {
+        "id": "S21",
+        "title": "Ray Tune — ASHA and early stopping",
+        "original_url": "https://docs.ray.io/en/latest/tune/getting-started.html",
+        "status": "unverified",
+        "note_en": "Ray pages returned rate-limit/fetch failures. ASHA details are omitted from the newly verified findings.",
+        "note_ru": "Страницы Ray вернули ограничения/ошибки получения. Детали ASHA не включены в заново подтверждённые выводы.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://docs.ray.io/en/latest/tune/getting-started.html"
+      },
+      "selectiveV21Check": null,
+      "status": "unverified",
+      "note": "Страницы Ray вернули ограничения/ошибки получения. Детали ASHA не включены в заново подтверждённые выводы."
+    },
+    {
+      "id": "S22",
+      "title": "Lightning — EarlyStopping callback",
+      "url": "https://github.com/Lightning-AI/pytorch-lightning/blob/master/src/lightning/pytorch/callbacks/early_stopping.py",
+      "originalAudit": {
+        "id": "S22",
+        "title": "Lightning — EarlyStopping callback",
+        "original_url": "https://lightning.ai/docs/pytorch/latest/optional-api/api/lightning.pytorch.callbacks.EarlyStopping",
+        "status": "official_replacement",
+        "note_en": "The API page failed; the official EarlyStopping source confirms explicit monitor / patience / finite / divergence settings.",
+        "note_ru": "API-страница не прочиталась; официальный исходник EarlyStopping подтверждает явные monitor / patience / finite / divergence настройки.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://github.com/Lightning-AI/pytorch-lightning/blob/master/src/lightning/pytorch/callbacks/early_stopping.py"
+      },
+      "selectiveV21Check": null,
+      "status": "official_replacement",
+      "note": "API-страница не прочиталась; официальный исходник EarlyStopping подтверждает явные monitor / patience / finite / divergence настройки."
+    },
+    {
+      "id": "S23",
+      "title": "uPlot — performance, non-features, gap/band support",
+      "url": "https://github.com/leeoniya/uPlot",
+      "originalAudit": {
+        "id": "S23",
+        "title": "uPlot — performance, non-features, gap/band support",
+        "original_url": "https://github.com/leeoniya/uPlot",
+        "status": "confirmed",
+        "note_en": "Canvas rendering and absent built-in aggregation confirmed. Vendor benchmark numbers are not our app measurements.",
+        "note_ru": "Подтверждены Canvas и отсутствие встроенной агрегации. Бенчмарки автора не являются нашими замерами.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://github.com/leeoniya/uPlot"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "Подтверждены Canvas и отсутствие встроенной агрегации. Бенчмарки автора не являются нашими замерами."
+    },
+    {
+      "id": "S24",
+      "title": "Plotly — high-performance charts and WebGL limits",
+      "url": "https://plotly.com/python/performance/",
+      "originalAudit": {
+        "id": "S24",
+        "title": "Plotly — high-performance charts and WebGL limits",
+        "original_url": "https://plotly.com/python/performance/",
+        "status": "unverified",
+        "note_en": "The Plotly page was not successfully read. Its performance / WebGL-limit claims are excluded from the verified comparison.",
+        "note_ru": "Страница Plotly не была успешно прочитана. Утверждения о скорости и WebGL-лимитах исключены из подтверждённого сравнения.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://plotly.com/python/performance/"
+      },
+      "selectiveV21Check": null,
+      "status": "unverified",
+      "note": "Страница Plotly не была успешно прочитана. Утверждения о скорости и WebGL-лимитах исключены из подтверждённого сравнения."
+    },
+    {
+      "id": "S25",
+      "title": "MDN — JSON.stringify and non-finite numbers",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify",
+      "originalAudit": {
+        "id": "S25",
+        "title": "MDN — JSON.stringify and non-finite numbers",
+        "original_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify",
+        "status": "confirmed",
+        "note_en": "Non-finite numbers stringify to null; raw generation avoids this transport ambiguity.",
+        "note_ru": "Нечисловые значения сериализуются в null; генерация raw устраняет эту неоднозначность транспорта.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "Нечисловые значения сериализуются в null; генерация raw устраняет эту неоднозначность транспорта."
+    },
+    {
+      "id": "S26",
+      "title": "Chrome DevTools — Performance and 4× CPU throttling",
+      "url": "https://developer.chrome.com/docs/devtools/performance",
+      "originalAudit": {
+        "id": "S26",
+        "title": "Chrome DevTools — Performance and 4× CPU throttling",
+        "original_url": "https://developer.chrome.com/docs/devtools/performance",
+        "status": "confirmed",
+        "note_en": "Chrome Performance workflow checked. No Soup browser trace has been recorded.",
+        "note_ru": "Проверена методика Chrome Performance. Трейс нашего Soup-приложения ещё не записан.",
+        "checked_date": "2026-11-10",
+        "verified_url": "https://developer.chrome.com/docs/devtools/performance"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": "Проверена методика Chrome Performance. Трейс нашего Soup-приложения ещё не записан."
+    },
+    {
+      "id": "S27",
+      "title": "uPlot — aligned data format",
+      "url": "https://github.com/leeoniya/uPlot/blob/master/docs/README.md",
+      "originalAudit": {
+        "id": "S27",
+        "title": "uPlot — aligned data format",
+        "original_url": "https://github.com/leeoniya/uPlot/blob/master/docs/README.md",
+        "verified_url": "https://github.com/leeoniya/uPlot/blob/master/docs/README.md",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": {
+        "id": "S27",
+        "url": "https://github.com/leeoniya/uPlot/blob/master/docs/README.md",
+        "status": "read_in_v2.1",
+        "finding": "Aligned X is unique/ascending; Y may contain null; arrays are documented with length >=2; numeric step uses time:false."
+      },
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S28",
+      "title": "uPlot — public TypeScript API, gaps and coordinate units",
+      "url": "https://raw.githubusercontent.com/leeoniya/uPlot/master/dist/uPlot.d.ts",
+      "originalAudit": {
+        "id": "S28",
+        "title": "uPlot — public TypeScript API, gaps and coordinate units",
+        "original_url": "https://raw.githubusercontent.com/leeoniya/uPlot/master/dist/uPlot.d.ts",
+        "verified_url": "https://raw.githubusercontent.com/leeoniya/uPlot/master/dist/uPlot.d.ts",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": {
+        "id": "S28",
+        "url": "https://raw.githubusercontent.com/leeoniya/uPlot/master/dist/uPlot.d.ts",
+        "status": "read_in_v2.1",
+        "finding": "Public types expose canvas-coordinate gaps, points/filter controls, data updates and range APIs; master is not a pinned package version."
+      },
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S29",
+      "title": "ECharts — LineSeries implementation and progressive default",
+      "url": "https://raw.githubusercontent.com/apache/echarts/master/src/chart/line/LineSeries.ts",
+      "originalAudit": {
+        "id": "S29",
+        "title": "ECharts — LineSeries implementation and progressive default",
+        "original_url": "https://raw.githubusercontent.com/apache/echarts/master/src/chart/line/LineSeries.ts",
+        "verified_url": "https://raw.githubusercontent.com/apache/echarts/master/src/chart/line/LineSeries.ts",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": {
+        "id": "S29",
+        "url": "https://raw.githubusercontent.com/apache/echarts/master/src/chart/line/LineSeries.ts",
+        "status": "read_in_v2.1",
+        "finding": "The inspected line-series default has progressive:0 with a disabling comment; this does not cover every ECharts series."
+      },
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S30",
+      "title": "Playwright — accessibility testing and axe",
+      "url": "https://playwright.dev/docs/accessibility-testing",
+      "originalAudit": {
+        "id": "S30",
+        "title": "Playwright — accessibility testing and axe",
+        "original_url": "https://playwright.dev/docs/accessibility-testing",
+        "verified_url": "https://playwright.dev/docs/accessibility-testing",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": {
+        "id": "S30",
+        "url": "https://playwright.dev/docs/accessibility-testing",
+        "status": "read_in_v2.1",
+        "finding": "Official axe integration and explicit limits of automated accessibility testing remain documented."
+      },
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S31",
+      "title": "Chrome DevTools Protocol — Performance domain",
+      "url": "https://chromedevtools.github.io/devtools-protocol/tot/Performance/",
+      "originalAudit": {
+        "id": "S31",
+        "title": "Chrome DevTools Protocol — Performance domain",
+        "original_url": "https://chromedevtools.github.io/devtools-protocol/tot/Performance/",
+        "verified_url": "https://chromedevtools.github.io/devtools-protocol/tot/Performance/",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S32",
+      "title": "Chrome DevTools Protocol — Runtime.getHeapUsage schema",
+      "url": "https://raw.githubusercontent.com/ChromeDevTools/devtools-protocol/master/pdl/js_protocol.pdl",
+      "originalAudit": {
+        "id": "S32",
+        "title": "Chrome DevTools Protocol — Runtime.getHeapUsage schema",
+        "original_url": "https://raw.githubusercontent.com/ChromeDevTools/devtools-protocol/master/pdl/js_protocol.pdl",
+        "verified_url": "https://raw.githubusercontent.com/ChromeDevTools/devtools-protocol/master/pdl/js_protocol.pdl",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S33",
+      "title": "MDN — measureUserAgentSpecificMemory",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/measureUserAgentSpecificMemory",
+      "originalAudit": {
+        "id": "S33",
+        "title": "MDN — measureUserAgentSpecificMemory",
+        "original_url": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/measureUserAgentSpecificMemory",
+        "verified_url": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/measureUserAgentSpecificMemory",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S34",
+      "title": "Chrome DevTools — memory diagnostics and Task Manager",
+      "url": "https://developer.chrome.com/docs/devtools/memory-problems",
+      "originalAudit": {
+        "id": "S34",
+        "title": "Chrome DevTools — memory diagnostics and Task Manager",
+        "original_url": "https://developer.chrome.com/docs/devtools/memory-problems",
+        "verified_url": "https://developer.chrome.com/docs/devtools/memory-problems",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": {
+        "id": "S34",
+        "url": "https://developer.chrome.com/docs/devtools/memory-problems",
+        "status": "read_in_v2.1",
+        "finding": "Task Manager OS memory footprint and JavaScript heap are separate measures."
+      },
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S35",
+      "title": "Playwright — browser.startTracing",
+      "url": "https://playwright.dev/docs/api/class-browser#browser-start-tracing",
+      "originalAudit": {
+        "id": "S35",
+        "title": "Playwright — browser.startTracing",
+        "original_url": "https://playwright.dev/docs/api/class-browser#browser-start-tracing",
+        "verified_url": "https://playwright.dev/docs/api/class-browser#browser-start-tracing",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": {
+        "id": "S35",
+        "url": "https://playwright.dev/docs/api/class-browser#browser-start-tracing",
+        "status": "read_in_v2.1",
+        "finding": "browser.startTracing/stopTracing creates a Chromium trace readable in DevTools, distinct from Playwright tracing."
+      },
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S36",
+      "title": "Chrome DevTools Protocol — CPU throttling",
+      "url": "https://raw.githubusercontent.com/ChromeDevTools/devtools-protocol/master/pdl/domains/Emulation.pdl",
+      "originalAudit": {
+        "id": "S36",
+        "title": "Chrome DevTools Protocol — CPU throttling",
+        "original_url": "https://raw.githubusercontent.com/ChromeDevTools/devtools-protocol/master/pdl/domains/Emulation.pdl",
+        "verified_url": "https://raw.githubusercontent.com/ChromeDevTools/devtools-protocol/master/pdl/domains/Emulation.pdl",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S37",
+      "title": "Playwright — locale and timezone emulation",
+      "url": "https://playwright.dev/docs/emulation",
+      "originalAudit": {
+        "id": "S37",
+        "title": "Playwright — locale and timezone emulation",
+        "original_url": "https://playwright.dev/docs/emulation",
+        "verified_url": "https://playwright.dev/docs/emulation",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S38",
+      "title": "Playwright — network mocking",
+      "url": "https://playwright.dev/docs/mock",
+      "originalAudit": {
+        "id": "S38",
+        "title": "Playwright — network mocking",
+        "original_url": "https://playwright.dev/docs/mock",
+        "verified_url": "https://playwright.dev/docs/mock",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S39",
+      "title": "WCAG 2.2 — text contrast",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "originalAudit": {
+        "id": "S39",
+        "title": "WCAG 2.2 — text contrast",
+        "original_url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+        "verified_url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S40",
+      "title": "WCAG 2.2 — non-text contrast",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+      "originalAudit": {
+        "id": "S40",
+        "title": "WCAG 2.2 — non-text contrast",
+        "original_url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+        "verified_url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S41",
+      "title": "Lighthouse — accessibility scoring limits",
+      "url": "https://developer.chrome.com/docs/lighthouse/accessibility/scoring",
+      "originalAudit": {
+        "id": "S41",
+        "title": "Lighthouse — accessibility scoring limits",
+        "original_url": "https://developer.chrome.com/docs/lighthouse/accessibility/scoring",
+        "verified_url": "https://developer.chrome.com/docs/lighthouse/accessibility/scoring",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S42",
+      "title": "MDN — transferable objects and detached buffers",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects",
+      "originalAudit": {
+        "id": "S42",
+        "title": "MDN — transferable objects and detached buffers",
+        "original_url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects",
+        "verified_url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S43",
+      "title": "MDN — Intl.NumberFormat.formatToParts",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts",
+      "originalAudit": {
+        "id": "S43",
+        "title": "MDN — Intl.NumberFormat.formatToParts",
+        "original_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts",
+        "verified_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S44",
+      "title": "MDN — Float64Array",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+      "originalAudit": {
+        "id": "S44",
+        "title": "MDN — Float64Array",
+        "original_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+        "verified_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+        "status": "confirmed",
+        "checked_date": "2026-11-10"
+      },
+      "selectiveV21Check": null,
+      "status": "confirmed",
+      "note": ""
+    },
+    {
+      "id": "S45",
+      "title": "MDN — event loops, tasks and microtasks",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth",
+      "originalAudit": null,
+      "selectiveV21Check": {
+        "id": "S45",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth",
+        "status": "read_in_v2.1",
+        "finding": "Worker event loops and draining microtasks before another task support the scheduling distinction; our backpressure design is an inference, not a vendor implementation claim."
+      },
+      "status": "historical_primary_reference",
+      "note": "Worker event loops and draining microtasks before another task support the scheduling distinction; our backpressure design is an inference, not a vendor implementation claim."
+    }
+  ],
+  "additionalSources": [
+    {
+      "id": "E01",
+      "title": "W&B Experiment Tracking",
+      "url": "https://wandb.ai/site/experiment-tracking/",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Пользовательский product reference: организация experiment workspace; не benchmark и не доказательство proprietary sampler.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E02",
+      "title": "Comet Single Experiment Page",
+      "url": "https://www.comet.com/docs/v2/guides/comet-ui/experiment-management/single-experiment-page/",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Пользовательский reference: секции experiment detail и исходный контекст.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E03",
+      "title": "Dribbble Dashboard Design Interface — George Railean",
+      "url": "https://dribbble.com/shots/18538171-Dashboard-Design-Interface",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Композиция ML dashboard; визуальный источник, не data/algorithm contract.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E04",
+      "title": "Grafana TooltipPlugin2 source",
+      "url": "https://raw.githubusercontent.com/grafana/grafana/main/packages/grafana-ui/src/components/uPlot/plugins/TooltipPlugin2.tsx",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "uPlot: content/position separation, ResizeObserver geometry, microtask coalescing, refs. Mutable main.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E05",
+      "title": "TradingView Floating Tooltip",
+      "url": "https://tradingview.github.io/lightweight-charts/examples/tooltips-and-legends/floating-tooltip",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Persistent HTML tooltip и crosshair event. Наш raw-step/source contract определяется отдельно.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E06",
+      "title": "TradingView PaneWidget source",
+      "url": "https://raw.githubusercontent.com/tradingview/lightweight-charts/master/src/gui/pane-widget.ts",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Отдельные invalidation levels и top canvas для cursor. Mutable master; benchmark TradingView не проводился.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E07",
+      "title": "Highcharts Boost",
+      "url": "https://www.highcharts.com/docs/advanced-chart-features/boost-module",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Раздельная async подготовка interaction index и фазовые timers; Boost не импортирован в Soup.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E08",
+      "title": "SciChart Performance Tips v5",
+      "url": "https://www.scichart.com/documentation/js/v5/2d-charts/performance-tips/performance-tips-and-tricks/",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Sorted-X/indexing/hit-test и batching. Vendor speed claims не используются как измерения Soup.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E09",
+      "title": "Chrome Aligned Input Events",
+      "url": "https://developer.chrome.com/blog/aligning-input-events",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Историческое объяснение frame-aligned continuous input; конкретный Chromium дополнительно проверялся локально.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E10",
+      "title": "W3C Pointer Events 3",
+      "url": "https://www.w3.org/TR/pointerevents3/",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "pointerrawupdate/coalescing; сохраняются fallback, bounded queue и cleanup.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E11",
+      "title": "React DOM refs",
+      "url": "https://react.dev/learn/manipulating-the-dom-with-refs",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "DOM ownership, refs и границы imperative adapter.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E12",
+      "title": "Tailwind source detection",
+      "url": "https://tailwindcss.com/docs/detecting-classes-in-source-files",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Объясняет CSS input scanning; в Soup выполнен реальный report-probe before/after.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E13",
+      "title": "Deque color-contrast rule",
+      "url": "https://dequeuniversity.com/rules/axe/4.10/color-contrast",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Проверка contrast и необходимость разбирать incomplete.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E14",
+      "title": "Chrome/web.dev layout thrashing",
+      "url": "https://web.dev/articles/avoid-large-complex-layouts-and-layout-thrashing",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Layout scope, DOM size и разделение geometry reads/writes.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E15",
+      "title": "MDN table-layout",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/table-layout",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Fixed columns не вычисляют горизонтальную геометрию по каждому новому значению.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E16",
+      "title": "Chrome offscreen rendering",
+      "url": "https://developer.chrome.com/docs/modern-web-guidance/guides/performance/defer-rendering-heavy-content",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Offscreen layout/render deferral; источник ранее записан в performance research, не заменяет keyboard checks.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E17",
+      "title": "uPlot cursor.bind discussion by maintainer",
+      "url": "https://github.com/leeoniya/uPlot/issues/298",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Фильтрация native event handlers; локальный диагностический эксперимент не дал выигрыша и не shipped.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E18",
+      "title": "Chrome desynchronized canvas",
+      "url": "https://developer.chrome.com/blog/desynchronized",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Невнедрённый кандидат: hint может уменьшать compositor delay, но имеет ограничения/артефакты.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E19",
+      "title": "Vite static deployment",
+      "url": "https://vite.dev/guide/static-deploy.html",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Production build/preview и доставка dist.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E20",
+      "title": "Vite module Workers",
+      "url": "https://vite.dev/guide/features.html#web-workers",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Статический new Worker(new URL(..., import.meta.url), {type:module}) и asset chunk.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E21",
+      "title": "Vite on Vercel",
+      "url": "https://vercel.com/docs/frameworks/frontend/vite",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "SPA direct routes требуют routing rules; missing assets проверяются отдельно.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E22",
+      "title": "React StrictMode",
+      "url": "https://react.dev/reference/react/StrictMode",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Development повтор Effect/ref setup выявляет отсутствующий cleanup; это не runtime leak certificate.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E23",
+      "title": "Playwright accessibility testing",
+      "url": "https://playwright.dev/docs/accessibility-testing",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Axe integration и явная ограниченность automated checks.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E24",
+      "title": "web.dev rendering performance",
+      "url": "https://web.dev/articles/rendering-performance",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Frame budget, layout/paint/composite; JS query duration не равен visible response.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    },
+    {
+      "id": "E25",
+      "title": "Pinned uPlot 1.6.32",
+      "url": "https://github.com/leeoniya/uPlot/tree/1.6.32",
+      "status": "primary_source_reviewed_in_project_research",
+      "note": "Версия приложения; сравнение master docs с pinned installed types/source требуется отдельно.",
+      "reviewDate": "2026-11-10",
+      "freshness": "E12/E13/E16 inherited from recorded performance research; other entries were opened during this side-conversation research. No live vendor UI benchmark."
+    }
+  ],
+  "inputs": {
+    "reports/perf-targets-2026-11-10/latency-comparison.json": {
+      "sha256": "8f44dfa0003f5035a61f0a0b8e9f1064d1a6d2d930323b6628848afb964c305a",
+      "bytes": 5440
+    },
+    "reports/build-metadata.json": {
+      "sha256": "c6a51076d1556cbf49fec3439d73b047f848c6ed3a17e92d4375f2fb014cecde",
+      "bytes": 23632
+    },
+    "reports/perf-targets-2026-11-10/final-unit.json": {
+      "sha256": "b90756ab78ad6548ca73cc3cc2b9cdb9ccb9940a34fb64b39b126564fb2135e4",
+      "bytes": 38746
+    },
+    "reports/perf-targets-2026-11-10/final-browser/results.json": {
+      "sha256": "26c5c9d24719c4facf7580a9826ce1685b529ed9f3bbcbd38ae270f1b48069df",
+      "bytes": 15615523
+    },
+    "reports/perf-targets-2026-11-10/final-a11y-summary.json": {
+      "sha256": "3205811109f28c16feb1b7e2d77fdd5a1aa2345cf19813564e50093d17bae0bc",
+      "bytes": 742237
+    },
+    "reports/perf-targets-2026-11-10/final-contrast/summary.json": {
+      "sha256": "b228e5a69cd83d993bf29cbc25bcc7c306f6737fe52d5901e270c87ebafd8ff3",
+      "bytes": 348
+    },
+    "reports/perf-targets-2026-11-10/final-contrast/ledger.json": {
+      "sha256": "102d973fdf31fcde5fff21b2ac8bd57c9bc2f709e8c1df5b4eea7cc548844f70",
+      "bytes": 2255067
+    },
+    "reports/perf-targets-2026-11-10/final-memory/results.json": {
+      "sha256": "28e93743e03a4f663ef01e0199de46c2e9d5d40e5eda373314ddd365135ec770",
+      "bytes": 18580
+    },
+    "reports/perf-targets-2026-11-10/final-runtime/runtime-contrast.json": {
+      "sha256": "967ebc40d92e7e7b80533cc881bacd3406a5d298c37e7254ecd4d4c5f681a409",
+      "bytes": 27898
+    },
+    "reports/perf-targets-2026-11-10/final-canvas/manifest.json": {
+      "sha256": "77005d435d53426f2aad71f1e3717665a4ef1c62a9a4cc86687f0fd494cb93b0",
+      "bytes": 585
+    },
+    "reports/perf-targets-2026-11-10/final-lighthouse/summary.json": {
+      "sha256": "33f7e22fa6ffdf59023a3fba5f524cfae6b7452eb3527147216411c323b11acf",
+      "bytes": 1723
+    },
+    "docs/evidence/source-audit.json": {
+      "sha256": "04ccbd5452a1d16f79fd19da644fe18e13e12b94b2b572b43368d368b89472cc",
+      "bytes": 22697
+    },
+    "docs/evidence/source-checks-v2.1.json": {
+      "sha256": "197135445eced5e80c4a5c1ecd88a956365e5d24ec496ea385475206e0c3b200",
+      "bytes": 2900
+    },
+    "docs/evidence/witness-manifest.json": {
+      "sha256": "36d956e0dbb948b1a45eeb1508d288d0371fc5c4681becbb6c4e3d4a9c03ebbd",
+      "bytes": 4994
+    },
+    "reports/perf-targets-2026-11-10/contrast-full/summary.json": {
+      "sha256": "080a42e8e35902952ea1a6619ba5054ef4f4ae556174aef3e09dd901790ea083",
+      "bytes": 348
+    },
+    "reports/perf-targets-2026-11-10/before-latency-performance/results.json": {
+      "sha256": "c589a448005147966a8cec613d9e5176338b7eceac3c4a3fa42de63ffaa0250b",
+      "bytes": 356524
+    },
+    "reports/perf-targets-2026-11-10/before-trace-performance/results.json": {
+      "sha256": "33deadc04e8c9018d04b68d14e4b13ee8c15e6c34ef736bd7e3492e5a599f763",
+      "bytes": 357203
+    },
+    "reports/perf-targets-2026-11-10/cached-aligned-performance/results.json": {
+      "sha256": "311c77e270e216fa1f6cdbf5849c9944463707c30a30bfba50bff6631327d075",
+      "bytes": 377504
+    },
+    "reports/perf-targets-2026-11-10/confirmation-latency-performance/results.json": {
+      "sha256": "afb2a23675958862f3d7d107d07a9f6258111c0a4afd20a5ab092badfa209ec5",
+      "bytes": 341055
+    },
+    "reports/perf-targets-2026-11-10/contained-performance/results.json": {
+      "sha256": "73c957e9ca9c75057a666e2a033f9a3c0a9d483372693b2d943913b31093ac69",
+      "bytes": 377769
+    },
+    "reports/perf-targets-2026-11-10/dirty-performance/results.json": {
+      "sha256": "6d7d9ed7f7b85d3e600d31659a00442bd047f1c60e7ba2c2718827fffc87ad17",
+      "bytes": 376241
+    },
+    "reports/perf-targets-2026-11-10/final-latency-performance/results.json": {
+      "sha256": "2090b0efd92a1b1f7cb50547aba493a7b078443f3a30c352f069fe12c9fa6ce1",
+      "bytes": 312237
+    },
+    "reports/perf-targets-2026-11-10/final-trace-performance/results.json": {
+      "sha256": "97b4548c39b812f88815ab4e53230e7d1add646c9cfdb687e2614397d991f11b",
+      "bytes": 313121
+    },
+    "reports/perf-targets-2026-11-10/fixed-columns-latency-performance/results.json": {
+      "sha256": "ae29b765de5d91ae5a69aa57263dd8998bf589274e83d1645b7b83bfe9cf1177",
+      "bytes": 341309
+    },
+    "reports/perf-targets-2026-11-10/immediate-latency-performance/results.json": {
+      "sha256": "5db6c5feec47e4f93ed350a9b077dfc4713925ee34c2c551986b9fb2a37b03f2",
+      "bytes": 342154
+    },
+    "reports/perf-targets-2026-11-10/immediate-performance/results.json": {
+      "sha256": "987b84c6f23d894c3906caef0065a3794184697f9a8f1b8a67f7cc2390365633",
+      "bytes": 341688
+    },
+    "reports/perf-targets-2026-11-10/imperative-performance/results.json": {
+      "sha256": "101d52ed638ee44d64cfad6f90eaf12fe7c16989ea0f2fdfaafc4d7214f542e8",
+      "bytes": 376404
+    },
+    "reports/perf-targets-2026-11-10/isolation-performance/results.json": {
+      "sha256": "8e9cef4b93d914adbd13db7272c0c9fa65f92118c27a64dd8654c80f5678ed28",
+      "bytes": 355722
+    },
+    "reports/perf-targets-2026-11-10/latency-performance/results.json": {
+      "sha256": "0073258b008a38d7c93070f399cc8cc91a6e2b4db7b30f058e52256ccb4454e4",
+      "bytes": 396383
+    },
+    "reports/perf-targets-2026-11-10/layers-performance/results.json": {
+      "sha256": "5d76d94c10416a05adb04c29e0e914cdf436335ff4e69f686684bfc30abd0b2d",
+      "bytes": 374851
+    },
+    "reports/perf-targets-2026-11-10/one-row-performance/results.json": {
+      "sha256": "2572224a68ac7040c7e9297b194845355a9a58b9e0ab60ab093faf7c1e5fac5e",
+      "bytes": 312528
+    },
+    "reports/perf-targets-2026-11-10/persistent-performance/results.json": {
+      "sha256": "17493210400644c73adfcf682fe44c472047fee95f2228a056adb76d905b5e23",
+      "bytes": 391787
+    },
+    "reports/perf-targets-2026-11-10/prearmed-performance/results.json": {
+      "sha256": "6ef7d106a95c429619bb07485c848ea17f41e178433ac1ae03c5c25334a5b0f2",
+      "bytes": 376516
+    },
+    "reports/perf-targets-2026-11-10/raw-input-performance/results.json": {
+      "sha256": "d8d00acb38194b97e5cd192d6a9999ce765788b07f483ef5ce0fd83308b7b50b",
+      "bytes": 377745
+    },
+    "reports/perf-targets-2026-11-10/shared-latency-performance/results.json": {
+      "sha256": "cc7246b0201fc6ea9493b18e210b5064f65e9a469197866631a74e4b1bd608f9",
+      "bytes": 341362
+    },
+    "reports/perf-targets-2026-11-10/stationary-latency-performance/results.json": {
+      "sha256": "c0fe936a5f91b4ba29d9f2b3f4e9c89f4bc93467138acc3de73c6c2a2d56b7c9",
+      "bytes": 396275
+    },
+    "reports/perf-targets-2026-11-10/unchanged-latency-performance/results.json": {
+      "sha256": "efef5d88c64b2698475fc71aaa44b12d72bbfd31d7b166df0b408771b245c3b8",
+      "bytes": 395670
+    },
+    "reports/perf-targets-2026-11-10/visible-cursor-performance/results.json": {
+      "sha256": "acecc8d70a6206927b335c1667205df801bcb49586929023f653464518e4d007",
+      "bytes": 342293
+    },
+    "reports/perf-targets-2026-11-10/visible-latency-performance/results.json": {
+      "sha256": "7c898032fbc396c4de3f33fa4eb2adab953290e1f299f27a673798404faf7f5d",
+      "bytes": 396028
+    },
+    "docs/research.md": {
+      "sha256": "68db5c5603e36f13013860021b9b1aa3953471614e99f2b62482d9924c626909",
+      "bytes": 25064
+    }
+  }
+}

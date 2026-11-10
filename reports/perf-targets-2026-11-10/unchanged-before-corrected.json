@@ -1,0 +1,195 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs",
+      "e2e/cursor-invariance.spec.ts"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/unchanged-before-corrected-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\unchanged-before-corrected-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/unchanged-before-corrected.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "cursor-invariance.spec.ts",
+      "file": "cursor-invariance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "moving over the same original row changes distance without rewriting source identity or empty slots",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2919,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 62\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 62\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-invariance.spec.ts:22:114",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-invariance.spec.ts",
+                      "column": 114,
+                      "line": 22
+                    },
+                    "snippet": " \u001b[90m 20 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForFunction(seq\u001b[33m=>\u001b[39mwindow\u001b[33m.\u001b[39m__soupEvidence\u001b[33m!\u001b[39m\u001b[33m.\u001b[39macceptedHoverSeq\u001b[33m>\u001b[39mseq\u001b[33m,\u001b[39mbefore)\n \u001b[90m 21 |\u001b[39m  \u001b[36mawait\u001b[39m expect(facts)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveText(first\u001b[33m!\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m  expect(\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39m(window \u001b[36mas\u001b[39m \u001b[33mWindow\u001b[39m\u001b[33m&\u001b[39m{__redundantSourceWrites\u001b[33m?\u001b[39m\u001b[33m:\u001b[39mstring[]})\u001b[33m.\u001b[39m__redundantSourceWrites))\u001b[33m.\u001b[39mtoEqual([])\n \u001b[90m    |\u001b[39m                                                                                                                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m })\n \u001b[90m 24 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-invariance.spec.ts",
+                        "column": 114,
+                        "line": 22
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  -  1\u001b[39m\n\u001b[31m+ Received  + 62\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"title\",\u001b[39m\n\u001b[31m+   \"aria-label\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+   \"hidden\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n\n  20 |  await page.waitForFunction(seq=>window.__soupEvidence!.acceptedHoverSeq>seq,before)\n  21 |  await expect(facts).not.toHaveText(first!)\n> 22 |  expect(await page.evaluate(()=>(window as Window&{__redundantSourceWrites?:string[]}).__redundantSourceWrites)).toEqual([])\n     |                                                                                                                  ^\n  23 | })\n  24 |\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-invariance.spec.ts:22:114"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:17:41.247Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\unchanged-before-corrected-artifacts\\cursor-invariance-moving-o-2f4d5-rce-identity-or-empty-slots\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\unchanged-before-corrected-artifacts\\cursor-invariance-moving-o-2f4d5-rce-identity-or-empty-slots\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\unchanged-before-corrected-artifacts\\cursor-invariance-moving-o-2f4d5-rce-identity-or-empty-slots\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\cursor-invariance.spec.ts",
+                    "column": 114,
+                    "line": 22
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "14c78d49399d1b0d5977-a598355c9bcbaf0b2c74",
+          "file": "cursor-invariance.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T11:17:39.553Z",
+    "duration": 5886.387,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

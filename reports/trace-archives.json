@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T07:27:32.894Z",
+  "generatedAt": "2026-11-10T13:55:11.477Z",
   "scope": "Lossless gzip copies. Raw files remain locally; Git/source archives store gzip siblings. node scripts/trace-archives.mjs --unpack verifies/restores originals.",
   "entries": [
     {
@@ -169,6 +169,302 @@
       "archiveBytes": 626920,
       "rawSha256": "e37930416b7b7fb8d047f9f61e10447e389f7263fb9dab601fb0406720cafc03",
       "archiveSha256": "478bd40094c081f79fb378d4d4aa881b51b412e810e41a2d80b8a1c5b9fdb8eb"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/before-trace-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/before-trace-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 78898124,
+      "archiveBytes": 13157751,
+      "rawSha256": "4fd418ab41cc631564e0e2558319361dfb0bfab334701e239261a24581e611ec",
+      "archiveSha256": "d44865064b09a7fe1538fd53d952cc26c8801db6d96df78c90030cafbb0418e4"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/before-trace-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/before-trace-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 83705572,
+      "archiveBytes": 13686220,
+      "rawSha256": "ec234e636c3a0b1fa51b4a41b3e74b8090c1f537b0852e49cf6437dd5d5a1da0",
+      "archiveSha256": "e916efdb7d2226fe0a77b115593bc254aa0018ffd60fb5269b0603542d5e17ce"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/cached-aligned-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/cached-aligned-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 78236092,
+      "archiveBytes": 12980094,
+      "rawSha256": "10dbf2a68ce826254c1d188efb294400895844ee4aaa68a44f637b653dbf6cd7",
+      "archiveSha256": "d35925a2e4cc03591b9a3180e98eb452f9248a1765b065394c68a77be4a5e1c0"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/cached-aligned-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/cached-aligned-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 82504772,
+      "archiveBytes": 13621731,
+      "rawSha256": "e49a91647316d2364fcf983589fa5e726a76f376343777de7cb3610b6e6f3ae7",
+      "archiveSha256": "6e43d8b6b9a87c70795a8cba77127cf362e18534289563cd703cf42288bd510c"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/contained-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/contained-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 81917031,
+      "archiveBytes": 13329352,
+      "rawSha256": "e509ef87a30311ec74330b14ae122aa09d506485c509b345f9e318389d3c26bc",
+      "archiveSha256": "99180aa8f627cd1bf6b61a53a306c13e6657586463aa1606051a5fcf065d8f1e"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/contained-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/contained-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 83813442,
+      "archiveBytes": 13747027,
+      "rawSha256": "b5b45ef824527bdbaa99c4255f7fdbc87d0a8602c22b5b290e77dd7f1d46f8fc",
+      "archiveSha256": "8bc921de852f75d4498cb96904f7017fecc89c703a8305d5d6f96fe9faee17e2"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/dirty-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/dirty-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 79743617,
+      "archiveBytes": 13127852,
+      "rawSha256": "2895e4184c1a0048949d6e61f50cd76afdc093b24ba557c85401ece7419370cb",
+      "archiveSha256": "139cb8a9b7154a94d3d943d7fd7085c8696be3035f9d865f05177632dbfd4341"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/dirty-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/dirty-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 85888272,
+      "archiveBytes": 13814359,
+      "rawSha256": "58bff40b0519ffd88b113e98e7cbcf291dc86c5aca72907be13a2d0f539620e0",
+      "archiveSha256": "08c911b9abfe9448374a197891b4b0a2ebe3446c90e3624f8ea91cc42386f80a"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/final-lighthouse/compare-0.trace.json",
+      "archive": "reports/perf-targets-2026-11-10/final-lighthouse/compare-0.trace.json.gz",
+      "rawBytes": 5231941,
+      "archiveBytes": 990521,
+      "rawSha256": "470a12e4aaef772416085ad47c3db425a1536f8f8bed2809a200f08942a8a71c",
+      "archiveSha256": "0db9d6733f9bb941a6525544b816207214bcaf9f7b122f3f523fff4885ca4a99"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/final-lighthouse/dashboard-0.trace.json",
+      "archive": "reports/perf-targets-2026-11-10/final-lighthouse/dashboard-0.trace.json.gz",
+      "rawBytes": 4976802,
+      "archiveBytes": 1008866,
+      "rawSha256": "2c411ba894e95e592df0e7bb6fefb22fd08ab4f38aaf4a16914b43ef90834a1d",
+      "archiveSha256": "4e8edb9610dc4a7e9c727321a653956745fba371e2ac136fef9f059e819e4c1d"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/final-lighthouse/quality-0.trace.json",
+      "archive": "reports/perf-targets-2026-11-10/final-lighthouse/quality-0.trace.json.gz",
+      "rawBytes": 2944860,
+      "archiveBytes": 493190,
+      "rawSha256": "8b8d81828aa710be38545da978314d19bcd0643f8e4d84f8cb41667adc788242",
+      "archiveSha256": "760dae64aeed5717b72f636b489969ef48935ea7b360dfcfbc6ed2f2df83141d"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/final-lighthouse/run-detail-0.trace.json",
+      "archive": "reports/perf-targets-2026-11-10/final-lighthouse/run-detail-0.trace.json.gz",
+      "rawBytes": 5165666,
+      "archiveBytes": 910307,
+      "rawSha256": "53db6989ba510dc8382d7da5246a8eb5863f4206c0f8317b7b7bbba73c84d5f1",
+      "archiveSha256": "a23a3b9280376f68c284dd7012cd805b593f2aec7d4233e5212c4be50b92f397"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/final-lighthouse/runs-0.trace.json",
+      "archive": "reports/perf-targets-2026-11-10/final-lighthouse/runs-0.trace.json.gz",
+      "rawBytes": 4312832,
+      "archiveBytes": 739684,
+      "rawSha256": "9404d0208810a0d5d2ea2eb4453e6c3edcaee2e1a178046e07bf5c5d36d7514d",
+      "archiveSha256": "168fb11bf44357a1f6f190adf92810118c973f2dfd6f4d15fde497630af443b7"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/final-trace-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/final-trace-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 50969787,
+      "archiveBytes": 7689036,
+      "rawSha256": "58564ce3fff891254e5263f9059b91bb11a118c47aa1aba2b9e2bca604657548",
+      "archiveSha256": "0c5c2f0aa45b4b869be038521ea824d1ee7cbca6e0bdd3969988d414abdac45e"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/final-trace-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/final-trace-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 53653526,
+      "archiveBytes": 8421897,
+      "rawSha256": "85b768c8acbbeea5efb12ec02c31852621b70c21e251a2492c73abed8808cd3f",
+      "archiveSha256": "abaf5a1675ceb1b3c542cfe0e246d201bae1d1fc71f99b49fddd9f8125366c99"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/immediate-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/immediate-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 51704560,
+      "archiveBytes": 7846568,
+      "rawSha256": "52b45a098240570ae84e9d8a5fdb79929301ee2f7b3c2b1696c7d898bafaa0d3",
+      "archiveSha256": "07bbd1886806d7a53db735eaa1b7ba059fe291b76dea5bf4ec239b47e6463b61"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/immediate-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/immediate-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 55158123,
+      "archiveBytes": 8568676,
+      "rawSha256": "102d318b10331a608ff56c270ddce0ecef5e642c91d845285d0219e6eb31a2f0",
+      "archiveSha256": "f5ba15d0ae4b55c58f94287f626c799274bf61db991e705c78ce8f884e0edd59"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/imperative-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/imperative-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 78267260,
+      "archiveBytes": 13006741,
+      "rawSha256": "622994b8cc489252004d4833f6c4a2d571c02fbb78cc157bc9c224d4eec703f6",
+      "archiveSha256": "5c82b3427622f1e817ed8abdf84d0764ff79ddcc8ef34323293fb559e1f9fce0"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/imperative-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/imperative-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 82486258,
+      "archiveBytes": 13590797,
+      "rawSha256": "6c0cbbe96db749f8d48ecbb17458a0fb68b019edf3245dbb93406badb2d96707",
+      "archiveSha256": "a627af742b33446ce1fbaed4aca265790fb08327d3a87e057936b6d1b0c29a29"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/isolation-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/isolation-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 76779302,
+      "archiveBytes": 12881936,
+      "rawSha256": "1a9cbc059031d77389c0ea1d94cf6cf71b286a6f00283f01a3375f8e8d1ed4bc",
+      "archiveSha256": "f81076d7ea08e37a2268da33ab0b857a6a1d066455d903815bbf16633cd0019f"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/isolation-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/isolation-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 82813217,
+      "archiveBytes": 13613492,
+      "rawSha256": "25dad91ec0258bdb0d4e0d41b0dc516ab29bca086e88afc688f73fd440c8febf",
+      "archiveSha256": "50605707ee21ade0e0478f2854bdc283cfa6eee46cdb21191e2a3c62dfcac686"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/layers-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/layers-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 77799066,
+      "archiveBytes": 13034441,
+      "rawSha256": "e87bfafcb635d8349ed458a3c7bcb07c8a99b7cb7197d06b7e9e3edbe7091711",
+      "archiveSha256": "0dfe146abf3066a8b4deb31f3aa9826d361e9e82d213b1eb88005e0859113798"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/layers-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/layers-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 83121597,
+      "archiveBytes": 13674992,
+      "rawSha256": "568dd1f89008fc4c29d19e1bdde12354e98a0aad12d7d7acf158967345643080",
+      "archiveSha256": "977e6149a2867e650dc2403c6717b58ce53e5751a1b34c82acae7c4d0f90aff6"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/one-row-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/one-row-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 50574358,
+      "archiveBytes": 7594994,
+      "rawSha256": "7ab228846c9d1a7f9327b1922fa60b6764e35b22fa0a5609a3e45d0fb547c78a",
+      "archiveSha256": "60e399443ef5c49733c0d23561d48b6a4ec1ff93e56d8d664cc1c29ed8687c34"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/one-row-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/one-row-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 53156753,
+      "archiveBytes": 8292442,
+      "rawSha256": "c718b07d29db88c41966ac4dc8e9d09ad56f8a381a8f66c36daaa178d5784038",
+      "archiveSha256": "dbfea47ceec49f974d3289ad9da04cf932261a05c45d3a0409bc30e8f9f2681b"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/persistent-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/persistent-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 78236717,
+      "archiveBytes": 12957197,
+      "rawSha256": "b0f321515efcb8928009d6192f8715ebc9e2a9f5a1c7d8bf935fffbab4e0e7c2",
+      "archiveSha256": "45640c4ab619177bd87ba71de23e144601f6c8b54e74694b68e06bd5b077b971"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/persistent-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/persistent-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 84263166,
+      "archiveBytes": 13625954,
+      "rawSha256": "ac2e0a7414b69fa0ed274f56bf30e32a1a6f29f1d1e5bb631f519d68a2a38afd",
+      "archiveSha256": "729dde93d4a030b05dcc2d816392a564fdadfaff51f56b110c932b0bbf4b1cac"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/prearmed-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/prearmed-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 76950791,
+      "archiveBytes": 12832895,
+      "rawSha256": "bfa0f525e6b1dd1a1fe42baceb458eb0af422f560b14048ca15dd9c84ad513ab",
+      "archiveSha256": "c46d2479a3ace57e34df0d58b5e9602a8987e1e10dd43bf4ab5ba33ee29172c4"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/prearmed-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/prearmed-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 82314813,
+      "archiveBytes": 13580453,
+      "rawSha256": "ab4b39c37a10c40e025a46283def45cf32740b63a4a0623530b61808be0a581d",
+      "archiveSha256": "806687f92fc54e842e22303f2ffed7b9549bbbdb77bcd6ee3e702103ba8e958f"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/raw-input-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/raw-input-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 76331389,
+      "archiveBytes": 12837942,
+      "rawSha256": "e340d9aec815fa728ba46ce408c5c39b58f19c93fbda444d36976485e0096621",
+      "archiveSha256": "67904e355492bcbc4a2e84a8a9a5b6c4bb052e6ddad31dc7a1bd92b6603bbb55"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/raw-input-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/raw-input-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 85518682,
+      "archiveBytes": 13862548,
+      "rawSha256": "fdf4c6537f0ce2d3ed530e9052b9fb924575d2fa06007dcf4c2e2cbafe99e688",
+      "archiveSha256": "0893c5ee03ec2285c33239dc7b7a7ec8fbf634e9f53f4cfbc7d8354d605b3677"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/text-node-probe/full-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/text-node-probe/full-chrome-trace.json.gz",
+      "rawBytes": 5854493,
+      "archiveBytes": 1270454,
+      "rawSha256": "87894e035485831bde90ab708686757d00eb9e54df4472bdf59b769409edab7a",
+      "archiveSha256": "20b90f351454f43964caa7711b40c8056baa100408c1ed5fc82e3ccdec32cb78"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/text-node-probe/timeline-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/text-node-probe/timeline-chrome-trace.json.gz",
+      "rawBytes": 761586,
+      "archiveBytes": 66172,
+      "rawSha256": "22d04ee28d1b59ad23665075ec012a5d4764e953b6766e5f24a9d5df5320e2f7",
+      "archiveSha256": "652e2a0d85f2b24f0f4027ad4fd15ae4bfea46fdb7c45b76f8a575da8be650c7"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/trace-overhead/full-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/trace-overhead/full-chrome-trace.json.gz",
+      "rawBytes": 5981169,
+      "archiveBytes": 1299885,
+      "rawSha256": "c1cc989285959e66a41ebc9df28fe5713616dd557213b7f3e6f73133527b1f01",
+      "archiveSha256": "a1fb1c0a5de1f78c90dfe0e163cdc587553703dbe7f209d5fc276e27824d1ca0"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/trace-overhead/timeline-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/trace-overhead/timeline-chrome-trace.json.gz",
+      "rawBytes": 735749,
+      "archiveBytes": 65235,
+      "rawSha256": "6701d75ead116ed03486a83ea471f3ccc833851219fd5e6583c4ebd9de7323e0",
+      "archiveSha256": "5988bf6cb3b17bda29c27b54cca63635360bd7b1f0ea2ddfaa6be80cdd068bbd"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/visible-cursor-performance/indexed-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/visible-cursor-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 52724910,
+      "archiveBytes": 7951929,
+      "rawSha256": "25b33cfd3136eeff2a14b8d746e257489238128e020b30769cc68948dfd9e459",
+      "archiveSha256": "6e7a343548c52ac84dad403311d68b6085826f773cbdd616f55560516efc7724"
+    },
+    {
+      "raw": "reports/perf-targets-2026-11-10/visible-cursor-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/perf-targets-2026-11-10/visible-cursor-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 54864538,
+      "archiveBytes": 8637479,
+      "rawSha256": "6d280276f8dffe30215efe2196b3ed3081659150b7841785d3253bb797e93d96",
+      "archiveSha256": "338f2a76f7331c6d3b3ce9661421483c36f274e2baccebf0ff624967d4ad147c"
     },
     {
       "raw": "reports/performance/scan-chrome-trace.json",

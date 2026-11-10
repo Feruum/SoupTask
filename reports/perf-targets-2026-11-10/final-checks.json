@@ -1,0 +1,28 @@
+{
+  "sourceCommit": "41ae67f48be6364f719ba38ad71d694c8ae484fe",
+  "sourceHash": "68b68de6f774bf3624dffc7257711bbd6655d3dc7875f7fbdfb195959a8ae5aa",
+  "buildHash": "5a3fe0fd9d66886ff8d35a2141aaeb31c28a7f153c2fcc4142d80971b9ae735a",
+  "generatedAt": "2026-11-10T13:05:47.4004761+00:00",
+  "commands": [
+    {
+      "log": "reports/perf-targets-2026-11-10/acceptance-build.log",
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "log": "reports/perf-targets-2026-11-10/acceptance-lint.log",
+      "command": "npm run lint",
+      "exitCode": 0
+    },
+    {
+      "log": "reports/perf-targets-2026-11-10/acceptance-unit.log",
+      "command": "npm test -- --reporter=json --outputFile=reports/perf-targets-2026-11-10/final-unit.json",
+      "exitCode": 0
+    },
+    {
+      "log": "reports/perf-targets-2026-11-10/acceptance-manifest.log",
+      "command": "npm run data:check",
+      "exitCode": 0
+    }
+  ]
+}

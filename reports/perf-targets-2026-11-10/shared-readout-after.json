@@ -1,0 +1,555 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "tmp/perf-targets-playwright.config.mjs",
+      "e2e/shared-readout.spec.ts",
+      "e2e/cursor-dom.spec.ts",
+      "e2e/cursor-entry.spec.ts",
+      "e2e/cursor-invariance.spec.ts",
+      "e2e/readout-keyboard.spec.ts",
+      "e2e/hover-layout.spec.ts",
+      "e2e/pinned-source.spec.ts"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\perf-targets-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/shared-readout-after-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\perf-targets-2026-11-10\\shared-readout-after-artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:/Users/Ferumm/projects/soupTask/reports/perf-targets-2026-11-10/shared-readout-after.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "cursor-dom.spec.ts",
+      "file": "cursor-dom.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "moving source markers does not invalidate unrelated overlay pixels",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2331,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:26:51.210Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-a934faa523336d894797",
+          "file": "cursor-dom.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "moving the numeric cursor updates persistent source rows without replacing observation DOM",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2016,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:26:53.710Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-76eecc58855c23fcd1db",
+          "file": "cursor-dom.spec.ts",
+          "line": 25,
+          "column": 1
+        },
+        {
+          "title": "zoom does not recompute immutable whole-run comparison summaries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2077,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:26:55.747Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-0eca5a019caf67e0a6a6",
+          "file": "cursor-dom.spec.ts",
+          "line": 47,
+          "column": 1
+        },
+        {
+          "title": "source cursor updates keep React out of the settled observation hot path",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2096,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:26:57.839Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9464dc1619bfb77a9397-0d9292ce17864b3c4858",
+          "file": "cursor-dom.spec.ts",
+          "line": 60,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cursor-entry.spec.ts",
+      "file": "cursor-entry.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "entering and leaving a chart keeps the chart React tree out of cursor work",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1565,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:26:59.973Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4d7ebb3315801731adc-85d9cc8f528973ebeda1",
+          "file": "cursor-entry.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "zoom keeps readout source nodes and their focus identity while replacing their accepted view",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1960,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:27:01.553Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e4d7ebb3315801731adc-c87db048fe974aa561ce",
+          "file": "cursor-entry.spec.ts",
+          "line": 16,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "cursor-invariance.spec.ts",
+      "file": "cursor-invariance.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "moving over the same original row changes distance without rewriting source identity or empty slots",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1895,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:27:03.545Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "14c78d49399d1b0d5977-a598355c9bcbaf0b2c74",
+          "file": "cursor-invariance.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "hover-layout.spec.ts",
+      "file": "hover-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "settled source hover confines layout to readouts instead of relaying it through the document",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1739,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:27:05.460Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "settled-hover-layout.json",
+                      "contentType": "application/json",
+                      "body": "WwogIHsKICAgICJhcmdzIjogewogICAgICAiYmVnaW5EYXRhIjogewogICAgICAgICJkaXJ0eU9iamVjdHMiOiAzLAogICAgICAgICJmcmFtZSI6ICJGNTA3MjZGNTI3N0Y0QUMxODA0NEIwMEEwM0VBNTY2NSIsCiAgICAgICAgInBhcnRpYWxMYXlvdXQiOiB0cnVlLAogICAgICAgICJ0b3RhbE9iamVjdHMiOiA1CiAgICAgIH0sCiAgICAgICJlbmREYXRhIjogewogICAgICAgICJsYXlvdXRSb290cyI6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgImRlcHRoIjogMTYsCiAgICAgICAgICAgICJub2RlSWQiOiAxNSwKICAgICAgICAgICAgIm5vZGVOYW1lIjogIkRJViBjbGFzcz0nX3NoYXJlZFZpZXdwb3J0X2R6bTB5XzQ0JyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAxMDc4LjI4MTI1LAogICAgICAgICAgICAgICAgMTIxMCwKICAgICAgICAgICAgICAgIDEwNzguMjgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMTM2Mi4yODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDEzNjIuMjgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgICJkZXB0aCI6IDE1LAogICAgICAgICAgICAibm9kZUlkIjogMTYsCiAgICAgICAgICAgICJub2RlTmFtZSI6ICJESVYgY2xhc3M9J19jb250ZW50X2R6bTB5XzE4IGNoYXJ0LWhvdmVyLXZhbHVlJyIsCiAgICAgICAgICAgICJxdWFkcyI6IFsKICAgICAgICAgICAgICBbCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAxMDQyLjI4MTI1LAogICAgICAgICAgICAgICAgMTIxMCwKICAgICAgICAgICAgICAgIDEwNDIuMjgxMjUsCiAgICAgICAgICAgICAgICAxMjEwLAogICAgICAgICAgICAgICAgMTM0Mi4yODEyNSwKICAgICAgICAgICAgICAgIDU1OCwKICAgICAgICAgICAgICAgIDEzNDIuMjgxMjUKICAgICAgICAgICAgICBdCiAgICAgICAgICAgIF0KICAgICAgICAgIH0KICAgICAgICBdCiAgICAgIH0KICAgIH0sCiAgICAiY2F0IjogImRldnRvb2xzLnRpbWVsaW5lIiwKICAgICJkdXIiOiAyMjQsCiAgICAibmFtZSI6ICJMYXlvdXQiLAogICAgInBoIjogIlgiLAogICAgInBpZCI6IDEzMTg0LAogICAgInRkdXIiOiAyMjMsCiAgICAidGlkIjogMjU4OTIsCiAgICAidHMiOiAxMjc2Mjg4MDA1MywKICAgICJ0dHMiOiA2MDEwNjYKICB9LAogIHsKICAgICJhcmdzIjogewogICAgICAiYmVnaW5EYXRhIjogewogICAgICAgICJkaXJ0eU9iamVjdHMiOiAxNSwKICAgICAgICAiZnJhbWUiOiAiRjUwNzI2RjUyNzdGNEFDMTgwNDRCMDBBMDNFQTU2NjUiLAogICAgICAgICJwYXJ0aWFsTGF5b3V0IjogdHJ1ZSwKICAgICAgICAidG90YWxPYmplY3RzIjogNzQKICAgICAgfSwKICAgICAgImVuZERhdGEiOiB7CiAgICAgICAgImxheW91dFJvb3RzIjogWwogICAgICAgICAgewogICAgICAgICAgICAiZGVwdGgiOiAxNSwKICAgICAgICAgICAgIm5vZGVJZCI6IDE2LAogICAgICAgICAgICAibm9kZU5hbWUiOiAiRElWIGNsYXNzPSdfY29udGVudF9kem0weV8xOCBjaGFydC1ob3Zlci12YWx1ZSciLAogICAgICAgICAgICAicXVhZHMiOiBbCiAgICAgICAgICAgICAgWwogICAgICAgICAgICAgICAgNTU4LAogICAgICAgICAgICAgICAgMTA0Mi4yODEyNSwKICAgICAgICAgICAgICAgIDEyMTAsCiAgICAgICAgICAgICAgICAxMDQyLjI4MTI1LAogICAgICAgICAgICAgICAgMTIxMCwKICAgICAgICAgICAgICAgIDEzNDIuMjgxMjUsCiAgICAgICAgICAgICAgICA1NTgsCiAgICAgICAgICAgICAgICAxMzQyLjI4MTI1CiAgICAgICAgICAgICAgXQogICAgICAgICAgICBdCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9CiAgICB9LAogICAgImNhdCI6ICJkZXZ0b29scy50aW1lbGluZSIsCiAgICAiZHVyIjogODEyLAogICAgIm5hbWUiOiAiTGF5b3V0IiwKICAgICJwaCI6ICJYIiwKICAgICJwaWQiOiAxMzE4NCwKICAgICJ0ZHVyIjogODEyLAogICAgInRpZCI6IDI1ODkyLAogICAgInRzIjogMTI3NjI4ODYwNjksCiAgICAidHRzIjogNjA2OTI0CiAgfQpd"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-48ecde7e2cac0b00d0d5",
+          "file": "hover-layout.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "pinned-source.spec.ts",
+      "file": "pinned-source.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a pinned original row keeps exact values after the cursor moves and opens its revision",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1990,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:27:07.224Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "0fb2006b6c2ff0e2e8dc-f2fc1c03056b41ef57c6",
+          "file": "pinned-source.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "readout-keyboard.spec.ts",
+      "file": "readout-keyboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "keyboard traversal reaches exact source actions across offscreen readout boundaries",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1878,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:27:09.246Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d77008288cb50673c321-14a3d475e2094e0b8641",
+          "file": "readout-keyboard.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "shared-readout.spec.ts",
+      "file": "shared-readout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Compare has one shared original-row table with every metric and exact Pin provenance",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2092,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T11:27:11.160Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d9a4badc11214fe4aef0-4f9e3dea9b3b85968a41",
+          "file": "shared-readout.spec.ts",
+          "line": 3,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T11:26:49.239Z",
+    "duration": 26075.344999999998,
+    "expected": 11,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
