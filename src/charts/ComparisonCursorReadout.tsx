@@ -11,6 +11,7 @@ import styles from '@/features/shared/cursor-readout.module.css'
 
 const METRICS:Metric[]=['loss','lr','grad_norm']
 const {exact,text,attribute,hidden,toggle}=sourceDom
+let dockEpoch=0
 type Props={workspace:Workspace;ids:string[];slots:Record<string,number>;colorTokens:string[];onPin:(source:{id:string;revision:string;row:SourceRow})=>void}
 
 /** One persistent original-row table for all comparison panels; raw values are never interpolated. */
@@ -20,6 +21,18 @@ export const ComparisonCursorReadout=memo(function ComparisonCursorReadout({work
  const {view,runs}=workspace.state,store=workspace.cursor,identity=ids.join(',')
  const comparison=ids.length>1
  const accepted=useRef({view,runs})
+ useLayoutEffect(()=>{
+  const main=document.getElementById('main-content'),shell=main?.parentElement
+  if(!main||!shell)return
+  const owner=String(++dockEpoch),previous={shell:shell.classList.contains(styles.dockShell),scroll:main.classList.contains(styles.dockScroll),members:main.getAttribute('data-source-dock-members'),owner:main.getAttribute('data-source-dock-owner')}
+  shell.classList.add(styles.dockShell);main.classList.add(styles.dockScroll)
+  main.setAttribute('data-source-dock-members',String(identity.split(',').length));main.setAttribute('data-source-dock-owner',owner)
+  return()=>{
+   if(main.getAttribute('data-source-dock-owner')!==owner)return
+   shell.classList.toggle(styles.dockShell,previous.shell);main.classList.toggle(styles.dockScroll,previous.scroll)
+   attribute(main,'data-source-dock-members',previous.members);attribute(main,'data-source-dock-owner',previous.owner)
+  }
+ },[identity])
  useLayoutEffect(()=>{accepted.current={view,runs};refresh.current?.()},[view,runs])
  useLayoutEffect(()=>{
   const root=host.current;if(!root)return
