@@ -3,8 +3,10 @@ export type HoverVisibility={visible:boolean;cells:{text:string;rect:Bounds;clip
 
 /** Read-only, after DOM commit. A rendered box alone does not establish readable values. */
 export function inspectHoverVisibility(root:HTMLElement):HoverVisibility{
- const clips=new Map<Element,Bounds>(),styles=new Map<Element,CSSStyleDeclaration>()
- const style=(node:Element)=>{let css=styles.get(node);if(!css){css=getComputedStyle(node);styles.set(node,css)}return css}
+ type Style={position:string;contain:string;overflowX:string;overflowY:string;visible:boolean}
+ const clips=new Map<Element,Bounds>(),styles=new Map<Element,Style>(),visibility=new Map<Element,boolean>()
+ const style=(node:Element)=>{let css=styles.get(node);if(!css){const computed=getComputedStyle(node);css={position:computed.position,contain:computed.contain,overflowX:computed.overflowX,overflowY:computed.overflowY,visible:computed.visibility==='visible'&&computed.display!=='none'&&Number(computed.opacity)!==0};styles.set(node,css)}return css}
+ const visible=(node:Element):boolean=>{const cached=visibility.get(node);if(cached!==undefined)return cached;const value=style(node).visible&&(!node.parentElement||visible(node.parentElement));visibility.set(node,value);return value}
  const clip=(node:Element):Bounds=>{
   const cached=clips.get(node);if(cached)return cached
   const css=style(node),parent=css.position==='fixed'?null:node.parentElement
@@ -22,14 +24,14 @@ export function inspectHoverVisibility(root:HTMLElement):HoverVisibility{
  const cells=nodes.map(node=>{
   const range=document.createRange();range.selectNodeContents(node)
   const box=range.getBoundingClientRect(),bounds=clip(node),rect={left:box.left,top:box.top,right:box.right,bottom:box.bottom}
-  let reason:string|null=null
-  for(let ancestor:Element|null=node;ancestor;ancestor=ancestor.parentElement){const css=style(ancestor);if(css.visibility!=='visible'||css.display==='none'||Number(css.opacity)===0){reason='hidden';break}}
+  let reason:string|null=visible(node)?null:'hidden'
   if(!reason&&(!box.width||!box.height||!node.textContent?.trim()))reason='empty'
   if(!reason&&(box.left<bounds.left||box.right>bounds.right||box.top<bounds.top||box.bottom>bounds.bottom))reason='clipped-or-offscreen'
   if(!reason){
-   const inset=Math.min(1,box.width/4,box.height/4)
-   const points=[[box.left+inset,box.top+inset],[box.right-inset,box.top+inset],[box.left+inset,box.bottom-inset],[box.right-inset,box.bottom-inset],[(box.left+box.right)/2,(box.top+box.bottom)/2]]
-   if(points.some(([x,y])=>{const hit=document.elementFromPoint(x,y);return !hit||!node.contains(hit)}))reason='occluded'
+   // Sample occlusion once per actual cell; full text bounds above establish clipping.
+   // This does not assert that every physical pixel is unobscured.
+   const hit=document.elementFromPoint((box.left+box.right)/2,(box.top+box.bottom)/2)
+   if(!hit||!node.contains(hit))reason='occluded'
   }
   return{text:node.textContent??'',rect,clip:bounds,reason}
  })

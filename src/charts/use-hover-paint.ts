@@ -19,9 +19,9 @@ function arm(viewSeq:number,hoverSeq:number,hoverStep:number|null):Frame|undefin
    const current=window.__soupEvidence
    if(current?.workspaceEpoch!==frame.epoch||current.viewSeq!==viewSeq||current.acceptedHoverSeq!==hoverSeq){frame.cancel();return}
    const tooltips=[...document.querySelectorAll<HTMLElement>(`.chart-hover-value[data-hover-seq="${hoverSeq}"]`)]
-   const visibility=tooltips.map(inspectHoverVisibility)
+   const verificationStarted=performance.now(),visibility=tooltips.map(inspectHoverVisibility),verificationMs=performance.now()-verificationStarted
    if(!tooltips.length||visibility.some(result=>!result.visible)){performanceMark('soup:hover-not-visible',{detail:{workspaceEpoch:frame.epoch,viewSeq,hoverSeq,visibility}});frame.cancel();return}
-   performanceMark('soup:hover-frame',{detail:{workspaceEpoch:frame.epoch,viewSeq,hoverSeq,step:hoverStep,requestToAcceptedMs:timing.acceptedAt-timing.requestStartedAt,requestToFrameMs:performance.now()-timing.requestStartedAt,tooltipCount:tooltips.length,visibility}})
+   performanceMark('soup:hover-frame',{detail:{workspaceEpoch:frame.epoch,viewSeq,hoverSeq,step:hoverStep,requestToAcceptedMs:timing.acceptedAt-timing.requestStartedAt,requestToFrameMs:performance.now()-timing.requestStartedAt,tooltipCount:tooltips.length,verificationMs,visibility}})
    lastAcknowledged=key;frame.cancel()
   })
  })
