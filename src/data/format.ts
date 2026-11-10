@@ -32,8 +32,16 @@ export function formatValue(value: number | null | undefined, scientific = false
   return numberFormat(locale, scientific || (value !== 0 && Math.abs(value) < 0.001) ? 'scientific' : 'value').format(value)
 }
 
-export function formatTimestamp(instant: string, locale = displayLocale(), timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone): string {
-  return new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeStyle: 'short', timeZone }).format(new Date(instant)) + ` (${timeZone})`
+const timestampFormats = new Map<string, Intl.DateTimeFormat>()
+export function formatTimestamp(instant: string, locale = displayLocale(), timeZone?: string): string {
+  const key = `${locale}:${timeZone ?? 'system'}`
+  let formatter = timestampFormats.get(key)
+  if (!formatter) {
+    formatter = new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeStyle: 'short', ...(timeZone === undefined ? {} : { timeZone }) })
+    if (timestampFormats.size >= 32) timestampFormats.delete(timestampFormats.keys().next().value!)
+    timestampFormats.set(key, formatter)
+  }
+  return formatter.format(new Date(instant)) + ` (${timeZone ?? formatter.resolvedOptions().timeZone})`
 }
 
 export function sourceAge(instant: string | undefined, now = Date.now()): { stale: boolean; hours: number | null } {
