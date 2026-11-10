@@ -153,3 +153,4 @@ test('source layout ownership changes only with workspace membership and cleans 
  await expect(main).not.toHaveAttribute('data-source-dock-owner')
  expect(await main.evaluate(node=>getComputedStyle(node).overflowY)).toBe('visible')
 })
+
