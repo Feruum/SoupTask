@@ -1,0 +1,406 @@
+[
+  {
+    "id": "S01",
+    "title": "Neptune — Smoothing and rendering/downsampling",
+    "original_url": "https://docs.neptune.ai/smoothing",
+    "status": "confirmed",
+    "note_en": "Mean and min/max rendering, finer detail on zoom; empty-range interpolation is also documented.",
+    "note_ru": "Подтверждено агрегирование mean + min/max и детализация при zoom; в источнике также есть интерполяция пустых интервалов.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://docs.neptune.ai/smoothing"
+  },
+  {
+    "id": "S02",
+    "title": "Neptune — Min/Max error bands",
+    "original_url": "https://docs.neptune.ai/error_bands",
+    "status": "confirmed",
+    "note_en": "Min/max bands are observed ranges; do not relabel as confidence intervals.",
+    "note_ru": "Min/max-полоса показывает наблюдаемый диапазон; это не доверительный интервал.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://docs.neptune.ai/error_bands"
+  },
+  {
+    "id": "S03",
+    "title": "W&B Server releases (Full Fidelity Band/Line and bug fixes)",
+    "original_url": "https://github.com/wandb/server/releases",
+    "status": "partial",
+    "note_en": "The release listing and indexed excerpts were inconsistent. The exact 0.84 / August 2026 claim is removed; no claim that this release does not exist.",
+    "note_ru": "Страница релизов и поисковые фрагменты расходились. Точная связка 0.84 / август 2026 убрана; отсутствие релиза не утверждается.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://github.com/wandb/server/releases"
+  },
+  {
+    "id": "S04",
+    "title": "W&B Models full-fidelity feature",
+    "original_url": "https://site.wandb.ai/models/",
+    "status": "vendor_claim",
+    "note_en": "Full-fidelity spike visibility is a vendor claim; no internal sampling algorithm is inferred.",
+    "note_ru": "Видимость spikes в Full Fidelity — заявление производителя, не независимая проверка и не описание внутреннего алгоритма.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://site.wandb.ai/models/"
+  },
+  {
+    "id": "S05",
+    "title": "W&B — Missing chart datapoints issue and full-fidelity response",
+    "original_url": "https://github.com/wandb/wandb/issues/4177",
+    "status": "historical",
+    "note_en": "A historical issue and maintainer follow-up; not proof of a current bug in every version.",
+    "note_ru": "Исторический issue и ответ сопровождающего, не доказательство текущего бага всех версий.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://github.com/wandb/wandb/issues/4177"
+  },
+  {
+    "id": "S06",
+    "title": "Comet — Total fidelity metrics",
+    "original_url": "https://www.comet.com/docs/v2/guides/experiment-management/total-fidelity/",
+    "status": "confirmed",
+    "note_en": "Full-history compressed CSV and sampled built-in charts are distinct representations.",
+    "note_ru": "Полная история в сжатом CSV и sampled-данные встроенных графиков — разные представления.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://www.comet.com/docs/v2/guides/experiment-management/total-fidelity/"
+  },
+  {
+    "id": "S07",
+    "title": "Comet — Limits and performance",
+    "original_url": "https://www.comet.com/docs/v2/guides/experiment-management/limits-and-performance/",
+    "status": "confirmed",
+    "note_en": "The retrieved documentation states 15,000 values per metric per experiment before downsampling. Scope to that documentation, not all configurations forever.",
+    "note_ru": "В открытой документации указан порог 15 000 значений на метрику эксперимента до downsampling; это не вечный лимит всех конфигураций.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://www.comet.com/docs/v2/guides/experiment-management/limits-and-performance/"
+  },
+  {
+    "id": "S08",
+    "title": "Comet — Metrics logging and reservoir sampling",
+    "original_url": "https://www.comet.com/docs/v2/guides/experiment-management/log-data/metrics-and-parameters/",
+    "status": "confirmed",
+    "note_en": "Reservoir sampling is documented; on-premises settings can be adjusted.",
+    "note_ru": "Описаны reservoir sampling и возможность настройки в on-premises установках.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://www.comet.com/docs/v2/guides/experiment-management/log-data/metrics-and-parameters/"
+  },
+  {
+    "id": "S09",
+    "title": "TensorBoard — HTTP API and reservoir sampling",
+    "original_url": "https://github.com/tensorflow/tensorboard/blob/master/tensorboard/http_api.md",
+    "status": "confirmed",
+    "note_en": "The HTTP API says values may be reservoir-sampled and the latest is retained. Do not generalize to every current TensorBoard renderer.",
+    "note_ru": "HTTP API допускает reservoir sampling и сохраняет последнее значение. Это не утверждение обо всех современных рендерах TensorBoard.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://github.com/tensorflow/tensorboard/blob/master/tensorboard/http_api.md"
+  },
+  {
+    "id": "S10",
+    "title": "ClearML — Scalar charts, data zoom and Show Originals",
+    "original_url": "https://www.clear.ml/docs/latest/docs/webapp/webapp_exp_track_visual/",
+    "status": "official_replacement",
+    "note_en": "The site fetch was blocked; the official documentation repository was read instead. Smoothing / Show Originals / axis semantics confirmed.",
+    "note_ru": "Сайт не удалось прочитать; использован официальный репозиторий документации. Подтверждены smoothing / Show Originals / семантика X.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://github.com/clearml/clearml-docs/blob/main/docs/webapp/webapp_exp_track_visual.md"
+  },
+  {
+    "id": "S11",
+    "title": "Grafana — Query options and Max data points",
+    "original_url": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/query-transform-data/",
+    "status": "confirmed",
+    "note_en": "Max-data-points depends on panel width; aggregation is data-source dependent.",
+    "note_ru": "Max data points связан с шириной панели; конкретная агрегация зависит от источника данных.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/query-transform-data/"
+  },
+  {
+    "id": "S12",
+    "title": "Grafana — Time-series null/gap/axis behavior",
+    "original_url": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/visualizations/time-series/",
+    "status": "confirmed",
+    "note_en": "Null-connection and axis settings are documented. They are choices, not guarantees of truthful defaults.",
+    "note_ru": "Описаны настройки null-разрывов и осей. Наличие настройки не гарантирует корректный default.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://grafana.com/docs/grafana/latest/visualizations/panels-visualizations/visualizations/time-series/"
+  },
+  {
+    "id": "S13",
+    "title": "Datadog — Rollup aggregators",
+    "original_url": "https://docs.datadoghq.com/dashboards/functions/rollup/",
+    "status": "official_replacement",
+    "note_en": "The site response format could not be read; official source Markdown confirms avg/min/max rollups.",
+    "note_ru": "Ответ сайта не прочитался; официальный Markdown подтверждает avg/min/max rollup.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://raw.githubusercontent.com/DataDog/documentation/master/content/en/dashboards/functions/rollup.md"
+  },
+  {
+    "id": "S14",
+    "title": "Datadog — Metric monitors and max thresholds",
+    "original_url": "https://docs.datadoghq.com/monitors/types/metric/",
+    "status": "unverified",
+    "note_en": "The metric-monitor page could not be read in this pass. The specific monitor-trigger statement is not retained as verified.",
+    "note_ru": "Страница metric monitor в этом проходе не прочитана. Точное утверждение о срабатывании monitor не включено как подтверждённое.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://docs.datadoghq.com/monitors/types/metric/"
+  },
+  {
+    "id": "S15",
+    "title": "Highcharts Stock — Data grouping",
+    "original_url": "https://www.highcharts.com/docs/stock/data-grouping",
+    "status": "confirmed",
+    "note_en": "Pixel-width data grouping and configurable approximation are documented.",
+    "note_ru": "Подтверждены группировка по ширине и настраиваемая аппроксимация.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://www.highcharts.com/docs/stock/data-grouping"
+  },
+  {
+    "id": "S16",
+    "title": "Highcharts — Grouping approximation options",
+    "original_url": "https://api.highcharts.com/highstock/series.spline.dataGrouping.approximation",
+    "status": "official_replacement",
+    "note_en": "The original spline page failed; the official equivalent line-series approximation page was read.",
+    "note_ru": "Исходная spline-страница не прочиталась; открыта официальная страница approximation для line-series.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://api.highcharts.com/highstock/series.line.dataGrouping.approximation"
+  },
+  {
+    "id": "S17",
+    "title": "Aim — Metrics Explorer",
+    "original_url": "https://aimstack.readthedocs.io/en/latest/ui/pages/explorers.html",
+    "status": "confirmed",
+    "note_en": "Explorer comparison / aggregation / outlier settings confirmed; no proof of a particular spike-preserving renderer.",
+    "note_ru": "Подтверждены сравнение, агрегация и настройки выбросов; сохранение spike конкретным renderer не доказано.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://aimstack.readthedocs.io/en/latest/ui/pages/explorers.html"
+  },
+  {
+    "id": "S18",
+    "title": "MLflow — Tracking",
+    "original_url": "https://mlflow.org/docs/latest/ml/tracking/",
+    "status": "confirmed",
+    "note_en": "Tracking provenance is documented; no isolated-spike rendering guarantee established.",
+    "note_ru": "Подтверждено происхождение экспериментов; гарантия отрисовки одиночного spike не установлена.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://mlflow.org/docs/latest/ml/tracking/"
+  },
+  {
+    "id": "S19",
+    "title": "AWS SageMaker — Stop training jobs early",
+    "original_url": "https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-early-stopping.html",
+    "status": "confirmed",
+    "note_en": "Early stopping concerns tuning trials and a defined objective, not an arbitrary single loss spike.",
+    "note_ru": "Early stopping относится к tuning trials и заданной objective, а не к любому одиночному скачку loss.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-early-stopping.html"
+  },
+  {
+    "id": "S20",
+    "title": "AWS SageMaker — Tuning completion criteria",
+    "original_url": "https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-progress.html",
+    "status": "confirmed",
+    "note_en": "Tuning completion criteria are documented; they are outside the frontend implementation scope.",
+    "note_ru": "Критерии завершения tuning подтверждены, но находятся вне scope frontend.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-progress.html"
+  },
+  {
+    "id": "S21",
+    "title": "Ray Tune — ASHA and early stopping",
+    "original_url": "https://docs.ray.io/en/latest/tune/getting-started.html",
+    "status": "unverified",
+    "note_en": "Ray pages returned rate-limit/fetch failures. ASHA details are omitted from the newly verified findings.",
+    "note_ru": "Страницы Ray вернули ограничения/ошибки получения. Детали ASHA не включены в заново подтверждённые выводы.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://docs.ray.io/en/latest/tune/getting-started.html"
+  },
+  {
+    "id": "S22",
+    "title": "Lightning — EarlyStopping callback",
+    "original_url": "https://lightning.ai/docs/pytorch/latest/optional-api/api/lightning.pytorch.callbacks.EarlyStopping",
+    "status": "official_replacement",
+    "note_en": "The API page failed; the official EarlyStopping source confirms explicit monitor / patience / finite / divergence settings.",
+    "note_ru": "API-страница не прочиталась; официальный исходник EarlyStopping подтверждает явные monitor / patience / finite / divergence настройки.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://github.com/Lightning-AI/pytorch-lightning/blob/master/src/lightning/pytorch/callbacks/early_stopping.py"
+  },
+  {
+    "id": "S23",
+    "title": "uPlot — performance, non-features, gap/band support",
+    "original_url": "https://github.com/leeoniya/uPlot",
+    "status": "confirmed",
+    "note_en": "Canvas rendering and absent built-in aggregation confirmed. Vendor benchmark numbers are not our app measurements.",
+    "note_ru": "Подтверждены Canvas и отсутствие встроенной агрегации. Бенчмарки автора не являются нашими замерами.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://github.com/leeoniya/uPlot"
+  },
+  {
+    "id": "S24",
+    "title": "Plotly — high-performance charts and WebGL limits",
+    "original_url": "https://plotly.com/python/performance/",
+    "status": "unverified",
+    "note_en": "The Plotly page was not successfully read. Its performance / WebGL-limit claims are excluded from the verified comparison.",
+    "note_ru": "Страница Plotly не была успешно прочитана. Утверждения о скорости и WebGL-лимитах исключены из подтверждённого сравнения.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://plotly.com/python/performance/"
+  },
+  {
+    "id": "S25",
+    "title": "MDN — JSON.stringify and non-finite numbers",
+    "original_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify",
+    "status": "confirmed",
+    "note_en": "Non-finite numbers stringify to null; raw generation avoids this transport ambiguity.",
+    "note_ru": "Нечисловые значения сериализуются в null; генерация raw устраняет эту неоднозначность транспорта.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify"
+  },
+  {
+    "id": "S26",
+    "title": "Chrome DevTools — Performance and 4× CPU throttling",
+    "original_url": "https://developer.chrome.com/docs/devtools/performance",
+    "status": "confirmed",
+    "note_en": "Chrome Performance workflow checked. No Soup browser trace has been recorded.",
+    "note_ru": "Проверена методика Chrome Performance. Трейс нашего Soup-приложения ещё не записан.",
+    "checked_date": "2026-11-10",
+    "verified_url": "https://developer.chrome.com/docs/devtools/performance"
+  },
+  {
+    "id": "S27",
+    "title": "uPlot — aligned data format",
+    "original_url": "https://github.com/leeoniya/uPlot/blob/master/docs/README.md",
+    "verified_url": "https://github.com/leeoniya/uPlot/blob/master/docs/README.md",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S28",
+    "title": "uPlot — public TypeScript API, gaps and coordinate units",
+    "original_url": "https://raw.githubusercontent.com/leeoniya/uPlot/master/dist/uPlot.d.ts",
+    "verified_url": "https://raw.githubusercontent.com/leeoniya/uPlot/master/dist/uPlot.d.ts",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S29",
+    "title": "ECharts — LineSeries implementation and progressive default",
+    "original_url": "https://raw.githubusercontent.com/apache/echarts/master/src/chart/line/LineSeries.ts",
+    "verified_url": "https://raw.githubusercontent.com/apache/echarts/master/src/chart/line/LineSeries.ts",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S30",
+    "title": "Playwright — accessibility testing and axe",
+    "original_url": "https://playwright.dev/docs/accessibility-testing",
+    "verified_url": "https://playwright.dev/docs/accessibility-testing",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S31",
+    "title": "Chrome DevTools Protocol — Performance domain",
+    "original_url": "https://chromedevtools.github.io/devtools-protocol/tot/Performance/",
+    "verified_url": "https://chromedevtools.github.io/devtools-protocol/tot/Performance/",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S32",
+    "title": "Chrome DevTools Protocol — Runtime.getHeapUsage schema",
+    "original_url": "https://raw.githubusercontent.com/ChromeDevTools/devtools-protocol/master/pdl/js_protocol.pdl",
+    "verified_url": "https://raw.githubusercontent.com/ChromeDevTools/devtools-protocol/master/pdl/js_protocol.pdl",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S33",
+    "title": "MDN — measureUserAgentSpecificMemory",
+    "original_url": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/measureUserAgentSpecificMemory",
+    "verified_url": "https://developer.mozilla.org/en-US/docs/Web/API/Performance/measureUserAgentSpecificMemory",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S34",
+    "title": "Chrome DevTools — memory diagnostics and Task Manager",
+    "original_url": "https://developer.chrome.com/docs/devtools/memory-problems",
+    "verified_url": "https://developer.chrome.com/docs/devtools/memory-problems",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S35",
+    "title": "Playwright — browser.startTracing",
+    "original_url": "https://playwright.dev/docs/api/class-browser#browser-start-tracing",
+    "verified_url": "https://playwright.dev/docs/api/class-browser#browser-start-tracing",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S36",
+    "title": "Chrome DevTools Protocol — CPU throttling",
+    "original_url": "https://raw.githubusercontent.com/ChromeDevTools/devtools-protocol/master/pdl/domains/Emulation.pdl",
+    "verified_url": "https://raw.githubusercontent.com/ChromeDevTools/devtools-protocol/master/pdl/domains/Emulation.pdl",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S37",
+    "title": "Playwright — locale and timezone emulation",
+    "original_url": "https://playwright.dev/docs/emulation",
+    "verified_url": "https://playwright.dev/docs/emulation",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S38",
+    "title": "Playwright — network mocking",
+    "original_url": "https://playwright.dev/docs/mock",
+    "verified_url": "https://playwright.dev/docs/mock",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S39",
+    "title": "WCAG 2.2 — text contrast",
+    "original_url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "verified_url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S40",
+    "title": "WCAG 2.2 — non-text contrast",
+    "original_url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+    "verified_url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S41",
+    "title": "Lighthouse — accessibility scoring limits",
+    "original_url": "https://developer.chrome.com/docs/lighthouse/accessibility/scoring",
+    "verified_url": "https://developer.chrome.com/docs/lighthouse/accessibility/scoring",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S42",
+    "title": "MDN — transferable objects and detached buffers",
+    "original_url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects",
+    "verified_url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Transferable_objects",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S43",
+    "title": "MDN — Intl.NumberFormat.formatToParts",
+    "original_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts",
+    "verified_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  },
+  {
+    "id": "S44",
+    "title": "MDN — Float64Array",
+    "original_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "verified_url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "status": "confirmed",
+    "checked_date": "2026-11-10"
+  }
+]

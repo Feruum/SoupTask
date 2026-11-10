@@ -1,0 +1,46 @@
+scan: cold load 1/5; samples persisted
+scan: cold load 2/5; samples persisted
+scan: cold load 3/5; samples persisted
+scan: cold load 4/5; samples persisted
+scan: cold load 5/5; samples persisted
+stream: cold load 1/5; samples persisted
+stream: cold load 2/5; samples persisted
+stream: cold load 3/5; samples persisted
+stream: cold load 4/5; samples persisted
+stream: cold load 5/5; samples persisted
+{
+  "scan": {
+    "cold": {
+      "count": 5,
+      "p50": 3105.9089000000095,
+      "p95": 3291.1619
+    },
+    "zoom": {
+      "count": 30,
+      "p50": 424.1000000014901,
+      "p95": 656.7999999970198
+    },
+    "hover": {
+      "count": 30,
+      "p50": 16.600000001490116,
+      "p95": 20.200000002980232
+    }
+  },
+  "stream": {
+    "cold": {
+      "count": 5,
+      "p50": 2879.1710999999777,
+      "p95": 3110.958200000008
+    },
+    "zoom": {
+      "count": 30,
+      "p50": 267.1000000014901,
+      "p95": 445.30000000447035
+    },
+    "hover": {
+      "count": 30,
+      "p50": 15.399999998509884,
+      "p95": 18.899999998509884
+    }
+  }
+}

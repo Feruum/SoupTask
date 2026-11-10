@@ -1,0 +1,72 @@
+
+ RUN  v5.1.0 C:/Users/Ferumm/projects/soupTask
+
+ ❯ src/core/topology.test.ts (2 tests | 2 failed) 24ms
+   × isolated spike keeps both NaN breaks and distinct source segments 19ms
+   × known cadence gap remains disconnected without a fabricated null row 2ms
+ ✓ src/core/engine.test.ts (10 tests) 532ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  2 failed | 10 passed (12)
+   Start at  03:40:12
+   Duration  1.38s (tests 50%, import 44%, transform 4%, worker 2%)
+
+JSON report written to C:/Users/Ferumm/projects/soupTask/reports/negative-controls/2026-11-09T22-40-05-410Z/bridged.json
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/core/topology.test.ts > isolated spike keeps both NaN breaks and distinct source segments
+AssertionError: expected [] to deeply equal [ { from: +0, to: 2, …(1) }, …(1) ]
+
+- Expected
++ Received
+
+- [
+-   {
+-     "from": 0,
+-     "kind": "invalid",
+-     "to": 2,
+-   },
+-   {
+-     "from": 2,
+-     "kind": "invalid",
+-     "to": 4,
+-   },
+- ]
++ []
+
+ ❯ src/core/topology.test.ts:14:23
+     12|   const view = sampleView(n, 'loss', 0, 4, 1);
+     13|   expect(view.points.some(point => point.sourceIndex === 2 && point.st…
+     14|   expect(view.breaks).toEqual([{
+       |                       ^
+     15|     from: 0,
+     16|     to: 2,
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/core/topology.test.ts > known cadence gap remains disconnected without a fabricated null row
+AssertionError: expected [] to deeply equal [ { from: 1, to: 4, kind: 'gap' } ]
+
+- Expected
++ Received
+
+- [
+-   {
+-     "from": 1,
+-     "kind": "gap",
+-     "to": 4,
+-   },
+- ]
++ []
+
+ ❯ src/core/topology.test.ts:31:23
+     29|   });
+     30|   const view = sampleView(n, 'loss', 0, 5, 1);
+     31|   expect(view.breaks).toEqual([{
+       |                       ^
+     32|     from: 1,
+     33|     to: 4,
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+

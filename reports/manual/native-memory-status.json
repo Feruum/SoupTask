@@ -1,0 +1,7 @@
+{
+  "status": "pending",
+  "scope": "Isolated headed Chromium, unthrottled, 1M run. CDP values are in headed-memory.json and are not Task Manager footprint.",
+  "blocker": "Native UI inventory discovers the test Chrome window, but getApp({windowId}) rejects it with a self-contradictory owner mismatch. Two attempts after refreshing inventory produced the same result. No native Task Manager values were obtained.",
+  "requestedHumanAction": "Read Memory footprint and JavaScript memory for the Soup tab and its Worker using Chrome Task Manager. Awaiting user response.",
+  "noClaim": "No screen-reader or human accessibility certification is inferred from this run."
+}

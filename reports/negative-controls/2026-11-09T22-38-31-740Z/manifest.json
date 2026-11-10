@@ -1,0 +1,73 @@
+{
+  "executedAt": "2026-11-09T22:38:31.740Z",
+  "node": "v24.22.1",
+  "platform": "win32",
+  "coreSha256": "450e74232faaa48425975968d982ee40ad1c36a5df658984626315d414b69b0a",
+  "testsSha256": "0fb1cde10deaa36bf787df085a4759556e0f7f304d2bf6094c5662dbfe4b7cd8",
+  "topologyTestsSha256": "902ec108cb1013074c92de72dc1703026a456ccc992442b54ce8a409b95461d5",
+  "results": [
+    {
+      "fault": "nth",
+      "exitCode": 1,
+      "testCount": 12,
+      "failedTests": [
+        "exact spike provenance width 1",
+        "exact spike provenance width 768",
+        "exact spike provenance width 1440",
+        "excludes offscreen spike and includes inclusive endpoints/single step",
+        "independent raw-window oracle preserves both extrema and exact provenance on seeded cases",
+        "independent interval oracle checks every bucket and segment first/min/max/last",
+        "isolated spike keeps both NaN breaks and distinct source segments",
+        "known cadence gap remains disconnected without a fabricated null row"
+      ],
+      "report": "reports/negative-controls/2026-11-09T22-38-31-740Z/nth.json",
+      "log": "reports/negative-controls/2026-11-09T22-38-31-740Z/nth.txt",
+      "logSha256": "552124c7542eb1fe96707bdec74864c937dc36e4a476eaf7d51e33252e0e2d9e"
+    },
+    {
+      "fault": "mean",
+      "exitCode": 1,
+      "testCount": 12,
+      "failedTests": [
+        "exact spike provenance width 1",
+        "exact spike provenance width 320",
+        "exact spike provenance width 768",
+        "exact spike provenance width 1440",
+        "excludes offscreen spike and includes inclusive endpoints/single step",
+        "independent raw-window oracle preserves both extrema and exact provenance on seeded cases",
+        "independent interval oracle checks every bucket and segment first/min/max/last"
+      ],
+      "report": "reports/negative-controls/2026-11-09T22-38-31-740Z/mean.json",
+      "log": "reports/negative-controls/2026-11-09T22-38-31-740Z/mean.txt",
+      "logSha256": "0053ee316913d128671f8228f993a7cf4aec3ce6e403928fa427625b764c04e8"
+    },
+    {
+      "fault": "fabricated",
+      "exitCode": 1,
+      "testCount": 12,
+      "failedTests": [
+        "exact spike provenance width 1",
+        "exact spike provenance width 320",
+        "exact spike provenance width 768",
+        "exact spike provenance width 1440",
+        "independent raw-window oracle preserves both extrema and exact provenance on seeded cases",
+        "isolated spike keeps both NaN breaks and distinct source segments"
+      ],
+      "report": "reports/negative-controls/2026-11-09T22-38-31-740Z/fabricated.json",
+      "log": "reports/negative-controls/2026-11-09T22-38-31-740Z/fabricated.txt",
+      "logSha256": "ba9d214eb8c532e4a905304946588e9901e882ba294530e01faff1b3184b15cd"
+    },
+    {
+      "fault": "bridged",
+      "exitCode": 1,
+      "testCount": 12,
+      "failedTests": [
+        "isolated spike keeps both NaN breaks and distinct source segments",
+        "known cadence gap remains disconnected without a fabricated null row"
+      ],
+      "report": "reports/negative-controls/2026-11-09T22-38-31-740Z/bridged.json",
+      "log": "reports/negative-controls/2026-11-09T22-38-31-740Z/bridged.txt",
+      "logSha256": "cb750d60b874638ad000cd3ef255ea06f09ee370ea97566c4cfeba45fe06cdfa"
+    }
+  ]
+}

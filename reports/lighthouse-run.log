@@ -1,0 +1,35 @@
+{
+  name: 'dashboard',
+  url: 'http://127.0.0.1:4183/dashboard',
+  fetchTime: '2026-11-09T22:33:06.568Z',
+  categories: { performance: 0.97, accessibility: 1, 'best-practices': 1 },
+  runtimeError: null
+}
+{
+  name: 'runs',
+  url: 'http://127.0.0.1:4183/runs',
+  fetchTime: '2026-11-09T22:33:23.605Z',
+  categories: { performance: 0.97, accessibility: 1, 'best-practices': 1 },
+  runtimeError: null
+}
+{
+  name: 'run-detail',
+  url: 'http://127.0.0.1:4183/runs/kazakh-sft-005',
+  fetchTime: '2026-11-09T22:33:39.062Z',
+  categories: { performance: 0.96, accessibility: 1, 'best-practices': 1 },
+  runtimeError: null
+}
+{
+  name: 'compare',
+  url: 'http://127.0.0.1:4183/compare?runs=kazakh-sft-005,kazakh-sft-006',
+  fetchTime: '2026-11-09T22:33:54.124Z',
+  categories: { performance: 0.98, accessibility: 1, 'best-practices': 1 },
+  runtimeError: null
+}
+{
+  name: 'quality',
+  url: 'http://127.0.0.1:4183/data-quality',
+  fetchTime: '2026-11-09T22:34:09.142Z',
+  categories: { performance: 0.97, accessibility: 1, 'best-practices': 1 },
+  runtimeError: null
+}

@@ -1,0 +1,13 @@
+import { fileURLToPath, URL } from 'node:url'
+import { defineConfig } from 'vitest/config'
+
+export default defineConfig({
+  resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
+  test: {
+    environment: 'node',
+    include: ['src/**/*.test.ts'],
+    exclude: ['e2e/**', 'node_modules/**', 'dist/**', 'tmp/**'],
+    reporters: ['default', 'json'],
+    outputFile: { json: 'reports/unit-results.json' },
+  },
+})

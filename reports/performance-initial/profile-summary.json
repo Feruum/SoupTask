@@ -1,0 +1,168 @@
+{
+  "measureCounts": {
+    "soup:view": 33,
+    "soup:hover": 197
+  },
+  "top": [
+    [
+      "RunTask",
+      {
+        "count": 73204,
+        "totalMs": 83235.01499999156,
+        "maxMs": 462.596
+      }
+    ],
+    [
+      "ThreadControllerImpl::RunTask",
+      {
+        "count": 72968,
+        "totalMs": 49947.216999990356,
+        "maxMs": 462.578
+      }
+    ],
+    [
+      "v8.callFunction",
+      {
+        "count": 8612,
+        "totalMs": 30037.201999999597,
+        "maxMs": 462.539
+      }
+    ],
+    [
+      "HandlePostMessage",
+      {
+        "count": 749,
+        "totalMs": 13262.128999999992,
+        "maxMs": 462.563
+      }
+    ],
+    [
+      "FunctionCall:y.onmessage",
+      {
+        "count": 375,
+        "totalMs": 12149.418,
+        "maxMs": 462.507
+      }
+    ],
+    [
+      "FunctionCall:x",
+      {
+        "count": 499,
+        "totalMs": 7327.597000000002,
+        "maxMs": 182.163
+      }
+    ],
+    [
+      "SimpleWatcher::OnHandleReady",
+      {
+        "count": 18793,
+        "totalMs": 6347.290000000116,
+        "maxMs": 191.971
+      }
+    ],
+    [
+      "Receive mojo message",
+      {
+        "count": 17676,
+        "totalMs": 3683.1209999998723,
+        "maxMs": 70.463
+      }
+    ],
+    [
+      "Commit",
+      {
+        "count": 1379,
+        "totalMs": 3633.0400000000027,
+        "maxMs": 105.492
+      }
+    ],
+    [
+      "ThreadPool_RunTask",
+      {
+        "count": 5913,
+        "totalMs": 2118.882999999995,
+        "maxMs": 42.632
+      }
+    ],
+    [
+      "FunctionCall:di",
+      {
+        "count": 690,
+        "totalMs": 2063.0090000000005,
+        "maxMs": 10.243
+      }
+    ],
+    [
+      "Paint",
+      {
+        "count": 1213,
+        "totalMs": 1937.1819999999984,
+        "maxMs": 10.91
+      }
+    ],
+    [
+      "EventDispatch:click",
+      {
+        "count": 32,
+        "totalMs": 1480.7379999999998,
+        "maxMs": 71.105
+      }
+    ],
+    [
+      "FunctionCall:http://127.0.0.1:4181/assets/index-CM-alj3y.js",
+      {
+        "count": 542,
+        "totalMs": 1170.2609999999988,
+        "maxMs": 50.521
+      }
+    ],
+    [
+      "UpdateLayoutTree",
+      {
+        "count": 1029,
+        "totalMs": 1169.9649999999992,
+        "maxMs": 12.133
+      }
+    ],
+    [
+      "FireAnimationFrame",
+      {
+        "count": 1048,
+        "totalMs": 1142.9079999999974,
+        "maxMs": 22.357
+      }
+    ],
+    [
+      "FunctionCall:m.onmessage",
+      {
+        "count": 375,
+        "totalMs": 951.617,
+        "maxMs": 30.143
+      }
+    ],
+    [
+      "PrePaint",
+      {
+        "count": 1954,
+        "totalMs": 759.7989999999986,
+        "maxMs": 7.581
+      }
+    ],
+    [
+      "IOHandler::OnIOCompleted",
+      {
+        "count": 38331,
+        "totalMs": 758.8459999998669,
+        "maxMs": 0.781
+      }
+    ],
+    [
+      "Layout",
+      {
+        "count": 262,
+        "totalMs": 737.484,
+        "maxMs": 94.672
+      }
+    ]
+  ]
+}

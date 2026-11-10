@@ -1,0 +1,4934 @@
+[
+  {
+    "mode": "scan",
+    "label": "1M-loaded",
+    "heap": {
+      "usedSize": 6442492,
+      "totalSize": 11341824,
+      "embedderHeapUsedSize": 3409872,
+      "backingStorageSize": 833344
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43525.279355
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 6
+        },
+        {
+          "name": "Frames",
+          "value": 5
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 284
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 342
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 396
+        },
+        {
+          "name": "Resources",
+          "value": 22
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 10
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 4
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 6
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 2
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 19
+        },
+        {
+          "name": "LayoutCount",
+          "value": 12
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 54
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.332766
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 0.092184
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 0.108291
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 1.515935
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 2.703358
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 0.654182
+        },
+        {
+          "name": "ThreadTime",
+          "value": 0.663382
+        },
+        {
+          "name": "ProcessTime",
+          "value": 7.382165
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 6442492
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 11341824
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43522.848421
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43522.309619
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43521.803652
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 1,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "scan",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 75000004,
+      "viewSeq": 1,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 28.69999999552965,
+          "normalizationMs": 264.80000000447035,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 255936
+    }
+  },
+  {
+    "mode": "scan",
+    "label": "1M-after-interactions",
+    "heap": {
+      "usedSize": 9521236,
+      "totalSize": 27664384,
+      "embedderHeapUsedSize": 6882352,
+      "backingStorageSize": 808467
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43569.9792
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 423
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 556
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 641
+        },
+        {
+          "name": "Resources",
+          "value": 21
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 7
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 25
+        },
+        {
+          "name": "LayoutCount",
+          "value": 343
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 1510
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 1.260783
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 2.063395
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 4.120333
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 8.156226
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 32.644301
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 17.043564
+        },
+        {
+          "name": "ThreadTime",
+          "value": 8.507579
+        },
+        {
+          "name": "ProcessTime",
+          "value": 68.516803
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 9521236
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 27664384
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43522.848421
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43522.309619
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43521.803652
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 1,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "scan",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 75000004,
+      "viewSeq": 36,
+      "acceptedHoverSeq": 68,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 28.69999999552965,
+          "normalizationMs": 264.80000000447035,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 96
+    }
+  },
+  {
+    "mode": "scan",
+    "label": "after-1-SPA-switches",
+    "heap": {
+      "usedSize": 12714728,
+      "totalSize": 19800064,
+      "embedderHeapUsedSize": 5048592,
+      "backingStorageSize": 1286865
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43573.234848
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 449
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 1176
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 1509
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 12
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 3
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 25
+        },
+        {
+          "name": "LayoutCount",
+          "value": 362
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 1575
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 1.690978
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 2.272961
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 4.255142
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 9.301087
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 35.544859
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 18.024691
+        },
+        {
+          "name": "ThreadTime",
+          "value": 9.243447
+        },
+        {
+          "name": "ProcessTime",
+          "value": 73.804172
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 12720972
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 19800064
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43522.848421
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43522.309619
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43521.803652
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 3,
+      "members": [
+        "kazakh-sft-001"
+      ],
+      "sampler": "scan",
+      "rawBufferBytes": 262144,
+      "allocationBytes": 614404,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-001": {
+          "generationMs": 2.899999998509884,
+          "normalizationMs": 10.5,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 198176
+    }
+  },
+  {
+    "mode": "scan",
+    "label": "after-5-SPA-switches",
+    "heap": {
+      "usedSize": 19623436,
+      "totalSize": 31596544,
+      "embedderHeapUsedSize": 9336040,
+      "backingStorageSize": 1829846
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43582.52017
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 793
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 2255
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 2801
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 20
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 3
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 31
+        },
+        {
+          "name": "LayoutCount",
+          "value": 411
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 1845
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 2.053784
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 2.710116
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 4.561359
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 12.597853
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 42.682009
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 20.758897
+        },
+        {
+          "name": "ThreadTime",
+          "value": 11.219299
+        },
+        {
+          "name": "ProcessTime",
+          "value": 91.335065
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 19626840
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 31596544
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43522.848421
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43522.309619
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43521.803652
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 11,
+      "members": [
+        "kazakh-sft-001"
+      ],
+      "sampler": "scan",
+      "rawBufferBytes": 262144,
+      "allocationBytes": 614404,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-001": {
+          "generationMs": 2.2000000029802322,
+          "normalizationMs": 11.199999995529652,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 198176
+    }
+  },
+  {
+    "mode": "scan",
+    "label": "after-10-SPA-switches",
+    "heap": {
+      "usedSize": 14952844,
+      "totalSize": 43130880,
+      "embedderHeapUsedSize": 3487400,
+      "backingStorageSize": 849898
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43594.488871
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 299
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 328
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 753
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 7
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 19
+        },
+        {
+          "name": "LayoutCount",
+          "value": 475
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 2205
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 2.522272
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 3.258734
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 4.961753
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 16.530268
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 51.711778
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 24.438751
+        },
+        {
+          "name": "ThreadTime",
+          "value": 13.745425
+        },
+        {
+          "name": "ProcessTime",
+          "value": 113.210387
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 14952844
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 43130880
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43522.848421
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43522.309619
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43521.803652
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 21,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "scan",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 75000004,
+      "viewSeq": 1,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 26,
+          "normalizationMs": 264,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 255936
+    }
+  },
+  {
+    "mode": "scan",
+    "label": "after-15-SPA-switches",
+    "heap": {
+      "usedSize": 23820484,
+      "totalSize": 42344448,
+      "embedderHeapUsedSize": 9580656,
+      "backingStorageSize": 1829968
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43605.475968
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 784
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 2255
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 2654
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 20
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 3
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 31
+        },
+        {
+          "name": "LayoutCount",
+          "value": 537
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 2535
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 2.971278
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 3.764355
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 5.354224
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 20.343405
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 60.329796
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 27.896534
+        },
+        {
+          "name": "ThreadTime",
+          "value": 16.145066
+        },
+        {
+          "name": "ProcessTime",
+          "value": 134.365698
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 23823340
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 42344448
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43522.848421
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43522.309619
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43521.803652
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 31,
+      "members": [
+        "kazakh-sft-001"
+      ],
+      "sampler": "scan",
+      "rawBufferBytes": 262144,
+      "allocationBytes": 614404,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-001": {
+          "generationMs": 2.5,
+          "normalizationMs": 8.199999995529652,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 198176
+    }
+  },
+  {
+    "mode": "scan",
+    "label": "after-20-SPA-switches",
+    "heap": {
+      "usedSize": 18914244,
+      "totalSize": 41558016,
+      "embedderHeapUsedSize": 7730952,
+      "backingStorageSize": 850238
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43617.406755
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 697
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 1391
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 2615
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 15
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 19
+        },
+        {
+          "name": "LayoutCount",
+          "value": 602
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 2908
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 3.436689
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 4.294436
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 5.765309
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 24.249059
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 69.321578
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 31.576085
+        },
+        {
+          "name": "ThreadTime",
+          "value": 18.65155
+        },
+        {
+          "name": "ProcessTime",
+          "value": 156.852001
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 18914244
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 41558016
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43522.848421
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43522.309619
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43521.803652
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 41,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "scan",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 75000004,
+      "viewSeq": 1,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 26.100000001490116,
+          "normalizationMs": 267.1000000014901,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 255936
+    }
+  },
+  {
+    "mode": "scan",
+    "label": "Compare-1M-plus-three-ordinary-runs",
+    "heap": {
+      "usedSize": 27471132,
+      "totalSize": 45228032,
+      "embedderHeapUsedSize": 11627472,
+      "backingStorageSize": 1123723
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43620.115754
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 939
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 2097
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 3376
+        },
+        {
+          "name": "Resources",
+          "value": 28
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 25
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 79
+        },
+        {
+          "name": "LayoutCount",
+          "value": 613
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 3023
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 3.546986
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 4.41033
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 5.972676
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 24.97726
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 71.328378
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 32.421126
+        },
+        {
+          "name": "ThreadTime",
+          "value": 19.150731
+        },
+        {
+          "name": "ProcessTime",
+          "value": 163.030018
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 27471132
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 45228032
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43522.848421
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43522.309619
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43521.803652
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 45,
+      "members": [
+        "kazakh-sft-005",
+        "kazakh-sft-001",
+        "kazakh-sft-002",
+        "kazakh-sft-006"
+      ],
+      "sampler": "scan",
+      "rawBufferBytes": 32786432,
+      "allocationBytes": 76843216,
+      "viewSeq": 1,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 25.19999999552965,
+          "normalizationMs": 266.6000000014901,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        },
+        "kazakh-sft-001": {
+          "generationMs": 2.8000000044703484,
+          "normalizationMs": 9.399999998509884,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        },
+        "kazakh-sft-002": {
+          "generationMs": 3,
+          "normalizationMs": 4.799999997019768,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        },
+        "kazakh-sft-006": {
+          "generationMs": 2.399999998509884,
+          "normalizationMs": 9.800000004470348,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 262624
+    }
+  },
+  {
+    "mode": "scan",
+    "label": "Compare-after-interactions",
+    "heap": {
+      "usedSize": 12539712,
+      "totalSize": 53092352,
+      "embedderHeapUsedSize": 5892808,
+      "backingStorageSize": 604224
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43668.966405
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 430
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 1156
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 1528
+        },
+        {
+          "name": "Resources",
+          "value": 27
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 11
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 67
+        },
+        {
+          "name": "LayoutCount",
+          "value": 943
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 4243
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 4.780302
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 6.009088
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 10.536389
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 34.04487
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 105.879433
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 50.508784
+        },
+        {
+          "name": "ThreadTime",
+          "value": 27.88094
+        },
+        {
+          "name": "ProcessTime",
+          "value": 230.07269
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 12539712
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 53092352
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43522.848421
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43522.309619
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43521.803652
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 45,
+      "members": [
+        "kazakh-sft-005",
+        "kazakh-sft-001",
+        "kazakh-sft-002",
+        "kazakh-sft-006"
+      ],
+      "sampler": "scan",
+      "rawBufferBytes": 32786432,
+      "allocationBytes": 76843216,
+      "viewSeq": 36,
+      "acceptedHoverSeq": 68,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 25.19999999552965,
+          "normalizationMs": 266.6000000014901,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        },
+        "kazakh-sft-001": {
+          "generationMs": 2.8000000044703484,
+          "normalizationMs": 9.399999998509884,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        },
+        "kazakh-sft-002": {
+          "generationMs": 3,
+          "normalizationMs": 4.799999997019768,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        },
+        "kazakh-sft-006": {
+          "generationMs": 2.399999998509884,
+          "normalizationMs": 9.800000004470348,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 96
+    }
+  },
+  {
+    "mode": "stream",
+    "label": "1M-loaded",
+    "heap": {
+      "usedSize": 6398536,
+      "totalSize": 11079680,
+      "embedderHeapUsedSize": 3489176,
+      "backingStorageSize": 833348
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43696.736308
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 6
+        },
+        {
+          "name": "Frames",
+          "value": 5
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 284
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 342
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 396
+        },
+        {
+          "name": "Resources",
+          "value": 22
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 10
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 4
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 6
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 2
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 19
+        },
+        {
+          "name": "LayoutCount",
+          "value": 11
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 54
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.33564
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 0.100754
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 0.113872
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 1.44343
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 2.628357
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 0.634661
+        },
+        {
+          "name": "ThreadTime",
+          "value": 0.654303
+        },
+        {
+          "name": "ProcessTime",
+          "value": 5.807453
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 6398536
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 11079680
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 0
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43693.965622
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43693.508454
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 1,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "stream",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 75000004,
+      "viewSeq": 1,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 27.600000001490116,
+          "normalizationMs": 268,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 255936
+    }
+  },
+  {
+    "mode": "stream",
+    "label": "1M-after-interactions",
+    "heap": {
+      "usedSize": 15809484,
+      "totalSize": 28188672,
+      "embedderHeapUsedSize": 6765584,
+      "backingStorageSize": 808471
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43738.635416
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 421
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 556
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 641
+        },
+        {
+          "name": "Resources",
+          "value": 21
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 7
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 25
+        },
+        {
+          "name": "LayoutCount",
+          "value": 344
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 1510
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 1.216818
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 2.033792
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 4.121432
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 7.992559
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 31.5223
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 16.157699
+        },
+        {
+          "name": "ThreadTime",
+          "value": 8.286475
+        },
+        {
+          "name": "ProcessTime",
+          "value": 60.653115
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 15809484
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 28188672
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43694.517746
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43693.965622
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43693.508454
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 1,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "stream",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 75000004,
+      "viewSeq": 36,
+      "acceptedHoverSeq": 68,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 27.600000001490116,
+          "normalizationMs": 268,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 96
+    }
+  },
+  {
+    "mode": "stream",
+    "label": "after-1-SPA-switches",
+    "heap": {
+      "usedSize": 13849644,
+      "totalSize": 18227200,
+      "embedderHeapUsedSize": 6061232,
+      "backingStorageSize": 1287608
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43741.907106
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 517
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 1305
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 1561
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 12
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 3
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 25
+        },
+        {
+          "name": "LayoutCount",
+          "value": 363
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 1576
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 1.675923
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 2.25499
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 4.247619
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 9.182049
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 34.427581
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 17.067
+        },
+        {
+          "name": "ThreadTime",
+          "value": 9.025563
+        },
+        {
+          "name": "ProcessTime",
+          "value": 65.720218
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 13853280
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 18227200
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43694.517746
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43693.965622
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43693.508454
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 3,
+      "members": [
+        "kazakh-sft-001"
+      ],
+      "sampler": "stream",
+      "rawBufferBytes": 262144,
+      "allocationBytes": 614404,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-001": {
+          "generationMs": 2.100000001490116,
+          "normalizationMs": 12.299999997019768,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 198176
+    }
+  },
+  {
+    "mode": "stream",
+    "label": "after-5-SPA-switches",
+    "heap": {
+      "usedSize": 15040992,
+      "totalSize": 31334400,
+      "embedderHeapUsedSize": 11251936,
+      "backingStorageSize": 1829879
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43750.768728
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 939
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 2470
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 2886
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 23
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 3
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 31
+        },
+        {
+          "name": "LayoutCount",
+          "value": 413
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 1827
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 2.032982
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 2.631495
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 4.552963
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 12.374491
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 41.341419
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 19.749488
+        },
+        {
+          "name": "ThreadTime",
+          "value": 10.969836
+        },
+        {
+          "name": "ProcessTime",
+          "value": 81.464138
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 15043032
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 31334400
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43694.517746
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43693.965622
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43693.508454
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 11,
+      "members": [
+        "kazakh-sft-001"
+      ],
+      "sampler": "stream",
+      "rawBufferBytes": 262144,
+      "allocationBytes": 614404,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-001": {
+          "generationMs": 4,
+          "normalizationMs": 10,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 198176
+    }
+  },
+  {
+    "mode": "stream",
+    "label": "after-10-SPA-switches",
+    "heap": {
+      "usedSize": 18828448,
+      "totalSize": 46014464,
+      "embedderHeapUsedSize": 7559864,
+      "backingStorageSize": 850402
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43762.348695
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 697
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 1391
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 2615
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 15
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 19
+        },
+        {
+          "name": "LayoutCount",
+          "value": 476
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 2162
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 2.47197
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 3.154341
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 4.942131
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 16.264248
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 50.255113
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 23.422423
+        },
+        {
+          "name": "ThreadTime",
+          "value": 13.468154
+        },
+        {
+          "name": "ProcessTime",
+          "value": 101.877748
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 18828448
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 46014464
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43694.517746
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43693.965622
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43693.508454
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 21,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "stream",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 75000004,
+      "viewSeq": 1,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 27.100000001490116,
+          "normalizationMs": 258.1000000014901,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 255936
+    }
+  },
+  {
+    "mode": "stream",
+    "label": "after-15-SPA-switches",
+    "heap": {
+      "usedSize": 37942892,
+      "totalSize": 60694528,
+      "embedderHeapUsedSize": 15532144,
+      "backingStorageSize": 2740863
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43772.62004
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 1294
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 3551
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 4033
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 31
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 3
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 43
+        },
+        {
+          "name": "LayoutCount",
+          "value": 540
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 2470
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 2.913012
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 3.627628
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 5.310018
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 19.893678
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 58.255495
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 26.511159
+        },
+        {
+          "name": "ThreadTime",
+          "value": 15.774732
+        },
+        {
+          "name": "ProcessTime",
+          "value": 120.118493
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 38919540
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 61743104
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43694.517746
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43693.965622
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43693.508454
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 31,
+      "members": [
+        "kazakh-sft-001"
+      ],
+      "sampler": "stream",
+      "rawBufferBytes": 262144,
+      "allocationBytes": 614404,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-001": {
+          "generationMs": 2.5,
+          "normalizationMs": 11,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 198176
+    }
+  },
+  {
+    "mode": "stream",
+    "label": "after-20-SPA-switches",
+    "heap": {
+      "usedSize": 36532052,
+      "totalSize": 66723840,
+      "embedderHeapUsedSize": 16207280,
+      "backingStorageSize": 2085632
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43783.424078
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 1377
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 3549
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 4905
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 31
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 34
+        },
+        {
+          "name": "LayoutCount",
+          "value": 602
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 2811
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 3.36962
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 4.149351
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 5.714353
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 23.490827
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 66.770379
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 30.046228
+        },
+        {
+          "name": "ThreadTime",
+          "value": 18.069656
+        },
+        {
+          "name": "ProcessTime",
+          "value": 139.351711
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 36532052
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 66723840
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43694.517746
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43693.965622
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43693.508454
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 41,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "stream",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 75000004,
+      "viewSeq": 1,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 26.600000001490116,
+          "normalizationMs": 261.8999999985099,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 255936
+    }
+  },
+  {
+    "mode": "stream",
+    "label": "Compare-1M-plus-three-ordinary-runs",
+    "heap": {
+      "usedSize": 15824400,
+      "totalSize": 68820992,
+      "embedderHeapUsedSize": 5084832,
+      "backingStorageSize": 866327
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43786.003084
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 359
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 794
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 1116
+        },
+        {
+          "name": "Resources",
+          "value": 28
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 11
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 76
+        },
+        {
+          "name": "LayoutCount",
+          "value": 613
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 2914
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 3.466789
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 4.262536
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 5.914389
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 24.21058
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 68.894579
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 31.040285
+        },
+        {
+          "name": "ThreadTime",
+          "value": 18.60027
+        },
+        {
+          "name": "ProcessTime",
+          "value": 145.405936
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 15824400
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 68820992
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43694.517746
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43693.965622
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43693.508454
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 45,
+      "members": [
+        "kazakh-sft-005",
+        "kazakh-sft-001",
+        "kazakh-sft-002",
+        "kazakh-sft-006"
+      ],
+      "sampler": "stream",
+      "rawBufferBytes": 32786432,
+      "allocationBytes": 76843216,
+      "viewSeq": 1,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 24.700000002980232,
+          "normalizationMs": 277.3999999985099,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        },
+        "kazakh-sft-001": {
+          "generationMs": 3.3000000044703484,
+          "normalizationMs": 9.199999995529652,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        },
+        "kazakh-sft-002": {
+          "generationMs": 3.3000000044703484,
+          "normalizationMs": 4,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        },
+        "kazakh-sft-006": {
+          "generationMs": 2.5,
+          "normalizationMs": 9.699999995529652,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 262624
+    }
+  },
+  {
+    "mode": "stream",
+    "label": "Compare-after-interactions",
+    "heap": {
+      "usedSize": 11808028,
+      "totalSize": 69345280,
+      "embedderHeapUsedSize": 4533296,
+      "backingStorageSize": 968353
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43831.91721
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 350
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 884
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 1274
+        },
+        {
+          "name": "Resources",
+          "value": 27
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 11
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 64
+        },
+        {
+          "name": "LayoutCount",
+          "value": 945
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 4113
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 4.710316
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 5.858445
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 10.488419
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 33.198174
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 101.830278
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 47.574924
+        },
+        {
+          "name": "ThreadTime",
+          "value": 26.975324
+        },
+        {
+          "name": "ProcessTime",
+          "value": 205.561988
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 11808028
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 69345280
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43694.517746
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43693.965622
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43693.508454
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 45,
+      "members": [
+        "kazakh-sft-005",
+        "kazakh-sft-001",
+        "kazakh-sft-002",
+        "kazakh-sft-006"
+      ],
+      "sampler": "stream",
+      "rawBufferBytes": 32786432,
+      "allocationBytes": 76843216,
+      "viewSeq": 36,
+      "acceptedHoverSeq": 68,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 24.700000002980232,
+          "normalizationMs": 277.3999999985099,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        },
+        "kazakh-sft-001": {
+          "generationMs": 3.3000000044703484,
+          "normalizationMs": 9.199999995529652,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        },
+        "kazakh-sft-002": {
+          "generationMs": 3.3000000044703484,
+          "normalizationMs": 4,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        },
+        "kazakh-sft-006": {
+          "generationMs": 2.5,
+          "normalizationMs": 9.699999995529652,
+          "indexBuildMs": 0,
+          "indexBufferBytes": 0
+        }
+      },
+      "renderBufferBytes": 96
+    }
+  },
+  {
+    "mode": "indexed",
+    "label": "1M-loaded",
+    "heap": {
+      "usedSize": 7433296,
+      "totalSize": 11079680,
+      "embedderHeapUsedSize": 3314992,
+      "backingStorageSize": 1337603
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43859.830385
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 6
+        },
+        {
+          "name": "Frames",
+          "value": 5
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 284
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 342
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 396
+        },
+        {
+          "name": "Resources",
+          "value": 22
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 10
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 4
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 6
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 2
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 37
+        },
+        {
+          "name": "LayoutCount",
+          "value": 10
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 48
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 0.328512
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 0.090896
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 0.116772
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 1.433147
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 2.565703
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 0.596376
+        },
+        {
+          "name": "ThreadTime",
+          "value": 0.643035
+        },
+        {
+          "name": "ProcessTime",
+          "value": 5.6075
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 7732852
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 11079680
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 0
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43857.083092
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43856.620683
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 1,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 28.19999999552965,
+          "normalizationMs": 274.1000000014901,
+          "indexBuildMs": 237.79999999701977,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 218144
+    }
+  },
+  {
+    "mode": "indexed",
+    "label": "1M-after-interactions",
+    "heap": {
+      "usedSize": 15809268,
+      "totalSize": 27926528,
+      "embedderHeapUsedSize": 7101336,
+      "backingStorageSize": 808468
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43899.421807
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 421
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 556
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 641
+        },
+        {
+          "name": "Resources",
+          "value": 21
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 7
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 37
+        },
+        {
+          "name": "LayoutCount",
+          "value": 343
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 1471
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 1.208534
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 2.02973
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 4.164361
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 7.819576
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 30.338086
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 15.115885
+        },
+        {
+          "name": "ThreadTime",
+          "value": 8.026129
+        },
+        {
+          "name": "ProcessTime",
+          "value": 54.246278
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 15809268
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 27926528
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43857.605727
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43857.083092
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43856.620683
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 1,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 36,
+      "acceptedHoverSeq": 68,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 28.19999999552965,
+          "normalizationMs": 274.1000000014901,
+          "indexBuildMs": 237.79999999701977,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 96
+    }
+  },
+  {
+    "mode": "indexed",
+    "label": "after-1-SPA-switches",
+    "heap": {
+      "usedSize": 14716300,
+      "totalSize": 27402240,
+      "embedderHeapUsedSize": 5304464,
+      "backingStorageSize": 1089149
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43902.407253
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 449
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 1176
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 1509
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 12
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 3
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 37
+        },
+        {
+          "name": "LayoutCount",
+          "value": 362
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 1536
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 1.598063
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 2.230464
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 4.284893
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 8.881757
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 32.957885
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 15.962708
+        },
+        {
+          "name": "ThreadTime",
+          "value": 8.696176
+        },
+        {
+          "name": "ProcessTime",
+          "value": 58.841053
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 14881144
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 27402240
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43857.605727
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43857.083092
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43856.620683
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 3,
+      "members": [
+        "kazakh-sft-001"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 262144,
+      "allocationBytes": 628228,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-001": {
+          "generationMs": 3.899999998509884,
+          "normalizationMs": 10.200000002980232,
+          "indexBuildMs": 4.600000001490116,
+          "indexBufferBytes": 13824
+        }
+      },
+      "renderBufferBytes": 198176
+    }
+  },
+  {
+    "mode": "indexed",
+    "label": "after-5-SPA-switches",
+    "heap": {
+      "usedSize": 18590760,
+      "totalSize": 38674432,
+      "embedderHeapUsedSize": 11461760,
+      "backingStorageSize": 2048008
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43911.993961
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 949
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 2470
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 2886
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 23
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 3
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 46
+        },
+        {
+          "name": "LayoutCount",
+          "value": 414
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 1794
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 1.96631
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 2.643262
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 4.610139
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 12.330868
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 40.167228
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 18.616649
+        },
+        {
+          "name": "ThreadTime",
+          "value": 10.79919
+        },
+        {
+          "name": "ProcessTime",
+          "value": 75.395733
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 18593248
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 38674432
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43857.605727
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43857.083092
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43856.620683
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 11,
+      "members": [
+        "kazakh-sft-001"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 262144,
+      "allocationBytes": 628228,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-001": {
+          "generationMs": 3,
+          "normalizationMs": 12.100000001490116,
+          "indexBuildMs": 4.200000002980232,
+          "indexBufferBytes": 13824
+        }
+      },
+      "renderBufferBytes": 198176
+    }
+  },
+  {
+    "mode": "indexed",
+    "label": "after-10-SPA-switches",
+    "heap": {
+      "usedSize": 39393540,
+      "totalSize": 60694528,
+      "embedderHeapUsedSize": 16379392,
+      "backingStorageSize": 2590100
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43924.05109
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 1387
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 3549
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 4905
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 31
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 55
+        },
+        {
+          "name": "LayoutCount",
+          "value": 479
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 2140
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 2.42279
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 3.175458
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 5.001242
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 16.256175
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 49.056083
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 22.200418
+        },
+        {
+          "name": "ThreadTime",
+          "value": 13.381503
+        },
+        {
+          "name": "ProcessTime",
+          "value": 96.353979
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 39626580
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 60956672
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43857.605727
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43857.083092
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43856.620683
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 21,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 26.5,
+          "normalizationMs": 268.6000000014901,
+          "indexBuildMs": 234.60000000149012,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 218144
+    }
+  },
+  {
+    "mode": "indexed",
+    "label": "after-15-SPA-switches",
+    "heap": {
+      "usedSize": 19312220,
+      "totalSize": 63053824,
+      "embedderHeapUsedSize": 7087728,
+      "backingStorageSize": 1287113
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43935.573826
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 697
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 1391
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 2615
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 15
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 3
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 37
+        },
+        {
+          "name": "LayoutCount",
+          "value": 545
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 2461
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 2.872595
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 3.674883
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 5.366181
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 20.062759
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 57.787599
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 25.811181
+        },
+        {
+          "name": "ThreadTime",
+          "value": 15.937672
+        },
+        {
+          "name": "ProcessTime",
+          "value": 116.355076
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 19316216
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 63053824
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43857.605727
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43857.083092
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43856.620683
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 31,
+      "members": [
+        "kazakh-sft-001"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 262144,
+      "allocationBytes": 628228,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-001": {
+          "generationMs": 3.5,
+          "normalizationMs": 13.799999997019768,
+          "indexBuildMs": 3.899999998509884,
+          "indexBufferBytes": 13824
+        }
+      },
+      "renderBufferBytes": 198176
+    }
+  },
+  {
+    "mode": "indexed",
+    "label": "after-20-SPA-switches",
+    "heap": {
+      "usedSize": 26318460,
+      "totalSize": 75898880,
+      "embedderHeapUsedSize": 9893576,
+      "backingStorageSize": 1829833
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43947.372786
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 794
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 2255
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 2654
+        },
+        {
+          "name": "Resources",
+          "value": 26
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 20
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 46
+        },
+        {
+          "name": "LayoutCount",
+          "value": 610
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 2804
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 3.327202
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 4.187522
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 5.720498
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 23.852822
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 66.444188
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 29.356144
+        },
+        {
+          "name": "ThreadTime",
+          "value": 18.478113
+        },
+        {
+          "name": "ProcessTime",
+          "value": 137.173939
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 26345020
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 75898880
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43857.605727
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43857.083092
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43856.620683
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 41,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 27.200000002980232,
+          "normalizationMs": 279,
+          "indexBuildMs": 244.60000000149012,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 218144
+    }
+  },
+  {
+    "mode": "indexed",
+    "label": "Compare-1M-plus-three-ordinary-runs",
+    "heap": {
+      "usedSize": 38803276,
+      "totalSize": 76161024,
+      "embedderHeapUsedSize": 13740504,
+      "backingStorageSize": 2741028
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43950.272949
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 1046
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 2961
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 3415
+        },
+        {
+          "name": "Resources",
+          "value": 28
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 30
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 162
+        },
+        {
+          "name": "LayoutCount",
+          "value": 622
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 2911
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 3.427585
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 4.304052
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 5.937994
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 24.650908
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 68.520519
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 30.19998
+        },
+        {
+          "name": "ThreadTime",
+          "value": 19.042242
+        },
+        {
+          "name": "ProcessTime",
+          "value": 143.853578
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 38841288
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 76161024
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43857.605727
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43857.083092
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43856.620683
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 45,
+      "members": [
+        "kazakh-sft-005",
+        "kazakh-sft-001",
+        "kazakh-sft-002",
+        "kazakh-sft-006"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32786432,
+      "allocationBytes": 78576688,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 25.899999998509884,
+          "normalizationMs": 279.80000000447035,
+          "indexBuildMs": 240.60000000149012,
+          "indexBufferBytes": 1696608
+        },
+        "kazakh-sft-001": {
+          "generationMs": 4,
+          "normalizationMs": 9.5,
+          "indexBuildMs": 4.399999998509884,
+          "indexBufferBytes": 13824
+        },
+        "kazakh-sft-002": {
+          "generationMs": 2.899999998509884,
+          "normalizationMs": 4.799999997019768,
+          "indexBuildMs": 2.8000000044703484,
+          "indexBufferBytes": 13824
+        },
+        "kazakh-sft-006": {
+          "generationMs": 2.0999999940395355,
+          "normalizationMs": 10.400000005960464,
+          "indexBuildMs": 1.8999999985098839,
+          "indexBufferBytes": 9216
+        }
+      },
+      "renderBufferBytes": 161728
+    }
+  },
+  {
+    "mode": "indexed",
+    "label": "Compare-after-interactions",
+    "heap": {
+      "usedSize": 11272440,
+      "totalSize": 15867904,
+      "embedderHeapUsedSize": 3717008,
+      "backingStorageSize": 603642
+    },
+    "metrics": {
+      "metrics": [
+        {
+          "name": "Timestamp",
+          "value": 43994.230805
+        },
+        {
+          "name": "AudioHandlers",
+          "value": 0
+        },
+        {
+          "name": "AudioWorkletProcessors",
+          "value": 0
+        },
+        {
+          "name": "Documents",
+          "value": 2
+        },
+        {
+          "name": "Frames",
+          "value": 2
+        },
+        {
+          "name": "JSEventListeners",
+          "value": 318
+        },
+        {
+          "name": "LayoutObjects",
+          "value": 884
+        },
+        {
+          "name": "MediaKeySessions",
+          "value": 0
+        },
+        {
+          "name": "MediaKeys",
+          "value": 0
+        },
+        {
+          "name": "Nodes",
+          "value": 1273
+        },
+        {
+          "name": "Resources",
+          "value": 27
+        },
+        {
+          "name": "ContextLifecycleStateObservers",
+          "value": 11
+        },
+        {
+          "name": "V8PerContextDatas",
+          "value": 2
+        },
+        {
+          "name": "WorkerGlobalScopes",
+          "value": 1
+        },
+        {
+          "name": "UACSSResources",
+          "value": 0
+        },
+        {
+          "name": "RTCPeerConnections",
+          "value": 0
+        },
+        {
+          "name": "ResourceFetchers",
+          "value": 2
+        },
+        {
+          "name": "AdSubframes",
+          "value": 0
+        },
+        {
+          "name": "DetachedScriptStates",
+          "value": 0
+        },
+        {
+          "name": "ArrayBufferContents",
+          "value": 108
+        },
+        {
+          "name": "LayoutCount",
+          "value": 954
+        },
+        {
+          "name": "RecalcStyleCount",
+          "value": 4032
+        },
+        {
+          "name": "LayoutDuration",
+          "value": 4.686846
+        },
+        {
+          "name": "RecalcStyleDuration",
+          "value": 5.851733
+        },
+        {
+          "name": "DevToolsCommandDuration",
+          "value": 10.4998
+        },
+        {
+          "name": "ScriptDuration",
+          "value": 33.553698
+        },
+        {
+          "name": "V8CompileDuration",
+          "value": 0
+        },
+        {
+          "name": "TaskDuration",
+          "value": 100.560256
+        },
+        {
+          "name": "TaskOtherDuration",
+          "value": 45.968179
+        },
+        {
+          "name": "ThreadTime",
+          "value": 27.177834
+        },
+        {
+          "name": "ProcessTime",
+          "value": 198.163917
+        },
+        {
+          "name": "JSHeapUsedSize",
+          "value": 11272440
+        },
+        {
+          "name": "JSHeapTotalSize",
+          "value": 15867904
+        },
+        {
+          "name": "FirstMeaningfulPaint",
+          "value": 43857.605727
+        },
+        {
+          "name": "DomContentLoaded",
+          "value": 43857.083092
+        },
+        {
+          "name": "NavigationStart",
+          "value": 43856.620683
+        }
+      ]
+    },
+    "workspace": {
+      "workspaceEpoch": 45,
+      "members": [
+        "kazakh-sft-005",
+        "kazakh-sft-001",
+        "kazakh-sft-002",
+        "kazakh-sft-006"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32786432,
+      "allocationBytes": 78576688,
+      "viewSeq": 36,
+      "acceptedHoverSeq": 68,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 25.899999998509884,
+          "normalizationMs": 279.80000000447035,
+          "indexBuildMs": 240.60000000149012,
+          "indexBufferBytes": 1696608
+        },
+        "kazakh-sft-001": {
+          "generationMs": 4,
+          "normalizationMs": 9.5,
+          "indexBuildMs": 4.399999998509884,
+          "indexBufferBytes": 13824
+        },
+        "kazakh-sft-002": {
+          "generationMs": 2.899999998509884,
+          "normalizationMs": 4.799999997019768,
+          "indexBuildMs": 2.8000000044703484,
+          "indexBufferBytes": 13824
+        },
+        "kazakh-sft-006": {
+          "generationMs": 2.0999999940395355,
+          "normalizationMs": 10.400000005960464,
+          "indexBuildMs": 1.8999999985098839,
+          "indexBufferBytes": 9216
+        }
+      },
+      "renderBufferBytes": 96
+    }
+  }
+]

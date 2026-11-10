@@ -1,0 +1,72 @@
+
+ RUN  v5.1.0 C:/Users/Ferumm/projects/soupTask
+
+ ❯ src/core/topology.test.ts (2 tests | 2 failed) 23ms
+   × isolated spike keeps both NaN breaks and distinct source segments 18ms
+   × known cadence gap remains disconnected without a fabricated null row 3ms
+ ✓ src/core/engine.test.ts (10 tests) 507ms
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  2 failed | 10 passed (12)
+   Start at  03:38:38
+   Duration  1.27s (tests 50%, import 44%, transform 3%, worker 2%)
+
+JSON report written to C:/Users/Ferumm/projects/soupTask/reports/negative-controls/2026-11-09T22-38-31-740Z/bridged.json
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/core/topology.test.ts > isolated spike keeps both NaN breaks and distinct source segments
+AssertionError: expected [] to deeply equal [ { from: +0, to: 2, …(1) }, …(1) ]
+
+- Expected
++ Received
+
+- [
+-   {
+-     "from": 0,
+-     "kind": "invalid",
+-     "to": 2,
+-   },
+-   {
+-     "from": 2,
+-     "kind": "invalid",
+-     "to": 4,
+-   },
+- ]
++ []
+
+ ❯ src/core/topology.test.ts:10:23
+      8|   const view = sampleView(n, 'loss', 0, 4, 1);
+      9|   expect(view.points.some(point => point.sourceIndex === 2 && point.st…
+     10|   expect(view.breaks).toEqual([{ from: 0, to: 2, kind: 'invalid' }, { …
+       |                       ^
+     11|   expect(new Set(view.points.map(point => point.segment)).size).toBe(3…
+     12| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  src/core/topology.test.ts > known cadence gap remains disconnected without a fabricated null row
+AssertionError: expected [] to deeply equal [ { from: 1, to: 4, kind: 'gap' } ]
+
+- Expected
++ Received
+
+- [
+-   {
+-     "from": 1,
+-     "kind": "gap",
+-     "to": 4,
+-   },
+- ]
++ []
+
+ ❯ src/core/topology.test.ts:17:23
+     15|   const n = normalize(raw([0, 1, 4, 5], [3, 2, 1, 2]), { ...RUNS[0], e…
+     16|   const view = sampleView(n, 'loss', 0, 5, 1);
+     17|   expect(view.breaks).toEqual([{ from: 1, to: 4, kind: 'gap' }]);
+       |                       ^
+     18|   expect(new Set(view.points.map(point => point.segment)).size).toBe(2…
+     19| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
