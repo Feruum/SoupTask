@@ -1,5 +1,5 @@
 import {performanceMark} from '@/app/performance'
-import {memo,useLayoutEffect,useRef} from 'react'
+import {memo,useId,useLayoutEffect,useRef,useState} from 'react'
 import {useNavigate} from 'react-router-dom'
 import type {SourceRow,Metric} from '@/data/types'
 import {formatStep,formatValue} from '@/data/format'
@@ -20,22 +20,25 @@ export const ComparisonCursorReadout=memo(function ComparisonCursorReadout({work
  const host=useRef<HTMLDivElement>(null),refresh=useRef<(()=>void)|null>(null),navigate=useNavigate()
  const {view,runs}=workspace.state,store=workspace.cursor,identity=ids.join(',')
  const comparison=ids.length>1
+ const [expanded,setExpanded]=useState(true)
+ const collapsed=comparison&&!expanded
+ const contentId=useId()
  const accepted=useRef({view,runs})
  useLayoutEffect(()=>{
   const main=document.getElementById('main-content'),shell=main?.parentElement
   if(!main||!shell)return
   const owner=String(++dockEpoch),previous={shell:shell.classList.contains(styles.dockShell),scroll:main.classList.contains(styles.dockScroll),members:main.getAttribute('data-source-dock-members'),owner:main.getAttribute('data-source-dock-owner')}
   shell.classList.add(styles.dockShell);main.classList.add(styles.dockScroll)
-  main.setAttribute('data-source-dock-members',String(identity.split(',').length));main.setAttribute('data-source-dock-owner',owner)
+  main.setAttribute('data-source-dock-members',collapsed?'0':String(identity.split(',').length));main.setAttribute('data-source-dock-owner',owner)
   return()=>{
    if(main.getAttribute('data-source-dock-owner')!==owner)return
    shell.classList.toggle(styles.dockShell,previous.shell);main.classList.toggle(styles.dockScroll,previous.scroll)
    attribute(main,'data-source-dock-members',previous.members);attribute(main,'data-source-dock-owner',previous.owner)
   }
- },[identity])
+ },[identity,collapsed])
  useLayoutEffect(()=>{accepted.current={view,runs};refresh.current?.()},[view,runs])
  useLayoutEffect(()=>{
-  const root=host.current;if(!root)return
+  const root=host.current;if(!root||collapsed)return
   const element=<K extends keyof HTMLElementTagNameMap>(tag:K,className?:string,label?:string)=>{const node=document.createElement(tag);if(className)node.className=className;if(label)node.textContent=label;return node}
   const title=element('p',styles.title,'Original source values · All metrics'),viewport=element('div',styles.sharedViewport),table=element('table',styles.sharedTable)
   viewport.tabIndex=0;viewport.setAttribute('role','region');viewport.setAttribute('aria-label',comparison?'Compared source table':'Source table')
@@ -92,6 +95,9 @@ export const ComparisonCursorReadout=memo(function ComparisonCursorReadout({work
   const unarm=store.beforePublish(next=>{enqueue();const view=accepted.current.view,visible=cursorForView(next,view);beginHoverPaint(view?.viewSeq??0,visible.hoverSeq,visible.hoverStep)})
   refresh.current=update;update();const unsubscribe=store.subscribe(enqueue)
   return()=>{disposed=true;if(refresh.current===update)refresh.current=null;unarm();unsubscribe();cancelPaint?.();root.replaceChildren()}
- },[store,identity,comparison,slots,colorTokens,onPin,navigate])
- return <section className={`${styles.rail} ${styles.sharedRail}`} aria-label={comparison?'Compared source values':'Original source values'} data-testid={comparison?'comparison-cursor-readout':'cursor-readout-loss'} data-reserved="true" data-members={ids.length}><div className={styles.content} ref={host}/></section>
+ },[store,identity,comparison,collapsed,slots,colorTokens,onPin,navigate])
+ return <section className={`${styles.rail} ${styles.sharedRail}`} aria-label={comparison?'Compared source values':'Original source values'} data-testid={comparison?'comparison-cursor-readout':'cursor-readout-loss'} data-reserved="true" data-members={ids.length} data-collapsed={collapsed}>
+  {comparison&&<button type="button" className={`text-link ${styles.sourceToggle}`} aria-controls={contentId} aria-expanded={!collapsed} onClick={()=>setExpanded(value=>!value)}>{collapsed?'Show source values':'Hide source values'}</button>}
+  <div id={contentId} className={styles.content} ref={host} hidden={collapsed}/>
+ </section>
 })

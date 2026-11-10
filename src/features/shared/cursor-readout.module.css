@@ -42,6 +42,10 @@
 .actions a { display: inline-flex; align-items: center; min-height: 44px; }
 .rail.sharedRail > .content { height: calc(116px + var(--source-rows) * 60px); }
 .sharedRail .title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sourceToggle { position: absolute; top: 6px; right: 12px; z-index: 1; min-height: 44px; padding-inline: 8px; font-size: 12px; }
+.sourceToggle + .content .title { min-height: 36px; padding: 6px 132px 0 0; }
+.sharedRail[data-collapsed="true"] { display: flex; justify-content: flex-end; padding: 4px 12px; }
+.sharedRail[data-collapsed="true"] .sourceToggle { position: static; }
 .sharedNote { margin: 6px 0 0; color: var(--text-secondary); font-size: 11px; line-height: 16px; }
 .sharedViewport { contain: strict; content-visibility: auto; height: calc(44px + var(--source-rows) * 60px); overflow: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
 .sharedTable { table-layout: fixed; width: 100%; min-width: 784px; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 12px; }
@@ -58,6 +62,7 @@
   .sharedRail { position: fixed; z-index: 8; left: 240px; right: 24px; bottom: 12px; margin: 0; }
   .dockShell { height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
   .dockScroll { flex: 1; min-height: 0; width: 100%; overflow: auto; margin-bottom: 400px; }
+  .dockScroll[data-source-dock-members="0"] { margin-bottom: 76px; }
   .dockScroll[data-source-dock-members="1"] { margin-bottom: 220px; }
   .dockScroll[data-source-dock-members="2"] { margin-bottom: 280px; }
   .dockScroll[data-source-dock-members="3"] { margin-bottom: 340px; }
@@ -66,3 +71,7 @@
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .rail > .content { height: calc(28px + var(--source-wide-rows) * 130px + (var(--source-wide-rows) - 1) * 12px); }
 }
+
+:global(.calm-chart) .rail > .content { contain: layout style paint; height: auto; }
+:global(.calm-chart) .observations { contain: layout style paint; content-visibility: visible; height: auto; max-height: 144px; }
+:global(.calm-chart) .observation { align-items: center; padding-bottom: 0; }

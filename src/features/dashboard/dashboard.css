@@ -72,13 +72,11 @@
 .calm-chart [data-reserved="true"] { position:absolute;z-index:4;top:32px;right:16px;width:min(360px,calc(100% - 32px));margin:0;background:var(--surface-raised);border-color:var(--border-strong);pointer-events:none; }
 .calm-chart [data-reserved="true"] :is(button,a) { pointer-events:auto; }
 .calm-chart [data-reserved="true"]:not(:has(.chart-hover-value)) { visibility:hidden;pointer-events:none; }
-.calm-chart [data-reserved="true"] section[aria-label^="Original observations"] { height:auto;max-height:160px; }
 .calm-chart [data-testid="spike-explanation"] { display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;max-width:none;font-size:12px; }
 .calm-chart [data-testid="spike-explanation"] > p { flex:1;min-width:240px;margin:0; }
 .calm-chart [data-testid="spike-explanation"] a { display:none; }
 .calm-chart .chart-pointer-help,.calm-chart .chart-touch-help { color:var(--text-secondary);font-size:11px;margin:8px 0; }
 .calm-chart .chart-touch-help,.calm-touch-help { display:none; }
-.calm-chart .chart-hover-value { margin-top:12px; }
 .calm-chart .pinned-source { margin-top:16px; }
 .calm-chart-caption { display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 12px;margin:0 0 12px;color:var(--text-secondary);font-size:11px; }
 .calm-chart-caption a { display:inline-flex;align-items:center;gap:4px;min-height:44px;color:var(--accent);font-size:12px; }

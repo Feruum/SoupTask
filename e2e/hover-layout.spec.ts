@@ -60,10 +60,57 @@ for (const route of ['/dashboard', '/runs']) test(`${route} keeps source actions
     contentType: 'application/json'
   });
   expect.soft(after).toBeCloseTo(before, 0);
-  if (route === '/dashboard') await expect(page.locator('.calm-chart .chart-hover-value')).toBeVisible();
+  if (route === '/dashboard') {
+    const value = page.locator('.calm-chart .chart-hover-value [title^="Exact source value"]:visible').first();
+    await expect(value).toContainText(/step .+ · Loss /);
+    await expect(value).toBeInViewport({ ratio: 0.95 });
+  }
   else await expect(page.locator('.preview-charts .chart-hover-value')).toHaveCount(0);
   await expect(plot).toHaveAttribute('data-cursor-point-count', /[1-9]/);
   if (route === '/runs') await expect(page.locator('.preview-charts')).toContainText('inspect original values and adjust range');
+});
+test('Compare source values can be hidden and restored without removing runs', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/compare?runs=kazakh-sft-001,kazakh-sft-002');
+  const source = page.getByTestId('comparison-cursor-readout');
+  const main = page.locator('#main-content');
+  const plot = page.getByTestId('comparison-loss');
+  await expect(plot).toHaveAttribute('data-view-ready', 'true');
+  await expect(source.getByRole('table')).toBeVisible();
+  const expandedHeight = (await main.boundingBox())!.height;
+  const hide = source.getByRole('button', { name: 'Hide source values' });
+  await hide.focus();
+  await page.keyboard.press('Enter');
+  const show = source.getByRole('button', { name: 'Show source values' });
+  await expect(show).toBeFocused();
+  await expect(show).toHaveAttribute('aria-expanded', 'false');
+  await expect(source.locator('table')).toHaveCount(0);
+  expect((await main.boundingBox())!.height).toBeGreaterThan(expandedHeight + 150);
+  await expect(page).toHaveURL(/runs=kazakh-sft-001,kazakh-sft-002/);
+  await page.keyboard.press('Enter');
+  await expect(hide).toBeFocused();
+  await expect(hide).toHaveAttribute('aria-expanded', 'true');
+  await pointAtCenter(page, plot);
+  await expect(source.locator('[data-source-metric="loss"]:visible')).toHaveCount(2);
+});
+for (const width of [390, 1024, 1440]) test(`Training runs keeps filter labels above their controls at ${width}px`, async ({ page }) => {
+  await page.setViewportSize({ width, height: 900 });
+  await page.goto('/runs');
+  const filters = page.locator('.run-filters-disclosure');
+  if (width < 760) await filters.locator('summary').click();
+  for (const name of ['Status', 'Data quality', 'Sort by']) {
+    const select = filters.getByRole('combobox', { name, exact: true });
+    await expect(select).toBeVisible();
+    expect(await select.evaluate(element => {
+      const text = document.createRange();
+      text.selectNode(element.parentElement!.firstChild!);
+      return text.getBoundingClientRect().bottom < element.getBoundingClientRect().top;
+    })).toBe(true);
+  }
+  const status = filters.getByRole('combobox', { name: 'Status', exact: true });
+  await status.selectOption('Running');
+  await expect(status).toHaveValue('Running');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
 });
 for (const width of [390, 1440]) for (const comparison of [false, true]) test(`${comparison ? 'four-run duplicate comparison' : 'full run'} preserves the following metric position at ${width}px`, async ({
   page
