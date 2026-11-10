@@ -1,0 +1,197 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=tmp/review-inspection-red-playwright.config.mjs",
+      "--grep",
+      "a refused second inspection"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\review-inspection-red-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/review-inspection-before/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "review-fixes.spec.ts"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-inspection-before\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "review-fixes.spec.ts",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4175",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-inspection-before\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4175",
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "url": "http://127.0.0.1:4175",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "review-fixes.spec.ts",
+      "file": "review-fixes.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "a refused second inspection preserves the pending accepted query and its original reply",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7605,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('inspection-status')\nExpected: \u001b[32m\"\u001b[7mI\u001b[27mnspect\u001b[7ming\u001b[27m recorded step 500,00\u001b[7m1…\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mCould not i\u001b[27mnspect recorded step 500,00\u001b[7m2. The view is changing. Retry this source query after it finishes.\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByTestId('inspection-status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('inspection-status')\u001b[22m\n\u001b[2m    14 × locator resolved to <output class=\"_status_viswq_1\" data-testid=\"inspection-status\">Could not inspect recorded step 500,002. The view…</output>\u001b[22m\n\u001b[2m       - unexpected value \"Could not inspect recorded step 500,002. The view is changing. Retry this source query after it finishes.\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('inspection-status')\nExpected: \u001b[32m\"\u001b[7mI\u001b[27mnspect\u001b[7ming\u001b[27m recorded step 500,00\u001b[7m1…\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mCould not i\u001b[27mnspect recorded step 500,00\u001b[7m2. The view is changing. Retry this source query after it finishes.\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByTestId('inspection-status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('inspection-status')\u001b[22m\n\u001b[2m    14 × locator resolved to <output class=\"_status_viswq_1\" data-testid=\"inspection-status\">Could not inspect recorded step 500,002. The view…</output>\u001b[22m\n\u001b[2m       - unexpected value \"Could not inspect recorded step 500,002. The view is changing. Retry this source query after it finishes.\"\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:22:24",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                      "column": 24,
+                      "line": 22
+                    },
+                    "snippet": " \u001b[90m 20 |\u001b[39m   \u001b[36mawait\u001b[39m input\u001b[33m.\u001b[39mfill(\u001b[32m'500002'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 21 |\u001b[39m   \u001b[36mawait\u001b[39m input\u001b[33m.\u001b[39mevaluate(element\u001b[33m=>\u001b[39m(element\u001b[33m.\u001b[39mclosest(\u001b[32m'form'\u001b[39m) \u001b[36mas\u001b[39m \u001b[33mHTMLFormElement\u001b[39m)\u001b[33m.\u001b[39mrequestSubmit())\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 22 |\u001b[39m   \u001b[36mawait\u001b[39m expect(status)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Inspecting recorded step 500,001…'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 23 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Inspect step'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m}))\u001b[33m.\u001b[39mtoBeDisabled()\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39m(window \u001b[36mas\u001b[39m unknown \u001b[36mas\u001b[39m {__inspectionGate\u001b[33m:\u001b[39m{replies\u001b[33m:\u001b[39m\u001b[33mArray\u001b[39m\u001b[33m<\u001b[39m()\u001b[33m=>\u001b[39m\u001b[36mvoid\u001b[39m\u001b[33m>\u001b[39m}})\u001b[33m.\u001b[39m__inspectionGate\u001b[33m.\u001b[39mreplies\u001b[33m.\u001b[39mshift()\u001b[33m!\u001b[39m())\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'inspected-loss'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'100.000'\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                        "column": 24,
+                        "line": 22
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByTestId('inspection-status')\nExpected: \u001b[32m\"\u001b[7mI\u001b[27mnspect\u001b[7ming\u001b[27m recorded step 500,00\u001b[7m1…\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7mCould not i\u001b[27mnspect recorded step 500,00\u001b[7m2. The view is changing. Retry this source query after it finishes.\u001b[27m\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveText\" getByTestId('inspection-status') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('inspection-status')\u001b[22m\n\u001b[2m    14 × locator resolved to <output class=\"_status_viswq_1\" data-testid=\"inspection-status\">Could not inspect recorded step 500,002. The view…</output>\u001b[22m\n\u001b[2m       - unexpected value \"Could not inspect recorded step 500,002. The view is changing. Retry this source query after it finishes.\"\u001b[22m\n\n\n  20 |   await input.fill('500002');\n  21 |   await input.evaluate(element=>(element.closest('form') as HTMLFormElement).requestSubmit());\n> 22 |   await expect(status).toHaveText('Inspecting recorded step 500,001…');\n     |                        ^\n  23 |   await expect(page.getByRole('button',{name:'Inspect step',exact:true})).toBeDisabled();\n  24 |   await page.evaluate(()=>(window as unknown as {__inspectionGate:{replies:Array<()=>void>}}).__inspectionGate.replies.shift()!());\n  25 |   await expect(page.getByTestId('inspected-loss')).toHaveText('100.000');\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts:22:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:30:10.997Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-inspection-before\\artifacts\\review-fixes-a-refused-sec-03105-uery-and-its-original-reply\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-inspection-before\\artifacts\\review-fixes-a-refused-sec-03105-uery-and-its-original-reply\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\review-inspection-before\\artifacts\\review-fixes-a-refused-sec-03105-uery-and-its-original-reply\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\review-fixes.spec.ts",
+                    "column": 24,
+                    "line": 22
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "abdd2e2cf517d3c959fd-43b586ded7c65b1c7201",
+          "file": "review-fixes.spec.ts",
+          "line": 2,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T04:30:09.112Z",
+    "duration": 11100.828,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

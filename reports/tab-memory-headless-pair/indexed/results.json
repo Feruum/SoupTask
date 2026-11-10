@@ -1,0 +1,167 @@
+{
+  "capturedAt": "2026-11-10T07:09:36.367Z",
+  "environment": {
+    "node": "v24.22.1",
+    "browser": "158.0.8127.18",
+    "os": "win32",
+    "release": "10.0.26200",
+    "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+    "viewport": "1440x900",
+    "dpr": 1,
+    "headed": false,
+    "initialOnly": true,
+    "cpuThrottling": "none: separate memory experiment",
+    "gc": "No forced GC; deterministic:false memory dumps",
+    "buildRoot": "dist",
+    "sampler": "indexed",
+    "buildIndexSha256": "e42bd6bbf19b47fa6af00ff2f05ce98d03a464cad640184dc9f87bd89c29a521"
+  },
+  "scope": "Windows OS process counters from the page renderer and every live dedicated Worker, each associated with a PID by its own User Timing marker in the same Chrome trace. Tab-owned private committed bytes/working set deduplicate those verified PIDs, including native allocations, not JS heap alone. SystemInfo-reported browser-process subtotals include shared browser/GPU/utility processes, are not exhaustive browser totals, and are not assigned wholly to the tab. Working-set sums may double-count shared pages. A process counter is not universal total tab/GPU memory, and is not a Chrome Task Manager screenshot. One isolated browser with one page, no personal profile; headed/headless configuration is recorded explicitly. Retiring isolates/shared infrastructure are reflected in the separately labelled process-subtotal scope. User Timing markers, Windows counters and the dump are sequential, not atomic; counter intervals and marker timestamps are retained.",
+  "trace": {
+    "file": "memory-chrome-trace.json.gz",
+    "rawBytes": 4503230,
+    "compressedBytes": 591082,
+    "rawSha256": "9dd829713076211e20fafa418c6ae2d04421c8f6c1a5d9f620096a0051068405",
+    "compressedSha256": "a761c4911bd2b92636f02ea3470cbaac9a073c73eb893feef0b1bc696d2e56a3"
+  },
+  "checkpoints": [
+    {
+      "label": "1M-settled",
+      "marker": "soup:memory:1M-settled",
+      "workerMarkers": [
+        {
+          "url": "http://127.0.0.1:4192/assets/training.worker-CPr3EncJ.js",
+          "marker": "soup:memory:1M-settled:worker:0",
+          "pid": 33472,
+          "markerTimestampUs": 73099129324
+        }
+      ],
+      "capturedAt": "2026-11-10T07:09:35.536Z",
+      "counterStart": "2026-11-10T07:09:33.342Z",
+      "counterEnd": "2026-11-10T07:09:35.379Z",
+      "processes": [
+        {
+          "type": "browser",
+          "id": 33928,
+          "cpuTime": 0.426439
+        },
+        {
+          "type": "renderer",
+          "id": 33472,
+          "cpuTime": 1.457003
+        },
+        {
+          "type": "GPU",
+          "id": 12364,
+          "cpuTime": 0.729167
+        },
+        {
+          "type": "network.mojom.NetworkService",
+          "id": 39456,
+          "cpuTime": 0.113332
+        },
+        {
+          "type": "tracing.mojom.TracingService",
+          "id": 34964,
+          "cpuTime": 0.032006
+        }
+      ],
+      "windowsProcesses": [
+        {
+          "Id": 12364,
+          "ProcessName": "chrome-headless-shell",
+          "WorkingSet64": 82878464,
+          "PrivateMemorySize64": 41730048,
+          "VirtualMemorySize64": 2260848877568
+        },
+        {
+          "Id": 33472,
+          "ProcessName": "chrome-headless-shell",
+          "WorkingSet64": 254115840,
+          "PrivateMemorySize64": 150695936,
+          "VirtualMemorySize64": 3777738137600
+        },
+        {
+          "Id": 33928,
+          "ProcessName": "chrome-headless-shell",
+          "WorkingSet64": 57860096,
+          "PrivateMemorySize64": 19894272,
+          "VirtualMemorySize64": 2259711766528
+        },
+        {
+          "Id": 34964,
+          "ProcessName": "chrome-headless-shell",
+          "WorkingSet64": 47517696,
+          "PrivateMemorySize64": 15962112,
+          "VirtualMemorySize64": 2259779989504
+        },
+        {
+          "Id": 39456,
+          "ProcessName": "chrome-headless-shell",
+          "WorkingSet64": 37904384,
+          "PrivateMemorySize64": 16199680,
+          "VirtualMemorySize64": 2259538210816
+        }
+      ],
+      "missingProcessIds": [],
+      "dump": {
+        "dumpGuid": "0x1",
+        "success": true
+      },
+      "mainHeap": {
+        "usedSize": 7075732,
+        "totalSize": 14487552,
+        "embedderHeapUsedSize": 3498216,
+        "backingStorageSize": 1346101
+      },
+      "workspace": {
+        "workspaceEpoch": 1,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 1,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 27,
+            "normalizationMs": 273.6000000089407,
+            "indexBuildMs": 204.1000000089407,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 255936
+      },
+      "pageUrl": "http://127.0.0.1:4192/runs/kazakh-sft-005",
+      "rendererPid": 33472,
+      "markerTimestampUs": 73099123461,
+      "renderer": {
+        "Id": 33472,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 254115840,
+        "PrivateMemorySize64": 150695936,
+        "VirtualMemorySize64": 3777738137600
+      },
+      "tabOwnerPids": [
+        33472
+      ],
+      "tabOwnedProcesses": [
+        {
+          "Id": 33472,
+          "ProcessName": "chrome-headless-shell",
+          "WorkingSet64": 254115840,
+          "PrivateMemorySize64": 150695936,
+          "VirtualMemorySize64": 3777738137600
+        }
+      ],
+      "tabOwnedPrivateCommittedBytes": 150695936,
+      "tabOwnedWorkingSetBytes": 254115840,
+      "nativeDumpEvents": [],
+      "nativeDumpMatched": false,
+      "browserReportedProcessPrivateBytesSubtotal": 244482048,
+      "browserReportedProcessWorkingSetBytesSubtotal": 480276480
+    }
+  ]
+}

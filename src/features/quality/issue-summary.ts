@@ -1,3 +1,4 @@
+import { ISSUE_LABELS } from './issue-labels';
 import type { IssueKind, RunManifestEntry } from '@/data/types';
 export interface IssueTypeCount {
   kind: IssueKind;
@@ -9,17 +10,17 @@ export function issueTypeCounts(entries: readonly Pick<RunManifestEntry, 'qualit
   const sum = (key: 'nan' | 'posInf' | 'negInf' | 'duplicateRows' | 'duplicateGroups' | 'conflictGroups' | 'invalidX' | 'outOfOrder' | 'gaps') => entries.reduce((total, run) => total + run.quality[key], 0);
   return [{
     kind: 'nan',
-    category: 'NaN',
+    category: ISSUE_LABELS.nan,
     unit: 'metric observations',
     count: sum('nan')
   }, {
     kind: 'posInf',
-    category: '+Infinity',
+    category: ISSUE_LABELS.posInf,
     unit: 'metric observations',
     count: sum('posInf')
   }, {
     kind: 'negInf',
-    category: '−Infinity',
+    category: ISSUE_LABELS.negInf,
     unit: 'metric observations',
     count: sum('negInf')
   }, {
@@ -34,22 +35,22 @@ export function issueTypeCounts(entries: readonly Pick<RunManifestEntry, 'qualit
     count: sum('duplicateGroups')
   }, {
     kind: 'conflict',
-    category: 'Conflicting measurements',
+    category: ISSUE_LABELS.conflict,
     unit: 'metric groups',
     count: sum('conflictGroups')
   }, {
     kind: 'invalidX',
-    category: 'Invalid step coordinates',
+    category: ISSUE_LABELS.invalidX,
     unit: 'raw rows',
     count: sum('invalidX')
   }, {
     kind: 'outOfOrder',
-    category: 'Out-of-order source',
+    category: ISSUE_LABELS.outOfOrder,
     unit: 'descending source-order transitions',
     count: sum('outOfOrder')
   }, {
     kind: 'gap',
-    category: 'Known cadence gaps',
+    category: ISSUE_LABELS.gap,
     unit: 'missing intervals',
     count: sum('gaps')
   }];

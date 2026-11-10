@@ -1,0 +1,7 @@
+{
+  "scope": "Additional exact-byte verification after successful first production smoke",
+  "passed": false,
+  "observed": "Local index referenced index-Dx6OgKj5.js/index-6ps1v9xS.css; remotely rebuilt index referenced index-Z0spmf5Z.js/index-CYxNBojz.css. A local hashed artifact URL returned404.",
+  "cause": "Remote build output differs; exact build-tool/platform cause was not established.",
+  "resolution": "Publish the already-tested local dist via Vercel prebuilt static Build Output API; repeat deployed smoke and byte-hash verification. This does not change application source or measurement results."
+}

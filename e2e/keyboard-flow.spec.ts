@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test'
 
 test('keyboard activation follows dashboard, range, issue, source and comparison', async ({ page }) => {
-  await page.goto('/dashboard')
+  await page.goto('/dashboard?view=map')
   const sector = page.getByRole('button', { name: 'kazakh-sft-006, Loss quality', exact: true })
   await sector.focus(); await page.keyboard.press('Enter')
   const open = page.getByTestId('selected-experiment').getByRole('link', { name: 'Open run', exact: true })

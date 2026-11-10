@@ -1,5 +1,5 @@
 {
-  "executedAt": "2026-11-09T22:40:05.410Z",
+  "executedAt": "2026-11-10T07:22:24.889Z",
   "node": "v24.22.1",
   "platform": "win32",
   "coreSha256": "450e74232faaa48425975968d982ee40ad1c36a5df658984626315d414b69b0a",
@@ -20,9 +20,9 @@
         "isolated spike keeps both NaN breaks and distinct source segments",
         "known cadence gap remains disconnected without a fabricated null row"
       ],
-      "report": "reports/negative-controls/2026-11-09T22-40-05-410Z/nth.json",
-      "log": "reports/negative-controls/2026-11-09T22-40-05-410Z/nth.txt",
-      "logSha256": "adc2db8b87b901b976c335eb06541ead4b9222cb5e381a1c159d25a19f27c5d3"
+      "report": "reports/negative-controls/2026-11-10T07-22-24-889Z/nth.json",
+      "log": "reports/negative-controls/2026-11-10T07-22-24-889Z/nth.txt",
+      "logSha256": "8617f58b03c84b62e43c8a77ecc5345521a018922105c960c5ae1a8d81a5bffb"
     },
     {
       "fault": "mean",
@@ -37,9 +37,9 @@
         "independent raw-window oracle preserves both extrema and exact provenance on seeded cases",
         "independent interval oracle checks every bucket and segment first/min/max/last"
       ],
-      "report": "reports/negative-controls/2026-11-09T22-40-05-410Z/mean.json",
-      "log": "reports/negative-controls/2026-11-09T22-40-05-410Z/mean.txt",
-      "logSha256": "2c772e115b9b88ab1e754964e15b737342c8373e77ea9c9a6794ebfdb7129df0"
+      "report": "reports/negative-controls/2026-11-10T07-22-24-889Z/mean.json",
+      "log": "reports/negative-controls/2026-11-10T07-22-24-889Z/mean.txt",
+      "logSha256": "046d1bc855c439d0400e804d9f63fcd11a96947c5443ce2266b5f1d368684429"
     },
     {
       "fault": "fabricated",
@@ -53,9 +53,9 @@
         "independent raw-window oracle preserves both extrema and exact provenance on seeded cases",
         "isolated spike keeps both NaN breaks and distinct source segments"
       ],
-      "report": "reports/negative-controls/2026-11-09T22-40-05-410Z/fabricated.json",
-      "log": "reports/negative-controls/2026-11-09T22-40-05-410Z/fabricated.txt",
-      "logSha256": "b311d5412a31f4c313eefb14a19b29b91676b581585c0fb6548619a910140186"
+      "report": "reports/negative-controls/2026-11-10T07-22-24-889Z/fabricated.json",
+      "log": "reports/negative-controls/2026-11-10T07-22-24-889Z/fabricated.txt",
+      "logSha256": "c842307d71a6da5101f100cae39c67b8ea86c2df351d945a87381563a87e445f"
     },
     {
       "fault": "bridged",
@@ -65,9 +65,9 @@
         "isolated spike keeps both NaN breaks and distinct source segments",
         "known cadence gap remains disconnected without a fabricated null row"
       ],
-      "report": "reports/negative-controls/2026-11-09T22-40-05-410Z/bridged.json",
-      "log": "reports/negative-controls/2026-11-09T22-40-05-410Z/bridged.txt",
-      "logSha256": "76baef67eb2f7ea3a1eaecf9685cad3b854803fd186672f0a2a6366ad7f34450"
+      "report": "reports/negative-controls/2026-11-10T07-22-24-889Z/bridged.json",
+      "log": "reports/negative-controls/2026-11-10T07-22-24-889Z/bridged.txt",
+      "logSha256": "a93dc3a0b86b9dcf0267178ebd5b9aae9c42882a609475aa1cf98e410bd34b5e"
     }
   ]
 }

@@ -1,25 +1,25 @@
 
  RUN  v5.1.0 C:/Users/Ferumm/projects/soupTask
 
- ✓ src/core/topology.test.ts (2 tests) 11ms
- ❯ src/core/engine.test.ts (10 tests | 7 failed) 484ms
-   × exact spike provenance width 1 106ms
-   × exact spike provenance width 320 82ms
-   × exact spike provenance width 768 73ms
-   × exact spike provenance width 1440 62ms
+ ✓ src/core/topology.test.ts (2 tests) 9ms
+ ❯ src/core/engine.test.ts (10 tests | 7 failed) 435ms
+   × exact spike provenance width 1 97ms
+   × exact spike provenance width 320 94ms
+   × exact spike provenance width 768 65ms
+   × exact spike provenance width 1440 59ms
    × excludes offscreen spike and includes inclusive endpoints/single step 1ms
-   × independent raw-window oracle preserves both extrema and exact provenance on seeded cases 2ms
-   ✓ discloses dense disconnected mode while retaining exact finite extrema 113ms
-   × independent interval oracle checks every bucket and segment first/min/max/last 6ms
-   ✓ duplicate-group inspection exposes total and every page without unbounded objects 5ms
-   ✓ final pending segment cannot exceed the topology cap after its last flush 28ms
+   × independent raw-window oracle preserves both extrema and exact provenance on seeded cases 3ms
+   ✓ discloses dense disconnected mode while retaining exact finite extrema 81ms
+   × independent interval oracle checks every bucket and segment first/min/max/last 5ms
+   ✓ duplicate-group inspection exposes total and every page without unbounded objects 3ms
+   ✓ final pending segment cannot exceed the topology cap after its last flush 24ms
 
  Test Files  1 failed | 1 passed (2)
       Tests  7 failed | 5 passed (12)
-   Start at  03:40:08
-   Duration  1.31s (tests 48%, import 46%, transform 4%, worker 2%)
+   Start at  12:22:27
+   Duration  1.18s (tests 49%, import 44%, transform 4%, worker 3%)
 
-JSON report written to C:/Users/Ferumm/projects/soupTask/reports/negative-controls/2026-11-09T22-40-05-410Z/mean.json
+JSON report written to C:/Users/Ferumm/projects/soupTask/reports/negative-controls/2026-11-10T07-22-24-889Z/mean.json
 
 ⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
 

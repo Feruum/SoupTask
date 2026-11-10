@@ -30,7 +30,7 @@ async function plotPointer(page: Page, plot: Locator, fraction = .5) {
 test('radial sectors select both source run and metric with keyboard alternatives', async ({
   page
 }) => {
-  await page.goto('/dashboard');
+  await page.goto('/dashboard?view=map');
   const sector = page.getByRole('button', {
     name: 'kazakh-sft-006, Loss quality',
     exact: true

@@ -28,7 +28,7 @@ test('source spike is actually painted at the source coordinate',async({page})=>
 
 test('routes, filters and invalid comparison selections recover explicitly',async({page})=>{
  await page.goto('/');await expect(page).toHaveURL(/\/dashboard$/)
- await expect(page.getByRole('heading',{name:'Workspace overview',exact:true})).toBeVisible()
+ await expect(page.getByRole('heading',{name:'Training overview',exact:true})).toBeVisible()
  await page.goto('/runs');await page.getByRole('searchbox',{name:'Search runs',exact:true}).fill('no-such-run')
  await expect(page.getByText('No matching runs',{exact:true})).toBeVisible()
  await page.goto('/compare?runs=unknown');await expect(page.getByText(/known run|Unknown run|Invalid run|not found/i).first()).toBeVisible()

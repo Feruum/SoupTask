@@ -1,131 +1,154 @@
-import { useMemo, useState } from 'react'
-import { Activity, AlertTriangle, ArrowLeftRight, ArrowUpRight, Layers } from 'lucide-react'
-import { Link, useOutletContext } from 'react-router-dom'
+import { useEffect, useRef, useState } from 'react'
+import { ArrowUpRight, SlidersHorizontal } from 'lucide-react'
+import { Link, useNavigate, useOutletContext, useSearchParams } from 'react-router-dom'
 import type { ShellContext } from '@/app/App'
 import type { Metric, RunManifestEntry } from '@/data/types'
-import { Button } from '@/components/arc/button/button'
 import { useCatalog } from '@/features/shared/Catalog'
-import { Charts, METRICS, NAMES, WorkspaceStatus, issueCount } from '@/features/shared/Workspace'
-import { formatStep, formatValue } from '@/data/format'
+import { Charts, METRICS, NAMES, RangeControls, WorkspaceStatus, issueCount } from '@/features/shared/Workspace'
+import { useCompactLayout } from '@/features/shared/ResponsiveDisclosure'
+import { formatStep, formatTimestamp, formatValue } from '@/data/format'
 import { useWorkspace } from '@/worker/use-workspace'
+import { Input } from '@/components/arc/input/input'
+import { Button } from '@/components/arc/button/button'
 import { ExperimentMap } from './ExperimentMap'
 import { ExperimentGroups } from './ExperimentGroups'
 import { RunHistory } from './RunHistory'
-import { ResponsiveDisclosure, useCompactLayout } from '@/features/shared/ResponsiveDisclosure'
+import { RunNavigator } from './RunNavigator'
 import './dashboard.css'
 
-function findingLabel(run: RunManifestEntry) {
-  const quality = run.quality
-  if (quality.conflictGroups) return 'Conflicting duplicate steps'
-  if (quality.nan) return 'NaN observations'
-  if (quality.posInf || quality.negInf) return 'Infinite metric values'
-  if (quality.outOfOrder) return 'Out-of-order observations'
-  if (quality.gaps) return 'Missing intervals'
-  if (quality.duplicateRows) return 'Duplicate source rows'
-  return 'Source findings'
+type DashboardView = 'monitor' | 'map' | 'groups'
+const VIEWS: { id: DashboardView; label: string }[] = [
+  { id: 'monitor', label: 'Monitor' },
+  { id: 'map', label: 'Experiment map' },
+  { id: 'groups', label: 'Groups' },
+]
+
+function runSourceLink(run: RunManifestEntry, metric: Metric) {
+  const step = run.summaries[metric].maxStep
+  return step === null ? `/runs/${run.id}` : `/runs/${run.id}?step=${step}&revision=${encodeURIComponent(run.revision)}`
+}
+
+function RunActions({ run, metric }: { run: RunManifestEntry; metric: Metric }) {
+  return <div className="calm-run-actions">
+    <Link to={`/runs/${run.id}`}>Open run <ArrowUpRight size={14} aria-hidden="true" /></Link>
+    <Link to={`/compare?runs=${run.id}`}>Compare</Link>
+    <Link className="calm-exploration-issues" to={`/data-quality?run=${run.id}&metric=${metric}`}>Inspect issues</Link>
+  </div>
+}
+
+function SelectionSummary({ run, metric, monitorHref }: { run: RunManifestEntry; metric: Metric; monitorHref: string }) {
+  const quality = run.quality.metrics[metric]
+  return <section className="calm-selection-summary" data-testid="selected-experiment" aria-labelledby="selected-run-title">
+    <span className={`status-pill status-${run.status.toLowerCase()}`}>{run.status}</span>
+    <h2 id="selected-run-title" tabIndex={-1}>{run.name}</h2>
+    <p>{run.model} · {run.method}</p>
+    <p className="calm-snapshot">Demo snapshot · Not live · <time dateTime={run.sourceUpdatedAt}>{formatTimestamp(run.sourceUpdatedAt)}</time></p>
+    <dl><div><dt>Peak {NAMES[metric].toLowerCase()}</dt><dd>{formatValue(run.summaries[metric].max, metric === 'lr')}</dd></div><div><dt>Raw rows</dt><dd>{formatStep(run.rowCount)}</dd></div></dl>
+    <p data-testid="selected-metric">{NAMES[metric]} · {quality.invalidCount} invalid · {quality.conflicts} conflicts · {quality.gaps} gaps</p>
+    <Link className="calm-return-monitor" to={monitorHref}>Monitor selected run <ArrowUpRight size={16} aria-hidden="true" /></Link>
+    <RunActions run={run} metric={metric} />
+  </section>
 }
 
 export function DashboardPage() {
   const runs = useCatalog()
-  const compact = useCompactLayout()
+  const compact = useCompactLayout(1000)
   const { theme } = useOutletContext<ShellContext>()
-  const [selectedMetric, setSelectedMetric] = useState<Metric>('loss')
-  const [selected, setSelected] = useState(() => runs.find(run => run.id === 'kazakh-sft-005')?.id ?? runs[0].id)
-  const run = runs.find(item => item.id === selected) ?? runs[0]
+  const [params, setParams] = useSearchParams()
+  const navigate = useNavigate()
+  const requestedView = params.get('view')
+  const view: DashboardView = requestedView === 'map' || requestedView === 'groups' ? requestedView : 'monitor'
+  const requestedMetric = params.get('metric')
+  const selectedMetric: Metric = requestedMetric === 'lr' || requestedMetric === 'grad_norm' ? requestedMetric : 'loss'
+  const [navigatorOpen, setNavigatorOpen] = useState(false)
+  const settingsRef = useRef<HTMLDetailsElement>(null)
+  const run = runs.find(item => item.id === params.get('run')) ?? runs.find(item => item.id === 'kazakh-sft-005') ?? runs[0]
   const workspace = useWorkspace([run.id])
-  const problemRuns = useMemo(() => runs.filter(item => issueCount(item.quality) > 0), [runs])
-  const findings = useMemo(() => {
-    const kinds = new Set<string>()
-    return problemRuns.filter(item => {
-      const kind = findingLabel(item)
-      if (item.id === run.id || kinds.has(kind)) return false
-      kinds.add(kind)
-      return true
-    }).slice(0, 5)
-  }, [problemRuns, run.id])
-  const counts = useMemo(() => [
-    ['NaN', runs.reduce((sum, item) => sum + item.quality.nan, 0)],
-    ['Infinity', runs.reduce((sum, item) => sum + item.quality.posInf + item.quality.negInf, 0)],
-    ['Conflicts', runs.reduce((sum, item) => sum + item.quality.conflictGroups, 0)],
-    ['Duplicate rows', runs.reduce((sum, item) => sum + item.quality.duplicateRows, 0)],
-    ['Known gaps', runs.reduce((sum, item) => sum + item.quality.gaps, 0)],
-  ] as const, [runs])
   const summary = run.summaries[selectedMetric]
   const quality = run.quality.metrics[selectedMetric]
-  const peakStep = run.summaries.loss.maxStep
-  const peakLink = peakStep === null ? `/runs/${run.id}` : `/runs/${run.id}?step=${peakStep}&revision=${encodeURIComponent(run.revision)}`
+  const problemCount = runs.filter(item => issueCount(item.quality) > 0).length
+  const latest = summary.latestStatus === 'finite' ? formatValue(summary.latest, selectedMetric === 'lr')
+    : summary.latestStatus === 'invalid' ? 'Invalid' : summary.latestStatus === 'conflict' ? 'Conflict' : 'Unavailable'
+  const points = workspace.state.view?.runs[run.id]?.[selectedMetric].points.length
 
-  function selectRun(id: string, metric: Metric) {
-    setSelected(id)
-    setSelectedMetric(metric)
+  useEffect(() => {
+    const settings = settingsRef.current
+    if (!settings) return
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key !== 'Escape' || !settings.open) return
+      event.preventDefault()
+      settings.open = false
+      settings.querySelector('summary')?.focus()
+    }
+    settings.addEventListener('keydown', closeOnEscape)
+    return () => settings.removeEventListener('keydown', closeOnEscape)
+  }, [view])
+
+  function viewHref(next: DashboardView) {
+    const search = new URLSearchParams(params)
+    if (next === 'monitor') search.delete('view')
+    else search.set('view', next)
+    return `/dashboard${search.size ? `?${search}` : ''}`
   }
 
-  const groups = <ResponsiveDisclosure label="Experiment groups" className="group-disclosure"><ExperimentGroups runs={runs} selected={run.id} onSelect={id => setSelected(id)} /></ResponsiveDisclosure>
-  const map = <ResponsiveDisclosure label="Experiment map" meta={`${runs.length} runs · 3 metrics`} className="experiment-map-disclosure"><ExperimentMap runs={runs} selected={run.id} metric={selectedMetric} onSelect={selectRun} /></ResponsiveDisclosure>
-  const instrument = <div className="dashboard-instrument-column">
-        {!compact && groups}
-        <section className="dashboard-selected-run" data-testid="selected-experiment" aria-labelledby="selected-run-title">
-          <div className="dashboard-panel-title"><h2 id="selected-run-title">{run.name}</h2><span className={`status-pill status-${run.status.toLowerCase()}`}>{run.status}</span></div>
-          <p className="dashboard-selected-model">{run.model} · {run.method}</p>
-          <dl className="dashboard-run-facts">
-            <div><dt>Peak {NAMES[selectedMetric].toLowerCase()}</dt><dd className="dashboard-peak-value" title={String(summary.max)}>{formatValue(summary.max, selectedMetric === 'lr')}</dd></div>
-            <div><dt>Raw rows</dt><dd>{formatStep(run.rowCount)}</dd></div>
-            <div><dt>Peak step</dt><dd>{summary.maxStep === null ? 'Unavailable' : formatStep(summary.maxStep)}</dd></div>
-            <div><dt>Metrics</dt><dd>{METRICS.length}</dd></div>
-          </dl>
-          <p data-testid="selected-metric" className="dashboard-selected-quality">{NAMES[selectedMetric]} · {quality.invalidCount} invalid · {quality.conflicts} conflicts · {quality.gaps} gaps</p>
-          <div className="dashboard-selected-actions">
-            <Link to={`/runs/${run.id}`}>Open run <ArrowUpRight size={14} aria-hidden="true" /></Link>
-            <Link to={`/compare?runs=${run.id}`}>Compare</Link>
-            <Link to={`/data-quality?run=${run.id}&metric=${selectedMetric}`}>Inspect issues <ArrowUpRight size={14} aria-hidden="true" /></Link>
+  function selectRun(id: string, metric = selectedMetric) {
+    setParams(current => {
+      const next = new URLSearchParams(current)
+      next.set('run', id)
+      next.set('metric', metric)
+      return next
+    }, { replace: true, preventScrollReset: true })
+  }
+
+  function selectFromList(id: string) {
+    selectRun(id)
+    if (compact) {
+      setNavigatorOpen(false)
+      requestAnimationFrame(() => document.getElementById('selected-run-title')?.focus({ preventScroll: true }))
+    }
+  }
+
+  return <div className="calm-dashboard">
+    <h1 id="page-title" tabIndex={-1}>Training overview</h1>
+    <nav className="calm-view-nav" aria-label="Dashboard views">{VIEWS.map(item => <Link key={item.id} to={viewHref(item.id)} aria-current={view === item.id ? 'page' : undefined} preventScrollReset>{item.label}</Link>)}</nav>
+
+    {view === 'monitor' ? <div className="calm-monitor-layout">
+      <RunNavigator runs={runs} selected={run.id} compact={compact} open={navigatorOpen} onToggle={setNavigatorOpen} onSelect={selectFromList} />
+      <section className="calm-monitor-detail" data-testid="selected-experiment" aria-labelledby="selected-run-title">
+        <div className="calm-selected-header"><div><div className="calm-selected-title"><h2 id="selected-run-title" tabIndex={-1}>{run.name}</h2><span className={`status-pill status-${run.status.toLowerCase()}`}>{run.status}</span></div><p>{run.model} · {run.method}</p><p className="calm-snapshot">Demo snapshot · Not live · <time dateTime={run.sourceUpdatedAt}>{formatTimestamp(run.sourceUpdatedAt)}</time></p></div><RunActions run={run} metric={selectedMetric} /></div>
+        <dl className="calm-facts" aria-label="Whole-run summaries">
+          <div><dt>Latest {NAMES[selectedMetric].toLowerCase()}</dt><dd>{latest}</dd></div>
+          <div><dt>Peak {NAMES[selectedMetric].toLowerCase()}</dt><dd>{formatValue(summary.max, selectedMetric === 'lr')}</dd></div>
+          <div><dt>Peak step</dt><dd>{summary.maxStep === null ? 'Unavailable' : formatStep(summary.maxStep)}</dd></div>
+          <div><dt>Raw rows</dt><dd>{formatStep(run.rowCount)}</dd></div>
+        </dl>
+
+        <section className="calm-metric-section" aria-label={`${NAMES[selectedMetric]} chart`}>
+          <div className="calm-chart-toolbar">
+            <fieldset className="calm-metric-tabs"><legend className="sr-only">Dashboard metric</legend>{METRICS.map(metric => <button key={metric} type="button" aria-pressed={metric === selectedMetric} onClick={() => selectRun(run.id, metric)}>{NAMES[metric]}</button>)}</fieldset>
+            <span className="calm-raw-label">Raw · Smoothing off</span>
+            <details className="calm-settings" ref={settingsRef}><summary aria-label="Chart settings" title="Chart settings"><SlidersHorizontal size={18} aria-hidden="true" /></summary><div className="calm-settings-panel"><h3>Chart range</h3><RangeControls workspace={workspace} expanded /></div></details>
           </div>
-        </section>
-        <section className="dashboard-preview" aria-labelledby="dashboard-loss-title">
-          <div className="dashboard-panel-title"><h2 id="dashboard-loss-title">Raw loss</h2><span>Smoothing off</span></div>
           <WorkspaceStatus workspace={workspace} />
-          <Charts workspace={workspace} ids={[run.id]} theme={theme} compact />
-          <Link className="dashboard-source-link" to={peakLink}>Inspect peak at source <ArrowUpRight size={13} aria-hidden="true" /></Link>
+          <div className="calm-chart"><Charts workspace={workspace} ids={[run.id]} theme={theme} only={selectedMetric} /></div>
+          <p className="calm-touch-help">Tap the chart for recorded values. Open Chart settings to adjust the range; swipe vertically to scroll.</p>
+          <div className="calm-chart-caption"><span>{points === undefined ? 'Loading original measurements' : `${formatStep(points)} render points · Source values unchanged`}</span><Link to={runSourceLink(run, selectedMetric)}>Inspect peak at source <ArrowUpRight size={13} aria-hidden="true" /></Link></div>
+          <details className="calm-step-inspection"><summary>Inspect recorded step</summary><form onSubmit={event => {
+            event.preventDefault()
+            const step = Number(new FormData(event.currentTarget).get('step'))
+            if (Number.isFinite(step)) navigate(`/runs/${run.id}?step=${step}&revision=${encodeURIComponent(run.revision)}#source`)
+          }}><Input label="Recorded step" name="step" type="number" step="any" required /><Button type="submit" variant="secondary">Inspect step at source</Button></form></details>
         </section>
-      {compact && groups}
-</div>
 
-  return <div className="dashboard-redesign">
-    <div className="dashboard-heading">
-      <div><h1 id="page-title" tabIndex={-1}>Workspace overview</h1>
-        <p className="dashboard-inline-summary"><span>{runs.length} runs</span><span>{runs.filter(item => item.status === 'Running').length} running</span><span className="dashboard-attention">{problemRuns.length} need attention</span><span>{formatStep(runs.reduce((sum, item) => sum + item.rowCount, 0))} raw rows</span></p>
-      </div>
-      <fieldset className="dashboard-metric-tabs" aria-label="Dashboard metric">
-        {METRICS.map(metric => <Button key={metric} size="sm" variant="secondary" aria-pressed={metric === selectedMetric} data-active={metric === selectedMetric} onClick={() => setSelectedMetric(metric)}>{NAMES[metric]}</Button>)}
-      </fieldset>
-    </div>
+        <div className="calm-source-quality" data-has-findings={quality.invalidCount + quality.conflicts + quality.gaps > 0}><strong>Source quality</strong><p data-testid="selected-metric">{NAMES[selectedMetric]} · {quality.invalidCount} invalid · {quality.conflicts} conflicts · {quality.gaps} gaps</p><Link to={`/data-quality?run=${run.id}&metric=${selectedMetric}`}>Inspect issues <ArrowUpRight size={14} aria-hidden="true" /></Link></div>
+        {(run.quality.duplicateRows > 0 || run.quality.outOfOrder > 0 || run.quality.invalidX > 0) && <p className="calm-structural-note">Also recorded: {run.quality.duplicateRows} duplicate rows · {run.quality.outOfOrder} out of order · {run.quality.invalidX} invalid steps.</p>}
+        <div className="calm-workspace-quality"><span>{problemCount} runs with findings</span><Link to="/data-quality">Review data quality <ArrowUpRight size={14} aria-hidden="true" /></Link></div>
 
-    {compact && <label className="dashboard-mobile-picker">Selected experiment<select value={run.id} onChange={event => setSelected(event.target.value)}>{runs.map(item => <option value={item.id} key={item.id}>{item.name}</option>)}</select></label>}
-    <div className="dashboard-instrument-grid">
-      {compact ? <>{instrument}{map}</> : <>{map}{instrument}</>}
-
-      <ResponsiveDisclosure label="Snapshot findings" meta={`${problemRuns.length} runs with source findings`} className="findings-disclosure"><aside className="dashboard-findings-rail" aria-labelledby="dashboard-findings-title">
-        <div className="dashboard-panel-title"><div><h2 id="dashboard-findings-title">Snapshot findings</h2><p>Source observations</p></div></div>
-        <div className="dashboard-findings-list">
-          <Link className="dashboard-finding-entry" to={peakLink}>
-            <Activity size={19} className="finding-entry-icon" aria-hidden="true" />
-            <div><h3>{run.name}</h3><p>Loss peak {formatValue(run.summaries.loss.max)}</p><small>{peakStep === null ? 'No finite loss peak' : `Recorded step ${formatStep(peakStep)}`}</small><span>Inspect source <ArrowUpRight size={13} aria-hidden="true" /></span></div>
-            <ArrowUpRight size={15} aria-hidden="true" />
-          </Link>
-          {findings.map(item => {
-            const Icon = item.quality.conflictGroups ? Layers : item.quality.outOfOrder ? ArrowLeftRight : AlertTriangle
-            return <Link key={item.id} className="dashboard-finding-entry" to={`/data-quality?run=${item.id}`}>
-              <Icon size={19} className="finding-entry-icon" aria-hidden="true" />
-              <div><h3>{item.name}</h3><p>{findingLabel(item)}</p><small>{issueCount(item.quality)} source findings</small><span>Inspect source <ArrowUpRight size={13} aria-hidden="true" /></span></div>
-              <ArrowUpRight size={15} aria-hidden="true" />
-            </Link>
-          })}
-        </div>
-        <div className="dashboard-rail-footer">
-          <Link to="/data-quality">View data quality <ArrowUpRight size={15} aria-hidden="true" /></Link>
-          <details className="dashboard-finding-totals"><summary>Source finding totals</summary><dl>{counts.map(([label, count]) => <div key={label}><dt>{label}</dt><dd>{formatStep(count)}</dd></div>)}</dl></details>
-        </div>
-      </aside></ResponsiveDisclosure>
-    </div>
-    <ResponsiveDisclosure label="Run history" className="dashboard-history-disclosure"><RunHistory /></ResponsiveDisclosure>
+        <details className="calm-more source-details"><summary>Run details and history</summary><dl className="calm-run-details"><div><dt>Scenario</dt><dd>{run.scenario}</dd></div><div><dt>Revision</dt><dd>{run.revision}</dd></div><div><dt>Metrics</dt><dd>{METRICS.length}</dd></div><div><dt>Source snapshot</dt><dd>{run.sourceUpdatedAt}</dd></div></dl><RunHistory /></details>
+      </section>
+    </div> : <div className={`calm-exploration-grid calm-view-${view}`}>
+      <div className="calm-exploration-panel">{view === 'map' ? <ExperimentMap runs={runs} selected={run.id} metric={selectedMetric} onSelect={selectRun} /> : <ExperimentGroups runs={runs} selected={run.id} onSelect={id => selectRun(id)} />}</div>
+      <SelectionSummary run={run} metric={selectedMetric} monitorHref={viewHref('monitor')} />
+    </div>}
   </div>
 }

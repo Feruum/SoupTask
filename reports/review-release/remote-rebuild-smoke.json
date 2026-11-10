@@ -1,0 +1,863 @@
+{
+  "verified": true,
+  "url": "https://soup-training-monitor.vercel.app",
+  "executedAt": "2026-11-10T07:31:08.105Z",
+  "browser": "158.0.8127.18",
+  "node": "v24.22.1",
+  "sourceHash": "699138abd0aa0b5f811b2782fdcd9d7a474f9aa4cb3eb57515ede541da9eb9ed",
+  "localBuildHash": "e86aee30cb84c593fcddd44d09f51000ee1bfb76cc06994310bf884813ace80b",
+  "scope": "Real production direct-load and reload of all five screens, Worker/assets, exact R05 raw source and Canvas spike, root/unknown routing. Not a remote performance benchmark.",
+  "routes": [
+    {
+      "name": "dashboard",
+      "route": "/dashboard",
+      "directStatus": 200,
+      "reloadStatus": 200,
+      "heading": "Training overview"
+    },
+    {
+      "name": "runs",
+      "route": "/runs",
+      "directStatus": 200,
+      "reloadStatus": 200,
+      "heading": "Training runs"
+    },
+    {
+      "name": "detail",
+      "route": "/runs/kazakh-sft-005",
+      "directStatus": 200,
+      "reloadStatus": 200,
+      "heading": "kazakh-sft-005"
+    },
+    {
+      "name": "compare",
+      "route": "/compare?runs=kazakh-sft-005,kazakh-sft-006",
+      "directStatus": 200,
+      "reloadStatus": 200,
+      "heading": "Compare runs"
+    },
+    {
+      "name": "quality",
+      "route": "/data-quality",
+      "directStatus": 200,
+      "reloadStatus": 200,
+      "heading": "Data quality"
+    }
+  ],
+  "spike": {
+    "painted": 41,
+    "x": 581.001587001587,
+    "y": 35.24137931034477,
+    "sourceIndex": "500001",
+    "step": "500001",
+    "value": "100",
+    "rgb": [
+      235,
+      152,
+      110
+    ],
+    "paintedRgb": [
+      235,
+      152,
+      110
+    ],
+    "background": "rgb(20, 19, 18)"
+  },
+  "assets": [
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 200,
+      "contentType": "image/svg+xml"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/DashboardPage-JshtU6fw.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-TPykg1XH.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/run-history-BVZK5oha.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/search-field-C0ImHcrF.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/DashboardPage-DVrai0Qn.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/search-field-BDviUeeU.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-Dm6MTGjQ.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 200,
+      "contentType": "font/woff2"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "status": 200,
+      "contentType": "font/woff2"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-piala-DviEV0ms.png",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-TPykg1XH.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/search-field-BDviUeeU.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/DashboardPage-JshtU6fw.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/run-history-BVZK5oha.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/DashboardPage-DVrai0Qn.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/search-field-C0ImHcrF.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-Dm6MTGjQ.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-piala-DviEV0ms.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/training.worker-CPr3EncJ.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/search-field-BDviUeeU.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-TPykg1XH.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/run-history-BVZK5oha.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/search-field-C0ImHcrF.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-Dm6MTGjQ.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/RunsPage-DiQdp7ov.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-piala-DviEV0ms.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/search-field-BDviUeeU.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-TPykg1XH.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-Dm6MTGjQ.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/RunsPage-DiQdp7ov.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/search-field-C0ImHcrF.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/run-history-BVZK5oha.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-piala-DviEV0ms.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/training.worker-CPr3EncJ.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-TPykg1XH.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-Dm6MTGjQ.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/RunPage-boR3X0sE.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/IssueTypeSummary-CJ0EurUY.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/IssueTypeSummary-CTXyF6D_.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-piala-DviEV0ms.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/training.worker-CPr3EncJ.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-TPykg1XH.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/IssueTypeSummary-CTXyF6D_.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/RunPage-boR3X0sE.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-Dm6MTGjQ.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/IssueTypeSummary-CJ0EurUY.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-piala-DviEV0ms.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/training.worker-CPr3EncJ.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/ComparePage-CEHTDz0R.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/search-field-C0ImHcrF.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/search-field-BDviUeeU.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-Dm6MTGjQ.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/ComparePage-BdiPKaWd.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-TPykg1XH.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-piala-DviEV0ms.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/training.worker-CPr3EncJ.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/search-field-BDviUeeU.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/ComparePage-BdiPKaWd.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-TPykg1XH.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-Dm6MTGjQ.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/search-field-C0ImHcrF.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/ComparePage-CEHTDz0R.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-piala-DviEV0ms.png",
+      "status": 200,
+      "contentType": "image/png"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/training.worker-CPr3EncJ.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/IssueTypeSummary-CJ0EurUY.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-TPykg1XH.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-Dm6MTGjQ.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/QualityPage-C1cuuNc_.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8"
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/IssueTypeSummary-CTXyF6D_.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-TPykg1XH.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/IssueTypeSummary-CTXyF6D_.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/QualityPage-C1cuuNc_.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-Dm6MTGjQ.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/IssueTypeSummary-CJ0EurUY.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/DashboardPage-DVrai0Qn.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/DashboardPage-JshtU6fw.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/run-history-BVZK5oha.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-Dm6MTGjQ.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-Dm6MTGjQ.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/IssueTypeSummary-CTXyF6D_.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/RunPage-boR3X0sE.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/IssueTypeSummary-CJ0EurUY.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/Workspace-TPykg1XH.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-CYxNBojz.css",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/index-Z0spmf5Z.js",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/soup-logo-CIN0SPTk.svg",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/kazakh-ornament-IYqB2HFl.png",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/inter-latin-wght-normal-Dx4kXJAl.woff2",
+      "status": 304,
+      "contentType": ""
+    },
+    {
+      "url": "https://soup-training-monitor.vercel.app/assets/geist-latin-wght-normal-BgDaEnEv.woff2",
+      "status": 304,
+      "contentType": ""
+    }
+  ],
+  "missingAsset": {
+    "status": 404,
+    "contentType": "text/plain; charset=utf-8"
+  },
+  "errors": []
+}

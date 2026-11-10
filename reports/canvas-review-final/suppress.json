@@ -1,0 +1,37 @@
+{
+  "testId": "CANVAS-SPIKE-SOURCE-500001",
+  "mode": "suppress",
+  "url": "http://127.0.0.1:4184",
+  "browser": "158.0.8127.18",
+  "node": "v24.22.1",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "dpr": 1,
+  "passed": false,
+  "failure": {
+    "name": "AssertionError",
+    "code": "ERR_ASSERTION",
+    "message": "CANVAS-SPIKE-SOURCE-500001: critical maximum marker must exist in Canvas pixels; observed 0",
+    "canvasEvidence": {
+      "painted": 0,
+      "x": 581.001587001587,
+      "y": 35.24137931034477,
+      "sourceIndex": "500001",
+      "step": "500001",
+      "value": "100",
+      "rgb": [
+        235,
+        152,
+        110
+      ],
+      "paintedRgb": [
+        51,
+        43,
+        37
+      ],
+      "background": "rgb(20, 19, 18)"
+    }
+  }
+}

@@ -20,6 +20,7 @@ function RunDetail({
 }: {
   id: string;
 }) {
+  useLayoutEffect(() => { performance.mark('soup:run-page-commit'); });
   const RUN_MANIFEST = useCatalog();
   const {
       theme

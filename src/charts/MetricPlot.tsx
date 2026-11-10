@@ -41,7 +41,8 @@ interface Props {
   height?: number;
   scientific?: boolean;
   testId?: string;
-  onCursor?: (step: number | null) => void;
+  viewToken?: object;
+  onCursor?: (step: number | null, origin: object | null) => void;
   onRange?: (range: ViewRange) => void;
   onWidth?: (width: number) => void;
 }
@@ -57,6 +58,7 @@ export function MetricPlot({
   height = 300,
   scientific = false,
   testId = 'loss-chart',
+  viewToken,
   onCursor,
   onRange,
   onWidth
@@ -64,6 +66,7 @@ export function MetricPlot({
   const host = useRef<HTMLDivElement>(null),
     overlay = useRef<HTMLCanvasElement>(null),
     instance = useRef<uPlot | null>(null),
+    appliedView = useRef<object | null>(null),
     latest = useRef(series),
     requeryPointer = useRef<(() => void) | null>(null),
     gesture = useRef(range),
@@ -86,7 +89,7 @@ export function MetricPlot({
       max: domainMax
     };
   }, [min, max, domainMin, domainMax]);
-  const cursor = useEffectEvent((step: number | null) => onCursor?.(step)),
+  const cursor = useEffectEvent((step: number | null) => onCursor?.(step, appliedView.current)),
     select = useEffectEvent((next: ViewRange) => onRange?.(next)),
     widthChanged = useEffectEvent((width: number) => onWidth?.(width)),
     fail = useEffectEvent(() => setError('Chart rendering failed. Exact source values remain available below.'));
@@ -144,7 +147,6 @@ export function MetricPlot({
       observer: ResizeObserver | undefined,
       resizeFrame = 0,
       wheelFrame = 0,
-      pointerFrame = 0,
       disposeInput = () => {};
     const styles = getComputedStyle(document.documentElement),
       token = (name: string) => styles.getPropertyValue(name).trim();
@@ -275,24 +277,17 @@ export function MetricPlot({
       instance.current = chart;
       const active = chart;
       let lastPointer: Pick<PointerEvent, 'clientX' | 'clientY'> | null = null;
-      let lastRequest = '',
-        pointerX = 0,
-        pointerY = 0;
+      let lastRequest = '';
       const pointermove = (event: Pick<PointerEvent, 'clientX' | 'clientY'> & Partial<Pick<PointerEvent, 'pointerType'>>) => {
         if (event.pointerType && event.pointerType !== 'mouse') return;
         lastPointer = {
           clientX: event.clientX,
           clientY: event.clientY
         };
-        pointerX = event.clientX;
-        pointerY = event.clientY;
-        if (pointerFrame) return;
-        pointerFrame = requestAnimationFrame(() => {
-          pointerFrame = 0;
           const rect = active.over.getBoundingClientRect(),
-            left = pointerX - rect.left,
-            top = pointerY - rect.top;
-          if (left < 0 || left > rect.width || top < 0 || top > rect.height) return;
+            left = event.clientX - rect.left,
+            top = event.clientY - rect.top;
+          if (!rect.width || !rect.height || left < 0 || left > rect.width || top < 0 || top > rect.height) return;
           let step = active.posToVal(left, 'x'),
             distance = 6;
           for (const s of latest.current) for (const point of s.markers ?? []) {
@@ -305,8 +300,8 @@ export function MetricPlot({
           const key = `${active.scales.x.min}|${active.scales.x.max}|${step}`;
           if (key === lastRequest) return;
           lastRequest = key;
+          // The controller already bounds/coalesces requests. A second RAF queue adds latency.
           cursor(step);
-        });
       };
       requeryPointer.current = () => {
         if (lastPointer) {
@@ -317,8 +312,6 @@ export function MetricPlot({
       const pointerleave = (event: PointerEvent) => {
         if (event.pointerType !== 'mouse') return;
         lastPointer = null;
-        cancelAnimationFrame(pointerFrame);
-        pointerFrame = 0;
         lastRequest = '';
         cursor(null);
       };
@@ -336,8 +329,6 @@ export function MetricPlot({
         touchStart = null;
         lastPointer = null;
         lastRequest = '';
-        cancelAnimationFrame(pointerFrame);
-        pointerFrame = 0;
         cursor(null);
       };
       const wheel = (event: WheelEvent) => {
@@ -376,6 +367,7 @@ export function MetricPlot({
               height
             });
             widthChanged(Math.max(1, element.clientWidth - 90));
+            requeryPointer.current?.();
           }
         });
       });
@@ -386,11 +378,11 @@ export function MetricPlot({
     return () => {
       cancelAnimationFrame(resizeFrame);
       cancelAnimationFrame(wheelFrame);
-      cancelAnimationFrame(pointerFrame);
       disposeInput();
       observer?.disconnect();
       requeryPointer.current = null;
       instance.current = null;
+      appliedView.current = null;
       chart?.destroy();
     };
   }, [theme, count, height, scientific]);
@@ -426,12 +418,13 @@ export function MetricPlot({
         }
       });
       // setData invalidates paths, setScale invalidates scales, and batch commits both immediately.
+      appliedView.current = viewToken ?? null;
       // Reconcile a stationary physical pointer once after a new view/resize commits. Hover replies never enter this effect.
       requeryPointer.current?.();
     } catch {
       fail();
     }
-  }, [data, min, max, series, theme, count, height, scientific]);
+  }, [data, min, max, series, theme, count, height, scientific, viewToken]);
   useEffect(() => {
     const u = instance.current;
     if (!u) return;

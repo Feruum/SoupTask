@@ -24,7 +24,7 @@ for (const theme of ['dark', 'light']) {
     await page.screenshot({ path: info.outputPath(`${theme}-recipe.png`), fullPage: true, animations: 'disabled' })
 
     await page.goto('/data-quality?run=kazakh-sft-001')
-    await expect(page.getByRole('heading', { name: 'No matching findings', exact: true })).toBeVisible({ timeout: 60000 })
+    await expect(page.getByRole('heading', { name: 'No source data issues', exact: true })).toBeVisible({ timeout: 60000 })
     const ladle = page.locator('[data-soup-art="ladle"] img')
     await expect(ladle).toBeVisible()
     await expect.poll(() => ladle.evaluate(image => (image as HTMLImageElement).naturalWidth)).toBeGreaterThan(0)
@@ -57,3 +57,4 @@ test('loading animates only steam and respects reduced motion', async ({ page },
   }
   await expect(page.getByTestId('loss-chart').locator('canvas')).toBeVisible({ timeout: 60000 })
 })
+

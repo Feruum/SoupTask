@@ -1,39 +1,37 @@
 # Soup Training Monitor
 
-Full frontend delivery - 10 November 2026. [Production application](https://soup-training-monitor.vercel.app). Five screens: Dashboard, Training runs, Run details, Compare and Data quality. All sources are explicitly labelled demonstration snapshots. The existing Soup landing project was not redeployed.
+Full frontend delivery - 10 November 2026. [Production](https://soup-training-monitor.vercel.app) and [source repository](https://github.com/Feruum/SoupTask). Five screens: Dashboard, Training runs, Run details, Compare and Data quality. Sources are explicitly demonstration snapshots. Existing Soup landing deployment is separate.
 
 ## Product and source truth
 
-Circle sectors select a run and metric, update its facts/preview and expose source/quality actions. Charts support mouse wheel, touchpad pinch, Shift-wheel pan, drag selection and keyboard range controls. Compare provides consistent series emphasis, original-step cursors, three-metric summaries and pinned exact source rows. Quality findings lead to revision-qualified source indices.
+Dashboard opens a focused run monitor; Experiment map and Groups remain local views. Circle sectors select a run and metric. Charts support wheel/pinch zoom, Shift-wheel pan, drag selection and keyboard ranges. Compare emphasizes series consistently and queries original rows by numeric step. Source/quality links retain revision and sourceIndex. Fixed source readouts avoid sudden page movement; empty findings distinguish clean snapshots from filter misses.
 
-Twenty seeded scenarios cover convergence, divergence, nonfinite values, duplicates, ordering, cadence gaps, zero/tiny values and a singleton. R05 has 1,000,000 rows; its unique injected Loss maximum is sourceIndex 500001, step 500001, value 100. Four raw Float64 columns remain Worker-owned. Rendering retains source provenance and visible extrema; conflicts and known gaps break the authoritative line. It does not promise every local oscillation or a scientific training-stop decision.
+Twenty deterministic scenarios cover nonfinite values, duplicates, ordering, cadence gaps, zeros, tiny values and a singleton. R05 has 1,000,000 rows and one injected unique Loss maximum: sourceIndex 500001, step 500001, value 100. Four raw Float64 columns remain Worker-owned. Rendering preserves original coordinates and visible extrema; conflicts and known gaps break the authoritative line. No smoothing, interpolation or scientific stop recommendation is fabricated.
 
 ## Verification
 
-Production build and lint pass; 95 unit tests and 49 Chromium acceptance tests pass, with no skipped or flaky browser tests. Coverage includes controlled async identities/queues, independent raw-data oracles, real Canvas spike/gap pixels, gestures, keyboard activation, 320/768/1440 px, DPR2 and locale/timezone checks. Six fault classes produce genuine expected assertion failures, including suppressed drawing. Raw red/green output is preserved.
+Build and lint pass; 99 unit tests and 94 Chromium acceptance tests pass, no skipped/flaky browser tests. Independent raw oracles, controlled async races, current-view cursor guards, real Canvas spike/gap pixels, keyboard, gestures, responsive layouts, DPR 2, locale/timezone and cleanup are exercised. Six fault classes must fail named assertions; raw failures remain available. Four Impeccable findings and later layout/clarity regressions are corrected with red/green evidence.
 
-Thirty axe audits report zero violations; incomplete findings are retained and reviewed separately. Lighthouse desktop performance is 96-97 across five screens; accessibility and best-practices scores are 100. Actual unfocused Canvas series contrast is at least 7.89:1 dark / 4.94:1 light; SVG text is at least 8.41:1 / 6.15:1. These checks do not constitute human screen-reader certification.
-
-## Measured performance
-
-Windows 11, Ryzen 7 8845HS, Chromium 158, 1440x900, DPR1: five cold contexts and thirty zoom/hover pairs per variant, separately for Compare. Main renderer CPU rate 4; Worker throttling was attempted and explicitly unsupported. Nearest-rank p95 cold/zoom/accepted-hover: scan 3340/671/25 ms; stream 3406/442/24 ms; indexed 3118/230/22 ms. Indexed Compare zoom/hover: 309/41 ms. Hover stops at accepted raw response, not final pixel paint. Traces, all samples and timing definitions accompany the source.
+Thirty axe audits: zero violations, 516 incomplete contrast occurrences retained. Actual Canvas contrast is at least 7.89:1 dark /4.94:1 light; SVG text 8.41:1 /6.15:1. Separate Lighthouse desktop: performance 97-98; accessibility and best practices 100. This is not human screen-reader certification.
 
 <!-- pagebreak -->
 
-## Verdict and first fix
+## Measured performance and verdict
 
-**DON'T SHIP as a fully accepted hand-in yet.** The implemented frontend is published and functional, but required Chrome Task Manager footprint/JavaScript-memory evidence remains unrecorded. Native window binding failed twice despite discovering the correct isolated Chrome window; a human readout was requested. CDP heap is not relabelled as Task Manager or total tab memory.
+Windows 11, Ryzen 7 8845HS, Chromium 158,1440x900,DPR 1. Five cold contexts and 30 interactions per detail/Compare; nearest-rank p95. Main CPU rate 4; Worker throttling explicitly unsupported. Latest indexed cold 3089.5 ms, detail zoom 197.1 ms, Compare zoom 241.0 ms. Pointer-input-to-source-frame p95 improved 120.7 to88.7 ms in detail and 209.5 to115.1 ms in Compare. Cold load regressed from 2750.1 ms. All samples, intermediate runs and immutable before/after runtime sources are retained.
 
-First complete that footprint capture and review it alongside the saved Worker/buffer ledger. Cold render <=3000 ms and zoom <=200 ms engineering targets were also missed; profile the remaining main-render path and repeat the same protocol before claiming those budgets pass. No unresolved extrema loss, gap bridging or stale overwrite is known in the tested source, but tests cannot establish universal absence.
+Hover ends at a committed-source two-RAF rendering opportunity, not merely Worker receipt or physical monitor presentation. Before/after revisions differ; shared-machine activity limits causal inference. Formatter caching and isolated chart subscriptions remove repeated constructors and feature-page rerenders without weakening source identity.
 
-## Memory, changes and surprises
+**DON'T SHIP against expanded latency targets.** Detail zoom meets 200 ms; cold 3000 ms, Compare zoom 200 ms and both hover 50 ms targets remain missed. The original PDF has no numeric ceiling. First profile remaining input/commit/frame delay and Compare drawing; retain the same endpoint and correctness tests.
 
-R05 raw element storage is exactly 32,000,000 bytes. Its normalized/index typed-buffer ledger is 76,696,612 bytes, including a 1,696,608-byte exact index built in approximately 243 ms. Main used heap was 7.08 MB initially and 16.60 MB after twenty SPA switches without forced GC. These distinct scopes exclude browser/GPU/process footprint and retiring isolates; they are not summable tab memory or a leak-freedom proof.
+## Memory and surprises
 
-A separate unthrottled lifecycle check observed one settled Worker and three charts after each of twenty transitions, then zero Workers after context close. Retiring large-run Workers took 279-372 ms to disappear; the initial over-eager assertion failure is preserved. Profiling also exposed a redraw/cursor feedback loop and duplicate full paints. Both were corrected; removing duplicate paint did not establish a detail-zoom timing improvement (226 to 230 ms), while Compare changed from 334 to 309 ms. Range drafts and page labels now follow numerical ranges and accepted source replies respectively.
+Latest 1M headless Windows PID-associated renderer/Worker footprint: 143.7 MiB private committed, 242.3 MiB working set. Earlier scan 147.2/246.0 MiB; one sample each, no memory-saving claim. Raw 32,000,000 bytes; indexed typed-buffer ledger 76,696,612 bytes INCLUDING raw, not additive to OS footprint. Shared browser/GPU memory remains separately scoped; working sets can share pages. CDP dump GUID validation failed and is labelled accordingly. Earlier headed 20-switch samples are separate, not latest-build memory or leak-freedom proof.
+
+Twenty final SPA transitions settle to one Worker/three charts, then zero Workers on close. Retiring Workers persist briefly. Profiling exposed repeated Intl constructors; tests also caught old-view cursor publication and abrupt readout layout shifts. Genuine failures and corrections are preserved.
 
 ## AI disclosure and reproduction
 
-AI assisted architecture, implementation, tests, independent oracle code, fault injection, browser automation, profiling and documentation. Proposals were checked against original rows and actual Canvas pixels; faulty variants were required to fail named assertions. Human actions recorded here are the supplied requirements/references, project choice and Vercel authentication. No human NVDA/VoiceOver or scientific-model review is claimed. The original changed-deadline email was not found.
+AI assisted architecture, implementation, independent test oracles, fault injection, browser automation, profiling and documentation. Proposals were revised against raw identities and Canvas pixels. Humans supplied requirements, visual feedback, Vercel authentication and project choice; another agent completed Dashboard. No human NVDA/VoiceOver or scientific-model review is claimed. Original changed-deadline/live-discussion cancellation email was not found.
 
-Use README.md, docs/performance-results.md and reports/evidence-manifest.json for reproduction, commands, hashes, raw results, publication smoke and remaining limitations. Source archives retain lossless gzip traces; `node scripts/trace-archives.mjs --unpack` verifies/restores their exact originals. The local Git repository and source archive accompany this two-page note.
+README, docs/performance-results.md and reports/evidence-manifest.json provide commands, hashes, scope and limitations. Lossless trace archives restore via scripts/trace-archives.mjs --unpack. Five production routes, reloads, actual Worker/assets and exact spike/source pass smoke checks. Submission email is drafted locally and awaits explicit send authorization.

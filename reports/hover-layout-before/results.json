@@ -1,0 +1,759 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=tmp/hover-layout-red-playwright.config.mjs"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\hover-layout-red-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/hover-layout-before/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "hover-layout.spec.ts"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "hover-layout.spec.ts",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4175",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4175",
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "url": "http://127.0.0.1:4175",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "hover-layout.spec.ts",
+      "file": "hover-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "compact /dashboard keeps explicit actions in place without automatic coordinates",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 8120,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1308.59375\u001b[39m\nReceived: \u001b[31m1445.59375\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m137\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1308.59375\u001b[39m\nReceived: \u001b[31m1445.59375\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m137\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:33:22",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 22,
+                      "line": 33
+                    },
+                    "snippet": " \u001b[90m 31 |\u001b[39m   \u001b[36mconst\u001b[39m after \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m documentTop(next)\n \u001b[90m 32 |\u001b[39m   \u001b[36mawait\u001b[39m info\u001b[33m.\u001b[39mattach(\u001b[32m'preview-layout'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ route\u001b[33m,\u001b[39m before\u001b[33m,\u001b[39m after })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   expect\u001b[33m.\u001b[39msoft(after)\u001b[33m.\u001b[39mtoBeCloseTo(before\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.preview-charts .chart-hover-value'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m 35 |\u001b[39m   \u001b[36mawait\u001b[39m expect(plot)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-cursor-point-count'\u001b[39m\u001b[33m,\u001b[39m \u001b[35m/[1-9]/\u001b[39m)\n \u001b[90m 36 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.preview-charts'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'inspect original values and adjust range'\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 22,
+                        "line": 33
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1308.59375\u001b[39m\nReceived: \u001b[31m1445.59375\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m137\u001b[39m\n\n  31 |   const after = await documentTop(next)\n  32 |   await info.attach('preview-layout', { body: JSON.stringify({ route, before, after }), contentType: 'application/json' })\n> 33 |   expect.soft(after).toBeCloseTo(before, 0)\n     |                      ^\n  34 |   await expect(page.locator('.preview-charts .chart-hover-value')).toHaveCount(0)\n  35 |   await expect(plot).toHaveAttribute('data-cursor-point-count', /[1-9]/)\n  36 |   await expect(page.locator('.preview-charts')).toContainText('inspect original values and adjust range')\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:33:22"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 68,
+                        "line": 34
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.preview-charts .chart-hover-value')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.preview-charts .chart-hover-value') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.preview-charts .chart-hover-value')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  32 |   await info.attach('preview-layout', { body: JSON.stringify({ route, before, after }), contentType: 'application/json' })\n  33 |   expect.soft(after).toBeCloseTo(before, 0)\n> 34 |   await expect(page.locator('.preview-charts .chart-hover-value')).toHaveCount(0)\n     |                                                                    ^\n  35 |   await expect(plot).toHaveAttribute('data-cursor-point-count', /[1-9]/)\n  36 |   await expect(page.locator('.preview-charts')).toContainText('inspect original values and adjust range')\n  37 | })\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:34:68"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:47:21.376Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "preview-layout",
+                      "contentType": "application/json",
+                      "body": "eyJyb3V0ZSI6Ii9kYXNoYm9hcmQiLCJiZWZvcmUiOjEzMDguNTkzNzUsImFmdGVyIjoxNDQ1LjU5Mzc1fQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-compact-dashb-b3940-thout-automatic-coordinates\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-compact-dashb-b3940-thout-automatic-coordinates\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-compact-dashb-b3940-thout-automatic-coordinates\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 22,
+                    "line": 33
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-fba64196da972c7e12ce",
+          "file": "hover-layout.spec.ts",
+          "line": 23,
+          "column": 46
+        },
+        {
+          "title": "compact /runs keeps explicit actions in place without automatic coordinates",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6821,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m3006.28125\u001b[39m\nReceived: \u001b[31m3134.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m128\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m3006.28125\u001b[39m\nReceived: \u001b[31m3134.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m128\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:33:22",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 22,
+                      "line": 33
+                    },
+                    "snippet": " \u001b[90m 31 |\u001b[39m   \u001b[36mconst\u001b[39m after \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m documentTop(next)\n \u001b[90m 32 |\u001b[39m   \u001b[36mawait\u001b[39m info\u001b[33m.\u001b[39mattach(\u001b[32m'preview-layout'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ route\u001b[33m,\u001b[39m before\u001b[33m,\u001b[39m after })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 33 |\u001b[39m   expect\u001b[33m.\u001b[39msoft(after)\u001b[33m.\u001b[39mtoBeCloseTo(before\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 34 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.preview-charts .chart-hover-value'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\n \u001b[90m 35 |\u001b[39m   \u001b[36mawait\u001b[39m expect(plot)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-cursor-point-count'\u001b[39m\u001b[33m,\u001b[39m \u001b[35m/[1-9]/\u001b[39m)\n \u001b[90m 36 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.preview-charts'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'inspect original values and adjust range'\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 22,
+                        "line": 33
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m3006.28125\u001b[39m\nReceived: \u001b[31m3134.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m128\u001b[39m\n\n  31 |   const after = await documentTop(next)\n  32 |   await info.attach('preview-layout', { body: JSON.stringify({ route, before, after }), contentType: 'application/json' })\n> 33 |   expect.soft(after).toBeCloseTo(before, 0)\n     |                      ^\n  34 |   await expect(page.locator('.preview-charts .chart-hover-value')).toHaveCount(0)\n  35 |   await expect(plot).toHaveAttribute('data-cursor-point-count', /[1-9]/)\n  36 |   await expect(page.locator('.preview-charts')).toContainText('inspect original values and adjust range')\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:33:22"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 68,
+                        "line": 34
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.preview-charts .chart-hover-value')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.preview-charts .chart-hover-value') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.preview-charts .chart-hover-value')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  32 |   await info.attach('preview-layout', { body: JSON.stringify({ route, before, after }), contentType: 'application/json' })\n  33 |   expect.soft(after).toBeCloseTo(before, 0)\n> 34 |   await expect(page.locator('.preview-charts .chart-hover-value')).toHaveCount(0)\n     |                                                                    ^\n  35 |   await expect(plot).toHaveAttribute('data-cursor-point-count', /[1-9]/)\n  36 |   await expect(page.locator('.preview-charts')).toContainText('inspect original values and adjust range')\n  37 | })\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:34:68"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:47:31.315Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "preview-layout",
+                      "contentType": "application/json",
+                      "body": "eyJyb3V0ZSI6Ii9ydW5zIiwiYmVmb3JlIjozMDA2LjI4MTI1LCJhZnRlciI6MzEzNC4yODEyNX0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-compact-runs--2b02f-thout-automatic-coordinates\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-compact-runs--2b02f-thout-automatic-coordinates\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-compact-runs--2b02f-thout-automatic-coordinates\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 22,
+                    "line": 33
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-f774205f98e99fbcb915",
+          "file": "hover-layout.spec.ts",
+          "line": 23,
+          "column": 46
+        },
+        {
+          "title": "full run preserves the following metric position at 390px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1839,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1565.46875\u001b[39m\nReceived: \u001b[31m1715.96875\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m150.5\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1565.46875\u001b[39m\nReceived: \u001b[31m1715.96875\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m150.5\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:49:17",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 17,
+                      "line": 49
+                    },
+                    "snippet": " \u001b[90m 47 |\u001b[39m   \u001b[36mconst\u001b[39m after \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m documentTop(following)\n \u001b[90m 48 |\u001b[39m   \u001b[36mawait\u001b[39m info\u001b[33m.\u001b[39mattach(\u001b[32m'full-chart-layout'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ width\u001b[33m,\u001b[39m comparison\u001b[33m,\u001b[39m before\u001b[33m,\u001b[39m after })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m   expect(after)\u001b[33m.\u001b[39mtoBeCloseTo(before\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'cursor-readout-loss'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-reserved'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\n \u001b[90m 51 |\u001b[39m   \u001b[36mif\u001b[39m (comparison) {\n \u001b[90m 52 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.metric-loss .tooltip-series'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m4\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 17,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1565.46875\u001b[39m\nReceived: \u001b[31m1715.96875\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m150.5\u001b[39m\n\n  47 |   const after = await documentTop(following)\n  48 |   await info.attach('full-chart-layout', { body: JSON.stringify({ width, comparison, before, after }), contentType: 'application/json' })\n> 49 |   expect(after).toBeCloseTo(before, 0)\n     |                 ^\n  50 |   await expect(page.getByTestId('cursor-readout-loss')).toHaveAttribute('data-reserved', 'true')\n  51 |   if (comparison) {\n  52 |     await expect(page.locator('.metric-loss .tooltip-series')).toHaveCount(4)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:49:17"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:47:39.839Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJjb21wYXJpc29uIjpmYWxzZSwiYmVmb3JlIjoxNTY1LjQ2ODc1LCJhZnRlciI6MTcxNS45Njg3NX0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-full-run-pres-b5321-ng-metric-position-at-390px\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-full-run-pres-b5321-ng-metric-position-at-390px\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-full-run-pres-b5321-ng-metric-position-at-390px\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 17,
+                    "line": 49
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-6516323f78b49bbf938b",
+          "file": "hover-layout.spec.ts",
+          "line": 39,
+          "column": 74
+        },
+        {
+          "title": "four-run duplicate comparison preserves the following metric position at 390px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2091,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1589.1875\u001b[39m\nReceived: \u001b[31m2452.6875\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m863.5\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1589.1875\u001b[39m\nReceived: \u001b[31m2452.6875\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m863.5\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:49:17",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 17,
+                      "line": 49
+                    },
+                    "snippet": " \u001b[90m 47 |\u001b[39m   \u001b[36mconst\u001b[39m after \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m documentTop(following)\n \u001b[90m 48 |\u001b[39m   \u001b[36mawait\u001b[39m info\u001b[33m.\u001b[39mattach(\u001b[32m'full-chart-layout'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ width\u001b[33m,\u001b[39m comparison\u001b[33m,\u001b[39m before\u001b[33m,\u001b[39m after })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m   expect(after)\u001b[33m.\u001b[39mtoBeCloseTo(before\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'cursor-readout-loss'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-reserved'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\n \u001b[90m 51 |\u001b[39m   \u001b[36mif\u001b[39m (comparison) {\n \u001b[90m 52 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.metric-loss .tooltip-series'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m4\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 17,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1589.1875\u001b[39m\nReceived: \u001b[31m2452.6875\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m863.5\u001b[39m\n\n  47 |   const after = await documentTop(following)\n  48 |   await info.attach('full-chart-layout', { body: JSON.stringify({ width, comparison, before, after }), contentType: 'application/json' })\n> 49 |   expect(after).toBeCloseTo(before, 0)\n     |                 ^\n  50 |   await expect(page.getByTestId('cursor-readout-loss')).toHaveAttribute('data-reserved', 'true')\n  51 |   if (comparison) {\n  52 |     await expect(page.locator('.metric-loss .tooltip-series')).toHaveCount(4)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:49:17"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:47:43.292Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJjb21wYXJpc29uIjp0cnVlLCJiZWZvcmUiOjE1ODkuMTg3NSwiYWZ0ZXIiOjI0NTIuNjg3NX0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-four-run-dupl-0cd59-ng-metric-position-at-390px\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-four-run-dupl-0cd59-ng-metric-position-at-390px\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-four-run-dupl-0cd59-ng-metric-position-at-390px\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 17,
+                    "line": 49
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-9cad50f2f0e1c16853b5",
+          "file": "hover-layout.spec.ts",
+          "line": 39,
+          "column": 74
+        },
+        {
+          "title": "full run preserves the following metric position at 1440px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2489,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1225.28125\u001b[39m\nReceived: \u001b[31m1353.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m128\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1225.28125\u001b[39m\nReceived: \u001b[31m1353.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m128\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:49:17",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 17,
+                      "line": 49
+                    },
+                    "snippet": " \u001b[90m 47 |\u001b[39m   \u001b[36mconst\u001b[39m after \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m documentTop(following)\n \u001b[90m 48 |\u001b[39m   \u001b[36mawait\u001b[39m info\u001b[33m.\u001b[39mattach(\u001b[32m'full-chart-layout'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ width\u001b[33m,\u001b[39m comparison\u001b[33m,\u001b[39m before\u001b[33m,\u001b[39m after })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m   expect(after)\u001b[33m.\u001b[39mtoBeCloseTo(before\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'cursor-readout-loss'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-reserved'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\n \u001b[90m 51 |\u001b[39m   \u001b[36mif\u001b[39m (comparison) {\n \u001b[90m 52 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.metric-loss .tooltip-series'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m4\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 17,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1225.28125\u001b[39m\nReceived: \u001b[31m1353.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m128\u001b[39m\n\n  47 |   const after = await documentTop(following)\n  48 |   await info.attach('full-chart-layout', { body: JSON.stringify({ width, comparison, before, after }), contentType: 'application/json' })\n> 49 |   expect(after).toBeCloseTo(before, 0)\n     |                 ^\n  50 |   await expect(page.getByTestId('cursor-readout-loss')).toHaveAttribute('data-reserved', 'true')\n  51 |   if (comparison) {\n  52 |     await expect(page.locator('.metric-loss .tooltip-series')).toHaveCount(4)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:49:17"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:47:47.082Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MTQ0MCwiY29tcGFyaXNvbiI6ZmFsc2UsImJlZm9yZSI6MTIyNS4yODEyNSwiYWZ0ZXIiOjEzNTMuMjgxMjV9"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-full-run-pres-dcde9-g-metric-position-at-1440px\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-full-run-pres-dcde9-g-metric-position-at-1440px\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-full-run-pres-dcde9-g-metric-position-at-1440px\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 17,
+                    "line": 49
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-85f657ff09d7d04980a1",
+          "file": "hover-layout.spec.ts",
+          "line": 39,
+          "column": 74
+        },
+        {
+          "title": "four-run duplicate comparison preserves the following metric position at 1440px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2210,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1006.28125\u001b[39m\nReceived: \u001b[31m1862.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m856\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1006.28125\u001b[39m\nReceived: \u001b[31m1862.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m856\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:49:17",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 17,
+                      "line": 49
+                    },
+                    "snippet": " \u001b[90m 47 |\u001b[39m   \u001b[36mconst\u001b[39m after \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m documentTop(following)\n \u001b[90m 48 |\u001b[39m   \u001b[36mawait\u001b[39m info\u001b[33m.\u001b[39mattach(\u001b[32m'full-chart-layout'\u001b[39m\u001b[33m,\u001b[39m { body\u001b[33m:\u001b[39m \u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify({ width\u001b[33m,\u001b[39m comparison\u001b[33m,\u001b[39m before\u001b[33m,\u001b[39m after })\u001b[33m,\u001b[39m contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m })\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 49 |\u001b[39m   expect(after)\u001b[33m.\u001b[39mtoBeCloseTo(before\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 50 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'cursor-readout-loss'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-reserved'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\n \u001b[90m 51 |\u001b[39m   \u001b[36mif\u001b[39m (comparison) {\n \u001b[90m 52 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.metric-loss .tooltip-series'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m4\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 17,
+                        "line": 49
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1006.28125\u001b[39m\nReceived: \u001b[31m1862.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m856\u001b[39m\n\n  47 |   const after = await documentTop(following)\n  48 |   await info.attach('full-chart-layout', { body: JSON.stringify({ width, comparison, before, after }), contentType: 'application/json' })\n> 49 |   expect(after).toBeCloseTo(before, 0)\n     |                 ^\n  50 |   await expect(page.getByTestId('cursor-readout-loss')).toHaveAttribute('data-reserved', 'true')\n  51 |   if (comparison) {\n  52 |     await expect(page.locator('.metric-loss .tooltip-series')).toHaveCount(4)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:49:17"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:47:51.230Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MTQ0MCwiY29tcGFyaXNvbiI6dHJ1ZSwiYmVmb3JlIjoxMDA2LjI4MTI1LCJhZnRlciI6MTg2Mi4yODEyNX0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-four-run-dupl-a4f99-g-metric-position-at-1440px\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-four-run-dupl-a4f99-g-metric-position-at-1440px\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-four-run-dupl-a4f99-g-metric-position-at-1440px\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 17,
+                    "line": 49
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-56b4bfcd49488ac745c7",
+          "file": "hover-layout.spec.ts",
+          "line": 39,
+          "column": 74
+        },
+        {
+          "title": "the visible recorded spike explains the linear axis and zoom keeps its exact source",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5506,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('spike-explanation')\nExpected substring: \u001b[32m\"Recorded spike: loss 100 at step 500,001\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('spike-explanation') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('spike-explanation')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('spike-explanation')\nExpected substring: \u001b[32m\"Recorded spike: loss 100 at step 500,001\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('spike-explanation') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('spike-explanation')\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:67:22",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 22,
+                      "line": 67
+                    },
+                    "snippet": " \u001b[90m 65 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/runs/kazakh-sft-005'\u001b[39m)\n \u001b[90m 66 |\u001b[39m   \u001b[36mconst\u001b[39m note \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'spike-explanation'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 67 |\u001b[39m   \u001b[36mawait\u001b[39m expect(note)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Recorded spike: loss 100 at step 500,001'\u001b[39m)\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 68 |\u001b[39m   \u001b[36mawait\u001b[39m expect(note)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'linear scale includes this peak'\u001b[39m)\n \u001b[90m 69 |\u001b[39m   \u001b[36mawait\u001b[39m expect(note\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Inspect original spike'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'href'\u001b[39m\u001b[33m,\u001b[39m \u001b[35m/sourceIndex=500001&revision=/\u001b[39m)\n \u001b[90m 70 |\u001b[39m   \u001b[36mawait\u001b[39m note\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Zoom around spike'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 22,
+                        "line": 67
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('spike-explanation')\nExpected substring: \u001b[32m\"Recorded spike: loss 100 at step 500,001\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByTestId('spike-explanation') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('spike-explanation')\u001b[22m\n\n\n  65 |   await page.goto('/runs/kazakh-sft-005')\n  66 |   const note = page.getByTestId('spike-explanation')\n> 67 |   await expect(note).toContainText('Recorded spike: loss 100 at step 500,001')\n     |                      ^\n  68 |   await expect(note).toContainText('linear scale includes this peak')\n  69 |   await expect(note.getByRole('link', { name: 'Inspect original spike', exact: true })).toHaveAttribute('href', /sourceIndex=500001&revision=/)\n  70 |   await note.getByRole('button', { name: 'Zoom around spike', exact: true }).click()\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:67:22"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:47:55.195Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-the-visible-r-85258-zoom-keeps-its-exact-source\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-the-visible-r-85258-zoom-keeps-its-exact-source\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-the-visible-r-85258-zoom-keeps-its-exact-source\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 22,
+                    "line": 67
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-c5ff75e321b02cc0783f",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 1
+        },
+        {
+          "title": "recorded nonfinite measurements explain their snapshot counts and gap semantics",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 7,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 5469,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.metric-loss').getByTestId('invalid-explanation')\nExpected substring: \u001b[32m\"This snapshot contains 2 NaN observations\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.metric-loss').getByTestId('invalid-explanation') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.metric-loss').getByTestId('invalid-explanation')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.metric-loss').getByTestId('invalid-explanation')\nExpected substring: \u001b[32m\"This snapshot contains 2 NaN observations\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.metric-loss').getByTestId('invalid-explanation') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.metric-loss').getByTestId('invalid-explanation')\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:82:24",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 24,
+                      "line": 82
+                    },
+                    "snippet": " \u001b[90m 80 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m`/runs/kazakh-sft-${id}`\u001b[39m)\n \u001b[90m 81 |\u001b[39m     \u001b[36mconst\u001b[39m note \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.metric-loss'\u001b[39m)\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'invalid-explanation'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 82 |\u001b[39m     \u001b[36mawait\u001b[39m expect(note)\u001b[33m.\u001b[39mtoContainText(\u001b[32m`This snapshot contains ${expected}`\u001b[39m)\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 83 |\u001b[39m     \u001b[36mawait\u001b[39m expect(note)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'invalid values create gaps, never zero'\u001b[39m)\n \u001b[90m 84 |\u001b[39m     \u001b[36mawait\u001b[39m expect(note\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Inspect data quality'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'href'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m`/data-quality?run=kazakh-sft-${id}&metric=loss`\u001b[39m)\n \u001b[90m 85 |\u001b[39m   }"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 24,
+                        "line": 82
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.metric-loss').getByTestId('invalid-explanation')\nExpected substring: \u001b[32m\"This snapshot contains 2 NaN observations\"\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" locator('.metric-loss').getByTestId('invalid-explanation') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.metric-loss').getByTestId('invalid-explanation')\u001b[22m\n\n\n  80 |     await page.goto(`/runs/kazakh-sft-${id}`)\n  81 |     const note = page.locator('.metric-loss').getByTestId('invalid-explanation')\n> 82 |     await expect(note).toContainText(`This snapshot contains ${expected}`)\n     |                        ^\n  83 |     await expect(note).toContainText('invalid values create gaps, never zero')\n  84 |     await expect(note.getByRole('link', { name: 'Inspect data quality', exact: true })).toHaveAttribute('href', `/data-quality?run=kazakh-sft-${id}&metric=loss`)\n  85 |   }\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:82:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:48:02.418Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-recorded-nonf-c10fc-ot-counts-and-gap-semantics\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-recorded-nonf-c10fc-ot-counts-and-gap-semantics\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\hover-layout-before\\artifacts\\hover-layout-recorded-nonf-c10fc-ot-counts-and-gap-semantics\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 24,
+                    "line": 82
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-ee90bbb54b9e2a61f2b2",
+          "file": "hover-layout.spec.ts",
+          "line": 78,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T04:47:19.561Z",
+    "duration": 49782.851,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 0
+  }
+}

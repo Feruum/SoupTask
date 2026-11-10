@@ -1,0 +1,48 @@
+[
+  {
+    "test": "compact /dashboard keeps explicit actions in place without automatic coordinates",
+    "route": "/dashboard",
+    "before": 1372.59375,
+    "after": 1372.59375,
+    "delta": 0
+  },
+  {
+    "test": "compact /runs keeps explicit actions in place without automatic coordinates",
+    "route": "/runs",
+    "before": 3076.28125,
+    "after": 3076.28125,
+    "delta": 0
+  },
+  {
+    "test": "full run preserves the following metric position at 390px",
+    "width": 390,
+    "comparison": false,
+    "before": 1875.46875,
+    "after": 1875.46875,
+    "delta": 0
+  },
+  {
+    "test": "four-run duplicate comparison preserves the following metric position at 390px",
+    "width": 390,
+    "comparison": true,
+    "before": 2307.1875,
+    "after": 2307.1875,
+    "delta": 0
+  },
+  {
+    "test": "full run preserves the following metric position at 1440px",
+    "width": 1440,
+    "comparison": false,
+    "before": 1517.28125,
+    "after": 1517.28125,
+    "delta": 0
+  },
+  {
+    "test": "four-run duplicate comparison preserves the following metric position at 1440px",
+    "width": 1440,
+    "comparison": true,
+    "before": 1422.28125,
+    "after": 1422.28125,
+    "delta": 0
+  }
+]

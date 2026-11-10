@@ -1,0 +1,74 @@
+{
+  "scope": "Four narrow reviewed P2 UI fixes plus inspection busy-refusal correction. Root-owned hover instrumentation tested in the same production build.",
+  "sourceFiles": [
+    {
+      "file": "src/features/shared/Workspace.tsx",
+      "sha256": "554bc230d625700cb9d07434e7599e578e8ae7af0e1136a0e9b2ec81f02cd925"
+    },
+    {
+      "file": "src/worker/use-workspace.ts",
+      "sha256": "770b7e77eeaaa3c33ccb5eceba35494a82de6a962db27e2a991d6451d7d754bd"
+    },
+    {
+      "file": "src/features/runs/RunsPage.tsx",
+      "sha256": "410a4572ed9dce51257816da09a51884c360053913965ec4f9182649bab783d2"
+    },
+    {
+      "file": "src/features/quality/QualityPage.tsx",
+      "sha256": "c6d0781e187ddfc8d5559bb4609fc0f1abffa192934851145bd2c6940fb3dcc8"
+    },
+    {
+      "file": "src/features/quality/RunQualityPanel.tsx",
+      "sha256": "0cb0ae53db2e655f58464bade85abcf36e43d180269d987b5e6870ea243680ac"
+    },
+    {
+      "file": "src/features/quality/issue-labels.ts",
+      "sha256": "3a9b920bb451116df125420bbd34d2101cce2a65d360f005cb9f8929c6f894a0"
+    },
+    {
+      "file": "src/features/quality/issue-summary.ts",
+      "sha256": "fa68841295a4afb20674aaebc63c5cb65b5bd7bd333408fec8223016995e2723"
+    },
+    {
+      "file": "src/features/shared/source-inspector.module.css",
+      "sha256": "58b628c447ec052058341eb0e99560e9e66f42bf8053183d72428dcd65e0b6cf"
+    },
+    {
+      "file": "e2e/review-fixes.spec.ts",
+      "sha256": "25417384d216929b0e31b82bbde4c8a1c3b477008a2fd7682097d8a97e1ba3de"
+    }
+  ],
+  "checks": [
+    {
+      "command": "node node_modules/typescript/bin/tsc -b --pretty false",
+      "exitCode": 0
+    },
+    {
+      "command": "node node_modules/oxlint/bin/oxlint --deny-warnings src/features/shared/Workspace.tsx src/worker/use-workspace.ts src/features/runs/RunsPage.tsx src/features/quality e2e/review-fixes.spec.ts",
+      "exitCode": 0
+    },
+    {
+      "command": "node node_modules/vite/bin/vite.js build",
+      "exitCode": 0
+    },
+    {
+      "command": "node node_modules/@playwright/test/cli.js test --config=tmp/review-fixes-complete-playwright.config.mjs",
+      "exitCode": 0,
+      "passed": 9
+    }
+  ],
+  "evidence": {
+    "initialRed": "../review-fixes-before/results.json",
+    "hoverRed": "../hover-paint-before/results.json",
+    "intermediateHarnessFailures": "../review-fixes-after/results.json",
+    "priorEightPassed": "../review-fixes-final/results.json",
+    "inspectionRaceRed": "../review-inspection-before/results.json",
+    "finalGreen": "results.json"
+  },
+  "notes": [
+    "Initial six failures reproduce four missing behaviors.",
+    "Intermediate failures were native summary selector and PerformanceMark.toJSON detail omission; both preserved and corrected in test harnesses.",
+    "Supplemental race holds a real Worker inspect reply, submits a refused second query, then releases the original reply; no fabricated source data or timing-based race arrangement.",
+    "Only focused browser suites ran here; root owns full-suite, performance and deployment acceptance."
+  ]
+}

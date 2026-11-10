@@ -2,8 +2,25 @@ export function displayLocale(locale = typeof navigator === 'undefined' ? 'en-US
   return locale.startsWith('de') ? 'de-DE' : locale.startsWith('ru') ? 'ru-RU' : 'en-US'
 }
 
+type NumberStyle = 'step' | 'value' | 'scientific'
+const numberFormats = new Map<string, Intl.NumberFormat>()
+function numberFormat(locale: string, style: NumberStyle): Intl.NumberFormat {
+  const key = `${locale}:${style}`
+  const existing = numberFormats.get(key)
+  if (existing) return existing
+  const formatter = new Intl.NumberFormat(locale, style === 'step'
+    ? { maximumFractionDigits: 6 }
+    : style === 'scientific'
+      ? { notation: 'scientific', maximumSignificantDigits: 6 }
+      : { minimumFractionDigits: 3, maximumFractionDigits: 6 })
+  // Explicit locale arguments remain supported without allowing an unbounded global cache.
+  if (numberFormats.size >= 32) numberFormats.delete(numberFormats.keys().next().value!)
+  numberFormats.set(key, formatter)
+  return formatter
+}
+
 export function formatStep(value: number, locale = displayLocale()): string {
-  return new Intl.NumberFormat(locale, { maximumFractionDigits: 6 }).format(value)
+  return numberFormat(locale, 'step').format(value)
 }
 
 export function formatValue(value: number | null | undefined, scientific = false, locale = displayLocale()): string {
@@ -12,9 +29,7 @@ export function formatValue(value: number | null | undefined, scientific = false
   if (value === Infinity) return '+Infinity'
   if (value === -Infinity) return '-Infinity'
   if (Object.is(value, -0)) return '-0'
-  return new Intl.NumberFormat(locale, scientific || (value !== 0 && Math.abs(value) < 0.001)
-    ? { notation: 'scientific', maximumSignificantDigits: 6 }
-    : { minimumFractionDigits: 3, maximumFractionDigits: 6 }).format(value)
+  return numberFormat(locale, scientific || (value !== 0 && Math.abs(value) < 0.001) ? 'scientific' : 'value').format(value)
 }
 
 export function formatTimestamp(instant: string, locale = displayLocale(), timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone): string {

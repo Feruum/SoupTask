@@ -1,0 +1,281 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=tmp/quality-overflow-green-playwright.config.mjs"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\quality-overflow-green-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/quality-overflow-after/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "quality-responsive.spec.ts"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-overflow-after\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "quality-responsive.spec.ts",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4175",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-overflow-after\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4175",
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "url": "http://127.0.0.1:4175",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "quality-responsive.spec.ts",
+      "file": "quality-responsive.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "quality selectors fit their own cells at 320px in dark",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2275,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:38:21.627Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "quality-filter-dimensions",
+                      "contentType": "application/json",
+                      "body": "ewogICJ2aWV3cG9ydCI6IDMyMCwKICAicGFnZVdpZHRoIjogMzIwLAogICJmaWx0ZXJzIjogewogICAgIngiOiAxNywKICAgICJ5IjogNjg1LjA5Mzc1LAogICAgIndpZHRoIjogMjg2LAogICAgImhlaWdodCI6IDE3MSwKICAgICJ0b3AiOiA2ODUuMDkzNzUsCiAgICAicmlnaHQiOiAzMDMsCiAgICAiYm90dG9tIjogODU2LjA5Mzc1LAogICAgImxlZnQiOiAxNwogIH0sCiAgImNvbnRyb2xzIjogWwogICAgewogICAgICAidGFnIjogIkxBQkVMIiwKICAgICAgInRleHQiOiAiUnVuIiwKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDMzLAogICAgICAgICJ5IjogNjg1LjA5Mzc1LAogICAgICAgICJ3aWR0aCI6IDI1NCwKICAgICAgICAiaGVpZ2h0IjogNzEuNSwKICAgICAgICAidG9wIjogNjg1LjA5Mzc1LAogICAgICAgICJyaWdodCI6IDI4NywKICAgICAgICAiYm90dG9tIjogNzU2LjU5Mzc1LAogICAgICAgICJsZWZ0IjogMzMKICAgICAgfSwKICAgICAgIm1pbldpZHRoIjogIjBweCIsCiAgICAgICJ3aWR0aCI6ICIyNTRweCIsCiAgICAgICJtYXhXaWR0aCI6ICJub25lIiwKICAgICAgImdyaWRDb2x1bW5zIjogIjI1NHB4IgogICAgfSwKICAgIHsKICAgICAgInRhZyI6ICJTRUxFQ1QiLAogICAgICAidGV4dCI6ICJTZWxlY3QgYSBydW4iLAogICAgICAiYm94IjogewogICAgICAgICJ4IjogMzMsCiAgICAgICAgInkiOiA3MTIuNTkzNzUsCiAgICAgICAgIndpZHRoIjogMjU0LAogICAgICAgICJoZWlnaHQiOiA0NCwKICAgICAgICAidG9wIjogNzEyLjU5Mzc1LAogICAgICAgICJyaWdodCI6IDI4NywKICAgICAgICAiYm90dG9tIjogNzU2LjU5Mzc1LAogICAgICAgICJsZWZ0IjogMzMKICAgICAgfSwKICAgICAgIm1pbldpZHRoIjogIjBweCIsCiAgICAgICJ3aWR0aCI6ICIyNTRweCIsCiAgICAgICJtYXhXaWR0aCI6ICIxMDAlIiwKICAgICAgImdyaWRDb2x1bW5zIjogIm5vbmUiCiAgICB9LAogICAgewogICAgICAidGFnIjogIkxBQkVMIiwKICAgICAgInRleHQiOiAiTWV0cmljIiwKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDMzLAogICAgICAgICJ5IjogNzY4LjU5Mzc1LAogICAgICAgICJ3aWR0aCI6IDEyMSwKICAgICAgICAiaGVpZ2h0IjogNzEuNSwKICAgICAgICAidG9wIjogNzY4LjU5Mzc1LAogICAgICAgICJyaWdodCI6IDE1NCwKICAgICAgICAiYm90dG9tIjogODQwLjA5Mzc1LAogICAgICAgICJsZWZ0IjogMzMKICAgICAgfSwKICAgICAgIm1pbldpZHRoIjogIjBweCIsCiAgICAgICJ3aWR0aCI6ICIxMjFweCIsCiAgICAgICJtYXhXaWR0aCI6ICJub25lIiwKICAgICAgImdyaWRDb2x1bW5zIjogIjEyMXB4IgogICAgfSwKICAgIHsKICAgICAgInRhZyI6ICJTRUxFQ1QiLAogICAgICAidGV4dCI6ICJBbGwgbWV0cmljcyIsCiAgICAgICJib3giOiB7CiAgICAgICAgIngiOiAzMywKICAgICAgICAieSI6IDc5Ni4wOTM3NSwKICAgICAgICAid2lkdGgiOiAxMjEsCiAgICAgICAgImhlaWdodCI6IDQ0LAogICAgICAgICJ0b3AiOiA3OTYuMDkzNzUsCiAgICAgICAgInJpZ2h0IjogMTU0LAogICAgICAgICJib3R0b20iOiA4NDAuMDkzNzUsCiAgICAgICAgImxlZnQiOiAzMwogICAgICB9LAogICAgICAibWluV2lkdGgiOiAiMHB4IiwKICAgICAgIndpZHRoIjogIjEyMXB4IiwKICAgICAgIm1heFdpZHRoIjogIjEwMCUiLAogICAgICAiZ3JpZENvbHVtbnMiOiAibm9uZSIKICAgIH0sCiAgICB7CiAgICAgICJ0YWciOiAiTEFCRUwiLAogICAgICAidGV4dCI6ICJJc3N1ZSB0eXBlIiwKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDE2NiwKICAgICAgICAieSI6IDc2OC41OTM3NSwKICAgICAgICAid2lkdGgiOiAxMjEsCiAgICAgICAgImhlaWdodCI6IDcxLjUsCiAgICAgICAgInRvcCI6IDc2OC41OTM3NSwKICAgICAgICAicmlnaHQiOiAyODcsCiAgICAgICAgImJvdHRvbSI6IDg0MC4wOTM3NSwKICAgICAgICAibGVmdCI6IDE2NgogICAgICB9LAogICAgICAibWluV2lkdGgiOiAiMHB4IiwKICAgICAgIndpZHRoIjogIjEyMXB4IiwKICAgICAgIm1heFdpZHRoIjogIm5vbmUiLAogICAgICAiZ3JpZENvbHVtbnMiOiAiMTIxcHgiCiAgICB9LAogICAgewogICAgICAidGFnIjogIlNFTEVDVCIsCiAgICAgICJ0ZXh0IjogIkFsbCBpc3N1ZSB0eXBlcyIsCiAgICAgICJib3giOiB7CiAgICAgICAgIngiOiAxNjYsCiAgICAgICAgInkiOiA3OTYuMDkzNzUsCiAgICAgICAgIndpZHRoIjogMTIxLAogICAgICAgICJoZWlnaHQiOiA0NCwKICAgICAgICAidG9wIjogNzk2LjA5Mzc1LAogICAgICAgICJyaWdodCI6IDI4NywKICAgICAgICAiYm90dG9tIjogODQwLjA5Mzc1LAogICAgICAgICJsZWZ0IjogMTY2CiAgICAgIH0sCiAgICAgICJtaW5XaWR0aCI6ICIwcHgiLAogICAgICAid2lkdGgiOiAiMTIxcHgiLAogICAgICAibWF4V2lkdGgiOiAiMTAwJSIsCiAgICAgICJncmlkQ29sdW1ucyI6ICJub25lIgogICAgfQogIF0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "17e1c90788060d51b373-bd7683adbd94b72d0a3f",
+          "file": "quality-responsive.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "quality selectors fit their own cells at 390px in dark",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1122,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:38:24.142Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "quality-filter-dimensions",
+                      "contentType": "application/json",
+                      "body": "ewogICJ2aWV3cG9ydCI6IDM5MCwKICAicGFnZVdpZHRoIjogMzkwLAogICJmaWx0ZXJzIjogewogICAgIngiOiAxNywKICAgICJ5IjogNjg1LjA5Mzc1LAogICAgIndpZHRoIjogMzU2LAogICAgImhlaWdodCI6IDE3MSwKICAgICJ0b3AiOiA2ODUuMDkzNzUsCiAgICAicmlnaHQiOiAzNzMsCiAgICAiYm90dG9tIjogODU2LjA5Mzc1LAogICAgImxlZnQiOiAxNwogIH0sCiAgImNvbnRyb2xzIjogWwogICAgewogICAgICAidGFnIjogIkxBQkVMIiwKICAgICAgInRleHQiOiAiUnVuIiwKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDMzLAogICAgICAgICJ5IjogNjg1LjA5Mzc1LAogICAgICAgICJ3aWR0aCI6IDMyNCwKICAgICAgICAiaGVpZ2h0IjogNzEuNSwKICAgICAgICAidG9wIjogNjg1LjA5Mzc1LAogICAgICAgICJyaWdodCI6IDM1NywKICAgICAgICAiYm90dG9tIjogNzU2LjU5Mzc1LAogICAgICAgICJsZWZ0IjogMzMKICAgICAgfSwKICAgICAgIm1pbldpZHRoIjogIjBweCIsCiAgICAgICJ3aWR0aCI6ICIzMjRweCIsCiAgICAgICJtYXhXaWR0aCI6ICJub25lIiwKICAgICAgImdyaWRDb2x1bW5zIjogIjMyNHB4IgogICAgfSwKICAgIHsKICAgICAgInRhZyI6ICJTRUxFQ1QiLAogICAgICAidGV4dCI6ICJTZWxlY3QgYSBydW4iLAogICAgICAiYm94IjogewogICAgICAgICJ4IjogMzMsCiAgICAgICAgInkiOiA3MTIuNTkzNzUsCiAgICAgICAgIndpZHRoIjogMzI0LAogICAgICAgICJoZWlnaHQiOiA0NCwKICAgICAgICAidG9wIjogNzEyLjU5Mzc1LAogICAgICAgICJyaWdodCI6IDM1NywKICAgICAgICAiYm90dG9tIjogNzU2LjU5Mzc1LAogICAgICAgICJsZWZ0IjogMzMKICAgICAgfSwKICAgICAgIm1pbldpZHRoIjogIjBweCIsCiAgICAgICJ3aWR0aCI6ICIzMjRweCIsCiAgICAgICJtYXhXaWR0aCI6ICIxMDAlIiwKICAgICAgImdyaWRDb2x1bW5zIjogIm5vbmUiCiAgICB9LAogICAgewogICAgICAidGFnIjogIkxBQkVMIiwKICAgICAgInRleHQiOiAiTWV0cmljIiwKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDMzLAogICAgICAgICJ5IjogNzY4LjU5Mzc1LAogICAgICAgICJ3aWR0aCI6IDE1NiwKICAgICAgICAiaGVpZ2h0IjogNzEuNSwKICAgICAgICAidG9wIjogNzY4LjU5Mzc1LAogICAgICAgICJyaWdodCI6IDE4OSwKICAgICAgICAiYm90dG9tIjogODQwLjA5Mzc1LAogICAgICAgICJsZWZ0IjogMzMKICAgICAgfSwKICAgICAgIm1pbldpZHRoIjogIjBweCIsCiAgICAgICJ3aWR0aCI6ICIxNTZweCIsCiAgICAgICJtYXhXaWR0aCI6ICJub25lIiwKICAgICAgImdyaWRDb2x1bW5zIjogIjE1NnB4IgogICAgfSwKICAgIHsKICAgICAgInRhZyI6ICJTRUxFQ1QiLAogICAgICAidGV4dCI6ICJBbGwgbWV0cmljcyIsCiAgICAgICJib3giOiB7CiAgICAgICAgIngiOiAzMywKICAgICAgICAieSI6IDc5Ni4wOTM3NSwKICAgICAgICAid2lkdGgiOiAxNTYsCiAgICAgICAgImhlaWdodCI6IDQ0LAogICAgICAgICJ0b3AiOiA3OTYuMDkzNzUsCiAgICAgICAgInJpZ2h0IjogMTg5LAogICAgICAgICJib3R0b20iOiA4NDAuMDkzNzUsCiAgICAgICAgImxlZnQiOiAzMwogICAgICB9LAogICAgICAibWluV2lkdGgiOiAiMHB4IiwKICAgICAgIndpZHRoIjogIjE1NnB4IiwKICAgICAgIm1heFdpZHRoIjogIjEwMCUiLAogICAgICAiZ3JpZENvbHVtbnMiOiAibm9uZSIKICAgIH0sCiAgICB7CiAgICAgICJ0YWciOiAiTEFCRUwiLAogICAgICAidGV4dCI6ICJJc3N1ZSB0eXBlIiwKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDIwMSwKICAgICAgICAieSI6IDc2OC41OTM3NSwKICAgICAgICAid2lkdGgiOiAxNTYsCiAgICAgICAgImhlaWdodCI6IDcxLjUsCiAgICAgICAgInRvcCI6IDc2OC41OTM3NSwKICAgICAgICAicmlnaHQiOiAzNTcsCiAgICAgICAgImJvdHRvbSI6IDg0MC4wOTM3NSwKICAgICAgICAibGVmdCI6IDIwMQogICAgICB9LAogICAgICAibWluV2lkdGgiOiAiMHB4IiwKICAgICAgIndpZHRoIjogIjE1NnB4IiwKICAgICAgIm1heFdpZHRoIjogIm5vbmUiLAogICAgICAiZ3JpZENvbHVtbnMiOiAiMTU2cHgiCiAgICB9LAogICAgewogICAgICAidGFnIjogIlNFTEVDVCIsCiAgICAgICJ0ZXh0IjogIkFsbCBpc3N1ZSB0eXBlcyIsCiAgICAgICJib3giOiB7CiAgICAgICAgIngiOiAyMDEsCiAgICAgICAgInkiOiA3OTYuMDkzNzUsCiAgICAgICAgIndpZHRoIjogMTU2LAogICAgICAgICJoZWlnaHQiOiA0NCwKICAgICAgICAidG9wIjogNzk2LjA5Mzc1LAogICAgICAgICJyaWdodCI6IDM1NywKICAgICAgICAiYm90dG9tIjogODQwLjA5Mzc1LAogICAgICAgICJsZWZ0IjogMjAxCiAgICAgIH0sCiAgICAgICJtaW5XaWR0aCI6ICIwcHgiLAogICAgICAid2lkdGgiOiAiMTU2cHgiLAogICAgICAibWF4V2lkdGgiOiAiMTAwJSIsCiAgICAgICJncmlkQ29sdW1ucyI6ICJub25lIgogICAgfQogIF0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "17e1c90788060d51b373-9826de32cdccae92ed05",
+          "file": "quality-responsive.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "quality selectors fit their own cells at 320px in light",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1066,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:38:25.279Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "quality-filter-dimensions",
+                      "contentType": "application/json",
+                      "body": "ewogICJ2aWV3cG9ydCI6IDMyMCwKICAicGFnZVdpZHRoIjogMzIwLAogICJmaWx0ZXJzIjogewogICAgIngiOiAxNywKICAgICJ5IjogNjg1LjA5Mzc1LAogICAgIndpZHRoIjogMjg2LAogICAgImhlaWdodCI6IDE3MSwKICAgICJ0b3AiOiA2ODUuMDkzNzUsCiAgICAicmlnaHQiOiAzMDMsCiAgICAiYm90dG9tIjogODU2LjA5Mzc1LAogICAgImxlZnQiOiAxNwogIH0sCiAgImNvbnRyb2xzIjogWwogICAgewogICAgICAidGFnIjogIkxBQkVMIiwKICAgICAgInRleHQiOiAiUnVuIiwKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDMzLAogICAgICAgICJ5IjogNjg1LjA5Mzc1LAogICAgICAgICJ3aWR0aCI6IDI1NCwKICAgICAgICAiaGVpZ2h0IjogNzEuNSwKICAgICAgICAidG9wIjogNjg1LjA5Mzc1LAogICAgICAgICJyaWdodCI6IDI4NywKICAgICAgICAiYm90dG9tIjogNzU2LjU5Mzc1LAogICAgICAgICJsZWZ0IjogMzMKICAgICAgfSwKICAgICAgIm1pbldpZHRoIjogIjBweCIsCiAgICAgICJ3aWR0aCI6ICIyNTRweCIsCiAgICAgICJtYXhXaWR0aCI6ICJub25lIiwKICAgICAgImdyaWRDb2x1bW5zIjogIjI1NHB4IgogICAgfSwKICAgIHsKICAgICAgInRhZyI6ICJTRUxFQ1QiLAogICAgICAidGV4dCI6ICJTZWxlY3QgYSBydW4iLAogICAgICAiYm94IjogewogICAgICAgICJ4IjogMzMsCiAgICAgICAgInkiOiA3MTIuNTkzNzUsCiAgICAgICAgIndpZHRoIjogMjU0LAogICAgICAgICJoZWlnaHQiOiA0NCwKICAgICAgICAidG9wIjogNzEyLjU5Mzc1LAogICAgICAgICJyaWdodCI6IDI4NywKICAgICAgICAiYm90dG9tIjogNzU2LjU5Mzc1LAogICAgICAgICJsZWZ0IjogMzMKICAgICAgfSwKICAgICAgIm1pbldpZHRoIjogIjBweCIsCiAgICAgICJ3aWR0aCI6ICIyNTRweCIsCiAgICAgICJtYXhXaWR0aCI6ICIxMDAlIiwKICAgICAgImdyaWRDb2x1bW5zIjogIm5vbmUiCiAgICB9LAogICAgewogICAgICAidGFnIjogIkxBQkVMIiwKICAgICAgInRleHQiOiAiTWV0cmljIiwKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDMzLAogICAgICAgICJ5IjogNzY4LjU5Mzc1LAogICAgICAgICJ3aWR0aCI6IDEyMSwKICAgICAgICAiaGVpZ2h0IjogNzEuNSwKICAgICAgICAidG9wIjogNzY4LjU5Mzc1LAogICAgICAgICJyaWdodCI6IDE1NCwKICAgICAgICAiYm90dG9tIjogODQwLjA5Mzc1LAogICAgICAgICJsZWZ0IjogMzMKICAgICAgfSwKICAgICAgIm1pbldpZHRoIjogIjBweCIsCiAgICAgICJ3aWR0aCI6ICIxMjFweCIsCiAgICAgICJtYXhXaWR0aCI6ICJub25lIiwKICAgICAgImdyaWRDb2x1bW5zIjogIjEyMXB4IgogICAgfSwKICAgIHsKICAgICAgInRhZyI6ICJTRUxFQ1QiLAogICAgICAidGV4dCI6ICJBbGwgbWV0cmljcyIsCiAgICAgICJib3giOiB7CiAgICAgICAgIngiOiAzMywKICAgICAgICAieSI6IDc5Ni4wOTM3NSwKICAgICAgICAid2lkdGgiOiAxMjEsCiAgICAgICAgImhlaWdodCI6IDQ0LAogICAgICAgICJ0b3AiOiA3OTYuMDkzNzUsCiAgICAgICAgInJpZ2h0IjogMTU0LAogICAgICAgICJib3R0b20iOiA4NDAuMDkzNzUsCiAgICAgICAgImxlZnQiOiAzMwogICAgICB9LAogICAgICAibWluV2lkdGgiOiAiMHB4IiwKICAgICAgIndpZHRoIjogIjEyMXB4IiwKICAgICAgIm1heFdpZHRoIjogIjEwMCUiLAogICAgICAiZ3JpZENvbHVtbnMiOiAibm9uZSIKICAgIH0sCiAgICB7CiAgICAgICJ0YWciOiAiTEFCRUwiLAogICAgICAidGV4dCI6ICJJc3N1ZSB0eXBlIiwKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDE2NiwKICAgICAgICAieSI6IDc2OC41OTM3NSwKICAgICAgICAid2lkdGgiOiAxMjEsCiAgICAgICAgImhlaWdodCI6IDcxLjUsCiAgICAgICAgInRvcCI6IDc2OC41OTM3NSwKICAgICAgICAicmlnaHQiOiAyODcsCiAgICAgICAgImJvdHRvbSI6IDg0MC4wOTM3NSwKICAgICAgICAibGVmdCI6IDE2NgogICAgICB9LAogICAgICAibWluV2lkdGgiOiAiMHB4IiwKICAgICAgIndpZHRoIjogIjEyMXB4IiwKICAgICAgIm1heFdpZHRoIjogIm5vbmUiLAogICAgICAiZ3JpZENvbHVtbnMiOiAiMTIxcHgiCiAgICB9LAogICAgewogICAgICAidGFnIjogIlNFTEVDVCIsCiAgICAgICJ0ZXh0IjogIkFsbCBpc3N1ZSB0eXBlcyIsCiAgICAgICJib3giOiB7CiAgICAgICAgIngiOiAxNjYsCiAgICAgICAgInkiOiA3OTYuMDkzNzUsCiAgICAgICAgIndpZHRoIjogMTIxLAogICAgICAgICJoZWlnaHQiOiA0NCwKICAgICAgICAidG9wIjogNzk2LjA5Mzc1LAogICAgICAgICJyaWdodCI6IDI4NywKICAgICAgICAiYm90dG9tIjogODQwLjA5Mzc1LAogICAgICAgICJsZWZ0IjogMTY2CiAgICAgIH0sCiAgICAgICJtaW5XaWR0aCI6ICIwcHgiLAogICAgICAid2lkdGgiOiAiMTIxcHgiLAogICAgICAibWF4V2lkdGgiOiAiMTAwJSIsCiAgICAgICJncmlkQ29sdW1ucyI6ICJub25lIgogICAgfQogIF0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "17e1c90788060d51b373-094fb9965be752aeb2ac",
+          "file": "quality-responsive.spec.ts",
+          "line": 4,
+          "column": 3
+        },
+        {
+          "title": "quality selectors fit their own cells at 390px in light",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1039,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:38:26.360Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "quality-filter-dimensions",
+                      "contentType": "application/json",
+                      "body": "ewogICJ2aWV3cG9ydCI6IDM5MCwKICAicGFnZVdpZHRoIjogMzkwLAogICJmaWx0ZXJzIjogewogICAgIngiOiAxNywKICAgICJ5IjogNjg1LjA5Mzc1LAogICAgIndpZHRoIjogMzU2LAogICAgImhlaWdodCI6IDE3MSwKICAgICJ0b3AiOiA2ODUuMDkzNzUsCiAgICAicmlnaHQiOiAzNzMsCiAgICAiYm90dG9tIjogODU2LjA5Mzc1LAogICAgImxlZnQiOiAxNwogIH0sCiAgImNvbnRyb2xzIjogWwogICAgewogICAgICAidGFnIjogIkxBQkVMIiwKICAgICAgInRleHQiOiAiUnVuIiwKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDMzLAogICAgICAgICJ5IjogNjg1LjA5Mzc1LAogICAgICAgICJ3aWR0aCI6IDMyNCwKICAgICAgICAiaGVpZ2h0IjogNzEuNSwKICAgICAgICAidG9wIjogNjg1LjA5Mzc1LAogICAgICAgICJyaWdodCI6IDM1NywKICAgICAgICAiYm90dG9tIjogNzU2LjU5Mzc1LAogICAgICAgICJsZWZ0IjogMzMKICAgICAgfSwKICAgICAgIm1pbldpZHRoIjogIjBweCIsCiAgICAgICJ3aWR0aCI6ICIzMjRweCIsCiAgICAgICJtYXhXaWR0aCI6ICJub25lIiwKICAgICAgImdyaWRDb2x1bW5zIjogIjMyNHB4IgogICAgfSwKICAgIHsKICAgICAgInRhZyI6ICJTRUxFQ1QiLAogICAgICAidGV4dCI6ICJTZWxlY3QgYSBydW4iLAogICAgICAiYm94IjogewogICAgICAgICJ4IjogMzMsCiAgICAgICAgInkiOiA3MTIuNTkzNzUsCiAgICAgICAgIndpZHRoIjogMzI0LAogICAgICAgICJoZWlnaHQiOiA0NCwKICAgICAgICAidG9wIjogNzEyLjU5Mzc1LAogICAgICAgICJyaWdodCI6IDM1NywKICAgICAgICAiYm90dG9tIjogNzU2LjU5Mzc1LAogICAgICAgICJsZWZ0IjogMzMKICAgICAgfSwKICAgICAgIm1pbldpZHRoIjogIjBweCIsCiAgICAgICJ3aWR0aCI6ICIzMjRweCIsCiAgICAgICJtYXhXaWR0aCI6ICIxMDAlIiwKICAgICAgImdyaWRDb2x1bW5zIjogIm5vbmUiCiAgICB9LAogICAgewogICAgICAidGFnIjogIkxBQkVMIiwKICAgICAgInRleHQiOiAiTWV0cmljIiwKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDMzLAogICAgICAgICJ5IjogNzY4LjU5Mzc1LAogICAgICAgICJ3aWR0aCI6IDE1NiwKICAgICAgICAiaGVpZ2h0IjogNzEuNSwKICAgICAgICAidG9wIjogNzY4LjU5Mzc1LAogICAgICAgICJyaWdodCI6IDE4OSwKICAgICAgICAiYm90dG9tIjogODQwLjA5Mzc1LAogICAgICAgICJsZWZ0IjogMzMKICAgICAgfSwKICAgICAgIm1pbldpZHRoIjogIjBweCIsCiAgICAgICJ3aWR0aCI6ICIxNTZweCIsCiAgICAgICJtYXhXaWR0aCI6ICJub25lIiwKICAgICAgImdyaWRDb2x1bW5zIjogIjE1NnB4IgogICAgfSwKICAgIHsKICAgICAgInRhZyI6ICJTRUxFQ1QiLAogICAgICAidGV4dCI6ICJBbGwgbWV0cmljcyIsCiAgICAgICJib3giOiB7CiAgICAgICAgIngiOiAzMywKICAgICAgICAieSI6IDc5Ni4wOTM3NSwKICAgICAgICAid2lkdGgiOiAxNTYsCiAgICAgICAgImhlaWdodCI6IDQ0LAogICAgICAgICJ0b3AiOiA3OTYuMDkzNzUsCiAgICAgICAgInJpZ2h0IjogMTg5LAogICAgICAgICJib3R0b20iOiA4NDAuMDkzNzUsCiAgICAgICAgImxlZnQiOiAzMwogICAgICB9LAogICAgICAibWluV2lkdGgiOiAiMHB4IiwKICAgICAgIndpZHRoIjogIjE1NnB4IiwKICAgICAgIm1heFdpZHRoIjogIjEwMCUiLAogICAgICAiZ3JpZENvbHVtbnMiOiAibm9uZSIKICAgIH0sCiAgICB7CiAgICAgICJ0YWciOiAiTEFCRUwiLAogICAgICAidGV4dCI6ICJJc3N1ZSB0eXBlIiwKICAgICAgImJveCI6IHsKICAgICAgICAieCI6IDIwMSwKICAgICAgICAieSI6IDc2OC41OTM3NSwKICAgICAgICAid2lkdGgiOiAxNTYsCiAgICAgICAgImhlaWdodCI6IDcxLjUsCiAgICAgICAgInRvcCI6IDc2OC41OTM3NSwKICAgICAgICAicmlnaHQiOiAzNTcsCiAgICAgICAgImJvdHRvbSI6IDg0MC4wOTM3NSwKICAgICAgICAibGVmdCI6IDIwMQogICAgICB9LAogICAgICAibWluV2lkdGgiOiAiMHB4IiwKICAgICAgIndpZHRoIjogIjE1NnB4IiwKICAgICAgIm1heFdpZHRoIjogIm5vbmUiLAogICAgICAiZ3JpZENvbHVtbnMiOiAiMTU2cHgiCiAgICB9LAogICAgewogICAgICAidGFnIjogIlNFTEVDVCIsCiAgICAgICJ0ZXh0IjogIkFsbCBpc3N1ZSB0eXBlcyIsCiAgICAgICJib3giOiB7CiAgICAgICAgIngiOiAyMDEsCiAgICAgICAgInkiOiA3OTYuMDkzNzUsCiAgICAgICAgIndpZHRoIjogMTU2LAogICAgICAgICJoZWlnaHQiOiA0NCwKICAgICAgICAidG9wIjogNzk2LjA5Mzc1LAogICAgICAgICJyaWdodCI6IDM1NywKICAgICAgICAiYm90dG9tIjogODQwLjA5Mzc1LAogICAgICAgICJsZWZ0IjogMjAxCiAgICAgIH0sCiAgICAgICJtaW5XaWR0aCI6ICIwcHgiLAogICAgICAid2lkdGgiOiAiMTU2cHgiLAogICAgICAibWF4V2lkdGgiOiAiMTAwJSIsCiAgICAgICJncmlkQ29sdW1ucyI6ICJub25lIgogICAgfQogIF0KfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "17e1c90788060d51b373-2b9827293c79435ecb67",
+          "file": "quality-responsive.spec.ts",
+          "line": 4,
+          "column": 3
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T04:38:18.787Z",
+    "duration": 9784.541000000001,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "assessment": "B",
+  "target": "src/features/dashboard/DashboardPage.tsx",
+  "url": "http://127.0.0.1:5173/dashboard",
+  "browser": "ChatGPT in-app browser",
+  "freshTab": "1",
+  "sourceChanges": false,
+  "detector": {"command": "C:/Users/Ferumm/.agents/skills/impeccable/scripts/impeccable.cmd detect --json src/features/dashboard", "exitCode": 0, "findings": 0, "json": "detector-dashboard.json"},
+  "viewportEvidence": [
+    {"width": 1440, "height": 1000, "theme": "dark", "scrollWidth": 1425, "observed": "Desktop monitor, six run choices, selected 005, one chart, original spike at step 500001; no page horizontal overflow."},
+    {"width": 390, "height": 844, "theme": "dark", "scrollWidth": 375, "observed": "Collapsed run selector; bottom navigation; two-column facts; metric labels on one line; visible action targets at least 44 px high."},
+    {"width": 320, "height": 844, "theme": "light", "scrollWidth": 305, "observed": "No page horizontal overflow. Raw rows 1,000,000 splits before its last zero. Learning rate and Gradient norm wrap to two lines within 45.6 px high targets."},
+    {"width": 320, "height": 844, "theme": "light", "view": "map", "scrollWidth": 305, "observed": "Map and labeled run selector fit the viewport; legend wraps."},
+    {"width": 320, "height": 844, "theme": "light", "view": "groups", "scrollWidth": 305, "observed": "All four labeled group choices present; three leaf scrollWidth readings exceed clientWidth by 1-3 px; no confirmed text loss."},
+    {"width": 768, "height": 1024, "theme": "light", "scrollWidth": 753, "observed": "Compact run selector alongside retained desktop shell navigation; two-column facts and chart fit."}
+  ],
+  "touchTargets390": {
+    "bottomNavigation": {"width": 89.8, "height": 60},
+    "viewTabs": {"height": 44},
+    "changeRun": {"width": 341.6, "height": 70},
+    "openRun": {"width": 73.96, "height": 44},
+    "compare": {"width": 55.35, "height": 44},
+    "metricButtons": {"width": 94.4, "height": 44},
+    "chartSettings": {"width": 44, "height": 44}
+  },
+  "keyboard": {
+    "settingsEscape": "Closes details and returns focus to SUMMARY aria-label Chart settings.",
+    "settingsFocusOutline": "rgb(166, 68, 37) solid 1.6px",
+    "mobileNativeRunSelection": "Selected kazakh-sft-006 through labeled native select. Disclosure closes and focus moves to H2#selected-run-title. Header and source-quality values update."
+  },
+  "settings390": {"openPanelRect": {"left": 16, "right": 359.2, "top": 428.4, "bottom": 711.6, "width": 343.2, "height": 283.2}, "withinViewport": true},
+  "contrast": {
+    "method": "WCAG relative luminance from live computed sRGB colors against live body background; key text sample only.",
+    "lightBackground": "#ffffff",
+    "lightRatios": {"secondaryText": 6.48, "accentLinks": 6.04, "chartValue": 5.35},
+    "darkBackground": "#0b0b0a",
+    "darkRatios": {"secondaryText": 8.92, "accentLinks": 9.28, "chartValue": 8.67}
+  },
+  "reducedMotion": {"runtimePreference": false, "runtimeEmulation": "Not exposed by documented native browser API; not claimed tested.", "sourceEvidence": ["src/styles/theme.css:246 reduce query removes scrolling/transitions", "src/app/App.tsx:46 useReducedMotion"]},
+  "console": {"errorAndWarningLogs": []},
+  "overlay": {"injected": false, "reason": "Documented tab.playwright.evaluate is read-only. No mutable title/script API exposed; skipped mutation and live-server rather than claiming an overlay.", "visibility": "background", "liveServerStarted": false},
+  "cleanup": {"viewportReset": true, "ownTabClosed": true, "existingDevServerKept": true, "critiqueOnlyServersStarted": false},
+  "screenshots": "Fresh screenshots were inspected through native getScreenshot at the listed viewport milestones and remain in the tool transcript. This API did not expose a screenshot-to-file method. No preexisting screenshot is represented as a fresh capture."
+}

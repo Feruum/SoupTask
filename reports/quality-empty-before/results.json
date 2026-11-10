@@ -1,0 +1,417 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config=tmp/quality-empty-playwright.config.mjs"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\tmp\\quality-empty-playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/quality-empty-before/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "quality-empty.spec.ts"
+        ],
+        "timeout": 45000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "quality-empty.spec.ts",
+        "timeout": 45000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4176",
+          "viewport": {
+            "width": 1440,
+            "height": 900
+          },
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4176",
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "url": "http://127.0.0.1:4176",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "quality-empty.spec.ts",
+      "file": "quality-empty.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "clean stale snapshot separates checked data from source age",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15620,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true })\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts:8:93",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts",
+                      "column": 93,
+                      "line": 8
+                    },
+                    "snippet": " \u001b[90m  6 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/data-quality?run=kazakh-sft-020'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m  7 |\u001b[39m   \u001b[36mconst\u001b[39m ledger \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.issue-detail'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'No source data issues'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'8,192 source rows'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Loss, Learning rate and Gradient norm'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'source-age'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Stale source snapshot'\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts",
+                        "column": 93,
+                        "line": 8
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true })\u001b[22m\n\n\n   6 |   await page.goto('/data-quality?run=kazakh-sft-020');\n   7 |   const ledger = page.locator('.issue-detail');\n>  8 |   await expect(ledger.getByRole('heading', { name: 'No source data issues', exact: true })).toBeVisible({ timeout: 15000 });\n     |                                                                                             ^\n   9 |   await expect(ledger).toContainText('8,192 source rows');\n  10 |   await expect(ledger).toContainText('Loss, Learning rate and Gradient norm');\n  11 |   await expect(ledger.getByTestId('source-age')).toHaveText('Stale source snapshot');\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts:8:93"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:51:56.484Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts\\quality-empty-clean-stale--cdeee-hecked-data-from-source-age\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts\\quality-empty-clean-stale--cdeee-hecked-data-from-source-age\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts\\quality-empty-clean-stale--cdeee-hecked-data-from-source-age\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts",
+                    "column": 93,
+                    "line": 8
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5b9658d17df3409cb71e-6aed37675990da2e4be1",
+          "file": "quality-empty.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "filtered miss explains scope and clearing keeps the selected run",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6074,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.issue-detail').getByLabel('Issue locations by recorded step')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.issue-detail').getByLabel('Issue locations by recorded step') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.issue-detail').getByLabel('Issue locations by recorded step')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.issue-detail').getByLabel('Issue locations by recorded step')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.issue-detail').getByLabel('Issue locations by recorded step') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.issue-detail').getByLabel('Issue locations by recorded step')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts:32:71",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts",
+                      "column": 71,
+                      "line": 32
+                    },
+                    "snippet": " \u001b[90m 30 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'NaN'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 31 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'No source data issues'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 32 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Issue locations by recorded step'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 33 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Next findings'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 34 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({ path\u001b[33m:\u001b[39m info\u001b[33m.\u001b[39moutputPath(\u001b[32m'filtered-miss-mobile.png'\u001b[39m)\u001b[33m,\u001b[39m fullPage\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m\u001b[33m,\u001b[39m animations\u001b[33m:\u001b[39m \u001b[32m'disabled'\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 35 |\u001b[39m   \u001b[36mawait\u001b[39m ledger\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Clear issue filters'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts",
+                        "column": 71,
+                        "line": 32
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('.issue-detail').getByLabel('Issue locations by recorded step')\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" locator('.issue-detail').getByLabel('Issue locations by recorded step') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.issue-detail').getByLabel('Issue locations by recorded step')\u001b[22m\n\u001b[2m    14 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n\n  30 |   await expect(ledger).toContainText('NaN');\n  31 |   await expect(ledger.getByRole('heading', { name: 'No source data issues', exact: true })).toHaveCount(0);\n> 32 |   await expect(ledger.getByLabel('Issue locations by recorded step')).toHaveCount(0);\n     |                                                                       ^\n  33 |   await expect(ledger.getByRole('button', { name: 'Next findings', exact: true })).toHaveCount(0);\n  34 |   await page.screenshot({ path: info.outputPath('filtered-miss-mobile.png'), fullPage: true, animations: 'disabled' });\n  35 |   await ledger.getByRole('button', { name: 'Clear issue filters', exact: true }).click();\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts:32:71"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:52:14.824Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts\\quality-empty-filtered-mis-eca67-ring-keeps-the-selected-run\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts\\quality-empty-filtered-mis-eca67-ring-keeps-the-selected-run\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts\\quality-empty-filtered-mis-eca67-ring-keeps-the-selected-run\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts",
+                    "column": 71,
+                    "line": 32
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5b9658d17df3409cb71e-ab70ffe76faffdbd61e2",
+          "file": "quality-empty.spec.ts",
+          "line": 23,
+          "column": 1
+        },
+        {
+          "title": "unfiltered clean run shows the checked scope without stale warning",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 15564,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true })\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts:48:93",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts",
+                      "column": 93,
+                      "line": 48
+                    },
+                    "snippet": " \u001b[90m 46 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/data-quality?run=kazakh-sft-001'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 47 |\u001b[39m   \u001b[36mconst\u001b[39m ledger \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'.issue-detail'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 48 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'No source data issues'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 49 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'8,192 source rows'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 50 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'source-age'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Source snapshot age: under 24 hours'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 51 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Clear issue filters'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts",
+                        "column": 93,
+                        "line": 48
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true })\nExpected: visible\nTimeout: 15000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true }) with timeout 15000ms\u001b[22m\n\u001b[2m  - waiting for locator('.issue-detail').getByRole('heading', { name: 'No source data issues', exact: true })\u001b[22m\n\n\n  46 |   await page.goto('/data-quality?run=kazakh-sft-001');\n  47 |   const ledger = page.locator('.issue-detail');\n> 48 |   await expect(ledger.getByRole('heading', { name: 'No source data issues', exact: true })).toBeVisible({ timeout: 15000 });\n     |                                                                                             ^\n  49 |   await expect(ledger).toContainText('8,192 source rows');\n  50 |   await expect(ledger.getByTestId('source-age')).toHaveText('Source snapshot age: under 24 hours');\n  51 |   await expect(ledger.getByRole('button', { name: 'Clear issue filters', exact: true })).toHaveCount(0);\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts:48:93"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:52:22.532Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts\\quality-empty-unfiltered-c-533c5-scope-without-stale-warning\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts\\quality-empty-unfiltered-c-533c5-scope-without-stale-warning\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts\\quality-empty-unfiltered-c-533c5-scope-without-stale-warning\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts",
+                    "column": 93,
+                    "line": 48
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5b9658d17df3409cb71e-611cdb8200b6c7a8f4e6",
+          "file": "quality-empty.spec.ts",
+          "line": 44,
+          "column": 1
+        },
+        {
+          "title": "a page beyond the updated total offers the first page without claiming a clean run",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6606,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.issue-detail').getByRole('heading', { name: 'No findings on this page', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.issue-detail').getByRole('heading', { name: 'No findings on this page', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.issue-detail').getByRole('heading', { name: 'No findings on this page', exact: true })\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.issue-detail').getByRole('heading', { name: 'No findings on this page', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.issue-detail').getByRole('heading', { name: 'No findings on this page', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.issue-detail').getByRole('heading', { name: 'No findings on this page', exact: true })\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts:75:96",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts",
+                      "column": 96,
+                      "line": 75
+                    },
+                    "snippet": " \u001b[90m 73 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger\u001b[33m.\u001b[39mlocator(\u001b[32m'.issue-ledger-table tbody tr'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m11\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 74 |\u001b[39m   \u001b[36mawait\u001b[39m ledger\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Next findings'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'No findings on this page'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 76 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'No source data issues'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 77 |\u001b[39m   \u001b[36mawait\u001b[39m expect(ledger\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'Issue locations by recorded step'\u001b[39m))\u001b[33m.\u001b[39mtoHaveCount(\u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 78 |\u001b[39m   \u001b[36mawait\u001b[39m ledger\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Go to first page'\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts",
+                        "column": 96,
+                        "line": 75
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('.issue-detail').getByRole('heading', { name: 'No findings on this page', exact: true })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" locator('.issue-detail').getByRole('heading', { name: 'No findings on this page', exact: true }) with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('.issue-detail').getByRole('heading', { name: 'No findings on this page', exact: true })\u001b[22m\n\n\n  73 |   await expect(ledger.locator('.issue-ledger-table tbody tr')).toHaveCount(11, { timeout: 15000 });\n  74 |   await ledger.getByRole('button', { name: 'Next findings', exact: true }).click();\n> 75 |   await expect(ledger.getByRole('heading', { name: 'No findings on this page', exact: true })).toBeVisible();\n     |                                                                                                ^\n  76 |   await expect(ledger.getByRole('heading', { name: 'No source data issues', exact: true })).toHaveCount(0);\n  77 |   await expect(ledger.getByLabel('Issue locations by recorded step')).toHaveCount(0);\n  78 |   await ledger.getByRole('button', { name: 'Go to first page', exact: true }).click();\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts:75:96"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T04:52:40.823Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts\\quality-empty-a-page-beyon-77f73-ithout-claiming-a-clean-run\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts\\quality-empty-a-page-beyon-77f73-ithout-claiming-a-clean-run\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\quality-empty-before\\artifacts\\quality-empty-a-page-beyon-77f73-ithout-claiming-a-clean-run\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\quality-empty.spec.ts",
+                    "column": 96,
+                    "line": 75
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5b9658d17df3409cb71e-a724ab0bbe63e673f689",
+          "file": "quality-empty.spec.ts",
+          "line": 54,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T04:51:54.748Z",
+    "duration": 54132.197,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

@@ -2,11 +2,14 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { RUNS } from '@/data/catalog'
 import type { SourceRow, QualityIssue, Metric } from '@/data/types'
 import { WorkspaceController } from './controller'
+import { createCursorStore } from './cursor-store'
 import { matchesWorkspace } from './protocol'
 import { unpackReply } from './wire'
 import type { WireReply } from './wire'
 import type { StepRange, RunMetadata, WorkspaceView, SourceQuery, IssueQuery, AcceptedIssueQuery, WorkspaceIdentity } from './protocol'
-declare global { interface Window { __soupEvidence?: { rawBufferBytes: number; allocationBytes: number; renderBufferBytes?: number; workspaceEpoch: number; viewSeq: number; acceptedHoverSeq: number; members: string[]; sampler: string; workerTimings: Record<string, { generationMs: number; normalizationMs: number; indexBuildMs: number; indexBufferBytes: number }> } } }
+declare global { interface Window { __soupEvidence?: { rawBufferBytes: number; allocationBytes: number; renderBufferBytes?: number; workspaceEpoch: number; viewSeq: number; acceptedHoverSeq: number; hoverTiming?: { hoverSeq: number; viewSeq: number; requestStartedAt: number; acceptedAt: number }; members: string[]; sampler: string; workerTimings: Record<string, { generationMs: number; normalizationMs: number; indexBuildMs: number; indexBufferBytes: number }> } } }
+export type InspectionQuery = SourceQuery & {runId: string; page: number}
+function sameInspection(a: InspectionQuery | null, b: InspectionQuery): boolean {return a !== null && a.runId === b.runId && a.page === b.page && Object.is(a.step,b.step) && Object.is(a.sourceIndex,b.sourceIndex)}
 export interface WorkspaceState {
   kind: 'loading' | 'ready' | 'refreshing' | 'stale' | 'error' | 'empty'
   selectionKey: string
@@ -14,6 +17,10 @@ export interface WorkspaceState {
   runs: Record<string, RunMetadata>
   view: WorkspaceView | null
   range: StepRange | null
+  inspectionQuery: InspectionQuery | null
+  inspectionRequest: InspectionQuery | null
+  inspectionPending: boolean
+  inspectionError: string | null
   inspection: SourceRow[]
   inspectionTotal: number
   inspectionPage: number
@@ -25,28 +32,29 @@ export interface WorkspaceState {
   issuesQuery: AcceptedIssueQuery | null
   issuesPending: boolean
   issueTotal: number
-  hoverStep: number | null
-  hover: Record<string, SourceRow[]>
 }
 let epoch = 0
 const mode = import.meta.env.VITE_SAMPLER_MODE === 'scan' ? 'scan' : import.meta.env.VITE_SAMPLER_MODE === 'stream' ? 'stream' : 'indexed'
-const initial = (selectionKey: string): WorkspaceState => ({ kind: selectionKey ? 'loading' : 'empty', selectionKey, runs: {}, view: null, range: null, inspection: [], inspectionTotal: 0, inspectionPage: 0, rows: [], rowsPage: null, rowsRunId: null, rowsPending: false, issues: [], issuesQuery: null, issuesPending: false, issueTotal: 0, hoverStep: null, hover: {} })
+const initial = (selectionKey: string): WorkspaceState => ({ kind: selectionKey ? 'loading' : 'empty', selectionKey, runs: {}, view: null, range: null, inspectionQuery: null, inspectionRequest: null, inspectionPending: false, inspectionError: null, inspection: [], inspectionTotal: 0, inspectionPage: 0, rows: [], rowsPage: null, rowsRunId: null, rowsPending: false, issues: [], issuesQuery: null, issuesPending: false, issueTotal: 0 })
 export function useWorkspace(runIds: string[]) {
   const key = runIds.join(',')
   const [stored, setState] = useState<WorkspaceState>(() => initial(key))
   const [attempt, setAttempt] = useState(0)
+  const [cursor] = useState(createCursorStore)
   const controller = useRef<WorkspaceController | null>(null)
   const width = useRef(800)
   const widths = useRef<Partial<Record<Metric, number>>>({})
   const range = useRef<StepRange | null>(null)
   const domain = useRef<StepRange | null>(null)
   const requestedViewSeq = useRef(0)
+  const acceptedView = useRef<WorkspaceView | null>(null)
+  const hoverIntent = useRef<{ step: number; startedAt: number } | null>(null)
   const state = stored.selectionKey === key ? stored : initial(key)
   useEffect(() => {
     // Every activation is new, even an identical revision after A -> B -> A.
     const ids = key ? key.split(',') : []
     const runs = ids.map(id => RUNS.find(run => run.id === id))
-    range.current = null; domain.current = null; requestedViewSeq.current = 0
+    range.current = null; domain.current = null; requestedViewSeq.current = 0; hoverIntent.current = null; acceptedView.current = null; cursor.clear()
     // oxlint-disable-next-line react/set-state-in-effect -- An external Worker workspace must reset its old identity atomically on activation.
     setState(initial(key))
     if (!ids.length) return
@@ -60,13 +68,16 @@ export function useWorkspace(runIds: string[]) {
     let worker: Worker | undefined
     let client: WorkspaceController | undefined
     let activeRequestId: number | null = null
-    const fail = (message: string) => { if (!disposed) setState(current => ({ ...current, kind: current.view ? 'stale' : 'error', message, rowsPending: false, issuesPending: false })) }
+    let inspectOperation: {requestId:number; query:InspectionQuery} | null = null
+    const fail = (message: string) => { if (!disposed) setState(current => ({ ...current, kind: current.view ? 'stale' : 'error', message, rowsPending: false, issuesPending: false, inspectionPending: false, inspectionError: current.inspectionPending ? message : current.inspectionError })) }
     try {
       performance.mark('soup:workspace-start')
       worker = new Worker(new URL('./training.worker.ts', import.meta.url), { type: 'module' })
       const transport = worker
-      client = new WorkspaceController(identity, request => { activeRequestId = request.requestId; transport.postMessage(request) }, reply => {
+      client = new WorkspaceController(identity, request => { activeRequestId = request.requestId; if(request.kind === 'inspect') inspectOperation={requestId:request.requestId,query:{...request.query,runId:request.runId,page:request.query.page??0}}; transport.postMessage(request) }, reply => {
         if (disposed) return
+        const inspected = inspectOperation?.requestId === reply.requestId ? inspectOperation.query : null
+        if(reply.kind === 'error' && reply.operation === 'inspect') {setState(current => inspected && current.inspectionPending && sameInspection(current.inspectionRequest,inspected) ? {...current,inspectionPending:false,inspectionError:reply.message,message:reply.message} : current); return}
         if (reply.kind === 'error') { if (reply.operation === 'activate' || reply.operation === 'view') fail(reply.message); else setState(current => ({ ...current, message: reply.message, ...(reply.operation === 'rows' ? { rowsPending: false } : {}), ...(reply.operation === 'issues' ? { issuesPending: false } : {}) })); return }
         if (reply.kind === 'activated') {
           domain.current = reply.domain; range.current = reply.domain
@@ -76,13 +87,25 @@ export function useWorkspace(runIds: string[]) {
           setState(current => ({ ...current, runs: reply.runs, range: reply.domain, kind: reply.domain ? 'loading' : 'empty' }))
           if (reply.domain) { requestedViewSeq.current++; client?.request({ kind: 'view', range: reply.domain, width: width.current, widths: { ...widths.current }, mode }) }
         } else if (reply.kind === 'view') {
+          acceptedView.current = reply.view
           performance.mark('soup:view-ready'); performance.measure('soup:view', 'soup:view-start', 'soup:view-ready')
           if (window.__soupEvidence?.workspaceEpoch === activation) window.__soupEvidence.viewSeq = reply.viewSeq
-          setState(current => ({ ...current, kind: 'ready', message: undefined, view: reply.view, range: reply.view.range, hoverStep: null, hover: {} }))
-        } else if (reply.kind === 'inspect') { performance.mark('soup:inspector-ready'); setState(current => ({ ...current, inspection: reply.rows, inspectionTotal: reply.total, inspectionPage: reply.page, message: undefined })) }
+          cursor.clear()
+          setState(current => ({ ...current, kind: 'ready', message: undefined, view: reply.view, range: reply.view.range }))
+        } else if (reply.kind === 'inspect') { performance.mark('soup:inspector-ready'); setState(current => inspected && current.inspectionPending && sameInspection(current.inspectionRequest,inspected) ? {...current, inspectionQuery:{...inspected,page:reply.page}, inspectionPending:false, inspectionError:null, inspection: reply.rows, inspectionTotal: reply.total, inspectionPage: reply.page, message: undefined } : current) }
         else if (reply.kind === 'rows') setState(current => ({ ...current, rows: reply.rows, rowsPage: reply.page ?? null, rowsRunId: reply.runId ?? null, rowsPending: false, message: undefined }))
         else if (reply.kind === 'issues') setState(current => ({ ...current, issues: reply.rows, issuesQuery: reply.query && reply.runId ? { ...reply.query, runId: reply.runId, page: reply.query.page ?? 0, pageSize: reply.query.pageSize ?? 50 } : null, issuesPending: false, issueTotal: reply.total, message: undefined }))
-        else if (reply.kind === 'hover') { performance.mark('soup:hover-ready'); performance.measure('soup:hover', 'soup:hover-start', 'soup:hover-ready'); if (window.__soupEvidence?.workspaceEpoch === activation) window.__soupEvidence.acceptedHoverSeq = reply.hoverSeq; setState(current => ({ ...current, hoverStep: reply.step, hover: reply.observations })) }
+        else if (reply.kind === 'hover') {
+          const acceptedAt = performance.now()
+          const intent = hoverIntent.current
+          performance.mark('soup:hover-ready')
+          if (intent?.step === reply.step) performance.measure('soup:hover', { start: intent.startedAt, end: acceptedAt })
+          if (window.__soupEvidence?.workspaceEpoch === activation) {
+            window.__soupEvidence.acceptedHoverSeq = reply.hoverSeq
+            window.__soupEvidence.hoverTiming = intent?.step === reply.step ? { hoverSeq: reply.hoverSeq, viewSeq: reply.viewSeq, requestStartedAt: intent.startedAt, acceptedAt } : undefined
+          }
+          cursor.publish({ view: acceptedView.current?.viewSeq === reply.viewSeq ? acceptedView.current : null, hoverStep: reply.step, hoverSeq: reply.hoverSeq, hover: reply.observations })
+        }
       })
       controller.current = client
       worker.onmessage = (event: MessageEvent<WireReply>) => {
@@ -106,22 +129,37 @@ export function useWorkspace(runIds: string[]) {
       client.request({ kind: 'activate', runs: descriptors, mode })
     } catch { fail('Web Workers are unavailable. Allow Workers and retry this workspace.') }
     return () => { if (window.__soupEvidence?.workspaceEpoch === activation) delete window.__soupEvidence; disposed = true; client?.dispose(); if (controller.current === client) controller.current = null; if (worker) { worker.onmessage = null; worker.onerror = null; worker.onmessageerror = null; worker.terminate() } }
-  }, [key, attempt])
+  }, [key, attempt, cursor])
   const setRange = useCallback((next: StepRange) => {
     if (![next.min, next.max, next.max - next.min].every(Number.isFinite) || next.min > next.max) { setState(current => ({ ...current, message: 'Enter a finite step range with From no greater than To.' })); return }
     if (!domain.current) return
     range.current = next
+    acceptedView.current = null
     requestedViewSeq.current++
     performance.mark('soup:view-start')
-    setState(current => ({ ...current, kind: current.view ? 'refreshing' : 'loading', message: undefined, hoverStep: null, hover: {} }))
+    hoverIntent.current = null
+    cursor.clear()
+    setState(current => ({ ...current, kind: current.view ? 'refreshing' : 'loading', message: undefined }))
     controller.current?.request({ kind: 'view', range: next, width: width.current, widths: { ...widths.current }, mode })
-  }, [])
+  }, [cursor])
   const setWidth = useCallback((next: number) => { if (!Number.isFinite(next) || next <= 0) return; const rounded = Math.max(1, Math.floor(next)); if (rounded === width.current) return; width.current = rounded; if (range.current) setRange(range.current) }, [setRange])
   const setMetricWidth = useCallback((metric: Metric, next: number) => { if (!Number.isFinite(next) || next <= 0) return; const rounded = Math.max(1, Math.floor(next)); if (widths.current[metric] === rounded) return; widths.current[metric] = rounded; if (range.current) setRange(range.current) }, [setRange])
   const zoom = useCallback((factor: number) => { const current = range.current, full = domain.current; if (!current || !full || !Number.isFinite(factor) || factor <= 0) return; const center = current.min + (current.max - current.min) / 2, half = Math.max(0.5, (current.max - current.min) * factor / 2); setRange({ min: Math.max(full.min, center - half), max: Math.min(full.max, center + half) }) }, [setRange])
   const reset = useCallback(() => { if (domain.current) setRange(domain.current) }, [setRange])
   const retry = useCallback(() => setAttempt(value => value + 1), [])
-  const inspect = useCallback((runId: string, query: SourceQuery) => { if (controller.current?.request({ kind: 'inspect', runId, query }) === false) setState(current => ({ ...current, message: 'The view is changing. Retry this source query after it finishes.' })) }, [])
+  const inspect = useCallback((runId: string, query: SourceQuery): boolean => {
+    const submitted: InspectionQuery = {...query,runId,page:query.page??0}
+    const client=controller.current
+    const busyMessage='The view is changing. Retry this source query after it finishes.'
+    if(!client || client.queuedCount>0) {
+      setState(current=>current.inspectionPending ? {...current,message:busyMessage} : {...current,inspectionRequest:submitted,inspectionPending:false,inspectionError:busyMessage,message:busyMessage})
+      return false
+    }
+    setState(current=>({...current,inspectionRequest:submitted,inspectionPending:true,inspectionError:null,message:undefined}))
+    const accepted=client.request({kind:'inspect',runId,query})
+    if(!accepted)setState(current=>({...current,inspectionPending:false,inspectionError:'The view is changing. Retry this source query after it finishes.',message:'The view is changing. Retry this source query after it finishes.'}))
+    return accepted
+  }, [])
   const loadRows = useCallback((runId: string, page: number): boolean => {
     const client = controller.current
     if (!client || client.queuedCount > 0) { setState(current => ({ ...current, message: 'The view is changing. Retry this source page after it finishes.' })); return false }
@@ -139,8 +177,8 @@ export function useWorkspace(runIds: string[]) {
     if (!accepted) setState(current => ({ ...current, issuesPending: false, message: 'The view is changing. Retry this issue page after it finishes.' }))
     return accepted
   }, [])
-  const hover = useCallback((step: number) => { if (range.current) { performance.mark('soup:hover-start'); controller.current?.request({ kind: 'hover', step }) } }, [])
-  return { state, setRange, setWidth, setMetricWidth, zoom, reset, retry, inspect, loadRows, loadIssues, hover }
+  const hover = useCallback((step: number, origin: object | null) => { if (range.current && origin !== null && origin === acceptedView.current) { hoverIntent.current = { step, startedAt: performance.now() }; performance.mark('soup:hover-start'); controller.current?.request({ kind: 'hover', step }) } }, [])
+  return { state, cursor, setRange, setWidth, setMetricWidth, zoom, reset, retry, inspect, loadRows, loadIssues, hover }
 }
 
 

@@ -10,11 +10,12 @@ test('phone dashboard shows the selected run and loss before secondary explorati
   expect(selected!.y).toBeLessThan(450)
   const chart = await page.getByTestId('loss-chart').boundingBox()
   expect(chart!.y).toBeLessThan(850)
+  await page.locator('.calm-navigator > summary').tap()
   await expect(page.getByRole('combobox', { name: 'Selected experiment', exact: true })).toBeVisible()
   await page.getByRole('combobox', { name: 'Selected experiment', exact: true }).selectOption('kazakh-sft-006')
   await expect(page.getByTestId('selected-experiment')).toContainText('kazakh-sft-006')
-  await expect(page.locator('.experiment-map-disclosure')).not.toHaveAttribute('open', '')
-  await page.locator('.experiment-map-disclosure > summary').tap()
+  await expect(page.locator('.calm-navigator')).not.toHaveAttribute('open', '')
+  await page.getByRole('navigation', { name: 'Dashboard views' }).getByRole('link', { name: 'Experiment map', exact: true }).tap()
   await expect(page.getByRole('heading', { name: 'Experiment map', exact: true })).toBeVisible()
 })
 
@@ -96,6 +97,7 @@ test('mobile disclosures and range controls remain keyboard operable', async ({ 
 test('landscape touch keeps phone navigation and the compact reading order', async ({ page }) => {
   await page.setViewportSize({ width: 844, height: 390 })
   await page.goto('/dashboard')
+  await page.locator('.calm-navigator > summary').tap()
   await expect(page.getByRole('combobox', { name: 'Selected experiment', exact: true })).toBeVisible()
   expect(await page.locator('.sidebar nav').evaluate(nav => getComputedStyle(nav).position)).toBe('fixed')
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)

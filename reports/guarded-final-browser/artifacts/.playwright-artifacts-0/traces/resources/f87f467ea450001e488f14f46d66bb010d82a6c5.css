@@ -1,0 +1,24 @@
+._field_enwe4_1 { gap: var(--space-2); min-width: 0px; display: grid; }
+._field_enwe4_1 label { font-size: var(--text-sm); font-weight: 500; line-height: var(--leading-body); letter-spacing: var(--tracking-body); }
+._shell_enwe4_4 { min-height: var(--control-height-md); align-items: center; gap: var(--space-2); border: 1px solid var(--border-strong); border-radius: var(--radius-control); padding: 0 var(--space-3); background: var(--surface); transition: border-color var(--duration-fast) var(--ease-standard); display: flex; }
+@media (hover: hover) and (pointer: fine) {
+  ._shell_enwe4_4:hover:not(:focus-within) { border-color: var(--foreground); }
+}
+._shell_enwe4_4:focus-within { border-color: var(--foreground); }
+._shell_enwe4_4 > svg { color: var(--text-muted); transition: color var(--duration-fast) var(--ease-standard); flex: 0 0 auto; }
+._shell_enwe4_4:focus-within > svg, ._shell_enwe4_4[data-filled="true"] > svg { color: var(--foreground); }
+._input_enwe4_10 { width: 100%; min-width: 0px; color: var(--foreground); font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; font-language-override: inherit; font-size: var(--text-sm); letter-spacing: var(--tracking-body); background: 0px 0px; border: 0px; outline: 0px; }
+._input_enwe4_10:focus-visible { outline: 0px; }
+._input_enwe4_10::placeholder { color: var(--text-muted); }
+._input_enwe4_10::-webkit-search-cancel-button { display: none; }
+._clearSlot_enwe4_14 { flex: 0 0 auto; place-items: center; width: 24px; height: 24px; display: grid; }
+._shell_enwe4_4 button { border-radius: var(--radius-control); width: 24px; height: 24px; color: var(--text-muted); transition: background-color var(--duration-fast) var(--ease-standard), color var(--duration-fast) var(--ease-standard); background: 0px 0px; border: 0px; flex: 0 0 auto; place-items: center; display: grid; }
+@media (hover: hover) and (pointer: fine) {
+  ._shell_enwe4_4 button:hover { background: var(--surface-muted); color: var(--foreground); }
+}
+@media (prefers-reduced-motion: reduce) {
+  ._shell_enwe4_4, ._shell_enwe4_4 > svg, ._shell_enwe4_4 button { transition: none; }
+}
+@media (pointer: coarse) {
+  ._clearSlot_enwe4_14, ._shell_enwe4_4 button { width: 44px; height: 44px; }
+}
