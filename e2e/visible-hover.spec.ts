@@ -65,12 +65,58 @@ test('moving to another original row reuses source text nodes instead of replaci
  await leaf.dispose()
 })
 
-test('native crosshair hides on leave without removing its compositor geometry',async({page})=>{
+test('native crosshair hides on leave without removing its layout geometry',async({page})=>{
  await page.setViewportSize({width:1440,height:900});await page.goto('/runs/kazakh-sft-005')
  await expect(page.locator('.metric-grid')).toHaveAttribute('data-view-ready','true')
  const plot=page.getByTestId('loss-chart'),over=plot.locator('.u-over');await over.scrollIntoViewIfNeeded();const box=await over.boundingBox();expect(box).not.toBeNull()
  await page.mouse.move(box!.x+box!.width*.4,box!.y+box!.height*.5)
- const crosshair=plot.locator('.u-cursor-x');await expect(crosshair).toBeVisible()
- await page.mouse.move(30,30);await expect(crosshair).toBeHidden()
- expect(await crosshair.evaluate(node=>getComputedStyle(node).display),'leaving must not remove native cursor nodes from layout').not.toBe('none')
+ const crosshairs=plot.locator('.u-cursor-x,.u-cursor-y');await expect(crosshairs).toHaveCount(2)
+ for(const cursor of await crosshairs.all())await expect(cursor).toBeVisible()
+ await page.mouse.move(30,30)
+ for(const cursor of await crosshairs.all()){
+  await expect(cursor).toBeHidden()
+  expect(await cursor.evaluate(node=>getComputedStyle(node).display),'leaving must not remove native cursor nodes from layout').not.toBe('none')
+ }
+})
+
+test('source DOM writes wait for the next frame and commit before both paint checks',async({page})=>{
+ await page.setViewportSize({width:1440,height:900});await page.goto('/runs/kazakh-sft-005')
+ await expect(page.locator('.metric-grid')).toHaveAttribute('data-view-ready','true')
+ const plot=page.getByTestId('loss-chart').locator('.u-over');await plot.scrollIntoViewIfNeeded();const box=await plot.boundingBox();expect(box).not.toBeNull()
+ await page.mouse.move(box!.x+box!.width*.3,box!.y+box!.height*.5)
+ const step=page.locator('[data-source-step]').first();await expect(step).not.toBeEmpty()
+ const previous=await step.textContent(),sequence=await page.evaluate(()=>window.__soupEvidence?.acceptedHoverSeq??0),pin=page.getByTestId('cursor-readout-loss').getByRole('button',{name:/^Pin row /}).first(),pinName=await pin.getAttribute('aria-label')
+ await page.evaluate(()=>{
+  const originalRequest=requestAnimationFrame,originalCancel=cancelAnimationFrame,queued=new Map<number,FrameRequestCallback>();let id=100000
+  window.requestAnimationFrame=callback=>{queued.set(++id,callback);return id};window.cancelAnimationFrame=token=>{queued.delete(token)}
+  Object.assign(window,{__releaseSourceFrames:()=>{window.requestAnimationFrame=originalRequest;window.cancelAnimationFrame=originalCancel;for(const callback of queued.values())originalRequest(callback);queued.clear()}})
+ })
+ try{
+  await page.mouse.move(box!.x+box!.width*.6,box!.y+box!.height*.5)
+  await page.waitForFunction(previous=>(window.__soupEvidence?.acceptedHoverSeq??0)>previous,sequence,{polling:20})
+  expect(await step.textContent(),'accepted cursor data should not dirty layout before native pointer-entry reads').toBe(previous)
+  // A click must pin the row actually labelled in the DOM, even while newer data waits.
+  await pin.evaluate(button=>(button as HTMLButtonElement).click())
+ }finally{await page.evaluate(()=>(window as unknown as Window&{__releaseSourceFrames:()=>void}).__releaseSourceFrames())}
+ await expect(step).not.toHaveText(previous!)
+ await expect(page.locator('.pinned-source')).toContainText(`sourceIndex ${pinName!.replace('Pin row ','')}`)
+ await page.waitForFunction(()=>{
+  const frame=performance.getEntriesByName('soup:hover-frame').at(-1) as PerformanceMark|undefined,commit=performance.getEntriesByName('soup:hover-dom-commit').at(-1)
+  return !!frame&&frame.detail.hoverSeq===window.__soupEvidence?.acceptedHoverSeq&&!!commit&&commit.startTime<=frame.detail.firstCheckedAt&&frame.detail.firstCheckedAt<frame.startTime
+ })
+})
+
+test('Pin works when the same source identity reappears after a view reset',async({page})=>{
+ await page.setViewportSize({width:1440,height:900});await page.goto('/runs/kazakh-sft-005')
+ await expect(page.locator('.metric-grid')).toHaveAttribute('data-view-ready','true')
+ for(let round=0;round<2;round++){
+  const before=await page.evaluate(()=>window.__soupEvidence?.viewSeq??0)
+  await page.getByLabel('From step',{exact:true}).fill('500001');await page.getByLabel('To step',{exact:true}).fill('500001');await page.getByRole('button',{name:'Apply range',exact:true}).click()
+  await page.waitForFunction(previous=>(window.__soupEvidence?.viewSeq??0)>previous&&!!document.querySelector('.metric-grid[data-view-ready="true"]'),before)
+  const plot=page.getByTestId('loss-chart').locator('.u-over');await plot.scrollIntoViewIfNeeded();const box=await plot.boundingBox();expect(box).not.toBeNull()
+  await page.mouse.move(box!.x+box!.width*.5,box!.y+box!.height*.5)
+  await expect(page.getByRole('button',{name:'Pin row 500001',exact:true})).toBeVisible()
+ }
+ await page.getByRole('button',{name:'Pin row 500001',exact:true}).click()
+ await expect(page.getByTestId('pinned-loss')).toHaveText('100')
 })

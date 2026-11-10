@@ -4,11 +4,12 @@ test('long cursor sessions bound application timing entries without losing curre
  await page.goto('/runs/kazakh-sft-005')
  await page.waitForFunction(()=>window.__soupEvidence?.hoverCacheTargets&&document.querySelectorAll('.plot-host[data-view-ready="true"]').length===3)
  const over=page.getByTestId('loss-chart').locator('.u-over');await over.scrollIntoViewIfNeeded()
- const result=await over.evaluate(element=>{
+ await over.evaluate(element=>{
   const rect=element.getBoundingClientRect()
   for(let i=0;i<400;i++)element.dispatchEvent(new PointerEvent('pointermove',{bubbles:true,pointerType:'mouse',clientX:rect.left+rect.width*(i%2?.55:.45),clientY:rect.top+rect.height/2}))
-  return Object.fromEntries(['soup:hover-start','soup:hover-ready','soup:hover','soup:hover-dom-commit','soup:hover-draw'].map(name=>[name,performance.getEntriesByName(name).length]))
  })
+ await page.waitForFunction(()=>{const mark=performance.getEntriesByName('soup:hover-frame').at(-1) as PerformanceMark|undefined;return mark?.detail.hoverSeq===window.__soupEvidence?.acceptedHoverSeq})
+ const result=await page.evaluate(()=>Object.fromEntries(['soup:hover-start','soup:hover-ready','soup:hover','soup:hover-dom-commit','soup:hover-draw'].map(name=>[name,performance.getEntriesByName(name).length])))
  expect(Object.values(result).every(count=>count>0)).toBe(true)
  for(const [name,count]of Object.entries(result))expect(count,`${name} must retain at most128 recent entries`).toBeLessThanOrEqual(128)
  await expect(page.getByTestId('cursor-readout-loss').locator('[data-source-metric="loss"]').first()).not.toBeEmpty()

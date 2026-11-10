@@ -35,9 +35,9 @@ export const ComparisonCursorReadout=memo(function ComparisonCursorReadout({work
    const runLabel=()=>{const cell=element('th'),label=element('div',`${styles.sharedRun} tooltip-series`),dot=element('i','tooltip-dot');cell.scope='row';dot.style.background=`var(${colorTokens[slots[id]??index]})`;label.append(dot,element('strong',undefined,id));cell.append(label);return cell}
    const rows=Array.from({length:2},(_,rowIndex)=>{
     const row=element('tr'),step=element('td'),values=METRICS.map(metric=>{const cell=element('td');cell.dataset.sourceMetric=metric;return cell}),distance=element('td'),source=element('td'),pin=element('button','text-link','Pin row')
-    step.dataset.sourceStep='true';distance.dataset.sourceDistance='true';pin.type='button';pin.onclick=()=>{const current=accepted.current,cursor=cursorForView(store.getSnapshot(),current.view),raw=cursor.hover[id]?.[rowIndex],run=current.runs[id]?.run;if(raw&&run)onPin({id,revision:run.revision,row:raw})}
+    step.dataset.sourceStep='true';distance.dataset.sourceDistance='true';pin.type='button';pin.onclick=()=>{const shown=rows[rowIndex].source,run=accepted.current.runs[id]?.run;if(shown&&run?.revision===shown.revision)onPin({id,revision:shown.revision,row:shown.row})}
     source.append(pin);row.append(runLabel(),step,...values,distance,source);body.append(row)
-    return {row,step,values,distance,pin,key:'',delta:NaN}
+    return {row,step,values,distance,pin,key:'',delta:NaN,source:null as {revision:string;row:SourceRow}|null}
    })
    const empty=element('tr'),placeholder=element('td',styles.placeholder);placeholder.dataset.sourceMissing='true';placeholder.colSpan=6;empty.append(runLabel(),placeholder)
    const group=element('tr'),groupCell=element('td'),count=element('span'),link=element('a','text-link','Inspect full source group');groupCell.colSpan=7
@@ -47,7 +47,7 @@ export const ComparisonCursorReadout=memo(function ComparisonCursorReadout({work
   })
   const note=element('p',styles.sharedNote,'Scroll for more rows and metrics. Groups show the first 2 observations.')
   root.replaceChildren(title,viewport,note)
-  let cancelPaint:(()=>void)|undefined
+  let cancelPaint:(()=>void)|undefined,flushRaf=0
   const update=()=>{
    cancelPaint?.();cancelPaint=undefined
    const current=accepted.current,cursor=cursorForView(store.getSnapshot(),current.view),active=cursor.hoverStep!==null
@@ -57,8 +57,9 @@ export const ComparisonCursorReadout=memo(function ComparisonCursorReadout({work
     if(!rows.length&&member.emptyActive===active)continue
     member.emptyActive=rows.length?null:active
     member.rows.forEach((nodes,index)=>{
-     const row=rows[index];hidden(nodes.row,!row);if(!row)return
+     const row=rows[index];hidden(nodes.row,!row);if(!row){nodes.source=null;return}
      const key=`${member.id}:${current.runs[member.id].run.revision}:${row.sourceIndex}`,changed=nodes.key!==key,delta=Math.abs(row.step-cursor.hoverStep!)
+     if(changed||!nodes.source)nodes.source={revision:current.runs[member.id].run.revision,row}
      if(changed){
       nodes.key=key;attribute(nodes.row,'data-source-identity',key);text(nodes.step,formatStep(row.step));text(nodes.pin,`Pin #${row.sourceIndex}`);attribute(nodes.pin,'aria-label',`Pin row ${row.sourceIndex}`)
       METRICS.forEach((metric,index)=>{text(nodes.values[index],formatValue(row[metric],metric==='lr'));attribute(nodes.values[index],'title',`Exact source value ${exact(row[metric])}`)})
@@ -72,9 +73,13 @@ export const ComparisonCursorReadout=memo(function ComparisonCursorReadout({work
    toggle(root,'chart-hover-value',active);attribute(root,'data-hover-seq',active?String(cursor.hoverSeq):null)
    cancelPaint=recordHoverPaint(current.view?.viewSeq??0,cursor.hoverSeq,cursor.hoverStep)
   }
-  const unarm=store.beforePublish(next=>{const view=accepted.current.view,visible=cursorForView(next,view);beginHoverPaint(view?.viewSeq??0,visible.hoverSeq,visible.hoverStep)})
-  refresh.current=update;update();const unsubscribe=store.subscribe(update)
-  return()=>{if(refresh.current===update)refresh.current=null;unarm();unsubscribe();cancelPaint?.();root.replaceChildren()}
+  const enqueue=()=>{if(!flushRaf)flushRaf=requestAnimationFrame(()=>{flushRaf=0;update()})}
+  // Register the DOM-write callback before the first paint-check callback. Native
+  // pointer-entry geometry reads finish before these writes; both existing RAF
+  // checks still observe committed, current source values.
+  const unarm=store.beforePublish(next=>{enqueue();const view=accepted.current.view,visible=cursorForView(next,view);beginHoverPaint(view?.viewSeq??0,visible.hoverSeq,visible.hoverStep)})
+  refresh.current=update;update();const unsubscribe=store.subscribe(enqueue)
+  return()=>{if(refresh.current===update)refresh.current=null;unarm();unsubscribe();cancelAnimationFrame(flushRaf);cancelPaint?.();root.replaceChildren()}
  },[store,identity,comparison,slots,colorTokens,onPin,navigate])
  return <section className={`${styles.rail} ${styles.sharedRail}`} aria-label={comparison?'Compared source values':'Original source values'} data-testid={comparison?'comparison-cursor-readout':'cursor-readout-loss'} data-reserved="true" data-members={ids.length}><div className={styles.content} ref={host}/></section>
 })
