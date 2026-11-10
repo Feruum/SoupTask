@@ -3,10 +3,13 @@ export type HoverVisibility={visible:boolean;cells:{text:string;rect:Bounds;clip
 
 /** Read-only, after DOM commit. A rendered box alone does not establish readable values. */
 export function inspectHoverVisibility(root:HTMLElement):HoverVisibility{
- type Style={position:string;contain:string;overflowX:string;overflowY:string;visible:boolean}
+ type Style={position:string;contain:string;overflowX:string;overflowY:string}
  const clips=new Map<Element,Bounds>(),styles=new Map<Element,Style>(),visibility=new Map<Element,boolean>()
- const style=(node:Element)=>{let css=styles.get(node);if(!css){const computed=getComputedStyle(node);css={position:computed.position,contain:computed.contain,overflowX:computed.overflowX,overflowY:computed.overflowY,visible:computed.visibility==='visible'&&computed.display!=='none'&&Number(computed.opacity)!==0};styles.set(node,css)}return css}
- const visible=(node:Element):boolean=>{const cached=visibility.get(node);if(cached!==undefined)return cached;const value=style(node).visible&&(!node.parentElement||visible(node.parentElement));visibility.set(node,value);return value}
+ const style=(node:Element)=>{let css=styles.get(node);if(!css){const computed=getComputedStyle(node);css={position:computed.position,contain:computed.contain,overflowX:computed.overflowX,overflowY:computed.overflowY};styles.set(node,css)}return css}
+ const fallbackVisible=(node:Element):boolean=>{const cached=visibility.get(node);if(cached!==undefined)return cached;const css=getComputedStyle(node),value=css.visibility==='visible'&&css.display!=='none'&&Number(css.opacity)!==0&&(!node.parentElement||fallbackVisible(node.parentElement));visibility.set(node,value);return value}
+ // Native style/ancestor checks avoid repeated JS property walks. This API does
+ // NOT establish viewport/clipping/occlusion: retain all geometric checks below.
+ const visible=(node:Element)=>typeof node.checkVisibility==='function'?node.checkVisibility({opacityProperty:true,visibilityProperty:true,contentVisibilityAuto:true}):fallbackVisible(node)
  const clip=(node:Element):Bounds=>{
   const cached=clips.get(node);if(cached)return cached
   const css=style(node),parent=css.position==='fixed'?null:node.parentElement

@@ -35,7 +35,7 @@ for(const comparison of [false,true])test(`${comparison?'Compare':'Run'} exposes
  await page.screenshot({path:info.outputPath('visible-source-values.png')})
 })
 
-for(const fault of ['offscreen','clipped','occluded'])test(`visible-frame acknowledgement rejects ${fault} source cells`,async({page})=>{
+for(const fault of ['offscreen','clipped','occluded','transparent','hidden'])test(`visible-frame acknowledgement rejects ${fault} source cells`,async({page})=>{
  await page.setViewportSize({width:1440,height:900})
  await page.goto('/runs/kazakh-sft-005')
  await expect(page.locator('.metric-grid')).toHaveAttribute('data-view-ready','true')
@@ -45,9 +45,24 @@ for(const fault of ['offscreen','clipped','occluded'])test(`visible-frame acknow
   const rail=document.querySelector<HTMLElement>('[data-testid="cursor-readout-loss"]')!
   if(kind==='offscreen')rail.style.transform='translateY(100vh)'
   else if(kind==='clipped'){const content=rail.firstElementChild as HTMLElement;content.style.width='40px';content.style.overflow='hidden'}
+  else if(kind==='transparent')rail.style.opacity='0'
+  else if(kind==='hidden')rail.style.visibility='hidden'
   else{const overlay=document.createElement('div');overlay.id='visibility-fault';const bounds=rail.getBoundingClientRect();Object.assign(overlay.style,{position:'fixed',zIndex:'99',left:`${bounds.left}px`,top:`${bounds.top}px`,width:`${bounds.width}px`,height:`${bounds.height}px`,background:'black'});document.body.append(overlay)}
  },fault)
  await page.mouse.move(box!.x+box!.width*.4,box!.y+box!.height*.5)
+ await page.waitForFunction(()=>performance.getEntriesByName('soup:hover-not-visible').some(entry=>(entry as PerformanceMark).detail.hoverSeq===window.__soupEvidence?.acceptedHoverSeq))
+ expect(await page.evaluate(()=>performance.getEntriesByName('soup:hover-frame').some(entry=>(entry as PerformanceMark).detail.hoverSeq===window.__soupEvidence?.acceptedHoverSeq))).toBe(false)
+})
+
+test('visibility checks preserve the computed-style fallback when native API is unavailable',async({page})=>{
+ await page.addInitScript(()=>Object.defineProperty(Element.prototype,'checkVisibility',{value:undefined,configurable:true}))
+ await page.setViewportSize({width:1440,height:900});await page.goto('/runs/kazakh-sft-005')
+ await expect(page.locator('.metric-grid')).toHaveAttribute('data-view-ready','true')
+ const plot=page.getByTestId('loss-chart').locator('.u-over');await plot.scrollIntoViewIfNeeded();const box=await plot.boundingBox();expect(box).not.toBeNull()
+ await page.mouse.move(box!.x+box!.width*.3,box!.y+box!.height*.5)
+ await page.waitForFunction(()=>{const frame=performance.getEntriesByName('soup:hover-frame').at(-1) as PerformanceMark|undefined;return frame?.detail.hoverSeq===window.__soupEvidence?.acceptedHoverSeq})
+ await page.getByTestId('cursor-readout-loss').evaluate(node=>{(node as HTMLElement).style.opacity='0'})
+ await page.mouse.move(box!.x+box!.width*.6,box!.y+box!.height*.5)
  await page.waitForFunction(()=>performance.getEntriesByName('soup:hover-not-visible').some(entry=>(entry as PerformanceMark).detail.hoverSeq===window.__soupEvidence?.acceptedHoverSeq))
  expect(await page.evaluate(()=>performance.getEntriesByName('soup:hover-frame').some(entry=>(entry as PerformanceMark).detail.hoverSeq===window.__soupEvidence?.acceptedHoverSeq))).toBe(false)
 })
