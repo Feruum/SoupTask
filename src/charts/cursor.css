@@ -1,0 +1,8 @@
+/* Keep native crosshair layers laid out across pointer entry/leave. uPlot's
+   default display:none destroys this geometry on every entry. Drag/select and
+   native cursor positioning remain owned by uPlot. */
+.plot-host .u-cursor-x.u-off,
+.plot-host .u-cursor-y.u-off {
+  display: block;
+  visibility: hidden;
+}

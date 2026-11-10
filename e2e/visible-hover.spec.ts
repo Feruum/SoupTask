@@ -64,3 +64,13 @@ test('moving to another original row reuses source text nodes instead of replaci
  expect(await step.evaluate((node,old)=>node.firstChild===old,leaf),'changed source text should mutate its existing Text node').toBe(true)
  await leaf.dispose()
 })
+
+test('native crosshair hides on leave without removing its compositor geometry',async({page})=>{
+ await page.setViewportSize({width:1440,height:900});await page.goto('/runs/kazakh-sft-005')
+ await expect(page.locator('.metric-grid')).toHaveAttribute('data-view-ready','true')
+ const plot=page.getByTestId('loss-chart'),over=plot.locator('.u-over');await over.scrollIntoViewIfNeeded();const box=await over.boundingBox();expect(box).not.toBeNull()
+ await page.mouse.move(box!.x+box!.width*.4,box!.y+box!.height*.5)
+ const crosshair=plot.locator('.u-cursor-x');await expect(crosshair).toBeVisible()
+ await page.mouse.move(30,30);await expect(crosshair).toBeHidden()
+ expect(await crosshair.evaluate(node=>getComputedStyle(node).display),'leaving must not remove native cursor nodes from layout').not.toBe('none')
+})

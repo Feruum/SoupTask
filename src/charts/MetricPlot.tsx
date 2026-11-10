@@ -7,6 +7,7 @@ import { useEffect, useLayoutEffect, useEffectEvent, useRef, useState } from 're
 import uPlot from 'uplot';
 import { scientificAxisLabels } from './axis-format';
 import { gestureRange } from './gestures';
+import './cursor.css';
 export interface ViewRange {
   min: number;
   max: number;
