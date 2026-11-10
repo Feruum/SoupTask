@@ -187,6 +187,7 @@ export function MetricPlot({
       resizeFrame = 0,
       wheelFrame = 0,
       disposeInput = () => {};
+    const nativeMouseups = new Map<HTMLElement, uPlot.Cursor.MouseListener>();
     const styles = getComputedStyle(document.documentElement),
       token = (name: string) => styles.getPropertyValue(name).trim();
     cursorPalette.current={foreground:token('--foreground'),colors:new Map([...new Set(['--chart-line','--chart-teal','--chart-ochre','--chart-purple',...latest.current.map(s=>s.colorToken)])].map(name=>[name,token(name)]))};
@@ -320,6 +321,16 @@ export function MetricPlot({
       instance.current = chart;
       cursorInViewport.current=true;
       const active = chart;
+      const bindMouseup = active.cursor.bind?.mouseup;
+      if (bindMouseup) active.cursor.bind = {
+        ...active.cursor.bind,
+        mouseup: (...args: Parameters<uPlot.Cursor.MouseListenerFactory>) => {
+          // Forward the library's actual arguments (including its untyped onlyTarget flag).
+          const listener: ReturnType<uPlot.Cursor.MouseListenerFactory> = Reflect.apply(bindMouseup, undefined, args);
+          if (listener) nativeMouseups.set(args[1], listener);
+          return listener;
+        }
+      };
       let lastPointer: Pick<PointerEvent, 'clientX' | 'clientY'> | null = null;
       let lastRequest = '';
       const pointermove = (event: Pick<PointerEvent, 'clientX' | 'clientY'> & Partial<Pick<PointerEvent, 'pointerType'|'offsetX'|'offsetY'|'target'>>) => {
@@ -441,6 +452,8 @@ export function MetricPlot({
       cancelAnimationFrame(resizeFrame);
       cancelAnimationFrame(wheelFrame);
       disposeInput();
+      for (const [target, listener] of nativeMouseups) target.removeEventListener('mouseup', listener);
+      nativeMouseups.clear();
       observer?.disconnect();
       visibilityObserver?.disconnect();
       requeryPointer.current = null;

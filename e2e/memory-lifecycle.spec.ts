@@ -30,3 +30,26 @@ test('unmounted plots release owned Canvas bitmaps even while an external refere
  await expect(page.getByTestId('loss-chart').locator('.uplot')).toHaveCount(1)
  await page.waitForFunction(()=>document.querySelectorAll('.plot-host[data-view-ready="true"]').length===3)
 })
+
+test('leaving during a chart drag removes the native document mouseup listener',async({page})=>{
+ const cdp=await page.context().newCDPSession(page)
+ const mouseups=async()=>{
+  const {result}=await cdp.send('Runtime.evaluate',{expression:'document',objectGroup:'listener-audit'})
+  const {listeners}=await cdp.send('DOMDebugger.getEventListeners',{objectId:result.objectId!})
+  const count=listeners.filter(listener=>listener.type==='mouseup').length
+  for(const listener of listeners)for(const ref of [listener.handler,listener.originalHandler])if(ref?.objectId)await cdp.send('Runtime.releaseObject',{objectId:ref.objectId})
+  await cdp.send('Runtime.releaseObjectGroup',{objectGroup:'listener-audit'})
+  return count
+ }
+ await page.goto('/runs/kazakh-sft-005')
+ await page.waitForFunction(()=>document.querySelectorAll('.plot-host[data-view-ready="true"]').length===3)
+ const before=await mouseups(),over=page.getByTestId('loss-chart').locator('.u-over')
+ await over.scrollIntoViewIfNeeded();const box=await over.boundingBox();expect(box).not.toBeNull()
+ await page.mouse.move(box!.x+box!.width*.4,box!.y+box!.height*.5);await page.mouse.down()
+ expect(await mouseups()).toBeGreaterThan(before)
+ try{
+  await page.evaluate(()=>{history.pushState(null,'','/interrupted-drag-baseline');dispatchEvent(new PopStateEvent('popstate'))})
+  await expect(page.locator('h1')).toHaveText('Not found')
+  expect(await mouseups(),'retired uPlot must not remain rooted through document mouseup').toBe(before)
+ }finally{await page.mouse.up();await cdp.detach()}
+})
