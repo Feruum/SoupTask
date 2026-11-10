@@ -1,5 +1,8 @@
+import {cursorForView, type createCursorStore} from '@/worker/cursor-store';
+import type {Metric} from '@/data/types';
+import type {WorkspaceView} from '@/worker/protocol';
 /* oxlint-disable react/set-state-in-effect -- External Canvas exceptions are reported as visible React error state. */
-import { useEffect, useEffectEvent, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useEffectEvent, useRef, useState } from 'react';
 import uPlot from 'uplot';
 import { scientificAxisLabels } from './axis-format';
 import { gestureRange } from './gestures';
@@ -35,14 +38,19 @@ interface Props {
   theme: 'dark' | 'light';
   range: ViewRange;
   domain?: ViewRange;
+  yBounds?: ViewRange;
   focusedRun?: string | null;
   cursorPoints?: readonly CursorPoint[];
+  cursorStore?: ReturnType<typeof createCursorStore>;
+  cursorMetric?: Metric;
+  cursorVisible?: boolean;
   series?: readonly PlotSeriesConfig[];
   height?: number;
   scientific?: boolean;
   testId?: string;
   viewToken?: object;
   onCursor?: (step: number | null, origin: object | null) => void;
+  onCursorGrid?: (steps:number[],origin:object|null)=>void;
   onRange?: (range: ViewRange) => void;
   onWidth?: (width: number) => void;
 }
@@ -52,14 +60,17 @@ export function MetricPlot({
   theme,
   range,
   domain,
+  yBounds,
   focusedRun,
   cursorPoints = EMPTY_POINTS,
+  cursorStore, cursorMetric, cursorVisible = true,
   series = DEFAULT_SERIES,
   height = 300,
   scientific = false,
   testId = 'loss-chart',
   viewToken,
   onCursor,
+  onCursorGrid,
   onRange,
   onWidth
 }: Props) {
@@ -72,8 +83,13 @@ export function MetricPlot({
     gesture = useRef(range),
     fullDomain = useRef(domain ?? range);
   const [error, setError] = useState<string | null>(null);
+  const cursorInk = useRef<{x:number;y:number;r:number}[]>([]);
+  const cursorInViewport = useRef(true);
+  const cursorPalette = useRef({foreground:'',colors:new Map<string,string>()});
   const min = range.min,
     max = range.max,
+    sourceYMin=yBounds?.min,
+    sourceYMax=yBounds?.max,
     domainMin = domain?.min ?? min,
     domainMax = domain?.max ?? max;
   useEffect(() => {
@@ -90,6 +106,7 @@ export function MetricPlot({
     };
   }, [min, max, domainMin, domainMax]);
   const cursor = useEffectEvent((step: number | null) => onCursor?.(step, appliedView.current)),
+    cursorGrid = useEffectEvent((steps:number[])=>onCursorGrid?.(steps,appliedView.current)),
     select = useEffectEvent((next: ViewRange) => onRange?.(next)),
     widthChanged = useEffectEvent((width: number) => onWidth?.(width)),
     fail = useEffectEvent(() => setError('Chart rendering failed. Exact source values remain available below.'));
@@ -110,46 +127,67 @@ export function MetricPlot({
       canvas = overlay.current,
       element = host.current;
     if (!u || !canvas || !element) return;
-    if (canvas.width !== u.ctx.canvas.width) canvas.width = u.ctx.canvas.width;
-    if (canvas.height !== u.ctx.canvas.height) canvas.height = u.ctx.canvas.height;
-    canvas.style.width = `${u.width}px`;
-    canvas.style.height = `${u.height}px`;
+    if(!cursorInViewport.current){
+      if(cursorInk.current.length){const ctx=canvas.getContext('2d');if(ctx)for(const p of cursorInk.current)ctx.clearRect(Math.floor(p.x-p.r),Math.floor(p.y-p.r),Math.ceil(p.r*2+2),Math.ceil(p.r*2+2));cursorInk.current=[];}
+      if(element.dataset.cursorDeferred!=='true')element.dataset.cursorDeferred='true';
+      if(element.dataset.cursorPointCount!=='0')element.dataset.cursorPointCount='0';
+      return;
+    }
+    if (canvas.width !== u.ctx.canvas.width) {canvas.width = u.ctx.canvas.width;cursorInk.current=[];}
+    if (canvas.height !== u.ctx.canvas.height) {canvas.height = u.ctx.canvas.height;cursorInk.current=[];}
+    if(canvas.style.width!==`${u.width}px`)canvas.style.width = `${u.width}px`;
+    if(canvas.style.height!==`${u.height}px`)canvas.style.height = `${u.height}px`;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    element.dataset.cursorPointCount = String(cursorPoints.length);
+    for(const p of cursorInk.current)ctx.clearRect(Math.floor(p.x-p.r),Math.floor(p.y-p.r),Math.ceil(p.r*2+2),Math.ceil(p.r*2+2));
+    cursorInk.current=[];
+    const live = cursorStore ? cursorForView(cursorStore.getSnapshot(), appliedView.current as WorkspaceView | null) : null;
+    const points = cursorStore ? cursorStore.getPointerActive() && cursorMetric && live && live.view === viewToken ? latest.current.flatMap(series => {
+      const row = live.hover[series.label]?.[0];
+      return row && Number.isFinite(row[cursorMetric]) ? [{runId:series.label,step:row.step,value:row[cursorMetric]}] : [];
+    }) : [] : cursorPoints;
+    if(element.dataset.cursorPointCount!==String(points.length))element.dataset.cursorPointCount = String(points.length);
+    if(element.dataset.cursorDeferred!=='false')element.dataset.cursorDeferred='false';
     if (import.meta.env.VITE_RENDER_FAULT === 'suppress') return;
-    const styles = getComputedStyle(document.documentElement);
     ctx.save();
     ctx.beginPath();
     ctx.rect(u.bbox.left, u.bbox.top, u.bbox.width, u.bbox.height);
     ctx.clip();
-    for (const point of cursorPoints) {
+    for (const point of points) {
       const series = latest.current.find(s => s.label === point.runId);
       if (!series || !Number.isFinite(point.value)) continue;
       ctx.globalAlpha = focusedRun && focusedRun !== point.runId ? .2 : 1;
-      ctx.fillStyle = styles.getPropertyValue(series.colorToken).trim();
-      ctx.strokeStyle = styles.getPropertyValue('--foreground').trim();
+      ctx.fillStyle = cursorPalette.current.colors.get(series.colorToken)??'#fff';
+      ctx.strokeStyle = cursorPalette.current.foreground;
       ctx.lineWidth = 1.5 * devicePixelRatio;
       ctx.beginPath();
-      ctx.arc(u.valToPos(point.step, 'x', true), u.valToPos(point.value, 'y', true), 5 * devicePixelRatio, 0, Math.PI * 2);
+      const x=u.valToPos(point.step,'x',true),y=u.valToPos(point.value,'y',true);
+      ctx.arc(x,y, 5 * devicePixelRatio, 0, Math.PI * 2);
       ctx.fill();
       ctx.stroke();
+      cursorInk.current.push({x,y,r:8*devicePixelRatio});
     }
     ctx.restore();
     performance.mark('soup:hover-draw');
   });
+  useLayoutEffect(() => {
+    if (!cursorStore) return;
+    const unsubscribe=cursorStore.subscribe(() => drawCursor()),visibility=cursorStore.subscribeVisibility(()=>drawCursor());
+    return()=>{unsubscribe();visibility()};
+  }, [cursorStore]);
   const count = series.length;
   useEffect(() => {
     const element = host.current;
     if (!element) return;
     let chart: uPlot | undefined,
       observer: ResizeObserver | undefined,
+      visibilityObserver: IntersectionObserver | undefined,
       resizeFrame = 0,
       wheelFrame = 0,
       disposeInput = () => {};
     const styles = getComputedStyle(document.documentElement),
       token = (name: string) => styles.getPropertyValue(name).trim();
+    cursorPalette.current={foreground:token('--foreground'),colors:new Map([...new Set(['--chart-line','--chart-teal','--chart-ochre','--chart-purple',...latest.current.map(s=>s.colorToken)])].map(name=>[name,token(name)]))};
     try {
       const suppress = import.meta.env.VITE_RENDER_FAULT === 'suppress';
       chart = new uPlot({
@@ -177,7 +215,7 @@ export function MetricPlot({
             stroke: token('--chart-grid')
           },
           font: '11px Inter Variable',
-          size: scientific ? 66 : 52,
+          size: 66,
           ...(scientific ? {
             values: (_u: uPlot, ticks: number[]) => scientificAxisLabels(ticks)
           } : {})
@@ -200,6 +238,9 @@ export function MetricPlot({
           show: false
         },
         cursor: {
+          // The hidden uPlot legend/hover dots need no reduced-series scan through foreign alignment slots.
+          // Authoritative numeric-step observations and visible markers come from the guarded Worker cursor.
+          dataIdx: () => null,
           drag: {
             x: true,
             y: false,
@@ -275,20 +316,23 @@ export function MetricPlot({
         length: count
       }, () => [])], element);
       instance.current = chart;
+      cursorInViewport.current=true;
       const active = chart;
       let lastPointer: Pick<PointerEvent, 'clientX' | 'clientY'> | null = null;
       let lastRequest = '';
-      const pointermove = (event: Pick<PointerEvent, 'clientX' | 'clientY'> & Partial<Pick<PointerEvent, 'pointerType'>>) => {
+      const pointermove = (event: Pick<PointerEvent, 'clientX' | 'clientY'> & Partial<Pick<PointerEvent, 'pointerType'|'offsetX'|'offsetY'|'target'>>) => {
         if (event.pointerType && event.pointerType !== 'mouse') return;
         lastPointer = {
           clientX: event.clientX,
           clientY: event.clientY
         };
-          const rect = active.over.getBoundingClientRect(),
-            left = event.clientX - rect.left,
-            top = event.clientY - rect.top;
-          if (!rect.width || !rect.height || left < 0 || left > rect.width || top < 0 || top > rect.height) return;
-          let step = active.posToVal(left, 'x'),
+          const native=event.target===active.over&&typeof event.offsetX==='number'&&typeof event.offsetY==='number';
+          const rect=native?null:active.over.getBoundingClientRect();
+          const left=native?event.offsetX!:event.clientX-rect!.left,top=native?event.offsetY!:event.clientY-rect!.top;
+          const width=rect?rect.width:active.bbox.width/devicePixelRatio,height=rect?rect.height:active.bbox.height/devicePixelRatio;
+          if (!width || !height || left < 0 || left > width || top < 0 || top > height) return;
+          // Cursor resolution follows physical display pixels; source values themselves are never rounded.
+          let step = active.posToVal(Math.round(left*devicePixelRatio)/devicePixelRatio, 'x'),
             distance = 6;
           for (const s of latest.current) for (const point of s.markers ?? []) {
             const d = Math.hypot(active.valToPos(point.step, 'x') - left, active.valToPos(point.value, 'y') - top);
@@ -346,6 +390,11 @@ export function MetricPlot({
         passive: false
       });
       active.over.addEventListener('pointermove', pointermove);
+      // On supporting secure origins, raw input arrives before frame-coalesced pointermove.
+      // lastRequest deduplicates the later event; the controller still bounds all work.
+      const rawInput = 'onpointerrawupdate' in window;
+      const rawMove = (event:Event) => { if (event instanceof PointerEvent) pointermove(event); };
+      if (rawInput) active.over.addEventListener('pointerrawupdate', rawMove, {passive:true});
       active.over.addEventListener('pointerleave', pointerleave);
       active.over.addEventListener('pointerdown', pointerdown);
       active.over.addEventListener('pointerup', pointerup);
@@ -353,6 +402,7 @@ export function MetricPlot({
       disposeInput = () => {
         active.over.removeEventListener('wheel', wheel);
         active.over.removeEventListener('pointermove', pointermove);
+        if (rawInput) active.over.removeEventListener('pointerrawupdate', rawMove);
         active.over.removeEventListener('pointerleave', pointerleave);
         active.over.removeEventListener('pointerdown', pointerdown);
         active.over.removeEventListener('pointerup', pointerup);
@@ -372,6 +422,16 @@ export function MetricPlot({
         });
       });
       observer.observe(element);
+      if(typeof IntersectionObserver!=='undefined'){
+        visibilityObserver=new IntersectionObserver(entries=>{
+          if(instance.current!==active)return;
+          const entry=entries.at(-1);if(!entry)return;
+          cursorInViewport.current=entry.isIntersecting;
+          // Reveal only after repainting the latest accepted source snapshot; no stale dots flash on scroll.
+          drawCursor();
+        });
+        visibilityObserver.observe(element);
+      }
     } catch {
       fail();
     }
@@ -380,6 +440,7 @@ export function MetricPlot({
       cancelAnimationFrame(wheelFrame);
       disposeInput();
       observer?.disconnect();
+      visibilityObserver?.disconnect();
       requeryPointer.current = null;
       instance.current = null;
       appliedView.current = null;
@@ -399,8 +460,9 @@ export function MetricPlot({
           min: min - padding,
           max: max + padding
         });
-        let low = Infinity,
-          high = -Infinity;
+        let low = sourceYMin??Infinity,
+          high = sourceYMax??-Infinity;
+        if(!Number.isFinite(low)||!Number.isFinite(high)){
         for (let i = 1; i < data.length; i++) for (const value of data[i] ?? []) if (typeof value === 'number' && Number.isFinite(value)) {
           low = Math.min(low, value);
           high = Math.max(high, value);
@@ -408,6 +470,7 @@ export function MetricPlot({
         for (const s of series) for (const point of s.markers ?? []) {
           low = Math.min(low, point.value);
           high = Math.max(high, point.value);
+        }
         }
         if (Number.isFinite(low)) {
           const pad = (high - low) * .08 || Math.max(.01, Math.abs(low) * .05);
@@ -419,12 +482,18 @@ export function MetricPlot({
       });
       // setData invalidates paths, setScale invalidates scales, and batch commits both immediately.
       appliedView.current = viewToken ?? null;
+      const columns=Math.floor(u.over.clientWidth*devicePixelRatio),stride=Math.max(1,Math.ceil((columns+1)/2048)),targets:number[]=[];
+      if(columns>0){
+        for(let pixel=0;pixel<=columns;pixel+=stride)targets.push(u.posToVal(pixel/devicePixelRatio,'x'));
+        for(const s of latest.current)for(const point of (s.markers??[]).slice(0,64))targets.push(point.step);
+        cursorGrid([...new Set(targets)].filter(Number.isFinite).slice(0,2304));
+      }
       // Reconcile a stationary physical pointer once after a new view/resize commits. Hover replies never enter this effect.
       requeryPointer.current?.();
     } catch {
       fail();
     }
-  }, [data, min, max, series, theme, count, height, scientific, viewToken]);
+  }, [data, min, max, sourceYMin, sourceYMax, series, theme, count, height, scientific, viewToken]);
   useEffect(() => {
     const u = instance.current;
     if (!u) return;
@@ -432,7 +501,7 @@ export function MetricPlot({
   }, [focusedRun, series, theme, count]);
   useEffect(() => {
     drawCursor();
-  }, [cursorPoints, focusedRun, min, max, theme, count]);
+  }, [cursorPoints, cursorVisible, focusedRun, min, max, theme, count]);
   return <>{error && <p role="alert" className="inline-error">{error}</p>}<div className="plot-stack"><div ref={host} className="plot-host" style={{
         minHeight: height
       }} data-testid={testId} data-focused-run={focusedRun ?? ''} data-range-min={min} data-range-max={max} aria-hidden="true" /><canvas className="cursor-overlay" ref={overlay} aria-hidden="true" /></div></>;

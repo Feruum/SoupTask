@@ -1,4 +1,8 @@
 .rail {
+  --source-rows: 1;
+  --source-wide-rows: 1;
+  contain: layout style paint;
+  transform: translateZ(0);
   container-type: inline-size;
   min-width: 0;
   margin-top: 12px;
@@ -8,12 +12,17 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-control);
 }
-.rail > .content { margin: 0; padding: 0; border: 0; background: none; }
+.rail[data-members="2"] { --source-rows: 2; }
+.rail[data-members="3"] { --source-rows: 3; --source-wide-rows: 2; }
+.rail[data-members="4"] { --source-rows: 4; --source-wide-rows: 2; }
+.rail > .content { contain: strict; height: calc(28px + var(--source-rows) * 130px + (var(--source-rows) - 1) * 12px); margin: 0; padding: 0; border: 0; background: none; }
 .title { min-height: 20px; margin: 0 0 8px; line-height: 20px; }
 .grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
 .grid > .slot { display: block; min-width: 0; margin: 0; }
 .run { display: flex; align-items: center; gap: 6px; min-height: 20px; margin-bottom: 6px; overflow-wrap: anywhere; }
 .observations {
+  contain: strict;
+  content-visibility: auto;
   height: 104px;
   min-width: 0;
   overflow-y: auto;
@@ -22,7 +31,7 @@
   overscroll-behavior: contain;
 }
 .observation { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; align-items: start; min-height: 44px; padding-bottom: 8px; }
-.rail .facts { display: flex; flex-wrap: wrap; align-items: start; gap: 2px 6px; min-width: 0; line-height: 18px; }
+.rail .facts { display: block; min-width: 0; line-height: 18px; overflow-wrap: anywhere; }
 .rail .facts > span { width: auto; padding: 0; overflow-wrap: anywhere; }
 .observation button { min-height: 44px; max-width: 100%; font-size: 12px; white-space: normal; }
 .rail .placeholder { margin: 0; color: var(--text-secondary); line-height: 18px; }
@@ -31,4 +40,19 @@
 .note { max-width: 75ch; margin-top: 8px; line-height: 1.5; overflow-wrap: anywhere; }
 .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; }
 .actions a { display: inline-flex; align-items: center; min-height: 44px; }
-@container (min-width: 540px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.rail.sharedRail > .content { height: calc(116px + var(--source-rows) * 60px); }
+.sharedRail .title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sharedNote { margin: 6px 0 0; color: var(--text-secondary); font-size: 11px; line-height: 16px; }
+.sharedViewport { contain: strict; content-visibility: auto; height: calc(44px + var(--source-rows) * 60px); overflow: auto; overscroll-behavior: contain; scrollbar-gutter: stable; }
+.sharedTable { table-layout: fixed; width: 100%; min-width: 784px; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 12px; }
+.sharedTable th, .sharedTable td { padding: 8px; height: 60px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: middle; white-space: nowrap; }
+.sharedTable thead th { position: sticky; top: 0; z-index: 1; height: 44px; background: var(--surface-muted); color: var(--text-secondary); font-size: 11px; }
+.sharedTable [hidden] { display: none; }
+.sharedTable .sharedRun { display: flex; flex-wrap: nowrap; align-items: center; gap: 6px; margin: 0; }
+.sharedTable .placeholder { white-space: normal; }
+.sharedTable button { min-width: 92px; width: 92px; }
+.caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+@container (min-width: 540px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .rail > .content { height: calc(28px + var(--source-wide-rows) * 130px + (var(--source-wide-rows) - 1) * 12px); }
+}

@@ -1,6 +1,7 @@
 /// <reference types="vite/client" />
 import { matchesWorkspace, priority } from './protocol'
 import type { Operation, WorkerReply, WorkerRequest, WorkspaceIdentity } from './protocol'
+import type {SourceRow} from '@/data/types'
 /** Dispatch is bounded before postMessage, not inside an already flooded Worker. */
 export class WorkspaceController {
   private inFlight: WorkerRequest | null = null
@@ -10,6 +11,7 @@ export class WorkspaceController {
   private hoverSeq = 0
   private inspectSeq = 0
   private disposed = false
+  private acceptedViewSeq = -1
   readonly identity: WorkspaceIdentity
   private send: (request: WorkerRequest) => void
   private accept: (reply: WorkerReply) => void
@@ -37,14 +39,21 @@ export class WorkspaceController {
     if (this.disposed || !matchesWorkspace(this.identity, reply.identity)) return
     if (!this.inFlight || reply.requestId !== this.inFlight.requestId) return
     const operation = this.inFlight.kind
-    const current = operation === 'view' ? reply.viewSeq === this.viewSeq : operation === 'hover' ? reply.viewSeq === this.viewSeq && reply.hoverSeq === this.hoverSeq : operation === 'activate' || reply.inspectSeq === this.inspectSeq
+    const current = operation === 'view' || operation === 'prepare-hover' ? reply.viewSeq === this.viewSeq : operation === 'hover' ? reply.viewSeq === this.viewSeq && reply.hoverSeq === this.hoverSeq : operation === 'activate' || reply.inspectSeq === this.inspectSeq
     this.inFlight = null
     const next = this.pending
     this.pending = null
     if (next) this.dispatch(next)
     // Deliberately broken test-only variant proves the race assertions detect stale commits.
     const acceptStale = import.meta.env.MODE === 'test' && import.meta.env.VITE_ASYNC_FAULT === 'accept-stale'
+    if(current&&reply.kind==='view')this.acceptedViewSeq=reply.viewSeq
     if (current || acceptStale) this.accept(reply)
+  }
+  hoverFromCache(scope:WorkspaceIdentity,viewSeq:number,step:number,observations:Record<string,SourceRow[]>):boolean {
+    if(this.disposed||this.inFlight||this.pending||!matchesWorkspace(scope,this.identity)||viewSeq!==this.viewSeq||viewSeq!==this.acceptedViewSeq||!Number.isFinite(step))return false
+    if(Object.keys(observations).length!==this.identity.members.length||this.identity.members.some(member=>!Object.hasOwn(observations,member.runId)))return false
+    this.accept({kind:'hover',identity:this.identity,requestId:++this.requestId,viewSeq:this.viewSeq,hoverSeq:++this.hoverSeq,inspectSeq:this.inspectSeq,step,observations})
+    return true
   }
   dispose(): void { this.disposed = true; this.pending = null; this.inFlight = null }
   get queuedCount(): number { return Number(!!this.inFlight) + Number(!!this.pending) }

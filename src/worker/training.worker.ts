@@ -1,6 +1,8 @@
 /// <reference lib="webworker" />
+import {nearestRows,prepareHoverSamples} from './hover-samples'
+
 import { generateRun } from '@/data/generator'
-import { normalize, sampleView, inspectSource, inspectStep, inspectGroup, sourcePage, issuePage, allocationBytes, lowerBound, upperBound } from '@/core/engine'
+import { normalize, sampleView, inspectSource, inspectGroup, sourcePage, issuePage, allocationBytes } from '@/core/engine'
 import { METRICS } from '@/data/catalog'
 import { buildRunIndex, sampleIndexed } from '@/sampling/block-index'
 import type { RunBlockIndex } from '@/sampling/block-index'
@@ -12,19 +14,7 @@ const scope = self as unknown as DedicatedWorkerGlobalScope
 const stores = new Map<string, NormalizedRun>()
 const indexes = new Map<string, RunBlockIndex>()
 let active: WorkspaceIdentity | null = null
-let hoverRange = { min: 0, max: 1 }, hoverWidth = 800
-function nearestRows(n: NormalizedRun, target: number) {
-  if (!Number.isFinite(target) || !n.x.length || target < hoverRange.min || target > hoverRange.max || target < n.x[0] || target > n.x[n.x.length - 1]) return []
-  const begin = lowerBound(n.x, hoverRange.min), end = upperBound(n.x, hoverRange.max)
-  if (begin === end) return []
-  let low = 0, high = n.x.length; while (low < high) { const mid = (low + high) >>> 1; if (n.x[mid] < target) low = mid + 1; else high = mid }
-  if (n.x[low] === target) return inspectStep(n, target)
-  if (low > 0 && low < n.x.length && n.cadence !== undefined && n.x[low] - n.x[low - 1] > n.cadence) return []
-  const nearest = low === n.x.length ? low - 1 : low > 0 && target - n.x[low - 1] <= n.x[low] - target ? low - 1 : low
-  const index = Math.max(begin, Math.min(end - 1, nearest))
-  if (Math.abs(n.x[index] - target) > (hoverRange.max - hoverRange.min) / hoverWidth * 8) return []
-  return inspectStep(n, n.x[index])
-}
+let hoverRange = { min: 0, max: 1 }, hoverWidth = 800, renderedViewSeq = -1
 scope.onmessage = (event: MessageEvent<WorkerRequest>) => {
   const request = event.data
   const correlation = { identity: request.identity, requestId: request.requestId, viewSeq: request.viewSeq, hoverSeq: request.hoverSeq, inspectSeq: request.inspectSeq }
@@ -35,7 +25,7 @@ scope.onmessage = (event: MessageEvent<WorkerRequest>) => {
   try {
     if (request.kind === 'activate') {
       if (request.runs.length > 4 || new Set(request.runs.map(run => run.id)).size !== request.runs.length) throw new Error('Choose at most four distinct runs.')
-      stores.clear(); indexes.clear(); active = request.identity
+      stores.clear(); indexes.clear(); active = request.identity; renderedViewSeq=-1
       const runs: Record<string, RunMetadata> = {}
       let min = Infinity, max = -Infinity
       for (const run of request.runs) {
@@ -62,9 +52,13 @@ scope.onmessage = (event: MessageEvent<WorkerRequest>) => {
         if (request.mode === 'indexed' && !index) throw new Error('The exact index was not activated. Retry this workspace.')
         return [id, Object.fromEntries(METRICS.map(metric => [metric, request.mode === 'indexed' && index ? sampleIndexed(normalized, index, metric, request.range.min, request.range.max, request.widths?.[metric] ?? request.width) : sampleView(normalized, metric, request.range.min, request.range.max, request.widths?.[metric] ?? request.width, request.mode === 'scan' ? 'scan' : 'stream')]))]
       })) as Extract<WorkerPayload, { kind: 'view' }>['view']['runs']
+      renderedViewSeq=request.viewSeq
       reply({ kind: 'view', view: { viewSeq: request.viewSeq, range: request.range, runs } })
+    } else if(request.kind==='prepare-hover') {
+      if(request.viewSeq!==renderedViewSeq)throw Error('Cursor preparation belongs to another view')
+      reply({kind:'hover-prepared',...prepareHoverSamples(stores,request.steps,hoverRange,hoverWidth)})
     } else if (request.kind === 'hover') {
-      reply({ kind: 'hover', step: request.step, observations: Object.fromEntries([...stores].map(([id, normalized]) => [id, nearestRows(normalized, request.step)])) })
+      reply({ kind: 'hover', step: request.step, observations: Object.fromEntries([...stores].map(([id, normalized]) => [id, nearestRows(normalized, request.step, hoverRange, hoverWidth)])) })
     } else {
       const normalized = stores.get(request.runId)
       if (!normalized) throw new Error('This run is not in the active workspace.')

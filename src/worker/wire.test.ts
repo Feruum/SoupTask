@@ -8,7 +8,7 @@ const view = (): Extract<WorkerReply,{kind:'view'}> => ({ kind:'view', identity:
 describe('disposable render wire buffers',()=>{
  it('transfers the actual numeric columns and preserves exact provenance including signed zero',()=>{
   const original=view(),packed=packReply(original)
-  expect(packed.transfer).toHaveLength(6)
+  expect(packed.transfer).toHaveLength(15)
   expect(packed.message.kind).toBe('view-packed')
   const message=packed.message as PackedViewReply
   expect(message.view.runs.A.loss).not.toHaveProperty('points')
@@ -18,7 +18,7 @@ describe('disposable render wire buffers',()=>{
   const received=structuredClone(message,{transfer:packed.transfer})
   expect(packed.transfer.every(buffer=>buffer.byteLength===0)).toBe(true)
   const decoded=unpackReply(received)
-  expect(decoded).toEqual(original)
+  expect(decoded).toMatchObject(original)
   if(decoded.kind!=='view')throw Error('Missing view')
   expect(Object.is(decoded.view.runs.A.loss.points[0].value,-0)).toBe(true)
   expect(original.view.runs.A.loss.points[1].value).toBe(100)

@@ -6,8 +6,8 @@ import { createCursorStore } from './cursor-store'
 import { matchesWorkspace } from './protocol'
 import { unpackReply } from './wire'
 import type { WireReply } from './wire'
-import type { StepRange, RunMetadata, WorkspaceView, SourceQuery, IssueQuery, AcceptedIssueQuery, WorkspaceIdentity } from './protocol'
-declare global { interface Window { __soupEvidence?: { rawBufferBytes: number; allocationBytes: number; renderBufferBytes?: number; workspaceEpoch: number; viewSeq: number; acceptedHoverSeq: number; hoverTiming?: { hoverSeq: number; viewSeq: number; requestStartedAt: number; acceptedAt: number }; members: string[]; sampler: string; workerTimings: Record<string, { generationMs: number; normalizationMs: number; indexBuildMs: number; indexBufferBytes: number }> } } }
+import type { StepRange, RunMetadata, WorkspaceView, SourceQuery, IssueQuery, AcceptedIssueQuery, WorkspaceIdentity, HoverSamples } from './protocol'
+declare global { interface Window { __soupEvidence?: { rawBufferBytes: number; hoverCacheTargets?:number; hoverCacheRows?:number; hoverCacheHits?:number; hoverCacheMisses?:number; hoverCacheError?:string; allocationBytes: number; renderBufferBytes?: number; workspaceEpoch: number; viewSeq: number; acceptedHoverSeq: number; hoverTiming?: { hoverSeq: number; viewSeq: number; requestStartedAt: number; acceptedAt: number }; members: string[]; sampler: string; workerTimings: Record<string, { generationMs: number; normalizationMs: number; indexBuildMs: number; indexBufferBytes: number }> } } }
 export type InspectionQuery = SourceQuery & {runId: string; page: number}
 function sameInspection(a: InspectionQuery | null, b: InspectionQuery): boolean {return a !== null && a.runId === b.runId && a.page === b.page && Object.is(a.step,b.step) && Object.is(a.sourceIndex,b.sourceIndex)}
 export interface WorkspaceState {
@@ -48,13 +48,17 @@ export function useWorkspace(runIds: string[]) {
   const domain = useRef<StepRange | null>(null)
   const requestedViewSeq = useRef(0)
   const acceptedView = useRef<WorkspaceView | null>(null)
+  const sourceCache=useRef<{view:WorkspaceView;identity:WorkspaceIdentity;samples:HoverSamples}|null>(null)
+  const sourceGrids=useRef(new Map<Metric,number[]>())
+  const sourceCacheQueued=useRef(false)
+  const sourceCacheRequested=useRef<{view:WorkspaceView;steps:number[]}|null>(null)
   const hoverIntent = useRef<{ step: number; startedAt: number } | null>(null)
   const state = stored.selectionKey === key ? stored : initial(key)
   useEffect(() => {
     // Every activation is new, even an identical revision after A -> B -> A.
     const ids = key ? key.split(',') : []
     const runs = ids.map(id => RUNS.find(run => run.id === id))
-    range.current = null; domain.current = null; requestedViewSeq.current = 0; hoverIntent.current = null; acceptedView.current = null; cursor.clear()
+    range.current = null; domain.current = null; requestedViewSeq.current = 0; hoverIntent.current = null; acceptedView.current = null; sourceCache.current=null; sourceGrids.current.clear(); sourceCacheRequested.current=null; cursor.clear()
     // oxlint-disable-next-line react/set-state-in-effect -- An external Worker workspace must reset its old identity atomically on activation.
     setState(initial(key))
     if (!ids.length) return
@@ -78,6 +82,7 @@ export function useWorkspace(runIds: string[]) {
         if (disposed) return
         const inspected = inspectOperation?.requestId === reply.requestId ? inspectOperation.query : null
         if(reply.kind === 'error' && reply.operation === 'inspect') {setState(current => inspected && current.inspectionPending && sameInspection(current.inspectionRequest,inspected) ? {...current,inspectionPending:false,inspectionError:reply.message,message:reply.message} : current); return}
+        if(reply.kind==='error'&&reply.operation==='prepare-hover'){if(window.__soupEvidence?.workspaceEpoch===activation)window.__soupEvidence.hoverCacheError=reply.message;return}
         if (reply.kind === 'error') { if (reply.operation === 'activate' || reply.operation === 'view') fail(reply.message); else setState(current => ({ ...current, message: reply.message, ...(reply.operation === 'rows' ? { rowsPending: false } : {}), ...(reply.operation === 'issues' ? { issuesPending: false } : {}) })); return }
         if (reply.kind === 'activated') {
           domain.current = reply.domain; range.current = reply.domain
@@ -87,11 +92,31 @@ export function useWorkspace(runIds: string[]) {
           setState(current => ({ ...current, runs: reply.runs, range: reply.domain, kind: reply.domain ? 'loading' : 'empty' }))
           if (reply.domain) { requestedViewSeq.current++; client?.request({ kind: 'view', range: reply.domain, width: width.current, widths: { ...widths.current }, mode }) }
         } else if (reply.kind === 'view') {
+          sourceCache.current=null;sourceGrids.current.clear();sourceCacheRequested.current=null
+          if(window.__soupEvidence?.workspaceEpoch===activation){window.__soupEvidence.hoverCacheTargets=0;window.__soupEvidence.hoverCacheRows=0}
           acceptedView.current = reply.view
           performance.mark('soup:view-ready'); performance.measure('soup:view', 'soup:view-start', 'soup:view-ready')
           if (window.__soupEvidence?.workspaceEpoch === activation) window.__soupEvidence.viewSeq = reply.viewSeq
           cursor.clear()
           setState(current => ({ ...current, kind: 'ready', message: undefined, view: reply.view, range: reply.view.range }))
+        } else if(reply.kind==='hover-prepared') {
+          const view=acceptedView.current
+          if(!view||view.viewSeq!==reply.viewSeq)return
+          try{
+            if(!(reply.samples instanceof Map)||reply.samples.size>8192||!Number.isSafeInteger(reply.rowCount)||reply.rowCount<0||reply.rowCount>16384)throw Error('Invalid source cache bounds')
+            const seen=new Set<SourceRow>(),arrays=new Set<SourceRow[]>()
+            for(const [step,record]of reply.samples){
+              if(!Number.isFinite(step)||Object.keys(record).length!==descriptors.length)throw Error('Invalid source cache membership')
+              for(const run of descriptors){
+                const rows=record[run.id];if(!Array.isArray(rows)||rows.length>50)throw Error('Invalid source cache page')
+                if(arrays.has(rows))continue;arrays.add(rows)
+                for(const row of rows){if(seen.has(row))continue;if(!Number.isSafeInteger(row.sourceIndex)||row.sourceIndex<0||row.sourceIndex>=run.rowCount||!Number.isFinite(row.step)||!['loss','lr','grad_norm'].every(metric=>typeof row[metric as Metric]==='number'))throw Error('Invalid source cache row');seen.add(row)}
+              }
+            }
+            if(seen.size!==reply.rowCount)throw Error('Source cache row accounting mismatch')
+            sourceCache.current={view,identity:reply.identity,samples:reply.samples}
+            if(window.__soupEvidence?.workspaceEpoch===activation){window.__soupEvidence.hoverCacheTargets=reply.samples.size;window.__soupEvidence.hoverCacheRows=reply.rowCount}
+          }catch(error){sourceCache.current=null;if(window.__soupEvidence?.workspaceEpoch===activation)window.__soupEvidence.hoverCacheError=String(error)}
         } else if (reply.kind === 'inspect') { performance.mark('soup:inspector-ready'); setState(current => inspected && current.inspectionPending && sameInspection(current.inspectionRequest,inspected) ? {...current, inspectionQuery:{...inspected,page:reply.page}, inspectionPending:false, inspectionError:null, inspection: reply.rows, inspectionTotal: reply.total, inspectionPage: reply.page, message: undefined } : current) }
         else if (reply.kind === 'rows') setState(current => ({ ...current, rows: reply.rows, rowsPage: reply.page ?? null, rowsRunId: reply.runId ?? null, rowsPending: false, message: undefined }))
         else if (reply.kind === 'issues') setState(current => ({ ...current, issues: reply.rows, issuesQuery: reply.query && reply.runId ? { ...reply.query, runId: reply.runId, page: reply.query.page ?? 0, pageSize: reply.query.pageSize ?? 50 } : null, issuesPending: false, issueTotal: reply.total, message: undefined }))
@@ -134,7 +159,7 @@ export function useWorkspace(runIds: string[]) {
     if (![next.min, next.max, next.max - next.min].every(Number.isFinite) || next.min > next.max) { setState(current => ({ ...current, message: 'Enter a finite step range with From no greater than To.' })); return }
     if (!domain.current) return
     range.current = next
-    acceptedView.current = null
+    acceptedView.current = null; sourceCache.current=null; sourceGrids.current.clear(); sourceCacheRequested.current=null
     requestedViewSeq.current++
     performance.mark('soup:view-start')
     hoverIntent.current = null
@@ -177,8 +202,32 @@ export function useWorkspace(runIds: string[]) {
     if (!accepted) setState(current => ({ ...current, issuesPending: false, message: 'The view is changing. Retry this issue page after it finishes.' }))
     return accepted
   }, [])
-  const hover = useCallback((step: number, origin: object | null) => { if (range.current && origin !== null && origin === acceptedView.current) { hoverIntent.current = { step, startedAt: performance.now() }; performance.mark('soup:hover-start'); controller.current?.request({ kind: 'hover', step }) } }, [])
-  return { state, cursor, setRange, setWidth, setMetricWidth, zoom, reset, retry, inspect, loadRows, loadIssues, hover }
+  const prepareHover=useCallback((metric:Metric,steps:number[],origin:object|null)=>{
+    if(!origin||origin!==acceptedView.current||steps.length>2304)return
+    sourceGrids.current.set(metric,steps)
+    if(sourceCacheQueued.current)return
+    sourceCacheQueued.current=true
+    queueMicrotask(()=>{
+      sourceCacheQueued.current=false
+      const view=acceptedView.current;if(!view||origin!==view)return
+      const targets=[...new Set([...sourceGrids.current.values()].flat())].slice(0,8192)
+      const previous=sourceCacheRequested.current
+      if(previous?.view===view&&previous.steps.length===targets.length&&previous.steps.every((step,index)=>step===targets[index]))return
+      if(controller.current?.request({kind:'prepare-hover',steps:targets}))sourceCacheRequested.current={view,steps:targets}
+    })
+  },[])
+  const hover = useCallback((step:number,origin:object|null)=>{
+    if(!range.current||origin===null||origin!==acceptedView.current)return
+    hoverIntent.current={step,startedAt:performance.now()};performance.mark('soup:hover-start')
+    const cache=sourceCache.current
+    if(cache?.view===origin&&cache.samples.has(step)&&controller.current?.hoverFromCache(cache.identity,cache.view.viewSeq,step,cache.samples.get(step)!)){
+      if(window.__soupEvidence)window.__soupEvidence.hoverCacheHits=(window.__soupEvidence.hoverCacheHits??0)+1
+      return
+    }
+    if(window.__soupEvidence)window.__soupEvidence.hoverCacheMisses=(window.__soupEvidence.hoverCacheMisses??0)+1
+    controller.current?.request({kind:'hover',step})
+  },[])
+  return { state, cursor, setRange, setWidth, setMetricWidth, zoom, reset, retry, inspect, loadRows, loadIssues, hover, prepareHover }
 }
 
 

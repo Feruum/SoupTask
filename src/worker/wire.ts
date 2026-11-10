@@ -1,6 +1,8 @@
 import { METRICS } from '@/data/catalog'
 import type { Metric, MetricRenderView, RenderPoint } from '@/data/types'
 import type { WorkerReply, WorkspaceView } from './protocol'
+import {packAlignment,unpackAlignment} from './aligned-wire'
+import type {PackedAlignment} from './aligned-wire'
 
 type ViewReply = Extract<WorkerReply, { kind: 'view' }>
 export type PackedMetricView = Omit<MetricRenderView, 'points' | 'conflicts'> & {
@@ -11,7 +13,7 @@ export type PackedMetricView = Omit<MetricRenderView, 'points' | 'conflicts'> & 
 export type PackedViewReply = Omit<ViewReply, 'kind' | 'view'> & {
   kind: 'view-packed'
   renderBufferBytes: number
-  view: Omit<WorkspaceView, 'runs'> & { runs: Record<string, Record<Metric, PackedMetricView>> }
+  view: Omit<WorkspaceView, 'runs'|'alignment'> & { runs: Record<string, Record<Metric, PackedMetricView>>; alignment:Record<Metric,PackedAlignment> }
 }
 export type WireReply = Exclude<WorkerReply, { kind: 'view' }> | PackedViewReply
 const MAX_POINTS = 65536
@@ -33,8 +35,9 @@ export function packReply(reply: WorkerReply): { message: WireReply; transfer: A
     transfer.push(pointColumns.buffer as ArrayBuffer, conflictColumns.buffer as ArrayBuffer)
     return [metric, { ...header, pointColumns, conflictColumns }]
   }))])) as PackedViewReply['view']['runs']
+  const alignment=Object.fromEntries(METRICS.map(metric=>{const packed=packAlignment(reply.identity.members.map(member=>reply.view.runs[member.runId][metric]));transfer.push(...packed.transfer);return[metric,packed.data]})) as Record<Metric,PackedAlignment>
   const renderBufferBytes = transfer.reduce((sum, buffer) => sum + buffer.byteLength, 0)
-  return { message: { ...reply, kind: 'view-packed', renderBufferBytes, view: { ...reply.view, runs } }, transfer }
+  return { message: { ...reply, kind: 'view-packed', renderBufferBytes, view: { ...reply.view, runs, alignment } }, transfer }
 }
 function unpackPoints(columns: Float64Array, min: number, max: number, ordered: boolean): RenderPoint[] {
   if (!(columns instanceof Float64Array) || columns.length % 4 || columns.length > MAX_POINTS * 4) throw new TypeError('Invalid render columns')
@@ -67,7 +70,8 @@ export function unpackReply(message: WireReply): WorkerReply {
     renderBufferBytes += pointColumns.byteLength + conflictColumns.byteLength
     return [metric, { ...header, points, conflicts }]
   }))])) as WorkspaceView['runs']
+  const alignment=Object.fromEntries(METRICS.map(metric=>{const decoded=unpackAlignment(message.view.alignment?.[metric],members.map(id=>runs[id][metric]));renderBufferBytes+=decoded.bytes;return[metric,decoded.data]})) as NonNullable<WorkspaceView['alignment']>
   if (renderBufferBytes !== message.renderBufferBytes) throw new TypeError('Render buffer byte count mismatch')
   const { renderBufferBytes: _bytes, ...header } = message
-  return { ...header, kind: 'view', view: { ...message.view, runs } }
+  return { ...header, kind: 'view', view: { ...message.view, runs, alignment } }
 }

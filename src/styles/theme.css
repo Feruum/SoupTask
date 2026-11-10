@@ -1,4 +1,5 @@
-@import 'tailwindcss';
+@import 'tailwindcss' source(none);
+@source '../';
 
 /* Soup brand values live only in these semantic-token definitions. */
 :root {
@@ -420,4 +421,8 @@ input[type="checkbox"] { width:18px;height:18px;accent-color:var(--accent-strong
   .compare-selection-chips button { min-height: 44px; }
 }
 .radial-selector {display:grid;gap:16px}
-.plot-stack { position:relative;min-width:0; }.cursor-overlay {position:absolute;left:0;top:0;pointer-events:none;z-index:5}
+.plot-stack { position:relative;min-width:0;contain:layout paint;transform:translateZ(0); }.cursor-overlay {position:absolute;left:0;top:0;pointer-events:none;z-index:5;transform:translateZ(0)}
+
+/* Measured hot controls own a bounded compositor layer; their color transitions must not repaint every plot. */
+.range-toolbar { transform: translateZ(0); }
+.range-toolbar button, .range-toolbar input { transition: none; }

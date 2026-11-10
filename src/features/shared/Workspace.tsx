@@ -9,13 +9,14 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { Button } from '@/components/arc/button/button';
 import { Input } from '@/components/arc/input/input';
 import { MetricPlot } from '@/charts/MetricPlot';
-import { useHoverPaint } from '@/charts/use-hover-paint';
+import { SourceCursorReadout } from '@/charts/SourceCursorReadout';
+import { ComparisonCursorReadout } from '@/charts/ComparisonCursorReadout';
 import { alignedRenderData as align } from '@/charts/comparison-data';
 import type { PlotSeriesConfig } from '@/charts/MetricPlot';
 import type { Metric, MetricRenderView, QualityCounts, SourceRow } from '@/data/types';
 import { formatStep, formatValue } from '@/data/format';
 import { useWorkspace } from '@/worker/use-workspace';
-import { useCursorState, cursorForView, type CursorState } from '@/worker/cursor-store';
+import { cursorForView, type CursorState } from '@/worker/cursor-store';
 export type Workspace = ReturnType<typeof useWorkspace>;
 export const METRICS: Metric[] = ['loss', 'lr', 'grad_norm'];
 export const NAMES: Record<Metric, string> = {
@@ -79,19 +80,11 @@ export function RangeControls({
         min,
         max
       });
-    }}><Input label="From step" type="number" required step="any" value={from} onChange={e => setFrom(e.target.value)} /><Input label="To step" type="number" required step="any" value={to} onChange={e => setTo(e.target.value)} /><Button type="submit" variant="secondary">Apply range</Button></form><div className="chart-actions"><Button variant="secondary" onClick={() => workspace.zoom(.5)}>Zoom in</Button><Button variant="secondary" onClick={() => workspace.zoom(2)}>Zoom out</Button><Button variant="ghost" onClick={workspace.reset}>Reset view</Button></div>{error && <p role="alert">{error}</p>}<p data-testid="visible-range">Step {formatStep(r.min)} to {formatStep(r.max)}</p></div></ResponsiveDisclosure>;
+    }}><Input label="From step" type="number" required step="any" value={from} onChange={e => setFrom(e.target.value)} /><Input label="To step" type="number" required step="any" value={to} onChange={e => setTo(e.target.value)} /><Button pressMotion={false} type="submit" variant="secondary">Apply range</Button></form><div className="chart-actions"><Button pressMotion={false} variant="secondary" onClick={() => workspace.zoom(.5)}>Zoom in</Button><Button pressMotion={false} variant="secondary" onClick={() => workspace.zoom(2)}>Zoom out</Button><Button pressMotion={false} variant="ghost" onClick={workspace.reset}>Reset view</Button></div>{error && <p role="alert">{error}</p>}<p data-testid="visible-range">Step {formatStep(r.min)} to {formatStep(r.max)}</p></div></ResponsiveDisclosure>;
 }
 function markersFor(view: MetricRenderView) {
-  const counts = new Map<number, number>();
-  for (const p of view.points) counts.set(p.segment, (counts.get(p.segment) ?? 0) + 1);
-  const endpoints = new Set<number>();
-  for (let i = 0; i < view.points.length; i++) {
-    if (i === 0 || view.points[i - 1].segment !== view.points[i].segment) endpoints.add(i);
-    if (i === view.points.length - 1 || view.points[i + 1].segment !== view.points[i].segment) endpoints.add(i);
-  }
-  const min = view.points.findIndex(p => p.value === view.min),
-    max = view.points.findIndex(p => p.value === view.max);
-  return [...view.conflicts, ...view.points.filter((p, i) => view.mode === 'disconnected-extrema' || counts.get(p.segment) === 1 || endpoints.has(i) || i === min || i === max)];
+  const min=view.points.findIndex(p=>p.value===view.min),max=view.points.findIndex(p=>p.value===view.max);
+  return [...view.conflicts,...view.points.filter((p,i)=>view.mode==='disconnected-extrema'||i===0||i===view.points.length-1||view.points[i-1].segment!==p.segment||view.points[i+1].segment!==p.segment||i===min||i===max)];
 }
 type SourcePin = {
   id: string;
@@ -114,6 +107,7 @@ export function CursorReadout({
   onPin: (source: SourcePin) => void;
 }) {
   const visible = cursorForView(cursor, workspace.state.view);
+  if (typeof window !== 'undefined') performance.mark('soup:source-readout-render');
   const hasCursor = visible.hoverStep !== null;
   return <section className={readoutStyles.rail} aria-label={`${NAMES[metric]} source readout`} data-testid={`cursor-readout-${metric}`} data-reserved="true"><div className={`${readoutStyles.content} ${hasCursor ? 'chart-hover-value' : ''}`} data-hover-seq={hasCursor ? visible.hoverSeq : undefined}>
     <p className={readoutStyles.title}>{hasCursor ? `Cursor step ${formatStep(visible.hoverStep!)}` : 'Original source values'}</p>
@@ -123,7 +117,7 @@ export function CursorReadout({
           return <div className={`${readoutStyles.slot} ${hasCursor ? 'tooltip-series' : ''}`} key={id}><div className={readoutStyles.run}><i className="tooltip-dot" style={{
                 background: `var(${COLORS[slots[id] ?? index]})`
               }} /><strong>{id}</strong></div><section className={readoutStyles.observations} aria-label={`Original observations for ${id}`}>
-      {hasCursor ? rows.length ? rows.slice(0, 2).map(row => <div className={readoutStyles.observation} key={row.sourceIndex}><div className={readoutStyles.facts} title={`Exact source value ${exactNumber(row[metric])}`}><span>step {formatStep(row.step)}</span><span>{NAMES[metric]} {formatValue(row[metric], metric === 'lr')}</span><span>Δstep {formatStep(Math.abs(row.step - visible.hoverStep!))}</span></div><button type="button" className="text-link" onClick={() => {
+      {hasCursor ? rows.length ? rows.slice(0, 2).map((row, index) => <div className={readoutStyles.observation} key={index}><div className={readoutStyles.facts} title={`Exact source value ${exactNumber(row[metric])}`}><span>step {formatStep(row.step)}</span><span>{NAMES[metric]} {formatValue(row[metric], metric === 'lr')}</span><span>Δstep {formatStep(Math.abs(row.step - visible.hoverStep!))}</span></div><button type="button" className="text-link" onClick={() => {
                   if (run) onPin({
                     id,
                     revision: run.revision,
@@ -173,11 +167,9 @@ export function Charts({
   only?: Metric | 'all';
   compact?: boolean;
 }) {
-  const latestCursor = useCursorState(workspace.cursor);
+  performance.mark('soup:charts-render');
   const view = workspace.state.view,
-    identity = ids.join(',');
-  const cursor = cursorForView(latestCursor, view);
-  useHoverPaint(workspace.state.selectionKey, view?.viewSeq ?? 0, cursor.hoverSeq, cursor.hoverStep);
+    identity = ids.join(','), sharedSource = ids.length > 1 || only === 'all';
   const [slotState, setSlotState] = useState(() => ({
     identity,
     slots: assignSeriesSlots({}, ids)
@@ -190,7 +182,6 @@ export function Charts({
       slots
     });
   }
-  const [cursorActive, setCursorActive] = useState(false);
   const [pinned, setPinned] = useState<SourcePin | null>(null);
   const [focused, setFocused] = useState<string | null>(null),
     [hovered, setHovered] = useState<string | null>(null);
@@ -211,11 +202,13 @@ export function Charts({
         markers: markersFor(v),
         disconnected: v.mode === 'disconnected-extrema'
       }));
+      const extrema=values.flatMap(v=>[v.min,v.max]).filter((n):n is number=>typeof n==='number'&&Number.isFinite(n));
       return {
         metric,
         values,
         series,
-        data: align(values)
+        data: view?.alignment?.[metric]??align(values),
+        yBounds:extrema.length?{min:Math.min(...extrema),max:Math.max(...extrema)}:undefined
       };
     });
   }, [view, identity, only, compact, slots]);
@@ -224,25 +217,18 @@ export function Charts({
       metric,
       values,
       series,
-      data
+      data,
+      yBounds
     }) => {
-      const cursorPoints = cursorActive ? series.flatMap(s => {
-        const row = cursor.hover[s.label]?.[0];
-        return row && Number.isFinite(row[metric]) ? [{
-          runId: s.label,
-          step: row.step,
-          value: row[metric]
-        }] : [];
-      }) : [];
-      return <section key={metric} className={`chart-panel metric-${metric}`} data-run-ids={ids.join(',')} data-view-seq={view.viewSeq}><div className="panel-heading"><div><h2>{NAMES[metric]}</h2><p>Recorded step · Linear scale · Original values</p></div><span className="snapshot-badge">{values.reduce((sum, v) => sum + v.representedCount, 0)} displayed</span></div><figure><MetricPlot viewToken={view} data={data} series={series} cursorPoints={cursorPoints} theme={theme} range={view.range} domain={domain} focusedRun={activeId} scientific={metric === 'lr'} height={compact ? 220 : metric === 'loss' ? 340 : 240} testId={ids.length > 1 ? `comparison-${metric === 'grad_norm' ? 'grad' : metric}` : `${metric === 'grad_norm' ? 'grad' : metric}-chart`} onWidth={w => workspace.setMetricWidth(metric, w)} onRange={workspace.setRange} onCursor={(step, origin) => {
-            setCursorActive(step !== null);
+      return <section key={metric} className={`chart-panel metric-${metric}`} data-run-ids={ids.join(',')} data-view-seq={view.viewSeq}><div className="panel-heading"><div><h2>{NAMES[metric]}</h2><p>Recorded step · Linear scale · Original values</p></div><span className="snapshot-badge">{values.reduce((sum, v) => sum + v.representedCount, 0)} displayed</span></div><figure><MetricPlot viewToken={view} yBounds={yBounds} data={data} series={series} cursorStore={workspace.cursor} cursorMetric={metric} theme={theme} range={view.range} domain={domain} focusedRun={activeId} scientific={metric === 'lr'} height={compact ? 220 : metric === 'loss' ? 340 : 240} testId={ids.length > 1 ? `comparison-${metric === 'grad_norm' ? 'grad' : metric}` : `${metric === 'grad_norm' ? 'grad' : metric}-chart`} onCursorGrid={(steps,origin)=>workspace.prepareHover(metric,steps,origin)} onWidth={w => workspace.setMetricWidth(metric, w)} onRange={workspace.setRange} onCursor={(step, origin) => {
+            workspace.cursor.setPointerActive(step !== null);
             if (step !== null) workspace.hover(step, origin);
           }} /><figcaption><div className="interactive-legend">{series.map((s, i) => <span className="legend-control" key={s.label}><button type="button" aria-label={`Highlight ${s.label}`} aria-pressed={focused === s.label} onPointerEnter={() => setHovered(s.label)} onPointerLeave={() => setHovered(null)} onFocus={() => setHovered(s.label)} onBlur={() => setHovered(null)} onClick={() => {
                   setHovered(null);
                   setFocused(focused === s.label ? null : s.label);
                 }} title="Focus this series. Other source series stay visible, dimmed."><i style={{
                     background: `var(${s.colorToken})`
-                  }} />{s.label}</button><small>{values[i].mode === 'disconnected-extrema' ? 'Disconnected extrema' : `${formatValue(values[i].min, metric === 'lr')} – ${formatValue(values[i].max, metric === 'lr')}`}</small></span>)}</div>{activeId && <p>Focused: {activeId}. Other series and their source counts remain present.</p>}{values.every(v => !v.points.length && !v.conflicts.length) && <strong>No finite observations in this window.</strong>}<p className="chart-pointer-help">Wheel: zoom · Ctrl+wheel: pinch zoom · Shift+wheel: pan · Drag: select range</p>{compact ? <p className="small-note"><Link className="text-link" to={`/runs/${ids[0]}`}>Open run to inspect original values and adjust range</Link>.</p> : <p className="chart-touch-help">Tap the chart for recorded values. Use Adjust chart range to zoom; swipe vertically to scroll.</p>}<MetricSourceNotes workspace={workspace} ids={ids} metric={metric} compact={compact}/>{!compact&&<CursorReadout cursor={cursor} workspace={workspace} ids={ids} metric={metric} slots={slots} onPin={setPinned}/>}</figcaption></figure></section>;
+                  }} />{s.label}</button><small>{values[i].mode === 'disconnected-extrema' ? 'Disconnected extrema' : `${formatValue(values[i].min, metric === 'lr')} – ${formatValue(values[i].max, metric === 'lr')}`}</small></span>)}</div>{activeId && <p>Focused: {activeId}. Other series and their source counts remain present.</p>}{values.every(v => !v.points.length && !v.conflicts.length) && <strong>No finite observations in this window.</strong>}<p className="chart-pointer-help">Wheel: zoom · Ctrl+wheel: pinch zoom · Shift+wheel: pan · Drag: select range</p>{compact ? <p className="small-note"><Link className="text-link" to={`/runs/${ids[0]}`}>Open run to inspect original values and adjust range</Link>.</p> : <p className="chart-touch-help">Tap the chart for recorded values. Use Adjust chart range to zoom; swipe vertically to scroll.</p>}<MetricSourceNotes workspace={workspace} ids={ids} metric={metric} compact={compact}/>{!compact&&sharedSource&&metric===items[0]?.metric&&<ComparisonCursorReadout workspace={workspace} ids={ids} slots={slots} colorTokens={COLORS} onPin={setPinned}/>}{!compact&&!sharedSource&&<SourceCursorReadout metricName={NAMES[metric]} colorTokens={COLORS} measure={metric === only} workspace={workspace} ids={ids} metric={metric} slots={slots} onPin={setPinned}/>}</figcaption></figure></section>;
     })}{pinned && ids.includes(pinned.id) && workspace.state.runs[pinned.id]?.run.revision === pinned.revision && <section className="source-panel pinned-source" style={{ gridColumn: '1 / -1' }} aria-label="Pinned source row"><div className="panel-heading"><div><h2>Pinned source row</h2><p>{pinned.id} · sourceIndex {pinned.row.sourceIndex} · recorded step {exactNumber(pinned.row.step)}</p></div><Button variant="ghost" onClick={() => setPinned(null)}>Unpin row</Button></div><dl className="inspected-values">{METRICS.map(metric => <div key={metric}><dt>Raw {NAMES[metric].toLowerCase()}</dt><dd data-testid={`pinned-${metric}`}>{exactNumber(pinned.row[metric])}</dd></div>)}</dl><Link className="text-link" to={`/runs/${pinned.id}?sourceIndex=${pinned.row.sourceIndex}&revision=${encodeURIComponent(pinned.revision)}`}>Open exact source row →</Link><p className="small-note">Revision {pinned.revision}. The pinned source row stays fixed as the cursor moves.</p></section>}</div>;
 }
 export function SourceInspector({
