@@ -7,7 +7,9 @@ test('moving over the same original row changes distance without rewriting sourc
  await page.getByRole('button',{name:'Apply range',exact:true}).click()
  await page.waitForFunction(()=>document.querySelector('.plot-host')?.getAttribute('data-range-min')==='100'&&(window.__soupEvidence?.hoverCacheTargets??0)>0)
  const surface=page.locator('[data-testid="comparison-loss"] .u-over');await surface.scrollIntoViewIfNeeded();const box=(await surface.boundingBox())!
- await page.mouse.move(box.x+Math.round(box.width*.5)+1,box.y+2)
+ const y=await surface.evaluate(element=>{const plot=element.getBoundingClientRect(),main=document.getElementById('main-content')!.getBoundingClientRect();return(Math.max(plot.top,main.top,0)+Math.min(plot.bottom,main.bottom,innerHeight))/2})
+ expect(await surface.evaluate((element,point)=>element.contains(document.elementFromPoint(point.x,point.y)),{x:box.x+Math.round(box.width*.5)+1,y}),'invariance workload must point inside the visible chart, not its clipped top').toBe(true)
+ await page.mouse.move(box.x+Math.round(box.width*.5)+1,y)
  const facts=page.locator('[data-testid="comparison-cursor-readout"] [data-source-distance]').first();await expect(facts).toBeVisible()
  const first=await facts.textContent()
  await page.evaluate(()=>{
@@ -16,7 +18,7 @@ test('moving over the same original row changes distance without rewriting sourc
   for(const element of document.querySelectorAll('[aria-label^="Original observations for"]'))observer.observe(element,{subtree:true,attributes:true,attributeFilter:['hidden','title','aria-label','href']})
  })
  const before=await page.evaluate(()=>window.__soupEvidence!.acceptedHoverSeq)
- await page.mouse.move(box.x+Math.round(box.width*.5)+2,box.y+2)
+ await page.mouse.move(box.x+Math.round(box.width*.5)+2,y)
  await page.waitForFunction(seq=>window.__soupEvidence!.acceptedHoverSeq>seq,before)
  await expect(facts).not.toHaveText(first!)
  expect(await page.evaluate(()=>(window as Window&{__redundantSourceWrites?:string[]}).__redundantSourceWrites)).toEqual([])
