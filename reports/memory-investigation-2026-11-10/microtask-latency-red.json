@@ -1,0 +1,55 @@
+{
+  "verified": true,
+  "confirmed": false,
+  "inputs": [
+    "reports/memory-investigation-2026-11-10/visible-hover-trace8/results.json"
+  ],
+  "sourceHash": "dbc6419eb567db059aee26886b1cd696ebd32103105402f65dd1ea8d192d826b",
+  "harnessHash": "4e1fc837d6c4a34b7205a872e112eb9a312575a4682daa12ceb929a35d533f20",
+  "values": [
+    {
+      "cold": 2737.4368000000004,
+      "detailZoom": 118.60000000149012,
+      "detailHover": 45.100000001490116,
+      "compareZoom": 137.60000000149012,
+      "compareHover": 52.29999999701977,
+      "detailContinuous": 42.69999999552965,
+      "compareContinuous": 52.69999999552965
+    }
+  ],
+  "targets": {
+    "cold": {
+      "limitMs": 3000,
+      "actualMs": 2737.4368000000004
+    },
+    "detailZoom": {
+      "limitMs": 200,
+      "actualMs": 118.60000000149012
+    },
+    "detailHover": {
+      "limitMs": 50,
+      "actualMs": 45.100000001490116
+    },
+    "compareZoom": {
+      "limitMs": 200,
+      "actualMs": 137.60000000149012
+    },
+    "compareHover": {
+      "limitMs": 50,
+      "actualMs": 52.29999999701977
+    },
+    "detailContinuous": {
+      "limitMs": 50,
+      "actualMs": 42.69999999552965
+    },
+    "compareContinuous": {
+      "limitMs": 50,
+      "actualMs": 52.69999999552965
+    }
+  },
+  "misses": [
+    "compareHover",
+    "compareContinuous"
+  ],
+  "scope": "Nearest-rank p95. Worst of independently reported same-source full Chrome traces; no pooling. Current source DOM before BOTH RAF checks, complete text bounds and sampled cell-center occlusion. Continuous movement remains separate from range-form -> chart entry. Single-run mode is diagnostic only."
+}

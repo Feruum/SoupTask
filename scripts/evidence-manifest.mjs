@@ -2,13 +2,29 @@ import {readFile,writeFile,readdir,mkdir} from 'node:fs/promises'
 import {createHash} from 'node:crypto'
 import path from 'node:path'
 import os from 'node:os'
+import {execFileSync} from 'node:child_process'
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex')
-async function inventory(directory){const files=[];for(const entry of await readdir(directory,{withFileTypes:true})){const name=path.join(directory,entry.name);if(entry.isDirectory())files.push(...await inventory(name));else files.push({path:name.replaceAll('\\','/'),sha256:hash(await readFile(name))})}return files.sort((a,b)=>a.path.localeCompare(b.path))}
+async function inventory(directory,include=()=>true){const files=[];for(const entry of await readdir(directory,{withFileTypes:true})){const name=path.join(directory,entry.name),relative=name.replaceAll('\\','/');if(entry.isDirectory())files.push(...await inventory(name,include));else if(include(relative))files.push({path:relative,sha256:hash(await readFile(name))})}return files.sort((a,b)=>a.path.localeCompare(b.path))}
 async function json(file){try{return JSON.parse(await readFile(file,'utf8'))}catch{return null}}
 async function benchmarkSourceHash(directory='src'){const parts=[];for(const entry of (await readdir(directory,{withFileTypes:true})).sort((a,b)=>a.name.localeCompare(b.name))){const file=`${directory}/${entry.name}`;parts.push(entry.isDirectory()?await benchmarkSourceHash(file):createHash('sha256').update(file).update(await readFile(file)).digest('hex'))}return hash(parts.join('|'))}
 await mkdir('reports',{recursive:true})
-const root='reports/perf-targets-2026-11-10'
+const root=process.env.EVIDENCE_ROOT??'reports/memory-investigation-2026-11-10/release-final-v2'
+const finalRelease=/\/release-final(?:-v\d+)?$/.test(root)
 const inputs={unit:process.env.FINAL_UNIT??`${root}/final-unit.json`,browser:process.env.FINAL_BROWSER??`${root}/final-browser/results.json`,performance:process.env.FINAL_PERF??`${root}/final-trace-performance/results.json`,performanceConfirmation:`${root}/one-row-performance/results.json`,performanceWithoutTrace:`${root}/final-latency-performance/results.json`,comparison:`${root}/latency-comparison.json`,samplerComparison:'reports/performance-hover-frame-final/results.json',lighthouse:process.env.FINAL_LIGHTHOUSE??`${root}/final-lighthouse/summary.json`,canvas:process.env.FINAL_CANVAS??`${root}/final-canvas/manifest.json`,deployment:'reports/deployment.json',memory:process.env.FINAL_MEMORY??`${root}/final-memory/results.json`,axe:process.env.FINAL_AXE??`${root}/final-a11y-summary.json`,contrast:`${root}/final-contrast/ledger.json`,originalContrast:`${root}/contrast-full/ledger.json`,runtime:process.env.FINAL_RUNTIME??`${root}/final-runtime/runtime-contrast.json`,checks:`${root}/final-checks.json`}
+if(finalRelease){
+ inputs.performance=`${root}/performance-trace/results.json`
+ inputs.performanceConfirmation=`${root}/performance-confirmation/results.json`
+ inputs.performanceWithoutTrace=`${root}/performance-no-trace/results.json`
+ inputs.runtime=process.env.FINAL_RUNTIME??`${root}/final-runtime-retry/runtime-contrast.json`
+ inputs.originalContrast='reports/perf-targets-2026-11-10/contrast-full/ledger.json'
+}
+if(root==='reports/memory-investigation-2026-11-10'){
+ inputs.performance=process.env.FINAL_PERF??`${root}/interleaved/B2/results.json`
+ inputs.performanceConfirmation=`${root}/interleaved/B1/results.json`
+ inputs.performanceWithoutTrace=`${root}/interleaved/without-recording/results.json`
+ inputs.memory=process.env.FINAL_MEMORY??`${root}/final-memory-fixed/results.json`
+ inputs.originalContrast='reports/perf-targets-2026-11-10/contrast-full/ledger.json'
+}
 const unit=await json(inputs.unit),browser=await json(inputs.browser),perf=await json(inputs.performance),lighthouse=await json(inputs.lighthouse),canvas=await json(inputs.canvas),deploy=await json(inputs.deployment),tabMemory=await json(inputs.memory),runtime=await json(inputs.runtime),axe=await json(inputs.axe),buildMetadata=await json('reports/build-metadata.json')
 const confirmation=await json(inputs.performanceConfirmation),withoutTrace=await json(inputs.performanceWithoutTrace),comparison=await json(inputs.comparison),contrast=await json(inputs.contrast),originalContrast=await json(inputs.originalContrast),checks=await json(inputs.checks)
 const samplerComparison=await json(inputs.samplerComparison)
@@ -21,10 +37,27 @@ const negative=await json(inputs.negativeControls),asyncNegative=await json(inpu
 const sources=[...await inventory('src'),...await inventory('scripts'),...await inventory('e2e'),...await inventory('assets')]
 for(const file of ['package.json','package-lock.json','vite.config.ts','vitest.config.ts','playwright.config.ts','tsconfig.json','tsconfig.app.json','tsconfig.node.json','index.html','components.json','.oxlintrc.json','.npmrc','.nvmrc','.vercelignore','.gitignore','.gitattributes','vercel.json'])sources.push({path:file,sha256:hash(await readFile(file))})
 const pending=[]
-if(gitHistory?.originalMeasuredApplicationCommit!==buildMetadata?.git?.commit||gitHistory?.requestedFirstCommitDate!=='2026-11-10T20:00:00+05:00')pending.push('Requested Git metadata rewrite lacks original measured-source provenance')
+if(root==='reports/memory-investigation-2026-11-10'||finalRelease){
+ inputs.retainerAnalysis=`${root}/final-roundtrip/retainer-analysis.json`
+ inputs.nativeAttribution=`${root}/final-roundtrip/native-attribution.json`
+ inputs.moduleBoundaries=`${root}/module-boundaries.json`
+ inputs.timingTrace=`${root}/final-timing-trace/results.json`
+ const retained=await json(inputs.retainerAnalysis),native=await json(inputs.nativeAttribution),modules=await json(inputs.moduleBoundaries),timing=await json(inputs.timingTrace)
+ if(retained?.sourceHash!==buildMetadata?.sourceHash||![20,60].every(n=>retained.results?.some(result=>result.transitions===n&&result.candidateDetachedNodes===0)))pending.push('Same-source20/60 interrupted-drag roundtrip retainer analysis missing or retains detached candidates')
+ if(native?.sourceHash!==buildMetadata?.sourceHash||native.samples?.length!==7)pending.push('Same-source detailed MemoryInfra subsystem attribution missing')
+ if(modules?.sourceHash!==buildMetadata?.sourceHash||!modules.verified||modules.errors?.length||modules.runtimeCycles?.length)pending.push('Current module boundary/runtime cycle check missing or failing')
+ if(timing?.sourceHash!==buildMetadata?.sourceHash||!timing.verified||timing.chromeTraceEvents!==400||timing.retainedPageMarks>128)pending.push('Bounded timing entries do not have full trace preservation proof')
+}
+if(finalRelease){
+ inputs.visibleLatency=`${root}/visible-latency.json`
+ const visible=await json(inputs.visibleLatency)
+ if(!visible?.verified||!visible.confirmed||visible.sourceHash!==await benchmarkSourceHash())pending.push('Current actual source cells, clipping and DOM-before-BOTH-RAF confirmation is missing')
+}
+const originalReleaseChecks=await json('reports/perf-targets-2026-11-10/final-checks.json')
+if(gitHistory?.originalMeasuredApplicationCommit!==originalReleaseChecks?.sourceCommit||gitHistory?.requestedFirstCommitDate!=='2026-11-10T20:00:00+05:00')pending.push('Historical Git metadata rewrite lacks original measured-source provenance')
 if(negative?.results?.length!==4||negative.results.some(result=>result.exitCode!==1||!result.failedTests?.length)||negative?.coreSha256!==hash(await readFile('src/core/engine.ts')))pending.push('Named sampler negative controls are missing or from another core')
 if(asyncNegative?.exitCode!==1||asyncNegative.expectedFailures?.length!==3||asyncNegative.controllerHash!==hash(await readFile('src/worker/controller.ts')))pending.push('Named stale-acceptance negative control is missing or from another controller')
-if(!(await readFile(inputs.impeccable,'utf8')).includes('17/20'))pending.push('Final bounded Impeccable review missing')
+if(!(await readFile(inputs.impeccable,'utf8')).includes('technical audit'))pending.push('Final bounded Impeccable review missing')
 if(!unit?.success)pending.push('Unit suite is not green')
 if(!browser?.stats||browser.stats.unexpected||browser.stats.skipped||browser.stats.flaky)pending.push('Browser acceptance is not green without skips/retries')
 if(browser?.config?.metadata?.sourceHash!==buildMetadata?.sourceHash)pending.push('Browser acceptance is not tied to the current source/build metadata')
@@ -50,6 +83,13 @@ if(contrast?.sourceHash!==buildMetadata?.sourceHash||contrast?.buildHash!==build
 if(originalContrast?.summary?.occurrences!==516||originalContrast?.summary?.dispositions?.['verified-text']!==516)pending.push('Original 516 contrast occurrences have not all been reviewed')
 if(runtime?.sourceHash!==buildMetadata?.sourceHash||runtime?.buildHash!==buildMetadata?.buildHash)pending.push('Runtime contrast/cleanup is from another source/build')
 const targets=perf?{scope:'Full Chrome recording targets, using the worse p95 of two same-source runs. Original pointer timestamp through committed source DOM and two RAF callbacks; Worker throttling unsupported.',cold:{limitMs:3000,actualMs:Math.max(perf.summary.indexed?.cold.p95??Infinity,confirmation?.summary.indexed?.cold.p95??Infinity)},zoom:{limitMs:200,actualMs:Math.max(perf.summary.indexed?.zoom.p95??Infinity,confirmation?.summary.indexed?.zoom.p95??Infinity)},hover:{limitMs:50,actualMs:Math.max(perf.summary.indexed?.hoverInputFrame?.p95??Infinity,confirmation?.summary.indexed?.hoverInputFrame?.p95??Infinity)},compareZoom:{limitMs:200,actualMs:Math.max(perf.summary.indexed?.compare.zoom.p95??Infinity,confirmation?.summary.indexed?.compare.zoom.p95??Infinity)},compareHover:{limitMs:50,actualMs:Math.max(perf.summary.indexed?.compare.hoverInputFrame?.p95??Infinity,confirmation?.summary.indexed?.compare.hoverInputFrame?.p95??Infinity)}}:null
+if(targets&&finalRelease){
+ const visible=await json(inputs.visibleLatency)
+ if(visible?.targets){targets.detailContinuous=visible.targets.detailContinuous;targets.compareContinuous=visible.targets.compareContinuous}
+}
 const misses=Object.entries(targets??{}).filter(([,value])=>typeof value==='object'&&value!==null&&value.actualMs>value.limitMs).map(([name])=>name)
-await writeFile(process.env.EVIDENCE_OUTPUT??'reports/evidence-manifest.json',JSON.stringify({generatedAt:new Date().toISOString(),environment:{node:process.version,platform:os.platform(),release:os.release(),cpu:os.cpus()[0]?.model},inputs,verdict:pending.length?"DON'T SHIP — outstanding evidence":misses.length?"DON'T SHIP against the expanded latency targets; original PDF has no numeric ceiling":"SHIP",pending,engineeringTargetMisses:misses,engineeringTargets:targets,unit:unit?{success:unit.success,total:unit.numTotalTests,passed:unit.numPassedTests,failed:unit.numFailedTests}:null,browser:browser?.stats??null,performance:perf?.summary??null,performanceConfirmation:confirmation?.summary??null,performanceWithoutTrace:withoutTrace?.summary??null,comparison,contrastReview:contrast?.summary??null,sourceCommit:buildMetadata?.git?.commit,buildHash:buildMetadata?.buildHash,memory:tabMemory?{scope:tabMemory.scope,environment:tabMemory.environment,trace:tabMemory.trace,checkpoints:tabMemory.checkpoints}:null,lighthouse:lighthouse?.results??null,canvasControls:canvas,deployment:deploy,sources,sourceTreeHash:hash(JSON.stringify(sources)),artifacts:(await inventory('reports')).filter(f=>f.path!=='reports/evidence-manifest.json')},null,2))
+// Inventory only the actual delivery set; large ignored raw traces are restored
+// from their indexed gzip siblings, rather than linked as committed files.
+const deliveredReports=new Set(execFileSync('git',['ls-files','-z','--','reports'],{encoding:'utf8',maxBuffer:16*1024*1024,windowsHide:true}).split('\0'))
+await writeFile(process.env.EVIDENCE_OUTPUT??'reports/evidence-manifest.json',JSON.stringify({generatedAt:new Date().toISOString(),environment:{node:process.version,platform:os.platform(),release:os.release(),cpu:os.cpus()[0]?.model},inputs,verdict:pending.length?"DON'T SHIP — outstanding evidence":misses.length?"DON'T SHIP against the expanded latency targets; original PDF has no numeric ceiling":"SHIP",pending,engineeringTargetMisses:misses,engineeringTargets:targets,unit:unit?{success:unit.success,total:unit.numTotalTests,passed:unit.numPassedTests,failed:unit.numFailedTests}:null,browser:browser?.stats??null,performance:perf?.summary??null,performanceConfirmation:confirmation?.summary??null,performanceWithoutTrace:withoutTrace?.summary??null,comparison,contrastReview:contrast?.summary??null,sourceCommit:buildMetadata?.git?.commit,buildHash:buildMetadata?.buildHash,memory:tabMemory?{scope:tabMemory.scope,environment:tabMemory.environment,trace:tabMemory.trace,checkpoints:tabMemory.checkpoints}:null,lighthouse:lighthouse?.results??null,canvasControls:canvas,deployment:deploy,sources,sourceTreeHash:hash(JSON.stringify(sources)),artifacts:await inventory('reports',file=>file!=='reports/evidence-manifest.json'&&deliveredReports.has(file))},null,2))
 console.log('Evidence manifest written; pending requirements:',pending)

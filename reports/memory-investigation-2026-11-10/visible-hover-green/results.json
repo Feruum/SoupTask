@@ -1,0 +1,861 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/visible-hover.spec.ts",
+      "e2e/hover-layout.spec.ts",
+      "e2e/memory-lifecycle.spec.ts",
+      "--config",
+      "scripts/acceptance.playwright.config.mjs",
+      "--workers",
+      "1",
+      "--trace",
+      "off"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\scripts\\acceptance.playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+      "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+      "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/memory-investigation-2026-11-10/visible-hover-green/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+          "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+          "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+          "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+          "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "off",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "hover-layout.spec.ts",
+      "file": "hover-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "/dashboard keeps source actions in place while the cursor updates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2301,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:16.118Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "preview-layout",
+                      "contentType": "application/json",
+                      "body": "eyJyb3V0ZSI6Ii9kYXNoYm9hcmQiLCJiZWZvcmUiOjEwMDQuMjY1NjI1LCJhZnRlciI6MTAwNC4yNjU2MjV9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-fb81f6456f3c4d300960",
+          "file": "hover-layout.spec.ts",
+          "line": 36,
+          "column": 46
+        },
+        {
+          "title": "/runs keeps source actions in place while the cursor updates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1950,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:18.579Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "preview-layout",
+                      "contentType": "application/json",
+                      "body": "eyJyb3V0ZSI6Ii9ydW5zIiwiYmVmb3JlIjozMDc2LjI4MTI1LCJhZnRlciI6MzA3Ni4yODEyNX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-1885cf057833d661b67d",
+          "file": "hover-layout.spec.ts",
+          "line": 36,
+          "column": 46
+        },
+        {
+          "title": "full run preserves the following metric position at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2044,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:20.552Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJjb21wYXJpc29uIjpmYWxzZSwiYmVmb3JlIjoyMDA2LjQ2ODc1LCJhZnRlciI6MjAwNi40Njg3NX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-6516323f78b49bbf938b",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 74
+        },
+        {
+          "title": "four-run duplicate comparison preserves the following metric position at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1955,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:22.616Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJjb21wYXJpc29uIjp0cnVlLCJiZWZvcmUiOjIwNzEuMTg3NSwiYWZ0ZXIiOjIwNzEuMTg3NX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-9cad50f2f0e1c16853b5",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 74
+        },
+        {
+          "title": "full run preserves the following metric position at 1440px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6507,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at pointAtCenter (C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:19:46)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:77:3",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 46,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m       acceptedHoverSeq\u001b[33m:\u001b[39m number\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     }\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   })\u001b[33m.\u001b[39m__soupEvidence\u001b[33m?.\u001b[39macceptedHoverSeq \u001b[33m??\u001b[39m \u001b[35m0\u001b[39m))\u001b[33m.\u001b[39mtoBeGreaterThan(sequence)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m }\n \u001b[90m 21 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m setRange(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m min\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m max\u001b[33m:\u001b[39m number) {\n \u001b[90m 22 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[36mfrom\u001b[39m \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'From step'\u001b[39m\u001b[33m,\u001b[39m {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 46,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  17 |       acceptedHoverSeq: number;\n  18 |     };\n> 19 |   }).__soupEvidence?.acceptedHoverSeq ?? 0)).toBeGreaterThan(sequence);\n     |                                              ^\n  20 | }\n  21 | async function setRange(page: Page, min: number, max: number) {\n  22 |   const from = page.getByLabel('From step', {\n    at pointAtCenter (C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:19:46)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:77:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:24.588Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green\\artifacts\\hover-layout-full-run-pres-dcde9-g-metric-position-at-1440px\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green\\artifacts\\hover-layout-full-run-pres-dcde9-g-metric-position-at-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 46,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-85f657ff09d7d04980a1",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 74
+        },
+        {
+          "title": "four-run duplicate comparison preserves the following metric position at 1440px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6678,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n    at pointAtCenter (C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:19:46)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:77:3",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 46,
+                      "line": 19
+                    },
+                    "snippet": " \u001b[90m 17 |\u001b[39m       acceptedHoverSeq\u001b[33m:\u001b[39m number\u001b[33m;\u001b[39m\n \u001b[90m 18 |\u001b[39m     }\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m   })\u001b[33m.\u001b[39m__soupEvidence\u001b[33m?.\u001b[39macceptedHoverSeq \u001b[33m??\u001b[39m \u001b[35m0\u001b[39m))\u001b[33m.\u001b[39mtoBeGreaterThan(sequence)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m }\n \u001b[90m 21 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m setRange(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m min\u001b[33m:\u001b[39m number\u001b[33m,\u001b[39m max\u001b[33m:\u001b[39m number) {\n \u001b[90m 22 |\u001b[39m   \u001b[36mconst\u001b[39m \u001b[36mfrom\u001b[39m \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'From step'\u001b[39m\u001b[33m,\u001b[39m {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 46,
+                        "line": 19
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n\nCall Log:\n- Timeout 5000ms exceeded while waiting on the predicate\n\n  17 |       acceptedHoverSeq: number;\n  18 |     };\n> 19 |   }).__soupEvidence?.acceptedHoverSeq ?? 0)).toBeGreaterThan(sequence);\n     |                                              ^\n  20 | }\n  21 | async function setRange(page: Page, min: number, max: number) {\n  22 |   const from = page.getByLabel('From step', {\n    at pointAtCenter (C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:19:46)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:77:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:33.628Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green\\artifacts\\hover-layout-four-run-dupl-a4f99-g-metric-position-at-1440px\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green\\artifacts\\hover-layout-four-run-dupl-a4f99-g-metric-position-at-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 46,
+                    "line": 19
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-56b4bfcd49488ac745c7",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 74
+        },
+        {
+          "title": "the visible recorded spike explains the linear axis and zoom keeps its exact source",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1659,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:42.008Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-c5ff75e321b02cc0783f",
+          "file": "hover-layout.spec.ts",
+          "line": 110,
+          "column": 1
+        },
+        {
+          "title": "recorded nonfinite measurements explain their snapshot counts and gap semantics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3176,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:43.826Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-ee90bbb54b9e2a61f2b2",
+          "file": "hover-layout.spec.ts",
+          "line": 131,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "memory-lifecycle.spec.ts",
+      "file": "memory-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "long cursor sessions bound application timing entries without losing current original values",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1635,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:47.048Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-8f065d226f23861166b5",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "unmounted plots release owned Canvas bitmaps even while an external reference retains their nodes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1675,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:48.702Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-c12683f303ef52799d11",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "leaving during a chart drag removes the native document mouseup listener",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1575,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:50.395Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-69f122e0b5c26447fe53",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "small decorative UI artwork does not decode a full-size source bitmap",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 763,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:51.989Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-3628a88a0f73fc8652cb",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "activating source observations does not change inherited font or paint containment geometry",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6445,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('comparison-cursor-readout').locator(':scope > div')\nExpected pattern: \u001b[32m/\\d+/\u001b[39m\nReceived string:  \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('comparison-cursor-readout').locator(':scope > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('comparison-cursor-readout').locator(':scope > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"_content_16fvc_18\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('comparison-cursor-readout').locator(':scope > div')\nExpected pattern: \u001b[32m/\\d+/\u001b[39m\nReceived string:  \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('comparison-cursor-readout').locator(':scope > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('comparison-cursor-readout').locator(':scope > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"_content_16fvc_18\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts:77:24",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts",
+                      "column": 24,
+                      "line": 77
+                    },
+                    "snippet": " \u001b[90m 75 |\u001b[39m  \u001b[36mawait\u001b[39m over\u001b[33m.\u001b[39mscrollIntoViewIfNeeded()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m rect\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m over\u001b[33m.\u001b[39mboundingBox()\u001b[33m;\u001b[39mexpect(rect)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeNull()\n \u001b[90m 76 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mmove(rect\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mx\u001b[33m+\u001b[39mrect\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mwidth\u001b[33m*\u001b[39m\u001b[35m.45\u001b[39m\u001b[33m,\u001b[39mrect\u001b[33m!\u001b[39m\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mrect\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mheight\u001b[33m*\u001b[39m\u001b[35m.5\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 77 |\u001b[39m  \u001b[36mawait\u001b[39m expect(content)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-hover-seq'\u001b[39m\u001b[33m,\u001b[39m\u001b[35m/\\d+/\u001b[39m)\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 78 |\u001b[39m  expect(\u001b[36mawait\u001b[39m appearance()\u001b[33m,\u001b[39m\u001b[32m'source-state marker must not change inherited numeric font or paint clip'\u001b[39m)\u001b[33m.\u001b[39mtoEqual(before)\n \u001b[90m 79 |\u001b[39m })\n \u001b[90m 80 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts",
+                        "column": 24,
+                        "line": 77
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('comparison-cursor-readout').locator(':scope > div')\nExpected pattern: \u001b[32m/\\d+/\u001b[39m\nReceived string:  \u001b[31m\"\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('comparison-cursor-readout').locator(':scope > div') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('comparison-cursor-readout').locator(':scope > div')\u001b[22m\n\u001b[2m    14 × locator resolved to <div class=\"_content_16fvc_18\">…</div>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n\n  75 |  await over.scrollIntoViewIfNeeded();const rect=await over.boundingBox();expect(rect).not.toBeNull()\n  76 |  await page.mouse.move(rect!.x+rect!.width*.45,rect!.y+rect!.height*.5)\n> 77 |  await expect(content).toHaveAttribute('data-hover-seq',/\\d+/)\n     |                        ^\n  78 |  expect(await appearance(),'source-state marker must not change inherited numeric font or paint clip').toEqual(before)\n  79 | })\n  80 |\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts:77:24"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:36:52.774Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green\\artifacts\\memory-lifecycle-activatin-3ad69--paint-containment-geometry\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green\\artifacts\\memory-lifecycle-activatin-3ad69--paint-containment-geometry\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts",
+                    "column": 24,
+                    "line": 77
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-aa33122fb7f19b423015",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 69,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "visible-hover.spec.ts",
+      "file": "visible-hover.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Run exposes actual step and all metric cells inside the viewport after chart entry",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6564,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('cursor-readout-loss').locator('.chart-hover-value')\nExpected pattern: \u001b[32m/\\d+/\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('cursor-readout-loss').locator('.chart-hover-value') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('cursor-readout-loss').locator('.chart-hover-value')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('cursor-readout-loss').locator('.chart-hover-value')\nExpected pattern: \u001b[32m/\\d+/\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('cursor-readout-loss').locator('.chart-hover-value') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('cursor-readout-loss').locator('.chart-hover-value')\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:15:54",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                      "column": 54,
+                      "line": 15
+                    },
+                    "snippet": " \u001b[90m 13 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mmove(box\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mx\u001b[33m+\u001b[39mbox\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mwidth\u001b[33m*\u001b[39m\u001b[35m.45\u001b[39m\u001b[33m,\u001b[39mbox\u001b[33m!\u001b[39m\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mbox\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mheight\u001b[33m*\u001b[39m\u001b[35m.5\u001b[39m)\n \u001b[90m 14 |\u001b[39m  \u001b[36mconst\u001b[39m readout\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mgetByTestId(comparison\u001b[33m?\u001b[39m\u001b[32m'comparison-cursor-readout'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'cursor-readout-loss'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m  \u001b[36mawait\u001b[39m expect(readout\u001b[33m.\u001b[39mlocator(\u001b[32m'.chart-hover-value'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-hover-seq'\u001b[39m\u001b[33m,\u001b[39m\u001b[35m/\\d+/\u001b[39m)\n \u001b[90m    |\u001b[39m                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m  \u001b[36mconst\u001b[39m cells\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m readout\u001b[33m.\u001b[39mlocator(\u001b[32m'tbody'\u001b[39m)\u001b[33m.\u001b[39mevaluateAll(bodies\u001b[33m=>\u001b[39mbodies\u001b[33m.\u001b[39mflatMap(body\u001b[33m=>\u001b[39m{\n \u001b[90m 17 |\u001b[39m   \u001b[36mconst\u001b[39m row\u001b[33m=\u001b[39mbody\u001b[33m.\u001b[39mquerySelector(\u001b[32m'tr:not([hidden])'\u001b[39m)\u001b[33m!\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m [\u001b[33m...\u001b[39mrow\u001b[33m.\u001b[39mquerySelectorAll(\u001b[32m'td'\u001b[39m)]\u001b[33m.\u001b[39mslice(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m4\u001b[39m)\u001b[33m.\u001b[39mmap(cell\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                        "column": 54,
+                        "line": 15
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('cursor-readout-loss').locator('.chart-hover-value')\nExpected pattern: \u001b[32m/\\d+/\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('cursor-readout-loss').locator('.chart-hover-value') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('cursor-readout-loss').locator('.chart-hover-value')\u001b[22m\n\n\n  13 |  await page.mouse.move(box!.x+box!.width*.45,box!.y+box!.height*.5)\n  14 |  const readout=page.getByTestId(comparison?'comparison-cursor-readout':'cursor-readout-loss')\n> 15 |  await expect(readout.locator('.chart-hover-value')).toHaveAttribute('data-hover-seq',/\\d+/)\n     |                                                      ^\n  16 |  const cells=await readout.locator('tbody').evaluateAll(bodies=>bodies.flatMap(body=>{\n  17 |   const row=body.querySelector('tr:not([hidden])')!\n  18 |   return [...row.querySelectorAll('td')].slice(0,4).map(cell=>{\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:15:54"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:37:01.783Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green\\artifacts\\visible-hover-Run-exposes--14017--viewport-after-chart-entry\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green\\artifacts\\visible-hover-Run-exposes--14017--viewport-after-chart-entry\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                    "column": 54,
+                    "line": 15
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e032e1733e06d6e1f682-c64bb9b411d00245c55d",
+          "file": "visible-hover.spec.ts",
+          "line": 3,
+          "column": 38
+        },
+        {
+          "title": "Compare exposes actual step and all metric cells inside the viewport after chart entry",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6657,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('comparison-cursor-readout').locator('.chart-hover-value')\nExpected pattern: \u001b[32m/\\d+/\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('comparison-cursor-readout').locator('.chart-hover-value') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('comparison-cursor-readout').locator('.chart-hover-value')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('comparison-cursor-readout').locator('.chart-hover-value')\nExpected pattern: \u001b[32m/\\d+/\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('comparison-cursor-readout').locator('.chart-hover-value') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('comparison-cursor-readout').locator('.chart-hover-value')\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:15:54",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                      "column": 54,
+                      "line": 15
+                    },
+                    "snippet": " \u001b[90m 13 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mmove(box\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mx\u001b[33m+\u001b[39mbox\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mwidth\u001b[33m*\u001b[39m\u001b[35m.45\u001b[39m\u001b[33m,\u001b[39mbox\u001b[33m!\u001b[39m\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mbox\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mheight\u001b[33m*\u001b[39m\u001b[35m.5\u001b[39m)\n \u001b[90m 14 |\u001b[39m  \u001b[36mconst\u001b[39m readout\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mgetByTestId(comparison\u001b[33m?\u001b[39m\u001b[32m'comparison-cursor-readout'\u001b[39m\u001b[33m:\u001b[39m\u001b[32m'cursor-readout-loss'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m  \u001b[36mawait\u001b[39m expect(readout\u001b[33m.\u001b[39mlocator(\u001b[32m'.chart-hover-value'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-hover-seq'\u001b[39m\u001b[33m,\u001b[39m\u001b[35m/\\d+/\u001b[39m)\n \u001b[90m    |\u001b[39m                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m  \u001b[36mconst\u001b[39m cells\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m readout\u001b[33m.\u001b[39mlocator(\u001b[32m'tbody'\u001b[39m)\u001b[33m.\u001b[39mevaluateAll(bodies\u001b[33m=>\u001b[39mbodies\u001b[33m.\u001b[39mflatMap(body\u001b[33m=>\u001b[39m{\n \u001b[90m 17 |\u001b[39m   \u001b[36mconst\u001b[39m row\u001b[33m=\u001b[39mbody\u001b[33m.\u001b[39mquerySelector(\u001b[32m'tr:not([hidden])'\u001b[39m)\u001b[33m!\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36mreturn\u001b[39m [\u001b[33m...\u001b[39mrow\u001b[33m.\u001b[39mquerySelectorAll(\u001b[32m'td'\u001b[39m)]\u001b[33m.\u001b[39mslice(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m4\u001b[39m)\u001b[33m.\u001b[39mmap(cell\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                        "column": 54,
+                        "line": 15
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByTestId('comparison-cursor-readout').locator('.chart-hover-value')\nExpected pattern: \u001b[32m/\\d+/\u001b[39m\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" getByTestId('comparison-cursor-readout').locator('.chart-hover-value') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByTestId('comparison-cursor-readout').locator('.chart-hover-value')\u001b[22m\n\n\n  13 |  await page.mouse.move(box!.x+box!.width*.45,box!.y+box!.height*.5)\n  14 |  const readout=page.getByTestId(comparison?'comparison-cursor-readout':'cursor-readout-loss')\n> 15 |  await expect(readout.locator('.chart-hover-value')).toHaveAttribute('data-hover-seq',/\\d+/)\n     |                                                      ^\n  16 |  const cells=await readout.locator('tbody').evaluateAll(bodies=>bodies.flatMap(body=>{\n  17 |   const row=body.querySelector('tr:not([hidden])')!\n  18 |   return [...row.querySelectorAll('td')].slice(0,4).map(cell=>{\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:15:54"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:37:09.953Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green\\artifacts\\visible-hover-Compare-expo-34560--viewport-after-chart-entry\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green\\artifacts\\visible-hover-Compare-expo-34560--viewport-after-chart-entry\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                    "column": 54,
+                    "line": 15
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e032e1733e06d6e1f682-69d826dc89f58a14702a",
+          "file": "visible-hover.spec.ts",
+          "line": 3,
+          "column": 38
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T20:36:14.285Z",
+    "duration": 63767.528999999995,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}

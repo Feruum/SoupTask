@@ -22,12 +22,12 @@ if(process.argv.includes('--unpack')){
 }else{
  const entries=[]
  for(const raw of await files(root)){
-  if(!/(?:chrome-trace|\.trace)\.json$/.test(raw))continue
+  if(!/(?:chrome-trace|\.trace|memory-infra)\.json$/.test(raw))continue
   const archive=`${raw}.gz`,rawInfo=await stat(raw)
   const archived=await stat(archive).catch(error=>{if(error.code!=='ENOENT')throw error;return null})
   if(!archived||archived.mtimeMs<rawInfo.mtimeMs)await pipeline(createReadStream(raw),createGzip({level:6}),createWriteStream(archive))
-  entries.push({raw:relative(raw),archive:relative(archive),rawBytes:rawInfo.size,archiveBytes:(await stat(archive)).size,rawSha256:await digest(raw),archiveSha256:await digest(archive)})
+  entries.push({kind:raw.endsWith('memory-infra.json')?'native-subsystem-dump':'chrome-trace',raw:relative(raw),archive:relative(archive),rawBytes:rawInfo.size,archiveBytes:(await stat(archive)).size,rawSha256:await digest(raw),archiveSha256:await digest(archive)})
  }
  await writeFile(manifestPath,JSON.stringify({generatedAt:new Date().toISOString(),scope:'Lossless gzip copies. Raw files remain locally; Git/source archives store gzip siblings. node scripts/trace-archives.mjs --unpack verifies/restores originals.',entries},null,2))
- console.log(`Preserved ${entries.length} Chrome traces as lossless, hashed gzip siblings.`)
+ console.log(`Preserved ${entries.length} profiler outputs as lossless, hashed gzip siblings.`)
 }

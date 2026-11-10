@@ -1,0 +1,67 @@
+{
+  "verified": true,
+  "confirmed": true,
+  "inputs": [
+    "reports/memory-investigation-2026-11-10/release-final-v2/performance-trace/results.json",
+    "reports/memory-investigation-2026-11-10/release-final-v2/performance-confirmation/results.json"
+  ],
+  "sourceHash": "8abc0c18b910d1706c76f00b6eb87bfcfb377992de8ad65acf0d58d8b1993bfd",
+  "harnessHash": "4e1fc837d6c4a34b7205a872e112eb9a312575a4682daa12ceb929a35d533f20",
+  "values": [
+    {
+      "cold": 2807.2535,
+      "detailZoom": 120.29999999701977,
+      "detailHover": 64.5,
+      "compareZoom": 161,
+      "compareHover": 56.70000000298023,
+      "detailContinuous": 43.100000001490116,
+      "compareContinuous": 50.899999998509884
+    },
+    {
+      "cold": 3013.5507999999973,
+      "detailZoom": 122.19999999552965,
+      "detailHover": 52.79999999701977,
+      "compareZoom": 142.30000000447035,
+      "compareHover": 56,
+      "detailContinuous": 45,
+      "compareContinuous": 50.79999999701977
+    }
+  ],
+  "targets": {
+    "cold": {
+      "limitMs": 3000,
+      "actualMs": 3013.5507999999973
+    },
+    "detailZoom": {
+      "limitMs": 200,
+      "actualMs": 122.19999999552965
+    },
+    "detailHover": {
+      "limitMs": 50,
+      "actualMs": 64.5
+    },
+    "compareZoom": {
+      "limitMs": 200,
+      "actualMs": 161
+    },
+    "compareHover": {
+      "limitMs": 50,
+      "actualMs": 56.70000000298023
+    },
+    "detailContinuous": {
+      "limitMs": 50,
+      "actualMs": 45
+    },
+    "compareContinuous": {
+      "limitMs": 50,
+      "actualMs": 50.899999998509884
+    }
+  },
+  "misses": [
+    "cold",
+    "detailHover",
+    "compareHover",
+    "compareContinuous"
+  ],
+  "scope": "Nearest-rank p95. Worst of independently reported same-source full Chrome traces; no pooling. Current source DOM before BOTH RAF checks, complete text bounds and sampled cell-center occlusion. Continuous movement remains separate from range-form -> chart entry. Single-run mode is diagnostic only."
+}

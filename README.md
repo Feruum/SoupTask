@@ -41,7 +41,7 @@ These are screenshots of the running application from the recorded release check
 The run chooser folds away, facts reflow into pairs, and persistent navigation remains within reach. Numeric controls provide an alternative to chart gestures.
 
 <p align="center">
-  <img src="assets/readme/monitor-mobile.png" alt="The real Soup Monitor at 320px, with a collapsed run chooser, complete numeric facts and a touch-friendly chart" width="280" />
+  <img src="assets/readme/monitor-mobile.png" alt="The real Soup Monitor at 320 px, with a collapsed run chooser, complete numeric facts and a touch-friendly chart" width="280" />
 </p>
 
 </details>
@@ -59,7 +59,7 @@ Search, filter and sort snapshots; preview a run or select two to four for compa
 
 Inspect runs on their original step coordinates, with one shared original-source table and whole-run facts.
 
-![Two training runs compared using genuine metric charts](assets/readme/compare.png)
+![Four training runs with genuine Loss curves and all three original source metrics visible in the shared table](assets/readme/compare.png)
 
 ### Data quality
 
@@ -146,31 +146,22 @@ node scripts/canvas-controls.mjs
 
 Playwright starts its own production preview. Keep port **4173** free. Vitest reads unit tests under `src/`; Playwright reads browser tests under `e2e/`.
 
-The latest recorded release checks on **10 November 2026** contain **106 passing unit tests** and **113 passing Chromium tests**, with no skipped or flaky cases in that browser run. These are archived results, not a claim that tests were rerun while editing this README.
+<!-- release-evidence:start -->
+The 11 November 2026 accepted run records **109 unit tests and 131 Chromium tests**, without skips, unexpected/flaky cases or retries. Source/build hashes and earlier failures remain in the [evidence manifest](reports/evidence-manifest.json).
 
 | Evidence | Record |
-| --- | --- |
-| Unit results | [106 passing tests](reports/perf-targets-2026-11-10/final-unit.json) |
-| Release browser results | [113 passing tests](reports/perf-targets-2026-11-10/final-browser/results.json) |
-| Evidence index | [Manifest, scope and hashes](reports/evidence-manifest.json) |
-| Deployment | [Direct-route and source verification](reports/deployment.json) |
-| Accessibility | [Review notes](docs/accessibility-review.md) |
-| Design review | [Final Impeccable review](reports/perf-targets-2026-11-10/impeccable-final-review.md) |
+|---|---|
+| Unit/oracles | [109 passes](reports/memory-investigation-2026-11-10/release-final-v2/final-unit.json) |
+| Browser acceptance | [131 passes](reports/memory-investigation-2026-11-10/release-final-v2/final-browser/results.json) |
+| Actual visible source values | [Two-RAF/cell confirmation](reports/memory-investigation-2026-11-10/release-final-v2/visible-latency.json) |
+| Accessibility | [Fresh484 pixel dispositions](reports/memory-investigation-2026-11-10/release-final-v2/final-contrast/ledger.json) |
+| Memory | [Retaining chains](reports/memory-investigation-2026-11-10/release-final-v2/final-roundtrip/retainer-analysis.json), [native process counters](reports/memory-investigation-2026-11-10/release-final-v2/final-memory/results.json) |
+| Publication | [Direct routes and exact served bytes](reports/deployment.json) |
+| Design review | [Impeccable technical audit](reports/memory-investigation-2026-11-10/release-final-v2/impeccable-final-review.md) |
 
-Checks include source identity, the actual painted spike and gap, controlled races, gestures, keyboard access, responsive layouts, themes and axe. Passing tests do not certify scientific logger truth, every browser, every local oscillation or a real training-stop decision.
+**Expanded limits remain unmet for cold meaningful render, detail hover on entry, compare hover on entry, compare continuous hover. Stable sub-50 ms hover is not established. The demo is delivered with these measured limits; no 100/100 grade is asserted.** Earlier offscreen-readout timings do not prove readable on-screen values. The final criterion keeps current source DOM before both RAF callbacks and validates actual text geometry. Raw R05 storage is32,000,000 bytes; heap, owned buffers and native process memory are distinct, non-additive scopes. A real interrupted-drag listener leak and oversized raster cost were corrected; universal leak freedom is not claimed.
 
-<details>
-<summary><img src="assets/readme/soup-icons/soup-chart.png" width="24" height="24" alt="" /> Performance results and honest limits</summary>
-
-The million-row fixture contains four Float64 source columns totaling **32,000,000 bytes**. Indexes, payloads, heaps and browser process memory are additional scopes.
-
-Two same-source full Chrome trace runs meet all targets. Worst detail/Compare hover p95 is **40.6 / 48.6 ms**; cold is **2531.9 ms** and detail/Compare zoom is **114.8 / 131.4 ms**. Samples are not pooled; the no-trace regime is separate. CPU4 applies to the main renderer; Workers rejected throttling. Hover evidence includes pointer input through committed source DOM and a frame opportunity, not physical display presentation.
-
-The latest headless million-row process sample recorded **145.9 MiB private committed** and **245.6 MiB working set**, growing to **319.5 / 588.7 MiB** after 20 transitions. This is an explicit longer-session concern; no memory-saving or leak-freedom claim is made. Raw buffers, JS heap and process memory must not be added together as one total.
-
-[Measurements and methodology](docs/performance-results.md) · [Full engineering notes](docs/engineering-notes.md) · [Acceptance status](docs/implementation-status.md)
-
-</details>
+[Measurements](docs/performance-results.md) · [Acceptance map](docs/acceptance-matrix.md) · [Memory investigation](docs/memory-investigation.md)
 
 <details>
 <summary><img src="assets/readme/soup-icons/soup-recipe.png" width="24" height="24" alt="" /> Architecture, delivery and further reading</summary>

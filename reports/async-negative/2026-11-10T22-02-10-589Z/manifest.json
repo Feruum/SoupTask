@@ -1,0 +1,17 @@
+{
+  "executedAt": "2026-11-10T22:02:10.589Z",
+  "fault": "accept-stale",
+  "scope": "Vitest test-mode only; the production build eliminates this switch",
+  "node": "v24.22.1",
+  "exitCode": 1,
+  "expectedFailures": [
+    "bounds posts to one running and one latest view; rejects stale success and failure",
+    "stale hover never overwrites newer inspection and cannot displace a pending view",
+    "resize supersedes zoom and a duplicate reply cannot release a newer slot"
+  ],
+  "controllerHash": "1872c526b5c11aa3d30cfceb3a301bb413be3de0260107ec5809ba5f5cc61ed4",
+  "testHash": "14f809cc2948bccf4431e225e7062e734992628af7ad768846500e7031b14efb",
+  "report": "reports/async-negative/2026-11-10T22-02-10-589Z/results.json",
+  "log": "reports/async-negative/2026-11-10T22-02-10-589Z/output.txt",
+  "logHash": "18361941923fed435a6615688fd7433a12d68e68f217d0a7352c8359b2f99290"
+}

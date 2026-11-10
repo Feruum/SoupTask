@@ -1,0 +1,36 @@
+{
+  "runs": [
+    {
+      "result": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\interleaved-idle\\A1\\results.json",
+      "label": "A1",
+      "exitCode": 0,
+      "kind": "previous release"
+    },
+    {
+      "result": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\interleaved-idle\\B1\\results.json",
+      "label": "B1",
+      "exitCode": 0,
+      "kind": "candidate"
+    },
+    {
+      "result": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\interleaved-idle\\A2\\results.json",
+      "label": "A2",
+      "exitCode": 0,
+      "kind": "previous release"
+    },
+    {
+      "result": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\interleaved-idle\\B2\\results.json",
+      "label": "B2",
+      "exitCode": 0,
+      "kind": "candidate"
+    }
+  ],
+  "scope": "Fixed A/B/A/B full workloads on external power; same CPU4 main,30 interactions and original endpoint. Not randomized; all results retained. Agent-idle means no report processing/long response streaming during recording, except short bounded progress checks.",
+  "observerPolicy": "agent-idle",
+  "order": [
+    "A1",
+    "B1",
+    "A2",
+    "B2"
+  ]
+}

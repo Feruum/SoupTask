@@ -1,0 +1,203 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "scripts/acceptance.playwright.config.mjs",
+      "e2e/memory-lifecycle.spec.ts",
+      "--grep",
+      "activating source",
+      "--workers=1",
+      "--trace=off"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\scripts\\acceptance.playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+      "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+      "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/memory-investigation-2026-11-10/readout-style-red/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+          "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+          "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\readout-style-red\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+          "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+          "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "off",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\readout-style-red\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "memory-lifecycle.spec.ts",
+      "file": "memory-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "activating source observations does not change inherited font or paint containment geometry",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2800,
+                  "error": {
+                    "message": "Error: source-state marker must not change inherited numeric font or paint clip\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"fontSize\": \"12px\",\u001b[22m\n\u001b[2m    \"margin\": \"0px\",\u001b[22m\n\u001b[32m-   \"numeric\": \"normal\",\u001b[39m\n\u001b[31m+   \"numeric\": \"tabular-nums\",\u001b[39m\n\u001b[2m    \"padding\": \"0px\",\u001b[22m\n\u001b[32m-   \"radius\": \"0px\",\u001b[39m\n\u001b[31m+   \"radius\": \"6px\",\u001b[39m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: source-state marker must not change inherited numeric font or paint clip\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"fontSize\": \"12px\",\u001b[22m\n\u001b[2m    \"margin\": \"0px\",\u001b[22m\n\u001b[32m-   \"numeric\": \"normal\",\u001b[39m\n\u001b[31m+   \"numeric\": \"tabular-nums\",\u001b[39m\n\u001b[2m    \"padding\": \"0px\",\u001b[22m\n\u001b[32m-   \"radius\": \"0px\",\u001b[39m\n\u001b[31m+   \"radius\": \"6px\",\u001b[39m\n\u001b[2m  }\u001b[22m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts:78:104",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts",
+                      "column": 104,
+                      "line": 78
+                    },
+                    "snippet": " \u001b[90m 76 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mmove(rect\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mx\u001b[33m+\u001b[39mrect\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mwidth\u001b[33m*\u001b[39m\u001b[35m.45\u001b[39m\u001b[33m,\u001b[39mrect\u001b[33m!\u001b[39m\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mrect\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mheight\u001b[33m*\u001b[39m\u001b[35m.5\u001b[39m)\n \u001b[90m 77 |\u001b[39m  \u001b[36mawait\u001b[39m expect(content)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-hover-seq'\u001b[39m\u001b[33m,\u001b[39m\u001b[35m/\\d+/\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 78 |\u001b[39m  expect(\u001b[36mawait\u001b[39m appearance()\u001b[33m,\u001b[39m\u001b[32m'source-state marker must not change inherited numeric font or paint clip'\u001b[39m)\u001b[33m.\u001b[39mtoEqual(before)\n \u001b[90m    |\u001b[39m                                                                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 79 |\u001b[39m })\n \u001b[90m 80 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts",
+                        "column": 104,
+                        "line": 78
+                      },
+                      "message": "Error: source-state marker must not change inherited numeric font or paint clip\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 2\u001b[39m\n\u001b[31m+ Received  + 2\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[2m    \"fontSize\": \"12px\",\u001b[22m\n\u001b[2m    \"margin\": \"0px\",\u001b[22m\n\u001b[32m-   \"numeric\": \"normal\",\u001b[39m\n\u001b[31m+   \"numeric\": \"tabular-nums\",\u001b[39m\n\u001b[2m    \"padding\": \"0px\",\u001b[22m\n\u001b[32m-   \"radius\": \"0px\",\u001b[39m\n\u001b[31m+   \"radius\": \"6px\",\u001b[39m\n\u001b[2m  }\u001b[22m\n\n  76 |  await page.mouse.move(rect!.x+rect!.width*.45,rect!.y+rect!.height*.5)\n  77 |  await expect(content).toHaveAttribute('data-hover-seq',/\\d+/)\n> 78 |  expect(await appearance(),'source-state marker must not change inherited numeric font or paint clip').toEqual(before)\n     |                                                                                                        ^\n  79 | })\n  80 |\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts:78:104"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:24:11.627Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\readout-style-red\\artifacts\\memory-lifecycle-activatin-3ad69--paint-containment-geometry\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\readout-style-red\\artifacts\\memory-lifecycle-activatin-3ad69--paint-containment-geometry\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts",
+                    "column": 104,
+                    "line": 78
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-aa33122fb7f19b423015",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 69,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T20:24:08.706Z",
+    "duration": 7323.465999999999,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

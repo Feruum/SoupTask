@@ -1,0 +1,203 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "scripts/acceptance.playwright.config.mjs",
+      "e2e/memory-lifecycle.spec.ts",
+      "--grep",
+      "small decorative",
+      "--workers=1",
+      "--trace=off"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\scripts\\acceptance.playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "sourceCommit": "3ee28c5bc5eab20231c66f65035556e780cd6235",
+      "sourceHash": "e3a777235a582786136c5f826d4da0ccf6b69de4f0dcf8a6f443c518d61d65e2",
+      "buildHash": "a93cb395325d43016644fbd2a0daa60189f82c54f81c2b92bb8c31d20a5cab04",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/memory-investigation-2026-11-10/artwork-decode-red/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "3ee28c5bc5eab20231c66f65035556e780cd6235",
+          "sourceHash": "e3a777235a582786136c5f826d4da0ccf6b69de4f0dcf8a6f443c518d61d65e2",
+          "buildHash": "a93cb395325d43016644fbd2a0daa60189f82c54f81c2b92bb8c31d20a5cab04",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\artwork-decode-red\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "3ee28c5bc5eab20231c66f65035556e780cd6235",
+          "sourceHash": "e3a777235a582786136c5f826d4da0ccf6b69de4f0dcf8a6f443c518d61d65e2",
+          "buildHash": "a93cb395325d43016644fbd2a0daa60189f82c54f81c2b92bb8c31d20a5cab04",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "off",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\artwork-decode-red\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "memory-lifecycle.spec.ts",
+      "file": "memory-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "small decorative UI artwork does not decode a full-size source bitmap",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2649,
+                  "error": {
+                    "message": "Error: DPR1 artwork is at most128 CSS pixels; avoid1254px decode surfaces\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m128\u001b[39m\nReceived:    \u001b[31m1254\u001b[39m",
+                    "stack": "Error: DPR1 artwork is at most128 CSS pixels; avoid1254px decode surfaces\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m128\u001b[39m\nReceived:    \u001b[31m1254\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts:65:102",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts",
+                      "column": 102,
+                      "line": 65
+                    },
+                    "snippet": " \u001b[90m 63 |\u001b[39m  \u001b[36mconst\u001b[39m response\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39mget(src)\u001b[33m,\u001b[39mbytes\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mbody()\n \u001b[90m 64 |\u001b[39m  expect(bytes\u001b[33m.\u001b[39msubarray(\u001b[35m0\u001b[39m\u001b[33m,\u001b[39m\u001b[35m8\u001b[39m)\u001b[33m.\u001b[39mtoString(\u001b[32m'hex'\u001b[39m))\u001b[33m.\u001b[39mtoBe(\u001b[32m'89504e470d0a1a0a'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 65 |\u001b[39m  expect(bytes\u001b[33m.\u001b[39mreadUInt32BE(\u001b[35m16\u001b[39m)\u001b[33m,\u001b[39m\u001b[32m'DPR1 artwork is at most128 CSS pixels; avoid1254px decode surfaces'\u001b[39m)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(\u001b[35m128\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 66 |\u001b[39m  expect(bytes\u001b[33m.\u001b[39mreadUInt32BE(\u001b[35m20\u001b[39m))\u001b[33m.\u001b[39mtoBeLessThanOrEqual(\u001b[35m128\u001b[39m)\n \u001b[90m 67 |\u001b[39m })\n \u001b[90m 68 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts",
+                        "column": 102,
+                        "line": 65
+                      },
+                      "message": "Error: DPR1 artwork is at most128 CSS pixels; avoid1254px decode surfaces\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m128\u001b[39m\nReceived:    \u001b[31m1254\u001b[39m\n\n  63 |  const response=await page.request.get(src),bytes=await response.body()\n  64 |  expect(bytes.subarray(0,8).toString('hex')).toBe('89504e470d0a1a0a')\n> 65 |  expect(bytes.readUInt32BE(16),'DPR1 artwork is at most128 CSS pixels; avoid1254px decode surfaces').toBeLessThanOrEqual(128)\n     |                                                                                                      ^\n  66 |  expect(bytes.readUInt32BE(20)).toBeLessThanOrEqual(128)\n  67 | })\n  68 |\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts:65:102"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:29:02.537Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\artwork-decode-red\\artifacts\\memory-lifecycle-small-dec-59ee4-e-a-full-size-source-bitmap\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\artwork-decode-red\\artifacts\\memory-lifecycle-small-dec-59ee4-e-a-full-size-source-bitmap\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts",
+                    "column": 102,
+                    "line": 65
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-3628a88a0f73fc8652cb",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 57,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T19:28:59.576Z",
+    "duration": 7156.150000000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,5786 @@
+{
+  "sourceHash": "8d3e0a0a1264700e650b1e218c0d224ba8c4f7b71adab3ef0d9e2e4f39a440e3",
+  "buildHash": "5daf5b76898c4fc0cd9a5f50671589697b450d4030872542d2af24b215015300",
+  "method": "Meta MemLab B/T/F set-difference method, independently implemented parser; not a claim to have run the MemLab CLI. Heap object IDs from one persistent profiler session. Paths contain real heap edges. Loaded modules, font/Intl caches and bounded React alternates require contextual disposition.",
+  "results": [
+    {
+      "transitions": 1,
+      "baseline": "baseline",
+      "target": "target-1",
+      "final": "returned-1",
+      "candidateCount": 202815,
+      "candidateShallowBytes": 5718148,
+      "topCandidateClasses": [
+        [
+          "number | heap number",
+          134698
+        ],
+        [
+          "object | Object",
+          36176
+        ],
+        [
+          "object | Array",
+          6609
+        ],
+        [
+          "native | system / PropertyArray",
+          3289
+        ],
+        [
+          "array | (object elements)",
+          3260
+        ],
+        [
+          "native | system / FunctionTemplateInfo",
+          1678
+        ],
+        [
+          "native | system / AccessorPair",
+          1122
+        ],
+        [
+          "object shape | system / Map",
+          810
+        ],
+        [
+          "string | (string content omitted)",
+          610
+        ],
+        [
+          "code | system / UncompiledDataWithoutPreparseData",
+          561
+        ],
+        [
+          "closure | ",
+          509
+        ],
+        [
+          "code | system / FeedbackCell",
+          469
+        ],
+        [
+          "code | system / TrustedByteArray",
+          415
+        ],
+        [
+          "code | system / WeakFixedArray",
+          396
+        ],
+        [
+          "native | blink::UniqueElementData",
+          367
+        ],
+        [
+          "native | Text",
+          327
+        ],
+        [
+          "object shape | system / DescriptorArray",
+          296
+        ],
+        [
+          "code | system / LoadHandler",
+          233
+        ],
+        [
+          "array | ",
+          207
+        ],
+        [
+          "object | Fi",
+          204
+        ]
+      ],
+      "topCandidateSelfBytes": [
+        [
+          "number | heap number",
+          1616376
+        ],
+        [
+          "object | Object",
+          1014476
+        ],
+        [
+          "array | (object elements)",
+          759936
+        ],
+        [
+          "string | (string content omitted)",
+          360988
+        ],
+        [
+          "code | system / InstructionStream",
+          344768
+        ],
+        [
+          "native | system / JSArrayBufferData",
+          187032
+        ],
+        [
+          "native | system / FunctionTemplateInfo",
+          107392
+        ],
+        [
+          "object | Array",
+          105744
+        ],
+        [
+          "array | ",
+          82876
+        ],
+        [
+          "native | system / PropertyArray",
+          71680
+        ],
+        [
+          "code | system / TrustedByteArray",
+          59564
+        ],
+        [
+          "native | blink::HeapHashTableBacking<blink::HashTable<std::pair<blink::String, blink::TextDirection>, blink::KeyValuePa",
+          53280
+        ],
+        [
+          "native | blink::PlainTextNode",
+          49600
+        ],
+        [
+          "native | blink::UniqueElementData",
+          41104
+        ],
+        [
+          "object shape | system / DescriptorArray",
+          35516
+        ]
+      ],
+      "candidateDetachedNodes": 687,
+      "candidateChartCanvasNodes": 10,
+      "retainerPaths": [
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 1126px; height: 340px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 46651,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7942,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7944,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10066,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2692,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2694,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10064,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 229495,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 154617,
+              "name": "system / Context / scope @151629",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 58237,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 154997,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 516473,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 516487,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 1000355,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 515371,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 515375,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 516229,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 516231,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 710901,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 710573,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 714227,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 641033,
+              "name": "system / Context / scope @159973",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 641051,
+              "name": "system / Context / scope @159951",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 641381,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 1126px; height: 340px;\">",
+              "type": "native",
+              "via": "t"
+            }
+          ]
+        },
+        {
+          "target": "<div class=\"uplot u-hz\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089949,
+              "name": "<div class=\"uplot u-hz\">",
+              "type": "native",
+              "via": "l"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 400px; height: 240px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 874625,
+              "name": "<section class=\"chart-panel metric-loss\" data-run-ids=\"kazakh-sft-005,kazakh-sft-001,kazakh-sft-002,kazakh-sft-006\" data",
+              "type": "native",
+              "via": "19"
+            },
+            {
+              "id": 868579,
+              "name": "<section class=\"chart-panel metric-grad_norm\" data-run-ids=\"kazakh-sft-005,kazakh-sft-001,kazakh-sft-002,kazakh-sft-006\"",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 868801,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 868459,
+              "name": "<figure>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 868469,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 868863,
+              "name": "<div class=\"plot-host\" data-testid=\"comparison-grad\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 874009,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 400px; height: 240px;\">",
+              "type": "native",
+              "via": "8"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 400px; height: 240px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 874625,
+              "name": "<section class=\"chart-panel metric-loss\" data-run-ids=\"kazakh-sft-005,kazakh-sft-001,kazakh-sft-002,kazakh-sft-006\" data",
+              "type": "native",
+              "via": "19"
+            },
+            {
+              "id": 874719,
+              "name": "<section class=\"chart-panel metric-lr\" data-run-ids=\"kazakh-sft-005,kazakh-sft-001,kazakh-sft-002,kazakh-sft-006\" data-v",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 868575,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 868373,
+              "name": "<figure>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 868385,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 868913,
+              "name": "<div class=\"plot-host\" data-testid=\"comparison-lr\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-h",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 867135,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 400px; height: 240px;\">",
+              "type": "native",
+              "via": "8"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 854px; height: 340px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 1092079,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 1086699,
+              "name": "system / Context / scope @159973",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1090837,
+              "name": "system / Context / scope @159951",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 867001,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 854px; height: 340px;\">",
+              "type": "native",
+              "via": "t"
+            }
+          ]
+        },
+        {
+          "target": "<canvas width=\"0\" height=\"0\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1091887,
+              "name": "<canvas width=\"0\" height=\"0\">",
+              "type": "native",
+              "via": "u"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 46651,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7942,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7944,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10066,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2692,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2694,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10064,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 229495,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 154617,
+              "name": "system / Context / scope @151629",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 58237,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 154997,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 516473,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 516487,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 1000355,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 515371,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 515375,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 516229,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 516231,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 710901,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 710573,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 714227,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 641033,
+              "name": "system / Context / scope @159973",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 641051,
+              "name": "system / Context / scope @159951",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 641379,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 847469,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 847417,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 847415,
+              "name": "<section class=\"chart-panel metric-loss\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"4\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 847327,
+              "name": "<section class=\"chart-panel metric-grad_norm\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"4\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 847357,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 847329,
+              "name": "<figure>",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 847351,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "4"
+            },
+            {
+              "id": 847355,
+              "name": "<div class=\"plot-host\" data-testid=\"grad-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 847353,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 46651,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7942,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7944,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10066,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2692,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2694,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10064,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 229495,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 154617,
+              "name": "system / Context / scope @151629",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 58237,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 154997,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 516473,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 516487,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 1000355,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 515371,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 515375,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 516229,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 516231,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 710901,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 710573,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 714227,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 641033,
+              "name": "system / Context / scope @159973",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 641051,
+              "name": "system / Context / scope @159951",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 641379,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 847469,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 847417,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 847415,
+              "name": "<section class=\"chart-panel metric-loss\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"4\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 847371,
+              "name": "<section class=\"chart-panel metric-lr\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"4\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 847401,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 847373,
+              "name": "<figure>",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 847395,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "4"
+            },
+            {
+              "id": 847399,
+              "name": "<div class=\"plot-host\" data-testid=\"lr-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidden",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 847397,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<div class=\"uplot u-hz\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 46651,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7942,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7944,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10066,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2692,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2694,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10064,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 229495,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 154617,
+              "name": "system / Context / scope @151629",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 58237,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 154997,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 516473,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 516487,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 1000355,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 515371,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 515375,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 516229,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 516231,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 710901,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 710555,
+              "name": "<div class=\"uplot u-hz\">",
+              "type": "native",
+              "via": "l"
+            }
+          ]
+        },
+        {
+          "target": "<canvas width=\"0\" height=\"0\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 46651,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7942,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7944,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10066,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2692,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2694,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10064,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 229495,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 154617,
+              "name": "system / Context / scope @151629",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 58237,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 154997,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 516473,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 516487,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 1000355,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 515371,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 515375,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 516229,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 516231,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 710901,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 711511,
+              "name": "<canvas width=\"0\" height=\"0\">",
+              "type": "native",
+              "via": "u"
+            }
+          ]
+        },
+        {
+          "target": "<input aria-label=\"Compare kazakh-sft-005\" type=\"checkbox\" checked=\"\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 872767,
+              "name": "<div class=\"comparison-charts\">",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 872857,
+              "name": "<aside class=\"comparison-controls\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748325,
+              "name": "<details class=\"responsive-disclosure \" data-compact=\"false\" open=\"\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 743731,
+              "name": "<summary>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748413,
+              "name": "<div class=\"responsive-disclosure-body\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 743723,
+              "name": "<h2>",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 748415,
+              "name": "<dl class=\"comparison-facts\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 748441,
+              "name": "<fieldset>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 743617,
+              "name": "<legend class=\"sr-only\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 743555,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743463,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743375,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743403,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743307,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743393,
+              "name": "<input aria-label=\"Compare kazakh-sft-005\" type=\"checkbox\" checked=\"\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        },
+        {
+          "target": "<input aria-label=\"Compare kazakh-sft-003\" disabled=\"\" type=\"checkbox\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 872767,
+              "name": "<div class=\"comparison-charts\">",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 872857,
+              "name": "<aside class=\"comparison-controls\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748325,
+              "name": "<details class=\"responsive-disclosure \" data-compact=\"false\" open=\"\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 743731,
+              "name": "<summary>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748413,
+              "name": "<div class=\"responsive-disclosure-body\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 743723,
+              "name": "<h2>",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 748415,
+              "name": "<dl class=\"comparison-facts\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 748441,
+              "name": "<fieldset>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 743617,
+              "name": "<legend class=\"sr-only\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 743555,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743463,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743375,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743437,
+              "name": "<input aria-label=\"Compare kazakh-sft-003\" disabled=\"\" type=\"checkbox\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        },
+        {
+          "target": "<input aria-label=\"Compare kazakh-sft-006\" type=\"checkbox\" checked=\"\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 872767,
+              "name": "<div class=\"comparison-charts\">",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 872857,
+              "name": "<aside class=\"comparison-controls\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748325,
+              "name": "<details class=\"responsive-disclosure \" data-compact=\"false\" open=\"\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 743731,
+              "name": "<summary>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748413,
+              "name": "<div class=\"responsive-disclosure-body\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 743723,
+              "name": "<h2>",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 748415,
+              "name": "<dl class=\"comparison-facts\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 748441,
+              "name": "<fieldset>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 743617,
+              "name": "<legend class=\"sr-only\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 743555,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743463,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743375,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743403,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743307,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743245,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743295,
+              "name": "<input aria-label=\"Compare kazakh-sft-006\" type=\"checkbox\" checked=\"\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        },
+        {
+          "target": "<input aria-label=\"Compare kazakh-sft-007\" disabled=\"\" type=\"checkbox\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 872767,
+              "name": "<div class=\"comparison-charts\">",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 872857,
+              "name": "<aside class=\"comparison-controls\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748325,
+              "name": "<details class=\"responsive-disclosure \" data-compact=\"false\" open=\"\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 743731,
+              "name": "<summary>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748413,
+              "name": "<div class=\"responsive-disclosure-body\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 743723,
+              "name": "<h2>",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 748415,
+              "name": "<dl class=\"comparison-facts\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 748441,
+              "name": "<fieldset>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 743617,
+              "name": "<legend class=\"sr-only\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 743555,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743463,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743375,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743403,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743307,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743245,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743183,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743233,
+              "name": "<input aria-label=\"Compare kazakh-sft-007\" disabled=\"\" type=\"checkbox\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        },
+        {
+          "target": "<input aria-label=\"Compare kazakh-sft-008\" disabled=\"\" type=\"checkbox\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 872767,
+              "name": "<div class=\"comparison-charts\">",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 872857,
+              "name": "<aside class=\"comparison-controls\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748325,
+              "name": "<details class=\"responsive-disclosure \" data-compact=\"false\" open=\"\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 743731,
+              "name": "<summary>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748413,
+              "name": "<div class=\"responsive-disclosure-body\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 743723,
+              "name": "<h2>",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 748415,
+              "name": "<dl class=\"comparison-facts\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 748441,
+              "name": "<fieldset>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 743617,
+              "name": "<legend class=\"sr-only\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 743555,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743463,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743375,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743403,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743307,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743245,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743183,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743121,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743171,
+              "name": "<input aria-label=\"Compare kazakh-sft-008\" disabled=\"\" type=\"checkbox\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        },
+        {
+          "target": "<input aria-label=\"Compare kazakh-sft-009\" disabled=\"\" type=\"checkbox\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 872767,
+              "name": "<div class=\"comparison-charts\">",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 872857,
+              "name": "<aside class=\"comparison-controls\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748325,
+              "name": "<details class=\"responsive-disclosure \" data-compact=\"false\" open=\"\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 743731,
+              "name": "<summary>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748413,
+              "name": "<div class=\"responsive-disclosure-body\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 743723,
+              "name": "<h2>",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 748415,
+              "name": "<dl class=\"comparison-facts\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 748441,
+              "name": "<fieldset>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 743617,
+              "name": "<legend class=\"sr-only\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 743555,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743463,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743375,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743403,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743307,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743245,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743183,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743121,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743059,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743109,
+              "name": "<input aria-label=\"Compare kazakh-sft-009\" disabled=\"\" type=\"checkbox\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        }
+      ],
+      "pathsWithoutReactAlternateEdges": [
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 1126px; height: 340px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 46651,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7942,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7944,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10066,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2692,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2694,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10064,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 229495,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 154617,
+              "name": "system / Context / scope @151629",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 58237,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 154997,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 516473,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 516487,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 1000355,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 515371,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 515375,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 516229,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 516231,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 710901,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 710573,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 714227,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 641033,
+              "name": "system / Context / scope @159973",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 641051,
+              "name": "system / Context / scope @159951",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 641381,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 1126px; height: 340px;\">",
+              "type": "native",
+              "via": "t"
+            }
+          ]
+        },
+        {
+          "target": "<div class=\"uplot u-hz\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089949,
+              "name": "<div class=\"uplot u-hz\">",
+              "type": "native",
+              "via": "l"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 400px; height: 240px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 874625,
+              "name": "<section class=\"chart-panel metric-loss\" data-run-ids=\"kazakh-sft-005,kazakh-sft-001,kazakh-sft-002,kazakh-sft-006\" data",
+              "type": "native",
+              "via": "19"
+            },
+            {
+              "id": 868579,
+              "name": "<section class=\"chart-panel metric-grad_norm\" data-run-ids=\"kazakh-sft-005,kazakh-sft-001,kazakh-sft-002,kazakh-sft-006\"",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 868801,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 868459,
+              "name": "<figure>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 868469,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 868863,
+              "name": "<div class=\"plot-host\" data-testid=\"comparison-grad\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 874009,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 400px; height: 240px;\">",
+              "type": "native",
+              "via": "8"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 400px; height: 240px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 874625,
+              "name": "<section class=\"chart-panel metric-loss\" data-run-ids=\"kazakh-sft-005,kazakh-sft-001,kazakh-sft-002,kazakh-sft-006\" data",
+              "type": "native",
+              "via": "19"
+            },
+            {
+              "id": 874719,
+              "name": "<section class=\"chart-panel metric-lr\" data-run-ids=\"kazakh-sft-005,kazakh-sft-001,kazakh-sft-002,kazakh-sft-006\" data-v",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 868575,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 868373,
+              "name": "<figure>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 868385,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 868913,
+              "name": "<div class=\"plot-host\" data-testid=\"comparison-lr\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-h",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 867135,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 400px; height: 240px;\">",
+              "type": "native",
+              "via": "8"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 854px; height: 340px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 1092079,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 1086699,
+              "name": "system / Context / scope @159973",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1090837,
+              "name": "system / Context / scope @159951",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 867001,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 854px; height: 340px;\">",
+              "type": "native",
+              "via": "t"
+            }
+          ]
+        },
+        {
+          "target": "<canvas width=\"0\" height=\"0\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1091887,
+              "name": "<canvas width=\"0\" height=\"0\">",
+              "type": "native",
+              "via": "u"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 46651,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7942,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7944,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10066,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2692,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2694,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10064,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 229495,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 154617,
+              "name": "system / Context / scope @151629",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 58237,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 154997,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 516473,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 516487,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 1000355,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 515371,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 515375,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 516229,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 516231,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 710901,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 710573,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 714227,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 641033,
+              "name": "system / Context / scope @159973",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 641051,
+              "name": "system / Context / scope @159951",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 641379,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 847469,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 847417,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 847415,
+              "name": "<section class=\"chart-panel metric-loss\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"4\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 847327,
+              "name": "<section class=\"chart-panel metric-grad_norm\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"4\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 847357,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 847329,
+              "name": "<figure>",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 847351,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "4"
+            },
+            {
+              "id": 847355,
+              "name": "<div class=\"plot-host\" data-testid=\"grad-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 847353,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 46651,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7942,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7944,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10066,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2692,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2694,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10064,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 229495,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 154617,
+              "name": "system / Context / scope @151629",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 58237,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 154997,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 516473,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 516487,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 1000355,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 515371,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 515375,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 516229,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 516231,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 710901,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 710573,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 714227,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 641033,
+              "name": "system / Context / scope @159973",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 641051,
+              "name": "system / Context / scope @159951",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 641379,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 847469,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 847417,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 847415,
+              "name": "<section class=\"chart-panel metric-loss\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"4\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 847371,
+              "name": "<section class=\"chart-panel metric-lr\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"4\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 847401,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 847373,
+              "name": "<figure>",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 847395,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "4"
+            },
+            {
+              "id": 847399,
+              "name": "<div class=\"plot-host\" data-testid=\"lr-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidden",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 847397,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<div class=\"uplot u-hz\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 46651,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7942,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7944,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10066,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2692,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2694,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10064,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 229495,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 154617,
+              "name": "system / Context / scope @151629",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 58237,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 154997,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 516473,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 516487,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 1000355,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 515371,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 515375,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 516229,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 516231,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 710901,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 710555,
+              "name": "<div class=\"uplot u-hz\">",
+              "type": "native",
+              "via": "l"
+            }
+          ]
+        },
+        {
+          "target": "<canvas width=\"0\" height=\"0\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 46651,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7942,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7944,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10066,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2692,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2694,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10064,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 229495,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 154617,
+              "name": "system / Context / scope @151629",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 58237,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 154997,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 516473,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 516487,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 1000355,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 515371,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 515375,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 516229,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 516231,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 710901,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 711511,
+              "name": "<canvas width=\"0\" height=\"0\">",
+              "type": "native",
+              "via": "u"
+            }
+          ]
+        },
+        {
+          "target": "<input aria-label=\"Compare kazakh-sft-005\" type=\"checkbox\" checked=\"\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 872767,
+              "name": "<div class=\"comparison-charts\">",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 872857,
+              "name": "<aside class=\"comparison-controls\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748325,
+              "name": "<details class=\"responsive-disclosure \" data-compact=\"false\" open=\"\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 743731,
+              "name": "<summary>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748413,
+              "name": "<div class=\"responsive-disclosure-body\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 743723,
+              "name": "<h2>",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 748415,
+              "name": "<dl class=\"comparison-facts\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 748441,
+              "name": "<fieldset>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 743617,
+              "name": "<legend class=\"sr-only\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 743555,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743463,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743375,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743403,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743307,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743393,
+              "name": "<input aria-label=\"Compare kazakh-sft-005\" type=\"checkbox\" checked=\"\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        },
+        {
+          "target": "<input aria-label=\"Compare kazakh-sft-003\" disabled=\"\" type=\"checkbox\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 872767,
+              "name": "<div class=\"comparison-charts\">",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 872857,
+              "name": "<aside class=\"comparison-controls\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748325,
+              "name": "<details class=\"responsive-disclosure \" data-compact=\"false\" open=\"\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 743731,
+              "name": "<summary>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748413,
+              "name": "<div class=\"responsive-disclosure-body\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 743723,
+              "name": "<h2>",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 748415,
+              "name": "<dl class=\"comparison-facts\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 748441,
+              "name": "<fieldset>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 743617,
+              "name": "<legend class=\"sr-only\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 743555,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743463,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743375,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743437,
+              "name": "<input aria-label=\"Compare kazakh-sft-003\" disabled=\"\" type=\"checkbox\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        },
+        {
+          "target": "<input aria-label=\"Compare kazakh-sft-006\" type=\"checkbox\" checked=\"\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 872767,
+              "name": "<div class=\"comparison-charts\">",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 872857,
+              "name": "<aside class=\"comparison-controls\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748325,
+              "name": "<details class=\"responsive-disclosure \" data-compact=\"false\" open=\"\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 743731,
+              "name": "<summary>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748413,
+              "name": "<div class=\"responsive-disclosure-body\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 743723,
+              "name": "<h2>",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 748415,
+              "name": "<dl class=\"comparison-facts\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 748441,
+              "name": "<fieldset>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 743617,
+              "name": "<legend class=\"sr-only\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 743555,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743463,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743375,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743403,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743307,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743245,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743295,
+              "name": "<input aria-label=\"Compare kazakh-sft-006\" type=\"checkbox\" checked=\"\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        },
+        {
+          "target": "<input aria-label=\"Compare kazakh-sft-007\" disabled=\"\" type=\"checkbox\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 872767,
+              "name": "<div class=\"comparison-charts\">",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 872857,
+              "name": "<aside class=\"comparison-controls\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748325,
+              "name": "<details class=\"responsive-disclosure \" data-compact=\"false\" open=\"\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 743731,
+              "name": "<summary>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748413,
+              "name": "<div class=\"responsive-disclosure-body\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 743723,
+              "name": "<h2>",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 748415,
+              "name": "<dl class=\"comparison-facts\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 748441,
+              "name": "<fieldset>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 743617,
+              "name": "<legend class=\"sr-only\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 743555,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743463,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743375,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743403,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743307,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743245,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743183,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743233,
+              "name": "<input aria-label=\"Compare kazakh-sft-007\" disabled=\"\" type=\"checkbox\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        },
+        {
+          "target": "<input aria-label=\"Compare kazakh-sft-008\" disabled=\"\" type=\"checkbox\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 872767,
+              "name": "<div class=\"comparison-charts\">",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 872857,
+              "name": "<aside class=\"comparison-controls\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748325,
+              "name": "<details class=\"responsive-disclosure \" data-compact=\"false\" open=\"\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 743731,
+              "name": "<summary>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748413,
+              "name": "<div class=\"responsive-disclosure-body\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 743723,
+              "name": "<h2>",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 748415,
+              "name": "<dl class=\"comparison-facts\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 748441,
+              "name": "<fieldset>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 743617,
+              "name": "<legend class=\"sr-only\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 743555,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743463,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743375,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743403,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743307,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743245,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743183,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743121,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743171,
+              "name": "<input aria-label=\"Compare kazakh-sft-008\" disabled=\"\" type=\"checkbox\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        },
+        {
+          "target": "<input aria-label=\"Compare kazakh-sft-009\" disabled=\"\" type=\"checkbox\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7393,
+              "name": "InjectedScript",
+              "type": "object",
+              "via": "9 / DevTools console"
+            },
+            {
+              "id": 136837,
+              "name": "HTMLDocument",
+              "type": "native",
+              "via": "document"
+            },
+            {
+              "id": 8526,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "73"
+            },
+            {
+              "id": 32126,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "2"
+            },
+            {
+              "id": 25280,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 25282,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 32124,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 850527,
+              "name": "",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 850531,
+              "name": "system / Context / scope @165083",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 850533,
+              "name": "Ca",
+              "type": "closure",
+              "via": "n"
+            },
+            {
+              "id": 1087157,
+              "name": "system / Context / scope @159993",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 1089967,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 847209,
+              "name": "MouseEvent",
+              "type": "native",
+              "via": "event"
+            },
+            {
+              "id": 33438,
+              "name": "blink::EventPath",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 33440,
+              "name": "blink::HeapVectorBacking<blink::NodeEventContext>",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 872767,
+              "name": "<div class=\"comparison-charts\">",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 872857,
+              "name": "<aside class=\"comparison-controls\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748325,
+              "name": "<details class=\"responsive-disclosure \" data-compact=\"false\" open=\"\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 743731,
+              "name": "<summary>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 748413,
+              "name": "<div class=\"responsive-disclosure-body\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 743723,
+              "name": "<h2>",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 748415,
+              "name": "<dl class=\"comparison-facts\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 748441,
+              "name": "<fieldset>",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 743617,
+              "name": "<legend class=\"sr-only\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 743555,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743463,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743375,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743403,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743307,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743245,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743183,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743121,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743059,
+              "name": "<label class=\"run-checkbox\">",
+              "type": "native",
+              "via": "10"
+            },
+            {
+              "id": 743109,
+              "name": "<input aria-label=\"Compare kazakh-sft-009\" disabled=\"\" type=\"checkbox\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        }
+      ],
+      "interpretation": "(T minus B) intersect F is a superset, not a verdict. Strong-edge BFS excludes weak edges. Alternate-edge exclusion is a separate diagnostic path search, not proof that all React-retained objects are leaks. Native resource ownership sizes require MemoryInfra."
+    }
+  ]
+}

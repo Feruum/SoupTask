@@ -2,24 +2,24 @@
  RUN  v5.1.0 C:/Users/Ferumm/projects/soupTask
 
  ✓ src/core/topology.test.ts (2 tests) 7ms
- ❯ src/core/engine.test.ts (10 tests | 7 failed) 386ms
-   × exact spike provenance width 1 96ms
-   × exact spike provenance width 320 65ms
-   × exact spike provenance width 768 57ms
-   × exact spike provenance width 1440 45ms
+ ❯ src/core/engine.test.ts (10 tests | 7 failed) 375ms
+   × exact spike provenance width 1 85ms
+   × exact spike provenance width 320 69ms
+   × exact spike provenance width 768 60ms
+   × exact spike provenance width 1440 44ms
    × excludes offscreen spike and includes inclusive endpoints/single step 1ms
-   × independent raw-window oracle preserves both extrema and exact provenance on seeded cases 3ms
-   ✓ discloses dense disconnected mode while retaining exact finite extrema 85ms
-   × independent interval oracle checks every bucket and segment first/min/max/last 4ms
+   × independent raw-window oracle preserves both extrema and exact provenance on seeded cases 2ms
+   ✓ discloses dense disconnected mode while retaining exact finite extrema 86ms
+   × independent interval oracle checks every bucket and segment first/min/max/last 3ms
    ✓ duplicate-group inspection exposes total and every page without unbounded objects 2ms
-   ✓ final pending segment cannot exceed the topology cap after its last flush 24ms
+   ✓ final pending segment cannot exceed the topology cap after its last flush 19ms
 
  Test Files  1 failed | 1 passed (2)
       Tests  7 failed | 5 passed (12)
-   Start at  18:13:19
-   Duration  1.04s (tests 49%, import 45%, transform 4%, worker 3%)
+   Start at  03:02:06
+   Duration  1.00s (tests 50%, import 44%, transform 4%, worker 3%)
 
-JSON report written to C:/Users/Ferumm/projects/soupTask/reports/negative-controls/2026-11-10T13-13-16-942Z/mean.json
+JSON report written to C:/Users/Ferumm/projects/soupTask/reports/negative-controls/2026-11-10T22-02-03-847Z/mean.json
 
 ⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
 

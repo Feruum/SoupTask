@@ -1,0 +1,4617 @@
+{
+  "sourceHash": "e3a777235a582786136c5f826d4da0ccf6b69de4f0dcf8a6f443c518d61d65e2",
+  "buildHash": "a93cb395325d43016644fbd2a0daa60189f82c54f81c2b92bb8c31d20a5cab04",
+  "scope": "Detailed Chromium MemoryInfra, unambiguously associated through begin/end UserTiming spans. Renderer and other process providers remain separate. Per-category frontier selects topmost provided paths to avoid nested double counting; categories must not be added to OS footprint or treated as universal tab/GPU totals. Root effective_size, size and allocated_objects_size are preserved. Missing provider values are not evidence of zero native use. B/T/F snapshots force GC and load profiler metadata: these are diagnostic allocations, not natural-GC footprint benchmarks.",
+  "samples": [
+    {
+      "label": "baseline",
+      "rendererPid": 22476,
+      "cdpReturnedGuid": "0x1",
+      "traceDumpIds": [
+        "0x0"
+      ],
+      "association": "One unique native dump group within explicit request begin/end UserTiming span. Raw GUIDs retained; no assumption that trace IDs equal CDP-returned IDs.",
+      "rendererProcessTotals": {
+        "is_peak_rss_resettable": false,
+        "peak_resident_set_size": "0",
+        "private_footprint_bytes": "44a9000"
+      },
+      "categories": {
+        "malloc": {
+          "root": {
+            "allocated_objects_size": 26079602,
+            "effective_size": 41259680,
+            "size": 41858832,
+            "virtual_size": 242529344
+          },
+          "effectiveFrontier": {
+            "bytes": 41259680,
+            "paths": [
+              [
+                "malloc",
+                41259680
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 41858832,
+            "paths": [
+              [
+                "malloc",
+                41858832
+              ]
+            ]
+          }
+        },
+        "partition_alloc": {
+          "root": {
+            "effective_size": 3442392,
+            "size": 4842770
+          },
+          "effectiveFrontier": {
+            "bytes": 3442392,
+            "paths": [
+              [
+                "partition_alloc",
+                3442392
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 4842770,
+            "paths": [
+              [
+                "partition_alloc",
+                4842770
+              ]
+            ]
+          }
+        },
+        "v8": {
+          "root": {
+            "effective_size": 6045660,
+            "size": 6045660
+          },
+          "effectiveFrontier": {
+            "bytes": 6045660,
+            "paths": [
+              [
+                "v8",
+                6045660
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 6045660,
+            "paths": [
+              [
+                "v8",
+                6045660
+              ]
+            ]
+          }
+        },
+        "blink_gc": {
+          "root": {
+            "effective_size": 4991823,
+            "size": 6160384
+          },
+          "effectiveFrontier": {
+            "bytes": 4991823,
+            "paths": [
+              [
+                "blink_gc",
+                4991823
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 6160384,
+            "paths": [
+              [
+                "blink_gc",
+                6160384
+              ]
+            ]
+          }
+        },
+        "blink_objects": {
+          "root": {
+            "effective_size": 1168552,
+            "size": 1168552
+          },
+          "effectiveFrontier": {
+            "bytes": 1168552,
+            "paths": [
+              [
+                "blink_objects",
+                1168552
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 1168552,
+            "paths": [
+              [
+                "blink_objects",
+                1168552
+              ]
+            ]
+          }
+        },
+        "cc": {
+          "root": {
+            "effective_size": 22196224,
+            "size": 31686656
+          },
+          "effectiveFrontier": {
+            "bytes": 22196224,
+            "paths": [
+              [
+                "cc",
+                22196224
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 31686656,
+            "paths": [
+              [
+                "cc",
+                31686656
+              ]
+            ]
+          }
+        },
+        "gpu": {
+          "root": {},
+          "effectiveFrontier": {
+            "bytes": 0,
+            "paths": []
+          },
+          "sizeFrontier": {
+            "bytes": 0,
+            "paths": []
+          }
+        },
+        "skia": {
+          "root": {
+            "effective_size": 200220,
+            "size": 200220
+          },
+          "effectiveFrontier": {
+            "bytes": 200220,
+            "paths": [
+              [
+                "skia",
+                200220
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 200220,
+            "paths": [
+              [
+                "skia",
+                200220
+              ]
+            ]
+          }
+        },
+        "discardable": {
+          "root": {
+            "effective_size": 4096,
+            "size": 12587008
+          },
+          "effectiveFrontier": {
+            "bytes": 4096,
+            "paths": [
+              [
+                "discardable",
+                4096
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 12587008,
+            "paths": [
+              [
+                "discardable",
+                12587008
+              ]
+            ]
+          }
+        },
+        "web_cache": {
+          "root": {
+            "effective_size": 1863739,
+            "size": 1863739
+          },
+          "effectiveFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          }
+        }
+      },
+      "topRendererSizeEntries": [
+        {
+          "path": "malloc",
+          "allocated_objects_size": 26079602,
+          "effective_size": 41259680,
+          "size": 41858832,
+          "virtual_size": 242529344
+        },
+        {
+          "path": "malloc/partitions",
+          "allocated_objects_size": 24760108,
+          "brp_quarantined_bytes_per_minute": 3944149,
+          "effective_size": 15142708,
+          "size": 39902816,
+          "virtual_committed_size": 32092160,
+          "virtual_size": 241172480,
+          "wasted": 7332052
+        },
+        {
+          "path": "malloc/partitions/allocator",
+          "aligned_alloc_wasted_size": 170848,
+          "allocated_objects_size": 24601964,
+          "allocated_size": 24720000,
+          "brp_quarantined_size": 64,
+          "decommittable_size": 3485696,
+          "discardable_size": 1716224,
+          "effective_size": 15046900,
+          "intended_leak_size": 0,
+          "max_allocated_size": 200027648,
+          "max_committed_size": 211714048,
+          "size": 39648864,
+          "virtual_committed_size": 31838208,
+          "virtual_size": 239075328,
+          "wasted": 7236244
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets",
+          "effective_size": 7236244,
+          "size": 31838208
+        },
+        {
+          "path": "shared_memory",
+          "effective_size": 9583411,
+          "size": 31735808
+        },
+        {
+          "path": "cc",
+          "effective_size": 22196224,
+          "size": 31686656
+        },
+        {
+          "path": "malloc/allocated_objects",
+          "effective_size": 26079602,
+          "size": 26678754
+        },
+        {
+          "path": "malloc/allocated_objects/partitions",
+          "effective_size": 24760108,
+          "size": 24760108
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator",
+          "effective_size": 24601964,
+          "size": 24601964
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets",
+          "effective_size": 24601964,
+          "size": 24601964
+        },
+        {
+          "path": "cc/tile_memory",
+          "effective_size": 9613312,
+          "size": 19103744
+        },
+        {
+          "path": "cc/tile_memory/provider_511230889",
+          "effective_size": 9613312,
+          "size": 19103744
+        },
+        {
+          "path": "discardable",
+          "effective_size": 4096,
+          "size": 12587008
+        },
+        {
+          "path": "cc/image_memory",
+          "effective_size": 12582912,
+          "size": 12582912
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0",
+          "effective_size": 12582912,
+          "size": 12582912
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0/at_raster",
+          "effective_size": 12582912,
+          "size": 12582912
+        },
+        {
+          "path": "malloc/partitions/allocator/thread_cache",
+          "effective_size": 7810656,
+          "metadata_overhead": 41440,
+          "size": 7810656
+        },
+        {
+          "path": "malloc/partitions/allocator/thread_cache/<unspecified>",
+          "effective_size": 7777216,
+          "size": 7777216
+        },
+        {
+          "path": "discardable/segment_1",
+          "effective_size": 4096,
+          "size": 6295552,
+          "virtual_size": 6291456
+        },
+        {
+          "path": "shared_memory/F4F08BE59EF8A4BDBDAA9078F666089A",
+          "size": 6295552,
+          "virtual_size": 6295552
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0/at_raster/image_0_id_0",
+          "effective_size": 6291456,
+          "locked_size": 0,
+          "size": 6291456
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0/at_raster/image_2_id_842304669",
+          "effective_size": 6291456,
+          "locked_size": 0,
+          "size": 6291456
+        },
+        {
+          "path": "discardable/segment_0",
+          "size": 6291456,
+          "virtual_size": 6291456
+        },
+        {
+          "path": "discardable/segment_0/allocated_objects",
+          "locked_size": 0,
+          "size": 6291456
+        },
+        {
+          "path": "discardable/segment_0/allocated_objects/__dde26b4cf0248889",
+          "size": 6291456
+        },
+        {
+          "path": "discardable/segment_1/allocated_objects",
+          "locked_size": 0,
+          "size": 6291456
+        },
+        {
+          "path": "discardable/segment_1/allocated_objects/__820a5453c0a79ab6",
+          "size": 6291456
+        },
+        {
+          "path": "shared_memory/E5583B808B9C0A120A9E41A716D2E601",
+          "size": 6291456,
+          "virtual_size": 6295552
+        },
+        {
+          "path": "blink_gc",
+          "effective_size": 4991823,
+          "size": 6160384
+        },
+        {
+          "path": "blink_gc/main",
+          "effective_size": 4991823,
+          "size": 6160384
+        },
+        {
+          "path": "blink_gc/main/heap",
+          "allocated_objects_size": 1168552,
+          "committed_size": 6160384,
+          "effective_size": 4991823,
+          "pooled_size": 0,
+          "size": 6160384
+        },
+        {
+          "path": "v8",
+          "effective_size": 6045660,
+          "size": 6045660
+        },
+        {
+          "path": "v8/main",
+          "effective_size": 6045660,
+          "size": 6045660
+        },
+        {
+          "path": "v8/main/heap",
+          "effective_size": 5836800,
+          "size": 5836800
+        },
+        {
+          "path": "partition_alloc",
+          "effective_size": 3442392,
+          "size": 4842770
+        }
+      ],
+      "processes": {
+        "22476": {
+          "allocatorCount": 4906,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "44a9000"
+          },
+          "roots": {
+            "blink_gc": {
+              "effective_size": 4991823,
+              "size": 6160384
+            },
+            "blink_objects": {
+              "effective_size": 1168552,
+              "size": 1168552
+            },
+            "cc": {
+              "effective_size": 22196224,
+              "size": 31686656
+            },
+            "discardable": {
+              "effective_size": 4096,
+              "size": 12587008
+            },
+            "malloc": {
+              "allocated_objects_size": 26079602,
+              "effective_size": 41259680,
+              "size": 41858832,
+              "virtual_size": 242529344
+            },
+            "mojo": {},
+            "parkable_images": {
+              "on_disk_size": 0,
+              "total_size": 272408,
+              "unparked_size": 272408
+            },
+            "parkable_strings": {
+              "compressed_size": 0,
+              "metadata_size": 0,
+              "on_disk_footprint": 0,
+              "on_disk_free_chunks": 0,
+              "on_disk_size": 0,
+              "original_size": 0,
+              "overhead_size": 0,
+              "savings_size": 0,
+              "uncompressed_size": 0
+            },
+            "partition_alloc": {
+              "effective_size": 3442392,
+              "size": 4842770
+            },
+            "shared_memory": {
+              "effective_size": 9583411,
+              "size": 31735808
+            },
+            "site_storage": {},
+            "skia": {
+              "effective_size": 200220,
+              "size": 200220
+            },
+            "v8": {
+              "effective_size": 6045660,
+              "size": 6045660
+            },
+            "web_cache": {
+              "effective_size": 1863739,
+              "size": 1863739
+            }
+          }
+        },
+        "20292": {
+          "allocatorCount": 495,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1398000"
+          },
+          "roots": {
+            "cc": {},
+            "devtools": {},
+            "discardable": {
+              "size": 8192
+            },
+            "frame_evictor": {},
+            "leveldatabase": {
+              "effective_size": 12551,
+              "size": 16655
+            },
+            "malloc": {
+              "allocated_objects_size": 5987593,
+              "effective_size": 7612416,
+              "size": 7915991,
+              "virtual_size": 17776832
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 625459,
+              "size": 729088
+            },
+            "site_storage": {
+              "size": 87224
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 303336,
+              "malloc_high_wmark_size": 315248,
+              "size": 303336
+            }
+          }
+        },
+        "23516": {
+          "allocatorCount": 592,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1c43000"
+          },
+          "roots": {
+            "cc": {
+              "size": 2621440
+            },
+            "discardable": {},
+            "gpu": {
+              "size": 19103744
+            },
+            "malloc": {
+              "allocated_objects_size": 11098969,
+              "effective_size": 11978640,
+              "size": 11978640,
+              "virtual_size": 16498000
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 68403,
+              "size": 19226624
+            },
+            "skia": {}
+          }
+        },
+        "19500": {
+          "allocatorCount": 533,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "f81000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 5213274,
+              "effective_size": 6012672,
+              "size": 6012672,
+              "virtual_size": 9821632
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 33587,
+              "size": 65536
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 40848,
+              "size": 40848
+            },
+            "global": {
+              "effective_size": 91328,
+              "size": 51762368
+            }
+          }
+        },
+        "27688": {
+          "allocatorCount": 296,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "f28000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 1724662,
+              "effective_size": 2116624,
+              "size": 2116624,
+              "virtual_size": 5255520
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 56115,
+              "size": 114688
+            },
+            "skia": {}
+          }
+        }
+      }
+    },
+    {
+      "label": "target-1",
+      "rendererPid": 22476,
+      "cdpReturnedGuid": "0x2",
+      "traceDumpIds": [
+        "0x1"
+      ],
+      "association": "One unique native dump group within explicit request begin/end UserTiming span. Raw GUIDs retained; no assumption that trace IDs equal CDP-returned IDs.",
+      "rendererProcessTotals": {
+        "is_peak_rss_resettable": false,
+        "peak_resident_set_size": "0",
+        "private_footprint_bytes": "b999000"
+      },
+      "categories": {
+        "malloc": {
+          "root": {
+            "allocated_objects_size": 53617225,
+            "effective_size": 73501024,
+            "size": 78049732,
+            "virtual_size": 313841952
+          },
+          "effectiveFrontier": {
+            "bytes": 73501024,
+            "paths": [
+              [
+                "malloc",
+                73501024
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 78049732,
+            "paths": [
+              [
+                "malloc",
+                78049732
+              ]
+            ]
+          }
+        },
+        "partition_alloc": {
+          "root": {
+            "effective_size": 84338520,
+            "size": 85738898
+          },
+          "effectiveFrontier": {
+            "bytes": 84338520,
+            "paths": [
+              [
+                "partition_alloc",
+                84338520
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 85738898,
+            "paths": [
+              [
+                "partition_alloc",
+                85738898
+              ]
+            ]
+          }
+        },
+        "v8": {
+          "root": {
+            "effective_size": 17998800,
+            "size": 17998800
+          },
+          "effectiveFrontier": {
+            "bytes": 17998800,
+            "paths": [
+              [
+                "v8",
+                17998800
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 17998800,
+            "paths": [
+              [
+                "v8",
+                17998800
+              ]
+            ]
+          }
+        },
+        "blink_gc": {
+          "root": {
+            "effective_size": 4850016,
+            "size": 7340032
+          },
+          "effectiveFrontier": {
+            "bytes": 4850016,
+            "paths": [
+              [
+                "blink_gc",
+                4850016
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 7340032,
+            "paths": [
+              [
+                "blink_gc",
+                7340032
+              ]
+            ]
+          }
+        },
+        "blink_objects": {
+          "root": {
+            "effective_size": 2490016,
+            "size": 2490016
+          },
+          "effectiveFrontier": {
+            "bytes": 2490016,
+            "paths": [
+              [
+                "blink_objects",
+                2490016
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 2490016,
+            "paths": [
+              [
+                "blink_objects",
+                2490016
+              ]
+            ]
+          }
+        },
+        "cc": {
+          "root": {
+            "effective_size": 41070592,
+            "size": 50561024
+          },
+          "effectiveFrontier": {
+            "bytes": 41070592,
+            "paths": [
+              [
+                "cc",
+                41070592
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 50561024,
+            "paths": [
+              [
+                "cc",
+                50561024
+              ]
+            ]
+          }
+        },
+        "gpu": {
+          "root": {},
+          "effectiveFrontier": {
+            "bytes": 0,
+            "paths": []
+          },
+          "sizeFrontier": {
+            "bytes": 0,
+            "paths": []
+          }
+        },
+        "skia": {
+          "root": {
+            "effective_size": 203868,
+            "size": 203868
+          },
+          "effectiveFrontier": {
+            "bytes": 203868,
+            "paths": [
+              [
+                "skia",
+                203868
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 203868,
+            "paths": [
+              [
+                "skia",
+                203868
+              ]
+            ]
+          }
+        },
+        "discardable": {
+          "root": {
+            "effective_size": 16384,
+            "size": 31473664
+          },
+          "effectiveFrontier": {
+            "bytes": 16384,
+            "paths": [
+              [
+                "discardable",
+                16384
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 31473664,
+            "paths": [
+              [
+                "discardable",
+                31473664
+              ]
+            ]
+          }
+        },
+        "web_cache": {
+          "root": {
+            "effective_size": 1863739,
+            "size": 1863739
+          },
+          "effectiveFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          }
+        }
+      },
+      "topRendererSizeEntries": [
+        {
+          "path": "partition_alloc",
+          "effective_size": 84338520,
+          "size": 85738898
+        },
+        {
+          "path": "partition_alloc/allocated_objects",
+          "effective_size": 84338520,
+          "size": 85738898
+        },
+        {
+          "path": "partition_alloc/partitions",
+          "size": 85738898
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions",
+          "effective_size": 84338520,
+          "size": 84338520
+        },
+        {
+          "path": "partition_alloc/partitions/array_buffer",
+          "aligned_alloc_wasted_size": 0,
+          "allocated_objects_size": 78892176,
+          "allocated_size": 78904320,
+          "brp_quarantined_size": 0,
+          "decommittable_size": 491520,
+          "discardable_size": 69632,
+          "intended_leak_size": 0,
+          "max_allocated_size": 81824416,
+          "max_committed_size": 81846272,
+          "size": 79466496,
+          "virtual_committed_size": 79466496,
+          "virtual_size": 90177536,
+          "wasted": 574320
+        },
+        {
+          "path": "partition_alloc/partitions/array_buffer/buckets",
+          "size": 79466496
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/array_buffer",
+          "effective_size": 78892176,
+          "size": 78892176
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/array_buffer/buckets",
+          "effective_size": 78892176,
+          "size": 78892176
+        },
+        {
+          "path": "malloc",
+          "allocated_objects_size": 53617225,
+          "effective_size": 73501024,
+          "size": 78049732,
+          "virtual_size": 313841952
+        },
+        {
+          "path": "malloc/partitions",
+          "allocated_objects_size": 52288624,
+          "brp_quarantined_bytes_per_minute": 2186828,
+          "effective_size": 19846096,
+          "size": 72134720,
+          "virtual_committed_size": 63242240,
+          "virtual_size": 312475648,
+          "wasted": 10953616
+        },
+        {
+          "path": "malloc/partitions/allocator",
+          "aligned_alloc_wasted_size": 284576,
+          "allocated_objects_size": 52130480,
+          "allocated_size": 52130480,
+          "brp_quarantined_size": 0,
+          "decommittable_size": 7462912,
+          "discardable_size": 1142784,
+          "effective_size": 19750288,
+          "intended_leak_size": 0,
+          "max_allocated_size": 273442112,
+          "max_committed_size": 284536832,
+          "size": 71880768,
+          "virtual_committed_size": 62988288,
+          "virtual_size": 310378496,
+          "wasted": 10857808
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets",
+          "effective_size": 10857808,
+          "size": 62988288
+        },
+        {
+          "path": "shared_memory",
+          "effective_size": 14631731,
+          "size": 60706816
+        },
+        {
+          "path": "malloc/allocated_objects",
+          "effective_size": 53617225,
+          "size": 58165933
+        },
+        {
+          "path": "malloc/allocated_objects/partitions",
+          "effective_size": 52288624,
+          "size": 52288624
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator",
+          "effective_size": 52130480,
+          "size": 52130480
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets",
+          "effective_size": 52130480,
+          "size": 52130480
+        },
+        {
+          "path": "cc",
+          "effective_size": 41070592,
+          "size": 50561024
+        },
+        {
+          "path": "discardable",
+          "effective_size": 16384,
+          "size": 31473664
+        },
+        {
+          "path": "cc/image_memory",
+          "effective_size": 31457280,
+          "size": 31457280
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0",
+          "effective_size": 31457280,
+          "size": 31457280
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0/at_raster",
+          "effective_size": 31457280,
+          "size": 31457280
+        },
+        {
+          "path": "cc/tile_memory",
+          "effective_size": 9613312,
+          "size": 19103744
+        },
+        {
+          "path": "cc/tile_memory/provider_511230889",
+          "effective_size": 9613312,
+          "size": 19103744
+        },
+        {
+          "path": "v8",
+          "effective_size": 17998800,
+          "size": 17998800
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets/directMap_1",
+          "effective_size": 12587008,
+          "size": 12587008
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets/directMap_2",
+          "effective_size": 12587008,
+          "size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/directMap_1",
+          "allocated_objects_size": 12587008,
+          "decommittable_size": 0,
+          "discardable_size": 0,
+          "size": 12587008,
+          "slot_size": 12587008,
+          "total_slot_span_size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/directMap_1/__4db0b1060099626a",
+          "size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/directMap_2",
+          "allocated_objects_size": 12587008,
+          "decommittable_size": 0,
+          "discardable_size": 0,
+          "size": 12587008,
+          "slot_size": 12587008,
+          "total_slot_span_size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/directMap_2/__3a854b5452d3ec31",
+          "size": 12587008
+        },
+        {
+          "path": "v8/main",
+          "effective_size": 10587076,
+          "size": 10587076
+        },
+        {
+          "path": "v8/main/heap",
+          "effective_size": 10362880,
+          "size": 10362880
+        },
+        {
+          "path": "malloc/partitions/allocator/thread_cache",
+          "effective_size": 8892480,
+          "metadata_overhead": 42920,
+          "size": 8892480
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/bucket_0005120",
+          "allocated_objects_size": 655360,
+          "decommittable_size": 7065600,
+          "discardable_size": 512000,
+          "effective_size": 8192000,
+          "size": 8847360,
+          "slot_size": 5120,
+          "total_slot_span_size": 61440
+        }
+      ],
+      "processes": {
+        "22476": {
+          "allocatorCount": 6591,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "b999000"
+          },
+          "roots": {
+            "blink_gc": {
+              "effective_size": 4850016,
+              "size": 7340032
+            },
+            "blink_objects": {
+              "effective_size": 2490016,
+              "size": 2490016
+            },
+            "canvas": {
+              "effective_size": 5788320,
+              "size": 7717760
+            },
+            "cc": {
+              "effective_size": 41070592,
+              "size": 50561024
+            },
+            "discardable": {
+              "effective_size": 16384,
+              "size": 31473664
+            },
+            "malloc": {
+              "allocated_objects_size": 53617225,
+              "effective_size": 73501024,
+              "size": 78049732,
+              "virtual_size": 313841952
+            },
+            "mojo": {},
+            "parkable_images": {
+              "on_disk_size": 0,
+              "total_size": 272408,
+              "unparked_size": 272408
+            },
+            "parkable_strings": {
+              "compressed_size": 0,
+              "metadata_size": 0,
+              "on_disk_footprint": 0,
+              "on_disk_free_chunks": 0,
+              "on_disk_size": 0,
+              "original_size": 0,
+              "overhead_size": 0,
+              "savings_size": 0,
+              "uncompressed_size": 0
+            },
+            "partition_alloc": {
+              "effective_size": 84338520,
+              "size": 85738898
+            },
+            "shared_memory": {
+              "effective_size": 14631731,
+              "size": 60706816
+            },
+            "site_storage": {},
+            "skia": {
+              "effective_size": 203868,
+              "size": 203868
+            },
+            "v8": {
+              "effective_size": 17998800,
+              "size": 17998800
+            },
+            "web_cache": {
+              "effective_size": 1863739,
+              "size": 1863739
+            }
+          }
+        },
+        "20292": {
+          "allocatorCount": 512,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1535000"
+          },
+          "roots": {
+            "cc": {},
+            "devtools": {},
+            "discardable": {
+              "size": 20480
+            },
+            "frame_evictor": {},
+            "leveldatabase": {
+              "effective_size": 12551,
+              "size": 16655
+            },
+            "malloc": {
+              "allocated_objects_size": 6525337,
+              "effective_size": 10139440,
+              "size": 10443015,
+              "virtual_size": 34554048
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 1227571,
+              "size": 1933312
+            },
+            "site_storage": {
+              "size": 87224
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 303336,
+              "malloc_high_wmark_size": 303336,
+              "size": 303336
+            }
+          }
+        },
+        "23516": {
+          "allocatorCount": 673,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1d07000"
+          },
+          "roots": {
+            "cc": {
+              "effective_size": 1161440,
+              "size": 11645376
+            },
+            "discardable": {},
+            "gpu": {
+              "effective_size": 2715872,
+              "size": 29930816
+            },
+            "malloc": {
+              "allocated_objects_size": 11255353,
+              "effective_size": 12680448,
+              "size": 12680448,
+              "virtual_size": 20692304
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 80019,
+              "size": 30072832
+            },
+            "skia": {}
+          }
+        },
+        "19500": {
+          "allocatorCount": 573,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "101f000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 5314381,
+              "effective_size": 6633152,
+              "size": 6633152,
+              "virtual_size": 11918784
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 33587,
+              "size": 65536
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 40848,
+              "size": 40848
+            },
+            "global": {
+              "effective_size": 91328,
+              "size": 93542912
+            }
+          }
+        },
+        "27688": {
+          "allocatorCount": 319,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "f6a000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 1784950,
+              "effective_size": 2347904,
+              "size": 2347904,
+              "virtual_size": 7352672
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 654131,
+              "size": 1310720
+            },
+            "skia": {}
+          }
+        }
+      }
+    },
+    {
+      "label": "returned-1",
+      "rendererPid": 22476,
+      "cdpReturnedGuid": "0x3",
+      "traceDumpIds": [
+        "0x2"
+      ],
+      "association": "One unique native dump group within explicit request begin/end UserTiming span. Raw GUIDs retained; no assumption that trace IDs equal CDP-returned IDs.",
+      "rendererProcessTotals": {
+        "is_peak_rss_resettable": false,
+        "peak_resident_set_size": "0",
+        "private_footprint_bytes": "5e43000"
+      },
+      "categories": {
+        "malloc": {
+          "root": {
+            "allocated_objects_size": 45908134,
+            "effective_size": 62912432,
+            "size": 63530568,
+            "virtual_size": 313832512
+          },
+          "effectiveFrontier": {
+            "bytes": 62912432,
+            "paths": [
+              [
+                "malloc",
+                62912432
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 63530568,
+            "paths": [
+              [
+                "malloc",
+                63530568
+              ]
+            ]
+          }
+        },
+        "partition_alloc": {
+          "root": {
+            "effective_size": 5370504,
+            "size": 6770882
+          },
+          "effectiveFrontier": {
+            "bytes": 5370504,
+            "paths": [
+              [
+                "partition_alloc",
+                5370504
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 6770882,
+            "paths": [
+              [
+                "partition_alloc",
+                6770882
+              ]
+            ]
+          }
+        },
+        "v8": {
+          "root": {
+            "effective_size": 7965636,
+            "size": 7965636
+          },
+          "effectiveFrontier": {
+            "bytes": 7965636,
+            "paths": [
+              [
+                "v8",
+                7965636
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 7965636,
+            "paths": [
+              [
+                "v8",
+                7965636
+              ]
+            ]
+          }
+        },
+        "blink_gc": {
+          "root": {
+            "effective_size": 5213650,
+            "size": 6553600
+          },
+          "effectiveFrontier": {
+            "bytes": 5213650,
+            "paths": [
+              [
+                "blink_gc",
+                5213650
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 6553600,
+            "paths": [
+              [
+                "blink_gc",
+                6553600
+              ]
+            ]
+          }
+        },
+        "blink_objects": {
+          "root": {
+            "effective_size": 1339936,
+            "size": 1339936
+          },
+          "effectiveFrontier": {
+            "bytes": 1339936,
+            "paths": [
+              [
+                "blink_objects",
+                1339936
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 1339936,
+            "paths": [
+              [
+                "blink_objects",
+                1339936
+              ]
+            ]
+          }
+        },
+        "cc": {
+          "root": {
+            "effective_size": 41070592,
+            "size": 50561024
+          },
+          "effectiveFrontier": {
+            "bytes": 41070592,
+            "paths": [
+              [
+                "cc",
+                41070592
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 50561024,
+            "paths": [
+              [
+                "cc",
+                50561024
+              ]
+            ]
+          }
+        },
+        "gpu": {
+          "root": {},
+          "effectiveFrontier": {
+            "bytes": 0,
+            "paths": []
+          },
+          "sizeFrontier": {
+            "bytes": 0,
+            "paths": []
+          }
+        },
+        "skia": {
+          "root": {
+            "effective_size": 203868,
+            "size": 203868
+          },
+          "effectiveFrontier": {
+            "bytes": 203868,
+            "paths": [
+              [
+                "skia",
+                203868
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 203868,
+            "paths": [
+              [
+                "skia",
+                203868
+              ]
+            ]
+          }
+        },
+        "discardable": {
+          "root": {
+            "effective_size": 16384,
+            "size": 31473664
+          },
+          "effectiveFrontier": {
+            "bytes": 16384,
+            "paths": [
+              [
+                "discardable",
+                16384
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 31473664,
+            "paths": [
+              [
+                "discardable",
+                31473664
+              ]
+            ]
+          }
+        },
+        "web_cache": {
+          "root": {
+            "effective_size": 1863739,
+            "size": 1863739
+          },
+          "effectiveFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          }
+        }
+      },
+      "topRendererSizeEntries": [
+        {
+          "path": "malloc",
+          "allocated_objects_size": 45908134,
+          "effective_size": 62912432,
+          "size": 63530568,
+          "virtual_size": 313832512
+        },
+        {
+          "path": "malloc/partitions",
+          "allocated_objects_size": 44588640,
+          "brp_quarantined_bytes_per_minute": 4900193,
+          "effective_size": 16966928,
+          "size": 61555568,
+          "virtual_committed_size": 53403648,
+          "virtual_size": 312475648,
+          "wasted": 8815008
+        },
+        {
+          "path": "malloc/partitions/allocator",
+          "aligned_alloc_wasted_size": 284576,
+          "allocated_objects_size": 44430496,
+          "allocated_size": 44430496,
+          "brp_quarantined_size": 64,
+          "decommittable_size": 3895296,
+          "discardable_size": 1667072,
+          "effective_size": 16871120,
+          "intended_leak_size": 0,
+          "max_allocated_size": 273442112,
+          "max_committed_size": 284536832,
+          "size": 61301616,
+          "virtual_committed_size": 53149696,
+          "virtual_size": 310378496,
+          "wasted": 8719200
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets",
+          "effective_size": 8719200,
+          "size": 53149696
+        },
+        {
+          "path": "shared_memory",
+          "effective_size": 9595699,
+          "size": 50647040
+        },
+        {
+          "path": "cc",
+          "effective_size": 41070592,
+          "size": 50561024
+        },
+        {
+          "path": "malloc/allocated_objects",
+          "effective_size": 45908134,
+          "size": 46526270
+        },
+        {
+          "path": "malloc/allocated_objects/partitions",
+          "effective_size": 44588640,
+          "size": 44588640
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator",
+          "effective_size": 44430496,
+          "size": 44430496
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets",
+          "effective_size": 44430496,
+          "size": 44430496
+        },
+        {
+          "path": "discardable",
+          "effective_size": 16384,
+          "size": 31473664
+        },
+        {
+          "path": "cc/image_memory",
+          "effective_size": 31457280,
+          "size": 31457280
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0",
+          "effective_size": 31457280,
+          "size": 31457280
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0/at_raster",
+          "effective_size": 31457280,
+          "size": 31457280
+        },
+        {
+          "path": "cc/tile_memory",
+          "effective_size": 9613312,
+          "size": 19103744
+        },
+        {
+          "path": "cc/tile_memory/provider_511230889",
+          "effective_size": 9613312,
+          "size": 19103744
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets/directMap_1",
+          "effective_size": 12587008,
+          "size": 12587008
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets/directMap_2",
+          "effective_size": 12587008,
+          "size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/directMap_1",
+          "allocated_objects_size": 12587008,
+          "decommittable_size": 0,
+          "discardable_size": 0,
+          "size": 12587008,
+          "slot_size": 12587008,
+          "total_slot_span_size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/directMap_1/__4db0b1060099626a",
+          "size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/directMap_2",
+          "allocated_objects_size": 12587008,
+          "decommittable_size": 0,
+          "discardable_size": 0,
+          "size": 12587008,
+          "slot_size": 12587008,
+          "total_slot_span_size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/directMap_2/__3a854b5452d3ec31",
+          "size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/thread_cache",
+          "effective_size": 8151920,
+          "metadata_overhead": 41440,
+          "size": 8151920
+        },
+        {
+          "path": "malloc/partitions/allocator/thread_cache/<unspecified>",
+          "effective_size": 8088944,
+          "size": 8088944
+        },
+        {
+          "path": "v8",
+          "effective_size": 7965636,
+          "size": 7965636
+        },
+        {
+          "path": "v8/main",
+          "effective_size": 7965636,
+          "size": 7965636
+        },
+        {
+          "path": "v8/main/heap",
+          "effective_size": 7741440,
+          "size": 7741440
+        },
+        {
+          "path": "partition_alloc",
+          "effective_size": 5370504,
+          "size": 6770882
+        },
+        {
+          "path": "partition_alloc/allocated_objects",
+          "effective_size": 5370504,
+          "size": 6770882
+        },
+        {
+          "path": "partition_alloc/partitions",
+          "size": 6770882
+        },
+        {
+          "path": "blink_gc",
+          "effective_size": 5213650,
+          "size": 6553600
+        },
+        {
+          "path": "blink_gc/main",
+          "effective_size": 5213650,
+          "size": 6553600
+        },
+        {
+          "path": "blink_gc/main/heap",
+          "allocated_objects_size": 1339936,
+          "committed_size": 6553600,
+          "effective_size": 5213650,
+          "pooled_size": 0,
+          "size": 6553600
+        },
+        {
+          "path": "discardable/segment_1",
+          "effective_size": 4096,
+          "size": 6295552,
+          "virtual_size": 6291456
+        },
+        {
+          "path": "discardable/segment_2",
+          "effective_size": 4096,
+          "size": 6295552,
+          "virtual_size": 6291456
+        }
+      ],
+      "processes": {
+        "22476": {
+          "allocatorCount": 5138,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "5e43000"
+          },
+          "roots": {
+            "blink_gc": {
+              "effective_size": 5213650,
+              "size": 6553600
+            },
+            "blink_objects": {
+              "effective_size": 1339936,
+              "size": 1339936
+            },
+            "cc": {
+              "effective_size": 41070592,
+              "size": 50561024
+            },
+            "discardable": {
+              "effective_size": 16384,
+              "size": 31473664
+            },
+            "malloc": {
+              "allocated_objects_size": 45908134,
+              "effective_size": 62912432,
+              "size": 63530568,
+              "virtual_size": 313832512
+            },
+            "mojo": {},
+            "parkable_images": {
+              "on_disk_size": 0,
+              "total_size": 272408,
+              "unparked_size": 272408
+            },
+            "parkable_strings": {
+              "compressed_size": 0,
+              "metadata_size": 0,
+              "on_disk_footprint": 0,
+              "on_disk_free_chunks": 0,
+              "on_disk_size": 0,
+              "original_size": 0,
+              "overhead_size": 0,
+              "savings_size": 0,
+              "uncompressed_size": 0
+            },
+            "partition_alloc": {
+              "effective_size": 5370504,
+              "size": 6770882
+            },
+            "shared_memory": {
+              "effective_size": 9595699,
+              "size": 50647040
+            },
+            "site_storage": {},
+            "skia": {
+              "effective_size": 203868,
+              "size": 203868
+            },
+            "v8": {
+              "effective_size": 7965636,
+              "size": 7965636
+            },
+            "web_cache": {
+              "effective_size": 1863739,
+              "size": 1863739
+            }
+          }
+        },
+        "20292": {
+          "allocatorCount": 515,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "15ee000"
+          },
+          "roots": {
+            "cc": {},
+            "devtools": {},
+            "discardable": {
+              "size": 20480
+            },
+            "frame_evictor": {},
+            "leveldatabase": {
+              "effective_size": 12551,
+              "size": 16655
+            },
+            "malloc": {
+              "allocated_objects_size": 6405081,
+              "effective_size": 10232704,
+              "size": 10536279,
+              "virtual_size": 42942656
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 1979187,
+              "size": 3440640
+            },
+            "site_storage": {
+              "size": 87224
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 303336,
+              "malloc_high_wmark_size": 303336,
+              "size": 303336
+            }
+          }
+        },
+        "23516": {
+          "allocatorCount": 600,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1d8f000"
+          },
+          "roots": {
+            "cc": {
+              "size": 2359296
+            },
+            "discardable": {},
+            "gpu": {
+              "size": 19103744
+            },
+            "malloc": {
+              "allocated_objects_size": 11151293,
+              "effective_size": 13269200,
+              "size": 13269200,
+              "virtual_size": 22789456
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 74547,
+              "size": 19234816
+            },
+            "skia": {}
+          }
+        },
+        "19500": {
+          "allocatorCount": 538,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1025000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 5289197,
+              "effective_size": 6676192,
+              "size": 6676192,
+              "virtual_size": 11918784
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 33587,
+              "size": 65536
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 40848,
+              "size": 40848
+            },
+            "global": {
+              "effective_size": 91328,
+              "size": 73376960
+            }
+          }
+        },
+        "27688": {
+          "allocatorCount": 320,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "f88000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 1816310,
+              "effective_size": 2465200,
+              "size": 2465200,
+              "virtual_size": 7352672
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 1411891,
+              "size": 2826240
+            },
+            "skia": {}
+          }
+        }
+      }
+    },
+    {
+      "label": "target-20",
+      "rendererPid": 22476,
+      "cdpReturnedGuid": "0x4",
+      "traceDumpIds": [
+        "0x3"
+      ],
+      "association": "One unique native dump group within explicit request begin/end UserTiming span. Raw GUIDs retained; no assumption that trace IDs equal CDP-returned IDs.",
+      "rendererProcessTotals": {
+        "is_peak_rss_resettable": false,
+        "peak_resident_set_size": "0",
+        "private_footprint_bytes": "dc97000"
+      },
+      "categories": {
+        "malloc": {
+          "root": {
+            "allocated_objects_size": 58896689,
+            "effective_size": 85282624,
+            "size": 90118916,
+            "virtual_size": 328518800
+          },
+          "effectiveFrontier": {
+            "bytes": 85282624,
+            "paths": [
+              [
+                "malloc",
+                85282624
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 90118916,
+            "paths": [
+              [
+                "malloc",
+                90118916
+              ]
+            ]
+          }
+        },
+        "partition_alloc": {
+          "root": {
+            "effective_size": 99684779,
+            "size": 101085184
+          },
+          "effectiveFrontier": {
+            "bytes": 99684779,
+            "paths": [
+              [
+                "partition_alloc",
+                99684779
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 101085184,
+            "paths": [
+              [
+                "partition_alloc",
+                101085184
+              ]
+            ]
+          }
+        },
+        "v8": {
+          "root": {
+            "effective_size": 21694256,
+            "size": 21694256
+          },
+          "effectiveFrontier": {
+            "bytes": 21694256,
+            "paths": [
+              [
+                "v8",
+                21694256
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 21694256,
+            "paths": [
+              [
+                "v8",
+                21694256
+              ]
+            ]
+          }
+        },
+        "blink_gc": {
+          "root": {
+            "effective_size": 11958000,
+            "size": 14680064
+          },
+          "effectiveFrontier": {
+            "bytes": 11958000,
+            "paths": [
+              [
+                "blink_gc",
+                11958000
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 14680064,
+            "paths": [
+              [
+                "blink_gc",
+                14680064
+              ]
+            ]
+          }
+        },
+        "blink_objects": {
+          "root": {
+            "effective_size": 2722064,
+            "size": 2722064
+          },
+          "effectiveFrontier": {
+            "bytes": 2722064,
+            "paths": [
+              [
+                "blink_objects",
+                2722064
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 2722064,
+            "paths": [
+              [
+                "blink_objects",
+                2722064
+              ]
+            ]
+          }
+        },
+        "cc": {
+          "root": {
+            "effective_size": 154820608,
+            "size": 164937728
+          },
+          "effectiveFrontier": {
+            "bytes": 154820608,
+            "paths": [
+              [
+                "cc",
+                154820608
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 164937728,
+            "paths": [
+              [
+                "cc",
+                164937728
+              ]
+            ]
+          }
+        },
+        "gpu": {
+          "root": {},
+          "effectiveFrontier": {
+            "bytes": 0,
+            "paths": []
+          },
+          "sizeFrontier": {
+            "bytes": 0,
+            "paths": []
+          }
+        },
+        "skia": {
+          "root": {
+            "effective_size": 203868,
+            "size": 203868
+          },
+          "effectiveFrontier": {
+            "bytes": 203868,
+            "paths": [
+              [
+                "skia",
+                203868
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 203868,
+            "paths": [
+              [
+                "skia",
+                203868
+              ]
+            ]
+          }
+        },
+        "discardable": {
+          "root": {
+            "effective_size": 90112,
+            "size": 144793600
+          },
+          "effectiveFrontier": {
+            "bytes": 90112,
+            "paths": [
+              [
+                "discardable",
+                90112
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 144793600,
+            "paths": [
+              [
+                "discardable",
+                144793600
+              ]
+            ]
+          }
+        },
+        "web_cache": {
+          "root": {
+            "effective_size": 1863739,
+            "size": 1863739
+          },
+          "effectiveFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          }
+        }
+      },
+      "topRendererSizeEntries": [
+        {
+          "path": "shared_memory",
+          "effective_size": 15416115,
+          "size": 175591424
+        },
+        {
+          "path": "cc",
+          "effective_size": 154820608,
+          "size": 164937728
+        },
+        {
+          "path": "discardable",
+          "effective_size": 90112,
+          "size": 144793600
+        },
+        {
+          "path": "cc/image_memory",
+          "effective_size": 144703488,
+          "size": 144703488
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0",
+          "effective_size": 144703488,
+          "size": 144703488
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0/at_raster",
+          "effective_size": 144703488,
+          "size": 144703488
+        },
+        {
+          "path": "partition_alloc",
+          "effective_size": 99684779,
+          "size": 101085184
+        },
+        {
+          "path": "partition_alloc/partitions",
+          "effective_size": 1166067,
+          "size": 101085184
+        },
+        {
+          "path": "partition_alloc/allocated_objects",
+          "effective_size": 98518712,
+          "size": 99919090
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions",
+          "effective_size": 98518712,
+          "size": 98518712
+        },
+        {
+          "path": "malloc",
+          "allocated_objects_size": 58896689,
+          "effective_size": 85282624,
+          "size": 90118916,
+          "virtual_size": 328518800
+        },
+        {
+          "path": "malloc/partitions",
+          "allocated_objects_size": 57571232,
+          "brp_quarantined_bytes_per_minute": 9736697,
+          "effective_size": 26348304,
+          "size": 83919536,
+          "virtual_committed_size": 70930432,
+          "virtual_size": 327155712,
+          "wasted": 13359200
+        },
+        {
+          "path": "malloc/partitions/allocator",
+          "aligned_alloc_wasted_size": 2559136,
+          "allocated_objects_size": 57413088,
+          "allocated_size": 57413088,
+          "brp_quarantined_size": 0,
+          "decommittable_size": 7823360,
+          "discardable_size": 2375680,
+          "effective_size": 26252496,
+          "intended_leak_size": 0,
+          "max_allocated_size": 278464608,
+          "max_committed_size": 292089856,
+          "size": 83665584,
+          "virtual_committed_size": 70676480,
+          "virtual_size": 325058560,
+          "wasted": 13263392
+        },
+        {
+          "path": "partition_alloc/partitions/array_buffer",
+          "aligned_alloc_wasted_size": 0,
+          "allocated_objects_size": 78892176,
+          "allocated_size": 78904320,
+          "brp_quarantined_size": 0,
+          "decommittable_size": 413696,
+          "discardable_size": 94208,
+          "effective_size": 236748,
+          "intended_leak_size": 0,
+          "max_allocated_size": 84416960,
+          "max_committed_size": 84443136,
+          "size": 79413248,
+          "virtual_committed_size": 79413248,
+          "virtual_size": 94371840,
+          "wasted": 521072
+        },
+        {
+          "path": "partition_alloc/partitions/array_buffer/buckets",
+          "effective_size": 236748,
+          "size": 79413248
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/array_buffer",
+          "effective_size": 78892176,
+          "size": 78892176
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/array_buffer/buckets",
+          "effective_size": 78892176,
+          "size": 78892176
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets",
+          "effective_size": 13263392,
+          "size": 70676480
+        },
+        {
+          "path": "malloc/allocated_objects",
+          "effective_size": 58896689,
+          "size": 63732981
+        },
+        {
+          "path": "malloc/allocated_objects/partitions",
+          "effective_size": 57571232,
+          "size": 57571232
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator",
+          "effective_size": 57413088,
+          "size": 57413088
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets",
+          "effective_size": 57413088,
+          "size": 57413088
+        },
+        {
+          "path": "v8",
+          "effective_size": 21694256,
+          "size": 21694256
+        },
+        {
+          "path": "partition_alloc/partitions/buffer",
+          "aligned_alloc_wasted_size": 0,
+          "allocated_objects_size": 19626536,
+          "allocated_size": 19682048,
+          "brp_quarantined_size": 0,
+          "decommittable_size": 1372160,
+          "discardable_size": 180224,
+          "effective_size": 929319,
+          "intended_leak_size": 0,
+          "max_allocated_size": 22043616,
+          "max_committed_size": 23007232,
+          "size": 21671936,
+          "virtual_committed_size": 21671936,
+          "virtual_size": 35651584,
+          "wasted": 2045400
+        },
+        {
+          "path": "partition_alloc/partitions/buffer/buckets",
+          "effective_size": 929319,
+          "size": 21671936
+        },
+        {
+          "path": "cc/tile_memory",
+          "effective_size": 10117120,
+          "size": 20234240
+        },
+        {
+          "path": "cc/tile_memory/provider_511230889",
+          "effective_size": 10117120,
+          "size": 20234240
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/buffer",
+          "effective_size": 19626536,
+          "size": 19626536
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/buffer/buckets",
+          "effective_size": 19626536,
+          "size": 19626536
+        },
+        {
+          "path": "partition_alloc/partitions/buffer/buckets/bucket_0917504",
+          "allocated_objects_size": 16459560,
+          "decommittable_size": 0,
+          "discardable_size": 53248,
+          "effective_size": 25222,
+          "size": 16515072,
+          "slot_size": 917504,
+          "total_slot_span_size": 917504
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/buffer/buckets/bucket_0917504",
+          "effective_size": 16459560,
+          "size": 16459560
+        },
+        {
+          "path": "partition_alloc/partitions/buffer/buckets/bucket_0917504/__fba9b7d249781bf4",
+          "size": 16459560
+        },
+        {
+          "path": "blink_gc",
+          "effective_size": 11958000,
+          "size": 14680064
+        },
+        {
+          "path": "blink_gc/main",
+          "effective_size": 11189784,
+          "size": 13893632
+        },
+        {
+          "path": "blink_gc/main/heap",
+          "allocated_objects_size": 2703848,
+          "committed_size": 13893632,
+          "effective_size": 11189784,
+          "pooled_size": 0,
+          "size": 13893632
+        }
+      ],
+      "processes": {
+        "22476": {
+          "allocatorCount": 7314,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "dc97000"
+          },
+          "roots": {
+            "blink_gc": {
+              "effective_size": 11958000,
+              "size": 14680064
+            },
+            "blink_objects": {
+              "effective_size": 2722064,
+              "size": 2722064
+            },
+            "canvas": {
+              "effective_size": 5788320,
+              "size": 7717760
+            },
+            "cc": {
+              "effective_size": 154820608,
+              "size": 164937728
+            },
+            "discardable": {
+              "effective_size": 90112,
+              "size": 144793600
+            },
+            "malloc": {
+              "allocated_objects_size": 58896689,
+              "effective_size": 85282624,
+              "size": 90118916,
+              "virtual_size": 328518800
+            },
+            "mojo": {},
+            "parkable_images": {
+              "on_disk_size": 0,
+              "total_size": 272408,
+              "unparked_size": 272408
+            },
+            "parkable_strings": {
+              "compressed_size": 0,
+              "metadata_size": 0,
+              "on_disk_footprint": 0,
+              "on_disk_free_chunks": 0,
+              "on_disk_size": 0,
+              "original_size": 0,
+              "overhead_size": 0,
+              "savings_size": 0,
+              "uncompressed_size": 0
+            },
+            "partition_alloc": {
+              "effective_size": 99684779,
+              "size": 101085184
+            },
+            "shared_memory": {
+              "effective_size": 15416115,
+              "size": 175591424
+            },
+            "site_storage": {},
+            "skia": {
+              "effective_size": 203868,
+              "size": 203868
+            },
+            "v8": {
+              "effective_size": 21694256,
+              "size": 21694256
+            },
+            "web_cache": {
+              "effective_size": 1863739,
+              "size": 1863739
+            }
+          }
+        },
+        "20292": {
+          "allocatorCount": 563,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1908000"
+          },
+          "roots": {
+            "cc": {},
+            "devtools": {},
+            "discardable": {
+              "size": 94208
+            },
+            "frame_evictor": {},
+            "leveldatabase": {
+              "effective_size": 12551,
+              "size": 16655
+            },
+            "malloc": {
+              "allocated_objects_size": 7511089,
+              "effective_size": 12154432,
+              "size": 12458007,
+              "virtual_size": 44967072
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 2597683,
+              "size": 4751360
+            },
+            "site_storage": {
+              "size": 87224
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 303336,
+              "malloc_high_wmark_size": 303336,
+              "size": 303336
+            }
+          }
+        },
+        "23516": {
+          "allocatorCount": 663,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1dbc000"
+          },
+          "roots": {
+            "cc": {
+              "effective_size": 1161440,
+              "size": 12169664
+            },
+            "discardable": {},
+            "gpu": {
+              "effective_size": 1929440,
+              "size": 30274880
+            },
+            "malloc": {
+              "allocated_objects_size": 11344243,
+              "effective_size": 13352800,
+              "size": 13352800,
+              "virtual_size": 22823856
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 77971,
+              "size": 30416896
+            },
+            "skia": {}
+          }
+        },
+        "19500": {
+          "allocatorCount": 589,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1037000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 5318015,
+              "effective_size": 6734864,
+              "size": 6734864,
+              "virtual_size": 11831120
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 33587,
+              "size": 65536
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 40848,
+              "size": 40848
+            },
+            "global": {
+              "effective_size": 91328,
+              "size": 210602496
+            }
+          }
+        },
+        "27688": {
+          "allocatorCount": 320,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "136e000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 1859518,
+              "effective_size": 2457472,
+              "size": 2457472,
+              "virtual_size": 7349456
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 2179891,
+              "size": 4362240
+            },
+            "skia": {}
+          }
+        }
+      }
+    },
+    {
+      "label": "returned-20",
+      "rendererPid": 22476,
+      "cdpReturnedGuid": "0x5",
+      "traceDumpIds": [
+        "0x4"
+      ],
+      "association": "One unique native dump group within explicit request begin/end UserTiming span. Raw GUIDs retained; no assumption that trace IDs equal CDP-returned IDs.",
+      "rendererProcessTotals": {
+        "is_peak_rss_resettable": false,
+        "peak_resident_set_size": "0",
+        "private_footprint_bytes": "822f000"
+      },
+      "categories": {
+        "malloc": {
+          "root": {
+            "allocated_objects_size": 50822110,
+            "effective_size": 76641024,
+            "size": 77335840,
+            "virtual_size": 324315056
+          },
+          "effectiveFrontier": {
+            "bytes": 76641024,
+            "paths": [
+              [
+                "malloc",
+                76641024
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 77335840,
+            "paths": [
+              [
+                "malloc",
+                77335840
+              ]
+            ]
+          }
+        },
+        "partition_alloc": {
+          "root": {
+            "effective_size": 20357548,
+            "size": 21757952
+          },
+          "effectiveFrontier": {
+            "bytes": 20357548,
+            "paths": [
+              [
+                "partition_alloc",
+                20357548
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 21757952,
+            "paths": [
+              [
+                "partition_alloc",
+                21757952
+              ]
+            ]
+          }
+        },
+        "v8": {
+          "root": {
+            "effective_size": 9615180,
+            "size": 9615180
+          },
+          "effectiveFrontier": {
+            "bytes": 9615180,
+            "paths": [
+              [
+                "v8",
+                9615180
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 9615180,
+            "paths": [
+              [
+                "v8",
+                9615180
+              ]
+            ]
+          }
+        },
+        "blink_gc": {
+          "root": {
+            "effective_size": 12231870,
+            "size": 13762560
+          },
+          "effectiveFrontier": {
+            "bytes": 12231870,
+            "paths": [
+              [
+                "blink_gc",
+                12231870
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 13762560,
+            "paths": [
+              [
+                "blink_gc",
+                13762560
+              ]
+            ]
+          }
+        },
+        "blink_objects": {
+          "root": {
+            "effective_size": 1530616,
+            "size": 1530616
+          },
+          "effectiveFrontier": {
+            "bytes": 1530616,
+            "paths": [
+              [
+                "blink_objects",
+                1530616
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 1530616,
+            "paths": [
+              [
+                "blink_objects",
+                1530616
+              ]
+            ]
+          }
+        },
+        "cc": {
+          "root": {
+            "effective_size": 154763264,
+            "size": 164823040
+          },
+          "effectiveFrontier": {
+            "bytes": 154763264,
+            "paths": [
+              [
+                "cc",
+                154763264
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 164823040,
+            "paths": [
+              [
+                "cc",
+                164823040
+              ]
+            ]
+          }
+        },
+        "gpu": {
+          "root": {},
+          "effectiveFrontier": {
+            "bytes": 0,
+            "paths": []
+          },
+          "sizeFrontier": {
+            "bytes": 0,
+            "paths": []
+          }
+        },
+        "skia": {
+          "root": {
+            "effective_size": 203868,
+            "size": 203868
+          },
+          "effectiveFrontier": {
+            "bytes": 203868,
+            "paths": [
+              [
+                "skia",
+                203868
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 203868,
+            "paths": [
+              [
+                "skia",
+                203868
+              ]
+            ]
+          }
+        },
+        "discardable": {
+          "root": {
+            "effective_size": 90112,
+            "size": 144793600
+          },
+          "effectiveFrontier": {
+            "bytes": 90112,
+            "paths": [
+              [
+                "discardable",
+                90112
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 144793600,
+            "paths": [
+              [
+                "discardable",
+                144793600
+              ]
+            ]
+          }
+        },
+        "web_cache": {
+          "root": {
+            "effective_size": 1863739,
+            "size": 1863739
+          },
+          "effectiveFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          }
+        }
+      },
+      "topRendererSizeEntries": [
+        {
+          "path": "shared_memory",
+          "effective_size": 10320691,
+          "size": 165416960
+        },
+        {
+          "path": "cc",
+          "effective_size": 154763264,
+          "size": 164823040
+        },
+        {
+          "path": "discardable",
+          "effective_size": 90112,
+          "size": 144793600
+        },
+        {
+          "path": "cc/image_memory",
+          "effective_size": 144703488,
+          "size": 144703488
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0",
+          "effective_size": 144703488,
+          "size": 144703488
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0/at_raster",
+          "effective_size": 144703488,
+          "size": 144703488
+        },
+        {
+          "path": "malloc",
+          "allocated_objects_size": 50822110,
+          "effective_size": 76641024,
+          "size": 77335840,
+          "virtual_size": 324315056
+        },
+        {
+          "path": "malloc/partitions",
+          "allocated_objects_size": 49505760,
+          "brp_quarantined_bytes_per_minute": 4811155,
+          "effective_size": 25781616,
+          "size": 75287376,
+          "virtual_committed_size": 62918656,
+          "virtual_size": 322961408,
+          "wasted": 13412896
+        },
+        {
+          "path": "malloc/partitions/allocator",
+          "aligned_alloc_wasted_size": 2559136,
+          "allocated_objects_size": 49347616,
+          "allocated_size": 49347616,
+          "brp_quarantined_size": 64,
+          "decommittable_size": 6242304,
+          "discardable_size": 2965504,
+          "effective_size": 25685808,
+          "intended_leak_size": 0,
+          "max_allocated_size": 278464608,
+          "max_committed_size": 292089856,
+          "size": 75033424,
+          "virtual_committed_size": 62664704,
+          "virtual_size": 320864256,
+          "wasted": 13317088
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets",
+          "effective_size": 13317088,
+          "size": 62664704
+        },
+        {
+          "path": "malloc/allocated_objects",
+          "effective_size": 50822110,
+          "size": 51516926
+        },
+        {
+          "path": "malloc/allocated_objects/partitions",
+          "effective_size": 49505760,
+          "size": 49505760
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator",
+          "effective_size": 49347616,
+          "size": 49347616
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets",
+          "effective_size": 49347616,
+          "size": 49347616
+        },
+        {
+          "path": "partition_alloc",
+          "effective_size": 20357548,
+          "size": 21757952
+        },
+        {
+          "path": "partition_alloc/partitions",
+          "effective_size": 1212260,
+          "size": 21757952
+        },
+        {
+          "path": "partition_alloc/partitions/buffer",
+          "aligned_alloc_wasted_size": 0,
+          "allocated_objects_size": 19073608,
+          "allocated_size": 19129120,
+          "brp_quarantined_size": 0,
+          "decommittable_size": 1867776,
+          "discardable_size": 380928,
+          "effective_size": 1205609,
+          "intended_leak_size": 0,
+          "max_allocated_size": 22043616,
+          "max_committed_size": 23007232,
+          "size": 21671936,
+          "virtual_committed_size": 21671936,
+          "virtual_size": 35651584,
+          "wasted": 2598328
+        },
+        {
+          "path": "partition_alloc/partitions/buffer/buckets",
+          "effective_size": 1205609,
+          "size": 21671936
+        },
+        {
+          "path": "partition_alloc/allocated_objects",
+          "effective_size": 19145288,
+          "size": 20545666
+        },
+        {
+          "path": "cc/tile_memory",
+          "effective_size": 10059776,
+          "size": 20119552
+        },
+        {
+          "path": "cc/tile_memory/provider_511230889",
+          "effective_size": 10059776,
+          "size": 20119552
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions",
+          "effective_size": 19145288,
+          "size": 19145288
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/buffer",
+          "effective_size": 19073608,
+          "size": 19073608
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/buffer/buckets",
+          "effective_size": 19073608,
+          "size": 19073608
+        },
+        {
+          "path": "partition_alloc/partitions/buffer/buckets/bucket_0917504",
+          "allocated_objects_size": 16459560,
+          "decommittable_size": 0,
+          "discardable_size": 53248,
+          "effective_size": 25757,
+          "size": 16515072,
+          "slot_size": 917504,
+          "total_slot_span_size": 917504
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/buffer/buckets/bucket_0917504",
+          "effective_size": 16459560,
+          "size": 16459560
+        },
+        {
+          "path": "partition_alloc/partitions/buffer/buckets/bucket_0917504/__fba9b7d249781bf4",
+          "size": 16459560
+        },
+        {
+          "path": "blink_gc",
+          "effective_size": 12231870,
+          "size": 13762560
+        },
+        {
+          "path": "blink_gc/main",
+          "effective_size": 12231870,
+          "size": 13762560
+        },
+        {
+          "path": "blink_gc/main/heap",
+          "allocated_objects_size": 1530616,
+          "committed_size": 13762560,
+          "effective_size": 12231870,
+          "pooled_size": 0,
+          "size": 13762560
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets/directMap_1",
+          "effective_size": 12587008,
+          "size": 12587008
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets/directMap_2",
+          "effective_size": 12587008,
+          "size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/directMap_1",
+          "allocated_objects_size": 12587008,
+          "decommittable_size": 0,
+          "discardable_size": 0,
+          "size": 12587008,
+          "slot_size": 12587008,
+          "total_slot_span_size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/directMap_1/__4db0b1060099626a",
+          "size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/directMap_2",
+          "allocated_objects_size": 12587008,
+          "decommittable_size": 0,
+          "discardable_size": 0,
+          "size": 12587008,
+          "slot_size": 12587008,
+          "total_slot_span_size": 12587008
+        }
+      ],
+      "processes": {
+        "22476": {
+          "allocatorCount": 5630,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "822f000"
+          },
+          "roots": {
+            "blink_gc": {
+              "effective_size": 12231870,
+              "size": 13762560
+            },
+            "blink_objects": {
+              "effective_size": 1530616,
+              "size": 1530616
+            },
+            "cc": {
+              "effective_size": 154763264,
+              "size": 164823040
+            },
+            "discardable": {
+              "effective_size": 90112,
+              "size": 144793600
+            },
+            "malloc": {
+              "allocated_objects_size": 50822110,
+              "effective_size": 76641024,
+              "size": 77335840,
+              "virtual_size": 324315056
+            },
+            "mojo": {},
+            "parkable_images": {
+              "on_disk_size": 0,
+              "total_size": 272408,
+              "unparked_size": 272408
+            },
+            "parkable_strings": {
+              "compressed_size": 0,
+              "metadata_size": 0,
+              "on_disk_footprint": 0,
+              "on_disk_free_chunks": 0,
+              "on_disk_size": 0,
+              "original_size": 0,
+              "overhead_size": 0,
+              "savings_size": 0,
+              "uncompressed_size": 0
+            },
+            "partition_alloc": {
+              "effective_size": 20357548,
+              "size": 21757952
+            },
+            "shared_memory": {
+              "effective_size": 10320691,
+              "size": 165416960
+            },
+            "site_storage": {},
+            "skia": {
+              "effective_size": 203868,
+              "size": 203868
+            },
+            "v8": {
+              "effective_size": 9615180,
+              "size": 9615180
+            },
+            "web_cache": {
+              "effective_size": 1863739,
+              "size": 1863739
+            }
+          }
+        },
+        "20292": {
+          "allocatorCount": 563,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "18ec000"
+          },
+          "roots": {
+            "cc": {},
+            "devtools": {},
+            "discardable": {
+              "size": 94208
+            },
+            "frame_evictor": {},
+            "leveldatabase": {
+              "effective_size": 12551,
+              "size": 16655
+            },
+            "malloc": {
+              "allocated_objects_size": 7350193,
+              "effective_size": 12042480,
+              "size": 12346055,
+              "virtual_size": 47064224
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 3402547,
+              "size": 6361088
+            },
+            "site_storage": {
+              "size": 87224
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 303336,
+              "malloc_high_wmark_size": 303336,
+              "size": 303336
+            }
+          }
+        },
+        "23516": {
+          "allocatorCount": 589,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1d38000"
+          },
+          "roots": {
+            "cc": {
+              "size": 2621440
+            },
+            "discardable": {},
+            "gpu": {
+              "size": 20119552
+            },
+            "malloc": {
+              "allocated_objects_size": 11231779,
+              "effective_size": 12861488,
+              "size": 12861488,
+              "virtual_size": 22823856
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 72499,
+              "size": 20250624
+            },
+            "skia": {}
+          }
+        },
+        "19500": {
+          "allocatorCount": 557,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "103e000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 5269695,
+              "effective_size": 6773680,
+              "size": 6773680,
+              "virtual_size": 11831120
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 33587,
+              "size": 65536
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 40848,
+              "size": 40848
+            },
+            "global": {
+              "effective_size": 91328,
+              "size": 191882432
+            }
+          }
+        },
+        "27688": {
+          "allocatorCount": 320,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1385000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 1885518,
+              "effective_size": 2547024,
+              "size": 2547024,
+              "virtual_size": 7349456
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 2988851,
+              "size": 5980160
+            },
+            "skia": {}
+          }
+        }
+      }
+    },
+    {
+      "label": "target-60",
+      "rendererPid": 22476,
+      "cdpReturnedGuid": "0x6",
+      "traceDumpIds": [
+        "0x5"
+      ],
+      "association": "One unique native dump group within explicit request begin/end UserTiming span. Raw GUIDs retained; no assumption that trace IDs equal CDP-returned IDs.",
+      "rendererProcessTotals": {
+        "is_peak_rss_resettable": false,
+        "peak_resident_set_size": "0",
+        "private_footprint_bytes": "fbcf000"
+      },
+      "categories": {
+        "malloc": {
+          "root": {
+            "allocated_objects_size": 48601905,
+            "effective_size": 59199440,
+            "size": 64445332,
+            "virtual_size": 334810256
+          },
+          "effectiveFrontier": {
+            "bytes": 59199440,
+            "paths": [
+              [
+                "malloc",
+                59199440
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 64445332,
+            "paths": [
+              [
+                "malloc",
+                64445332
+              ]
+            ]
+          }
+        },
+        "partition_alloc": {
+          "root": {
+            "effective_size": 136754064,
+            "size": 138154442
+          },
+          "effectiveFrontier": {
+            "bytes": 136754064,
+            "paths": [
+              [
+                "partition_alloc",
+                136754064
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 138154442,
+            "paths": [
+              [
+                "partition_alloc",
+                138154442
+              ]
+            ]
+          }
+        },
+        "v8": {
+          "root": {
+            "effective_size": 21055280,
+            "size": 21055280
+          },
+          "effectiveFrontier": {
+            "bytes": 21055280,
+            "paths": [
+              [
+                "v8",
+                21055280
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 21055280,
+            "paths": [
+              [
+                "v8",
+                21055280
+              ]
+            ]
+          }
+        },
+        "blink_gc": {
+          "root": {
+            "effective_size": 23865668,
+            "size": 26673232
+          },
+          "effectiveFrontier": {
+            "bytes": 23865668,
+            "paths": [
+              [
+                "blink_gc",
+                23865668
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 26673232,
+            "paths": [
+              [
+                "blink_gc",
+                26673232
+              ]
+            ]
+          }
+        },
+        "blink_objects": {
+          "root": {
+            "effective_size": 2807544,
+            "size": 2807544
+          },
+          "effectiveFrontier": {
+            "bytes": 2807544,
+            "paths": [
+              [
+                "blink_objects",
+                2807544
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 2807544,
+            "paths": [
+              [
+                "blink_objects",
+                2807544
+              ]
+            ]
+          }
+        },
+        "cc": {
+          "root": {
+            "effective_size": 211648512,
+            "size": 221970432
+          },
+          "effectiveFrontier": {
+            "bytes": 211648512,
+            "paths": [
+              [
+                "cc",
+                211648512
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 221970432,
+            "paths": [
+              [
+                "cc",
+                221970432
+              ]
+            ]
+          }
+        },
+        "gpu": {
+          "root": {},
+          "effectiveFrontier": {
+            "bytes": 0,
+            "paths": []
+          },
+          "sizeFrontier": {
+            "bytes": 0,
+            "paths": []
+          }
+        },
+        "skia": {
+          "root": {
+            "effective_size": 203868,
+            "size": 203868
+          },
+          "effectiveFrontier": {
+            "bytes": 203868,
+            "paths": [
+              [
+                "skia",
+                203868
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 203868,
+            "paths": [
+              [
+                "skia",
+                203868
+              ]
+            ]
+          }
+        },
+        "discardable": {
+          "root": {
+            "effective_size": 131072,
+            "size": 201457664
+          },
+          "effectiveFrontier": {
+            "bytes": 131072,
+            "paths": [
+              [
+                "discardable",
+                131072
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 201457664,
+            "paths": [
+              [
+                "discardable",
+                201457664
+              ]
+            ]
+          }
+        },
+        "web_cache": {
+          "root": {
+            "effective_size": 1863739,
+            "size": 1863739
+          },
+          "effectiveFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          }
+        }
+      },
+      "topRendererSizeEntries": [
+        {
+          "path": "shared_memory",
+          "effective_size": 16085811,
+          "size": 233598976
+        },
+        {
+          "path": "cc",
+          "effective_size": 211648512,
+          "size": 221970432
+        },
+        {
+          "path": "discardable",
+          "effective_size": 131072,
+          "size": 201457664
+        },
+        {
+          "path": "cc/image_memory",
+          "effective_size": 201326592,
+          "size": 201326592
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0",
+          "effective_size": 201326592,
+          "size": 201326592
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0/at_raster",
+          "effective_size": 201326592,
+          "size": 201326592
+        },
+        {
+          "path": "partition_alloc",
+          "effective_size": 136754064,
+          "size": 138154442
+        },
+        {
+          "path": "partition_alloc/allocated_objects",
+          "effective_size": 136754064,
+          "size": 138154442
+        },
+        {
+          "path": "partition_alloc/partitions",
+          "size": 138154442
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions",
+          "effective_size": 136754064,
+          "size": 136754064
+        },
+        {
+          "path": "partition_alloc/partitions/array_buffer",
+          "aligned_alloc_wasted_size": 0,
+          "allocated_objects_size": 78904320,
+          "allocated_size": 78904320,
+          "brp_quarantined_size": 0,
+          "decommittable_size": 0,
+          "discardable_size": 45056,
+          "intended_leak_size": 0,
+          "max_allocated_size": 84807360,
+          "max_committed_size": 84824064,
+          "size": 79015936,
+          "virtual_committed_size": 79015936,
+          "virtual_size": 94371840,
+          "wasted": 111616
+        },
+        {
+          "path": "partition_alloc/partitions/array_buffer/buckets",
+          "size": 79015936
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/array_buffer",
+          "effective_size": 78904320,
+          "size": 78904320
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/array_buffer/buckets",
+          "effective_size": 78904320,
+          "size": 78904320
+        },
+        {
+          "path": "malloc",
+          "allocated_objects_size": 48601905,
+          "effective_size": 59199440,
+          "size": 64445332,
+          "virtual_size": 334810256
+        },
+        {
+          "path": "partition_alloc/partitions/buffer",
+          "aligned_alloc_wasted_size": 0,
+          "allocated_objects_size": 57849744,
+          "allocated_size": 57849744,
+          "brp_quarantined_size": 0,
+          "decommittable_size": 0,
+          "discardable_size": 69632,
+          "intended_leak_size": 0,
+          "max_allocated_size": 61138816,
+          "max_committed_size": 61939712,
+          "size": 58400768,
+          "virtual_committed_size": 58400768,
+          "virtual_size": 81788928,
+          "wasted": 551024
+        },
+        {
+          "path": "partition_alloc/partitions/buffer/buckets",
+          "size": 58400768
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/buffer",
+          "effective_size": 57849744,
+          "size": 57849744
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/buffer/buckets",
+          "effective_size": 57849744,
+          "size": 57849744
+        },
+        {
+          "path": "malloc/partitions",
+          "allocated_objects_size": 47276448,
+          "brp_quarantined_bytes_per_minute": 10747917,
+          "effective_size": 10559904,
+          "size": 57836352,
+          "virtual_committed_size": 56307712,
+          "virtual_size": 333447168,
+          "wasted": 9031264
+        },
+        {
+          "path": "malloc/partitions/allocator",
+          "aligned_alloc_wasted_size": 9382816,
+          "allocated_objects_size": 47118304,
+          "allocated_size": 47118304,
+          "brp_quarantined_size": 1824,
+          "decommittable_size": 3817472,
+          "discardable_size": 2293760,
+          "effective_size": 10476384,
+          "intended_leak_size": 0,
+          "max_allocated_size": 278464608,
+          "max_committed_size": 292089856,
+          "size": 57594688,
+          "virtual_committed_size": 56066048,
+          "virtual_size": 331350016,
+          "wasted": 8947744
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets",
+          "effective_size": 8947744,
+          "size": 56066048
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/buffer/buckets/bucket_0917504",
+          "effective_size": 55050240,
+          "size": 55050240
+        },
+        {
+          "path": "partition_alloc/partitions/buffer/buckets/bucket_0917504",
+          "allocated_objects_size": 55050240,
+          "decommittable_size": 0,
+          "discardable_size": 0,
+          "size": 55050240,
+          "slot_size": 917504,
+          "total_slot_span_size": 917504
+        },
+        {
+          "path": "partition_alloc/partitions/buffer/buckets/bucket_0917504/__fba9b7d249781bf4",
+          "size": 55050240
+        },
+        {
+          "path": "malloc/allocated_objects",
+          "effective_size": 48601905,
+          "size": 53847797
+        },
+        {
+          "path": "malloc/allocated_objects/partitions",
+          "effective_size": 47276448,
+          "size": 47276448
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator",
+          "effective_size": 47118304,
+          "size": 47118304
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets",
+          "effective_size": 47118304,
+          "size": 47118304
+        },
+        {
+          "path": "blink_gc",
+          "effective_size": 23865668,
+          "size": 26673232
+        },
+        {
+          "path": "blink_gc/main",
+          "effective_size": 23118236,
+          "size": 25886800
+        },
+        {
+          "path": "blink_gc/main/heap",
+          "allocated_objects_size": 2768544,
+          "committed_size": 25886800,
+          "effective_size": 23118236,
+          "pooled_size": 0,
+          "size": 25886800
+        },
+        {
+          "path": "v8",
+          "effective_size": 21055280,
+          "size": 21055280
+        },
+        {
+          "path": "cc/tile_memory",
+          "effective_size": 10321920,
+          "size": 20643840
+        },
+        {
+          "path": "cc/tile_memory/provider_511230889",
+          "effective_size": 10321920,
+          "size": 20643840
+        }
+      ],
+      "processes": {
+        "22476": {
+          "allocatorCount": 7864,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "fbcf000"
+          },
+          "roots": {
+            "blink_gc": {
+              "effective_size": 23865668,
+              "size": 26673232
+            },
+            "blink_objects": {
+              "effective_size": 2807544,
+              "size": 2807544
+            },
+            "canvas": {
+              "effective_size": 5788320,
+              "size": 7717760
+            },
+            "cc": {
+              "effective_size": 211648512,
+              "size": 221970432
+            },
+            "discardable": {
+              "effective_size": 131072,
+              "size": 201457664
+            },
+            "malloc": {
+              "allocated_objects_size": 48601905,
+              "effective_size": 59199440,
+              "size": 64445332,
+              "virtual_size": 334810256
+            },
+            "mojo": {},
+            "parkable_images": {
+              "on_disk_size": 0,
+              "total_size": 272408,
+              "unparked_size": 272408
+            },
+            "parkable_strings": {
+              "compressed_size": 0,
+              "metadata_size": 0,
+              "on_disk_footprint": 0,
+              "on_disk_free_chunks": 0,
+              "on_disk_size": 0,
+              "original_size": 0,
+              "overhead_size": 0,
+              "savings_size": 0,
+              "uncompressed_size": 0
+            },
+            "partition_alloc": {
+              "effective_size": 136754064,
+              "size": 138154442
+            },
+            "shared_memory": {
+              "effective_size": 16085811,
+              "size": 233598976
+            },
+            "site_storage": {},
+            "skia": {
+              "effective_size": 203868,
+              "size": 203868
+            },
+            "v8": {
+              "effective_size": 21055280,
+              "size": 21055280
+            },
+            "web_cache": {
+              "effective_size": 1863739,
+              "size": 1863739
+            }
+          }
+        },
+        "20292": {
+          "allocatorCount": 579,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "17de000"
+          },
+          "roots": {
+            "cc": {},
+            "devtools": {},
+            "discardable": {
+              "size": 131072
+            },
+            "frame_evictor": {},
+            "leveldatabase": {
+              "effective_size": 12551,
+              "size": 16655
+            },
+            "malloc": {
+              "allocated_objects_size": 7157389,
+              "effective_size": 9446608,
+              "size": 9750183,
+              "virtual_size": 51243728
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 4053811,
+              "size": 7696384
+            },
+            "site_storage": {
+              "size": 87224
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 303336,
+              "malloc_high_wmark_size": 315248,
+              "size": 303336
+            }
+          }
+        },
+        "23516": {
+          "allocatorCount": 665,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1ca2000"
+          },
+          "roots": {
+            "cc": {
+              "effective_size": 1161440,
+              "size": 12562880
+            },
+            "discardable": {},
+            "gpu": {
+              "effective_size": 2044128,
+              "size": 30799168
+            },
+            "malloc": {
+              "allocated_objects_size": 11255283,
+              "effective_size": 12225808,
+              "size": 12225808,
+              "virtual_size": 22776048
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 82067,
+              "size": 30945280
+            },
+            "skia": {}
+          }
+        },
+        "19500": {
+          "allocatorCount": 589,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "f9d000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 5341716,
+              "effective_size": 6086000,
+              "size": 6086000,
+              "virtual_size": 11784080
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 33587,
+              "size": 65536
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 40848,
+              "size": 40848
+            },
+            "global": {
+              "effective_size": 91328,
+              "size": 272161280
+            }
+          }
+        },
+        "27688": {
+          "allocatorCount": 314,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1356000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 1855822,
+              "effective_size": 2290112,
+              "size": 2290112,
+              "virtual_size": 7349456
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 4100915,
+              "size": 8204288
+            },
+            "skia": {}
+          }
+        }
+      }
+    },
+    {
+      "label": "returned-60",
+      "rendererPid": 22476,
+      "cdpReturnedGuid": "0x7",
+      "traceDumpIds": [
+        "0x6"
+      ],
+      "association": "One unique native dump group within explicit request begin/end UserTiming span. Raw GUIDs retained; no assumption that trace IDs equal CDP-returned IDs.",
+      "rendererProcessTotals": {
+        "is_peak_rss_resettable": false,
+        "peak_resident_set_size": "0",
+        "private_footprint_bytes": "a283000"
+      },
+      "categories": {
+        "malloc": {
+          "root": {
+            "allocated_objects_size": 41339694,
+            "effective_size": 50629568,
+            "size": 51344832,
+            "virtual_size": 332703664
+          },
+          "effectiveFrontier": {
+            "bytes": 50629568,
+            "paths": [
+              [
+                "malloc",
+                50629568
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 51344832,
+            "paths": [
+              [
+                "malloc",
+                51344832
+              ]
+            ]
+          }
+        },
+        "partition_alloc": {
+          "root": {
+            "effective_size": 57750096,
+            "size": 59150474
+          },
+          "effectiveFrontier": {
+            "bytes": 57750096,
+            "paths": [
+              [
+                "partition_alloc",
+                57750096
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 59150474,
+            "paths": [
+              [
+                "partition_alloc",
+                59150474
+              ]
+            ]
+          }
+        },
+        "v8": {
+          "root": {
+            "effective_size": 10159916,
+            "size": 10159916
+          },
+          "effectiveFrontier": {
+            "bytes": 10159916,
+            "paths": [
+              [
+                "v8",
+                10159916
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 10159916,
+            "paths": [
+              [
+                "v8",
+                10159916
+              ]
+            ]
+          }
+        },
+        "blink_gc": {
+          "root": {
+            "effective_size": 24252482,
+            "size": 25886800
+          },
+          "effectiveFrontier": {
+            "bytes": 24252482,
+            "paths": [
+              [
+                "blink_gc",
+                24252482
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 25886800,
+            "paths": [
+              [
+                "blink_gc",
+                25886800
+              ]
+            ]
+          }
+        },
+        "blink_objects": {
+          "root": {
+            "effective_size": 1634144,
+            "size": 1634144
+          },
+          "effectiveFrontier": {
+            "bytes": 1634144,
+            "paths": [
+              [
+                "blink_objects",
+                1634144
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 1634144,
+            "paths": [
+              [
+                "blink_objects",
+                1634144
+              ]
+            ]
+          }
+        },
+        "cc": {
+          "root": {
+            "effective_size": 211648512,
+            "size": 221970432
+          },
+          "effectiveFrontier": {
+            "bytes": 211648512,
+            "paths": [
+              [
+                "cc",
+                211648512
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 221970432,
+            "paths": [
+              [
+                "cc",
+                221970432
+              ]
+            ]
+          }
+        },
+        "gpu": {
+          "root": {},
+          "effectiveFrontier": {
+            "bytes": 0,
+            "paths": []
+          },
+          "sizeFrontier": {
+            "bytes": 0,
+            "paths": []
+          }
+        },
+        "skia": {
+          "root": {
+            "effective_size": 203868,
+            "size": 203868
+          },
+          "effectiveFrontier": {
+            "bytes": 203868,
+            "paths": [
+              [
+                "skia",
+                203868
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 203868,
+            "paths": [
+              [
+                "skia",
+                203868
+              ]
+            ]
+          }
+        },
+        "discardable": {
+          "root": {
+            "effective_size": 131072,
+            "size": 201457664
+          },
+          "effectiveFrontier": {
+            "bytes": 131072,
+            "paths": [
+              [
+                "discardable",
+                131072
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 201457664,
+            "paths": [
+              [
+                "discardable",
+                201457664
+              ]
+            ]
+          }
+        },
+        "web_cache": {
+          "root": {
+            "effective_size": 1863739,
+            "size": 1863739
+          },
+          "effectiveFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          },
+          "sizeFrontier": {
+            "bytes": 1863739,
+            "paths": [
+              [
+                "web_cache",
+                1863739
+              ]
+            ]
+          }
+        }
+      },
+      "topRendererSizeEntries": [
+        {
+          "path": "shared_memory",
+          "effective_size": 11049779,
+          "size": 223539200
+        },
+        {
+          "path": "cc",
+          "effective_size": 211648512,
+          "size": 221970432
+        },
+        {
+          "path": "discardable",
+          "effective_size": 131072,
+          "size": 201457664
+        },
+        {
+          "path": "cc/image_memory",
+          "effective_size": 201326592,
+          "size": 201326592
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0",
+          "effective_size": 201326592,
+          "size": 201326592
+        },
+        {
+          "path": "cc/image_memory/cache_0x5DFC002123C0/at_raster",
+          "effective_size": 201326592,
+          "size": 201326592
+        },
+        {
+          "path": "partition_alloc",
+          "effective_size": 57750096,
+          "size": 59150474
+        },
+        {
+          "path": "partition_alloc/allocated_objects",
+          "effective_size": 57750096,
+          "size": 59150474
+        },
+        {
+          "path": "partition_alloc/partitions",
+          "size": 59150474
+        },
+        {
+          "path": "partition_alloc/partitions/buffer",
+          "aligned_alloc_wasted_size": 0,
+          "allocated_objects_size": 57678416,
+          "allocated_size": 57678416,
+          "brp_quarantined_size": 0,
+          "decommittable_size": 135168,
+          "discardable_size": 245760,
+          "intended_leak_size": 0,
+          "max_allocated_size": 61138816,
+          "max_committed_size": 61939712,
+          "size": 58462208,
+          "virtual_committed_size": 58462208,
+          "virtual_size": 81788928,
+          "wasted": 783792
+        },
+        {
+          "path": "partition_alloc/partitions/buffer/buckets",
+          "size": 58462208
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions",
+          "effective_size": 57750096,
+          "size": 57750096
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/buffer",
+          "effective_size": 57678416,
+          "size": 57678416
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/buffer/buckets",
+          "effective_size": 57678416,
+          "size": 57678416
+        },
+        {
+          "path": "partition_alloc/allocated_objects/partitions/buffer/buckets/bucket_0917504",
+          "effective_size": 55050240,
+          "size": 55050240
+        },
+        {
+          "path": "partition_alloc/partitions/buffer/buckets/bucket_0917504",
+          "allocated_objects_size": 55050240,
+          "decommittable_size": 0,
+          "discardable_size": 0,
+          "size": 55050240,
+          "slot_size": 917504,
+          "total_slot_span_size": 917504
+        },
+        {
+          "path": "partition_alloc/partitions/buffer/buckets/bucket_0917504/__fba9b7d249781bf4",
+          "size": 55050240
+        },
+        {
+          "path": "malloc",
+          "allocated_objects_size": 41339694,
+          "effective_size": 50629568,
+          "size": 51344832,
+          "virtual_size": 332703664
+        },
+        {
+          "path": "malloc/partitions",
+          "allocated_objects_size": 40023344,
+          "brp_quarantined_bytes_per_minute": 4759720,
+          "effective_size": 9252576,
+          "size": 49275920,
+          "virtual_committed_size": 47128576,
+          "virtual_size": 331350016,
+          "wasted": 7105232
+        },
+        {
+          "path": "malloc/partitions/allocator",
+          "aligned_alloc_wasted_size": 9382816,
+          "allocated_objects_size": 39865200,
+          "allocated_size": 39865200,
+          "brp_quarantined_size": 1888,
+          "decommittable_size": 2060288,
+          "discardable_size": 1748992,
+          "effective_size": 9169056,
+          "intended_leak_size": 0,
+          "max_allocated_size": 278464608,
+          "max_committed_size": 292089856,
+          "size": 49034256,
+          "virtual_committed_size": 46886912,
+          "virtual_size": 329252864,
+          "wasted": 7021712
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets",
+          "effective_size": 7021712,
+          "size": 46886912
+        },
+        {
+          "path": "malloc/allocated_objects",
+          "effective_size": 41339694,
+          "size": 42054958
+        },
+        {
+          "path": "malloc/allocated_objects/partitions",
+          "effective_size": 40023344,
+          "size": 40023344
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator",
+          "effective_size": 39865200,
+          "size": 39865200
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets",
+          "effective_size": 39865200,
+          "size": 39865200
+        },
+        {
+          "path": "blink_gc",
+          "effective_size": 24252482,
+          "size": 25886800
+        },
+        {
+          "path": "blink_gc/main",
+          "effective_size": 24252482,
+          "size": 25886800
+        },
+        {
+          "path": "blink_gc/main/heap",
+          "allocated_objects_size": 1634144,
+          "committed_size": 25886800,
+          "effective_size": 24252482,
+          "pooled_size": 0,
+          "size": 25886800
+        },
+        {
+          "path": "cc/tile_memory",
+          "effective_size": 10321920,
+          "size": 20643840
+        },
+        {
+          "path": "cc/tile_memory/provider_511230889",
+          "effective_size": 10321920,
+          "size": 20643840
+        },
+        {
+          "path": "blink_gc/main/heap/NormalPageSpace3",
+          "allocated_objects_size": 840688,
+          "committed_size": 17170432,
+          "effective_size": 16086407,
+          "size": 17170432
+        },
+        {
+          "path": "blink_gc/main/heap/NormalPageSpace3/pages",
+          "effective_size": 16086407,
+          "size": 17170432
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets/directMap_1",
+          "effective_size": 12587008,
+          "size": 12587008
+        },
+        {
+          "path": "malloc/allocated_objects/partitions/allocator/buckets/directMap_2",
+          "effective_size": 12587008,
+          "size": 12587008
+        },
+        {
+          "path": "malloc/partitions/allocator/buckets/directMap_1",
+          "allocated_objects_size": 12587008,
+          "decommittable_size": 0,
+          "discardable_size": 0,
+          "size": 12587008,
+          "slot_size": 12587008,
+          "total_slot_span_size": 12587008
+        }
+      ],
+      "processes": {
+        "22476": {
+          "allocatorCount": 6200,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "a283000"
+          },
+          "roots": {
+            "blink_gc": {
+              "effective_size": 24252482,
+              "size": 25886800
+            },
+            "blink_objects": {
+              "effective_size": 1634144,
+              "size": 1634144
+            },
+            "cc": {
+              "effective_size": 211648512,
+              "size": 221970432
+            },
+            "discardable": {
+              "effective_size": 131072,
+              "size": 201457664
+            },
+            "malloc": {
+              "allocated_objects_size": 41339694,
+              "effective_size": 50629568,
+              "size": 51344832,
+              "virtual_size": 332703664
+            },
+            "mojo": {},
+            "parkable_images": {
+              "on_disk_size": 0,
+              "total_size": 272408,
+              "unparked_size": 272408
+            },
+            "parkable_strings": {
+              "compressed_size": 0,
+              "metadata_size": 0,
+              "on_disk_footprint": 0,
+              "on_disk_free_chunks": 0,
+              "on_disk_size": 0,
+              "original_size": 0,
+              "overhead_size": 0,
+              "savings_size": 0,
+              "uncompressed_size": 0
+            },
+            "partition_alloc": {
+              "effective_size": 57750096,
+              "size": 59150474
+            },
+            "shared_memory": {
+              "effective_size": 11049779,
+              "size": 223539200
+            },
+            "site_storage": {},
+            "skia": {
+              "effective_size": 203868,
+              "size": 203868
+            },
+            "v8": {
+              "effective_size": 10159916,
+              "size": 10159916
+            },
+            "web_cache": {
+              "effective_size": 1863739,
+              "size": 1863739
+            }
+          }
+        },
+        "20292": {
+          "allocatorCount": 581,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1889000"
+          },
+          "roots": {
+            "cc": {},
+            "devtools": {},
+            "discardable": {
+              "size": 131072
+            },
+            "frame_evictor": {},
+            "leveldatabase": {
+              "effective_size": 12551,
+              "size": 16655
+            },
+            "malloc": {
+              "allocated_objects_size": 7253853,
+              "effective_size": 11336528,
+              "size": 11640103,
+              "virtual_size": 53340880
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 4889395,
+              "size": 9367552
+            },
+            "site_storage": {
+              "size": 87224
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 303336,
+              "malloc_high_wmark_size": 303336,
+              "size": 303336
+            }
+          }
+        },
+        "23516": {
+          "allocatorCount": 583,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1c76000"
+          },
+          "roots": {
+            "cc": {
+              "size": 2883584
+            },
+            "discardable": {},
+            "gpu": {
+              "size": 20643840
+            },
+            "malloc": {
+              "allocated_objects_size": 11150803,
+              "effective_size": 12088064,
+              "size": 12088064,
+              "virtual_size": 22776048
+            },
+            "mojo": {},
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 74547,
+              "size": 20779008
+            },
+            "skia": {}
+          }
+        },
+        "19500": {
+          "allocatorCount": 560,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1014000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 5333828,
+              "effective_size": 6591904,
+              "size": 6591904,
+              "virtual_size": 11784080
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 33587,
+              "size": 65536
+            },
+            "skia": {},
+            "sqlite": {
+              "effective_size": 40848,
+              "size": 40848
+            },
+            "global": {
+              "effective_size": 91328,
+              "size": 253502656
+            }
+          }
+        },
+        "27688": {
+          "allocatorCount": 320,
+          "processTotals": {
+            "is_peak_rss_resettable": false,
+            "peak_resident_set_size": "0",
+            "private_footprint_bytes": "1792000"
+          },
+          "roots": {
+            "malloc": {
+              "allocated_objects_size": 1918206,
+              "effective_size": 2531056,
+              "size": 2531056,
+              "virtual_size": 7349456
+            },
+            "partition_alloc": {},
+            "shared_memory": {
+              "effective_size": 4940595,
+              "size": 9883648
+            },
+            "skia": {}
+          }
+        }
+      }
+    }
+  ]
+}

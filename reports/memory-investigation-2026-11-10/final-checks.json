@@ -1,0 +1,28 @@
+{
+  "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+  "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+  "commands": [
+    {
+      "log": "reports/memory-investigation-2026-11-10/acceptance-build.log",
+      "exitCode": 0,
+      "command": "npm run build"
+    },
+    {
+      "log": "reports/memory-investigation-2026-11-10/acceptance-lint.log",
+      "exitCode": 0,
+      "command": "npm run lint"
+    },
+    {
+      "log": "reports/memory-investigation-2026-11-10/acceptance-unit.log",
+      "exitCode": 0,
+      "command": "npm test -- --reporter=json --outputFile=reports/memory-investigation-2026-11-10/final-unit.json"
+    },
+    {
+      "log": "reports/memory-investigation-2026-11-10/acceptance-manifest.log",
+      "exitCode": 0,
+      "command": "npm run data:check"
+    }
+  ],
+  "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+  "generatedAt": "2026-11-10T19:41:59.9226177Z"
+}

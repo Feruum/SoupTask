@@ -1,0 +1,2113 @@
+[
+  {
+    "label": "initial-natural",
+    "url": "http://127.0.0.1:4196/runs/kazakh-sft-005",
+    "heap": {
+      "usedSize": 8499212,
+      "totalSize": 15011840,
+      "embedderHeapUsedSize": 3777392,
+      "backingStorageSize": 1771826
+    },
+    "dom": {
+      "documents": 6,
+      "nodes": 486,
+      "jsEventListeners": 300
+    },
+    "metrics": [
+      {
+        "name": "Timestamp",
+        "value": 38261.298593
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 6
+      },
+      {
+        "name": "Frames",
+        "value": 5
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 300
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 357
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 486
+      },
+      {
+        "name": "Resources",
+        "value": 22
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 10
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 4
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 1
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 6
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 2
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 64
+      },
+      {
+        "name": "LayoutCount",
+        "value": 9
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 20
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.050361
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.017503
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.01661
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 0.903298
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 1.068942
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 0.08117
+      },
+      {
+        "name": "ThreadTime",
+        "value": 0.446032
+      },
+      {
+        "name": "ProcessTime",
+        "value": 1.446807
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 8499212
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 15011840
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 0
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 38256.941022
+      },
+      {
+        "name": "NavigationStart",
+        "value": 38256.838608
+      }
+    ],
+    "workers": 1,
+    "processes": [
+      {
+        "type": "browser",
+        "id": 29840,
+        "cpuTime": 0.328109
+      },
+      {
+        "type": "renderer",
+        "id": 31720,
+        "cpuTime": 1.370058
+      },
+      {
+        "type": "GPU",
+        "id": 7656,
+        "cpuTime": 0.24975
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 25688,
+        "cpuTime": 0.116683
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 7656,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 71245824,
+        "PrivateMemorySize64": 29368320
+      },
+      {
+        "Id": 25688,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 38039552,
+        "PrivateMemorySize64": 15876096
+      },
+      {
+        "Id": 29840,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 55058432,
+        "PrivateMemorySize64": 19423232
+      },
+      {
+        "Id": 31720,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 254189568,
+        "PrivateMemorySize64": 153223168
+      }
+    ],
+    "page": {
+      "charts": 3,
+      "marks": 46,
+      "measures": 2,
+      "workspace": {
+        "workspaceEpoch": 1,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 24.799999997019768,
+            "normalizationMs": 251.20000000298023,
+            "indexBuildMs": 206.39999999850988,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 334033,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    }
+  },
+  {
+    "label": "initial-after-explicit-GC",
+    "url": "http://127.0.0.1:4196/runs/kazakh-sft-005",
+    "heap": {
+      "usedSize": 6210396,
+      "totalSize": 6885376,
+      "embedderHeapUsedSize": 1553760,
+      "backingStorageSize": 718627
+    },
+    "dom": {
+      "documents": 2,
+      "nodes": 451,
+      "jsEventListeners": 243
+    },
+    "metrics": [
+      {
+        "name": "Timestamp",
+        "value": 38263.22348
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 2
+      },
+      {
+        "name": "Frames",
+        "value": 2
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 243
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 343
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 451
+      },
+      {
+        "name": "Resources",
+        "value": 21
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 6
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 2
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 1
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 2
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 0
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 34
+      },
+      {
+        "name": "LayoutCount",
+        "value": 9
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 20
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.050361
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.017503
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.017716
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 0.903298
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 1.111333
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 0.122455
+      },
+      {
+        "name": "ThreadTime",
+        "value": 0.47058
+      },
+      {
+        "name": "ProcessTime",
+        "value": 1.513004
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 6210396
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 6885376
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 0
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 38256.941022
+      },
+      {
+        "name": "NavigationStart",
+        "value": 38256.838608
+      }
+    ],
+    "workers": 1,
+    "processes": [
+      {
+        "type": "browser",
+        "id": 29840,
+        "cpuTime": 0.333
+      },
+      {
+        "type": "renderer",
+        "id": 31720,
+        "cpuTime": 1.512493
+      },
+      {
+        "type": "GPU",
+        "id": 7656,
+        "cpuTime": 0.272093
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 25688,
+        "cpuTime": 0.116683
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 7656,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 71245824,
+        "PrivateMemorySize64": 29368320
+      },
+      {
+        "Id": 25688,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 38068224,
+        "PrivateMemorySize64": 15876096
+      },
+      {
+        "Id": 29840,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 55070720,
+        "PrivateMemorySize64": 19427328
+      },
+      {
+        "Id": 31720,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 248930304,
+        "PrivateMemorySize64": 145072128
+      }
+    ],
+    "page": {
+      "charts": 3,
+      "marks": 46,
+      "measures": 2,
+      "workspace": {
+        "workspaceEpoch": 1,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 24.799999997019768,
+            "normalizationMs": 251.20000000298023,
+            "indexBuildMs": 206.39999999850988,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 334033,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    }
+  },
+  {
+    "label": "after-20-natural",
+    "url": "http://127.0.0.1:4196/runs/kazakh-sft-005",
+    "heap": {
+      "usedSize": 33219976,
+      "totalSize": 85073920,
+      "embedderHeapUsedSize": 27374776,
+      "backingStorageSize": 7655580
+    },
+    "dom": {
+      "documents": 2,
+      "nodes": 10077,
+      "jsEventListeners": 2563
+    },
+    "metrics": [
+      {
+        "name": "Timestamp",
+        "value": 38278.106463
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 2
+      },
+      {
+        "name": "Frames",
+        "value": 2
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 2563
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 7065
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 10077
+      },
+      {
+        "name": "Resources",
+        "value": 26
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 55
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 2
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 1
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 2
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 0
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 265
+      },
+      {
+        "name": "LayoutCount",
+        "value": 255
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 1067
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.266383
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.254795
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.272406
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 2.756133
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 6.854484
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 3.304767
+      },
+      {
+        "name": "ThreadTime",
+        "value": 6.125038
+      },
+      {
+        "name": "ProcessTime",
+        "value": 32.527108
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 33219976
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 85073920
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 0
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 38256.941022
+      },
+      {
+        "name": "NavigationStart",
+        "value": 38256.838608
+      }
+    ],
+    "workers": 1,
+    "processes": [
+      {
+        "type": "browser",
+        "id": 29840,
+        "cpuTime": 1.075417
+      },
+      {
+        "type": "renderer",
+        "id": 31720,
+        "cpuTime": 32.086522
+      },
+      {
+        "type": "GPU",
+        "id": 7656,
+        "cpuTime": 1.976016
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 25688,
+        "cpuTime": 0.222128
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 7656,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 81596416,
+        "PrivateMemorySize64": 29667328
+      },
+      {
+        "Id": 25688,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 38723584,
+        "PrivateMemorySize64": 16429056
+      },
+      {
+        "Id": 29840,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 57413632,
+        "PrivateMemorySize64": 22396928
+      },
+      {
+        "Id": 31720,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 448151552,
+        "PrivateMemorySize64": 311410688
+      }
+    ],
+    "page": {
+      "charts": 3,
+      "marks": 626,
+      "measures": 42,
+      "workspace": {
+        "workspaceEpoch": 41,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 23.30000000447035,
+            "normalizationMs": 203.5,
+            "indexBuildMs": 201.30000000447035,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 334033,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    }
+  },
+  {
+    "label": "after-20-explicit-GC",
+    "url": "http://127.0.0.1:4196/runs/kazakh-sft-005",
+    "heap": {
+      "usedSize": 11390624,
+      "totalSize": 14032896,
+      "embedderHeapUsedSize": 2337440,
+      "backingStorageSize": 853511
+    },
+    "dom": {
+      "documents": 2,
+      "nodes": 637,
+      "jsEventListeners": 273
+    },
+    "metrics": [
+      {
+        "name": "Timestamp",
+        "value": 38280.1394
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 2
+      },
+      {
+        "name": "Frames",
+        "value": 2
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 273
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 343
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 637
+      },
+      {
+        "name": "Resources",
+        "value": 25
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 7
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 2
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 1
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 2
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 0
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 40
+      },
+      {
+        "name": "LayoutCount",
+        "value": 255
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 1067
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.266383
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.254795
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.273453
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 2.756133
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 6.983606
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 3.432842
+      },
+      {
+        "name": "ThreadTime",
+        "value": 6.194286
+      },
+      {
+        "name": "ProcessTime",
+        "value": 32.930585
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 11390624
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 14032896
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 0
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 38256.941022
+      },
+      {
+        "name": "NavigationStart",
+        "value": 38256.838608
+      }
+    ],
+    "workers": 1,
+    "processes": [
+      {
+        "type": "browser",
+        "id": 29840,
+        "cpuTime": 1.0803
+      },
+      {
+        "type": "renderer",
+        "id": 31720,
+        "cpuTime": 32.929176
+      },
+      {
+        "type": "GPU",
+        "id": 7656,
+        "cpuTime": 1.990825
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 25688,
+        "cpuTime": 0.223362
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 7656,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 79990784,
+        "PrivateMemorySize64": 29667328
+      },
+      {
+        "Id": 25688,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 38723584,
+        "PrivateMemorySize64": 16429056
+      },
+      {
+        "Id": 29840,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 57413632,
+        "PrivateMemorySize64": 22396928
+      },
+      {
+        "Id": 31720,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 351678464,
+        "PrivateMemorySize64": 215728128
+      }
+    ],
+    "page": {
+      "charts": 3,
+      "marks": 626,
+      "measures": 42,
+      "workspace": {
+        "workspaceEpoch": 41,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 23.30000000447035,
+            "normalizationMs": 203.5,
+            "indexBuildMs": 201.30000000447035,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 334033,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    }
+  },
+  {
+    "label": "after-40-natural",
+    "url": "http://127.0.0.1:4196/runs/kazakh-sft-005",
+    "heap": {
+      "usedSize": 15192988,
+      "totalSize": 77209600,
+      "embedderHeapUsedSize": 3637760,
+      "backingStorageSize": 1140730
+    },
+    "dom": {
+      "documents": 2,
+      "nodes": 1532,
+      "jsEventListeners": 378
+    },
+    "metrics": [
+      {
+        "name": "Timestamp",
+        "value": 38295.959647
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 2
+      },
+      {
+        "name": "Frames",
+        "value": 2
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 378
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 345
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 1532
+      },
+      {
+        "name": "Resources",
+        "value": 26
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 7
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 2
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 1
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 2
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 0
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 52
+      },
+      {
+        "name": "LayoutCount",
+        "value": 496
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 2121
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.482612
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.497148
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.462448
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 4.369949
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 12.953695
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 7.141538
+      },
+      {
+        "name": "ThreadTime",
+        "value": 12.232735
+      },
+      {
+        "name": "ProcessTime",
+        "value": 64.343462
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 15192988
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 77209600
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 0
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 38256.941022
+      },
+      {
+        "name": "NavigationStart",
+        "value": 38256.838608
+      }
+    ],
+    "workers": 1,
+    "processes": [
+      {
+        "type": "browser",
+        "id": 29840,
+        "cpuTime": 1.951885
+      },
+      {
+        "type": "renderer",
+        "id": 31720,
+        "cpuTime": 64.148345
+      },
+      {
+        "type": "GPU",
+        "id": 7656,
+        "cpuTime": 3.816518
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 25688,
+        "cpuTime": 0.320945
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 7656,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 80510976,
+        "PrivateMemorySize64": 29790208
+      },
+      {
+        "Id": 25688,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 38699008,
+        "PrivateMemorySize64": 16384000
+      },
+      {
+        "Id": 29840,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 57896960,
+        "PrivateMemorySize64": 22863872
+      },
+      {
+        "Id": 31720,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 453881856,
+        "PrivateMemorySize64": 307453952
+      }
+    ],
+    "page": {
+      "charts": 3,
+      "marks": 684,
+      "measures": 82,
+      "workspace": {
+        "workspaceEpoch": 81,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 27.399999998509884,
+            "normalizationMs": 227.60000000149012,
+            "indexBuildMs": 191.79999999701977,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 334033,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    }
+  },
+  {
+    "label": "after-40-explicit-GC",
+    "url": "http://127.0.0.1:4196/runs/kazakh-sft-005",
+    "heap": {
+      "usedSize": 11717032,
+      "totalSize": 12984320,
+      "embedderHeapUsedSize": 2390768,
+      "backingStorageSize": 853780
+    },
+    "dom": {
+      "documents": 2,
+      "nodes": 637,
+      "jsEventListeners": 273
+    },
+    "metrics": [
+      {
+        "name": "Timestamp",
+        "value": 38298.04127
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 2
+      },
+      {
+        "name": "Frames",
+        "value": 2
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 273
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 343
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 637
+      },
+      {
+        "name": "Resources",
+        "value": 25
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 7
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 2
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 1
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 2
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 0
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 40
+      },
+      {
+        "name": "LayoutCount",
+        "value": 496
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 2121
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.482612
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.497148
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.463301
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 4.369949
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 13.071018
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 7.258008
+      },
+      {
+        "name": "ThreadTime",
+        "value": 12.304576
+      },
+      {
+        "name": "ProcessTime",
+        "value": 64.727134
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 11717032
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 12984320
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 0
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 38256.941022
+      },
+      {
+        "name": "NavigationStart",
+        "value": 38256.838608
+      }
+    ],
+    "workers": 1,
+    "processes": [
+      {
+        "type": "browser",
+        "id": 29840,
+        "cpuTime": 1.957143
+      },
+      {
+        "type": "renderer",
+        "id": 31720,
+        "cpuTime": 64.725911
+      },
+      {
+        "type": "GPU",
+        "id": 7656,
+        "cpuTime": 3.832078
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 25688,
+        "cpuTime": 0.322302
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 7656,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 80510976,
+        "PrivateMemorySize64": 29790208
+      },
+      {
+        "Id": 25688,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 38699008,
+        "PrivateMemorySize64": 16384000
+      },
+      {
+        "Id": 29840,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 57896960,
+        "PrivateMemorySize64": 22863872
+      },
+      {
+        "Id": 31720,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 378888192,
+        "PrivateMemorySize64": 235147264
+      }
+    ],
+    "page": {
+      "charts": 3,
+      "marks": 684,
+      "measures": 82,
+      "workspace": {
+        "workspaceEpoch": 81,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 27.399999998509884,
+            "normalizationMs": 227.60000000149012,
+            "indexBuildMs": 191.79999999701977,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 334033,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    }
+  },
+  {
+    "label": "after-60-natural",
+    "url": "http://127.0.0.1:4196/runs/kazakh-sft-005",
+    "heap": {
+      "usedSize": 15039284,
+      "totalSize": 79044608,
+      "embedderHeapUsedSize": 3438144,
+      "backingStorageSize": 1140506
+    },
+    "dom": {
+      "documents": 2,
+      "nodes": 639,
+      "jsEventListeners": 285
+    },
+    "metrics": [
+      {
+        "name": "Timestamp",
+        "value": 38311.586502
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 2
+      },
+      {
+        "name": "Frames",
+        "value": 2
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 285
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 345
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 639
+      },
+      {
+        "name": "Resources",
+        "value": 25
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 7
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 2
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 1
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 2
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 0
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 52
+      },
+      {
+        "name": "LayoutCount",
+        "value": 737
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 3164
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.679291
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.728637
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.693976
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 6.038912
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 17.53775
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 9.396934
+      },
+      {
+        "name": "ThreadTime",
+        "value": 16.915238
+      },
+      {
+        "name": "ProcessTime",
+        "value": 94.75678
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 15039284
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 79044608
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 0
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 38256.941022
+      },
+      {
+        "name": "NavigationStart",
+        "value": 38256.838608
+      }
+    ],
+    "workers": 1,
+    "processes": [
+      {
+        "type": "browser",
+        "id": 29840,
+        "cpuTime": 2.557026
+      },
+      {
+        "type": "renderer",
+        "id": 31720,
+        "cpuTime": 94.649054
+      },
+      {
+        "type": "GPU",
+        "id": 7656,
+        "cpuTime": 5.705607
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 25688,
+        "cpuTime": 0.425349
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 7656,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 79212544,
+        "PrivateMemorySize64": 29806592
+      },
+      {
+        "Id": 25688,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 38797312,
+        "PrivateMemorySize64": 16478208
+      },
+      {
+        "Id": 29840,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 58036224,
+        "PrivateMemorySize64": 23019520
+      },
+      {
+        "Id": 31720,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 475312128,
+        "PrivateMemorySize64": 316866560
+      }
+    ],
+    "page": {
+      "charts": 3,
+      "marks": 744,
+      "measures": 122,
+      "workspace": {
+        "workspaceEpoch": 121,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 26.200000002980232,
+            "normalizationMs": 224,
+            "indexBuildMs": 191.70000000298023,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 334033,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    }
+  },
+  {
+    "label": "after-60-explicit-GC",
+    "url": "http://127.0.0.1:4196/runs/kazakh-sft-005",
+    "heap": {
+      "usedSize": 11988532,
+      "totalSize": 12984320,
+      "embedderHeapUsedSize": 2436072,
+      "backingStorageSize": 853780
+    },
+    "dom": {
+      "documents": 2,
+      "nodes": 637,
+      "jsEventListeners": 273
+    },
+    "metrics": [
+      {
+        "name": "Timestamp",
+        "value": 38313.614049
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 2
+      },
+      {
+        "name": "Frames",
+        "value": 2
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 273
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 343
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 637
+      },
+      {
+        "name": "Resources",
+        "value": 25
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 7
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 2
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 1
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 2
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 0
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 40
+      },
+      {
+        "name": "LayoutCount",
+        "value": 737
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 3164
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.679291
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.728637
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.694927
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 6.038912
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 17.620457
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 9.47869
+      },
+      {
+        "name": "ThreadTime",
+        "value": 16.964614
+      },
+      {
+        "name": "ProcessTime",
+        "value": 95.015186
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 11988532
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 12984320
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 0
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 38256.941022
+      },
+      {
+        "name": "NavigationStart",
+        "value": 38256.838608
+      }
+    ],
+    "workers": 1,
+    "processes": [
+      {
+        "type": "browser",
+        "id": 29840,
+        "cpuTime": 2.559916
+      },
+      {
+        "type": "renderer",
+        "id": 31720,
+        "cpuTime": 95.01415
+      },
+      {
+        "type": "GPU",
+        "id": 7656,
+        "cpuTime": 5.716885
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 25688,
+        "cpuTime": 0.425349
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 7656,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 78688256,
+        "PrivateMemorySize64": 29806592
+      },
+      {
+        "Id": 25688,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 38797312,
+        "PrivateMemorySize64": 16478208
+      },
+      {
+        "Id": 29840,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 58036224,
+        "PrivateMemorySize64": 23019520
+      },
+      {
+        "Id": 31720,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 404750336,
+        "PrivateMemorySize64": 246161408
+      }
+    ],
+    "page": {
+      "charts": 3,
+      "marks": 744,
+      "measures": 122,
+      "workspace": {
+        "workspaceEpoch": 121,
+        "members": [
+          "kazakh-sft-005"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32000000,
+        "allocationBytes": 76696612,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 26.200000002980232,
+            "normalizationMs": 224,
+            "indexBuildMs": 191.70000000298023,
+            "indexBufferBytes": 1696608
+          }
+        },
+        "renderBufferBytes": 334033,
+        "hoverCacheTargets": 1502,
+        "hoverCacheRows": 1502
+      }
+    }
+  },
+  {
+    "label": "unmounted-explicit-GC",
+    "url": "http://127.0.0.1:4196/memory-probe-not-found",
+    "heap": {
+      "usedSize": 9747160,
+      "totalSize": 11149312,
+      "embedderHeapUsedSize": 1963848,
+      "backingStorageSize": 735034
+    },
+    "dom": {
+      "documents": 2,
+      "nodes": 322,
+      "jsEventListeners": 208
+    },
+    "metrics": [
+      {
+        "name": "Timestamp",
+        "value": 38317.852444
+      },
+      {
+        "name": "AudioHandlers",
+        "value": 0
+      },
+      {
+        "name": "AudioWorkletProcessors",
+        "value": 0
+      },
+      {
+        "name": "Documents",
+        "value": 2
+      },
+      {
+        "name": "Frames",
+        "value": 2
+      },
+      {
+        "name": "JSEventListeners",
+        "value": 208
+      },
+      {
+        "name": "LayoutObjects",
+        "value": 104
+      },
+      {
+        "name": "MediaKeySessions",
+        "value": 0
+      },
+      {
+        "name": "MediaKeys",
+        "value": 0
+      },
+      {
+        "name": "Nodes",
+        "value": 322
+      },
+      {
+        "name": "Resources",
+        "value": 25
+      },
+      {
+        "name": "ContextLifecycleStateObservers",
+        "value": 4
+      },
+      {
+        "name": "V8PerContextDatas",
+        "value": 2
+      },
+      {
+        "name": "WorkerGlobalScopes",
+        "value": 0
+      },
+      {
+        "name": "UACSSResources",
+        "value": 0
+      },
+      {
+        "name": "RTCPeerConnections",
+        "value": 0
+      },
+      {
+        "name": "ResourceFetchers",
+        "value": 2
+      },
+      {
+        "name": "AdSubframes",
+        "value": 0
+      },
+      {
+        "name": "DetachedScriptStates",
+        "value": 0
+      },
+      {
+        "name": "ArrayBufferContents",
+        "value": 6
+      },
+      {
+        "name": "LayoutCount",
+        "value": 739
+      },
+      {
+        "name": "RecalcStyleCount",
+        "value": 3167
+      },
+      {
+        "name": "LayoutDuration",
+        "value": 0.68021
+      },
+      {
+        "name": "RecalcStyleDuration",
+        "value": 0.729487
+      },
+      {
+        "name": "DevToolsCommandDuration",
+        "value": 0.721777
+      },
+      {
+        "name": "ScriptDuration",
+        "value": 6.049216
+      },
+      {
+        "name": "V8CompileDuration",
+        "value": 0
+      },
+      {
+        "name": "TaskDuration",
+        "value": 19.031917
+      },
+      {
+        "name": "TaskOtherDuration",
+        "value": 10.851227
+      },
+      {
+        "name": "ThreadTime",
+        "value": 18.325467
+      },
+      {
+        "name": "ProcessTime",
+        "value": 96.56246
+      },
+      {
+        "name": "JSHeapUsedSize",
+        "value": 9747160
+      },
+      {
+        "name": "JSHeapTotalSize",
+        "value": 11149312
+      },
+      {
+        "name": "FirstMeaningfulPaint",
+        "value": 0
+      },
+      {
+        "name": "DomContentLoaded",
+        "value": 38256.941022
+      },
+      {
+        "name": "NavigationStart",
+        "value": 38256.838608
+      }
+    ],
+    "workers": 0,
+    "processes": [
+      {
+        "type": "browser",
+        "id": 29840,
+        "cpuTime": 2.822934
+      },
+      {
+        "type": "renderer",
+        "id": 31720,
+        "cpuTime": 96.559503
+      },
+      {
+        "type": "GPU",
+        "id": 7656,
+        "cpuTime": 5.731899
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 25688,
+        "cpuTime": 0.425733
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 7656,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 67743744,
+        "PrivateMemorySize64": 29700096
+      },
+      {
+        "Id": 25688,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 38416384,
+        "PrivateMemorySize64": 16105472
+      },
+      {
+        "Id": 29840,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 56803328,
+        "PrivateMemorySize64": 21733376
+      },
+      {
+        "Id": 31720,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 290254848,
+        "PrivateMemorySize64": 153288704
+      }
+    ],
+    "page": {
+      "charts": 0,
+      "marks": 744,
+      "measures": 122
+    }
+  }
+]

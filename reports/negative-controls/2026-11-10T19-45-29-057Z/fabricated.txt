@@ -1,0 +1,87 @@
+
+ RUN  v5.1.0 C:/Users/Ferumm/projects/soupTask
+
+ ❯ src/core/topology.test.ts (2 tests | 1 failed) 22ms
+   × isolated spike keeps both NaN breaks and distinct source segments 17ms
+   ✓ known cadence gap remains disconnected without a fabricated null row 2ms
+ ❯ src/core/engine.test.ts (10 tests | 5 failed) 299ms
+   × exact spike provenance width 1 44ms
+   × exact spike provenance width 320 41ms
+   × exact spike provenance width 768 44ms
+   × exact spike provenance width 1440 37ms
+   ✓ excludes offscreen spike and includes inclusive endpoints/single step 1ms
+   × independent raw-window oracle preserves both extrema and exact provenance on seeded cases 4ms
+   ✓ discloses dense disconnected mode while retaining exact finite extrema 87ms
+   ✓ independent interval oracle checks every bucket and segment first/min/max/last 15ms
+   ✓ duplicate-group inspection exposes total and every page without unbounded objects 2ms
+   ✓ final pending segment cannot exceed the topology cap after its last flush 21ms
+
+ Test Files  2 failed (2)
+      Tests  6 failed | 6 passed (12)
+   Start at  00:45:34
+   Duration  1.02s (import 50%, tests 42%, transform 4%, worker 3%)
+
+JSON report written to C:/Users/Ferumm/projects/soupTask/reports/negative-controls/2026-11-10T19-45-29-057Z/fabricated.json
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 6 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/core/engine.test.ts > exact spike provenance width 1
+ FAIL  src/core/engine.test.ts > exact spike provenance width 320
+ FAIL  src/core/engine.test.ts > exact spike provenance width 768
+ FAIL  src/core/engine.test.ts > exact spike provenance width 1440
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/core/engine.test.ts:9:96
+      7| for (const width of [1, 320, 768, 1440]) it(`exact spike provenance wi…
+      8|   const v = sampleView(n, 'loss', 0, 999999, width);
+      9|   expect(v.points.some(p => p.sourceIndex === 500001 && p.step === 500…
+       |                                                                                                ^
+     10|   expect(v.max).toBe(100);
+     11| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/6]⎯
+
+ FAIL  src/core/engine.test.ts > independent raw-window oracle preserves both extrema and exact provenance on seeded cases
+AssertionError: expected 3.3375626309115494 to be 2.3375626309115494 // Object.is equality
+
+- Expected
++ Received
+
+- 2.3375626309115494
++ 3.3375626309115494
+
+ ❯ src/core/engine.test.ts:43:19
+     41|     const v = sampleView(n, 'loss', a, b, width);
+     42|     expect(v.min).toBe(low);
+     43|     expect(v.max).toBe(high);
+       |                   ^
+     44|     for (const p of [...v.points, ...v.conflicts]) {
+     45|       expect(p.step).toBe(raw.step[p.sourceIndex]);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/6]⎯
+
+ FAIL  src/core/topology.test.ts > isolated spike keeps both NaN breaks and distinct source segments
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ src/core/topology.test.ts:13:105
+     11|   const n = normalize(raw([0, 1, 2, 3, 4], [1, NaN, 100, NaN, 2]));
+     12|   const view = sampleView(n, 'loss', 0, 4, 1);
+     13|   expect(view.points.some(point => point.sourceIndex === 2 && point.st…
+       |                                                                                                         ^
+     14|   expect(view.breaks).toEqual([{
+     15|     from: 0,
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/6]⎯
+

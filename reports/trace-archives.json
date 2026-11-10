@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-11-10T13:55:11.477Z",
+  "generatedAt": "2026-11-10T22:26:02.807Z",
   "scope": "Lossless gzip copies. Raw files remain locally; Git/source archives store gzip siblings. node scripts/trace-archives.mjs --unpack verifies/restores originals.",
   "entries": [
     {
+      "kind": "chrome-trace",
       "raw": "reports/hover-final-performance/indexed-chrome-trace.json",
       "archive": "reports/hover-final-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 81276201,
@@ -11,6 +12,7 @@
       "archiveSha256": "f85180d11d140223b95854b13dfc799e8fd6b463d34c8eed58813c6ada436de3"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/hover-final-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/hover-final-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 83689700,
@@ -19,6 +21,7 @@
       "archiveSha256": "ee24dd6645d5116a30e7d49d3cd713bae4fde59d5472f2a56376175a8e19f451"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/hover-guarded-performance/indexed-chrome-trace.json",
       "archive": "reports/hover-guarded-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 80551639,
@@ -27,6 +30,7 @@
       "archiveSha256": "8170db87ea8bbfe27b704978d1f26b71b7e77b7f2e5097075f885350f2f06e89"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/hover-guarded-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/hover-guarded-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 84153951,
@@ -35,6 +39,7 @@
       "archiveSha256": "e4988601e5f7dcedca65770726892d26b9b8c8d98f24940067dd203dc0d259f7"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/hover-optimized-performance/indexed-chrome-trace.json",
       "archive": "reports/hover-optimized-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 82658185,
@@ -43,6 +48,7 @@
       "archiveSha256": "593fac51075c55572841bfea88f5effacc69676d9efe6fdaf1d4aecf194ce8c1"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/hover-optimized-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/hover-optimized-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 84228487,
@@ -51,6 +57,7 @@
       "archiveSha256": "e498e50517d7bab3dc5cfef7b6fc09a692d97dd15a2fd160fe056d34e5a131d0"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse/compare-0.trace.json",
       "archive": "reports/lighthouse/compare-0.trace.json.gz",
       "rawBytes": 4866270,
@@ -59,6 +66,7 @@
       "archiveSha256": "8c1e187c60fe7b31117d0aefb1de5cc244b34fe6d00d18064a276aed2ca457ba"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse/dashboard-0.trace.json",
       "archive": "reports/lighthouse/dashboard-0.trace.json.gz",
       "rawBytes": 5362920,
@@ -67,6 +75,7 @@
       "archiveSha256": "38d660602b6ac7b74d0244cc31041de17a0ca5ca137121cd455ef3dd829e51a0"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse/quality-0.trace.json",
       "archive": "reports/lighthouse/quality-0.trace.json.gz",
       "rawBytes": 2618060,
@@ -75,6 +84,7 @@
       "archiveSha256": "50e457f2d482f8b5954eccfbd9515d34a064a6cb7de87d382b5373529429e357"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse/run-detail-0.trace.json",
       "archive": "reports/lighthouse/run-detail-0.trace.json.gz",
       "rawBytes": 4524480,
@@ -83,6 +93,7 @@
       "archiveSha256": "ad5aafa2d6fffe344713eb1888fc77c42c2e0301a000af58652aaf36c215b1c9"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse/runs-0.trace.json",
       "archive": "reports/lighthouse/runs-0.trace.json.gz",
       "rawBytes": 4180745,
@@ -91,6 +102,7 @@
       "archiveSha256": "92cee3ce7330a12fd4effad0d1ee7c577eec4448ecdd97fb70d7910bc918d7d6"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse-final/compare-0.trace.json",
       "archive": "reports/lighthouse-final/compare-0.trace.json.gz",
       "rawBytes": 4499597,
@@ -99,6 +111,7 @@
       "archiveSha256": "457aa743b816aaa7bea12b60e5385bea605bc5205d2ea1041682b4bd61fbf16f"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse-final/dashboard-0.trace.json",
       "archive": "reports/lighthouse-final/dashboard-0.trace.json.gz",
       "rawBytes": 5308246,
@@ -107,6 +120,7 @@
       "archiveSha256": "cd87c3ec4e6466cffdd98d28b8e9b5c7ceaf42e22a72a45958b7ac17dc051435"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse-final/quality-0.trace.json",
       "archive": "reports/lighthouse-final/quality-0.trace.json.gz",
       "rawBytes": 2672727,
@@ -115,6 +129,7 @@
       "archiveSha256": "0a8ee696cd6fe2e0c3b3789cd80900bb2f0f364872421ed3d3cd6eaf9e9becce"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse-final/run-detail-0.trace.json",
       "archive": "reports/lighthouse-final/run-detail-0.trace.json.gz",
       "rawBytes": 4439059,
@@ -123,6 +138,7 @@
       "archiveSha256": "8b5b695f78a9bc5b6f942516c421e70b40ddc8497deaa7dd1ff2133dcc645dce"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse-final/runs-0.trace.json",
       "archive": "reports/lighthouse-final/runs-0.trace.json.gz",
       "rawBytes": 3763320,
@@ -131,6 +147,7 @@
       "archiveSha256": "c93141de1e04c48b8cce6fec850da928dd943dee3d9564dae6dda17e9f4f037b"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse-release-final/compare-0.trace.json",
       "archive": "reports/lighthouse-release-final/compare-0.trace.json.gz",
       "rawBytes": 5342704,
@@ -139,6 +156,7 @@
       "archiveSha256": "ed645a107a6d456fdb85c1500ee2a5ca7c4a574fa3f78463bb077beff3f3117d"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse-release-final/dashboard-0.trace.json",
       "archive": "reports/lighthouse-release-final/dashboard-0.trace.json.gz",
       "rawBytes": 5206254,
@@ -147,6 +165,7 @@
       "archiveSha256": "c2a5bef836b19a5833b3fe01f9b471b954321f3d93b96969ea5aaa586b97d522"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse-release-final/quality-0.trace.json",
       "archive": "reports/lighthouse-release-final/quality-0.trace.json.gz",
       "rawBytes": 2768026,
@@ -155,6 +174,7 @@
       "archiveSha256": "8ee8a1fe109081af31f29630aba38bb90979079b4866ad4e96a6b1a8bfe55c70"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse-release-final/run-detail-0.trace.json",
       "archive": "reports/lighthouse-release-final/run-detail-0.trace.json.gz",
       "rawBytes": 5055703,
@@ -163,6 +183,7 @@
       "archiveSha256": "7d7faa62d8cf440e3b40f80a9e7d844dfafb63c238628e8fb296444c85ebc305"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/lighthouse-release-final/runs-0.trace.json",
       "archive": "reports/lighthouse-release-final/runs-0.trace.json.gz",
       "rawBytes": 4126722,
@@ -171,6 +192,592 @@
       "archiveSha256": "478bd40094c081f79fb378d4d4aa881b51b412e810e41a2d80b8a1c5b9fdb8eb"
     },
     {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/current-environment-old-source-control/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/current-environment-old-source-control/indexed-chrome-trace.json.gz",
+      "rawBytes": 51752972,
+      "archiveBytes": 7882216,
+      "rawSha256": "0712f51d1755e6702355dd2a6a11211592730ed5d05963b5d5a5a282e25eaad9",
+      "archiveSha256": "cb243975e9f164f64ceb04f67b6ceb58727dc80f0dc7fe208c4320b23bacc1bc"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/current-environment-old-source-control/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/current-environment-old-source-control/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 53336429,
+      "archiveBytes": 8405919,
+      "rawSha256": "017583bcadfc56b45e8934660d45dd37fe583e9e6aed93016f8a1b06e4dc0d17",
+      "archiveSha256": "0f5f63bd4b6592fdf3a8b90033493578ff774520cb7063f39acb5381eb3cd0e3"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/final-lighthouse/compare-0.trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/final-lighthouse/compare-0.trace.json.gz",
+      "rawBytes": 5432532,
+      "archiveBytes": 1070073,
+      "rawSha256": "7e19b0224edc0d1f1a9be8f91adc0a7a3d6e288a1202b07451f456a098caff68",
+      "archiveSha256": "202890aca663701ac7972cf6d3e15560a5d3086c919c50539b404143fe52011c"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/final-lighthouse/dashboard-0.trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/final-lighthouse/dashboard-0.trace.json.gz",
+      "rawBytes": 4998143,
+      "archiveBytes": 1054657,
+      "rawSha256": "596906000eb44f1bb346373a983fee472511d15b5dd5a73891f28f4368ff0a89",
+      "archiveSha256": "f4b371f0c6784a8f472390ea9eaac0e2a3a6480a634196e631f929507aa20b3a"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/final-lighthouse/quality-0.trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/final-lighthouse/quality-0.trace.json.gz",
+      "rawBytes": 2652394,
+      "archiveBytes": 458898,
+      "rawSha256": "23b8adf824cb1f704553872cdc5dbe13cd2cf37bcbfb230e2c5edbec91e7c947",
+      "archiveSha256": "724fdb6fc677e88d72f0f678400ca94d90089408302da68ef756723190bfb1a5"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/final-lighthouse/run-detail-0.trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/final-lighthouse/run-detail-0.trace.json.gz",
+      "rawBytes": 4731946,
+      "archiveBytes": 753350,
+      "rawSha256": "fc158adf527566b88ea70b5161daf0840e46c7cd38026285f0929471be13698c",
+      "archiveSha256": "15a459c48ab648b71c238df3f2851d57785fa7b3300d2d9f8401c3cc24416860"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/final-lighthouse/runs-0.trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/final-lighthouse/runs-0.trace.json.gz",
+      "rawBytes": 4180622,
+      "archiveBytes": 663920,
+      "rawSha256": "1eaccd6abf7adac32650da7967df7b1ea3a20e88f16a592cc12ecb7fcbef67e0",
+      "archiveSha256": "d5a92e8c2b8778979179c0c46e1bf1e4d1fb195a996428887f610b2b4566ade3"
+    },
+    {
+      "kind": "native-subsystem-dump",
+      "raw": "reports/memory-investigation-2026-11-10/final-roundtrip/memory-infra.json",
+      "archive": "reports/memory-investigation-2026-11-10/final-roundtrip/memory-infra.json.gz",
+      "rawBytes": 44563515,
+      "archiveBytes": 1629121,
+      "rawSha256": "480b2a4c43d03816a0139a6acac71d368f22204bca0c886205a880334fde1e74",
+      "archiveSha256": "969ff6e4bdf96780ad239851b932bda8276a98b047d3e023281ec9b833e63fea"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/final-trace-performance/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/final-trace-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 52567722,
+      "archiveBytes": 7973301,
+      "rawSha256": "93307dce02696b6601c2f2ce0746c55a24f219196f7568fa12081b1a1706829d",
+      "archiveSha256": "10fc98216a906492c22d2a60b52d53d5f9bb3ebb67d0ae41a1e73701ff8cb81f"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/final-trace-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/final-trace-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 56264258,
+      "archiveBytes": 9022843,
+      "rawSha256": "58a75a8442068d44fd5e816d32287850fb1394ed905beefed857f7225660ddd5",
+      "archiveSha256": "228f3fdcccf879bfdeabd440ca37a121780401a0776c6e41ec23e5a6ad18315b"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/hover-invalidation-before/chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/hover-invalidation-before/chrome-trace.json.gz",
+      "rawBytes": 75427020,
+      "archiveBytes": 8550324,
+      "rawSha256": "1da3de4bde12fb94636c77870e07964904c18f69103f44c6f8f7751211439556",
+      "archiveSha256": "60437e2524ddb3771255585a79a7c667b5be1427759da5848537446c4b467345"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/hover-invalidation-cursor/chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/hover-invalidation-cursor/chrome-trace.json.gz",
+      "rawBytes": 71418537,
+      "archiveBytes": 8463193,
+      "rawSha256": "0c825005b33e5917532ee93b6d29b71ccbc89708cc9224adf64c80888585418e",
+      "archiveSha256": "14b51a8fe7a9f10fd77d4fc993db9fb1adcfdfbb48d6d7bb05f9d918d2ad10a4"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/hover-invalidation-layout-owner/chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/hover-invalidation-layout-owner/chrome-trace.json.gz",
+      "rawBytes": 61237520,
+      "archiveBytes": 7952985,
+      "rawSha256": "0ab54fad8aebc0eb6410d350c1e77cb74b02355c66517b14c8a08db32b22de30",
+      "archiveSha256": "b9eb4041ee5a2d186749f710df27807b152231cfe0df17aa9c13ae37bec0541d"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/hover-invalidation-text-leaf/chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/hover-invalidation-text-leaf/chrome-trace.json.gz",
+      "rawBytes": 69963912,
+      "archiveBytes": 8421439,
+      "rawSha256": "bdcabd3ac5e2b70b26e1ed90eeea8c9fbff162e8ecd1695444e196323aa551d1",
+      "archiveSha256": "d1c0ba490e62191cd3d08dd3933977c1746c5d43c27f5a9f5e3a2313e2700179"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved/A1/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved/A1/indexed-chrome-trace.json.gz",
+      "rawBytes": 53029151,
+      "archiveBytes": 7968418,
+      "rawSha256": "652fc9d811219809909e9d60682ffbb010d1f0351c8b0fcd79bbfb64ea601c4a",
+      "archiveSha256": "8e31fe6a836239c280c2b03522dca1e27d501925ef827c3301776e3a9d235845"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved/A1/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved/A1/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 55573448,
+      "archiveBytes": 8732049,
+      "rawSha256": "46449acbde3674c026e6772187e803c40905ff0ae62da0bc44c4867d02f88e66",
+      "archiveSha256": "cdb22cfe3f27d2c69d4721622e070f7cdaecec2228e800bb513d61c2834cb4a8"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved/A2/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved/A2/indexed-chrome-trace.json.gz",
+      "rawBytes": 52987614,
+      "archiveBytes": 7919419,
+      "rawSha256": "55f5259e131c6a58630f9689a128247da1ba16b485ad587af8ecfe4b59175cbd",
+      "archiveSha256": "736e889dee6583910884f1c67a9cf49f4599dd6ef7738c136d52e0ec995ca2e0"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved/A2/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved/A2/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 54089256,
+      "archiveBytes": 8359578,
+      "rawSha256": "18dff085a0ed2e590a2f142d45666bca51744a78981254ea84a3c550a02cd1c0",
+      "archiveSha256": "3adc67761422f5ccbb95e73b6da865f77f8a1d7f6238d0dd6a15cc25940f5c40"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved/B1/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved/B1/indexed-chrome-trace.json.gz",
+      "rawBytes": 53274046,
+      "archiveBytes": 7987896,
+      "rawSha256": "c09f693c79052fee53c1cd0dd0c9a29c3117246ff1ec7f029dabfa47e33225d9",
+      "archiveSha256": "2069c3a6fb885fd1719c5ddd3d4f9a330334bb8711f8cac9000c539737fb723d"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved/B1/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved/B1/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 57108254,
+      "archiveBytes": 9061898,
+      "rawSha256": "f95d12014bf50653761e0620a246e88cbfaec1bdad19aabb199d163232e3b9ff",
+      "archiveSha256": "c6dacac76eded5bff25a30cbfe8035639eb4dd1a1ac1d63766ddfb3ecd6ee0c4"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved/B2/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved/B2/indexed-chrome-trace.json.gz",
+      "rawBytes": 51343932,
+      "archiveBytes": 7749185,
+      "rawSha256": "ba228cad018940af0098077ad530d152c335958164d53dab9562c559b5797d7f",
+      "archiveSha256": "40084104215620b51d1a2432e973fd5849ddb67c111bf1ba67be1c7220a7e821"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved/B2/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved/B2/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 53876822,
+      "archiveBytes": 8346220,
+      "rawSha256": "7f1955c085e71c5c351e869cea01cb16e75ee0efa8fc6a3fdbd1297a3611d804",
+      "archiveSha256": "771c00ca2f17a98062ba37e0d64a9a3eaa3719719ca75c0070da010a3432512a"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved-idle/A1/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved-idle/A1/indexed-chrome-trace.json.gz",
+      "rawBytes": 50940787,
+      "archiveBytes": 7668897,
+      "rawSha256": "847e822f2fdd3639c3ab227ed0459e16ad44e7401c2ca29df9d5db853b90ca4d",
+      "archiveSha256": "de43a46ffd698ed04ad71eefd90054a1694879fb220b21ea2e168e5aac17ff60"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved-idle/A1/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved-idle/A1/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 53450357,
+      "archiveBytes": 8185203,
+      "rawSha256": "8d8d764af0bd233d438cb6453a635d93b10515c9e933a6738aaaf55c8e917ad5",
+      "archiveSha256": "27f8718afb14c8857234960b9d1f4750262db028fd62115225f2b39ca4daf17b"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved-idle/A2/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved-idle/A2/indexed-chrome-trace.json.gz",
+      "rawBytes": 52763939,
+      "archiveBytes": 7997768,
+      "rawSha256": "dc05a07ce3ec8200aef02f268ca67ee75296dfec2e3fc43d1591c235e31810b2",
+      "archiveSha256": "74becf019f186d8802c4091f40966b36f06b3984c2106795b2bb9d0cf083afb8"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved-idle/A2/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved-idle/A2/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 56336502,
+      "archiveBytes": 8961799,
+      "rawSha256": "f3b05ecdb8e5c868f79d1c9eaf52d5d70bc8143b07675f1c15383b168c1536c0",
+      "archiveSha256": "65ba33efa5a1bcce68c932bce6af9f333538b697c8faabdd0741d3fd5db1c763"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved-idle/B1/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved-idle/B1/indexed-chrome-trace.json.gz",
+      "rawBytes": 52055053,
+      "archiveBytes": 7866465,
+      "rawSha256": "005115fee130036ad16df02cc4de175f8957e3bf0aba9dcae8195218440253be",
+      "archiveSha256": "44bf664c457bf5fbe293add28a952e9fb7c970877afb2e4d620d26b7f43f7e94"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved-idle/B1/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved-idle/B1/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 55264888,
+      "archiveBytes": 8673628,
+      "rawSha256": "dc6ac3a2aa6179f996e10d5c3ea8d6c5cf096c831df180caaf78f6ed7f3a4553",
+      "archiveSha256": "0bffd4a9d2735c2de276c72768c13288dbb5ebf02ae3355a7b7964110c620732"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved-idle/B2/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved-idle/B2/indexed-chrome-trace.json.gz",
+      "rawBytes": 53171034,
+      "archiveBytes": 8040965,
+      "rawSha256": "6272d6b745baa46eefec49bd01d148c49d722d5085555ce5ea19cdc2861dbf68",
+      "archiveSha256": "30d709df49c2428b4b60724abffb279834926593e53bb1bf8e49dc7aeb3dd712"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/interleaved-idle/B2/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/interleaved-idle/B2/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 55313807,
+      "archiveBytes": 8712108,
+      "rawSha256": "ec4f4e33ead7a02363fc4af97312dabe34d8d4f0f02ff98b5c8498dab52a78e7",
+      "archiveSha256": "77163cf3ac6b57449185437169ab8a383e8636c07e6cf041a32038de269e46ae"
+    },
+    {
+      "kind": "native-subsystem-dump",
+      "raw": "reports/memory-investigation-2026-11-10/interrupted-drag-after/memory-infra.json",
+      "archive": "reports/memory-investigation-2026-11-10/interrupted-drag-after/memory-infra.json.gz",
+      "rawBytes": 45033724,
+      "archiveBytes": 1663625,
+      "rawSha256": "4401db1b37ecd18836b22982864e81a5b0ecb71f18a2c2f09cfa99ed2949d335",
+      "archiveSha256": "0306a16bbda98e380406ed532ba6e17ee90516d6629224f76e6720dd8d698a61"
+    },
+    {
+      "kind": "native-subsystem-dump",
+      "raw": "reports/memory-investigation-2026-11-10/interrupted-drag-before/memory-infra.json",
+      "archive": "reports/memory-investigation-2026-11-10/interrupted-drag-before/memory-infra.json.gz",
+      "rawBytes": 17940787,
+      "archiveBytes": 667333,
+      "rawSha256": "57bee930bdcb6e7cb4198180334b3b0e68ffbb08b73f84b38a48f1c3a767242e",
+      "archiveSha256": "7f5778aea09cd429aea0673ef62df956ccb084efd21352424ec3d7ceba7e3344"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/one-row-performance/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/one-row-performance/indexed-chrome-trace.json.gz",
+      "rawBytes": 54739168,
+      "archiveBytes": 8229628,
+      "rawSha256": "7499fa9b2b0e8079014641bc20a9142ac30c7a36e8e8cee3b7674233ec96f5f5",
+      "archiveSha256": "2a19978debf5e3116dc3b68b0cec3e36cb9d2df902442b6512a0c89c08db93d5"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/one-row-performance/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/one-row-performance/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 55849195,
+      "archiveBytes": 8858176,
+      "rawSha256": "46ae0569810d9feda62fa7c7ac81e06c59593899b84b760a2bd3d5c3463559e9",
+      "archiveSha256": "cbdee7f13e0e38ff2435047e9be8c40c0525bdaf02733bc75a4b3de11b91df2c"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/recheck-full-1/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/recheck-full-1/indexed-chrome-trace.json.gz",
+      "rawBytes": 55550100,
+      "archiveBytes": 8281430,
+      "rawSha256": "88638f07a4c26d853271da36ea209679bece9570eb93e3904774b673df00fc3e",
+      "archiveSha256": "d96b87c58d76827e852cb63ea72c0cfbbc7676ec5f77b419ef53d9dba631ed1e"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/recheck-full-1/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/recheck-full-1/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 53883254,
+      "archiveBytes": 8458146,
+      "rawSha256": "2149755a77a89eedf43827544eeb11703fbe93639bfce1930c46c413d4eeb389",
+      "archiveSha256": "37ad79a02ae52cd9b32d031fa7d4376c8f7f790880bcb1ba7cac311c29c6e6ca"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/release-final-v2/final-lighthouse/compare-0.trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/release-final-v2/final-lighthouse/compare-0.trace.json.gz",
+      "rawBytes": 5172076,
+      "archiveBytes": 902364,
+      "rawSha256": "89bb2416e8a2e7a34e387ac995c1e3e1d9dea56826e546c227b3ff5bd4c8fb3f",
+      "archiveSha256": "0c94e9121bde326f3d9750cb22e81dd7b2b12492869ef63ebfb3192a479d0755"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/release-final-v2/final-lighthouse/dashboard-0.trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/release-final-v2/final-lighthouse/dashboard-0.trace.json.gz",
+      "rawBytes": 4938016,
+      "archiveBytes": 1068804,
+      "rawSha256": "e30c1ddbf651e076b11267a735948a5dedf71691fe26b3d9c78477852222aef7",
+      "archiveSha256": "be56c550d0b6737c09eda04e055e8c8654cabefe04cc1f1a73c766e7507c9b1e"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/release-final-v2/final-lighthouse/quality-0.trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/release-final-v2/final-lighthouse/quality-0.trace.json.gz",
+      "rawBytes": 2796533,
+      "archiveBytes": 480678,
+      "rawSha256": "8558aca90303ea31edce8c46df5d23306bbef5a01f2c7662a24d11adbd044d94",
+      "archiveSha256": "36e010bd833bafe07e4643b8ac9137fc49f21da6ba2bb7e9607d3165813edbc4"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/release-final-v2/final-lighthouse/run-detail-0.trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/release-final-v2/final-lighthouse/run-detail-0.trace.json.gz",
+      "rawBytes": 4888268,
+      "archiveBytes": 824873,
+      "rawSha256": "48bcb17f2e62aada92d97674506862d3e1a762514ceeb4efda6f335bdbc16d24",
+      "archiveSha256": "4d33962806573cd19c183398d76021d3618b6fd69871ad457ac99f988d3a7b0f"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/release-final-v2/final-lighthouse/runs-0.trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/release-final-v2/final-lighthouse/runs-0.trace.json.gz",
+      "rawBytes": 4417861,
+      "archiveBytes": 742393,
+      "rawSha256": "8e35c8f760bb877ddd1c43759bff2da23b1b87e1e96c6c89a8b115a7dc0e8d20",
+      "archiveSha256": "d88f4f65fe2f5a0a075f9eb7dc7ca5e9c9508f0588be6fa4d9ee5540e9110969"
+    },
+    {
+      "kind": "native-subsystem-dump",
+      "raw": "reports/memory-investigation-2026-11-10/release-final-v2/final-roundtrip/memory-infra.json",
+      "archive": "reports/memory-investigation-2026-11-10/release-final-v2/final-roundtrip/memory-infra.json.gz",
+      "rawBytes": 46283926,
+      "archiveBytes": 1696184,
+      "rawSha256": "42d25185b597ca720f04d20c6eafd74fe97ceb56d97037fdad1bf5aba5871ec1",
+      "archiveSha256": "9d1e7cd4a5fc79e4925ac01e27c840ae1bb96c5f89b1f3d0605beed56dd80173"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/release-final-v2/performance-confirmation/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/release-final-v2/performance-confirmation/indexed-chrome-trace.json.gz",
+      "rawBytes": 54923138,
+      "archiveBytes": 8292265,
+      "rawSha256": "0d2adfdf7296a3473b3e90a374e9e79df97cc3a2698581f2ce2230471f7baaca",
+      "archiveSha256": "e2aed770714d8f3c55908410ccd50d8f1a7fed5374617f0e1df232b2121cb701"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/release-final-v2/performance-confirmation/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/release-final-v2/performance-confirmation/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 64304462,
+      "archiveBytes": 10375571,
+      "rawSha256": "6404b5829a6ddc1bf41f563e6750689b7c1d1bd04f5abb4148595894efad5e9b",
+      "archiveSha256": "641bc22e7fd128d1d16171cc69da05b8b2f5cc1ba2a8e706d36711bb374941b7"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/release-final-v2/performance-trace/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/release-final-v2/performance-trace/indexed-chrome-trace.json.gz",
+      "rawBytes": 55086853,
+      "archiveBytes": 8280260,
+      "rawSha256": "1be07b3ee92fbe7694622f3f2931a90db6f75c798f66de20b0510f37e22ede37",
+      "archiveSha256": "dd7b4f2ad13b6708fff35801e5fc9c933fd653abfe7802eca10742287a041778"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/release-final-v2/performance-trace/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/release-final-v2/performance-trace/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 64856085,
+      "archiveBytes": 10495589,
+      "rawSha256": "e6f8d1bdfdd84bf5d1d89a76f128a1edb83b347c23f9bd5d58707ebb5b6fe2d0",
+      "archiveSha256": "b0cd213c450a36f4f2ec3b4b645c54b8b71b123bc31d2d89e028fc9b63589b55"
+    },
+    {
+      "kind": "native-subsystem-dump",
+      "raw": "reports/memory-investigation-2026-11-10/roundtrip/memory-infra.json",
+      "archive": "reports/memory-investigation-2026-11-10/roundtrip/memory-infra.json.gz",
+      "rawBytes": 45517547,
+      "archiveBytes": 1678835,
+      "rawSha256": "e67de3800ce6179a5d4e1fac6ec6a01d945aeae9a0a3465f89e8c1ea4d1136e6",
+      "archiveSha256": "a9ee693067a9a43c55244931de5d914a1490cc0acfc9a35f8cedaa8ef50cfebf"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace1/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace1/indexed-chrome-trace.json.gz",
+      "rawBytes": 56006391,
+      "archiveBytes": 8360862,
+      "rawSha256": "34e48392c128e56229836584ec874010c47735dea21e0335d767ad73ad98b08e",
+      "archiveSha256": "b3d372745cfba36ca15b82a01c93c22f5375508b6f46e526d4ff880e1e8a9c13"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace1/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace1/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 69927743,
+      "archiveBytes": 11109862,
+      "rawSha256": "f096b11b992c9d23cc444779608620c607c99c721aae4104775bb2c9b46aae6a",
+      "archiveSha256": "3bf7161801b400c9913793e162d5b17876d5bc2747e160e0b63fc78fc2a1b0f5"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace2/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace2/indexed-chrome-trace.json.gz",
+      "rawBytes": 55381122,
+      "archiveBytes": 8383656,
+      "rawSha256": "4e2a2b16eecddf252b5872ec75f7187ad7c7dbe7a1be7ba025f3180756301963",
+      "archiveSha256": "2afd029007e1187b4e63cab257ad69f1703512b2334e5bd40b081ec8ff53ddba"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace2/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace2/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 65223614,
+      "archiveBytes": 10505761,
+      "rawSha256": "77d1152a1c3c0241a49732050296df53f8b66c3c9d9ead0e8658950ed0491d0a",
+      "archiveSha256": "291e03fb3c3dad316e71eb2c5804136bf974b396d68b5c87bd6741bb51332b39"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace3/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace3/indexed-chrome-trace.json.gz",
+      "rawBytes": 55661678,
+      "archiveBytes": 8365014,
+      "rawSha256": "f24e522c8ebab8acc8716a1e8591a8e62d88f4647bccfb6cafe7b38c95bbf05d",
+      "archiveSha256": "e0443ce55c35d34fb863c3fb412cf420dc809a66d2e84d11e56d750944c68f8d"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace3/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace3/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 65816164,
+      "archiveBytes": 10500212,
+      "rawSha256": "84e5ed6c4213432f089dbdba004b2aa91c3589f880d9f939968787ed7557280a",
+      "archiveSha256": "0dfa4e459bbc24a539a17b0ac89e10e331fec2727b4b7b07dd879aa1e4fec7b0"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace4/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace4/indexed-chrome-trace.json.gz",
+      "rawBytes": 54743861,
+      "archiveBytes": 8206866,
+      "rawSha256": "e01231de186039b8269434a1b46a65b6b71b55a7c1a9e02cceba890be7834ad3",
+      "archiveSha256": "c92403571b49109d8bae6d5e45430a4ae82bb31e07df577afc64c8e0be361fa6"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace4/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace4/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 65284636,
+      "archiveBytes": 10492809,
+      "rawSha256": "b906b97028a5dff412f51eb0c2d9b9d59bbac80f7e031872224aa13bbb1054b0",
+      "archiveSha256": "052be55a19cb065b8da06345be58439de1009b528e8ef3cdb2176f8b599e5fb7"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace5/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace5/indexed-chrome-trace.json.gz",
+      "rawBytes": 56318393,
+      "archiveBytes": 8489561,
+      "rawSha256": "573b55008371f795121fcc1ce01ec83557b7fd9480ccd8531ca0949cb3ca24fb",
+      "archiveSha256": "dac926f8727c1fea760e6991c996fa5481875320c1c12ebf3ddc00283bc1b4e2"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace5/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace5/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 66338001,
+      "archiveBytes": 10667611,
+      "rawSha256": "f21fde525ed6f747b05e5aa8da3502385eafc70577470f20241acaa218e01f41",
+      "archiveSha256": "ff7eb431376b1ba20a5611e85a75dcf925497cdf534f8ba12702f0fd4258b5a3"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace6/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace6/indexed-chrome-trace.json.gz",
+      "rawBytes": 54383279,
+      "archiveBytes": 8199457,
+      "rawSha256": "c2fe318887eb93c98326d14ec6f789937b07e0a988906f7610d1ea1570a67e80",
+      "archiveSha256": "b3ab45863bc1e766de0c51010cd4be88190a8654dcf0a93cec781ca42d42e1bf"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace6/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace6/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 64774291,
+      "archiveBytes": 10524554,
+      "rawSha256": "4f24b6f14d336bbc6164ac0d63ded58ca7a5e608201cb57adc542c5bbaa0dfa2",
+      "archiveSha256": "ca57f6bc44783801b5423b2a88f6c0a62782d9870bad4f8cc35269dbb6d4d6c8"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace7/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace7/indexed-chrome-trace.json.gz",
+      "rawBytes": 54295421,
+      "archiveBytes": 8160946,
+      "rawSha256": "8f3165b68da4da34795fe3129934a4091e46e26b2b6068d0ba0a10f6a3dc4be7",
+      "archiveSha256": "bce543b77e9c222059cd50fa05d2e41e9dbb7b9e10d02be09269af1fca1b14f9"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace7/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace7/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 64895082,
+      "archiveBytes": 10508129,
+      "rawSha256": "f1625c2a1069cf698cf6d79ac41a00a76e923fd6c74a8cef689b348bf50fea57",
+      "archiveSha256": "e5d8138af47f15d51749d46b27ab3be6e782414a2911ccaaac2bfd42c4ff6b9d"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace8/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace8/indexed-chrome-trace.json.gz",
+      "rawBytes": 54530888,
+      "archiveBytes": 8216954,
+      "rawSha256": "8970f4d958090b885ffe331d5ba45dd19135adc90f100ffbda78b8e02e85d382",
+      "archiveSha256": "5ef40c42f685239686ddc5a806a5f1e0d8aed59835f4d99e4c3c65a897d24928"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace8/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace8/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 64383015,
+      "archiveBytes": 10409162,
+      "rawSha256": "b2b15b0a9cd6fa4f88474b84b775800da38a680d7467d572cfed30919ab90b24",
+      "archiveSha256": "cc96c53fcb0585be23af6b0de5200095621d636162a19f6ff0e416c1633d7e1b"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace9/indexed-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace9/indexed-chrome-trace.json.gz",
+      "rawBytes": 54329283,
+      "archiveBytes": 8200525,
+      "rawSha256": "81cf51d2a6dd319098fd5bed4f893683fe84736a1d4dc058faca650f6e9f1081",
+      "archiveSha256": "f23e797fb883910cc4e1b9b2f432c6c16adb25692ae8ba0a0ce54f2cc28dd4d6"
+    },
+    {
+      "kind": "chrome-trace",
+      "raw": "reports/memory-investigation-2026-11-10/visible-hover-trace9/indexed-compare-chrome-trace.json",
+      "archive": "reports/memory-investigation-2026-11-10/visible-hover-trace9/indexed-compare-chrome-trace.json.gz",
+      "rawBytes": 64955307,
+      "archiveBytes": 10530043,
+      "rawSha256": "5691b5a21991c3c7f09600ded9b76d3a6b4eae10b407b9941f17d5c1bc45717c",
+      "archiveSha256": "6a6e215f93c2c87f366589a203d40eb9b04b61f235d9c402ff661b30ecfae2b8"
+    },
+    {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/before-trace-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/before-trace-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 78898124,
@@ -179,6 +786,7 @@
       "archiveSha256": "d44865064b09a7fe1538fd53d952cc26c8801db6d96df78c90030cafbb0418e4"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/before-trace-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/before-trace-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 83705572,
@@ -187,6 +795,7 @@
       "archiveSha256": "e916efdb7d2226fe0a77b115593bc254aa0018ffd60fb5269b0603542d5e17ce"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/cached-aligned-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/cached-aligned-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 78236092,
@@ -195,6 +804,7 @@
       "archiveSha256": "d35925a2e4cc03591b9a3180e98eb452f9248a1765b065394c68a77be4a5e1c0"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/cached-aligned-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/cached-aligned-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 82504772,
@@ -203,6 +813,7 @@
       "archiveSha256": "6e43d8b6b9a87c70795a8cba77127cf362e18534289563cd703cf42288bd510c"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/contained-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/contained-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 81917031,
@@ -211,6 +822,7 @@
       "archiveSha256": "99180aa8f627cd1bf6b61a53a306c13e6657586463aa1606051a5fcf065d8f1e"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/contained-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/contained-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 83813442,
@@ -219,6 +831,7 @@
       "archiveSha256": "8bc921de852f75d4498cb96904f7017fecc89c703a8305d5d6f96fe9faee17e2"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/dirty-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/dirty-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 79743617,
@@ -227,6 +840,7 @@
       "archiveSha256": "139cb8a9b7154a94d3d943d7fd7085c8696be3035f9d865f05177632dbfd4341"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/dirty-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/dirty-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 85888272,
@@ -235,6 +849,7 @@
       "archiveSha256": "08c911b9abfe9448374a197891b4b0a2ebe3446c90e3624f8ea91cc42386f80a"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/final-lighthouse/compare-0.trace.json",
       "archive": "reports/perf-targets-2026-11-10/final-lighthouse/compare-0.trace.json.gz",
       "rawBytes": 5231941,
@@ -243,6 +858,7 @@
       "archiveSha256": "0db9d6733f9bb941a6525544b816207214bcaf9f7b122f3f523fff4885ca4a99"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/final-lighthouse/dashboard-0.trace.json",
       "archive": "reports/perf-targets-2026-11-10/final-lighthouse/dashboard-0.trace.json.gz",
       "rawBytes": 4976802,
@@ -251,6 +867,7 @@
       "archiveSha256": "4e8edb9610dc4a7e9c727321a653956745fba371e2ac136fef9f059e819e4c1d"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/final-lighthouse/quality-0.trace.json",
       "archive": "reports/perf-targets-2026-11-10/final-lighthouse/quality-0.trace.json.gz",
       "rawBytes": 2944860,
@@ -259,6 +876,7 @@
       "archiveSha256": "760dae64aeed5717b72f636b489969ef48935ea7b360dfcfbc6ed2f2df83141d"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/final-lighthouse/run-detail-0.trace.json",
       "archive": "reports/perf-targets-2026-11-10/final-lighthouse/run-detail-0.trace.json.gz",
       "rawBytes": 5165666,
@@ -267,6 +885,7 @@
       "archiveSha256": "a23a3b9280376f68c284dd7012cd805b593f2aec7d4233e5212c4be50b92f397"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/final-lighthouse/runs-0.trace.json",
       "archive": "reports/perf-targets-2026-11-10/final-lighthouse/runs-0.trace.json.gz",
       "rawBytes": 4312832,
@@ -275,6 +894,7 @@
       "archiveSha256": "168fb11bf44357a1f6f190adf92810118c973f2dfd6f4d15fde497630af443b7"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/final-trace-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/final-trace-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 50969787,
@@ -283,6 +903,7 @@
       "archiveSha256": "0c5c2f0aa45b4b869be038521ea824d1ee7cbca6e0bdd3969988d414abdac45e"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/final-trace-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/final-trace-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 53653526,
@@ -291,6 +912,7 @@
       "archiveSha256": "abaf5a1675ceb1b3c542cfe0e246d201bae1d1fc71f99b49fddd9f8125366c99"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/immediate-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/immediate-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 51704560,
@@ -299,6 +921,7 @@
       "archiveSha256": "07bbd1886806d7a53db735eaa1b7ba059fe291b76dea5bf4ec239b47e6463b61"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/immediate-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/immediate-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 55158123,
@@ -307,6 +930,7 @@
       "archiveSha256": "f5ba15d0ae4b55c58f94287f626c799274bf61db991e705c78ce8f884e0edd59"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/imperative-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/imperative-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 78267260,
@@ -315,6 +939,7 @@
       "archiveSha256": "5c82b3427622f1e817ed8abdf84d0764ff79ddcc8ef34323293fb559e1f9fce0"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/imperative-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/imperative-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 82486258,
@@ -323,6 +948,7 @@
       "archiveSha256": "a627af742b33446ce1fbaed4aca265790fb08327d3a87e057936b6d1b0c29a29"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/isolation-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/isolation-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 76779302,
@@ -331,6 +957,7 @@
       "archiveSha256": "f81076d7ea08e37a2268da33ab0b857a6a1d066455d903815bbf16633cd0019f"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/isolation-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/isolation-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 82813217,
@@ -339,6 +966,7 @@
       "archiveSha256": "50605707ee21ade0e0478f2854bdc283cfa6eee46cdb21191e2a3c62dfcac686"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/layers-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/layers-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 77799066,
@@ -347,6 +975,7 @@
       "archiveSha256": "0dfe146abf3066a8b4deb31f3aa9826d361e9e82d213b1eb88005e0859113798"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/layers-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/layers-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 83121597,
@@ -355,6 +984,7 @@
       "archiveSha256": "977e6149a2867e650dc2403c6717b58ce53e5751a1b34c82acae7c4d0f90aff6"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/one-row-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/one-row-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 50574358,
@@ -363,6 +993,7 @@
       "archiveSha256": "60e399443ef5c49733c0d23561d48b6a4ec1ff93e56d8d664cc1c29ed8687c34"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/one-row-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/one-row-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 53156753,
@@ -371,6 +1002,7 @@
       "archiveSha256": "dbfea47ceec49f974d3289ad9da04cf932261a05c45d3a0409bc30e8f9f2681b"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/persistent-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/persistent-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 78236717,
@@ -379,6 +1011,7 @@
       "archiveSha256": "45640c4ab619177bd87ba71de23e144601f6c8b54e74694b68e06bd5b077b971"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/persistent-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/persistent-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 84263166,
@@ -387,6 +1020,7 @@
       "archiveSha256": "729dde93d4a030b05dcc2d816392a564fdadfaff51f56b110c932b0bbf4b1cac"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/prearmed-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/prearmed-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 76950791,
@@ -395,6 +1029,7 @@
       "archiveSha256": "c46d2479a3ace57e34df0d58b5e9602a8987e1e10dd43bf4ab5ba33ee29172c4"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/prearmed-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/prearmed-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 82314813,
@@ -403,6 +1038,7 @@
       "archiveSha256": "806687f92fc54e842e22303f2ffed7b9549bbbdb77bcd6ee3e702103ba8e958f"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/raw-input-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/raw-input-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 76331389,
@@ -411,6 +1047,7 @@
       "archiveSha256": "67904e355492bcbc4a2e84a8a9a5b6c4bb052e6ddad31dc7a1bd92b6603bbb55"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/raw-input-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/raw-input-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 85518682,
@@ -419,6 +1056,7 @@
       "archiveSha256": "0893c5ee03ec2285c33239dc7b7a7ec8fbf634e9f53f4cfbc7d8354d605b3677"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/text-node-probe/full-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/text-node-probe/full-chrome-trace.json.gz",
       "rawBytes": 5854493,
@@ -427,6 +1065,7 @@
       "archiveSha256": "20b90f351454f43964caa7711b40c8056baa100408c1ed5fc82e3ccdec32cb78"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/text-node-probe/timeline-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/text-node-probe/timeline-chrome-trace.json.gz",
       "rawBytes": 761586,
@@ -435,6 +1074,7 @@
       "archiveSha256": "652e2a0d85f2b24f0f4027ad4fd15ae4bfea46fdb7c45b76f8a575da8be650c7"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/trace-overhead/full-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/trace-overhead/full-chrome-trace.json.gz",
       "rawBytes": 5981169,
@@ -443,6 +1083,7 @@
       "archiveSha256": "a1fb1c0a5de1f78c90dfe0e163cdc587553703dbe7f209d5fc276e27824d1ca0"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/trace-overhead/timeline-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/trace-overhead/timeline-chrome-trace.json.gz",
       "rawBytes": 735749,
@@ -451,6 +1092,7 @@
       "archiveSha256": "5988bf6cb3b17bda29c27b54cca63635360bd7b1f0ea2ddfaa6be80cdd068bbd"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/visible-cursor-performance/indexed-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/visible-cursor-performance/indexed-chrome-trace.json.gz",
       "rawBytes": 52724910,
@@ -459,6 +1101,7 @@
       "archiveSha256": "6e7a343548c52ac84dad403311d68b6085826f773cbdd616f55560516efc7724"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/perf-targets-2026-11-10/visible-cursor-performance/indexed-compare-chrome-trace.json",
       "archive": "reports/perf-targets-2026-11-10/visible-cursor-performance/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 54864538,
@@ -467,6 +1110,7 @@
       "archiveSha256": "338f2a76f7331c6d3b3ce9661421483c36f274e2baccebf0ff624967d4ad147c"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance/scan-chrome-trace.json",
       "archive": "reports/performance/scan-chrome-trace.json.gz",
       "rawBytes": 80948005,
@@ -475,6 +1119,7 @@
       "archiveSha256": "db66bade7cc74328d1c92f8b5ec6e1eb0943454168112242838caae9280acb78"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance/stream-chrome-trace.json",
       "archive": "reports/performance/stream-chrome-trace.json.gz",
       "rawBytes": 72238137,
@@ -483,6 +1128,7 @@
       "archiveSha256": "b177480da1f14a0d403167576aaccabfc1d563032527e7200b03a5541b904ce2"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-before-ui-cache/scan-chrome-trace.json",
       "archive": "reports/performance-before-ui-cache/scan-chrome-trace.json.gz",
       "rawBytes": 87278805,
@@ -491,6 +1137,7 @@
       "archiveSha256": "57805b96219b46b7764aac82fad944dea29f9cc56b58e4f24917b1a350d24ce5"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-final/indexed-chrome-trace.json",
       "archive": "reports/performance-final/indexed-chrome-trace.json.gz",
       "rawBytes": 79293465,
@@ -499,6 +1146,7 @@
       "archiveSha256": "217dfb4290a52a827db57871638fd342f86e15b7e4a23b3e50ed4503505205a2"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-final/indexed-compare-chrome-trace.json",
       "archive": "reports/performance-final/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 81642801,
@@ -507,6 +1155,7 @@
       "archiveSha256": "3c850948ff032f6889500182d3f59024a8e68e01c8559fb274c046d0a14b3b1c"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-final/scan-chrome-trace.json",
       "archive": "reports/performance-final/scan-chrome-trace.json.gz",
       "rawBytes": 84183004,
@@ -515,6 +1164,7 @@
       "archiveSha256": "f67ebbb770882cf7a9d17f4e376d16b855f11168ebf458f3b5a27c4a254ca1c5"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-final/scan-compare-chrome-trace.json",
       "archive": "reports/performance-final/scan-compare-chrome-trace.json.gz",
       "rawBytes": 86818781,
@@ -523,6 +1173,7 @@
       "archiveSha256": "8b466c4fe2756601c387e94b42b2b2c1f8210b7e8f8f08fbf13ea1e758fd2b70"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-final/stream-chrome-trace.json",
       "archive": "reports/performance-final/stream-chrome-trace.json.gz",
       "rawBytes": 81477686,
@@ -531,6 +1182,7 @@
       "archiveSha256": "fe21787e516c61289b3a66efd171d6f0dcf603f9f94b3abf4549633e1a299130"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-final/stream-compare-chrome-trace.json",
       "archive": "reports/performance-final/stream-compare-chrome-trace.json.gz",
       "rawBytes": 83582982,
@@ -539,6 +1191,7 @@
       "archiveSha256": "db2130c3e8cfd0cb5f6c4dfa66dde2f80c1dfc0bf449f1470246d97a3e1c549a"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-hover-frame-final/indexed-chrome-trace.json",
       "archive": "reports/performance-hover-frame-final/indexed-chrome-trace.json.gz",
       "rawBytes": 79744006,
@@ -547,6 +1200,7 @@
       "archiveSha256": "ed26df59fcd0aee880b739ff8b8b3fafa240bc86cb3ce6c412ef7573c557426d"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-hover-frame-final/indexed-compare-chrome-trace.json",
       "archive": "reports/performance-hover-frame-final/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 83194920,
@@ -555,6 +1209,7 @@
       "archiveSha256": "2f9366528d43990e25d3c0acbfa9c096479ac5a0bb25f25c1aea572d127963b0"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-hover-frame-final/scan-chrome-trace.json",
       "archive": "reports/performance-hover-frame-final/scan-chrome-trace.json.gz",
       "rawBytes": 85388716,
@@ -563,6 +1218,7 @@
       "archiveSha256": "edb228072b60d153ca465c95a00ba1f4fe135503859a786d3f2e16164e601022"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-hover-frame-final/scan-compare-chrome-trace.json",
       "archive": "reports/performance-hover-frame-final/scan-compare-chrome-trace.json.gz",
       "rawBytes": 88032060,
@@ -571,6 +1227,7 @@
       "archiveSha256": "d5a5fe7ea5682ae7ece6eadc39178381d626239c8461f79152ae078250eed356"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-hover-frame-final/stream-chrome-trace.json",
       "archive": "reports/performance-hover-frame-final/stream-chrome-trace.json.gz",
       "rawBytes": 83214811,
@@ -579,6 +1236,7 @@
       "archiveSha256": "2bae5247830b954b16020143b58463e37be29db6a5aae4591fe4a7e1d05cae89"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-hover-frame-final/stream-compare-chrome-trace.json",
       "archive": "reports/performance-hover-frame-final/stream-compare-chrome-trace.json.gz",
       "rawBytes": 84343051,
@@ -587,6 +1245,7 @@
       "archiveSha256": "dc2d868fde4847e3323fc5684cf8a52622d690d29b51d26ec678a807821fb0bc"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-initial/scan-chrome-trace.json",
       "archive": "reports/performance-initial/scan-chrome-trace.json.gz",
       "rawBytes": 33147284,
@@ -595,6 +1254,7 @@
       "archiveSha256": "171e8e7d4bfce515287ecca29c0baf9e4ab812184215ae4d4e62f8b19e22584e"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-paint/indexed-chrome-trace.json",
       "archive": "reports/performance-paint/indexed-chrome-trace.json.gz",
       "rawBytes": 79137482,
@@ -603,6 +1263,7 @@
       "archiveSha256": "cd8b0541d0a43574906a6ff7217a70d1aa12014e5301a0804854c2a16c9a8539"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-paint/indexed-compare-chrome-trace.json",
       "archive": "reports/performance-paint/indexed-compare-chrome-trace.json.gz",
       "rawBytes": 81597513,
@@ -611,6 +1272,7 @@
       "archiveSha256": "869375380c76483f7340875107ab46ca9022b1009a680e7f281cf7a55fce5927"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-paint/scan-chrome-trace.json",
       "archive": "reports/performance-paint/scan-chrome-trace.json.gz",
       "rawBytes": 83628172,
@@ -619,6 +1281,7 @@
       "archiveSha256": "7f4bacd72853e5bd8d73ef5923993757c920c448fa59c3bde1a93f85fd454086"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-paint/scan-compare-chrome-trace.json",
       "archive": "reports/performance-paint/scan-compare-chrome-trace.json.gz",
       "rawBytes": 86640396,
@@ -627,6 +1290,7 @@
       "archiveSha256": "cf87a2e8d42ea7bc28b4f7e684920293802ba88289008452db4345f25e91c321"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-paint/stream-chrome-trace.json",
       "archive": "reports/performance-paint/stream-chrome-trace.json.gz",
       "rawBytes": 80880884,
@@ -635,6 +1299,7 @@
       "archiveSha256": "ec947a123677ae95b673c6f4426f0a60ddd083adbf7e45906ab610ea44cc391b"
     },
     {
+      "kind": "chrome-trace",
       "raw": "reports/performance-paint/stream-compare-chrome-trace.json",
       "archive": "reports/performance-paint/stream-compare-chrome-trace.json.gz",
       "rawBytes": 83062967,

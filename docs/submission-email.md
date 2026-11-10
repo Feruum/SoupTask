@@ -1,26 +1,20 @@
-# Local submission draft - not sent
+# Local submission draft —not sent
 
 To: team@trysoup.dev
 
-Subject: Soup Frontend Engineer task - Training Monitor submission
+Subject: Soup Frontend Engineer task —Training Monitor
 
 Hello Soup team,
 
-Here is the Training Monitor implementation:
+Source: https://github.com/Feruum/SoupTask
+Application: https://soup-training-monitor.vercel.app
+Two-page note: https://github.com/Feruum/SoupTask/blob/main/output/pdf/soup-submission-note.pdf
+Evidence: https://github.com/Feruum/SoupTask/blob/main/reports/evidence-manifest.json
 
-- Source and reproduction: https://github.com/Feruum/SoupTask
-- Published application: https://soup-training-monitor.vercel.app
-- Two-page note: https://github.com/Feruum/SoupTask/blob/main/output/pdf/soup-submission-note.pdf
-- Evidence manifest: https://github.com/Feruum/SoupTask/blob/main/reports/evidence-manifest.json
+The five screens use20 reproducible snapshots, including the million-row exact source spike. Final build/lint,109 unit and 131 browser tests pass. The repository retains real fault-control failures, traces, visible-source checks, memory analysis and AI disclosure. Expanded limits remain unmet for cold meaningful render, detail hover on entry, compare hover on entry, compare continuous hover. Stable sub-50 ms hover is not established. The demo is delivered with these measured limits; no 100/100 grade is asserted.
 
-The five screens use twenty reproducible demonstration snapshots, including the million-row run with exact source spike. The repository preserves automated outputs, genuine failing fault controls, Chrome traces, before/after measurements, scoped renderer/Worker memory and AI disclosure.
-
-Final checks: 106 unit and 113 Chromium tests pass; five production routes pass direct-load/reload checks. Two full Chrome-recorded runs meet the expanded latency targets, including hover below50ms; the note explicitly records scope and memory growth after20 transitions. Human screen-reader certification and the changed-deadline/live-discussion cancellation were not verified.
-
-Please see README and docs/acceptance-matrix.md for the requirement-to-evidence map.
+Please see the note and acceptance matrix for measured limits and reproduction. Human screen-reader certification was not recorded.
 
 Thank you.
 
----
-
-This file is a reviewable local draft only. The original invitation thread was not found. Sending a new email, or replying in the original thread, requires the user's explicit send instruction; the PDF alone does not authorize messaging others. The large source ZIP is local; the email links to the repository rather than attaching it.
+The author sends this draft personally; it has not been sent by the agent.

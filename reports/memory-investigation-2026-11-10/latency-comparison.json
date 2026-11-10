@@ -1,0 +1,100 @@
+{
+  "verified": true,
+  "generatedAt": "2026-11-10T18:41:31.000Z",
+  "baselineGitCommit": "41ae67f48be6364f719ba38ad71d694c8ae484fe",
+  "baselineScope": "Previous verified full-trace release on the same harness/environment; source retained in the measured-source-history branch. Natural-GC OS memory is separately repeated as before/after on exact old/new production build bytes.",
+  "inputs": {
+    "before": "reports/perf-targets-2026-11-10/final-trace-performance/results.json",
+    "after": "reports/memory-investigation-2026-11-10/one-row-performance/results.json",
+    "confirmation": "reports/memory-investigation-2026-11-10/final-trace-performance/results.json",
+    "withoutRecording": "reports/memory-investigation-2026-11-10/final-latency-performance/results.json"
+  },
+  "harnessHash": "90ffa71af0da6073fbbba66f94c97af113ed1f85a89b4e3e523d8bcc99cad7bd",
+  "sourceHashes": {
+    "before": "6505f89edb981ae63759ba1b564cba5422c6c6ec081f04f4b56f7adf613e9d38",
+    "after": "9a39d8d9254d00829f99a6aeecff0f63a561e6617b3963ff837bb3315220eed4",
+    "confirmation": "9a39d8d9254d00829f99a6aeecff0f63a561e6617b3963ff837bb3315220eed4",
+    "withoutRecording": "9a39d8d9254d00829f99a6aeecff0f63a561e6617b3963ff837bb3315220eed4"
+  },
+  "environment": {
+    "traceMode": "full",
+    "node": "v24.22.1",
+    "browser": "158.0.8127.18",
+    "os": "win32",
+    "release": "10.0.26200",
+    "cpu": "AMD Ryzen 7 8845HS w/ Radeon 780M Graphics",
+    "lockHash": "c1b2f187642983a32095cefd17230718e5aadd7ab19f340898f808c8a146810d",
+    "viewport": "1440x900",
+    "dpr": 1,
+    "cpuRate": 4,
+    "cpuScope": "Main renderer target rate4. Every Worker target receives an independent Emulation.setCPUThrottlingRate command before resuming; actual acknowledgements or unsupported errors are retained per target. Unsupported Worker Emulation means preprocessing is NOT established as CPU4. Command acknowledgement alone does not establish a precise physical slowdown.",
+    "timing": "Cold: navigation-to-three accepted-and-drawn charts plus two RAF, including activation. Zoom: main view-start through chart-draw hook. Hover: separate request-to-accepted, request-to-DOM-commit, request-to-two-RAF-frame and browser-pointer-event-timestamp-to-frame metrics. Frame mark requires current workspace/view/hover identity and visible committed tooltips; actual source tooltip screenshots and Chrome paint traces are retained. Two RAFs establish a rendering opportunity, not physical monitor presentation. Playwright action upper bounds include automation overhead. Single-run and Compare samples are separate. Trace rendering/paint evidence is retained; draw hooks alone are not pixel proof.",
+    "interactionProtocol": "Two unmeasured warmups, then 30 measured range/hover pairs: overview, spike, reset, excluded-spike, single-step repeated six times. Single and Compare follow the same sequence. Range form values are source numeric steps.",
+    "coldDefinition": "Fresh browser context per sample, same browser process; OS disk caches are not flushed. Compare activation is a separate warm SPA measurement, not a fifth/sixth cold sample.",
+    "tabMemory": "Separate scripts/tab-memory.mjs OS footprint experiment; heap and typed-buffer ledger are not process footprint",
+    "gc": "No forced GC"
+  },
+  "values": {
+    "before": {
+      "cold": 2531.9053000000004,
+      "zoom": 114.79999999701977,
+      "hover": 35.5,
+      "compareZoom": 131.40000000223517,
+      "compareHover": 40
+    },
+    "after": {
+      "cold": 3434.3301,
+      "zoom": 192,
+      "hover": 61.899999998509884,
+      "compareZoom": 165,
+      "compareHover": 56.69999999552965
+    },
+    "confirmation": {
+      "cold": 2923.0924,
+      "zoom": 157.39999999850988,
+      "hover": 43,
+      "compareZoom": 172.89999999850988,
+      "compareHover": 55.100000001490116
+    },
+    "withoutRecording": {
+      "cold": 2956.1347000000096,
+      "zoom": 209.60000000149012,
+      "hover": 59.600000001490116,
+      "compareZoom": 142.69999999552965,
+      "compareHover": 50.20000000298023
+    }
+  },
+  "targets": {
+    "cold": {
+      "limitMs": 3000,
+      "actualMs": 3434.3301,
+      "scope": "Worst of two separately reported nearest-rank p95 results; samples are not pooled"
+    },
+    "zoom": {
+      "limitMs": 200,
+      "actualMs": 192,
+      "scope": "Worst of two separately reported nearest-rank p95 results; samples are not pooled"
+    },
+    "hover": {
+      "limitMs": 50,
+      "actualMs": 61.899999998509884,
+      "scope": "Worst of two separately reported nearest-rank p95 results; samples are not pooled"
+    },
+    "compareZoom": {
+      "limitMs": 200,
+      "actualMs": 172.89999999850988,
+      "scope": "Worst of two separately reported nearest-rank p95 results; samples are not pooled"
+    },
+    "compareHover": {
+      "limitMs": 50,
+      "actualMs": 56.69999999552965,
+      "scope": "Worst of two separately reported nearest-rank p95 results; samples are not pooled"
+    }
+  },
+  "engineeringTargetMisses": [
+    "cold",
+    "hover",
+    "compareHover"
+  ],
+  "scope": "Full Chrome recording including frame screenshots: CPU4 main renderer, Worker throttling unsupported. Same5 cold contexts and30 range/hover pairs per workspace, original pointer timestamp and committed source DOM before two RAF callbacks. Targets use the worse of two full-recording p95 results; samples are never pooled. A separate no-recording result uses exactly the same application source. Sequential shared-machine runs are not a randomized causal study."
+}

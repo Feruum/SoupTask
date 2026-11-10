@@ -1,0 +1,282 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/visible-hover.spec.ts",
+      "--config",
+      "scripts/acceptance.playwright.config.mjs",
+      "--workers",
+      "1",
+      "--trace",
+      "off"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\scripts\\acceptance.playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+      "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+      "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/memory-investigation-2026-11-10/visible-hover-red/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+          "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+          "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-red\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+          "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+          "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "off",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-red\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "visible-hover.spec.ts",
+      "file": "visible-hover.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Run exposes actual step and all metric cells inside the viewport after chart entry",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2298,
+                  "error": {
+                    "message": "Error: Every actual-step and metric text must be on screen, unclipped and unobscured\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                    "stack": "Error: Every actual-step and metric text must be on screen, unclipped and unobscured\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:28:122",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                      "column": 122,
+                      "line": 28
+                    },
+                    "snippet": " \u001b[90m 26 |\u001b[39m  \u001b[36mawait\u001b[39m info\u001b[33m.\u001b[39mattach(\u001b[32m'actual-source-cell-visibility'\u001b[39m\u001b[33m,\u001b[39m{body\u001b[33m:\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(cells)\u001b[33m,\u001b[39mcontentType\u001b[33m:\u001b[39m\u001b[32m'application/json'\u001b[39m})\n \u001b[90m 27 |\u001b[39m  expect(cells)\u001b[33m.\u001b[39mtoHaveLength(comparison\u001b[33m?\u001b[39m\u001b[35m16\u001b[39m\u001b[33m:\u001b[39m\u001b[35m4\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 28 |\u001b[39m  expect(cells\u001b[33m.\u001b[39mevery(cell\u001b[33m=>\u001b[39mcell\u001b[33m.\u001b[39mvisible)\u001b[33m,\u001b[39m\u001b[32m'Every actual-step and metric text must be on screen, unclipped and unobscured'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 29 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39minfo\u001b[33m.\u001b[39moutputPath(\u001b[32m'visible-source-values.png'\u001b[39m)})\n \u001b[90m 30 |\u001b[39m })\n \u001b[90m 31 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                        "column": 122,
+                        "line": 28
+                      },
+                      "message": "Error: Every actual-step and metric text must be on screen, unclipped and unobscured\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  26 |  await info.attach('actual-source-cell-visibility',{body:JSON.stringify(cells),contentType:'application/json'})\n  27 |  expect(cells).toHaveLength(comparison?16:4)\n> 28 |  expect(cells.every(cell=>cell.visible),'Every actual-step and metric text must be on screen, unclipped and unobscured').toBe(true)\n     |                                                                                                                          ^\n  29 |  await page.screenshot({path:info.outputPath('visible-source-values.png')})\n  30 | })\n  31 |\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:28:122"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:34:30.642Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-source-cell-visibility",
+                      "contentType": "application/json",
+                      "body": "W3sidGV4dCI6IjQ1MCwxOTEiLCJyZWN0Ijp7IngiOjQ0Ni43MDMxMjUsInkiOjEyNTQuNzgxMjUsIndpZHRoIjo0OC45Mzc1LCJoZWlnaHQiOjE1LCJ0b3AiOjEyNTQuNzgxMjUsInJpZ2h0Ijo0OTUuNjQwNjI1LCJib3R0b20iOjEyNjkuNzgxMjUsImxlZnQiOjQ0Ni43MDMxMjV9LCJjbGlwIjp7ImxlZnQiOjI4NiwidG9wIjoxMTg4LjI4MTI1LCJyaWdodCI6MTM1NSwiYm90dG9tIjo5MDB9LCJ2aXNpYmxlIjpmYWxzZX0seyJ0ZXh0IjoiMC4yMTI1MzgiLCJyZWN0Ijp7IngiOjU5OS40MDYyNSwieSI6MTI1NC43ODEyNSwid2lkdGgiOjU2LjU3ODEyNSwiaGVpZ2h0IjoxNSwidG9wIjoxMjU0Ljc4MTI1LCJyaWdodCI6NjU1Ljk4NDM3NSwiYm90dG9tIjoxMjY5Ljc4MTI1LCJsZWZ0Ijo1OTkuNDA2MjV9LCJjbGlwIjp7ImxlZnQiOjI4NiwidG9wIjoxMTg4LjI4MTI1LCJyaWdodCI6MTM1NSwiYm90dG9tIjo5MDB9LCJ2aXNpYmxlIjpmYWxzZX0seyJ0ZXh0IjoiMS4wOTk2MkUtNSIsInJlY3QiOnsieCI6NzUyLjEwOTM3NSwieSI6MTI1NC43ODEyNSwid2lkdGgiOjcxLjI5Njg3NSwiaGVpZ2h0IjoxNSwidG9wIjoxMjU0Ljc4MTI1LCJyaWdodCI6ODIzLjQwNjI1LCJib3R0b20iOjEyNjkuNzgxMjUsImxlZnQiOjc1Mi4xMDkzNzV9LCJjbGlwIjp7ImxlZnQiOjI4NiwidG9wIjoxMTg4LjI4MTI1LCJyaWdodCI6MTM1NSwiYm90dG9tIjo5MDB9LCJ2aXNpYmxlIjpmYWxzZX0seyJ0ZXh0IjoiMC4yMzMzOTYiLCJyZWN0Ijp7IngiOjkwNC44MTI1LCJ5IjoxMjU0Ljc4MTI1LCJ3aWR0aCI6NTYuNTc4MTI1LCJoZWlnaHQiOjE1LCJ0b3AiOjEyNTQuNzgxMjUsInJpZ2h0Ijo5NjEuMzkwNjI1LCJib3R0b20iOjEyNjkuNzgxMjUsImxlZnQiOjkwNC44MTI1fSwiY2xpcCI6eyJsZWZ0IjoyODYsInRvcCI6MTE4OC4yODEyNSwicmlnaHQiOjEzNTUsImJvdHRvbSI6OTAwfSwidmlzaWJsZSI6ZmFsc2V9XQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-red\\artifacts\\visible-hover-Run-exposes--14017--viewport-after-chart-entry\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-red\\artifacts\\visible-hover-Run-exposes--14017--viewport-after-chart-entry\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                    "column": 122,
+                    "line": 28
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e032e1733e06d6e1f682-c64bb9b411d00245c55d",
+          "file": "visible-hover.spec.ts",
+          "line": 3,
+          "column": 38
+        },
+        {
+          "title": "Compare exposes actual step and all metric cells inside the viewport after chart entry",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1578,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m16\u001b[39m\nReceived length: \u001b[31m7\u001b[39m\nReceived array:  \u001b[31m[{\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1261.78125, \"height\": 15, \"left\": 679.84375, \"right\": 728.78125, \"top\": 1246.78125, \"width\": 48.9375, \"x\": 679.84375, \"y\": 1246.78125}, \"text\": \"449,481\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1261.78125, \"height\": 15, \"left\": 793.6875, \"right\": 850.265625, \"top\": 1246.78125, \"width\": 56.578125, \"x\": 793.6875, \"y\": 1246.78125}, \"text\": \"0.218853\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1261.78125, \"height\": 15, \"left\": 907.53125, \"right\": 978.828125, \"top\": 1246.78125, \"width\": 71.296875, \"x\": 907.53125, \"y\": 1246.78125}, \"text\": \"1.10104E-5\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1261.78125, \"height\": 15, \"left\": 1021.375, \"right\": 1077.953125, \"top\": 1246.78125, \"width\": 56.578125, \"x\": 1021.375, \"y\": 1246.78125}, \"text\": \"0.192387\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1322.28125, \"height\": 15, \"left\": 679.84375, \"right\": 906.9375, \"top\": 1307.28125, \"width\": 227.09375, \"x\": 679.84375, \"y\": 1307.28125}, \"text\": \"No recorded value at this cursor location.\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1382.28125, \"height\": 15, \"left\": 679.84375, \"right\": 906.9375, \"top\": 1367.28125, \"width\": 227.09375, \"x\": 679.84375, \"y\": 1367.28125}, \"text\": \"No recorded value at this cursor location.\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1442.28125, \"height\": 15, \"left\": 679.84375, \"right\": 906.9375, \"top\": 1427.28125, \"width\": 227.09375, \"x\": 679.84375, \"y\": 1427.28125}, \"text\": \"No recorded value at this cursor location.\", \"visible\": false}]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m16\u001b[39m\nReceived length: \u001b[31m7\u001b[39m\nReceived array:  \u001b[31m[{\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1261.78125, \"height\": 15, \"left\": 679.84375, \"right\": 728.78125, \"top\": 1246.78125, \"width\": 48.9375, \"x\": 679.84375, \"y\": 1246.78125}, \"text\": \"449,481\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1261.78125, \"height\": 15, \"left\": 793.6875, \"right\": 850.265625, \"top\": 1246.78125, \"width\": 56.578125, \"x\": 793.6875, \"y\": 1246.78125}, \"text\": \"0.218853\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1261.78125, \"height\": 15, \"left\": 907.53125, \"right\": 978.828125, \"top\": 1246.78125, \"width\": 71.296875, \"x\": 907.53125, \"y\": 1246.78125}, \"text\": \"1.10104E-5\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1261.78125, \"height\": 15, \"left\": 1021.375, \"right\": 1077.953125, \"top\": 1246.78125, \"width\": 56.578125, \"x\": 1021.375, \"y\": 1246.78125}, \"text\": \"0.192387\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1322.28125, \"height\": 15, \"left\": 679.84375, \"right\": 906.9375, \"top\": 1307.28125, \"width\": 227.09375, \"x\": 679.84375, \"y\": 1307.28125}, \"text\": \"No recorded value at this cursor location.\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1382.28125, \"height\": 15, \"left\": 679.84375, \"right\": 906.9375, \"top\": 1367.28125, \"width\": 227.09375, \"x\": 679.84375, \"y\": 1367.28125}, \"text\": \"No recorded value at this cursor location.\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1442.28125, \"height\": 15, \"left\": 679.84375, \"right\": 906.9375, \"top\": 1427.28125, \"width\": 227.09375, \"x\": 679.84375, \"y\": 1427.28125}, \"text\": \"No recorded value at this cursor location.\", \"visible\": false}]\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:27:16",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                      "column": 16,
+                      "line": 27
+                    },
+                    "snippet": " \u001b[90m 25 |\u001b[39m  }))\n \u001b[90m 26 |\u001b[39m  \u001b[36mawait\u001b[39m info\u001b[33m.\u001b[39mattach(\u001b[32m'actual-source-cell-visibility'\u001b[39m\u001b[33m,\u001b[39m{body\u001b[33m:\u001b[39m\u001b[33mJSON\u001b[39m\u001b[33m.\u001b[39mstringify(cells)\u001b[33m,\u001b[39mcontentType\u001b[33m:\u001b[39m\u001b[32m'application/json'\u001b[39m})\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 27 |\u001b[39m  expect(cells)\u001b[33m.\u001b[39mtoHaveLength(comparison\u001b[33m?\u001b[39m\u001b[35m16\u001b[39m\u001b[33m:\u001b[39m\u001b[35m4\u001b[39m)\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 28 |\u001b[39m  expect(cells\u001b[33m.\u001b[39mevery(cell\u001b[33m=>\u001b[39mcell\u001b[33m.\u001b[39mvisible)\u001b[33m,\u001b[39m\u001b[32m'Every actual-step and metric text must be on screen, unclipped and unobscured'\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[36mtrue\u001b[39m)\n \u001b[90m 29 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mscreenshot({path\u001b[33m:\u001b[39minfo\u001b[33m.\u001b[39moutputPath(\u001b[32m'visible-source-values.png'\u001b[39m)})\n \u001b[90m 30 |\u001b[39m })"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                        "column": 16,
+                        "line": 27
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m16\u001b[39m\nReceived length: \u001b[31m7\u001b[39m\nReceived array:  \u001b[31m[{\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1261.78125, \"height\": 15, \"left\": 679.84375, \"right\": 728.78125, \"top\": 1246.78125, \"width\": 48.9375, \"x\": 679.84375, \"y\": 1246.78125}, \"text\": \"449,481\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1261.78125, \"height\": 15, \"left\": 793.6875, \"right\": 850.265625, \"top\": 1246.78125, \"width\": 56.578125, \"x\": 793.6875, \"y\": 1246.78125}, \"text\": \"0.218853\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1261.78125, \"height\": 15, \"left\": 907.53125, \"right\": 978.828125, \"top\": 1246.78125, \"width\": 71.296875, \"x\": 907.53125, \"y\": 1246.78125}, \"text\": \"1.10104E-5\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1261.78125, \"height\": 15, \"left\": 1021.375, \"right\": 1077.953125, \"top\": 1246.78125, \"width\": 56.578125, \"x\": 1021.375, \"y\": 1246.78125}, \"text\": \"0.192387\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1322.28125, \"height\": 15, \"left\": 679.84375, \"right\": 906.9375, \"top\": 1307.28125, \"width\": 227.09375, \"x\": 679.84375, \"y\": 1307.28125}, \"text\": \"No recorded value at this cursor location.\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1382.28125, \"height\": 15, \"left\": 679.84375, \"right\": 906.9375, \"top\": 1367.28125, \"width\": 227.09375, \"x\": 679.84375, \"y\": 1367.28125}, \"text\": \"No recorded value at this cursor location.\", \"visible\": false}, {\"clip\": {\"bottom\": 900, \"left\": 558, \"right\": 1355, \"top\": 1180.28125}, \"rect\": {\"bottom\": 1442.28125, \"height\": 15, \"left\": 679.84375, \"right\": 906.9375, \"top\": 1427.28125, \"width\": 227.09375, \"x\": 679.84375, \"y\": 1427.28125}, \"text\": \"No recorded value at this cursor location.\", \"visible\": false}]\u001b[39m\n\n  25 |  }))\n  26 |  await info.attach('actual-source-cell-visibility',{body:JSON.stringify(cells),contentType:'application/json'})\n> 27 |  expect(cells).toHaveLength(comparison?16:4)\n     |                ^\n  28 |  expect(cells.every(cell=>cell.visible),'Every actual-step and metric text must be on screen, unclipped and unobscured').toBe(true)\n  29 |  await page.screenshot({path:info.outputPath('visible-source-values.png')})\n  30 | })\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:27:16"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:34:34.658Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-source-cell-visibility",
+                      "contentType": "application/json",
+                      "body": "W3sidGV4dCI6IjQ0OSw0ODEiLCJyZWN0Ijp7IngiOjY3OS44NDM3NSwieSI6MTI0Ni43ODEyNSwid2lkdGgiOjQ4LjkzNzUsImhlaWdodCI6MTUsInRvcCI6MTI0Ni43ODEyNSwicmlnaHQiOjcyOC43ODEyNSwiYm90dG9tIjoxMjYxLjc4MTI1LCJsZWZ0Ijo2NzkuODQzNzV9LCJjbGlwIjp7ImxlZnQiOjU1OCwidG9wIjoxMTgwLjI4MTI1LCJyaWdodCI6MTM1NSwiYm90dG9tIjo5MDB9LCJ2aXNpYmxlIjpmYWxzZX0seyJ0ZXh0IjoiMC4yMTg4NTMiLCJyZWN0Ijp7IngiOjc5My42ODc1LCJ5IjoxMjQ2Ljc4MTI1LCJ3aWR0aCI6NTYuNTc4MTI1LCJoZWlnaHQiOjE1LCJ0b3AiOjEyNDYuNzgxMjUsInJpZ2h0Ijo4NTAuMjY1NjI1LCJib3R0b20iOjEyNjEuNzgxMjUsImxlZnQiOjc5My42ODc1fSwiY2xpcCI6eyJsZWZ0Ijo1NTgsInRvcCI6MTE4MC4yODEyNSwicmlnaHQiOjEzNTUsImJvdHRvbSI6OTAwfSwidmlzaWJsZSI6ZmFsc2V9LHsidGV4dCI6IjEuMTAxMDRFLTUiLCJyZWN0Ijp7IngiOjkwNy41MzEyNSwieSI6MTI0Ni43ODEyNSwid2lkdGgiOjcxLjI5Njg3NSwiaGVpZ2h0IjoxNSwidG9wIjoxMjQ2Ljc4MTI1LCJyaWdodCI6OTc4LjgyODEyNSwiYm90dG9tIjoxMjYxLjc4MTI1LCJsZWZ0Ijo5MDcuNTMxMjV9LCJjbGlwIjp7ImxlZnQiOjU1OCwidG9wIjoxMTgwLjI4MTI1LCJyaWdodCI6MTM1NSwiYm90dG9tIjo5MDB9LCJ2aXNpYmxlIjpmYWxzZX0seyJ0ZXh0IjoiMC4xOTIzODciLCJyZWN0Ijp7IngiOjEwMjEuMzc1LCJ5IjoxMjQ2Ljc4MTI1LCJ3aWR0aCI6NTYuNTc4MTI1LCJoZWlnaHQiOjE1LCJ0b3AiOjEyNDYuNzgxMjUsInJpZ2h0IjoxMDc3Ljk1MzEyNSwiYm90dG9tIjoxMjYxLjc4MTI1LCJsZWZ0IjoxMDIxLjM3NX0sImNsaXAiOnsibGVmdCI6NTU4LCJ0b3AiOjExODAuMjgxMjUsInJpZ2h0IjoxMzU1LCJib3R0b20iOjkwMH0sInZpc2libGUiOmZhbHNlfSx7InRleHQiOiJObyByZWNvcmRlZCB2YWx1ZSBhdCB0aGlzIGN1cnNvciBsb2NhdGlvbi4iLCJyZWN0Ijp7IngiOjY3OS44NDM3NSwieSI6MTMwNy4yODEyNSwid2lkdGgiOjIyNy4wOTM3NSwiaGVpZ2h0IjoxNSwidG9wIjoxMzA3LjI4MTI1LCJyaWdodCI6OTA2LjkzNzUsImJvdHRvbSI6MTMyMi4yODEyNSwibGVmdCI6Njc5Ljg0Mzc1fSwiY2xpcCI6eyJsZWZ0Ijo1NTgsInRvcCI6MTE4MC4yODEyNSwicmlnaHQiOjEzNTUsImJvdHRvbSI6OTAwfSwidmlzaWJsZSI6ZmFsc2V9LHsidGV4dCI6Ik5vIHJlY29yZGVkIHZhbHVlIGF0IHRoaXMgY3Vyc29yIGxvY2F0aW9uLiIsInJlY3QiOnsieCI6Njc5Ljg0Mzc1LCJ5IjoxMzY3LjI4MTI1LCJ3aWR0aCI6MjI3LjA5Mzc1LCJoZWlnaHQiOjE1LCJ0b3AiOjEzNjcuMjgxMjUsInJpZ2h0Ijo5MDYuOTM3NSwiYm90dG9tIjoxMzgyLjI4MTI1LCJsZWZ0Ijo2NzkuODQzNzV9LCJjbGlwIjp7ImxlZnQiOjU1OCwidG9wIjoxMTgwLjI4MTI1LCJyaWdodCI6MTM1NSwiYm90dG9tIjo5MDB9LCJ2aXNpYmxlIjpmYWxzZX0seyJ0ZXh0IjoiTm8gcmVjb3JkZWQgdmFsdWUgYXQgdGhpcyBjdXJzb3IgbG9jYXRpb24uIiwicmVjdCI6eyJ4Ijo2NzkuODQzNzUsInkiOjE0MjcuMjgxMjUsIndpZHRoIjoyMjcuMDkzNzUsImhlaWdodCI6MTUsInRvcCI6MTQyNy4yODEyNSwicmlnaHQiOjkwNi45Mzc1LCJib3R0b20iOjE0NDIuMjgxMjUsImxlZnQiOjY3OS44NDM3NX0sImNsaXAiOnsibGVmdCI6NTU4LCJ0b3AiOjExODAuMjgxMjUsInJpZ2h0IjoxMzU1LCJib3R0b20iOjkwMH0sInZpc2libGUiOmZhbHNlfV0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-red\\artifacts\\visible-hover-Compare-expo-34560--viewport-after-chart-entry\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-red\\artifacts\\visible-hover-Compare-expo-34560--viewport-after-chart-entry\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                    "column": 16,
+                    "line": 27
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e032e1733e06d6e1f682-69d826dc89f58a14702a",
+          "file": "visible-hover.spec.ts",
+          "line": 3,
+          "column": 38
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T20:34:28.799Z",
+    "duration": 8792.929,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

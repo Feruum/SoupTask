@@ -1,53 +1,43 @@
-# Production performance — 10 November 2026
+# Production performance and memory — 11 November 2026
 
-Application source commit: `41ae67f48be6364f719ba38ad71d694c8ae484fe`. Source hash `68b68de6f774bf3624dffc7257711bbd6655d3dc7875f7fbdfb195959a8ae5aa`; tested build hash `5a3fe0fd9d66886ff8d35a2141aaeb31c28a7f153c2fcc4142d80971b9ae735a`. Later documentation/tooling commits do not change the application inputs. [Build metadata](../reports/build-metadata.json) and [matched comparison](../reports/perf-targets-2026-11-10/latency-comparison.json) bind the measurements; the benchmark's recursive source hash uses a different documented inventory algorithm.
+Frozen source commit: `408d27bdc6b0baf2c2136927ba5774dbac799a60`. [Source/build metadata](../reports/build-metadata.json) binds the current application. Historical reports remain archived and do not replace final-source acceptance.
 
-## Protocol and results
+## Corrected visible-hover endpoint
 
-Windows 11 build 26200, Ryzen 7 8845HS, Chromium 158.0.8127.18, Node 24.22.1, production, 1440×900, DPR 1. Main renderer CPU ×4. A separate throttling command was attempted for every Worker target and was unsupported; Worker preprocessing is **not established as CPU ×4**. Five fresh browser contexts per run share a browser process; OS caches are not flushed. Two warmups then 30 range/hover pairs in details and separately 30 in four-run Compare (R05, R01, R02, R06). Overview, spike, reset, excluded-spike and single-step windows repeat six times. No forced GC. Percentiles use nearest rank.
+Earlier readouts could sit below the viewport. Those historical results measured DOM plus two RAFs and did not prove readable on-screen values. The desktop table now occupies a permanent area below a separate chart scroller. The current criterion requires original source DOM before BOTH RAF checks; at the second check, actual-step/metric text must fit viewport and clipping bounds and pass cell-center occlusion sampling. Missing observations are explicit. No physical monitor presentation or every-pixel occlusion guarantee is asserted. [Correction, experiments and limits](visible-hover-verification.md).
 
-| p95, ms | Before, full trace | After 1, full trace | Confirmation, full trace | Separate no trace | Target |
-|---|---:|---:|---:|---:|---:|
-| Cold meaningful render | 2493.6 | 2279.9 | 2531.9 | 2518.9 | ≤3000 |
-| Detail zoom | 149.6 | 106.8 | 114.8 | 113.3 | ≤200 |
-| Detail pointer-to-source-frame | 88.5 | 40.6 | 35.5 | 37.0 | ≤50 |
-| Compare zoom | 214.7 | 123.2 | 131.4 | 107.6 | ≤200 |
-| Compare pointer-to-source-frame | 107.5 | 48.6 | 40.0 | 40.7 | ≤50 |
+Windows 11, Ryzen 7 8845HS, Chromium 158,1440×900,DPR 1, production. CPU ×4 applies to the main renderer; Worker throttling commands were unsupported. Each full recording uses five fresh browser contexts, two warmups and 30 range/hover pairs in details and separately30 in four-run Compare, plus separate 30-sample continuous movement series. Nearest-rank p95, no forced GC, no pooled samples. Shared-machine sequential measurements are not randomized causal proof.
 
-Targets use the **worse of the two full-recording p95 results**, never pooled samples or the no-trace regime. All five targets pass. Cold confirmation is about 1.5% slower than the new baseline; this is within budget, not a cold-load improvement claim. Shared-machine sequential runs are not a randomized causal study.
+| p95,ms | Worse of two final full recordings | Limit | Result |
+|---|---:|---:|---|
+| Cold meaningful render | 3013.6 | 3000 | Miss |
+| Detail zoom | 122.2 | 200 | Pass |
+| Detail hover on entry | 64.5 | 50 | Miss |
+| Compare zoom | 161.0 | 200 | Pass |
+| Compare hover on entry | 56.7 | 50 | Miss |
+| Detail continuous hover | 45.0 | 50 | Pass |
+| Compare continuous hover | 50.9 | 50 | Miss |
 
-- [Before](../reports/perf-targets-2026-11-10/before-trace-performance/results.json): clean isolated build of previous source commit `9206963`, same installed dependencies/current harness. This is not asserted to reproduce historical deployed asset bytes.
-- [After 1](../reports/perf-targets-2026-11-10/one-row-performance/results.json), [full-trace confirmation](../reports/perf-targets-2026-11-10/final-trace-performance/results.json), [no-trace result](../reports/perf-targets-2026-11-10/final-latency-performance/results.json): identical application source and harness, unchanged-source checks retained.
-- [Historical scan/stream/index comparison](../reports/performance-hover-frame-final/results.json) motivated the conditional exact index. It is an earlier UI revision, not final-screen acceptance.
+Expanded limits remain unmet for cold meaningful render, detail hover on entry, compare hover on entry, compare continuous hover. Stable sub-50 ms hover is not established. The demo is delivered with these measured limits; no 100/100 grade is asserted.
 
-Cold ends after three accepted/drawn charts and two RAF callbacks. Zoom ends at the accepted chart draw hook. Hover starts at the original browser pointer event timestamp and requires accepted source DOM for the current workspace/view/hover identity before **two RAF callbacks**. Positive CSS geometry and visibility are checked. This proves a rendering opportunity, not physical monitor presentation or that every source region is within the viewport. Worker-response, DOM-commit and automation upper bounds remain separate metrics. Real source screenshots and independent Canvas assertions complement timing hooks.
+[Full recording 1](../reports/memory-investigation-2026-11-10/release-final-v2/performance-trace/results.json) · [confirmation](../reports/memory-investigation-2026-11-10/release-final-v2/performance-confirmation/results.json) · [separate no-trace regime](../reports/memory-investigation-2026-11-10/release-final-v2/performance-no-trace/results.json) · [independent visible-value gate](../reports/memory-investigation-2026-11-10/release-final-v2/visible-latency.json) · [same-harness comparison](../reports/memory-investigation-2026-11-10/release-final-v2/latency-comparison.json). Trace overhead remains included; no-trace results never replace a failing recorded result.
 
-Full Chrome Performance recordings start before measured actions and include devtools timeline, frame screenshots, User Timing, V8 and top-level events. These are not Playwright traces. Recording overhead remains included; no-trace samples are explicitly separate. All samples, unsuccessful intermediate experiments and raw red/green outputs remain archived. [Lossless trace inventory](../reports/trace-archives.json) maps original and gzip SHA256 values; `node scripts/trace-archives.mjs --unpack` restores exact JSON.
+The earlier correct-visibility baseline had detail/Compare hover p95 of 57.5/70.0 ms, cold 2859.4 ms and detail/Compare zoom 138.7/164.8 ms. The final measurements improve some metrics and regress others; the complete comparison retains both. The older offscreen numbers are a different evidence scope.
 
-## What changed
+## Scoped native memory
 
-Bounded exact source caches are prepared by the Worker for accepted display-pixel targets; misses keep the guarded raw query. Independent reduced series are aligned in the Worker. Whole-run summaries do not rerender on cursor/zoom. Native pointer offsets avoid layout reads; secure-origin pointerrawupdate has a deduplicated pointermove fallback. Persistent readout leaf nodes skip unchanged original rows, attributes and Pin actions. Details and Compare share one table containing all three raw metrics, actual steps, distance and source actions. Fixed columns and reserved space prevent layout shifts.
+[Current natural-GC process counters](../reports/memory-investigation-2026-11-10/release-final-v2/final-memory/results.json) deduplicate renderer and live dedicated-Worker PIDs using their own trace markers. Private committed memory and working set include native allocations; JS heap and typed buffers are separate and must not be added to them. Shared GPU/browser/utility processes are not wholly assigned to the tab. This is not universal total tab/GPU memory or a Task Manager screenshot.
 
-The native uPlot crosshair/drag path is retained: muting it did not improve the diagnostic result. Offscreen overlay work is deferred, old ink cleared once and the latest accepted cursor redrawn on reveal; real-pixel tests cover restoration. Numeric range controls avoid concurrent decorative transitions. No source precision, extrema guarantee, gap topology, async guards or two-frame endpoint was weakened. See [primary-source research and rejected experiments](performance-research-2026-11-10.md).
+| Checkpoint | Private committed,MiB | Working set,MiB |
+|---|---:|---:|
+| 1M-settled | 149.4 | 247.3 |
+| 1M-after-20-SPA-switches | 262.0 | 376.6 |
+| Compare-1M-plus-three | 273.8 | 377.8 |
 
-## Memory — actual process counters, separately scoped
+The confirmed interrupted-drag leak was an outstanding uPlot document mouseup listener. Cleanup removes the actual registered listener before destroy. Canvas bitmaps are zero-sized on unmount; timing entries are capped128/name; Intl formatter caches are bounded32; decorative art now uses128/256/512 px variants instead of 1254 px decoding. Raw R05 storage remains32,000,000 bytes; the owned indexed buffer ledger is76,696,612 bytes including raw. No raw ownership or numerical guarantee was weakened.
 
-[Final memory results](../reports/perf-targets-2026-11-10/final-memory/results.json): one isolated headless page, unthrottled, no forced GC. User Timing markers associate the renderer and every live dedicated Worker with Windows PIDs. The same renderer/Worker PID is deduplicated. Native Windows private committed bytes and working sets include native allocations; JS heap alone does not replace these counters.
-
-| Checkpoint | Private committed, MiB | Working set, MiB | Main JS heap used, MiB |
-|---|---:|---:|---:|
-| R05, settled | 145.9 | 245.6 | 8.2 |
-| R05 after 20 SPA transitions | 319.5 | 588.7 | 44.8 |
-| R05 + three ordinary runs, Compare | 295.8 | 448.3 | 16.9 |
-
-**Memory grew after repeated transitions.** Natural heap reduction in the following Compare checkpoint is consistent with transient garbage, but does not establish leak freedom. First follow-up for a longer-lived product is retained-object/GC analysis over repeated cycles. No memory reduction or hard memory-budget success is claimed. Separate earlier headed/headless samples remain history, not matched current before/after memory proof.
-
-R05 raw columns total 32,000,000 bytes; indexed owned typed-buffer ledger is 76,696,612 bytes **including raw**. Compare raw is 32,786,432 bytes and ledger 78,576,688. Current render buffers and cache target/row counts are recorded per checkpoint. Do not add these to process counters. Shared browser/GPU/utility subtotals are separate, working sets may share pages, counters and markers are sequential, and this is not universal total tab/GPU memory or a Task Manager screenshot. Dump request success does not imply native GUID matching.
-
-[Lifecycle evidence](../reports/perf-targets-2026-11-10/final-runtime/runtime-contrast.json) independently observes one Worker and three charts in every settled state over 20 SPA changes, then zero Workers on context close. Retiring Workers may overlap before settling. This verifies those lifecycle observations, not absence of all listeners or leaks.
+[Final B→T→F retainer analysis](../reports/memory-investigation-2026-11-10/release-final-v2/final-roundtrip/retainer-analysis.json) and [native MemoryInfra attribution](../reports/memory-investigation-2026-11-10/release-final-v2/final-roundtrip/native-attribution.json) are separate forced-snapshot diagnostics. Rolling-baseline20/60-round results do not mean zero total detached objects or universal leak freedom. [Full investigation and before-fix retaining chain](memory-investigation.md) preserves the original document→listener→uPlot path, native raster findings and natural-memory limits.
 
 ## Reproduction
 
-Use fresh output directories. `npm run build`; `node scripts/build-metadata.mjs`; `PERF_OUT=<fresh> PERF_MODES=indexed npm run perf` with the actual environment-variable syntax of your shell. `PERF_TRACE=off` selects the separate no-recording regime; default is full. Check `scripts/performance.mjs` for supported controls. Run heavy suites sequentially. `MEMORY_OUT=<fresh> node scripts/tab-memory.mjs` records process footprint; `LIGHTHOUSE_OUT=<fresh> LIGHTHOUSE_CLI=<official-cli/index.js> npm run audit:lighthouse` is separate.
-
-[Final Lighthouse](../reports/perf-targets-2026-11-10/final-lighthouse/summary.json): Performance 94/97/97/95/98 across Dashboard/Runs/Detail/Compare/Quality; Accessibility and Best Practices 100 throughout. Desktop simulation differs from this CPU ×4 custom protocol and does not establish full accessibility conformance.
+Use fresh output directories. Run build and build-metadata, then set PERF_OUT and PERF_MODES=indexed before npm run perf. PERF_TRACE=off selects a separately labelled regime. MEMORY_OUT selects the natural Windows-counter experiment; ROUNDTRIP_OUT and ROUNDTRIP_DRAG=true select the separate retained-memory diagnosis. Heavy checks run sequentially. node scripts/trace-archives.mjs --unpack verifies/restores exact archived profiler JSON. Final Lighthouse scores are95–97 Performance; Accessibility/Best Practices 100. These settings differ from the custom CPU4 protocol.

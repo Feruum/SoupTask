@@ -10,7 +10,7 @@ const browser=await chromium.launch(),context=await browser.newContext({viewport
 const page=await context.newPage(),errors=[],assets=[],routes=[]
 page.on('pageerror',error=>errors.push(error.message))
 page.on('response',response=>{if(new URL(response.url()).pathname.startsWith('/assets/'))assets.push({url:response.url(),status:response.status(),contentType:response.headers()['content-type']??''})})
-let verified=false,spike=null,missingAsset=null
+let verified=false,spike=null,missingAsset=null,visibleSource=null
 try{
  for(const [name,route,heading] of [['dashboard','/dashboard','Training overview'],['runs','/runs','Training runs'],['detail','/runs/kazakh-sft-005','kazakh-sft-005'],['compare','/compare?runs=kazakh-sft-005,kazakh-sft-006','Compare runs'],['quality','/data-quality','Data quality']]){
   const response=await page.goto(new URL(route,base).href)
@@ -28,8 +28,17 @@ try{
    await page.getByRole('button',{name:'Inspect source',exact:true}).click()
    await expect(page.getByTestId('inspected-loss')).toHaveText('100.000')
   }
-  if(name==='compare')await page.waitForFunction(()=>document.querySelectorAll('.plot-host[data-view-ready="true"]').length===3,undefined,{timeout:60000})
-  await page.screenshot({path:`${directory}/${name}.png`,fullPage:true})
+  if(name==='compare'){
+   await page.waitForFunction(()=>document.querySelectorAll('.plot-host[data-view-ready="true"]').length===3,undefined,{timeout:60000})
+   const before=await page.evaluate(()=>window.__soupEvidence.viewSeq)
+   await page.getByLabel('From step',{exact:true}).fill('0');await page.getByLabel('To step',{exact:true}).fill('8191');await page.getByRole('button',{name:'Apply range',exact:true}).click()
+   await page.waitForFunction(previous=>window.__soupEvidence.viewSeq>previous&&!!document.querySelector('.metric-grid[data-view-ready="true"]'),before)
+   const plot=page.getByTestId('comparison-loss').locator('.u-over');await plot.scrollIntoViewIfNeeded();const box=await plot.boundingBox();assert(box)
+   await page.mouse.move(box.x+box.width*.45,box.y+box.height*.5)
+   await page.waitForFunction(()=>{const frame=performance.getEntriesByName('soup:hover-frame').at(-1);return frame?.detail.hoverSeq===window.__soupEvidence.acceptedHoverSeq&&frame.detail.visibility?.every(result=>result.visible)&&frame.detail.visibility.flatMap(result=>result.cells).length===8})
+   visibleSource=await page.evaluate(()=>performance.getEntriesByName('soup:hover-frame').at(-1).detail)
+  }
+  await page.screenshot({path:`${directory}/${name}.png`})
   routes.push({name,route,directStatus:response.status(),reloadStatus:reload.status(),heading:await page.locator('h1').textContent()})
  }
  await page.goto(new URL('/',base).href);await expect(page).toHaveURL(/\/dashboard$/)
@@ -42,7 +51,7 @@ try{
  assert.deepEqual(errors,[],'Production must not report uncaught page errors')
  verified=true
 }finally{
- const report={verified,url:base,executedAt:new Date().toISOString(),browser:browser.version(),node:process.version,sourceHash:metadata.sourceHash,localBuildHash:metadata.buildHash,scope:'Real production direct-load and reload of all five screens, Worker/assets, exact R05 raw source and Canvas spike, root/unknown routing. Not a remote performance benchmark.',routes,spike,assets,missingAsset,errors}
+ const report={verified,url:base,executedAt:new Date().toISOString(),browser:browser.version(),node:process.version,sourceHash:metadata.sourceHash,localBuildHash:metadata.buildHash,scope:'Real production direct-load/reload of five screens, Worker/assets, exact R05 raw source and Canvas spike, visible Compare source cells, root/unknown routing. Not a remote performance benchmark.',routes,spike,visibleSource,assets,missingAsset,errors}
  await writeFile('reports/deployment.json',JSON.stringify(report,null,2));await context.close();await browser.close()
 }
 console.log(`Production smoke verified: ${base}`)

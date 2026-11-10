@@ -48,8 +48,13 @@ def footer(canvas, document):
     canvas.drawString(19*mm, 12*mm, 'SOUP  /  FRONTEND ENGINEERING  /  DEMONSTRATION SNAPSHOTS')
     canvas.drawRightString(A4[0]-19*mm, 12*mm, f'{document.page} / 2')
 
+def first_page(canvas, document):
+    icon = Path('assets/readme/soup-icons/soup-recipe.png')
+    canvas.drawImage(str(icon), A4[0]-19*mm-40, A4[1]-19*mm-34, width=40, height=40, mask='auto')
+    footer(canvas, document)
+
 document = SimpleDocTemplate(str(output), pagesize=A4, rightMargin=19*mm, leftMargin=19*mm, topMargin=19*mm, bottomMargin=23*mm, title='Soup Training Monitor - submission note', author='Soup project - AI-assisted implementation')
-document.build(story, onFirstPage=footer, onLaterPages=footer)
+document.build(story, onFirstPage=first_page, onLaterPages=footer)
 reader = PdfReader(output)
 assert len(reader.pages) == 2, f'Expected exactly two pages, got {len(reader.pages)}'
 assert all(page.extract_text().strip() for page in reader.pages), 'A PDF page has no text'

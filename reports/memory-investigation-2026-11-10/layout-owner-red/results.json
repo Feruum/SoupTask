@@ -1,0 +1,205 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/visible-hover.spec.ts",
+      "--grep",
+      "source layout ownership",
+      "--config",
+      "scripts/acceptance.playwright.config.mjs",
+      "--workers",
+      "1",
+      "--trace",
+      "off"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\scripts\\acceptance.playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "sourceCommit": "a02f5f4d23e5a78947a4650fe9325fbcf49bb8e4",
+      "sourceHash": "c2263b7d95d40afcabb8a5d9cade1cf3fb4052aa4a5d3728564a9ceeb0a1b1f4",
+      "buildHash": "557df72c608635caac9ae46af70f09878d29c4073b1cc8e5f4fe0b2be5a0ef0b",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/memory-investigation-2026-11-10/layout-owner-red/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "a02f5f4d23e5a78947a4650fe9325fbcf49bb8e4",
+          "sourceHash": "c2263b7d95d40afcabb8a5d9cade1cf3fb4052aa4a5d3728564a9ceeb0a1b1f4",
+          "buildHash": "557df72c608635caac9ae46af70f09878d29c4073b1cc8e5f4fe0b2be5a0ef0b",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\layout-owner-red\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "a02f5f4d23e5a78947a4650fe9325fbcf49bb8e4",
+          "sourceHash": "c2263b7d95d40afcabb8a5d9cade1cf3fb4052aa4a5d3728564a9ceeb0a1b1f4",
+          "buildHash": "557df72c608635caac9ae46af70f09878d29c4073b1cc8e5f4fe0b2be5a0ef0b",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "off",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\layout-owner-red\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "visible-hover.spec.ts",
+      "file": "visible-hover.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "source layout ownership changes only with workspace membership and cleans up on departure",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 6468,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#main-content')\nExpected: \u001b[32m\"4\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('#main-content') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#main-content')\u001b[22m\n\u001b[2m    11 × locator resolved to <main tabindex=\"-1\" id=\"main-content\" class=\"page-content\">…</main>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#main-content')\nExpected: \u001b[32m\"4\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('#main-content') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#main-content')\u001b[22m\n\u001b[2m    11 × locator resolved to <main tabindex=\"-1\" id=\"main-content\" class=\"page-content\">…</main>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:128:62",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                      "column": 62,
+                      "line": 128
+                    },
+                    "snippet": " \u001b[90m 126 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'/compare?runs=kazakh-sft-005,kazakh-sft-001,kazakh-sft-002,kazakh-sft-006'\u001b[39m)\n \u001b[90m 127 |\u001b[39m  \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.metric-grid'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-view-ready'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'true'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 128 |\u001b[39m  \u001b[36mconst\u001b[39m main\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mlocator(\u001b[32m'#main-content'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(main)\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-source-dock-members'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'4'\u001b[39m)\n \u001b[90m     |\u001b[39m                                                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 129 |\u001b[39m  \u001b[36mconst\u001b[39m mode\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m main\u001b[33m.\u001b[39mgetAttribute(\u001b[32m'data-source-dock-owner'\u001b[39m)\n \u001b[90m 130 |\u001b[39m  \u001b[36mconst\u001b[39m over\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'comparison-loss'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'.u-over'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m over\u001b[33m.\u001b[39mscrollIntoViewIfNeeded()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m box\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m over\u001b[33m.\u001b[39mboundingBox()\u001b[33m;\u001b[39mexpect(box)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeNull()\n \u001b[90m 131 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mmove(box\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mx\u001b[33m+\u001b[39mbox\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mwidth\u001b[33m*\u001b[39m\u001b[35m.4\u001b[39m\u001b[33m,\u001b[39mbox\u001b[33m!\u001b[39m\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mbox\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mheight\u001b[33m*\u001b[39m\u001b[35m.5\u001b[39m)"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                        "column": 62,
+                        "line": 128
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveAttribute\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  locator('#main-content')\nExpected: \u001b[32m\"4\"\u001b[39m\nReceived: \u001b[31m\"\"\u001b[39m\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveAttribute\" locator('#main-content') with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('#main-content')\u001b[22m\n\u001b[2m    11 × locator resolved to <main tabindex=\"-1\" id=\"main-content\" class=\"page-content\">…</main>\u001b[22m\n\u001b[2m       - unexpected value \"null\"\u001b[22m\n\n\n  126 |  await page.goto('/compare?runs=kazakh-sft-005,kazakh-sft-001,kazakh-sft-002,kazakh-sft-006')\n  127 |  await expect(page.locator('.metric-grid')).toHaveAttribute('data-view-ready','true')\n> 128 |  const main=page.locator('#main-content');await expect(main).toHaveAttribute('data-source-dock-members','4')\n      |                                                              ^\n  129 |  const mode=await main.getAttribute('data-source-dock-owner')\n  130 |  const over=page.getByTestId('comparison-loss').locator('.u-over');await over.scrollIntoViewIfNeeded();const box=await over.boundingBox();expect(box).not.toBeNull()\n  131 |  await page.mouse.move(box!.x+box!.width*.4,box!.y+box!.height*.5)\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:128:62"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:18:51.930Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\layout-owner-red\\artifacts\\visible-hover-source-layou-95c64--and-cleans-up-on-departure\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\layout-owner-red\\artifacts\\visible-hover-source-layou-95c64--and-cleans-up-on-departure\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                    "column": 62,
+                    "line": 128
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e032e1733e06d6e1f682-87411186b9dfda9d4678",
+          "file": "visible-hover.spec.ts",
+          "line": 124,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T21:18:48.982Z",
+    "duration": 10973.288,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

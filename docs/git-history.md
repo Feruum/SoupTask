@@ -6,4 +6,4 @@ At the author's explicit request, the first commit's Git author/committer date i
 
 The original history is retained on branch `codex/measured-source-history`. The unchanged measured application source is original commit `41ae67f48be6364f719ba38ad71d694c8ae484fe`; all application source/build hashes, raw test results, trace events and recorded measurement times remain factual and unchanged. Reports refer to that original measured-source commit even though rewritten main has different descendant commit IDs. [Rewrite mapping](../reports/git-history-rewrite.json) records original/new IDs and dates with identical tree IDs.
 
-This changes repository metadata and documentation, not demo snapshot timestamps, chart source values or runtime behavior. Application/source hash comparison verifies that the final release still contains the exact measured application inputs.
+This changes repository metadata and documentation, not demo snapshot timestamps, chart source values or runtime behavior. The rewrite preserved the then-measured application tree. Later fixes have new frozen source/build identities; historical reports are not promoted to current acceptance.

@@ -1,0 +1,28 @@
+{
+    "buildHash":  "e97a4a09084727e6f727aca6f80be7b9696d798274c30988b408a97c10ddf623",
+    "sourceHash":  "fd46ec8e8641548823cae2fef2cbc140b2c0e1b258aa8674480dc15c170ec831",
+    "generatedAt":  "2026-11-10T21:59:06.8021186Z",
+    "sourceCommit":  "408d27bdc6b0baf2c2136927ba5774dbac799a60",
+    "commands":  [
+                     {
+                         "exitCode":  0,
+                         "command":  "npm run build",
+                         "log":  "reports/memory-investigation-2026-11-10/release-final-v2/acceptance-build.log"
+                     },
+                     {
+                         "exitCode":  0,
+                         "command":  "npm run lint",
+                         "log":  "reports/memory-investigation-2026-11-10/release-final-v2/acceptance-lint.log"
+                     },
+                     {
+                         "exitCode":  0,
+                         "command":  "npm test -- --reporter=json --outputFile=reports/memory-investigation-2026-11-10/release-final-v2/final-unit.json",
+                         "log":  "reports/memory-investigation-2026-11-10/release-final-v2/acceptance-unit.log"
+                     },
+                     {
+                         "exitCode":  0,
+                         "command":  "npm run data:check",
+                         "log":  "reports/memory-investigation-2026-11-10/release-final-v2/acceptance-manifest.log"
+                     }
+                 ]
+}

@@ -1,0 +1,55 @@
+{
+  "verified": true,
+  "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+  "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+  "tool": "18.7.2",
+  "modules": 124,
+  "dependencies": 386,
+  "runtimeCycles": [],
+  "typeInclusiveCycles": [
+    [
+      "src/charts/ComparisonCursorReadout.tsx",
+      "src/charts/SourceCursorReadout.tsx",
+      "src/features/shared/Workspace.tsx"
+    ],
+    [
+      "src/charts/ComparisonCursorReadout.tsx",
+      "src/features/shared/Workspace.tsx"
+    ],
+    [
+      "src/app/App.tsx",
+      "src/features/compare/ComparePage.tsx"
+    ],
+    [
+      "src/app/App.tsx",
+      "src/features/dashboard/DashboardPage.tsx"
+    ],
+    [
+      "src/app/App.tsx",
+      "src/features/runs/RunPage.tsx"
+    ],
+    [
+      "src/app/App.tsx",
+      "src/features/runs/RunsPage.tsx"
+    ]
+  ],
+  "errors": [],
+  "controlledFaults": [
+    {
+      "name": "UI dependency in core",
+      "expectedRule": "core-sampling-remain-ui-free",
+      "detected": true
+    },
+    {
+      "name": "test dependency in production",
+      "expectedRule": "production-cannot-import-tests",
+      "detected": true
+    },
+    {
+      "name": "runtime cycle",
+      "expectedRule": "runtime-cycle",
+      "detected": true
+    }
+  ],
+  "scope": "dependency-cruiser actual TypeScript graph incl type-only imports. Runtime cycles exclude erased type edges; two chart→feature Workspace type couplings remain explicit architectural debt. Pure core/sampling imports are checked; DOM global usage also requires code review."
+}

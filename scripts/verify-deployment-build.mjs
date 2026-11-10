@@ -11,13 +11,13 @@ async function get(url){
   catch(error){if(attempt===3)throw error;console.log(`Transient artifact fetch failed; retry ${attempt}/2`)}
  }
 }
-for(const file of metadata.build.filter(item=>/\.(?:js|css|html)$/.test(item.file))){
+for(const file of metadata.build){
  const {response,bytes}=await get(new URL(file.file.replace(/^dist\//,''),`${report.url}/`))
  assert.equal(response.status,200)
  const actual=createHash('sha256').update(bytes).digest('hex')
  checks.push({file:file.file,expectedSha256:file.sha256,actualSha256:actual})
  assert.equal(actual,file.sha256,`Remote bytes differ for ${file.file}`)
 }
-report.remoteBuildVerification={executedAt:new Date().toISOString(),verified:true,scope:'Decompressed HTTPS response bytes for every local production JS, CSS and HTML artifact match the saved local SHA256; includes module Worker.',checks}
+report.remoteBuildVerification={executedAt:new Date().toISOString(),verified:true,scope:'Decompressed HTTPS response bytes for every local production artifact match saved SHA256; includes HTML/JS/CSS, Worker, responsive PNG, SVG and fonts.',checks}
 await writeFile('reports/deployment.json',JSON.stringify(report,null,2))
-console.log(`Matched ${checks.length} deployed HTML/JS/CSS artifacts to the tested local build.`)
+console.log(`Matched ${checks.length} deployed artifacts to the tested local build.`)

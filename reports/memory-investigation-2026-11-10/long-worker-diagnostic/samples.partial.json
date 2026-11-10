@@ -1,0 +1,2270 @@
+[
+  {
+    "label": "initial-natural",
+    "mainHeap": {
+      "usedSize": 8492208,
+      "totalSize": 15011840,
+      "embedderHeapUsedSize": 3778344,
+      "backingStorageSize": 1771827
+    },
+    "workerHeap": {
+      "usedSize": 2610076,
+      "totalSize": 7077888,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 1,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 44,
+          "normalizationMs": 224.10000000149012,
+          "indexBuildMs": 187.39999999850988,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 0.337097
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 1.217878
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 0.241173
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.112314
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 19365888,
+        "WorkingSet64": 54931456
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29597696,
+        "WorkingSet64": 72183808
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16150528,
+        "WorkingSet64": 38297600
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 156991488,
+        "WorkingSet64": 261255168
+      }
+    ]
+  },
+  {
+    "label": "initial-main-GC",
+    "mainHeap": {
+      "usedSize": 6209420,
+      "totalSize": 6623232,
+      "embedderHeapUsedSize": 1553696,
+      "backingStorageSize": 718617
+    },
+    "workerHeap": {
+      "usedSize": 2610076,
+      "totalSize": 7077888,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 1,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 44,
+          "normalizationMs": 224.10000000149012,
+          "indexBuildMs": 187.39999999850988,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 0.345357
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 1.498489
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 0.289145
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.112314
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 19374080,
+        "WorkingSet64": 54956032
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29597696,
+        "WorkingSet64": 72183808
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16150528,
+        "WorkingSet64": 38326272
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 148512768,
+        "WorkingSet64": 255262720
+      }
+    ]
+  },
+  {
+    "label": "initial-main-and-Worker-GC",
+    "mainHeap": {
+      "usedSize": 6234860,
+      "totalSize": 6885376,
+      "embedderHeapUsedSize": 1553696,
+      "backingStorageSize": 718617
+    },
+    "workerHeap": {
+      "usedSize": 498004,
+      "totalSize": 1835008,
+      "embedderHeapUsedSize": 21808,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 1,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 44,
+          "normalizationMs": 224.10000000149012,
+          "indexBuildMs": 187.39999999850988,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 0.34765
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 1.507631
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 0.289145
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.112393
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 19374080,
+        "WorkingSet64": 54956032
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29601792,
+        "WorkingSet64": 63795200
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16150528,
+        "WorkingSet64": 38326272
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 143458304,
+        "WorkingSet64": 239169536
+      }
+    ]
+  },
+  {
+    "label": "after20-natural",
+    "mainHeap": {
+      "usedSize": 39799748,
+      "totalSize": 77471744,
+      "embedderHeapUsedSize": 12665640,
+      "backingStorageSize": 4168690
+    },
+    "workerHeap": {
+      "usedSize": 2622824,
+      "totalSize": 7340032,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 41,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 21.600000001490116,
+          "normalizationMs": 214.69999999552965,
+          "indexBuildMs": 181.20000000298023,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 0.937607
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 30.060625
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 2.091711
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.217729
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 20881408,
+        "WorkingSet64": 56958976
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29839360,
+        "WorkingSet64": 77578240
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16560128,
+        "WorkingSet64": 36331520
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 279707648,
+        "WorkingSet64": 405549056
+      }
+    ]
+  },
+  {
+    "label": "after20-main-GC",
+    "mainHeap": {
+      "usedSize": 11414996,
+      "totalSize": 12722176,
+      "embedderHeapUsedSize": 2212600,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 2622824,
+      "totalSize": 7340032,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 41,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 21.600000001490116,
+          "normalizationMs": 214.69999999552965,
+          "indexBuildMs": 181.20000000298023,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 0.941895
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 30.316369
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 2.113564
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.218178
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 20881408,
+        "WorkingSet64": 57098240
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29839360,
+        "WorkingSet64": 76947456
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16560128,
+        "WorkingSet64": 36470784
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 198483968,
+        "WorkingSet64": 324075520
+      }
+    ]
+  },
+  {
+    "label": "after20-main-and-Worker-GC",
+    "mainHeap": {
+      "usedSize": 11439840,
+      "totalSize": 12984320,
+      "embedderHeapUsedSize": 2212600,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 498444,
+      "totalSize": 1835008,
+      "embedderHeapUsedSize": 21808,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 41,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 21.600000001490116,
+          "normalizationMs": 214.69999999552965,
+          "indexBuildMs": 181.20000000298023,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 0.951736
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 30.324762
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 2.114261
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.218704
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 20881408,
+        "WorkingSet64": 57098240
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29835264,
+        "WorkingSet64": 76308480
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16560128,
+        "WorkingSet64": 36470784
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 193138688,
+        "WorkingSet64": 307724288
+      }
+    ]
+  },
+  {
+    "label": "after40-natural",
+    "mainHeap": {
+      "usedSize": 24526392,
+      "totalSize": 78782464,
+      "embedderHeapUsedSize": 7941456,
+      "backingStorageSize": 2283696
+    },
+    "workerHeap": {
+      "usedSize": 4574696,
+      "totalSize": 7864320,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 81,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 22.600000001490116,
+          "normalizationMs": 212.59999999403954,
+          "indexBuildMs": 185.70000000298023,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 1.483896
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 55.856597
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 3.742578
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.310302
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 22523904,
+        "WorkingSet64": 57675776
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29974528,
+        "WorkingSet64": 78589952
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16588800,
+        "WorkingSet64": 36540416
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 289701888,
+        "WorkingSet64": 432975872
+      }
+    ]
+  },
+  {
+    "label": "after40-main-GC",
+    "mainHeap": {
+      "usedSize": 11705716,
+      "totalSize": 12984320,
+      "embedderHeapUsedSize": 2224440,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 4574696,
+      "totalSize": 7864320,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 81,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 22.600000001490116,
+          "normalizationMs": 212.59999999403954,
+          "indexBuildMs": 185.70000000298023,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 1.487811
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 56.109648
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 3.763924
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.310572
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 22523904,
+        "WorkingSet64": 57675776
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29974528,
+        "WorkingSet64": 77963264
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16588800,
+        "WorkingSet64": 36540416
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 213336064,
+        "WorkingSet64": 356171776
+      }
+    ]
+  },
+  {
+    "label": "after40-main-and-Worker-GC",
+    "mainHeap": {
+      "usedSize": 11730560,
+      "totalSize": 13246464,
+      "embedderHeapUsedSize": 2224440,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 498384,
+      "totalSize": 1310720,
+      "embedderHeapUsedSize": 21808,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 81,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 22.600000001490116,
+          "normalizationMs": 212.59999999403954,
+          "indexBuildMs": 185.70000000298023,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 1.490696
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 56.118687
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 3.764238
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.310572
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 22523904,
+        "WorkingSet64": 57675776
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29974528,
+        "WorkingSet64": 66777088
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16588800,
+        "WorkingSet64": 36540416
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 207118336,
+        "WorkingSet64": 338165760
+      }
+    ]
+  },
+  {
+    "label": "after60-natural",
+    "mainHeap": {
+      "usedSize": 58628944,
+      "totalSize": 94773248,
+      "embedderHeapUsedSize": 34692976,
+      "backingStorageSize": 10119771
+    },
+    "workerHeap": {
+      "usedSize": 4549880,
+      "totalSize": 7864320,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 121,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 21.5,
+          "normalizationMs": 234.59999999403954,
+          "indexBuildMs": 244.60000000149012,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 2.003492
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 82.569985
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 5.40549
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.398107
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 22851584,
+        "WorkingSet64": 57982976
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 30027776,
+        "WorkingSet64": 79859712
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16814080,
+        "WorkingSet64": 36765696
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 338128896,
+        "WorkingSet64": 501493760
+      }
+    ]
+  },
+  {
+    "label": "after60-main-GC",
+    "mainHeap": {
+      "usedSize": 11980744,
+      "totalSize": 14032896,
+      "embedderHeapUsedSize": 2630264,
+      "backingStorageSize": 853525
+    },
+    "workerHeap": {
+      "usedSize": 4549880,
+      "totalSize": 7864320,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 121,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 21.5,
+          "normalizationMs": 234.59999999403954,
+          "indexBuildMs": 244.60000000149012,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 2.013206
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 82.921504
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 5.423063
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.401238
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 22855680,
+        "WorkingSet64": 57987072
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 30023680,
+        "WorkingSet64": 74448896
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16814080,
+        "WorkingSet64": 36765696
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 226168832,
+        "WorkingSet64": 376467456
+      }
+    ]
+  },
+  {
+    "label": "after60-main-and-Worker-GC",
+    "mainHeap": {
+      "usedSize": 12005648,
+      "totalSize": 14295040,
+      "embedderHeapUsedSize": 2630264,
+      "backingStorageSize": 853525
+    },
+    "workerHeap": {
+      "usedSize": 498444,
+      "totalSize": 1835008,
+      "embedderHeapUsedSize": 21808,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 121,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 21.5,
+          "normalizationMs": 234.59999999403954,
+          "indexBuildMs": 244.60000000149012,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 2.016337
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 82.933115
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 5.425842
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.401238
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 21684224,
+        "WorkingSet64": 56885248
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29925376,
+        "WorkingSet64": 66138112
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16465920,
+        "WorkingSet64": 36442112
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 220110848,
+        "WorkingSet64": 370245632
+      }
+    ]
+  },
+  {
+    "label": "after80-natural",
+    "mainHeap": {
+      "usedSize": 49216636,
+      "totalSize": 68034560,
+      "embedderHeapUsedSize": 15930144,
+      "backingStorageSize": 4623144
+    },
+    "workerHeap": {
+      "usedSize": 4601496,
+      "totalSize": 8126464,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 161,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 21.5,
+          "normalizationMs": 261.3999999985099,
+          "indexBuildMs": 206.69999999552965,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 2.552684
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 109.2463
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 7.105831
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.493158
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 21835776,
+        "WorkingSet64": 56999936
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29765632,
+        "WorkingSet64": 77254656
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16474112,
+        "WorkingSet64": 36450304
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 279592960,
+        "WorkingSet64": 453672960
+      }
+    ]
+  },
+  {
+    "label": "after80-main-GC",
+    "mainHeap": {
+      "usedSize": 12142864,
+      "totalSize": 14557184,
+      "embedderHeapUsedSize": 2404624,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 4601496,
+      "totalSize": 8126464,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 161,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 21.5,
+          "normalizationMs": 261.3999999985099,
+          "indexBuildMs": 206.69999999552965,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 2.559051
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 109.49623
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 7.123718
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.494401
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 21835776,
+        "WorkingSet64": 56999936
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29528064,
+        "WorkingSet64": 77033472
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16474112,
+        "WorkingSet64": 36450304
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 208547840,
+        "WorkingSet64": 382853120
+      }
+    ]
+  },
+  {
+    "label": "after80-main-and-Worker-GC",
+    "mainHeap": {
+      "usedSize": 12166880,
+      "totalSize": 14819328,
+      "embedderHeapUsedSize": 2404624,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 499128,
+      "totalSize": 1835008,
+      "embedderHeapUsedSize": 21808,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 161,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 21.5,
+          "normalizationMs": 261.3999999985099,
+          "indexBuildMs": 206.69999999552965,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 2.563155
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 109.506139
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 7.123952
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.49483
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 21807104,
+        "WorkingSet64": 56971264
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29544448,
+        "WorkingSet64": 65732608
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16453632,
+        "WorkingSet64": 36429824
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 202424320,
+        "WorkingSet64": 365092864
+      }
+    ]
+  },
+  {
+    "label": "after100-natural",
+    "mainHeap": {
+      "usedSize": 35663864,
+      "totalSize": 79831040,
+      "embedderHeapUsedSize": 11231704,
+      "backingStorageSize": 3395209
+    },
+    "workerHeap": {
+      "usedSize": 4501160,
+      "totalSize": 7864320,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 201,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 23.700000002980232,
+          "normalizationMs": 231.69999999552965,
+          "indexBuildMs": 235.80000000447035,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 3.120339
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 137.475337
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 8.868633
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.590497
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 22016000,
+        "WorkingSet64": 57147392
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29528064,
+        "WorkingSet64": 78782464
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16515072,
+        "WorkingSet64": 36483072
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 289386496,
+        "WorkingSet64": 480468992
+      }
+    ]
+  },
+  {
+    "label": "after100-main-GC",
+    "mainHeap": {
+      "usedSize": 12319072,
+      "totalSize": 13508608,
+      "embedderHeapUsedSize": 2338024,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 4501160,
+      "totalSize": 7864320,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 201,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 23.700000002980232,
+          "normalizationMs": 231.69999999552965,
+          "indexBuildMs": 235.80000000447035,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 3.125864
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 137.716875
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 8.887351
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.591357
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 21950464,
+        "WorkingSet64": 57081856
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29528064,
+        "WorkingSet64": 78729216
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16510976,
+        "WorkingSet64": 36478976
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 213721088,
+        "WorkingSet64": 405729280
+      }
+    ]
+  },
+  {
+    "label": "after100-main-and-Worker-GC",
+    "mainHeap": {
+      "usedSize": 12343088,
+      "totalSize": 13770752,
+      "embedderHeapUsedSize": 2338024,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 496744,
+      "totalSize": 1835008,
+      "embedderHeapUsedSize": 21808,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 201,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 23.700000002980232,
+          "normalizationMs": 231.69999999552965,
+          "indexBuildMs": 235.80000000447035,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 3.130903
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 137.727158
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 8.887532
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.59327
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 21950464,
+        "WorkingSet64": 57081856
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29515776,
+        "WorkingSet64": 65777664
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16510976,
+        "WorkingSet64": 36478976
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 207093760,
+        "WorkingSet64": 383635456
+      }
+    ]
+  },
+  {
+    "label": "after120-natural",
+    "mainHeap": {
+      "usedSize": 35725648,
+      "totalSize": 83501056,
+      "embedderHeapUsedSize": 11365024,
+      "backingStorageSize": 3395233
+    },
+    "workerHeap": {
+      "usedSize": 4593228,
+      "totalSize": 8126464,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 241,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 21.19999999552965,
+          "normalizationMs": 246.40000000596046,
+          "indexBuildMs": 210.70000000298023,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 3.660985
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 164.581027
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 10.604105
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.689478
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 22142976,
+        "WorkingSet64": 57237504
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29523968,
+        "WorkingSet64": 76582912
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16642048,
+        "WorkingSet64": 36626432
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 305897472,
+        "WorkingSet64": 505151488
+      }
+    ]
+  },
+  {
+    "label": "after120-main-GC",
+    "mainHeap": {
+      "usedSize": 12397860,
+      "totalSize": 13508608,
+      "embedderHeapUsedSize": 2378168,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 4593228,
+      "totalSize": 8126464,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 241,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 21.19999999552965,
+          "normalizationMs": 246.40000000596046,
+          "indexBuildMs": 210.70000000298023,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 3.666517
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 164.819657
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 10.621582
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.690436
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 22028288,
+        "WorkingSet64": 57118720
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29523968,
+        "WorkingSet64": 76582912
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16564224,
+        "WorkingSet64": 36552704
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 216838144,
+        "WorkingSet64": 416735232
+      }
+    ]
+  },
+  {
+    "label": "after120-main-and-Worker-GC",
+    "mainHeap": {
+      "usedSize": 12421876,
+      "totalSize": 13770752,
+      "embedderHeapUsedSize": 2378168,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 496744,
+      "totalSize": 1835008,
+      "embedderHeapUsedSize": 21808,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 241,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 21.19999999552965,
+          "normalizationMs": 246.40000000596046,
+          "indexBuildMs": 210.70000000298023,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 3.670329
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 164.829685
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 10.621582
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.691039
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 22028288,
+        "WorkingSet64": 57118720
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29548544,
+        "WorkingSet64": 65298432
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16564224,
+        "WorkingSet64": 36552704
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 210702336,
+        "WorkingSet64": 398671872
+      }
+    ]
+  },
+  {
+    "label": "after140-natural",
+    "mainHeap": {
+      "usedSize": 43455888,
+      "totalSize": 66985984,
+      "embedderHeapUsedSize": 14991920,
+      "backingStorageSize": 4537819
+    },
+    "workerHeap": {
+      "usedSize": 2641164,
+      "totalSize": 7077888,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 281,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 25.600000001490116,
+          "normalizationMs": 269.29999999701977,
+          "indexBuildMs": 232,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 4.209501
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 192.903769
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 12.31128
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.787155
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 21843968,
+        "WorkingSet64": 57020416
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29671424,
+        "WorkingSet64": 77295616
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16523264,
+        "WorkingSet64": 36552704
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 288202752,
+        "WorkingSet64": 507879424
+      }
+    ]
+  },
+  {
+    "label": "after140-main-GC",
+    "mainHeap": {
+      "usedSize": 12499548,
+      "totalSize": 13770752,
+      "embedderHeapUsedSize": 2389344,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 2641164,
+      "totalSize": 7077888,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 281,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 25.600000001490116,
+          "normalizationMs": 269.29999999701977,
+          "indexBuildMs": 232,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 4.217307
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 193.162164
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 12.329825
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.789128
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 21848064,
+        "WorkingSet64": 57024512
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29474816,
+        "WorkingSet64": 75730944
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16523264,
+        "WorkingSet64": 36552704
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 222834688,
+        "WorkingSet64": 442486784
+      }
+    ]
+  },
+  {
+    "label": "after140-main-and-Worker-GC",
+    "mainHeap": {
+      "usedSize": 12523564,
+      "totalSize": 14032896,
+      "embedderHeapUsedSize": 2389344,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 498268,
+      "totalSize": 1310720,
+      "embedderHeapUsedSize": 21808,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 281,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 25.600000001490116,
+          "normalizationMs": 269.29999999701977,
+          "indexBuildMs": 232,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 4.220736
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 193.173364
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 12.330948
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.789566
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 21786624,
+        "WorkingSet64": 56963072
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29495296,
+        "WorkingSet64": 64843776
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16408576,
+        "WorkingSet64": 36438016
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 216977408,
+        "WorkingSet64": 425521152
+      }
+    ]
+  },
+  {
+    "label": "after160-natural",
+    "mainHeap": {
+      "usedSize": 35834980,
+      "totalSize": 64888832,
+      "embedderHeapUsedSize": 11055472,
+      "backingStorageSize": 3395212
+    },
+    "workerHeap": {
+      "usedSize": 2629948,
+      "totalSize": 7340032,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 321,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 22,
+          "normalizationMs": 222.10000000149012,
+          "indexBuildMs": 194,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 4.776706
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 220.763272
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 14.064157
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.888755
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 22061056,
+        "WorkingSet64": 57262080
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29794304,
+        "WorkingSet64": 78041088
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16568320,
+        "WorkingSet64": 36618240
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 287014912,
+        "WorkingSet64": 530845696
+      }
+    ]
+  },
+  {
+    "label": "after160-main-GC",
+    "mainHeap": {
+      "usedSize": 12562468,
+      "totalSize": 14032896,
+      "embedderHeapUsedSize": 2336328,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 2629948,
+      "totalSize": 7340032,
+      "embedderHeapUsedSize": 639312,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 321,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 22,
+          "normalizationMs": 222.10000000149012,
+          "indexBuildMs": 194,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 4.783028
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 221.016048
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 14.082428
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.89003
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 22065152,
+        "WorkingSet64": 57266176
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29483008,
+        "WorkingSet64": 77455360
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16568320,
+        "WorkingSet64": 36618240
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 226635776,
+        "WorkingSet64": 469774336
+      }
+    ]
+  },
+  {
+    "label": "after160-main-and-Worker-GC",
+    "mainHeap": {
+      "usedSize": 12586484,
+      "totalSize": 14295040,
+      "embedderHeapUsedSize": 2336328,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 496252,
+      "totalSize": 1835008,
+      "embedderHeapUsedSize": 21808,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 321,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 22,
+          "normalizationMs": 222.10000000149012,
+          "indexBuildMs": 194,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 4.787063
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 221.027237
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 14.082935
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.89052
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 22032384,
+        "WorkingSet64": 57233408
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29507584,
+        "WorkingSet64": 66027520
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16568320,
+        "WorkingSet64": 36618240
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 220528640,
+        "WorkingSet64": 453378048
+      }
+    ]
+  },
+  {
+    "label": "critical-pressure-diagnostic",
+    "mainHeap": {
+      "usedSize": 12601420,
+      "totalSize": 14295040,
+      "embedderHeapUsedSize": 2336328,
+      "backingStorageSize": 853493
+    },
+    "workerHeap": {
+      "usedSize": 496252,
+      "totalSize": 1835008,
+      "embedderHeapUsedSize": 21808,
+      "backingStorageSize": 76716005
+    },
+    "workspace": {
+      "workspaceEpoch": 321,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 4,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 22,
+          "normalizationMs": 222.10000000149012,
+          "indexBuildMs": 194,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 334033,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "processes": [
+      {
+        "type": "browser",
+        "id": 1248,
+        "cpuTime": 4.804137
+      },
+      {
+        "type": "renderer",
+        "id": 32696,
+        "cpuTime": 221.031497
+      },
+      {
+        "type": "GPU",
+        "id": 28548,
+        "cpuTime": 14.087237
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 31932,
+        "cpuTime": 0.891555
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 1248,
+        "PrivateMemorySize64": 21749760,
+        "WorkingSet64": 57167872
+      },
+      {
+        "Id": 28548,
+        "PrivateMemorySize64": 29483008,
+        "WorkingSet64": 66007040
+      },
+      {
+        "Id": 31932,
+        "PrivateMemorySize64": 16568320,
+        "WorkingSet64": 36618240
+      },
+      {
+        "Id": 32696,
+        "PrivateMemorySize64": 220528640,
+        "WorkingSet64": 453378048
+      }
+    ]
+  }
+]

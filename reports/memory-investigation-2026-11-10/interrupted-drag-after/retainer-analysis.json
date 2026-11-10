@@ -1,0 +1,6652 @@
+{
+  "sourceHash": "e3a777235a582786136c5f826d4da0ccf6b69de4f0dcf8a6f443c518d61d65e2",
+  "buildHash": "a93cb395325d43016644fbd2a0daa60189f82c54f81c2b92bb8c31d20a5cab04",
+  "method": "Meta MemLab B/T/F set-difference method, independently implemented parser; not a claim to have run the MemLab CLI. Heap object IDs from one persistent profiler session. Paths contain real heap edges. Loaded modules, font/Intl caches and bounded React alternates require contextual disposition.",
+  "results": [
+    {
+      "transitions": 1,
+      "baseline": "baseline",
+      "target": "target-1",
+      "final": "returned-1",
+      "candidateCount": 58246,
+      "candidateShallowBytes": 2400417,
+      "topCandidateClasses": [
+        [
+          "number | heap number",
+          32141
+        ],
+        [
+          "object | Object",
+          10032
+        ],
+        [
+          "native | system / FunctionTemplateInfo",
+          1688
+        ],
+        [
+          "native | system / AccessorPair",
+          1104
+        ],
+        [
+          "object shape | system / Map",
+          940
+        ],
+        [
+          "code | system / FeedbackCell",
+          663
+        ],
+        [
+          "code | system / UncompiledDataWithoutPreparseData",
+          561
+        ],
+        [
+          "string | (string content omitted)",
+          484
+        ],
+        [
+          "code | system / WeakFixedArray",
+          416
+        ],
+        [
+          "code | system / TrustedByteArray",
+          399
+        ],
+        [
+          "object | Array",
+          378
+        ],
+        [
+          "array | (object elements)",
+          347
+        ],
+        [
+          "native | system / PropertyArray",
+          292
+        ],
+        [
+          "object shape | system / DescriptorArray",
+          289
+        ],
+        [
+          "closure | ",
+          283
+        ],
+        [
+          "code | system / LoadHandler",
+          264
+        ],
+        [
+          "code | system / ScopeInfo",
+          186
+        ],
+        [
+          "code | system / AllocationSite",
+          180
+        ],
+        [
+          "code | system / Code",
+          176
+        ],
+        [
+          "code | system / InstructionStream",
+          176
+        ]
+      ],
+      "topCandidateSelfBytes": [
+        [
+          "number | heap number",
+          385692
+        ],
+        [
+          "string | (string content omitted)",
+          356236
+        ],
+        [
+          "code | system / InstructionStream",
+          333760
+        ],
+        [
+          "object | Object",
+          281300
+        ],
+        [
+          "array | (object elements)",
+          119292
+        ],
+        [
+          "native | system / FunctionTemplateInfo",
+          108032
+        ],
+        [
+          "native | system / JSArrayBufferData",
+          63984
+        ],
+        [
+          "code | system / TrustedByteArray",
+          55380
+        ],
+        [
+          "object shape | system / Map",
+          38880
+        ],
+        [
+          "object shape | system / DescriptorArray",
+          35416
+        ],
+        [
+          "native | blink::PlainTextNode",
+          31000
+        ],
+        [
+          "array | (object properties)",
+          29200
+        ],
+        [
+          "native | blink::HeapHashTableBacking<blink::HashTable<std::pair<blink::String, blink::TextDirection>, blink::KeyValuePa",
+          26640
+        ],
+        [
+          "code | system / BytecodeArray",
+          24404
+        ],
+        [
+          "code | system / FeedbackVector",
+          24176
+        ]
+      ],
+      "candidateDetachedNodes": 133,
+      "candidateChartCanvasNodes": 5,
+      "retainerPaths": [
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 1126px; height: 340px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575567,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 1126px; height: 340px;\">",
+              "type": "native",
+              "via": "t"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 579747,
+              "name": "<section class=\"chart-panel metric-loss\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"1\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 580713,
+              "name": "<section class=\"chart-panel metric-lr\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"1\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 579945,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 580709,
+              "name": "<figure>",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 580421,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "4"
+            },
+            {
+              "id": 580409,
+              "name": "<div class=\"plot-host\" data-testid=\"lr-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidden",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 580417,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 579747,
+              "name": "<section class=\"chart-panel metric-loss\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"1\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 581645,
+              "name": "<section class=\"chart-panel metric-grad_norm\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"1\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 580911,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 581641,
+              "name": "<figure>",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 581355,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "4"
+            },
+            {
+              "id": 581345,
+              "name": "<div class=\"plot-host\" data-testid=\"grad-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 581351,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<canvas width=\"0\" height=\"0\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584081,
+              "name": "<canvas width=\"0\" height=\"0\">",
+              "type": "native",
+              "via": "u"
+            }
+          ]
+        },
+        {
+          "target": "<div class=\"uplot u-hz\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584181,
+              "name": "<div class=\"uplot u-hz\">",
+              "type": "native",
+              "via": "l"
+            }
+          ]
+        },
+        {
+          "target": "Text",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549355,
+              "name": "<div>",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 549213,
+              "name": "<span class=\"snapshot-badge\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549205,
+              "name": "Text",
+              "type": "native",
+              "via": "5"
+            }
+          ]
+        },
+        {
+          "target": "Text",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549355,
+              "name": "<div>",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 549213,
+              "name": "<span class=\"snapshot-badge\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549205,
+              "name": "Text",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 549209,
+              "name": "Text",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<span class=\"snapshot-badge\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549355,
+              "name": "<div>",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 549213,
+              "name": "<span class=\"snapshot-badge\">",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<div class=\"panel-heading\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<h2>",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549355,
+              "name": "<div>",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 549335,
+              "name": "<h2>",
+              "type": "native",
+              "via": "4"
+            }
+          ]
+        },
+        {
+          "target": "<p>",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549355,
+              "name": "<div>",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 549335,
+              "name": "<h2>",
+              "type": "native",
+              "via": "4"
+            },
+            {
+              "id": 549339,
+              "name": "<p>",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<div>",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549355,
+              "name": "<div>",
+              "type": "native",
+              "via": "5"
+            }
+          ]
+        },
+        {
+          "target": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 1126px; height: 340px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575567,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 1126px; height: 340px;\">",
+              "type": "native",
+              "via": "t"
+            }
+          ]
+        },
+        {
+          "target": "<div class=\"plot-stack\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        },
+        {
+          "target": "<i>",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579739,
+              "name": "<figcaption>",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 575689,
+              "name": "<div class=\"interactive-legend\">",
+              "type": "native",
+              "via": "4"
+            },
+            {
+              "id": 575683,
+              "name": "<span class=\"legend-control\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 575671,
+              "name": "<button type=\"button\" aria-label=\"Highlight kazakh-sft-005\" aria-pressed=\"false\" title=\"Focus this series. Other source ",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 575655,
+              "name": "<i>",
+              "type": "native",
+              "via": "5"
+            }
+          ]
+        }
+      ],
+      "pathsWithoutReactAlternateEdges": [
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 1126px; height: 340px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575567,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 1126px; height: 340px;\">",
+              "type": "native",
+              "via": "t"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 579747,
+              "name": "<section class=\"chart-panel metric-loss\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"1\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 580713,
+              "name": "<section class=\"chart-panel metric-lr\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"1\">",
+              "type": "native",
+              "via": "9"
+            },
+            {
+              "id": 579945,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 580709,
+              "name": "<figure>",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 580421,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "4"
+            },
+            {
+              "id": 580409,
+              "name": "<div class=\"plot-host\" data-testid=\"lr-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidden",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 580417,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 579747,
+              "name": "<section class=\"chart-panel metric-loss\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"1\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 581645,
+              "name": "<section class=\"chart-panel metric-grad_norm\" data-run-ids=\"kazakh-sft-005\" data-view-seq=\"1\">",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 580911,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 581641,
+              "name": "<figure>",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 581355,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "4"
+            },
+            {
+              "id": 581345,
+              "name": "<div class=\"plot-host\" data-testid=\"grad-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 581351,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 536px; height: 240px;\">",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<canvas width=\"0\" height=\"0\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584081,
+              "name": "<canvas width=\"0\" height=\"0\">",
+              "type": "native",
+              "via": "u"
+            }
+          ]
+        },
+        {
+          "target": "<div class=\"uplot u-hz\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584181,
+              "name": "<div class=\"uplot u-hz\">",
+              "type": "native",
+              "via": "l"
+            }
+          ]
+        },
+        {
+          "target": "Text",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549355,
+              "name": "<div>",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 549213,
+              "name": "<span class=\"snapshot-badge\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549205,
+              "name": "Text",
+              "type": "native",
+              "via": "5"
+            }
+          ]
+        },
+        {
+          "target": "Text",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549355,
+              "name": "<div>",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 549213,
+              "name": "<span class=\"snapshot-badge\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549205,
+              "name": "Text",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 549209,
+              "name": "Text",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<span class=\"snapshot-badge\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549355,
+              "name": "<div>",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 549213,
+              "name": "<span class=\"snapshot-badge\">",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<div class=\"panel-heading\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<h2>",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549355,
+              "name": "<div>",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 549335,
+              "name": "<h2>",
+              "type": "native",
+              "via": "4"
+            }
+          ]
+        },
+        {
+          "target": "<p>",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549355,
+              "name": "<div>",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 549335,
+              "name": "<h2>",
+              "type": "native",
+              "via": "4"
+            },
+            {
+              "id": 549339,
+              "name": "<p>",
+              "type": "native",
+              "via": "7"
+            }
+          ]
+        },
+        {
+          "target": "<div>",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579743,
+              "name": "<figure>",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549217,
+              "name": "<div class=\"panel-heading\">",
+              "type": "native",
+              "via": "7"
+            },
+            {
+              "id": 549355,
+              "name": "<div>",
+              "type": "native",
+              "via": "5"
+            }
+          ]
+        },
+        {
+          "target": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            }
+          ]
+        },
+        {
+          "target": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 1126px; height: 340px;\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575567,
+              "name": "<canvas class=\"cursor-overlay\" aria-hidden=\"true\" width=\"0\" height=\"0\" style=\"width: 1126px; height: 340px;\">",
+              "type": "native",
+              "via": "t"
+            }
+          ]
+        },
+        {
+          "target": "<div class=\"plot-stack\">",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            }
+          ]
+        },
+        {
+          "target": "<i>",
+          "chain": [
+            {
+              "id": 1,
+              "name": "",
+              "type": "synthetic",
+              "via": null
+            },
+            {
+              "id": 3,
+              "name": "(GC roots)",
+              "type": "synthetic",
+              "via": "1"
+            },
+            {
+              "id": 23,
+              "name": "(Global handles)",
+              "type": "synthetic",
+              "via": "10"
+            },
+            {
+              "id": 7381,
+              "name": "system / NativeContext / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "1 / V8PerContextData::context_"
+            },
+            {
+              "id": 71819,
+              "name": "Window / http://127.0.0.1:4196",
+              "type": "native",
+              "via": "global_proxy_object"
+            },
+            {
+              "id": 7936,
+              "name": "blink::EventTargetData",
+              "type": "native",
+              "via": "25"
+            },
+            {
+              "id": 7938,
+              "name": "blink::HeapVectorBacking<std::pair<blink::AtomicString, cppgc::internal::BasicMember<blink::BasicHeapVector<blink::inter",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10070,
+              "name": "blink::BasicHeapVector<blink::internal::HeapCollectionType::kGCed, cppgc::internal::BasicMember<blink::RegisteredEventLi",
+              "type": "native",
+              "via": "16"
+            },
+            {
+              "id": 2690,
+              "name": "blink::RegisteredEventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 2692,
+              "name": "EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 10068,
+              "name": "V8EventListener",
+              "type": "native",
+              "via": "1"
+            },
+            {
+              "id": 176111,
+              "name": "ta",
+              "type": "closure",
+              "via": "1"
+            },
+            {
+              "id": 44585,
+              "name": "system / Context / scope @44583",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 71885,
+              "name": "_a",
+              "type": "closure",
+              "via": "_a"
+            },
+            {
+              "id": 71555,
+              "name": "system / FeedbackCell",
+              "type": "code",
+              "via": "feedback_cell"
+            },
+            {
+              "id": 391223,
+              "name": "system / FeedbackVector",
+              "type": "code",
+              "via": "value"
+            },
+            {
+              "id": 473097,
+              "name": "system / AllocationSite",
+              "type": "code",
+              "via": "3"
+            },
+            {
+              "id": 473099,
+              "name": "Object",
+              "type": "object",
+              "via": "transition_info"
+            },
+            {
+              "id": 474245,
+              "name": "system / Map",
+              "type": "object shape",
+              "via": "map"
+            },
+            {
+              "id": 574131,
+              "name": "system / DescriptorArray",
+              "type": "object shape",
+              "via": "descriptors"
+            },
+            {
+              "id": 574731,
+              "name": "system / AccessorPair",
+              "type": "native",
+              "via": "113"
+            },
+            {
+              "id": 574733,
+              "name": "get",
+              "type": "closure",
+              "via": "getter"
+            },
+            {
+              "id": 584011,
+              "name": "system / Context / scope @68755",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 584109,
+              "name": "Object",
+              "type": "object",
+              "via": "P"
+            },
+            {
+              "id": 584005,
+              "name": "dataIdx",
+              "type": "closure",
+              "via": "dataIdx"
+            },
+            {
+              "id": 583975,
+              "name": "system / Context / scope @113177",
+              "type": "object",
+              "via": "context"
+            },
+            {
+              "id": 583941,
+              "name": "system / Context / scope @95141",
+              "type": "object",
+              "via": "previous"
+            },
+            {
+              "id": 575555,
+              "name": "<div class=\"plot-host\" data-testid=\"loss-chart\" data-focused-run=\"\" data-range-min=\"0\" data-range-max=\"999999\" aria-hidd",
+              "type": "native",
+              "via": "e"
+            },
+            {
+              "id": 575573,
+              "name": "<div class=\"plot-stack\">",
+              "type": "native",
+              "via": "6"
+            },
+            {
+              "id": 579739,
+              "name": "<figcaption>",
+              "type": "native",
+              "via": "8"
+            },
+            {
+              "id": 575689,
+              "name": "<div class=\"interactive-legend\">",
+              "type": "native",
+              "via": "4"
+            },
+            {
+              "id": 575683,
+              "name": "<span class=\"legend-control\">",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 575671,
+              "name": "<button type=\"button\" aria-label=\"Highlight kazakh-sft-005\" aria-pressed=\"false\" title=\"Focus this series. Other source ",
+              "type": "native",
+              "via": "5"
+            },
+            {
+              "id": 575655,
+              "name": "<i>",
+              "type": "native",
+              "via": "5"
+            }
+          ]
+        }
+      ],
+      "interpretation": "(T minus B) intersect F is a superset, not a verdict. Strong-edge BFS excludes weak edges. Alternate-edge exclusion is a separate diagnostic path search, not proof that all React-retained objects are leaks. Native resource ownership sizes require MemoryInfra."
+    },
+    {
+      "transitions": 20,
+      "baseline": "returned-1",
+      "target": "target-20",
+      "final": "returned-20",
+      "candidateCount": 10731,
+      "candidateShallowBytes": 1665909,
+      "topCandidateClasses": [
+        [
+          "code | system / TrustedByteArray",
+          1319
+        ],
+        [
+          "object | Object",
+          1012
+        ],
+        [
+          "native | system / WeakArrayList",
+          827
+        ],
+        [
+          "native | PerformanceMark",
+          693
+        ],
+        [
+          "code | system / Code",
+          582
+        ],
+        [
+          "code | system / InstructionStream",
+          579
+        ],
+        [
+          "code | system / CodeWrapper",
+          577
+        ],
+        [
+          "code | system / LoadHandler",
+          438
+        ],
+        [
+          "code | system / WeakFixedArray",
+          410
+        ],
+        [
+          "code | system / TrustedWeakFixedArray",
+          348
+        ],
+        [
+          "native | system / ProtectedFixedArray",
+          348
+        ],
+        [
+          "native | system / SharedFunctionInfoWrapper",
+          348
+        ],
+        [
+          "code | system / ProtectedFixedArray",
+          345
+        ],
+        [
+          "native | DOMRectReadOnly",
+          330
+        ],
+        [
+          "code | system / AllocationSite",
+          257
+        ],
+        [
+          "code | system / FeedbackVector",
+          235
+        ],
+        [
+          "object | Array",
+          219
+        ],
+        [
+          "array | (object elements)",
+          206
+        ],
+        [
+          "native | LayoutShiftAttribution",
+          165
+        ],
+        [
+          "object shape | system / Map",
+          155
+        ]
+      ],
+      "topCandidateSelfBytes": [
+        [
+          "code | system / InstructionStream",
+          841280
+        ],
+        [
+          "code | system / TrustedByteArray",
+          220532
+        ],
+        [
+          "native | PerformanceMark",
+          96560
+        ],
+        [
+          "code | system / ProtectedFixedArray",
+          90156
+        ],
+        [
+          "native | system / WeakArrayList",
+          67900
+        ],
+        [
+          "code | system / Code",
+          41904
+        ],
+        [
+          "native | blink::HeapHashTableBacking<blink::HashTable<cppgc::internal::BasicMember<const blink::ScriptWrappable, cppgc:",
+          32776
+        ],
+        [
+          "code | system / FeedbackVector",
+          30284
+        ],
+        [
+          "object | Object",
+          27476
+        ],
+        [
+          "native | DOMRectReadOnly",
+          18480
+        ],
+        [
+          "code | system / TrustedWeakFixedArray",
+          12236
+        ],
+        [
+          "native | LayoutShift",
+          11552
+        ],
+        [
+          "code | system / WeakFixedArray",
+          11096
+        ],
+        [
+          "object shape | system / DescriptorArray",
+          10512
+        ],
+        [
+          "native | PerformanceMeasure",
+          9720
+        ]
+      ],
+      "candidateDetachedNodes": 0,
+      "candidateChartCanvasNodes": 0,
+      "retainerPaths": [],
+      "pathsWithoutReactAlternateEdges": [],
+      "interpretation": "(T minus B) intersect F is a superset, not a verdict. Strong-edge BFS excludes weak edges. Alternate-edge exclusion is a separate diagnostic path search, not proof that all React-retained objects are leaks. Native resource ownership sizes require MemoryInfra."
+    },
+    {
+      "transitions": 60,
+      "baseline": "returned-20",
+      "target": "target-60",
+      "final": "returned-60",
+      "candidateCount": 6421,
+      "candidateShallowBytes": 992409,
+      "topCandidateClasses": [
+        [
+          "object | Object",
+          829
+        ],
+        [
+          "native | PerformanceMark",
+          627
+        ],
+        [
+          "code | system / TrustedByteArray",
+          549
+        ],
+        [
+          "native | system / WeakArrayList",
+          504
+        ],
+        [
+          "code | system / WeakFixedArray",
+          316
+        ],
+        [
+          "native | DOMRectReadOnly",
+          288
+        ],
+        [
+          "code | system / Code",
+          224
+        ],
+        [
+          "code | system / CodeWrapper",
+          223
+        ],
+        [
+          "code | system / InstructionStream",
+          221
+        ],
+        [
+          "native | system / ProtectedFixedArray",
+          220
+        ],
+        [
+          "code | system / TrustedWeakFixedArray",
+          220
+        ],
+        [
+          "native | system / SharedFunctionInfoWrapper",
+          220
+        ],
+        [
+          "code | system / ProtectedFixedArray",
+          216
+        ],
+        [
+          "native | PerformanceResourceTiming",
+          162
+        ],
+        [
+          "code | system / WeakArrayList",
+          155
+        ],
+        [
+          "object | Array",
+          146
+        ],
+        [
+          "native | LayoutShiftAttribution",
+          144
+        ],
+        [
+          "array | (object elements)",
+          141
+        ],
+        [
+          "code | system / LoadHandler",
+          121
+        ],
+        [
+          "closure | ",
+          72
+        ]
+      ],
+      "topCandidateSelfBytes": [
+        [
+          "code | system / InstructionStream",
+          428224
+        ],
+        [
+          "code | system / TrustedByteArray",
+          124856
+        ],
+        [
+          "native | PerformanceMark",
+          90000
+        ],
+        [
+          "native | system / WeakArrayList",
+          62304
+        ],
+        [
+          "code | system / ProtectedFixedArray",
+          60996
+        ],
+        [
+          "object | Object",
+          23532
+        ],
+        [
+          "native | PerformanceResourceTiming",
+          22032
+        ],
+        [
+          "code | system / Code",
+          16128
+        ],
+        [
+          "native | DOMRectReadOnly",
+          16128
+        ],
+        [
+          "native | blink::NetworkResourcesData::ResourceData",
+          12432
+        ],
+        [
+          "native | blink::HeapVectorBacking<cppgc::internal::BasicMember<blink::PerformanceEntry, cppgc::internal::StrongMemberTa",
+          10504
+        ],
+        [
+          "native | LayoutShift",
+          10032
+        ],
+        [
+          "native | NavigationHistoryEntry",
+          9408
+        ],
+        [
+          "code | system / WeakFixedArray",
+          8720
+        ],
+        [
+          "native | blink::HeapHashTableBacking<blink::HashTable<cppgc::internal::BasicMember<const blink::LayoutObject, cppgc::in",
+          8200
+        ]
+      ],
+      "candidateDetachedNodes": 0,
+      "candidateChartCanvasNodes": 0,
+      "retainerPaths": [],
+      "pathsWithoutReactAlternateEdges": [],
+      "interpretation": "(T minus B) intersect F is a superset, not a verdict. Strong-edge BFS excludes weak edges. Alternate-edge exclusion is a separate diagnostic path search, not proof that all React-retained objects are leaks. Native resource ownership sizes require MemoryInfra."
+    }
+  ]
+}

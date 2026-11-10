@@ -1,0 +1,203 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--config",
+      "scripts/acceptance.playwright.config.mjs",
+      "e2e/memory-lifecycle.spec.ts",
+      "--grep",
+      "leaving during",
+      "--workers=1",
+      "--trace=off"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\scripts\\acceptance.playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "sourceCommit": "9a384543243c9d87d279746d35cd82edd3dfad7f",
+      "sourceHash": "8d3e0a0a1264700e650b1e218c0d224ba8c4f7b71adab3ef0d9e2e4f39a440e3",
+      "buildHash": "5daf5b76898c4fc0cd9a5f50671589697b450d4030872542d2af24b215015300",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/memory-investigation-2026-11-10/interrupted-drag-red/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "9a384543243c9d87d279746d35cd82edd3dfad7f",
+          "sourceHash": "8d3e0a0a1264700e650b1e218c0d224ba8c4f7b71adab3ef0d9e2e4f39a440e3",
+          "buildHash": "5daf5b76898c4fc0cd9a5f50671589697b450d4030872542d2af24b215015300",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\interrupted-drag-red\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "9a384543243c9d87d279746d35cd82edd3dfad7f",
+          "sourceHash": "8d3e0a0a1264700e650b1e218c0d224ba8c4f7b71adab3ef0d9e2e4f39a440e3",
+          "buildHash": "5daf5b76898c4fc0cd9a5f50671589697b450d4030872542d2af24b215015300",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "off",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\interrupted-drag-red\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "memory-lifecycle.spec.ts",
+      "file": "memory-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "leaving during a chart drag removes the native document mouseup listener",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2447,
+                  "error": {
+                    "message": "Error: retired uPlot must not remain rooted through document mouseup\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                    "stack": "Error: retired uPlot must not remain rooted through document mouseup\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts:53:92",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts",
+                      "column": 92,
+                      "line": 53
+                    },
+                    "snippet": " \u001b[90m 51 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39m{history\u001b[33m.\u001b[39mpushState(\u001b[36mnull\u001b[39m\u001b[33m,\u001b[39m\u001b[32m''\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'/interrupted-drag-baseline'\u001b[39m)\u001b[33m;\u001b[39mdispatchEvent(\u001b[36mnew\u001b[39m \u001b[33mPopStateEvent\u001b[39m(\u001b[32m'popstate'\u001b[39m))})\n \u001b[90m 52 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h1'\u001b[39m))\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'Not found'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m   expect(\u001b[36mawait\u001b[39m mouseups()\u001b[33m,\u001b[39m\u001b[32m'retired uPlot must not remain rooted through document mouseup'\u001b[39m)\u001b[33m.\u001b[39mtoBe(before)\n \u001b[90m    |\u001b[39m                                                                                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m  }\u001b[36mfinally\u001b[39m{\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mup()\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m cdp\u001b[33m.\u001b[39mdetach()}\n \u001b[90m 55 |\u001b[39m })\n \u001b[90m 56 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts",
+                        "column": 92,
+                        "line": 53
+                      },
+                      "message": "Error: retired uPlot must not remain rooted through document mouseup\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  51 |   await page.evaluate(()=>{history.pushState(null,'','/interrupted-drag-baseline');dispatchEvent(new PopStateEvent('popstate'))})\n  52 |   await expect(page.locator('h1')).toHaveText('Not found')\n> 53 |   expect(await mouseups(),'retired uPlot must not remain rooted through document mouseup').toBe(before)\n     |                                                                                            ^\n  54 |  }finally{await page.mouse.up();await cdp.detach()}\n  55 | })\n  56 |\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts:53:92"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:08:18.002Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\interrupted-drag-red\\artifacts\\memory-lifecycle-leaving-d-af89a-e-document-mouseup-listener\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\interrupted-drag-red\\artifacts\\memory-lifecycle-leaving-d-af89a-e-document-mouseup-listener\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\memory-lifecycle.spec.ts",
+                    "column": 92,
+                    "line": 53
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-69f122e0b5c26447fe53",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 34,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T19:08:15.093Z",
+    "duration": 6622.0869999999995,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

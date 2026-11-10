@@ -20,6 +20,8 @@ Three standalone assets were generated with the built-in imagegen tool, using `k
 
 All three are unmodified 1254×1254 RGBA PNGs. Each has transparent corners and an alpha range of 0–255, checked using Pillow. No background was composited into the files. The full generation prompts and built-in mode are recorded in `soup-illustrations.prompts.json`.
 
+The originals remain unchanged. The application now serves nearest-neighbor128/256/512px derivatives from `ui/` through srcset rather than decoding1254px art for small controls. `scripts/build-ui-art.mjs` and `assets/ui/manifest.json` record deterministic sizes and source/derivative hashes. This technical resize preserves the pixel artwork and transparency; it is not new generated artwork. The memory investigation records the native raster-cache effect separately from natural process memory.
+
 `SoupArt.tsx` displays them as decorative images with empty alt text; the neighboring real headings retain the meaning of each state. Only the piala's steam region moves during loading, using two CSS-clipped render layers of the same original image. Reduced motion shows a static image. Charts, metric values and data handling are unchanged by this integration.
 
 ## README artwork

@@ -1,0 +1,778 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/visible-hover.spec.ts",
+      "e2e/hover-layout.spec.ts",
+      "e2e/memory-lifecycle.spec.ts",
+      "--config",
+      "scripts/acceptance.playwright.config.mjs",
+      "--workers",
+      "1",
+      "--trace",
+      "off"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\scripts\\acceptance.playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+      "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+      "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/memory-investigation-2026-11-10/visible-hover-green2/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+          "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+          "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green2\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "cd01873a47796a8a396631b67419e01d6ca7db7e",
+          "sourceHash": "34ca38bbeb0b6b0f6d2b04bef620419cc564b1b93acd3a476eed5316255bacdb",
+          "buildHash": "a0313ece3196172067d19cdfe3e9ea3396057f72ffd99717cb704ae8f0cb3f9c",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "off",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green2\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "hover-layout.spec.ts",
+      "file": "hover-layout.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "/dashboard keeps source actions in place while the cursor updates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2259,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:38:55.271Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "preview-layout",
+                      "contentType": "application/json",
+                      "body": "eyJyb3V0ZSI6Ii9kYXNoYm9hcmQiLCJiZWZvcmUiOjEwMDQuMjY1NjI1LCJhZnRlciI6MTAwNC4yNjU2MjV9"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-fb81f6456f3c4d300960",
+          "file": "hover-layout.spec.ts",
+          "line": 36,
+          "column": 46
+        },
+        {
+          "title": "/runs keeps source actions in place while the cursor updates",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1956,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:38:57.703Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "preview-layout",
+                      "contentType": "application/json",
+                      "body": "eyJyb3V0ZSI6Ii9ydW5zIiwiYmVmb3JlIjozMDc2LjI4MTI1LCJhZnRlciI6MzA3Ni4yODEyNX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-1885cf057833d661b67d",
+          "file": "hover-layout.spec.ts",
+          "line": 36,
+          "column": 46
+        },
+        {
+          "title": "full run preserves the following metric position at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1592,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:38:59.681Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJjb21wYXJpc29uIjpmYWxzZSwiYmVmb3JlIjoyMDA2LjQ2ODc1LCJhZnRlciI6MjAwNi40Njg3NX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-6516323f78b49bbf938b",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 74
+        },
+        {
+          "title": "four-run duplicate comparison preserves the following metric position at 390px",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2007,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:39:01.292Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MzkwLCJjb21wYXJpc29uIjp0cnVlLCJiZWZvcmUiOjIwNzEuMTg3NSwiYWZ0ZXIiOjIwNzEuMTg3NX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-9cad50f2f0e1c16853b5",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 74
+        },
+        {
+          "title": "full run preserves the following metric position at 1440px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1554,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1392.28125\u001b[39m\nReceived: \u001b[31m788.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m604\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1392.28125\u001b[39m\nReceived: \u001b[31m788.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m604\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:89:17",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 17,
+                      "line": 89
+                    },
+                    "snippet": " \u001b[90m 87 |\u001b[39m     contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m\n \u001b[90m 88 |\u001b[39m   })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 89 |\u001b[39m   expect(after)\u001b[33m.\u001b[39mtoBeCloseTo(before\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 90 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(comparison \u001b[33m?\u001b[39m \u001b[32m'comparison-cursor-readout'\u001b[39m \u001b[33m:\u001b[39m \u001b[32m'cursor-readout-loss'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-reserved'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 91 |\u001b[39m   \u001b[36mif\u001b[39m (comparison) {\n \u001b[90m 92 |\u001b[39m     \u001b[36mconst\u001b[39m source \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'comparison-cursor-readout'\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 17,
+                        "line": 89
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1392.28125\u001b[39m\nReceived: \u001b[31m788.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m604\u001b[39m\n\n  87 |     contentType: 'application/json'\n  88 |   });\n> 89 |   expect(after).toBeCloseTo(before, 0);\n     |                 ^\n  90 |   await expect(page.getByTestId(comparison ? 'comparison-cursor-readout' : 'cursor-readout-loss')).toHaveAttribute('data-reserved', 'true');\n  91 |   if (comparison) {\n  92 |     const source = page.getByTestId('comparison-cursor-readout');\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:89:17"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:39:03.316Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MTQ0MCwiY29tcGFyaXNvbiI6ZmFsc2UsImJlZm9yZSI6MTM5Mi4yODEyNSwiYWZ0ZXIiOjc4OC4yODEyNX0="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green2\\artifacts\\hover-layout-full-run-pres-dcde9-g-metric-position-at-1440px\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green2\\artifacts\\hover-layout-full-run-pres-dcde9-g-metric-position-at-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 17,
+                    "line": 89
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-85f657ff09d7d04980a1",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 74
+        },
+        {
+          "title": "four-run duplicate comparison preserves the following metric position at 1440px",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2157,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1076.28125\u001b[39m\nReceived: \u001b[31m680.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m396\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1076.28125\u001b[39m\nReceived: \u001b[31m680.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m396\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:89:17",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                      "column": 17,
+                      "line": 89
+                    },
+                    "snippet": " \u001b[90m 87 |\u001b[39m     contentType\u001b[33m:\u001b[39m \u001b[32m'application/json'\u001b[39m\n \u001b[90m 88 |\u001b[39m   })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 89 |\u001b[39m   expect(after)\u001b[33m.\u001b[39mtoBeCloseTo(before\u001b[33m,\u001b[39m \u001b[35m0\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                 \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 90 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByTestId(comparison \u001b[33m?\u001b[39m \u001b[32m'comparison-cursor-readout'\u001b[39m \u001b[33m:\u001b[39m \u001b[32m'cursor-readout-loss'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-reserved'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'true'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 91 |\u001b[39m   \u001b[36mif\u001b[39m (comparison) {\n \u001b[90m 92 |\u001b[39m     \u001b[36mconst\u001b[39m source \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'comparison-cursor-readout'\u001b[39m)\u001b[33m;\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                        "column": 17,
+                        "line": 89
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeCloseTo\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m, \u001b[22mprecision\u001b[2m)\u001b[22m\n\nExpected: \u001b[32m1076.28125\u001b[39m\nReceived: \u001b[31m680.28125\u001b[39m\n\nExpected precision:    0\nExpected difference: < \u001b[32m0.5\u001b[39m\nReceived difference:   \u001b[31m396\u001b[39m\n\n  87 |     contentType: 'application/json'\n  88 |   });\n> 89 |   expect(after).toBeCloseTo(before, 0);\n     |                 ^\n  90 |   await expect(page.getByTestId(comparison ? 'comparison-cursor-readout' : 'cursor-readout-loss')).toHaveAttribute('data-reserved', 'true');\n  91 |   if (comparison) {\n  92 |     const source = page.getByTestId('comparison-cursor-readout');\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts:89:17"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:39:06.394Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "full-chart-layout",
+                      "contentType": "application/json",
+                      "body": "eyJ3aWR0aCI6MTQ0MCwiY29tcGFyaXNvbiI6dHJ1ZSwiYmVmb3JlIjoxMDc2LjI4MTI1LCJhZnRlciI6NjgwLjI4MTI1fQ=="
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green2\\artifacts\\hover-layout-four-run-dupl-a4f99-g-metric-position-at-1440px\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\visible-hover-green2\\artifacts\\hover-layout-four-run-dupl-a4f99-g-metric-position-at-1440px\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\hover-layout.spec.ts",
+                    "column": 17,
+                    "line": 89
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-56b4bfcd49488ac745c7",
+          "file": "hover-layout.spec.ts",
+          "line": 64,
+          "column": 74
+        },
+        {
+          "title": "the visible recorded spike explains the linear axis and zoom keeps its exact source",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1753,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:39:10.144Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-c5ff75e321b02cc0783f",
+          "file": "hover-layout.spec.ts",
+          "line": 110,
+          "column": 1
+        },
+        {
+          "title": "recorded nonfinite measurements explain their snapshot counts and gap semantics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3166,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:39:12.076Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "93c2e8a59ca407473c76-ee90bbb54b9e2a61f2b2",
+          "file": "hover-layout.spec.ts",
+          "line": 131,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "memory-lifecycle.spec.ts",
+      "file": "memory-lifecycle.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "long cursor sessions bound application timing entries without losing current original values",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1910,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:39:15.291Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-8f065d226f23861166b5",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "unmounted plots release owned Canvas bitmaps even while an external reference retains their nodes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1688,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:39:17.220Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-c12683f303ef52799d11",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 18,
+          "column": 1
+        },
+        {
+          "title": "leaving during a chart drag removes the native document mouseup listener",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1525,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:39:18.925Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-69f122e0b5c26447fe53",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 34,
+          "column": 1
+        },
+        {
+          "title": "small decorative UI artwork does not decode a full-size source bitmap",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 790,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:39:20.471Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-3628a88a0f73fc8652cb",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 57,
+          "column": 1
+        },
+        {
+          "title": "activating source observations does not change inherited font or paint containment geometry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1547,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:39:21.279Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "185b8b7911b704a0ad05-aa33122fb7f19b423015",
+          "file": "memory-lifecycle.spec.ts",
+          "line": 69,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "visible-hover.spec.ts",
+      "file": "visible-hover.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Run exposes actual step and all metric cells inside the viewport after chart entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1600,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:39:22.857Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-source-cell-visibility",
+                      "contentType": "application/json",
+                      "body": "W3sidGV4dCI6IjMsNjg4IiwicmVjdCI6eyJ4Ijo0MjMuMTQwNjI1LCJ5Ijo4MDEuNSwid2lkdGgiOjMzLjY1NjI1LCJoZWlnaHQiOjE1LCJ0b3AiOjgwMS41LCJyaWdodCI6NDU2Ljc5Njg3NSwiYm90dG9tIjo4MTYuNSwibGVmdCI6NDIzLjE0MDYyNX0sImNsaXAiOnsibGVmdCI6MjUzLCJ0b3AiOjczNSwicmlnaHQiOjEzODgsImJvdHRvbSI6ODM5fSwidmlzaWJsZSI6dHJ1ZX0seyJ0ZXh0IjoiMC4zMTQ5OCIsInJlY3QiOnsieCI6NTg1LjI4MTI1LCJ5Ijo4MDEuNSwid2lkdGgiOjQ4LjkzNzUsImhlaWdodCI6MTUsInRvcCI6ODAxLjUsInJpZ2h0Ijo2MzQuMjE4NzUsImJvdHRvbSI6ODE2LjUsImxlZnQiOjU4NS4yODEyNX0sImNsaXAiOnsibGVmdCI6MjUzLCJ0b3AiOjczNSwicmlnaHQiOjEzODgsImJvdHRvbSI6ODM5fSwidmlzaWJsZSI6dHJ1ZX0seyJ0ZXh0IjoiOC44MTg1N0UtNyIsInJlY3QiOnsieCI6NzQ3LjQyMTg3NSwieSI6ODAxLjUsIndpZHRoIjo3MS4yOTY4NzUsImhlaWdodCI6MTUsInRvcCI6ODAxLjUsInJpZ2h0Ijo4MTguNzE4NzUsImJvdHRvbSI6ODE2LjUsImxlZnQiOjc0Ny40MjE4NzV9LCJjbGlwIjp7ImxlZnQiOjI1MywidG9wIjo3MzUsInJpZ2h0IjoxMzg4LCJib3R0b20iOjgzOX0sInZpc2libGUiOnRydWV9LHsidGV4dCI6IjAuMTYxMDU2IiwicmVjdCI6eyJ4Ijo5MDkuNTYyNSwieSI6ODAxLjUsIndpZHRoIjo1Ni41NzgxMjUsImhlaWdodCI6MTUsInRvcCI6ODAxLjUsInJpZ2h0Ijo5NjYuMTQwNjI1LCJib3R0b20iOjgxNi41LCJsZWZ0Ijo5MDkuNTYyNX0sImNsaXAiOnsibGVmdCI6MjUzLCJ0b3AiOjczNSwicmlnaHQiOjEzODgsImJvdHRvbSI6ODM5fSwidmlzaWJsZSI6dHJ1ZX1d"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e032e1733e06d6e1f682-c64bb9b411d00245c55d",
+          "file": "visible-hover.spec.ts",
+          "line": 3,
+          "column": 38
+        },
+        {
+          "title": "Compare exposes actual step and all metric cells inside the viewport after chart entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2109,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:39:24.473Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "actual-source-cell-visibility",
+                      "contentType": "application/json",
+                      "body": "W3sidGV4dCI6IjMsNjgyIiwicmVjdCI6eyJ4Ijo0MjMuMTQwNjI1LCJ5Ijo2MjEuNSwid2lkdGgiOjMzLjY1NjI1LCJoZWlnaHQiOjE1LCJ0b3AiOjYyMS41LCJyaWdodCI6NDU2Ljc5Njg3NSwiYm90dG9tIjo2MzYuNSwibGVmdCI6NDIzLjE0MDYyNX0sImNsaXAiOnsibGVmdCI6MjUzLCJ0b3AiOjU1NSwicmlnaHQiOjEzODgsImJvdHRvbSI6ODM5fSwidmlzaWJsZSI6dHJ1ZX0seyJ0ZXh0IjoiMC4yOTQxMzciLCJyZWN0Ijp7IngiOjU4NS4yODEyNSwieSI6NjIxLjUsIndpZHRoIjo1Ni41NzgxMjUsImhlaWdodCI6MTUsInRvcCI6NjIxLjUsInJpZ2h0Ijo2NDEuODU5Mzc1LCJib3R0b20iOjYzNi41LCJsZWZ0Ijo1ODUuMjgxMjV9LCJjbGlwIjp7ImxlZnQiOjI1MywidG9wIjo1NTUsInJpZ2h0IjoxMzg4LCJib3R0b20iOjgzOX0sInZpc2libGUiOnRydWV9LHsidGV4dCI6IjguODA0MjdFLTciLCJyZWN0Ijp7IngiOjc0Ny40MjE4NzUsInkiOjYyMS41LCJ3aWR0aCI6NzEuMjk2ODc1LCJoZWlnaHQiOjE1LCJ0b3AiOjYyMS41LCJyaWdodCI6ODE4LjcxODc1LCJib3R0b20iOjYzNi41LCJsZWZ0Ijo3NDcuNDIxODc1fSwiY2xpcCI6eyJsZWZ0IjoyNTMsInRvcCI6NTU1LCJyaWdodCI6MTM4OCwiYm90dG9tIjo4Mzl9LCJ2aXNpYmxlIjp0cnVlfSx7InRleHQiOiIwLjE4MjQ5NCIsInJlY3QiOnsieCI6OTA5LjU2MjUsInkiOjYyMS41LCJ3aWR0aCI6NTYuNTc4MTI1LCJoZWlnaHQiOjE1LCJ0b3AiOjYyMS41LCJyaWdodCI6OTY2LjE0MDYyNSwiYm90dG9tIjo2MzYuNSwibGVmdCI6OTA5LjU2MjV9LCJjbGlwIjp7ImxlZnQiOjI1MywidG9wIjo1NTUsInJpZ2h0IjoxMzg4LCJib3R0b20iOjgzOX0sInZpc2libGUiOnRydWV9LHsidGV4dCI6IjMsNjgyIiwicmVjdCI6eyJ4Ijo0MjMuMTQwNjI1LCJ5Ijo2ODIuNSwid2lkdGgiOjMzLjY1NjI1LCJoZWlnaHQiOjE1LCJ0b3AiOjY4Mi41LCJyaWdodCI6NDU2Ljc5Njg3NSwiYm90dG9tIjo2OTcuNSwibGVmdCI6NDIzLjE0MDYyNX0sImNsaXAiOnsibGVmdCI6MjUzLCJ0b3AiOjU1NSwicmlnaHQiOjEzODgsImJvdHRvbSI6ODM5fSwidmlzaWJsZSI6dHJ1ZX0seyJ0ZXh0IjoiMC4zMDU5NDgiLCJyZWN0Ijp7IngiOjU4NS4yODEyNSwieSI6NjgyLjUsIndpZHRoIjo1Ni41NzgxMjUsImhlaWdodCI6MTUsInRvcCI6NjgyLjUsInJpZ2h0Ijo2NDEuODU5Mzc1LCJib3R0b20iOjY5Ny41LCJsZWZ0Ijo1ODUuMjgxMjV9LCJjbGlwIjp7ImxlZnQiOjI1MywidG9wIjo1NTUsInJpZ2h0IjoxMzg4LCJib3R0b20iOjgzOX0sInZpc2libGUiOnRydWV9LHsidGV4dCI6IjEuMTAwOTZFLTUiLCJyZWN0Ijp7IngiOjc0Ny40MjE4NzUsInkiOjY4Mi41LCJ3aWR0aCI6NzEuMjk2ODc1LCJoZWlnaHQiOjE1LCJ0b3AiOjY4Mi41LCJyaWdodCI6ODE4LjcxODc1LCJib3R0b20iOjY5Ny41LCJsZWZ0Ijo3NDcuNDIxODc1fSwiY2xpcCI6eyJsZWZ0IjoyNTMsInRvcCI6NTU1LCJyaWdodCI6MTM4OCwiYm90dG9tIjo4Mzl9LCJ2aXNpYmxlIjp0cnVlfSx7InRleHQiOiIwLjIyMDI5OSIsInJlY3QiOnsieCI6OTA5LjU2MjUsInkiOjY4Mi41LCJ3aWR0aCI6NTYuNTc4MTI1LCJoZWlnaHQiOjE1LCJ0b3AiOjY4Mi41LCJyaWdodCI6OTY2LjE0MDYyNSwiYm90dG9tIjo2OTcuNSwibGVmdCI6OTA5LjU2MjV9LCJjbGlwIjp7ImxlZnQiOjI1MywidG9wIjo1NTUsInJpZ2h0IjoxMzg4LCJib3R0b20iOjgzOX0sInZpc2libGUiOnRydWV9LHsidGV4dCI6IjMsNjgyIiwicmVjdCI6eyJ4Ijo0MjMuMTQwNjI1LCJ5Ijo3NDMuNSwid2lkdGgiOjMzLjY1NjI1LCJoZWlnaHQiOjE1LCJ0b3AiOjc0My41LCJyaWdodCI6NDU2Ljc5Njg3NSwiYm90dG9tIjo3NTguNSwibGVmdCI6NDIzLjE0MDYyNX0sImNsaXAiOnsibGVmdCI6MjUzLCJ0b3AiOjU1NSwicmlnaHQiOjEzODgsImJvdHRvbSI6ODM5fSwidmlzaWJsZSI6dHJ1ZX0seyJ0ZXh0IjoiMC43NDAwMTkiLCJyZWN0Ijp7IngiOjU4NS4yODEyNSwieSI6NzQzLjUsIndpZHRoIjo1Ni41NzgxMjUsImhlaWdodCI6MTUsInRvcCI6NzQzLjUsInJpZ2h0Ijo2NDEuODU5Mzc1LCJib3R0b20iOjc1OC41LCJsZWZ0Ijo1ODUuMjgxMjV9LCJjbGlwIjp7ImxlZnQiOjI1MywidG9wIjo1NTUsInJpZ2h0IjoxMzg4LCJib3R0b20iOjgzOX0sInZpc2libGUiOnRydWV9LHsidGV4dCI6IjEuMTAwOTZFLTUiLCJyZWN0Ijp7IngiOjc0Ny40MjE4NzUsInkiOjc0My41LCJ3aWR0aCI6NzEuMjk2ODc1LCJoZWlnaHQiOjE1LCJ0b3AiOjc0My41LCJyaWdodCI6ODE4LjcxODc1LCJib3R0b20iOjc1OC41LCJsZWZ0Ijo3NDcuNDIxODc1fSwiY2xpcCI6eyJsZWZ0IjoyNTMsInRvcCI6NTU1LCJyaWdodCI6MTM4OCwiYm90dG9tIjo4Mzl9LCJ2aXNpYmxlIjp0cnVlfSx7InRleHQiOiIwLjE3MDE1MSIsInJlY3QiOnsieCI6OTA5LjU2MjUsInkiOjc0My41LCJ3aWR0aCI6NTYuNTc4MTI1LCJoZWlnaHQiOjE1LCJ0b3AiOjc0My41LCJyaWdodCI6OTY2LjE0MDYyNSwiYm90dG9tIjo3NTguNSwibGVmdCI6OTA5LjU2MjV9LCJjbGlwIjp7ImxlZnQiOjI1MywidG9wIjo1NTUsInJpZ2h0IjoxMzg4LCJib3R0b20iOjgzOX0sInZpc2libGUiOnRydWV9LHsidGV4dCI6IjMsNjgyIiwicmVjdCI6eyJ4Ijo0MjMuMTQwNjI1LCJ5Ijo4MDQuNSwid2lkdGgiOjMzLjY1NjI1LCJoZWlnaHQiOjE1LCJ0b3AiOjgwNC41LCJyaWdodCI6NDU2Ljc5Njg3NSwiYm90dG9tIjo4MTkuNSwibGVmdCI6NDIzLjE0MDYyNX0sImNsaXAiOnsibGVmdCI6MjUzLCJ0b3AiOjU1NSwicmlnaHQiOjEzODgsImJvdHRvbSI6ODM5fSwidmlzaWJsZSI6dHJ1ZX0seyJ0ZXh0IjoiMC4zMTIyNjciLCJyZWN0Ijp7IngiOjU4NS4yODEyNSwieSI6ODA0LjUsIndpZHRoIjo1Ni41NzgxMjUsImhlaWdodCI6MTUsInRvcCI6ODA0LjUsInJpZ2h0Ijo2NDEuODU5Mzc1LCJib3R0b20iOjgxOS41LCJsZWZ0Ijo1ODUuMjgxMjV9LCJjbGlwIjp7ImxlZnQiOjI1MywidG9wIjo1NTUsInJpZ2h0IjoxMzg4LCJib3R0b20iOjgzOX0sInZpc2libGUiOnRydWV9LHsidGV4dCI6IjEuMTAwOTZFLTUiLCJyZWN0Ijp7IngiOjc0Ny40MjE4NzUsInkiOjgwNC41LCJ3aWR0aCI6NzEuMjk2ODc1LCJoZWlnaHQiOjE1LCJ0b3AiOjgwNC41LCJyaWdodCI6ODE4LjcxODc1LCJib3R0b20iOjgxOS41LCJsZWZ0Ijo3NDcuNDIxODc1fSwiY2xpcCI6eyJsZWZ0IjoyNTMsInRvcCI6NTU1LCJyaWdodCI6MTM4OCwiYm90dG9tIjo4Mzl9LCJ2aXNpYmxlIjp0cnVlfSx7InRleHQiOiIwLjE3NzM2MSIsInJlY3QiOnsieCI6OTA5LjU2MjUsInkiOjgwNC41LCJ3aWR0aCI6NTYuNTc4MTI1LCJoZWlnaHQiOjE1LCJ0b3AiOjgwNC41LCJyaWdodCI6OTY2LjE0MDYyNSwiYm90dG9tIjo4MTkuNSwibGVmdCI6OTA5LjU2MjV9LCJjbGlwIjp7ImxlZnQiOjI1MywidG9wIjo1NTUsInJpZ2h0IjoxMzg4LCJib3R0b20iOjgzOX0sInZpc2libGUiOnRydWV9XQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "e032e1733e06d6e1f682-69d826dc89f58a14702a",
+          "file": "visible-hover.spec.ts",
+          "line": 3,
+          "column": 38
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T20:38:53.431Z",
+    "duration": 35414.574,
+    "expected": 13,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

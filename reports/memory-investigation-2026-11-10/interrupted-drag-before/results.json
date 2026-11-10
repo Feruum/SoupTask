@@ -1,0 +1,137 @@
+{
+  "sourceCommit": "9a384543243c9d87d279746d35cd82edd3dfad7f",
+  "sourceHash": "8d3e0a0a1264700e650b1e218c0d224ba8c4f7b71adab3ef0d9e2e4f39a440e3",
+  "buildHash": "5daf5b76898c4fc0cd9a5f50671589697b450d4030872542d2af24b215015300",
+  "browser": "158.0.8127.18",
+  "interruptedDrag": true,
+  "cases": [
+    {
+      "transitions": 1,
+      "baseline": "baseline",
+      "target": "target-1",
+      "final": "returned-1"
+    }
+  ],
+  "samples": [
+    {
+      "label": "baseline",
+      "snapshot": "baseline.heapsnapshot.gz",
+      "before": "soup:infra-begin:baseline",
+      "after": "soup:infra-end:baseline",
+      "dump": {
+        "dumpGuid": "0x1",
+        "success": true
+      },
+      "heap": {
+        "usedSize": 6381208,
+        "totalSize": 7409664,
+        "embedderHeapUsedSize": 1347320,
+        "backingStorageSize": 716674
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 141,
+        "jsEventListeners": 178
+      },
+      "workers": 0,
+      "workspace": null,
+      "rendererPid": 32896
+    },
+    {
+      "label": "target-1",
+      "snapshot": "target-1.heapsnapshot.gz",
+      "before": "soup:infra-begin:target-1",
+      "after": "soup:infra-end:target-1",
+      "dump": {
+        "dumpGuid": "0x2",
+        "success": true
+      },
+      "heap": {
+        "usedSize": 10242540,
+        "totalSize": 11149312,
+        "embedderHeapUsedSize": 2621272,
+        "backingStorageSize": 835477
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 1271,
+        "jsEventListeners": 330
+      },
+      "workers": 1,
+      "workspace": {
+        "workspaceEpoch": 4,
+        "members": [
+          "kazakh-sft-005",
+          "kazakh-sft-001",
+          "kazakh-sft-002",
+          "kazakh-sft-006"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32786432,
+        "allocationBytes": 78576688,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 20.5,
+            "normalizationMs": 228.70000000298023,
+            "indexBuildMs": 193.90000000596046,
+            "indexBufferBytes": 1696608
+          },
+          "kazakh-sft-001": {
+            "generationMs": 3.399999998509884,
+            "normalizationMs": 9.100000001490116,
+            "indexBuildMs": 3.600000001490116,
+            "indexBufferBytes": 13824
+          },
+          "kazakh-sft-002": {
+            "generationMs": 5.200000002980232,
+            "normalizationMs": 4,
+            "indexBuildMs": 1.6999999955296516,
+            "indexBufferBytes": 13824
+          },
+          "kazakh-sft-006": {
+            "generationMs": 1.6000000014901161,
+            "normalizationMs": 7.399999998509884,
+            "indexBuildMs": 1.2000000029802322,
+            "indexBufferBytes": 9216
+          }
+        },
+        "renderBufferBytes": 380716,
+        "hoverCacheTargets": 1109,
+        "hoverCacheRows": 1181
+      },
+      "rendererPid": 32896
+    },
+    {
+      "label": "returned-1",
+      "snapshot": "returned-1.heapsnapshot.gz",
+      "before": "soup:infra-begin:returned-1",
+      "after": "soup:infra-end:returned-1",
+      "dump": {
+        "dumpGuid": "0x3",
+        "success": true
+      },
+      "heap": {
+        "usedSize": 9956500,
+        "totalSize": 10625024,
+        "embedderHeapUsedSize": 1756224,
+        "backingStorageSize": 835417
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 1024,
+        "jsEventListeners": 272
+      },
+      "workers": 0,
+      "workspace": null,
+      "rendererPid": 32896
+    }
+  ],
+  "trace": {
+    "file": "roundtrip-chrome-trace.json.gz",
+    "rawSha256": "7b690827b0c3268028b9a3c3ba18c6f7f2298041dc29b94903a00fcad14f40e2",
+    "compressedSha256": "cf4055906c07ff6b0e5138c46399c3700c8c6984b1aee17bbf613aaafbe89bfe"
+  },
+  "scope": "Warm neutral baseline→1M detail/four-run Compare→same neutral baseline; B/T/F IDs from one persistent CDP heap profiler. Candidate set(T minus B) intersect F is a superset requiring retainer analysis, not automatic leak proof. Count is workload rounds; each opens detail and Compare. Interrupted-drag mode dispatches a native DOM mousedown and navigates away without mouseup; no physical-device claim."
+}

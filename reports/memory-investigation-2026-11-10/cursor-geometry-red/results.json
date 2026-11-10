@@ -1,0 +1,205 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/visible-hover.spec.ts",
+      "--grep",
+      "native crosshair hides",
+      "--config",
+      "scripts/acceptance.playwright.config.mjs",
+      "--workers",
+      "1",
+      "--trace",
+      "off"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\scripts\\acceptance.playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "sourceCommit": "51fb434fdddaf734100773332f004eb31a0740a0",
+      "sourceHash": "bf6978382abc503cccb229ddf1cb75864b7ba751e9c098ead346c71d36f9790a",
+      "buildHash": "7142725b67c5e7b91de89ab0710e38397d3f6e2e14bf629027318e810ade2b9f",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/memory-investigation-2026-11-10/cursor-geometry-red/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "51fb434fdddaf734100773332f004eb31a0740a0",
+          "sourceHash": "bf6978382abc503cccb229ddf1cb75864b7ba751e9c098ead346c71d36f9790a",
+          "buildHash": "7142725b67c5e7b91de89ab0710e38397d3f6e2e14bf629027318e810ade2b9f",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\cursor-geometry-red\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "51fb434fdddaf734100773332f004eb31a0740a0",
+          "sourceHash": "bf6978382abc503cccb229ddf1cb75864b7ba751e9c098ead346c71d36f9790a",
+          "buildHash": "7142725b67c5e7b91de89ab0710e38397d3f6e2e14bf629027318e810ade2b9f",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "off",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\cursor-geometry-red\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "visible-hover.spec.ts",
+      "file": "visible-hover.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "native crosshair hides on leave without removing its compositor geometry",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2344,
+                  "error": {
+                    "message": "Error: leaving must not remove native cursor nodes from layout\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"none\"\u001b[39m",
+                    "stack": "Error: leaving must not remove native cursor nodes from layout\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"none\"\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:75:135",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                      "column": 135,
+                      "line": 75
+                    },
+                    "snippet": " \u001b[90m 73 |\u001b[39m  \u001b[36mconst\u001b[39m crosshair\u001b[33m=\u001b[39mplot\u001b[33m.\u001b[39mlocator(\u001b[32m'.u-cursor-x'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(crosshair)\u001b[33m.\u001b[39mtoBeVisible()\n \u001b[90m 74 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mmove(\u001b[35m30\u001b[39m\u001b[33m,\u001b[39m\u001b[35m30\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m expect(crosshair)\u001b[33m.\u001b[39mtoBeHidden()\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 75 |\u001b[39m  expect(\u001b[36mawait\u001b[39m crosshair\u001b[33m.\u001b[39mevaluate(node\u001b[33m=>\u001b[39mgetComputedStyle(node)\u001b[33m.\u001b[39mdisplay)\u001b[33m,\u001b[39m\u001b[32m'leaving must not remove native cursor nodes from layout'\u001b[39m)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBe(\u001b[32m'none'\u001b[39m)\n \u001b[90m    |\u001b[39m                                                                                                                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 76 |\u001b[39m })\n \u001b[90m 77 |\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                        "column": 135,
+                        "line": 75
+                      },
+                      "message": "Error: leaving must not remove native cursor nodes from layout\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"none\"\u001b[39m\n\n  73 |  const crosshair=plot.locator('.u-cursor-x');await expect(crosshair).toBeVisible()\n  74 |  await page.mouse.move(30,30);await expect(crosshair).toBeHidden()\n> 75 |  expect(await crosshair.evaluate(node=>getComputedStyle(node).display),'leaving must not remove native cursor nodes from layout').not.toBe('none')\n     |                                                                                                                                       ^\n  76 | })\n  77 |\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:75:135"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:00:03.185Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\cursor-geometry-red\\artifacts\\visible-hover-native-cross-aa3a3-ing-its-compositor-geometry\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\cursor-geometry-red\\artifacts\\visible-hover-native-cross-aa3a3-ing-its-compositor-geometry\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                    "column": 135,
+                    "line": 75
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e032e1733e06d6e1f682-88e16e26700767bec206",
+          "file": "visible-hover.spec.ts",
+          "line": 68,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T21:00:01.287Z",
+    "duration": 5705.3769999999995,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,146 @@
+- link "Skip to content":
+  - /url: "#main-content"
+- complementary "Workspace":
+  - link "Soup home":
+    - /url: /dashboard
+    - text: Soup.
+  - text: Almaty Lab
+  - navigation "Main navigation":
+    - link "Dashboard":
+      - /url: /dashboard
+    - link "Training runs":
+      - /url: /runs
+    - link "Compare":
+      - /url: /compare
+    - link "Data quality":
+      - /url: /data-quality
+  - link "Soup documentation":
+    - /url: https://souplanding-omega.vercel.app/docs/
+  - figure "BUILT IN KAZAKHSTAN"
+- banner:
+  - text: Workspace qwen-kazakh Demo data
+  - button "Switch to dark theme"
+- main:
+  - heading "Training overview" [level=1]
+  - navigation "Dashboard views":
+    - link "Monitor":
+      - /url: /dashboard
+    - link "Experiment map":
+      - /url: /dashboard?view=map
+    - link "Groups":
+      - /url: /dashboard?view=groups
+  - region "Experiment map":
+    - heading "Experiment map" [level=2]
+    - paragraph: 20 runs · 3 metrics
+    - text: 01—20
+    - group "Training experiments by model, method and metric Each sector is a run. Inner, middle and outer bands are Loss, Learning rate and Gradient norm. Tile length encodes finite source-row counts on a logarithmic scale. Colors identify model and method groups; diamonds mark data findings. Arrow keys select a run and metric. Exact counts are available in the table below.":
+      - button "kazakh-sft-002, Loss quality"
+      - button "kazakh-sft-002, Learning rate quality"
+      - button "kazakh-sft-002, Gradient norm quality"
+      - button "kazakh-sft-003, Loss quality"
+      - button "kazakh-sft-003, Learning rate quality"
+      - button "kazakh-sft-003, Gradient norm quality"
+      - button "kazakh-sft-006, Loss quality"
+      - button "kazakh-sft-006, Learning rate quality"
+      - button "kazakh-sft-006, Gradient norm quality"
+      - button "kazakh-sft-008, Loss quality"
+      - button "kazakh-sft-008, Learning rate quality"
+      - button "kazakh-sft-008, Gradient norm quality"
+      - button "kazakh-sft-011, Loss quality"
+      - button "kazakh-sft-011, Learning rate quality"
+      - button "kazakh-sft-011, Gradient norm quality"
+      - button "kazakh-sft-012, Loss quality"
+      - button "kazakh-sft-012, Learning rate quality"
+      - button "kazakh-sft-012, Gradient norm quality"
+      - button "kazakh-sft-014, Loss quality"
+      - button "kazakh-sft-014, Learning rate quality"
+      - button "kazakh-sft-014, Gradient norm quality"
+      - button "kazakh-sft-015, Loss quality"
+      - button "kazakh-sft-015, Learning rate quality"
+      - button "kazakh-sft-015, Gradient norm quality"
+      - button "kazakh-sft-018, Loss quality"
+      - button "kazakh-sft-018, Learning rate quality"
+      - button "kazakh-sft-018, Gradient norm quality"
+      - button "kazakh-sft-020, Loss quality"
+      - button "kazakh-sft-020, Learning rate quality"
+      - button "kazakh-sft-020, Gradient norm quality"
+      - button "kazakh-sft-005, Loss quality" [pressed]
+      - button "kazakh-sft-005, Learning rate quality"
+      - button "kazakh-sft-005, Gradient norm quality"
+      - button "kazakh-sft-009, Loss quality"
+      - button "kazakh-sft-009, Learning rate quality"
+      - button "kazakh-sft-009, Gradient norm quality"
+      - button "kazakh-sft-017, Loss quality"
+      - button "kazakh-sft-017, Learning rate quality"
+      - button "kazakh-sft-017, Gradient norm quality"
+      - button "kazakh-sft-004, Loss quality"
+      - button "kazakh-sft-004, Learning rate quality"
+      - button "kazakh-sft-004, Gradient norm quality"
+      - button "kazakh-sft-007, Loss quality"
+      - button "kazakh-sft-007, Learning rate quality"
+      - button "kazakh-sft-007, Gradient norm quality"
+      - button "kazakh-sft-010, Loss quality"
+      - button "kazakh-sft-010, Learning rate quality"
+      - button "kazakh-sft-010, Gradient norm quality"
+      - button "kazakh-sft-016, Loss quality"
+      - button "kazakh-sft-016, Learning rate quality"
+      - button "kazakh-sft-016, Gradient norm quality"
+      - button "kazakh-sft-019, Loss quality"
+      - button "kazakh-sft-019, Learning rate quality"
+      - button "kazakh-sft-019, Gradient norm quality"
+      - button "kazakh-sft-001, Loss quality"
+      - button "kazakh-sft-001, Learning rate quality"
+      - button "kazakh-sft-001, Gradient norm quality"
+      - button "kazakh-sft-013, Loss quality"
+      - button "kazakh-sft-013, Learning rate quality"
+      - button "kazakh-sft-013, Gradient norm quality"
+    - text: 3B / SFT 3B / DPO 1.5B / SFT 1.5B / DPO Source findings
+    - paragraph: "Tile length: finite rows (log). Inner → outer: Loss / LR / Grad norm."
+    - text: Inspect experiment
+    - combobox "Inspect experiment":
+      - option "kazakh-sft-001"
+      - option "kazakh-sft-002"
+      - option "kazakh-sft-003"
+      - option "kazakh-sft-004"
+      - option "kazakh-sft-005" [selected]
+      - option "kazakh-sft-006"
+      - option "kazakh-sft-007"
+      - option "kazakh-sft-008"
+      - option "kazakh-sft-009"
+      - option "kazakh-sft-010"
+      - option "kazakh-sft-011"
+      - option "kazakh-sft-012"
+      - option "kazakh-sft-013"
+      - option "kazakh-sft-014"
+      - option "kazakh-sft-015"
+      - option "kazakh-sft-016"
+      - option "kazakh-sft-017"
+      - option "kazakh-sft-018"
+      - option "kazakh-sft-019"
+      - option "kazakh-sft-020"
+    - text: Metric
+    - combobox "Metric":
+      - option "Loss" [selected]
+      - option "Learning rate"
+      - option "Gradient norm"
+    - group: Accessible quality table
+  - region "kazakh-sft-005":
+    - text: Running
+    - heading "kazakh-sft-005" [level=2]
+    - paragraph: Qwen2.5-3B · DPO
+    - paragraph:
+      - text: Demo snapshot · Not live ·
+      - time: Nov 9, 2026, 5:00 PM (Asia/Qyzylorda)
+    - term: Peak loss
+    - definition: "100.000"
+    - term: Raw rows
+    - definition: 1,000,000
+    - paragraph: Loss · 0 invalid · 0 conflicts · 0 gaps
+    - link "Monitor selected run":
+      - /url: /dashboard
+    - link "Open run":
+      - /url: /runs/kazakh-sft-005
+    - link "Compare":
+      - /url: /compare?runs=kazakh-sft-005
+    - link "Inspect issues":
+      - /url: /data-quality?run=kazakh-sft-005&metric=loss

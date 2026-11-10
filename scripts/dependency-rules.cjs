@@ -1,0 +1,10 @@
+module.exports={
+ forbidden:[
+  {name:'production-cannot-import-tests',severity:'error',from:{path:'^src/',pathNot:'\\.test\\.'},to:{path:'(?:\\.test\\.|/e2e/|(?:^|/)(?:vitest|@playwright)/)'}},
+  {name:'core-sampling-remain-ui-free',severity:'error',from:{path:'^src/(?:core|sampling)/',pathNot:'\\.test\\.'},to:{path:'(?:^src/(?:features|charts|components|app)/|(?:^|/)(?:react|react-dom|uplot)/)'}},
+  {name:'worker-cannot-import-pages',severity:'error',from:{path:'^src/worker/',pathNot:'\\.test\\.'},to:{path:'^src/features/'}},
+  {name:'charts-cannot-generate-source-datasets',severity:'error',from:{path:'^src/charts/',pathNot:'\\.test\\.'},to:{path:'^src/data/(?:generator|demo)\\.'}},
+  {name:'unresolved-source-dependency',severity:'error',from:{path:'^src/'},to:{couldNotResolve:true}}
+ ],
+ options:{doNotFollow:{path:'node_modules'},tsConfig:{fileName:'tsconfig.app.json'},tsPreCompilationDeps:true}
+}

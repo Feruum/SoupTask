@@ -1,0 +1,205 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/visible-hover.spec.ts",
+      "--grep",
+      "source DOM writes wait",
+      "--config",
+      "scripts/acceptance.playwright.config.mjs",
+      "--workers",
+      "1",
+      "--trace",
+      "off"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\scripts\\acceptance.playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "sourceCommit": "eed4caf20b6b105d87341337d545eb5b6294e9c8",
+      "sourceHash": "5884b9d4e9a0b4084a0b3c060d8d97a535a73f1f8662d73511af1bcdbe58b96d",
+      "buildHash": "c2763680f32624479ddfea56dc98752978d828a3dd979ef7bb33aa8edc8aa852",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/memory-investigation-2026-11-10/frame-writes-red/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "eed4caf20b6b105d87341337d545eb5b6294e9c8",
+          "sourceHash": "5884b9d4e9a0b4084a0b3c060d8d97a535a73f1f8662d73511af1bcdbe58b96d",
+          "buildHash": "c2763680f32624479ddfea56dc98752978d828a3dd979ef7bb33aa8edc8aa852",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\frame-writes-red\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "eed4caf20b6b105d87341337d545eb5b6294e9c8",
+          "sourceHash": "5884b9d4e9a0b4084a0b3c060d8d97a535a73f1f8662d73511af1bcdbe58b96d",
+          "buildHash": "c2763680f32624479ddfea56dc98752978d828a3dd979ef7bb33aa8edc8aa852",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "off",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\frame-writes-red\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "visible-hover.spec.ts",
+      "file": "visible-hover.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "source DOM writes wait for the next frame and commit before both paint checks",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2658,
+                  "error": {
+                    "message": "Error: accepted cursor data should not dirty layout before native pointer-entry reads\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"\u001b[7m2\u001b[27m99,\u001b[7m808\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7m5\u001b[27m99,\u001b[7m616\u001b[27m\"\u001b[39m",
+                    "stack": "Error: accepted cursor data should not dirty layout before native pointer-entry reads\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"\u001b[7m2\u001b[27m99,\u001b[7m808\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7m5\u001b[27m99,\u001b[7m616\u001b[27m\"\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:97:117",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                      "column": 117,
+                      "line": 97
+                    },
+                    "snippet": " \u001b[90m  95 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mmouse\u001b[33m.\u001b[39mmove(box\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mx\u001b[33m+\u001b[39mbox\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mwidth\u001b[33m*\u001b[39m\u001b[35m.6\u001b[39m\u001b[33m,\u001b[39mbox\u001b[33m!\u001b[39m\u001b[33m.\u001b[39my\u001b[33m+\u001b[39mbox\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mheight\u001b[33m*\u001b[39m\u001b[35m.5\u001b[39m)\n \u001b[90m  96 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForFunction(previous\u001b[33m=>\u001b[39m(window\u001b[33m.\u001b[39m__soupEvidence\u001b[33m?.\u001b[39macceptedHoverSeq\u001b[33m??\u001b[39m\u001b[35m0\u001b[39m)\u001b[33m>\u001b[39mprevious\u001b[33m,\u001b[39msequence\u001b[33m,\u001b[39m{polling\u001b[33m:\u001b[39m\u001b[35m20\u001b[39m})\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  97 |\u001b[39m   expect(\u001b[36mawait\u001b[39m step\u001b[33m.\u001b[39mtextContent()\u001b[33m,\u001b[39m\u001b[32m'accepted cursor data should not dirty layout before native pointer-entry reads'\u001b[39m)\u001b[33m.\u001b[39mtoBe(previous)\n \u001b[90m     |\u001b[39m                                                                                                                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  98 |\u001b[39m  }\u001b[36mfinally\u001b[39m{\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(()\u001b[33m=>\u001b[39m(window \u001b[36mas\u001b[39m \u001b[33mWindow\u001b[39m\u001b[33m&\u001b[39m{__releaseSourceFrames\u001b[33m:\u001b[39m()\u001b[33m=>\u001b[39m\u001b[36mvoid\u001b[39m})\u001b[33m.\u001b[39m__releaseSourceFrames())}\n \u001b[90m  99 |\u001b[39m  \u001b[36mawait\u001b[39m expect(step)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoHaveText(previous\u001b[33m!\u001b[39m)\n \u001b[90m 100 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForFunction(()\u001b[33m=>\u001b[39m{"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                        "column": 117,
+                        "line": 97
+                      },
+                      "message": "Error: accepted cursor data should not dirty layout before native pointer-entry reads\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"\u001b[7m2\u001b[27m99,\u001b[7m808\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"\u001b[7m5\u001b[27m99,\u001b[7m616\u001b[27m\"\u001b[39m\n\n   95 |   await page.mouse.move(box!.x+box!.width*.6,box!.y+box!.height*.5)\n   96 |   await page.waitForFunction(previous=>(window.__soupEvidence?.acceptedHoverSeq??0)>previous,sequence,{polling:20})\n>  97 |   expect(await step.textContent(),'accepted cursor data should not dirty layout before native pointer-entry reads').toBe(previous)\n      |                                                                                                                     ^\n   98 |  }finally{await page.evaluate(()=>(window as Window&{__releaseSourceFrames:()=>void}).__releaseSourceFrames())}\n   99 |  await expect(step).not.toHaveText(previous!)\n  100 |  await page.waitForFunction(()=>{\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:97:117"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:07:07.993Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\frame-writes-red\\artifacts\\visible-hover-source-DOM-w-3bc4d-it-before-both-paint-checks\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\frame-writes-red\\artifacts\\visible-hover-source-DOM-w-3bc4d-it-before-both-paint-checks\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                    "column": 117,
+                    "line": 97
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e032e1733e06d6e1f682-6d1aec1361bf43f21fd8",
+          "file": "visible-hover.spec.ts",
+          "line": 82,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T21:07:05.035Z",
+    "duration": 6999.661,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

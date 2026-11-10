@@ -1,0 +1,21 @@
+{
+  "scope": "Same actual source-coordinate Canvas pixel assertion on correct and suppressed-drawing production builds. Raw subprocess output retained.",
+  "results": [
+    {
+      "mode": "normal",
+      "exitCode": 0,
+      "signal": null,
+      "expectedExit": 0,
+      "accepted": true,
+      "report": "reports/memory-investigation-2026-11-10/final-canvas/normal.json"
+    },
+    {
+      "mode": "suppress",
+      "exitCode": 1,
+      "signal": null,
+      "expectedExit": 1,
+      "accepted": true,
+      "report": "reports/memory-investigation-2026-11-10/final-canvas/suppress.json"
+    }
+  ]
+}

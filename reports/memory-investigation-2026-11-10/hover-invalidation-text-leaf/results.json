@@ -1,0 +1,5479 @@
+{
+  "sourceHash": "bf6978382abc503cccb229ddf1cb75864b7ba751e9c098ead346c71d36f9790a",
+  "buildHash": "7142725b67c5e7b91de89ab0710e38397d3f6e2e14bf629027318e810ade2b9f",
+  "scope": "Diagnostic extra invalidation tracing, CPU4 main only;30 samples; no cold-load or continuous-movement target claim",
+  "samples": [
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 4403.10000000149,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 5,
+        "hoverSeq": 6,
+        "step": 180051.6334196891,
+        "requestToAcceptedMs": 0.6999999955296516,
+        "requestToFrameMs": 74.5,
+        "tooltipCount": 1,
+        "verificationMs": 7.899999998509884,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "180,052",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 472.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.232409",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.6399E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 811.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.21015",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 958.5,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682,
+                  "right": 650.234375,
+                  "bottom": 697
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 742,
+                  "right": 650.234375,
+                  "bottom": 757
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 802,
+                  "right": 650.234375,
+                  "bottom": 817
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 5100,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 6,
+        "hoverSeq": 8,
+        "step": 499994.0932642487,
+        "requestToAcceptedMs": 0,
+        "requestToFrameMs": 59.30000000447035,
+        "tooltipCount": 1,
+        "verificationMs": 6.899999998509884,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "499,994",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 472.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.229329",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.00001E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.1808",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 950.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682,
+                  "right": 650.234375,
+                  "bottom": 697
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 742,
+                  "right": 650.234375,
+                  "bottom": 757
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 802,
+                  "right": 650.234375,
+                  "bottom": 817
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 5822.5,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 7,
+        "hoverSeq": 10,
+        "step": 123.05699481865285,
+        "requestToAcceptedMs": 0.20000000298023224,
+        "requestToFrameMs": 74.10000000149012,
+        "tooltipCount": 1,
+        "verificationMs": 6,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "123",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 446.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.6562",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 626.578125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2.95164E-8",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.194796",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "123",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682.5,
+                  "right": 446.078125,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.65724",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 682.5,
+                  "right": 634.21875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3.54984E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 682.5,
+                  "right": 818.71875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.182037",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 682.5,
+                  "right": 966.140625,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "123",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 743.5,
+                  "right": 446.078125,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2.938277",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 743.5,
+                  "right": 641.859375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3.54984E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 743.5,
+                  "right": 818.71875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.211808",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 743.5,
+                  "right": 966.140625,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "123",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 804.5,
+                  "right": 446.078125,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.635391",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 804.5,
+                  "right": 641.859375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3.54984E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 804.5,
+                  "right": 818.71875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.200534",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 804.5,
+                  "right": 966.140625,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 6552.5,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 8,
+        "hoverSeq": 12,
+        "step": 499756.180857513,
+        "requestToAcceptedMs": 0.19999999552965164,
+        "requestToFrameMs": 48,
+        "tooltipCount": 1,
+        "verificationMs": 2.899999998509884,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.25,
+                  "right": 650.234375,
+                  "bottom": 636.25
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 681.5,
+                  "right": 650.234375,
+                  "bottom": 696.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 741.5,
+                  "right": 650.234375,
+                  "bottom": 756.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 801.5,
+                  "right": 650.234375,
+                  "bottom": 816.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 7555.39999999851,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 9,
+        "hoverSeq": 14,
+        "step": 2291.7823834196893,
+        "requestToAcceptedMs": 0.20000000298023224,
+        "requestToFrameMs": 67.60000000149012,
+        "tooltipCount": 1,
+        "verificationMs": 6.899999998509884,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "2,292",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 456.796875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.358627",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "5.4882E-7",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 811.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.140689",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2,292",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682.5,
+                  "right": 456.796875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.35027",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 682.5,
+                  "right": 634.21875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.44036E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 682.5,
+                  "right": 818.71875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.205531",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 682.5,
+                  "right": 966.140625,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2,292",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 743.5,
+                  "right": 456.796875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.953234",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 743.5,
+                  "right": 641.859375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.44036E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 743.5,
+                  "right": 818.71875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.211971",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 743.5,
+                  "right": 966.140625,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2,292",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 804.5,
+                  "right": 456.796875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.334239",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 804.5,
+                  "right": 641.859375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.44036E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 804.5,
+                  "right": 818.71875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.154046",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 804.5,
+                  "right": 966.140625,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 8234.10000000149,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 10,
+        "hoverSeq": 16,
+        "step": 304403.8406735752,
+        "requestToAcceptedMs": 0.5,
+        "requestToFrameMs": 49.69999999552965,
+        "tooltipCount": 1,
+        "verificationMs": 26.19999999552965,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "304,404",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 472.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.237918",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.39119E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.226306",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682,
+                  "right": 650.234375,
+                  "bottom": 697
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 742,
+                  "right": 650.234375,
+                  "bottom": 757
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 802,
+                  "right": 650.234375,
+                  "bottom": 817
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 8815.10000000149,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 11,
+        "hoverSeq": 18,
+        "step": 499996.6062176166,
+        "requestToAcceptedMs": 0.3999999985098839,
+        "requestToFrameMs": 44.79999999701977,
+        "tooltipCount": 1,
+        "verificationMs": 4.600000001490116,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.25,
+                  "right": 650.234375,
+                  "bottom": 636.25
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 681.5,
+                  "right": 650.234375,
+                  "bottom": 696.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 741.5,
+                  "right": 650.234375,
+                  "bottom": 756.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 801.5,
+                  "right": 650.234375,
+                  "bottom": 816.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 9509,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 12,
+        "hoverSeq": 20,
+        "step": 135.49222797927462,
+        "requestToAcceptedMs": 0.4000000059604645,
+        "requestToFrameMs": 69.80000000447035,
+        "tooltipCount": 1,
+        "verificationMs": 5.600000001490116,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "135",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 446.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.583654",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3.23957E-8",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.220484",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "135",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682.5,
+                  "right": 446.078125,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.58597",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 682.5,
+                  "right": 634.21875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3.89037E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 682.5,
+                  "right": 818.71875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.164958",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 682.5,
+                  "right": 966.140625,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "135",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 743.5,
+                  "right": 446.078125,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2.897844",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 743.5,
+                  "right": 641.859375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3.89037E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 743.5,
+                  "right": 818.71875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.149411",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 743.5,
+                  "right": 966.140625,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "135",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 804.5,
+                  "right": 446.078125,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.569565",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 804.5,
+                  "right": 641.859375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3.89037E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 804.5,
+                  "right": 818.71875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.22282",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 804.5,
+                  "right": 958.5,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 10162.79999999702,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 13,
+        "hoverSeq": 22,
+        "step": 499880.5334378238,
+        "requestToAcceptedMs": 0.29999999701976776,
+        "requestToFrameMs": 35.70000000298023,
+        "tooltipCount": 1,
+        "verificationMs": 5.600000001490116,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.25,
+                  "right": 650.234375,
+                  "bottom": 636.25
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 681.5,
+                  "right": 650.234375,
+                  "bottom": 696.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 741.5,
+                  "right": 650.234375,
+                  "bottom": 756.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 801.5,
+                  "right": 650.234375,
+                  "bottom": 816.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 11136.10000000149,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 14,
+        "hoverSeq": 24,
+        "step": 3320.9624352331607,
+        "requestToAcceptedMs": 0.19999999552965164,
+        "requestToFrameMs": 69,
+        "tooltipCount": 1,
+        "verificationMs": 8.899999998509884,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "3,321",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 456.796875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.303014",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "7.94394E-7",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.195387",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3,321",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682.5,
+                  "right": 456.796875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.315413",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 682.5,
+                  "right": 641.859375,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.18911E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 682.5,
+                  "right": 818.71875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.207216",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 682.5,
+                  "right": 966.140625,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3,321",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 743.5,
+                  "right": 456.796875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.786759",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 743.5,
+                  "right": 641.859375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.18911E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 743.5,
+                  "right": 818.71875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.215287",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 743.5,
+                  "right": 966.140625,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3,321",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 804.5,
+                  "right": 456.796875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.301267",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 804.5,
+                  "right": 641.859375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.18911E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 804.5,
+                  "right": 818.71875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.165975",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 804.5,
+                  "right": 966.140625,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 11864.5,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 15,
+        "hoverSeq": 26,
+        "step": 430051.3834196891,
+        "requestToAcceptedMs": 0.20000000298023224,
+        "requestToFrameMs": 54.600000001490116,
+        "tooltipCount": 1,
+        "verificationMs": 6.600000001490116,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "430,051",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 472.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.203448",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.1399E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 811.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.217491",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682,
+                  "right": 650.234375,
+                  "bottom": 697
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 742,
+                  "right": 650.234375,
+                  "bottom": 757
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 802,
+                  "right": 650.234375,
+                  "bottom": 817
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 12523.29999999702,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 16,
+        "hoverSeq": 28,
+        "step": 499999.0932642487,
+        "requestToAcceptedMs": 0.20000000298023224,
+        "requestToFrameMs": 47.5,
+        "tooltipCount": 1,
+        "verificationMs": 3,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "499,999",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 472.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.227481",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 777.421875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.217161",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682,
+                  "right": 650.234375,
+                  "bottom": 697
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 742,
+                  "right": 650.234375,
+                  "bottom": 757
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 802,
+                  "right": 650.234375,
+                  "bottom": 817
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 13187.29999999702,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 17,
+        "hoverSeq": 30,
+        "step": 148.05699481865284,
+        "requestToAcceptedMs": 0.19999999552965164,
+        "requestToFrameMs": 66.5,
+        "tooltipCount": 1,
+        "verificationMs": 4.9000000059604645,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "148",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 446.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.513064",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3.55148E-8",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.220992",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "148",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682.5,
+                  "right": 446.078125,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.507056",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 682.5,
+                  "right": 641.859375,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.25811E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 682.5,
+                  "right": 818.71875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.220862",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 682.5,
+                  "right": 966.140625,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "148",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 743.5,
+                  "right": 446.078125,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2.85716",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 743.5,
+                  "right": 634.21875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.25811E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 743.5,
+                  "right": 818.71875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.211449",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 743.5,
+                  "right": 966.140625,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "148",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 804.5,
+                  "right": 446.078125,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.522629",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 804.5,
+                  "right": 641.859375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.25811E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 804.5,
+                  "right": 818.71875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.164205",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 804.5,
+                  "right": 966.140625,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 13823.79999999702,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 18,
+        "hoverSeq": 32,
+        "step": 500001,
+        "requestToAcceptedMs": 0.20000000298023224,
+        "requestToFrameMs": 54.600000001490116,
+        "tooltipCount": 1,
+        "verificationMs": 3.899999998509884,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "500,001",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 472.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "100.000",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 634.21875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "9.99997E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.16854",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 958.5,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682,
+                  "right": 650.234375,
+                  "bottom": 697
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 742,
+                  "right": 650.234375,
+                  "bottom": 757
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 802,
+                  "right": 650.234375,
+                  "bottom": 817
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 14847.29999999702,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 19,
+        "hoverSeq": 34,
+        "step": 4339.532383419689,
+        "requestToAcceptedMs": 0.20000000298023224,
+        "requestToFrameMs": 64.39999999850988,
+        "tooltipCount": 1,
+        "verificationMs": 8.199999995529652,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "4,340",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 456.796875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.300421",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.03708E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.206666",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4,340",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682.5,
+                  "right": 456.796875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.303239",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 682.5,
+                  "right": 641.859375,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "9.403E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 682.5,
+                  "right": 803.4375,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.174486",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 682.5,
+                  "right": 966.140625,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4,340",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 743.5,
+                  "right": 456.796875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.680005",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 743.5,
+                  "right": 641.859375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "9.403E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 743.5,
+                  "right": 803.4375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.219611",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 743.5,
+                  "right": 966.140625,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4,340",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 804.5,
+                  "right": 456.796875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.306719",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 804.5,
+                  "right": 641.859375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "9.403E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 804.5,
+                  "right": 803.4375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.174614",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 804.5,
+                  "right": 966.140625,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 15509.39999999851,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 20,
+        "hoverSeq": 36,
+        "step": 554403.5906735751,
+        "requestToAcceptedMs": 0,
+        "requestToFrameMs": 44.399999998509884,
+        "tooltipCount": 1,
+        "verificationMs": 3.5,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "554,404",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 472.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.235877",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "8.91191E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.225868",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682,
+                  "right": 650.234375,
+                  "bottom": 697
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 742,
+                  "right": 650.234375,
+                  "bottom": 757
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 802,
+                  "right": 650.234375,
+                  "bottom": 817
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 16095.5,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 21,
+        "hoverSeq": 38,
+        "step": 500001.6062176166,
+        "requestToAcceptedMs": 0.19999999552965164,
+        "requestToFrameMs": 43.29999999701977,
+        "tooltipCount": 1,
+        "verificationMs": 3.7000000029802322,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.25,
+                  "right": 650.234375,
+                  "bottom": 636.25
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 681.5,
+                  "right": 650.234375,
+                  "bottom": 696.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 741.5,
+                  "right": 650.234375,
+                  "bottom": 756.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 801.5,
+                  "right": 650.234375,
+                  "bottom": 816.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 16771.10000000149,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 22,
+        "hoverSeq": 40,
+        "step": 160.49222797927462,
+        "requestToAcceptedMs": 0.10000000149011612,
+        "requestToFrameMs": 70.60000000149012,
+        "tooltipCount": 1,
+        "verificationMs": 4.399999998509884,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "160",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 446.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.455484",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3.83939E-8",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.226774",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "160",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682.5,
+                  "right": 446.078125,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.446241",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 682.5,
+                  "right": 641.859375,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.5965E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 682.5,
+                  "right": 811.078125,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.226418",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 682.5,
+                  "right": 966.140625,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "160",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 743.5,
+                  "right": 446.078125,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2.825898",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 743.5,
+                  "right": 641.859375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.5965E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 743.5,
+                  "right": 811.078125,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.2136",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 743.5,
+                  "right": 950.859375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "160",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 804.5,
+                  "right": 446.078125,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.437423",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 804.5,
+                  "right": 641.859375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.5965E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 804.5,
+                  "right": 811.078125,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.172767",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 804.5,
+                  "right": 966.140625,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 17363.10000000149,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 23,
+        "hoverSeq": 42,
+        "step": 500130.53393782384,
+        "requestToAcceptedMs": 0.10000000149011612,
+        "requestToFrameMs": 42.900000005960464,
+        "tooltipCount": 1,
+        "verificationMs": 5,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.25,
+                  "right": 650.234375,
+                  "bottom": 636.25
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 681.5,
+                  "right": 650.234375,
+                  "bottom": 696.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 741.5,
+                  "right": 650.234375,
+                  "bottom": 756.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 801.5,
+                  "right": 650.234375,
+                  "bottom": 816.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 18381.19999999553,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 24,
+        "hoverSeq": 44,
+        "step": 5368.71243523316,
+        "requestToAcceptedMs": 0.19999999552965164,
+        "requestToFrameMs": 65.09999999403954,
+        "tooltipCount": 1,
+        "verificationMs": 7.199999995529652,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "5,369",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 456.796875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.276866",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.28164E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.239605",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "5,369",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682.5,
+                  "right": 456.796875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.276087",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 682.5,
+                  "right": 641.859375,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "6.89049E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 682.5,
+                  "right": 818.71875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.198647",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 682.5,
+                  "right": 966.140625,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "5,369",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 743.5,
+                  "right": 456.796875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.573594",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 743.5,
+                  "right": 641.859375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "6.89049E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 743.5,
+                  "right": 818.71875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.199114",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 743.5,
+                  "right": 966.140625,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "5,369",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 804.5,
+                  "right": 456.796875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.297386",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 804.5,
+                  "right": 641.859375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "6.89049E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 804.5,
+                  "right": 818.71875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.202578",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 804.5,
+                  "right": 966.140625,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 19089.60000000149,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 25,
+        "hoverSeq": 46,
+        "step": 680051.1334196891,
+        "requestToAcceptedMs": 0,
+        "requestToFrameMs": 53,
+        "tooltipCount": 1,
+        "verificationMs": 3,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "680,051",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 472.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.217301",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "6.39897E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.210286",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682,
+                  "right": 650.234375,
+                  "bottom": 697
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 742,
+                  "right": 650.234375,
+                  "bottom": 757
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 802,
+                  "right": 650.234375,
+                  "bottom": 817
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 19727.60000000149,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 26,
+        "hoverSeq": 48,
+        "step": 500004.0932642487,
+        "requestToAcceptedMs": 0.09999999403953552,
+        "requestToFrameMs": 56,
+        "tooltipCount": 1,
+        "verificationMs": 4.300000004470348,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "500,004",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 472.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.230537",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "9.99991E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.184734",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682,
+                  "right": 650.234375,
+                  "bottom": 697
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 742,
+                  "right": 650.234375,
+                  "bottom": 757
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 802,
+                  "right": 650.234375,
+                  "bottom": 817
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 20389.39999999851,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 27,
+        "hoverSeq": 50,
+        "step": 173.05699481865287,
+        "requestToAcceptedMs": 0.20000000298023224,
+        "requestToFrameMs": 64.70000000298023,
+        "tooltipCount": 1,
+        "verificationMs": 4.799999997019768,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "173",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 446.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.373894",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.15129E-8",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.156759",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "173",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682.5,
+                  "right": 446.078125,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.374225",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 682.5,
+                  "right": 641.859375,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.96192E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 682.5,
+                  "right": 818.71875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.185098",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 682.5,
+                  "right": 966.140625,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "173",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 743.5,
+                  "right": 446.078125,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2.778585",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 743.5,
+                  "right": 641.859375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.96192E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 743.5,
+                  "right": 818.71875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.204113",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 743.5,
+                  "right": 966.140625,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "173",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 804.5,
+                  "right": 446.078125,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.400963",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 804.5,
+                  "right": 641.859375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.96192E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 804.5,
+                  "right": 818.71875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.160944",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 804.5,
+                  "right": 966.140625,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 21015.5,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 28,
+        "hoverSeq": 52,
+        "step": 500256.181857513,
+        "requestToAcceptedMs": 0,
+        "requestToFrameMs": 43.899999998509884,
+        "tooltipCount": 1,
+        "verificationMs": 4.399999998509884,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.25,
+                  "right": 650.234375,
+                  "bottom": 636.25
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 681.5,
+                  "right": 650.234375,
+                  "bottom": 696.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 741.5,
+                  "right": 650.234375,
+                  "bottom": 756.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 801.5,
+                  "right": 650.234375,
+                  "bottom": 816.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 21969.60000000149,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 29,
+        "hoverSeq": 54,
+        "step": 6387.282383419689,
+        "requestToAcceptedMs": 0.09999999403953552,
+        "requestToFrameMs": 70,
+        "tooltipCount": 1,
+        "verificationMs": 4.899999998509884,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "6,387",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 456.796875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.25004",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 634.21875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.52309E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.170773",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "6,387",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682.5,
+                  "right": 456.796875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.285802",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 682.5,
+                  "right": 641.859375,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.40483E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 682.5,
+                  "right": 818.71875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.22538",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 682.5,
+                  "right": 958.5,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "6,387",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 743.5,
+                  "right": 456.796875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.554026",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 743.5,
+                  "right": 641.859375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.40483E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 743.5,
+                  "right": 818.71875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.184945",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 743.5,
+                  "right": 966.140625,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "6,387",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 804.5,
+                  "right": 456.796875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.265521",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 804.5,
+                  "right": 641.859375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "4.40483E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 804.5,
+                  "right": 818.71875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.207744",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 804.5,
+                  "right": 966.140625,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 22638.69999999553,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 30,
+        "hoverSeq": 56,
+        "step": 180051.6334196891,
+        "requestToAcceptedMs": 0.19999999552965164,
+        "requestToFrameMs": 52.099999994039536,
+        "tooltipCount": 1,
+        "verificationMs": 4,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "180,052",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 472.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.232409",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.6399E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 811.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.21015",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 958.5,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682,
+                  "right": 650.234375,
+                  "bottom": 697
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 742,
+                  "right": 650.234375,
+                  "bottom": 757
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 802,
+                  "right": 650.234375,
+                  "bottom": 817
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 23271.89999999851,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 31,
+        "hoverSeq": 58,
+        "step": 499994.0932642487,
+        "requestToAcceptedMs": 0,
+        "requestToFrameMs": 51.899999998509884,
+        "tooltipCount": 1,
+        "verificationMs": 3.100000001490116,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "499,994",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 472.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.229329",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.00001E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.1808",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 950.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682,
+                  "right": 650.234375,
+                  "bottom": 697
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 742,
+                  "right": 650.234375,
+                  "bottom": 757
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 802,
+                  "right": 650.234375,
+                  "bottom": 817
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 23917.5,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 32,
+        "hoverSeq": 60,
+        "step": 123.05699481865285,
+        "requestToAcceptedMs": 0.19999999552965164,
+        "requestToFrameMs": 67.5,
+        "tooltipCount": 1,
+        "verificationMs": 7.100000001490116,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "123",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 446.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.6562",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 626.578125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2.95164E-8",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 818.71875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.194796",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "123",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682.5,
+                  "right": 446.078125,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.65724",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 682.5,
+                  "right": 634.21875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3.54984E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 682.5,
+                  "right": 818.71875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.182037",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 682.5,
+                  "right": 966.140625,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "123",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 743.5,
+                  "right": 446.078125,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2.938277",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 743.5,
+                  "right": 641.859375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3.54984E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 743.5,
+                  "right": 818.71875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.211808",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 743.5,
+                  "right": 966.140625,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "123",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 804.5,
+                  "right": 446.078125,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.635391",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 804.5,
+                  "right": 641.859375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "3.54984E-6",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 804.5,
+                  "right": 818.71875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.200534",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 804.5,
+                  "right": 966.140625,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 24693.60000000149,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 33,
+        "hoverSeq": 62,
+        "step": 499756.180857513,
+        "requestToAcceptedMs": 0.3999999985098839,
+        "requestToFrameMs": 38.899999998509884,
+        "tooltipCount": 1,
+        "verificationMs": 3.600000001490116,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.25,
+                  "right": 650.234375,
+                  "bottom": 636.25
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 681.5,
+                  "right": 650.234375,
+                  "bottom": 696.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 741.5,
+                  "right": 650.234375,
+                  "bottom": 756.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "No recorded value at this cursor location.",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 801.5,
+                  "right": 650.234375,
+                  "bottom": 816.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "name": "soup:hover-frame",
+      "entryType": "mark",
+      "startTime": 25724.89999999851,
+      "duration": 0,
+      "navigationId": 4296,
+      "detail": {
+        "workspaceEpoch": 1,
+        "viewSeq": 34,
+        "hoverSeq": 64,
+        "step": 2291.7823834196893,
+        "requestToAcceptedMs": 0.20000000298023224,
+        "requestToFrameMs": 72.39999999850988,
+        "tooltipCount": 1,
+        "verificationMs": 7.399999998509884,
+        "visibility": [
+          {
+            "visible": true,
+            "cells": [
+              {
+                "text": "2,292",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 621.5,
+                  "right": 456.796875,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.358627",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 621.5,
+                  "right": 641.859375,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "5.4882E-7",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 621.5,
+                  "right": 811.078125,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.140689",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 621.5,
+                  "right": 966.140625,
+                  "bottom": 636.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2,292",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 682.5,
+                  "right": 456.796875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.35027",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 682.5,
+                  "right": 634.21875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.44036E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 682.5,
+                  "right": 818.71875,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.205531",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 682.5,
+                  "right": 966.140625,
+                  "bottom": 697.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2,292",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 743.5,
+                  "right": 456.796875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.953234",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 743.5,
+                  "right": 641.859375,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.44036E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 743.5,
+                  "right": 818.71875,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.211971",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 743.5,
+                  "right": 966.140625,
+                  "bottom": 758.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "2,292",
+                "rect": {
+                  "left": 423.140625,
+                  "top": 804.5,
+                  "right": 456.796875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.334239",
+                "rect": {
+                  "left": 585.28125,
+                  "top": 804.5,
+                  "right": 641.859375,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "1.44036E-5",
+                "rect": {
+                  "left": 747.421875,
+                  "top": 804.5,
+                  "right": 818.71875,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              },
+              {
+                "text": "0.154046",
+                "rect": {
+                  "left": 909.5625,
+                  "top": 804.5,
+                  "right": 966.140625,
+                  "bottom": 819.5
+                },
+                "clip": {
+                  "left": 253,
+                  "top": 555,
+                  "right": 1388,
+                  "bottom": 839
+                },
+                "reason": null
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

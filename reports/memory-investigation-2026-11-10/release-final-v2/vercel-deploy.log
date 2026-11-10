@@ -1,0 +1,46 @@
+Vercel CLI 65.14.0
+  Inspect         https://vercel.com/ferumms-projects/soup-training-monitor/9jKtVNmQ5h7Fi13D22rF7DGXQueu
+  Production      https://soup-training-monitor-9cabtg6yn-ferumms-projects.vercel.app
+▲ Aliased         https://soup-training-monitor.vercel.app
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_9jKtVNmQ5h7Fi13D22rF7DGXQueu",
+    "url": "https://soup-training-monitor-9cabtg6yn-ferumms-projects.vercel.app",
+    "productionUrl": "https://soup-training-monitor.vercel.app",
+    "inspectorUrl": "https://vercel.com/ferumms-projects/soup-training-monitor/9jKtVNmQ5h7Fi13D22rF7DGXQueu",
+    "readyState": "READY",
+    "target": "production",
+    "environment": "production",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_9jKtVNmQ5h7Fi13D22rF7DGXQueu",
+    "buildMachine": {
+      "cores": 2,
+      "memory": 8192,
+      "machine": "basic",
+      "selectionType": "fixed",
+      "selectionSource": "plan-default"
+    },
+    "deploymentProtection": [
+      "vercel_authentication"
+    ]
+  },
+  "message": "Deployment soup-training-monitor-9cabtg6yn-ferumms-projects.vercel.app ready. Production URL: https://soup-training-monitor.vercel.app",
+  "next": [
+    {
+      "command": "vercel git connect",
+      "when": "Automatically deploy changes on every push"
+    },
+    {
+      "command": "vercel curl https://soup-training-monitor.vercel.app",
+      "when": "Verify deployment, including when Deployment Protection is enabled"
+    },
+    {
+      "command": "vercel inspect soup-training-monitor-9cabtg6yn-ferumms-projects.vercel.app",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod",
+      "when": "Promote to production"
+    }
+  ]
+}

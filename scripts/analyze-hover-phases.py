@@ -16,7 +16,8 @@ for end in sorted(frames,key=lambda e:detail(e).get('requestToFrameMs',0),revers
         if e.get('ph')=='X':phases[e['name']]['count']+=1;phases[e['name']]['sumMs']+=e.get('dur',0)/1000
         if 'Invalidation' in e['name'] or e['name']=='InvalidateLayout':invalidations.append({'name':e['name'],'offsetMs':(e['ts']-start)/1000,'args':e.get('args')})
     windows.append({'detail':data,'phases':dict(phases),'invalidations':invalidations,'timeline':[{'name':e['name'],'offsetMs':(e['ts']-start)/1000,'durationMs':e.get('dur',0)/1000,'args':e.get('args')} for e in selected if e['name'] in ['Layout','Paint','FireAnimationFrame','UpdateLayoutTree']]})
-result={'scope':'Five slowest request-to-verified-source-frame windows; per-event-type sums can overlap and are not additive across types. Extra invalidation/stack trace is diagnostic, not standard acceptance.','frames':len(frames),'windows':windows}
+body_has_schedules=sum(e.get('name')=='ScheduleStyleInvalidationTracking' and e.get('args',{}).get('data',{}).get('nodeName')=='BODY' and e.get('args',{}).get('data',{}).get('changedPseudo')=='has' for e in events)
+result={'scope':'Five slowest request-to-verified-source-frame windows; per-event-type sums can overlap and are not additive across types. Extra invalidation/stack trace is diagnostic, not standard acceptance.','frames':len(frames),'bodyHasSchedules':body_has_schedules,'windows':windows}
 (root/'phase-analysis.json').write_text(json.dumps(result,indent=2),encoding='utf8')
 for window in windows[:2]:
     print('requestToFrameMs',window['detail']['requestToFrameMs'],'verificationMs',window['detail'].get('verificationMs'))

@@ -1,0 +1,329 @@
+{
+  "sourceCommit": "3ee28c5bc5eab20231c66f65035556e780cd6235",
+  "sourceHash": "e3a777235a582786136c5f826d4da0ccf6b69de4f0dcf8a6f443c518d61d65e2",
+  "buildHash": "a93cb395325d43016644fbd2a0daa60189f82c54f81c2b92bb8c31d20a5cab04",
+  "browser": "158.0.8127.18",
+  "interruptedDrag": true,
+  "cases": [
+    {
+      "transitions": 1,
+      "baseline": "baseline",
+      "target": "target-1",
+      "final": "returned-1"
+    },
+    {
+      "transitions": 20,
+      "baseline": "returned-1",
+      "target": "target-20",
+      "final": "returned-20"
+    },
+    {
+      "transitions": 60,
+      "baseline": "returned-20",
+      "target": "target-60",
+      "final": "returned-60"
+    }
+  ],
+  "samples": [
+    {
+      "label": "baseline",
+      "snapshot": "baseline.heapsnapshot.gz",
+      "before": "soup:infra-begin:baseline",
+      "after": "soup:infra-end:baseline",
+      "dump": {
+        "dumpGuid": "0x1",
+        "success": true
+      },
+      "heap": {
+        "usedSize": 4875004,
+        "totalSize": 5836800,
+        "embedderHeapUsedSize": 1351344,
+        "backingStorageSize": 612434
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 141,
+        "jsEventListeners": 178
+      },
+      "workers": 0,
+      "workspace": null,
+      "rendererPid": 22476
+    },
+    {
+      "label": "target-1",
+      "snapshot": "target-1.heapsnapshot.gz",
+      "before": "soup:infra-begin:target-1",
+      "after": "soup:infra-end:target-1",
+      "dump": {
+        "dumpGuid": "0x2",
+        "success": true
+      },
+      "heap": {
+        "usedSize": 9275080,
+        "totalSize": 10362880,
+        "embedderHeapUsedSize": 2589064,
+        "backingStorageSize": 781014
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 1271,
+        "jsEventListeners": 330
+      },
+      "workers": 1,
+      "workspace": {
+        "workspaceEpoch": 4,
+        "members": [
+          "kazakh-sft-005",
+          "kazakh-sft-001",
+          "kazakh-sft-002",
+          "kazakh-sft-006"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32786432,
+        "allocationBytes": 78576688,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 23.69999999552965,
+            "normalizationMs": 269.80000000447035,
+            "indexBuildMs": 222.89999999850988,
+            "indexBufferBytes": 1696608
+          },
+          "kazakh-sft-001": {
+            "generationMs": 3.600000001490116,
+            "normalizationMs": 10,
+            "indexBuildMs": 4,
+            "indexBufferBytes": 13824
+          },
+          "kazakh-sft-002": {
+            "generationMs": 3.0999999940395355,
+            "normalizationMs": 5,
+            "indexBuildMs": 3.100000001490116,
+            "indexBufferBytes": 13824
+          },
+          "kazakh-sft-006": {
+            "generationMs": 2.5,
+            "normalizationMs": 8.800000004470348,
+            "indexBuildMs": 1.5,
+            "indexBufferBytes": 9216
+          }
+        },
+        "renderBufferBytes": 380716,
+        "hoverCacheTargets": 1109,
+        "hoverCacheRows": 1181
+      },
+      "rendererPid": 22476
+    },
+    {
+      "label": "returned-1",
+      "snapshot": "returned-1.heapsnapshot.gz",
+      "before": "soup:infra-begin:returned-1",
+      "after": "soup:infra-end:returned-1",
+      "dump": {
+        "dumpGuid": "0x3",
+        "success": true
+      },
+      "heap": {
+        "usedSize": 6982300,
+        "totalSize": 7741440,
+        "embedderHeapUsedSize": 1428440,
+        "backingStorageSize": 676498
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 319,
+        "jsEventListeners": 208
+      },
+      "workers": 0,
+      "workspace": null,
+      "rendererPid": 22476
+    },
+    {
+      "label": "target-20",
+      "snapshot": "target-20.heapsnapshot.gz",
+      "before": "soup:infra-begin:target-20",
+      "after": "soup:infra-end:target-20",
+      "dump": {
+        "dumpGuid": "0x4",
+        "success": true
+      },
+      "heap": {
+        "usedSize": 11303948,
+        "totalSize": 13246464,
+        "embedderHeapUsedSize": 2903304,
+        "backingStorageSize": 781229
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 1273,
+        "jsEventListeners": 330
+      },
+      "workers": 1,
+      "workspace": {
+        "workspaceEpoch": 44,
+        "members": [
+          "kazakh-sft-005",
+          "kazakh-sft-001",
+          "kazakh-sft-002",
+          "kazakh-sft-006"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32786432,
+        "allocationBytes": 78576688,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 24.200000002980232,
+            "normalizationMs": 266.29999999701977,
+            "indexBuildMs": 235.59999999403954,
+            "indexBufferBytes": 1696608
+          },
+          "kazakh-sft-001": {
+            "generationMs": 2.899999998509884,
+            "normalizationMs": 8.5,
+            "indexBuildMs": 3.100000001490116,
+            "indexBufferBytes": 13824
+          },
+          "kazakh-sft-002": {
+            "generationMs": 2.600000001490116,
+            "normalizationMs": 3.6999999955296516,
+            "indexBuildMs": 2.2999999970197678,
+            "indexBufferBytes": 13824
+          },
+          "kazakh-sft-006": {
+            "generationMs": 2.2000000029802322,
+            "normalizationMs": 6.399999998509884,
+            "indexBuildMs": 1,
+            "indexBufferBytes": 9216
+          }
+        },
+        "renderBufferBytes": 380716,
+        "hoverCacheTargets": 1109,
+        "hoverCacheRows": 1181
+      },
+      "rendererPid": 22476
+    },
+    {
+      "label": "returned-20",
+      "snapshot": "returned-20.heapsnapshot.gz",
+      "before": "soup:infra-begin:returned-20",
+      "after": "soup:infra-end:returned-20",
+      "dump": {
+        "dumpGuid": "0x5",
+        "success": true
+      },
+      "heap": {
+        "usedSize": 8136420,
+        "totalSize": 9314304,
+        "embedderHeapUsedSize": 1722168,
+        "backingStorageSize": 676502
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 319,
+        "jsEventListeners": 208
+      },
+      "workers": 0,
+      "workspace": null,
+      "rendererPid": 22476
+    },
+    {
+      "label": "target-60",
+      "snapshot": "target-60.heapsnapshot.gz",
+      "before": "soup:infra-begin:target-60",
+      "after": "soup:infra-end:target-60",
+      "dump": {
+        "dumpGuid": "0x6",
+        "success": true
+      },
+      "heap": {
+        "usedSize": 11232680,
+        "totalSize": 12197888,
+        "embedderHeapUsedSize": 2956840,
+        "backingStorageSize": 781015
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 1271,
+        "jsEventListeners": 330
+      },
+      "workers": 1,
+      "workspace": {
+        "workspaceEpoch": 164,
+        "members": [
+          "kazakh-sft-005",
+          "kazakh-sft-001",
+          "kazakh-sft-002",
+          "kazakh-sft-006"
+        ],
+        "sampler": "indexed",
+        "rawBufferBytes": 32786432,
+        "allocationBytes": 78576688,
+        "viewSeq": 4,
+        "acceptedHoverSeq": 0,
+        "workerTimings": {
+          "kazakh-sft-005": {
+            "generationMs": 25.899999998509884,
+            "normalizationMs": 260.80000000447035,
+            "indexBuildMs": 224.5,
+            "indexBufferBytes": 1696608
+          },
+          "kazakh-sft-001": {
+            "generationMs": 2.899999998509884,
+            "normalizationMs": 9.399999998509884,
+            "indexBuildMs": 3.5,
+            "indexBufferBytes": 13824
+          },
+          "kazakh-sft-002": {
+            "generationMs": 2.7000000029802322,
+            "normalizationMs": 4.399999998509884,
+            "indexBuildMs": 2.1999999955296516,
+            "indexBufferBytes": 13824
+          },
+          "kazakh-sft-006": {
+            "generationMs": 1.7999999970197678,
+            "normalizationMs": 8,
+            "indexBuildMs": 1.4000000059604645,
+            "indexBufferBytes": 9216
+          }
+        },
+        "renderBufferBytes": 380716,
+        "hoverCacheTargets": 1109,
+        "hoverCacheRows": 1181
+      },
+      "rendererPid": 22476
+    },
+    {
+      "label": "returned-60",
+      "snapshot": "returned-60.heapsnapshot.gz",
+      "before": "soup:infra-begin:returned-60",
+      "after": "soup:infra-end:returned-60",
+      "dump": {
+        "dumpGuid": "0x7",
+        "success": true
+      },
+      "heap": {
+        "usedSize": 8644952,
+        "totalSize": 9838592,
+        "embedderHeapUsedSize": 1797168,
+        "backingStorageSize": 676502
+      },
+      "dom": {
+        "documents": 2,
+        "nodes": 319,
+        "jsEventListeners": 208
+      },
+      "workers": 0,
+      "workspace": null,
+      "rendererPid": 22476
+    }
+  ],
+  "trace": {
+    "file": "roundtrip-chrome-trace.json.gz",
+    "rawSha256": "115ed67295b6bb48496181b2f04c55a09be199d4c5fee698790f34cbef273bf6",
+    "compressedSha256": "1a62691cf7b3da03984a27ddb581cfd07cbec1ada5138687160f3d8dd3955b15"
+  },
+  "scope": "Warm neutral baseline→1M detail/four-run Compare→same neutral baseline; B/T/F IDs from one persistent CDP heap profiler. Candidate set(T minus B) intersect F is a superset requiring retainer analysis, not automatic leak proof. Count is workload rounds; each opens detail and Compare. Interrupted-drag mode dispatches a native DOM mousedown and navigates away without mouseup; no physical-device claim."
+}

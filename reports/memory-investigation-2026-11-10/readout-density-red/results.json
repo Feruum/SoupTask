@@ -1,0 +1,205 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\WindowsApps\\OpenAI.CodexPrimaryRuntime.v26-1104-2876-0_26.1104.2876.0_x64__3k8sg7r9htsxt\\dependencies\\node\\bin\\node.exe",
+      "C:\\Users\\Ferumm\\projects\\soupTask\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "e2e/visible-hover.spec.ts",
+      "--grep",
+      "desktop source readout reserves",
+      "--config",
+      "scripts/acceptance.playwright.config.mjs",
+      "--workers",
+      "1",
+      "--trace",
+      "off"
+    ],
+    "configFile": "C:\\Users\\Ferumm\\projects\\soupTask\\scripts\\acceptance.playwright.config.mjs",
+    "rootDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "sourceCommit": "1e50e3df2e6f42fe30064580a4bbaf66a755fbe5",
+      "sourceHash": "55f0258c6d8f2483e9bbf65e2972e104c396209ba4a1a394d2f0233f5c39b077",
+      "buildHash": "fce8d9e2fa998c5cb2aa347b26558ebd90d8a7b7509bdbd6658403fcff915724",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/Ferumm/projects/soupTask/reports/memory-investigation-2026-11-10/readout-density-red/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "1e50e3df2e6f42fe30064580a4bbaf66a755fbe5",
+          "sourceHash": "55f0258c6d8f2483e9bbf65e2972e104c396209ba4a1a394d2f0233f5c39b077",
+          "buildHash": "fce8d9e2fa998c5cb2aa347b26558ebd90d8a7b7509bdbd6658403fcff915724",
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "C:/Users/Ferumm/projects/soupTask/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\readout-density-red\\artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "sourceCommit": "1e50e3df2e6f42fe30064580a4bbaf66a755fbe5",
+          "sourceHash": "55f0258c6d8f2483e9bbf65e2972e104c396209ba4a1a394d2f0233f5c39b077",
+          "buildHash": "fce8d9e2fa998c5cb2aa347b26558ebd90d8a7b7509bdbd6658403fcff915724",
+          "actualWorkers": 1
+        },
+        "name": "",
+        "testDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "snapshotDir": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:4188",
+          "locale": "en-US",
+          "timezoneId": "Asia/Qyzylorda",
+          "trace": "off",
+          "screenshot": "only-on-failure"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": ""
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\readout-density-red\\results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": {
+      "cwd": "C:\\Users\\Ferumm\\projects\\soupTask",
+      "command": "node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 4188 --strictPort",
+      "url": "http://127.0.0.1:4188",
+      "reuseExistingServer": false
+    }
+  },
+  "suites": [
+    {
+      "title": "visible-hover.spec.ts",
+      "file": "visible-hover.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "desktop source readout reserves chart space while preserving complete44px source actions",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 2219,
+                  "error": {
+                    "message": "Error: desktop readout should leave room for the chart\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m340\u001b[39m\nReceived:    \u001b[31m382\u001b[39m",
+                    "stack": "Error: desktop readout should leave room for the chart\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m340\u001b[39m\nReceived:    \u001b[31m382\u001b[39m\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:161:95",
+                    "location": {
+                      "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                      "column": 95,
+                      "line": 161
+                    },
+                    "snippet": " \u001b[90m 159 |\u001b[39m  \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.metric-grid'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-view-ready'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'true'\u001b[39m)\n \u001b[90m 160 |\u001b[39m  \u001b[36mconst\u001b[39m rail\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'comparison-cursor-readout'\u001b[39m)\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 161 |\u001b[39m  expect((\u001b[36mawait\u001b[39m rail\u001b[33m.\u001b[39mboundingBox())\u001b[33m!\u001b[39m\u001b[33m.\u001b[39mheight\u001b[33m,\u001b[39m\u001b[32m'desktop readout should leave room for the chart'\u001b[39m)\u001b[33m.\u001b[39mtoBeLessThanOrEqual(\u001b[35m340\u001b[39m)\n \u001b[90m     |\u001b[39m                                                                                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 162 |\u001b[39m  \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'From step'\u001b[39m\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mfill(\u001b[32m'0'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m'To step'\u001b[39m\u001b[33m,\u001b[39m{exact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mfill(\u001b[32m'8191'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'button'\u001b[39m\u001b[33m,\u001b[39m{name\u001b[33m:\u001b[39m\u001b[32m'Apply range'\u001b[39m\u001b[33m,\u001b[39mexact\u001b[33m:\u001b[39m\u001b[36mtrue\u001b[39m})\u001b[33m.\u001b[39mclick()\n \u001b[90m 163 |\u001b[39m  \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'.metric-grid'\u001b[39m))\u001b[33m.\u001b[39mtoHaveAttribute(\u001b[32m'data-view-ready'\u001b[39m\u001b[33m,\u001b[39m\u001b[32m'true'\u001b[39m)\n \u001b[90m 164 |\u001b[39m  \u001b[36mconst\u001b[39m over\u001b[33m=\u001b[39mpage\u001b[33m.\u001b[39mgetByTestId(\u001b[32m'comparison-loss'\u001b[39m)\u001b[33m.\u001b[39mlocator(\u001b[32m'.u-over'\u001b[39m)\u001b[33m;\u001b[39m\u001b[36mawait\u001b[39m over\u001b[33m.\u001b[39mscrollIntoViewIfNeeded()\u001b[33m;\u001b[39m\u001b[36mconst\u001b[39m box\u001b[33m=\u001b[39m\u001b[36mawait\u001b[39m over\u001b[33m.\u001b[39mboundingBox()\u001b[33m;\u001b[39mexpect(box)\u001b[33m.\u001b[39mnot\u001b[33m.\u001b[39mtoBeNull()"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                        "column": 95,
+                        "line": 161
+                      },
+                      "message": "Error: desktop readout should leave room for the chart\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m340\u001b[39m\nReceived:    \u001b[31m382\u001b[39m\n\n  159 |  await expect(page.locator('.metric-grid')).toHaveAttribute('data-view-ready','true')\n  160 |  const rail=page.getByTestId('comparison-cursor-readout')\n> 161 |  expect((await rail.boundingBox())!.height,'desktop readout should leave room for the chart').toBeLessThanOrEqual(340)\n      |                                                                                               ^\n  162 |  await page.getByLabel('From step',{exact:true}).fill('0');await page.getByLabel('To step',{exact:true}).fill('8191');await page.getByRole('button',{name:'Apply range',exact:true}).click()\n  163 |  await expect(page.locator('.metric-grid')).toHaveAttribute('data-view-ready','true')\n  164 |  const over=page.getByTestId('comparison-loss').locator('.u-over');await over.scrollIntoViewIfNeeded();const box=await over.boundingBox();expect(box).not.toBeNull()\n    at C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts:161:95"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:48:20.240Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\readout-density-red\\artifacts\\visible-hover-desktop-sour-9215f-complete44px-source-actions\\test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\readout-density-red\\artifacts\\visible-hover-desktop-sour-9215f-complete44px-source-actions\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\Ferumm\\projects\\soupTask\\e2e\\visible-hover.spec.ts",
+                    "column": 95,
+                    "line": 161
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "e032e1733e06d6e1f682-f78d3257e1036c88b0b4",
+          "file": "visible-hover.spec.ts",
+          "line": 157,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T21:48:18.289Z",
+    "duration": 5745.768,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

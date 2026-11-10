@@ -1,0 +1,356 @@
+[
+  {
+    "label": "1M-settled",
+    "marker": "soup:memory:1M-settled",
+    "workerMarkers": [
+      {
+        "url": "http://127.0.0.1:4192/assets/training.worker-IgP6ZDdN.js",
+        "marker": "soup:memory:1M-settled:worker:0"
+      }
+    ],
+    "capturedAt": "2026-11-10T18:58:44.208Z",
+    "counterStart": "2026-11-10T18:58:41.721Z",
+    "counterEnd": "2026-11-10T18:58:43.995Z",
+    "processes": [
+      {
+        "type": "browser",
+        "id": 30600,
+        "cpuTime": 0.46624
+      },
+      {
+        "type": "renderer",
+        "id": 24476,
+        "cpuTime": 1.597804
+      },
+      {
+        "type": "GPU",
+        "id": 25052,
+        "cpuTime": 0.829819
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 23148,
+        "cpuTime": 0.120709
+      },
+      {
+        "type": "tracing.mojom.TracingService",
+        "id": 16952,
+        "cpuTime": 0.034084
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 16952,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 47521792,
+        "PrivateMemorySize64": 15937536,
+        "VirtualMemorySize64": 2259779989504
+      },
+      {
+        "Id": 23148,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 37994496,
+        "PrivateMemorySize64": 16134144,
+        "VirtualMemorySize64": 2259539259392
+      },
+      {
+        "Id": 24476,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 256589824,
+        "PrivateMemorySize64": 151818240,
+        "VirtualMemorySize64": 3777738661888
+      },
+      {
+        "Id": 25052,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 80633856,
+        "PrivateMemorySize64": 41488384,
+        "VirtualMemorySize64": 2260845207552
+      },
+      {
+        "Id": 30600,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 57376768,
+        "PrivateMemorySize64": 19402752,
+        "VirtualMemorySize64": 2259695079424
+      }
+    ],
+    "missingProcessIds": [],
+    "dump": {
+      "dumpGuid": "0x1",
+      "success": true
+    },
+    "mainHeap": {
+      "usedSize": 8520512,
+      "totalSize": 14749696,
+      "embedderHeapUsedSize": 3496032,
+      "backingStorageSize": 1771998
+    },
+    "workspace": {
+      "workspaceEpoch": 1,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 1,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 36.600000001490116,
+          "normalizationMs": 280.20000000298023,
+          "indexBuildMs": 227.30000000447035,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 391902,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "pageUrl": "http://127.0.0.1:4192/runs/kazakh-sft-005"
+  },
+  {
+    "label": "1M-after-20-SPA-switches",
+    "marker": "soup:memory:1M-after-20-SPA-switches",
+    "workerMarkers": [
+      {
+        "url": "http://127.0.0.1:4192/assets/training.worker-IgP6ZDdN.js",
+        "marker": "soup:memory:1M-after-20-SPA-switches:worker:0"
+      }
+    ],
+    "capturedAt": "2026-11-10T18:58:59.027Z",
+    "counterStart": "2026-11-10T18:58:56.647Z",
+    "counterEnd": "2026-11-10T18:58:58.741Z",
+    "processes": [
+      {
+        "type": "browser",
+        "id": 30600,
+        "cpuTime": 2.204496
+      },
+      {
+        "type": "renderer",
+        "id": 24476,
+        "cpuTime": 31.870112
+      },
+      {
+        "type": "GPU",
+        "id": 25052,
+        "cpuTime": 8.27445
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 23148,
+        "cpuTime": 0.229516
+      },
+      {
+        "type": "tracing.mojom.TracingService",
+        "id": 16952,
+        "cpuTime": 0.077717
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 16952,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 76185600,
+        "PrivateMemorySize64": 29163520,
+        "VirtualMemorySize64": 2259781038080
+      },
+      {
+        "Id": 23148,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 39559168,
+        "PrivateMemorySize64": 17219584,
+        "VirtualMemorySize64": 2259540307968
+      },
+      {
+        "Id": 24476,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 404348928,
+        "PrivateMemorySize64": 263917568,
+        "VirtualMemorySize64": 3777768153088
+      },
+      {
+        "Id": 25052,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 86700032,
+        "PrivateMemorySize64": 33198080,
+        "VirtualMemorySize64": 2260862132224
+      },
+      {
+        "Id": 30600,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 71884800,
+        "PrivateMemorySize64": 24047616,
+        "VirtualMemorySize64": 2259708719104
+      }
+    ],
+    "missingProcessIds": [],
+    "dump": {
+      "dumpGuid": "0x2",
+      "success": true
+    },
+    "mainHeap": {
+      "usedSize": 29725108,
+      "totalSize": 71442432,
+      "embedderHeapUsedSize": 15432216,
+      "backingStorageSize": 4741293
+    },
+    "workspace": {
+      "workspaceEpoch": 41,
+      "members": [
+        "kazakh-sft-005"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32000000,
+      "allocationBytes": 76696612,
+      "viewSeq": 1,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 29.600000001490116,
+          "normalizationMs": 247,
+          "indexBuildMs": 191,
+          "indexBufferBytes": 1696608
+        }
+      },
+      "renderBufferBytes": 391902,
+      "hoverCacheTargets": 1502,
+      "hoverCacheRows": 1502
+    },
+    "pageUrl": "http://127.0.0.1:4192/runs/kazakh-sft-005"
+  },
+  {
+    "label": "Compare-1M-plus-three",
+    "marker": "soup:memory:Compare-1M-plus-three",
+    "workerMarkers": [
+      {
+        "url": "http://127.0.0.1:4192/assets/training.worker-IgP6ZDdN.js",
+        "marker": "soup:memory:Compare-1M-plus-three:worker:0"
+      }
+    ],
+    "capturedAt": "2026-11-10T18:59:02.546Z",
+    "counterStart": "2026-11-10T18:59:00.093Z",
+    "counterEnd": "2026-11-10T18:59:02.177Z",
+    "processes": [
+      {
+        "type": "browser",
+        "id": 30600,
+        "cpuTime": 2.567327
+      },
+      {
+        "type": "renderer",
+        "id": 24476,
+        "cpuTime": 35.145833
+      },
+      {
+        "type": "GPU",
+        "id": 25052,
+        "cpuTime": 8.439897
+      },
+      {
+        "type": "network.mojom.NetworkService",
+        "id": 23148,
+        "cpuTime": 0.245413
+      },
+      {
+        "type": "tracing.mojom.TracingService",
+        "id": 16952,
+        "cpuTime": 0.088928
+      }
+    ],
+    "windowsProcesses": [
+      {
+        "Id": 16952,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 82362368,
+        "PrivateMemorySize64": 33501184,
+        "VirtualMemorySize64": 2259781038080
+      },
+      {
+        "Id": 23148,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 39813120,
+        "PrivateMemorySize64": 17473536,
+        "VirtualMemorySize64": 2259540307968
+      },
+      {
+        "Id": 24476,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 414666752,
+        "PrivateMemorySize64": 273895424,
+        "VirtualMemorySize64": 3777770201088
+      },
+      {
+        "Id": 25052,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 95502336,
+        "PrivateMemorySize64": 31395840,
+        "VirtualMemorySize64": 2260864180224
+      },
+      {
+        "Id": 30600,
+        "ProcessName": "chrome-headless-shell",
+        "WorkingSet64": 76435456,
+        "PrivateMemorySize64": 25886720,
+        "VirtualMemorySize64": 2259708719104
+      }
+    ],
+    "missingProcessIds": [],
+    "dump": {
+      "dumpGuid": "0x3",
+      "success": true
+    },
+    "mainHeap": {
+      "usedSize": 42693916,
+      "totalSize": 72753152,
+      "embedderHeapUsedSize": 20886232,
+      "backingStorageSize": 6328092
+    },
+    "workspace": {
+      "workspaceEpoch": 45,
+      "members": [
+        "kazakh-sft-005",
+        "kazakh-sft-001",
+        "kazakh-sft-002",
+        "kazakh-sft-006"
+      ],
+      "sampler": "indexed",
+      "rawBufferBytes": 32786432,
+      "allocationBytes": 78576688,
+      "viewSeq": 1,
+      "acceptedHoverSeq": 0,
+      "workerTimings": {
+        "kazakh-sft-005": {
+          "generationMs": 22.5,
+          "normalizationMs": 224.10000000149012,
+          "indexBuildMs": 187,
+          "indexBufferBytes": 1696608
+        },
+        "kazakh-sft-001": {
+          "generationMs": 2.899999998509884,
+          "normalizationMs": 8.100000001490116,
+          "indexBuildMs": 3,
+          "indexBufferBytes": 13824
+        },
+        "kazakh-sft-002": {
+          "generationMs": 2.2999999970197678,
+          "normalizationMs": 3.100000001490116,
+          "indexBuildMs": 2.100000001490116,
+          "indexBufferBytes": 13824
+        },
+        "kazakh-sft-006": {
+          "generationMs": 2.399999998509884,
+          "normalizationMs": 9.299999997019768,
+          "indexBuildMs": 1.6000000014901161,
+          "indexBufferBytes": 9216
+        }
+      },
+      "renderBufferBytes": 618144,
+      "hoverCacheTargets": 1109,
+      "hoverCacheRows": 1181
+    },
+    "pageUrl": "http://127.0.0.1:4192/compare?runs=kazakh-sft-005%2Ckazakh-sft-001%2Ckazakh-sft-002%2Ckazakh-sft-006"
+  }
+]

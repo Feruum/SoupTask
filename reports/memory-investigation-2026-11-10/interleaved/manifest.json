@@ -1,0 +1,35 @@
+{
+  "order": [
+    "A1",
+    "B1",
+    "A2",
+    "B2"
+  ],
+  "runs": [
+    {
+      "kind": "previous release",
+      "result": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\interleaved\\A1\\results.json",
+      "exitCode": 0,
+      "label": "A1"
+    },
+    {
+      "kind": "candidate",
+      "result": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\interleaved\\B1\\results.json",
+      "exitCode": 0,
+      "label": "B1"
+    },
+    {
+      "kind": "previous release",
+      "result": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\interleaved\\A2\\results.json",
+      "exitCode": 0,
+      "label": "A2"
+    },
+    {
+      "kind": "candidate",
+      "result": "C:\\Users\\Ferumm\\projects\\soupTask\\reports\\memory-investigation-2026-11-10\\interleaved\\B2\\results.json",
+      "exitCode": 0,
+      "label": "B2"
+    }
+  ],
+  "scope": "Fixed A/B/A/B full workloads on external power; same CPU4 main,30 interactions and original endpoint. Not randomized; all results retained."
+}
