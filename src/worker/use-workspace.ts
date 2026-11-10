@@ -1,3 +1,4 @@
+import {performanceMark,performanceMeasure} from '@/app/performance'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { RUNS } from '@/data/catalog'
 import type { SourceRow, QualityIssue, Metric } from '@/data/types'
@@ -75,7 +76,7 @@ export function useWorkspace(runIds: string[]) {
     let inspectOperation: {requestId:number; query:InspectionQuery} | null = null
     const fail = (message: string) => { if (!disposed) setState(current => ({ ...current, kind: current.view ? 'stale' : 'error', message, rowsPending: false, issuesPending: false, inspectionPending: false, inspectionError: current.inspectionPending ? message : current.inspectionError })) }
     try {
-      performance.mark('soup:workspace-start')
+      performanceMark('soup:workspace-start')
       worker = new Worker(new URL('./training.worker.ts', import.meta.url), { type: 'module' })
       const transport = worker
       client = new WorkspaceController(identity, request => { activeRequestId = request.requestId; if(request.kind === 'inspect') inspectOperation={requestId:request.requestId,query:{...request.query,runId:request.runId,page:request.query.page??0}}; transport.postMessage(request) }, reply => {
@@ -86,16 +87,16 @@ export function useWorkspace(runIds: string[]) {
         if (reply.kind === 'error') { if (reply.operation === 'activate' || reply.operation === 'view') fail(reply.message); else setState(current => ({ ...current, message: reply.message, ...(reply.operation === 'rows' ? { rowsPending: false } : {}), ...(reply.operation === 'issues' ? { issuesPending: false } : {}) })); return }
         if (reply.kind === 'activated') {
           domain.current = reply.domain; range.current = reply.domain
-          performance.mark('soup:data-ready')
+          performanceMark('soup:data-ready')
           window.__soupEvidence = { workspaceEpoch: activation, members: descriptors.map(run => run.id), sampler: mode, rawBufferBytes: Object.values(reply.runs).reduce((sum, run) => sum + run.rawBufferBytes, 0), allocationBytes: Object.values(reply.runs).reduce((sum, run) => sum + run.allocationBytes, 0), viewSeq: 0, acceptedHoverSeq: 0, workerTimings: Object.fromEntries(Object.entries(reply.runs).map(([id, run]) => [id, { generationMs: run.generationMs, normalizationMs: run.normalizationMs, indexBuildMs: run.indexBuildMs ?? 0, indexBufferBytes: run.indexBufferBytes ?? 0 }])) }
-          performance.mark('soup:view-start')
+          performanceMark('soup:view-start')
           setState(current => ({ ...current, runs: reply.runs, range: reply.domain, kind: reply.domain ? 'loading' : 'empty' }))
           if (reply.domain) { requestedViewSeq.current++; client?.request({ kind: 'view', range: reply.domain, width: width.current, widths: { ...widths.current }, mode }) }
         } else if (reply.kind === 'view') {
           sourceCache.current=null;sourceGrids.current.clear();sourceCacheRequested.current=null
           if(window.__soupEvidence?.workspaceEpoch===activation){window.__soupEvidence.hoverCacheTargets=0;window.__soupEvidence.hoverCacheRows=0}
           acceptedView.current = reply.view
-          performance.mark('soup:view-ready'); performance.measure('soup:view', 'soup:view-start', 'soup:view-ready')
+          performanceMark('soup:view-ready'); performanceMeasure('soup:view', 'soup:view-start', 'soup:view-ready')
           if (window.__soupEvidence?.workspaceEpoch === activation) window.__soupEvidence.viewSeq = reply.viewSeq
           cursor.clear()
           setState(current => ({ ...current, kind: 'ready', message: undefined, view: reply.view, range: reply.view.range }))
@@ -117,14 +118,14 @@ export function useWorkspace(runIds: string[]) {
             sourceCache.current={view,identity:reply.identity,samples:reply.samples}
             if(window.__soupEvidence?.workspaceEpoch===activation){window.__soupEvidence.hoverCacheTargets=reply.samples.size;window.__soupEvidence.hoverCacheRows=reply.rowCount}
           }catch(error){sourceCache.current=null;if(window.__soupEvidence?.workspaceEpoch===activation)window.__soupEvidence.hoverCacheError=String(error)}
-        } else if (reply.kind === 'inspect') { performance.mark('soup:inspector-ready'); setState(current => inspected && current.inspectionPending && sameInspection(current.inspectionRequest,inspected) ? {...current, inspectionQuery:{...inspected,page:reply.page}, inspectionPending:false, inspectionError:null, inspection: reply.rows, inspectionTotal: reply.total, inspectionPage: reply.page, message: undefined } : current) }
+        } else if (reply.kind === 'inspect') { performanceMark('soup:inspector-ready'); setState(current => inspected && current.inspectionPending && sameInspection(current.inspectionRequest,inspected) ? {...current, inspectionQuery:{...inspected,page:reply.page}, inspectionPending:false, inspectionError:null, inspection: reply.rows, inspectionTotal: reply.total, inspectionPage: reply.page, message: undefined } : current) }
         else if (reply.kind === 'rows') setState(current => ({ ...current, rows: reply.rows, rowsPage: reply.page ?? null, rowsRunId: reply.runId ?? null, rowsPending: false, message: undefined }))
         else if (reply.kind === 'issues') setState(current => ({ ...current, issues: reply.rows, issuesQuery: reply.query && reply.runId ? { ...reply.query, runId: reply.runId, page: reply.query.page ?? 0, pageSize: reply.query.pageSize ?? 50 } : null, issuesPending: false, issueTotal: reply.total, message: undefined }))
         else if (reply.kind === 'hover') {
           const acceptedAt = performance.now()
           const intent = hoverIntent.current
-          performance.mark('soup:hover-ready')
-          if (intent?.step === reply.step) performance.measure('soup:hover', { start: intent.startedAt, end: acceptedAt })
+          performanceMark('soup:hover-ready')
+          if (intent?.step === reply.step) performanceMeasure('soup:hover', { start: intent.startedAt, end: acceptedAt })
           if (window.__soupEvidence?.workspaceEpoch === activation) {
             window.__soupEvidence.acceptedHoverSeq = reply.hoverSeq
             window.__soupEvidence.hoverTiming = intent?.step === reply.step ? { hoverSeq: reply.hoverSeq, viewSeq: reply.viewSeq, requestStartedAt: intent.startedAt, acceptedAt } : undefined
@@ -161,7 +162,7 @@ export function useWorkspace(runIds: string[]) {
     range.current = next
     acceptedView.current = null; sourceCache.current=null; sourceGrids.current.clear(); sourceCacheRequested.current=null
     requestedViewSeq.current++
-    performance.mark('soup:view-start')
+    performanceMark('soup:view-start')
     hoverIntent.current = null
     cursor.clear()
     setState(current => ({ ...current, kind: current.view ? 'refreshing' : 'loading', message: undefined }))
@@ -218,7 +219,7 @@ export function useWorkspace(runIds: string[]) {
   },[])
   const hover = useCallback((step:number,origin:object|null)=>{
     if(!range.current||origin===null||origin!==acceptedView.current)return
-    hoverIntent.current={step,startedAt:performance.now()};performance.mark('soup:hover-start')
+    hoverIntent.current={step,startedAt:performance.now()};performanceMark('soup:hover-start')
     const cache=sourceCache.current
     if(cache?.view===origin&&cache.samples.has(step)&&controller.current?.hoverFromCache(cache.identity,cache.view.viewSeq,step,cache.samples.get(step)!)){
       if(window.__soupEvidence)window.__soupEvidence.hoverCacheHits=(window.__soupEvidence.hoverCacheHits??0)+1

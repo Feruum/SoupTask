@@ -1,3 +1,4 @@
+import {performanceMark} from '@/app/performance'
 import { RunQualityPanel } from '../quality/RunQualityPanel';
 import { SoupArt } from '@/features/shared/SoupArt';
 import { useEffect, useEffectEvent, useLayoutEffect, useState } from 'react';
@@ -20,7 +21,7 @@ function RunDetail({
 }: {
   id: string;
 }) {
-  useLayoutEffect(() => { performance.mark('soup:run-page-commit'); });
+  useLayoutEffect(() => { performanceMark('soup:run-page-commit'); });
   const RUN_MANIFEST = useCatalog();
   const {
       theme

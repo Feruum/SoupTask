@@ -1,3 +1,4 @@
+import {performanceMark} from '@/app/performance'
 import {useLayoutEffect} from 'react'
 type Frame={key:string;epoch:number;viewSeq:number;hoverSeq:number;step:number;committed:boolean;first:number;second:number;cancel:()=>void}
 let pending:Frame|null=null,lastAcknowledged=''
@@ -18,7 +19,7 @@ function arm(viewSeq:number,hoverSeq:number,hoverStep:number|null):Frame|undefin
    if(current?.workspaceEpoch!==frame.epoch||current.viewSeq!==viewSeq||current.acceptedHoverSeq!==hoverSeq){frame.cancel();return}
    const tooltips=[...document.querySelectorAll<HTMLElement>(`.chart-hover-value[data-hover-seq="${hoverSeq}"]`)]
    if(!tooltips.length||tooltips.some(node=>!node.getClientRects().length||getComputedStyle(node).visibility==='hidden')){frame.cancel();return}
-   performance.mark('soup:hover-frame',{detail:{workspaceEpoch:frame.epoch,viewSeq,hoverSeq,step:hoverStep,requestToAcceptedMs:timing.acceptedAt-timing.requestStartedAt,requestToFrameMs:performance.now()-timing.requestStartedAt,tooltipCount:tooltips.length}})
+   performanceMark('soup:hover-frame',{detail:{workspaceEpoch:frame.epoch,viewSeq,hoverSeq,step:hoverStep,requestToAcceptedMs:timing.acceptedAt-timing.requestStartedAt,requestToFrameMs:performance.now()-timing.requestStartedAt,tooltipCount:tooltips.length}})
    lastAcknowledged=key;frame.cancel()
   })
  })
@@ -29,7 +30,7 @@ export function beginHoverPaint(viewSeq:number,hoverSeq:number,hoverStep:number|
 export function recordHoverPaint(viewSeq:number,hoverSeq:number,hoverStep:number|null){
  const frame=arm(viewSeq,hoverSeq,hoverStep);if(!frame)return
  frame.committed=true
- performance.mark('soup:hover-dom-commit',{detail:{workspaceEpoch:frame.epoch,viewSeq,hoverSeq,step:hoverStep}})
+ performanceMark('soup:hover-dom-commit',{detail:{workspaceEpoch:frame.epoch,viewSeq,hoverSeq,step:hoverStep}})
  return frame.cancel
 }
 export function useHoverPaint(selectionKey:string,viewSeq:number,hoverSeq:number,hoverStep:number|null){

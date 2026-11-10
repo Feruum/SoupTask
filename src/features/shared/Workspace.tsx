@@ -1,3 +1,4 @@
+import {performanceMark} from '@/app/performance'
 import readoutStyles from './cursor-readout.module.css';
 import inspectorStyles from './source-inspector.module.css';
 import { ResponsiveDisclosure } from './ResponsiveDisclosure';
@@ -107,7 +108,7 @@ export function CursorReadout({
   onPin: (source: SourcePin) => void;
 }) {
   const visible = cursorForView(cursor, workspace.state.view);
-  if (typeof window !== 'undefined') performance.mark('soup:source-readout-render');
+  if (typeof window !== 'undefined') performanceMark('soup:source-readout-render');
   const hasCursor = visible.hoverStep !== null;
   return <section className={readoutStyles.rail} aria-label={`${NAMES[metric]} source readout`} data-testid={`cursor-readout-${metric}`} data-reserved="true"><div className={`${readoutStyles.content} ${hasCursor ? 'chart-hover-value' : ''}`} data-hover-seq={hasCursor ? visible.hoverSeq : undefined}>
     <p className={readoutStyles.title}>{hasCursor ? `Cursor step ${formatStep(visible.hoverStep!)}` : 'Original source values'}</p>
@@ -167,7 +168,7 @@ export function Charts({
   only?: Metric | 'all';
   compact?: boolean;
 }) {
-  performance.mark('soup:charts-render');
+  performanceMark('soup:charts-render');
   const view = workspace.state.view,
     identity = ids.join(','), sharedSource = ids.length > 1 || only === 'all';
   const [slotState, setSlotState] = useState(() => ({

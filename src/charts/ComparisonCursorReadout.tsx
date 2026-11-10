@@ -1,3 +1,4 @@
+import {performanceMark} from '@/app/performance'
 import {memo,useLayoutEffect,useRef} from 'react'
 import {useNavigate} from 'react-router-dom'
 import type {SourceRow,Metric} from '@/data/types'
@@ -14,7 +15,7 @@ type Props={workspace:Workspace;ids:string[];slots:Record<string,number>;colorTo
 
 /** One persistent original-row table for all comparison panels; raw values are never interpolated. */
 export const ComparisonCursorReadout=memo(function ComparisonCursorReadout({workspace,ids,slots,colorTokens,onPin}:Props){
- performance.mark('soup:source-readout-render')
+ performanceMark('soup:source-readout-render')
  const host=useRef<HTMLDivElement>(null),refresh=useRef<(()=>void)|null>(null),navigate=useNavigate()
  const {view,runs}=workspace.state,store=workspace.cursor,identity=ids.join(',')
  const comparison=ids.length>1

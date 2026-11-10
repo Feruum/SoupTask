@@ -1,3 +1,4 @@
+import {performanceMark} from '@/app/performance'
 import {cursorForView, type createCursorStore} from '@/worker/cursor-store';
 import type {Metric} from '@/data/types';
 import type {WorkspaceView} from '@/worker/protocol';
@@ -168,7 +169,7 @@ export function MetricPlot({
       cursorInk.current.push({x,y,r:8*devicePixelRatio});
     }
     ctx.restore();
-    performance.mark('soup:hover-draw');
+    performanceMark('soup:hover-draw');
   });
   useLayoutEffect(() => {
     if (!cursorStore) return;
@@ -179,6 +180,7 @@ export function MetricPlot({
   useEffect(() => {
     const element = host.current;
     if (!element) return;
+    const cursorCanvas = overlay.current;
     let chart: uPlot | undefined,
       observer: ResizeObserver | undefined,
       visibilityObserver: IntersectionObserver | undefined,
@@ -308,7 +310,7 @@ export function MetricPlot({
             element.dataset.plotTop = String(u.bbox.top / devicePixelRatio);
             element.dataset.plotWidth = String(u.bbox.width / devicePixelRatio);
             element.dataset.plotHeight = String(u.bbox.height / devicePixelRatio);
-            performance.mark('soup-chart-draw');
+            performanceMark('soup-chart-draw');
             drawCursor();
           }]
         }
@@ -444,7 +446,12 @@ export function MetricPlot({
       requeryPointer.current = null;
       instance.current = null;
       appliedView.current = null;
+      const canvases = [...element.querySelectorAll('canvas'), ...(cursorCanvas ? [cursorCanvas] : [])];
       chart?.destroy();
+      // Retired DOM may outlive the plot (React alternates, inspectors, consumers).
+      // Release its native bitmap storage now rather than waiting for node GC.
+      for (const canvas of canvases) { canvas.width = 0; canvas.height = 0; }
+      cursorInk.current = [];
     };
   }, [theme, count, height, scientific]);
   // Topology and data change only with an accepted view, never with a hover reply.

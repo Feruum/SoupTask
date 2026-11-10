@@ -1,3 +1,4 @@
+import {performanceMark} from '@/app/performance'
 import {memo,useLayoutEffect,useRef} from 'react'
 import {useNavigate} from 'react-router-dom'
 import {cursorForView} from '@/worker/cursor-store'
@@ -18,7 +19,7 @@ export const sourceDom={exact,text,attribute,hidden,toggle}
 
 /** React owns the fixed container. This adapter exclusively owns its leaf DOM, like uPlot's canvas. */
 export const SourceCursorReadout=memo(function SourceCursorReadout({workspace,ids,metric,metricName,slots,colorTokens,onPin,measure}:Props){
- performance.mark('soup:source-readout-render')
+ performanceMark('soup:source-readout-render')
  const host=useRef<HTMLDivElement>(null),navigate=useNavigate()
  const view=workspace.state.view,store=workspace.cursor,runs=workspace.state.runs,identity=ids.join(',')
  const accepted=useRef({view,runs}),refresh=useRef<(()=>void)|null>(null)

@@ -1,3 +1,4 @@
+import {performanceMark} from '@/app/performance'
 import { ResponsiveDisclosure } from '@/features/shared/ResponsiveDisclosure';
 import { X } from 'lucide-react';
 import { memo, useLayoutEffect, useRef, useState } from 'react';
@@ -19,7 +20,7 @@ function parseSelection(value: string) {
   return [...new Set(value.split(',').filter(Boolean))];
 }
 const ComparisonSummaries=memo(function ComparisonSummaries({selectionKey,manifest,summaryMetric,onMetricChange}:{selectionKey:string;manifest:readonly RunManifestEntry[];summaryMetric:Metric;onMetricChange:(metric:Metric)=>void}) {
-  performance.mark('soup:compare-summaries-render');
+  performanceMark('soup:compare-summaries-render');
   const selected=parseSelection(selectionKey),RUN_MANIFEST=manifest;
   return <ResponsiveDisclosure label="Whole-run summaries" className="comparison-summaries-disclosure"><section className={`run-collection ${summaryStyles.panel}`}><div className={summaryStyles.toolbar}><div><h2>{NAMES[summaryMetric]} summaries</h2><p>Computed from all original observations, independent of zoom.</p></div><label>Summary metric<select aria-label="Summary metric" value={summaryMetric} onChange={event => onMetricChange(event.target.value as Metric)}>{METRICS.map(metric => <option key={metric} value={metric}>{NAMES[metric]}</option>)}</select></label></div><div className="table-scroll"><table data-testid="comparison-summary" data-summary-metric={summaryMetric}><caption>Whole-run {NAMES[summaryMetric]} values and their actual steps</caption><thead><tr><th scope="col">Run</th><th scope="col">Latest</th><th scope="col">Minimum</th><th scope="col">Maximum</th><th scope="col">Observations</th><th scope="col">Metric quality</th></tr></thead><tbody>{selected.map(id => {
                       const run = RUN_MANIFEST.find(entry => entry.id === id)!,
@@ -35,7 +36,7 @@ function ComparisonWorkspace({selectionKey,theme}:{selectionKey:string;theme:She
  return <><WorkspaceStatus workspace={workspace} />{workspace.state.view && <><nav className="section-tabs" aria-label="Visible metrics">{(['all', ...METRICS] as const).map(m => <button key={m} aria-pressed={only === m} onClick={() => setOnly(m)}>{m === 'all' ? 'All metrics' : NAMES[m]}</button>)}</nav><RangeControls workspace={workspace} /><Charts workspace={workspace} ids={selected} theme={theme} only={only} /><ComparisonSummaries selectionKey={selected.join(',')} manifest={RUN_MANIFEST} summaryMetric={summaryMetric} onMetricChange={setSummaryMetric}/></>}</>;
 }
 export function ComparePage() {
-  useLayoutEffect(() => { performance.mark('soup:compare-page-commit'); });
+  useLayoutEffect(() => { performanceMark('soup:compare-page-commit'); });
   const RUN_MANIFEST = useCatalog();
   const [params, setParams] = useSearchParams(),
     {
