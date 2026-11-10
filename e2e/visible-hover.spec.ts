@@ -51,3 +51,16 @@ for(const fault of ['offscreen','clipped','occluded'])test(`visible-frame acknow
  await page.waitForFunction(()=>performance.getEntriesByName('soup:hover-not-visible').some(entry=>(entry as PerformanceMark).detail.hoverSeq===window.__soupEvidence?.acceptedHoverSeq))
  expect(await page.evaluate(()=>performance.getEntriesByName('soup:hover-frame').some(entry=>(entry as PerformanceMark).detail.hoverSeq===window.__soupEvidence?.acceptedHoverSeq))).toBe(false)
 })
+
+test('moving to another original row reuses source text nodes instead of replacing the layout subtree',async({page})=>{
+ await page.setViewportSize({width:1440,height:900});await page.goto('/runs/kazakh-sft-005')
+ await expect(page.locator('.metric-grid')).toHaveAttribute('data-view-ready','true')
+ const plot=page.getByTestId('loss-chart').locator('.u-over');await plot.scrollIntoViewIfNeeded();const box=await plot.boundingBox();expect(box).not.toBeNull()
+ await page.mouse.move(box!.x+box!.width*.3,box!.y+box!.height*.5)
+ const step=page.locator('[data-source-step]').first();await expect(step).not.toBeEmpty()
+ const previous=await step.textContent(),leaf=await step.evaluateHandle(node=>node.firstChild)
+ await page.mouse.move(box!.x+box!.width*.6,box!.y+box!.height*.5)
+ await expect(step).not.toHaveText(previous!)
+ expect(await step.evaluate((node,old)=>node.firstChild===old,leaf),'changed source text should mutate its existing Text node').toBe(true)
+ await leaf.dispose()
+})

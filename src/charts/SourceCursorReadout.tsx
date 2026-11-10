@@ -11,7 +11,12 @@ import styles from '@/features/shared/cursor-readout.module.css'
 type Pin={id:string;revision:string;row:SourceRow}
 type Props={workspace:Workspace;ids:string[];metric:Metric;metricName:string;slots:Record<string,number>;colorTokens:string[];onPin:(source:Pin)=>void;measure:boolean}
 const exact=(v:number)=>Object.is(v,-0)?'-0':String(v)
-const text=(node:HTMLElement,value:string)=>{if(node.textContent!==value)node.textContent=value}
+const text=(node:HTMLElement,value:string)=>{
+ if(node.textContent===value)return
+ const leaf=node.firstChild
+ if(leaf?.nodeType===Node.TEXT_NODE&&node.childNodes.length===1)leaf.nodeValue=value
+ else node.textContent=value
+}
 const attribute=(node:HTMLElement,name:string,value:string|null)=>{if(node.getAttribute(name)!==value){if(value===null)node.removeAttribute(name);else node.setAttribute(name,value)}}
 const hidden=(node:HTMLElement,value:boolean)=>{if(node.hidden!==value)node.hidden=value}
 const toggle=(node:HTMLElement,name:string,value:boolean)=>{if(node.classList.contains(name)!==value)node.classList.toggle(name,value)}
