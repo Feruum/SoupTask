@@ -183,7 +183,7 @@ The latest headless million-row process sample recorded **145.9 MiB private comm
 
 The app uses static SPA routing on Vercel. There is no backend, database, authentication or training execution. GPU telemetry, live logs, artifacts, import/export and automatic stopping are not implemented.
 
-AI assisted design, implementation and verification. Original-source oracles and saved failures document the checks applied to generated work.
+The author designed the architecture and data pipeline, made key engineering decisions and reviewed the code. AI helped write and fix code, develop tests, run automated checks and measurements, and research implementation options. Original-source oracles and saved failures document the checks applied to generated work. Generated artwork is identified in the asset provenance.
 
 </details>
 

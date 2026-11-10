@@ -72,7 +72,7 @@ Lighthouse runs separately: temporarily install the official CLI with `npm exec 
 
 The submission note must use actual results and distinguish assistant-run verification from human review. Tests cannot certify scientific logger truth, all browsers/viewports, every oscillation or a real training-stop decision. GPU telemetry, real-time logs, artifacts, import/export, authentication and training execution are not fabricated.
 
-AI assisted architecture, implementation, tests, browser automation, profiling and documentation. Suggestions were checked against source identities and independent oracles. Saved failures describe accepted corrections; prospective or human checks are never presented as completed assistant evidence. Original foundation documentation is preserved in [scaffold README](scaffold-readme.md).
+The author designed the architecture and data pipeline, made key engineering decisions and reviewed the code. AI helped implement and fix code, develop tests, run browser automation and measurements, and research implementation options. Suggestions were checked against source identities and independent oracles. Saved failures describe accepted corrections; prospective or human checks are never presented as completed assistant evidence. Original foundation documentation is preserved in [scaffold README](scaffold-readme.md).
 
 For exact publication of a locally tested build, run `node scripts/prepare-vercel-output.mjs`, then `vercel deploy --prebuilt --prod` for the already-linked project. `node scripts/verify-deployment-build.mjs` checks served HTML/JS/CSS/Worker bytes against build metadata. Deployment is a separate authorized action.
 
