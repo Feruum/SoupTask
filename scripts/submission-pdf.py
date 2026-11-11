@@ -25,17 +25,19 @@ rule = colors.HexColor('#d8c8b9')
 orange = colors.HexColor('#b44f2b')
 sand = colors.HexColor('#e8dfd0')
 
-body = ParagraphStyle('Body', fontName='Helvetica', fontSize=10.3, leading=13.5, textColor=ink, spaceAfter=8)
+body = ParagraphStyle('Body', fontName='Helvetica', fontSize=10.3, leading=13.3, textColor=ink, spaceAfter=6)
 heading = ParagraphStyle('Heading', parent=body, fontName='Helvetica-Bold', fontSize=14, leading=18, spaceAfter=0)
 caption = ParagraphStyle('Caption', parent=body, fontSize=9.3, leading=13, spaceAfter=0)
+verdict = ParagraphStyle('Verdict', parent=body, borderColor=rule, backColor=sand, borderPadding=8, spaceBefore=7, spaceAfter=12)
 
 section_icons = {
     'Product and truthful data': 'data',
     'Research applied to Soup': 'layers',
-    'Verification': 'check',
-    'Performance and limits': 'chart',
-    'Memory findings': 'monitor',
-    'AI assistance and handoff': 'recipe',
+    'Verification and test limits': 'check',
+    'Performance: before and after': 'chart',
+    'Memory at 1,000,000 rows': 'monitor',
+    'AI assistance': 'recipe',
+    'Surprises and remaining concerns': 'recipe',
 }
 
 
@@ -62,7 +64,7 @@ def metric_table(markdown):
             for column, cell in enumerate(row)
         ])
 
-    widths = ['32%', '13%', '18.5%', '18.5%', '18%'] if len(rows[0]) == 5 else ['40%', '30%', '30%']
+    widths = ['30%', '10%', '14.5%', '14.5%', '14.5%', '16.5%'] if len(rows[0]) == 6 else ['42%', '31%', '27%']
     table = Table(cells, colWidths=widths, repeatRows=1, hAlign='LEFT', spaceAfter=8)
     table.setStyle(TableStyle([
         ('ROWBACKGROUNDS', (0, 1), (-1, -1), [colors.white, colors.HexColor('#f3eee6')]),
@@ -90,14 +92,14 @@ def section_heading(title):
 
 
 def compare_preview():
-    screenshot = Image(str(assets / 'compare.png'), width=197, height=197 * 900 / 1440)
+    screenshot = Image(str(assets / 'compare.png'), width=163, height=163 * 900 / 1440)
     copy = [
         '**Compare in the app**',
         'Four runs share one cursor. The source table shows the recorded step, all three original metrics and the row to pin.',
-        '[Open the full screenshot](https://github.com/Feruum/SoupTask/blob/main/assets/readme/compare.png)',
+        '[Open the full screenshot](https://github.com/Feruum/SoupTask/blob/3ddd6e04ef687ac83799f6f9763a2c6650c23f91/assets/readme/compare.png)',
     ]
     text = Paragraph('<br/><br/>'.join(rich(part) for part in copy), caption)
-    return Table([[screenshot, text]], colWidths=[217, content_width - 217],
+    return Table([[screenshot, text]], colWidths=[183, content_width - 183],
                  hAlign='LEFT', spaceBefore=2, spaceAfter=8,
                  style=[('BACKGROUND', (0, 0), (-1, -1), colors.HexColor('#ede6d9')),
                         ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
@@ -126,7 +128,7 @@ for paragraph in source.read_text(encoding='utf-8').split('\n\n'):
     elif paragraph.startswith('![') and paragraph.endswith('../assets/readme/compare.png)'):
         story.append(compare_preview())
     else:
-        story.append(Paragraph(rich(paragraph), body))
+        story.append(Paragraph(rich(paragraph), verdict if paragraph.startswith('**Verdict:') else body))
 
 
 def decorate_page(canvas, document):
